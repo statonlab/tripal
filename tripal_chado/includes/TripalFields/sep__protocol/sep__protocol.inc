@@ -135,11 +135,12 @@ class sep__protocol extends ChadoField {
     $protocol_type = $protocol->type_id;
 
     $label_term = 'rdfs:label';
+
     $type_id_term = tripal_get_chado_semweb_term('protocol', 'type_id');
 
     $entity->{$field_name}['und'][0]['value'] = [
-      $label_term = $protocol_name,
-      $type_id_term = $protocol_type,
+      $label_term => $protocol_name,
+      $type_id_term => $protocol_type,
     ];
 
     // Is there a published entity for this protocol?
