@@ -103,12 +103,16 @@ class sep__protocol extends ChadoField {
    *   but those keys are for internal field use and are not considered the
    *   value of the field.
    *
-   *
+   *NOTICE:
+   * This field is specifically for cases where there is a protocol_id column
+   *   in the chado base table of the entity the field is attaching to!
+   * Chado tables that do this:
+   * treatment, arraydesign, assay, protocolparam, acquisition, quantification
    */
+
   public function load($entity) {
 
     parent::load($entity);
-
 
     $record = $entity->chado_record;
     $settings = $this->instance['settings'];
@@ -129,21 +133,123 @@ class sep__protocol extends ChadoField {
       return;
     }
 
-    $protocol_id = $record->protocol_id->protocol_id;
-    $protocol_name = $record->protocol_id->name;
+    $protocol = $record->protocol_id;
 
-    $entity_id = $record->entity_id;
+    // our field is going to be cautious and just display the NOT NULL columns
+    $protocol_id = $protocol->protocol_id;
+    $protocol_name = $protocol->name;
+    $protocol_type = $protocol->type_id;
+
+    $label_term = 'rdfs:label';
+    $type_id_term = tripal_get_chado_semweb_term('protocol', 'type_id');
 
     $entity->{$field_name}['und'][0]['value'] = [
-      "protocol_id" => $protocol_id,
-      "protocol_name" => $protocol_name,
-      "entity_id" => $entity_id,
+      $label_term = $protocol_name,
+      $type_id_term = $protocol_type,
     ];
 
     // Is there a published entity for this protocol?
     if (property_exists($record->{$field_column}, 'entity_id')) {
-      $entity->{$field_name}['und'][0]['value']['entity_id'] = 'TripalEntity:' . $record->{$field_column}->entity_id;
+      $entity->{$field_name}['und'][0]['value']['entity'] = 'TripalEntity:' . $record->{$field_column}->entity_id;
     }
   }
+
+
+  /**
+   *
+   * Cliff notes version:  elementInfo is going to describe each COLUMN of the
+   * array of elements.
+   *
+   * Top-level key should be {db}:{accession}
+   *
+   * other keys: name, searchable, operations, label, help, type, sortable,
+   * elements
+   *
+   *
+   */
+
+  function elementInfo() {
+
+    $field_term = $this->getFieldTermID();
+
+    $type_id_term = tripal_get_chado_semweb_term('protocol', 'type_id');
+
+
+    return [
+      $field_term => [
+        'operations' => ['eq', 'contains', 'starts'],
+        'sortable' => TRUE,
+        'searchable' => TRUE,
+        'readonly' => FALSE,
+        'type' => 'xs:complexType',
+        'elements' => [
+          'rdfs:label' => [
+            'searchable' => TRUE,
+            'name' => 'protocol_name',
+            'operations' => ['eq', 'ne', 'contains', 'starts'],
+            'sortable' => FALSE,
+            'type' => 'xs:string',
+            'readonly' => TRUE,
+            'required' => FALSE,
+          ],
+          'entity' => [
+            'searchable' => FALSE,
+          ],
+          $type_id_term => [
+            'searchable' => TRUE,
+            'name' => 'protocol_type',
+            'operations' => ['eq', 'ne', 'contains', 'starts'],
+            'sortable' => TRUE,
+            'readonly' => FALSE,
+            'required' => TRUE,
+          ],
+        ],
+      ],
+    ];
+
+  }
+
+  function query($query, $condition) {
+    $alias = $this->field['field_name'];
+    $operator = $condition['operator'];
+
+    $field_term_id = $this->getFieldTermID();
+
+    $type_id_term = tripal_get_chado_semweb_term('protocol', 'type_id');
+
+    // Join to the protocol table for this field.
+    $this->queryJoinOnce($query, 'protocol', $alias, "base.protocol_id = $alias.protocol_id");
+
+    if ($condition['column'] == $field_term_id or
+      $condition['column'] == $field_term_id . ',rdfs:label') {
+      $query->condition("$alias.name", $condition['value'], $operator);
+    }
+
+    //TODO  QUESTION: its a foreign key, is this wrong?
+    {
+      if ($condition['column'] == $type_id_term) {
+        $query->condition("$alias.type_id", $condition['value'], $operator);
+      }
+    }
+
+  }
+
+  function queryOrder($query, $order) {
+    $alias = $this->field['field_name'];
+    $field_term_id = $this->getFieldTermID();
+    $type_id_term = tripal_get_chado_semweb_term('protocol', 'type_id');
+
+
+    // Join to the protocol table for this field.
+    $this->queryJoinOnce($query, 'protocol', $alias, "base.protocol_id = $alias.organism_id");
+
+    //Sort
+    if ($order['column'] == $type_id_term) {
+      $query->orderBy("$alias.type_id", $order['direction']);
+    }
+
+    //TODO: QUESTION do i need a sort by field_term_id?  Organism doesnt have one.
+
+    }
 
 }
