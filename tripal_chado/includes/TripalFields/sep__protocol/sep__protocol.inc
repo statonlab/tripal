@@ -58,12 +58,6 @@ class sep__protocol extends ChadoField {
     // Set to TRUE if the site admin is not allowed to change the term
     // type, otherwise the admin can change the term mapped to a field.
     'term_fixed' => FALSE,
-    // Indicates if this field should be automatically attached to display
-    // or web services or if this field should be loaded separately. This
-    // is convenient for speed.  Fields that are slow should for loading
-    // should have auto_attach set to FALSE so tha their values can be
-    // attached asynchronously.
-    'auto_attach' => FALSE,
   ];
 
   // A boolean specifying that users should not be allowed to create
@@ -202,6 +196,7 @@ class sep__protocol extends ChadoField {
             'sortable' => TRUE,
             'readonly' => FALSE,
             'required' => TRUE,
+            'type' => 'xs:integer',
           ],
         ],
       ],
@@ -225,11 +220,9 @@ class sep__protocol extends ChadoField {
       $query->condition("$alias.name", $condition['value'], $operator);
     }
 
-    //TODO  QUESTION: its a foreign key, is this wrong?
-    {
-      if ($condition['column'] == $type_id_term) {
-        $query->condition("$alias.type_id", $condition['value'], $operator);
-      }
+    if ($condition['column'] == $type_id_term) {
+      $this->queryJoinOnce($query, 'cvterm', 'CVT', "base.type_id = CVT.cvterm_id");
+      $query->condition("CVT.name", $condition['value'], $operator);
     }
 
   }
@@ -246,6 +239,13 @@ class sep__protocol extends ChadoField {
     //Sort
     if ($order['column'] == $type_id_term) {
       $query->orderBy("$alias.type_id", $order['direction']);
+    }
+
+    if ($order['column'] == $type_id_term) {
+      if (!in_array('CVT', $joins)) {
+        $this->queryJoinOnce($query, 'cvterm', 'CVT', "base.type_id = CVT.cvterm_id");
+      }
+      $query->orderBy("CVT.name", $order['direction']);
     }
 
     //TODO: QUESTION do i need a sort by field_term_id?  Organism doesnt have one.
