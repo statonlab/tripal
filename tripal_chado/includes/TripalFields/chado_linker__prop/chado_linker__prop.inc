@@ -25,7 +25,7 @@ class chado_linker__prop extends ChadoField {
   // term_name, term_vocab, term_accession and term_fixed keys as these are
   // required for all TripalFields.
   public static $default_instance_settings  = array(
-    // The short name for the vocabulary (e.g. shcema, SO, GO, PATO, etc.).
+    // The short name for the vocabulary (e.g. schema, SO, GO, PATO, etc.).
     'term_vocabulary' => 'local',
     // The name of the term.
     'term_name' => 'property',
@@ -37,7 +37,7 @@ class chado_linker__prop extends ChadoField {
     'term_fixed' => FALSE,
     // The table in Chado that the instance maps to.
     'chado_table' => '',
-    // The primary key column of hte table in Dhado.
+    // The primary key column of hte table in Chado.
     'chado_column' => '',
     // The base table.
     'base_table' => '',
@@ -122,6 +122,15 @@ class chado_linker__prop extends ChadoField {
           'chado-' . $field_table . '__type_id' => $property->type_id,
           'chado-' . $field_table . '__rank' => $property->rank,
         );
+
+        if ($property->cvalue_id){
+          //cvalue_id is a column that will be added with chado 1.4.  Adding support for early adopters.
+          $entity->{$field_name}['und'][$i]['chado-' . $field_table . '__cvalue_id'] = $property->cvalue_id;
+          //overwrite the value
+          $cvterm = tripal_get_cvterm(array('cvterm_id' => $property->cvalue_id));
+          $entity->{$field_name}['und'][$i]['chado-' . $field_table . '__cvalue_id'] = $cvterm->name;
+        }
+
       }
     }
   }

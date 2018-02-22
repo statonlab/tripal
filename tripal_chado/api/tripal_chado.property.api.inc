@@ -549,7 +549,7 @@ function chado_delete_property($record, $property) {
  *     -rank: The specific rank for the property.
  *     -cvalue_id: The cvterm_id of the value for the property.
  *      **note** cvalue_id is an anticipated column in the the next Chado release (1.4).  It is included here for early adopters.
- * 
+ *
  * @param $options
  *   An array of options supported by chado_generate_var(). These keys
  *   are used for generating the cvterm objects returned by this function.
