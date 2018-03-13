@@ -162,6 +162,8 @@ function tripal_schema() {
   $schema['tripal_bundle'] = tripal_tripal_bundle_schema();
   $schema['tripal_import'] = tripal_tripal_import_schema();
   $schema['tripal_collection'] = tripal_tripal_collection_schema();
+  $schema['cvterm_entity_index'] = tripal_cvterm_entity_index_schema();
+
 
   // Adds a table for additional information related to bundles.
   $schema['tripal_bundle_variables'] = tripal_tripal_bundle_variables_schema();
@@ -860,6 +862,45 @@ function tripal_tripal_admin_notifications_schema() {
 }
 
 /**
+ * Tripal cvterm entity index schema
+ *
+ * This schema is for storing cvterm usage for entities.  The CVterm browser uses this schema to provide
+ * filterable lists of entities that associate with a given CVterm and its child terms.
+ *
+ * @return array
+ */
+function tripal_cvterm_entity_index_schema() {
+  //Create a tripal_cvterm_index table with columns: cvterm_accession, entities array.
+
+  //TODO:  define this schema properly
+  $schema = array(
+    'description' => 'This table is used for tracking cvterm annotations.',
+    'fields' => array (
+      'cvterm_entity_id' => array (
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'cvterm_accession' => array (
+        'description' => '.....',
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'entities_array' => array (
+        'description' => 'Entities associated with this term and all child terms',
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array (
+      0 => 'cvterm_entity_id',
+    ),
+  );
+
+  return $schema;
+
+}
+
+/**
  * Change tripal_vocab.vocabulary to varchar(128)
  */
 function tripal_update_7300() {
@@ -994,3 +1035,24 @@ function tripal_update_7307() {
   );
   menu_save($menu);
 }
+
+/**
+ * Adds a table for tracking cvterm - entity usage information.  This table is used
+ * in the CVterm browser.
+ *
+ */
+function tripal_update_7308() {
+  $transaction = db_transaction();
+  try {
+    $schema['cvterm_entity_index'] = tripal_cvterm_entity_index_schema();
+
+    db_create_table('cvterm_entity_index', $schema['cvterm_entity_index']);
+  }
+  catch (\PDOException $e) {
+    $transaction->rollback();
+    $error = $e->getMessage();
+    throw new DrupalUpdateException('Could not perform update: '. $error);
+  }
+}
+
+

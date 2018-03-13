@@ -1,0 +1,15 @@
+<?php
+
+use PHPUnit\Framework\TestCase;
+
+class TripalJobsTest extends TestCase {
+
+
+  public function tripal_cvterm_index_table_exists() {
+
+  }
+
+
+
+
+  }
