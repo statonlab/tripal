@@ -155,8 +155,6 @@ function tripal_vocabulary_lookup_vocab_page($vocabulary) {
     ),
   ), 'setting');
 
-
-
 //There are two ways to display the CV: one just showing hte child terms, the other mapping entities from one bundle onto another.
   $map_entities = TRUE;
 
@@ -169,7 +167,6 @@ function tripal_vocabulary_lookup_vocab_page($vocabulary) {
   //The other case is we dont have a particular set of entities, but maybe just a bundle...
 
 
-
   drupal_add_js(array(
     'tripal' => array(
       'cv_lookup' => array(
@@ -178,9 +175,7 @@ function tripal_vocabulary_lookup_vocab_page($vocabulary) {
     ),
   ), 'setting');
 
-
-
-  //maybe hte formatter does this instead...
+  //maybe the formatter would do this instead...
   drupal_add_js(array(
     'tripal' => array(
       'cv_lookup_entity_targets' => array(
@@ -256,6 +251,55 @@ function tripal_vocabulary_lookup_term_children_format($children) {
   return $items;
 }
 
+
+function tripal_vocabulary_count_grandchildren_terms(){
+
+}
+
+
+/**
+ * @param $params  An associative array with the following keys:
+ *   - anchor_entity  an entity ID to which we should map the terms.  can be NULL to be site wide.
+ *   - map_constraints.  BUNDLE ID's (?) that we should constrain our mappings to.  For example, we may only want to map gene entities onto the cvterm browser.
+ * @param $vocabulary
+ * @param $accession
+ *
+ * @return array
+ */
+function tripal_vocabulary_get_term_descendent_entities($params, $vocabulary, $accession, $children){
+  $anchor_entity = isset($params['anchor_entity']) ? $params['anchor_entity'] : NULL;
+  $map_constraint = isset($params['map_constraint']) ? $params['map_constraint'] : NULL;
+
+  dpm($children);
+  $mapped_entities = [];
+
+  foreach ($children as $child ){
+    $name = $child['name'];
+    $accession = $child['accession'];
+    $short_name = $child['vocabulary']['short_name'];
+
+    //Convert into cvterm_id OR use short_name:accession to get term.  cvterm_id locks us into tripal...
+$query = db_query("tripal_cvterm_entity_index", "t");
+$query->fields();
+if ($anchor_entity){
+  //condition: if we have an anchor entity, select only that entity's cvterm entity association for it.
+  //
+  $query->condition();
+}
+    $results = $query->fetchObjects();
+
+//Loop through results and filter out those that dont belong to the selected bundle type (
+    foreach ($results as $result){
+      if ($map_constraint){//if we have a constriant, make sure the result is of that bundle type!
+
+      }
+    }
+  }
+
+  return $mapped_entities;
+}
+
+
 /**
  * An ajax callback to get the children of a term.
  *
@@ -272,6 +316,15 @@ function tripal_vocabulary_lookup_term_children_ajax($vocabulary, $accession) {
 
   $term = tripal_get_term_details($vocabulary, $accession);
   $children = tripal_get_term_children($vocabulary, $accession);
+  //for each child, we want a key/value pair with a) the entity ids and names, and b) ...?
+  //These will in the future be passed in as a third argument, which will be NULL if we aren't mapping entities.
+//  $params["anchor_entity"] = 1;
+//  $params["map_constraint"] = [2, 3];
+//  $mapped_entities = null;
+//  if ($params){
+//    $mapped_entities = tripal_vocabulary_get_term_descendent_entities($params,$vocabulary, $accession, $children);
+//  }
+
   $response = array(
     'vocabulary' => $vocabulary,
     'accession' => $accession,
