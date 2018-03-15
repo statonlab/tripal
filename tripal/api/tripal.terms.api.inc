@@ -520,7 +520,7 @@ function tripal_get_vocabularies() {
  * multiple vocabularies and the user would need to select the proper term.
  *
  * This function will add the form elements necessary to provide a lookup form.
- * The form elements should work with a flat fortm (no #tree set for the form)
+ * The form elements should work with a flat form (no #tree set for the form)
  * or with a form in a TripalField.
  *
  * Use the tripal_get_term_lookup_form_result() function to retreive the
@@ -716,4 +716,15 @@ function tripal_get_term_lookup_form_ajax_callback($form, $form_state) {
   else {
     return $form['term_match'];
   }
+}
+
+/**
+ * Populates the cvterm_entity_index table.
+ * This table is used by the cvterm browser to map entities on the tree.
+ *
+ */
+
+function tripal_populate_cvterm_entity_index_table() {
+
+
 }

@@ -18,4 +18,6 @@ class TripalJobsTest extends TestCase {
       db_query('DELETE FROM {tripal_jobs} WHERE job_id = :id', [':id' => $job_id]);
     }
   }
+
+
 }

@@ -2,14 +2,9 @@
 
 use PHPUnit\Framework\TestCase;
 
-class TripalJobsTest extends TestCase {
-
-
-  public function tripal_cvterm_index_table_exists() {
-
+class Tripal_term_lookup_test extends TestCase {
+  public function test_tripal_cvterm_index_table_exists() {
+    $this->assertTrue(db_table_exists("tripal_cvterm_entity_index"));
   }
 
-
-
-
-  }
+}
