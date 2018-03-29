@@ -1,0 +1,27 @@
+<?php
+
+use PHPUnit\Framework\TestCase;
+
+class data__ontology_data_test extends TestCase {
+
+//  protected $bundle;
+//  protected $record_id;
+//
+//  protected $field;
+//
+//  protected function setUp() {
+//
+//   $field_info = field_info_field("data__ontology_data");
+//
+//    $instance = null;//An array containing the instance data as returned by field_instance_info().
+
+//    $instance = field_instance_info('TripalEntity', $field_info['field_name'], $bundle_name);
+  //  $this->field = new data__ontology_data($instance, $field_info);
+//
+//  }
+
+  public function test_chado_record_cvterm_association_lookup() {
+    $this->assertTrue(TRUE);
+  }
+
+}

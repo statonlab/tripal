@@ -35,16 +35,16 @@ function tripal_add_variables() {
   // Add tripal bundle variables needed for storing additional settings for
   // Tripal Bundles.
   tripal_insert_variable(
-      'title_format',
-      'A pattern including tokens that can be used to generate tripal entity titles.'
+    'title_format',
+    'A pattern including tokens that can be used to generate tripal entity titles.'
   );
   tripal_insert_variable(
-      'url_format',
-      'A pattern including tokens that can be used to generate tripal entity url aliases.'
+    'url_format',
+    'A pattern including tokens that can be used to generate tripal entity url aliases.'
   );
   tripal_insert_variable(
-      'description',
-      'The description of a Tripal Entity type/bundle.'
+    'description',
+    'The description of a Tripal Entity type/bundle.'
   );
   tripal_insert_variable(
     'hide_empty_field',
@@ -134,7 +134,7 @@ function tripal_schema() {
   // will try and recreate some of the tables created with tripal_core and the
   // installation will fail.  Therefore, we need to temporarily move those
   // tables out of the way, let the module install and then move them back.
-  $migrated = variable_get ('tripal_v2_upgrade_v3_check', FALSE);
+  $migrated = variable_get('tripal_v2_upgrade_v3_check', FALSE);
   if (!$migrated) {
     if (db_table_exists('tripal_jobs')) {
       db_rename_table('tripal_jobs', 'tripal_jobs2');
@@ -147,7 +147,7 @@ function tripal_schema() {
     if (db_table_exists('tripal_variables')) {
       db_rename_table('tripal_variables', 'tripal_variables2');
     }
-    variable_set ('tripal_v2_upgrade_v3_check', TRUE);
+    variable_set('tripal_v2_upgrade_v3_check', TRUE);
   }
   $schema = array();
 
@@ -170,8 +170,10 @@ function tripal_schema() {
   $schema['tripal_bundle_variables'] = tripal_tripal_bundle_variables_schema();
   // Adds a table for administrative notifications on the dashboard.
   $schema['tripal_admin_notfications'] = tripal_tripal_admin_notifications_schema();
+
   return $schema;
 }
+
 /**
  * Returns the Drupal Schema API array for the tripal_jobs table.
  */
@@ -181,105 +183,106 @@ function tripal_tripal_jobs_schema() {
       'job_id' => array(
         'type' => 'serial',
         'unsigned' => TRUE,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'uid' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => TRUE,
-        'description' => 'The Drupal userid of the submitee'
+        'description' => 'The Drupal userid of the submitee',
       ),
       'job_name' => array(
         'type' => 'varchar',
         'length' => 255,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'modulename' => array(
         'type' => 'varchar',
         'length' => 50,
         'not null' => TRUE,
-        'description' => 'The module name that provides the callback for this job'
+        'description' => 'The module name that provides the callback for this job',
       ),
       'callback' => array(
         'type' => 'varchar',
         'length' => 255,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'arguments' => array(
         'type' => 'text',
         'size' => 'normal',
-        'not null' => FALSE
+        'not null' => FALSE,
       ),
       'progress' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'default' => 0,
         'not null' => FALSE,
-        'description' => 'a value from 0 to 100 indicating percent complete'
+        'description' => 'a value from 0 to 100 indicating percent complete',
       ),
       'status' => array(
         'type' => 'varchar',
         'length' => 50,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'submit_date' => array(
         'type' => 'int',
         'not null' => TRUE,
-        'description' => 'UNIX integer submit time'
+        'description' => 'UNIX integer submit time',
       ),
       'start_time' => array(
         'type' => 'int',
         'not null' => FALSE,
-        'description' => 'UNIX integer start time'
+        'description' => 'UNIX integer start time',
       ),
       'end_time' => array(
         'type' => 'int',
         'not null' => FALSE,
-        'description' => 'UNIX integer end time'
+        'description' => 'UNIX integer end time',
       ),
       'error_msg' => array(
         'type' => 'text',
         'size' => 'normal',
-        'not null' => FALSE
+        'not null' => FALSE,
       ),
       'pid' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => FALSE,
-        'description' => 'The process id for the job'
+        'description' => 'The process id for the job',
       ),
       'priority' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => TRUE,
         'default' => '0',
-        'description' => 'The job priority'
+        'description' => 'The job priority',
       ),
       'mlock' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => FALSE,
-        'description' => 'If set to 1 then all jobs for the module are held until this one finishes'
+        'description' => 'If set to 1 then all jobs for the module are held until this one finishes',
       ),
       'lock' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => FALSE,
-        'description' => 'If set to 1 then all jobs are held until this one finishes'
+        'description' => 'If set to 1 then all jobs are held until this one finishes',
       ),
       'includes' => array(
         'type' => 'text',
         'description' => 'A serialized array of file paths that should be included prior to executing the job.',
         'not null' => FALSE,
-      )
+      ),
     ),
     'indexes' => array(
       'job_id' => array('job_id'),
-      'job_name' => array('job_name')
+      'job_name' => array('job_name'),
     ),
     'primary key' => array('job_id'),
   );
 }
+
 /**
  * Returns the Drupal Schema API array for the tripal_jobs table.
  */
@@ -289,30 +292,30 @@ function tripal_tripal_collection_schema() {
       'collection_id' => array(
         'type' => 'serial',
         'unsigned' => TRUE,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'collection_name' => array(
         'type' => 'varchar',
         'length' => 1024,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'description' => array(
         'type' => 'text',
-        'not null' => FALSE
+        'not null' => FALSE,
       ),
       'uid' => array(
         'type' => 'int',
         'not null' => TRUE,
-        'description' => 'The user Id of the person who created the collection.'
+        'description' => 'The user Id of the person who created the collection.',
       ),
       'create_date' => array(
         'type' => 'int',
         'not null' => TRUE,
-        'description' => 'UNIX integer start time'
+        'description' => 'UNIX integer start time',
       ),
     ),
     'indexes' => array(
-      'uid' => array('uid')
+      'uid' => array('uid'),
     ),
     'unique keys' => array(
       'user_collection' => array('uid', 'collection_name'),
@@ -330,39 +333,39 @@ function tripal_tripal_collection_bundle_schema() {
       'collection_bundle_id' => array(
         'type' => 'serial',
         'unsigned' => TRUE,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'collection_id' => array(
         'type' => 'int',
         'unsigned' => TRUE,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
-     'bundle_name' => array(
+      'bundle_name' => array(
         'type' => 'varchar',
         'length' => 1024,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'ids' => array(
         'type' => 'text',
         'size' => 'normal',
         'not null' => TRUE,
-        'description' => 'An array of entity IDs.'
+        'description' => 'An array of entity IDs.',
       ),
       'fields' => array(
         'type' => 'text',
         'size' => 'normal',
         'not null' => TRUE,
-        'description' => 'An array of numeric field IDs.'
+        'description' => 'An array of numeric field IDs.',
       ),
       'site_id' => array(
         'type' => 'int',
         'size' => 'normal',
         'not null' => FALSE,
-        'description' => 'The ID of the site from the Tripal Sites table.'
+        'description' => 'The ID of the site from the Tripal Sites table.',
       ),
     ),
     'indexes' => array(
-      'collection_id' => array('collection_id')
+      'collection_id' => array('collection_id'),
     ),
     'primary key' => array('collection_bundle_id'),
   );
@@ -377,13 +380,13 @@ function tripal_tripal_import_schema() {
       'import_id' => array(
         'type' => 'serial',
         'unsigned' => TRUE,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'uid' => array(
         'type' => 'int',
         'unsigned' => TRUE,
         'not null' => TRUE,
-        'description' => 'The Drupal userid of the submitee.'
+        'description' => 'The Drupal userid of the submitee.',
       ),
       'class' => array(
         'type' => 'varchar',
@@ -393,18 +396,18 @@ function tripal_tripal_import_schema() {
       'fid' => array(
         'type' => 'text',
         'not null' => FALSE,
-        'description' => 'The file IDs of the to import. This only applies if the file was uploaded (i.e. not already on the server) and is mangaged by Drupal. Multiple fids are separated using a | character.'
+        'description' => 'The file IDs of the to import. This only applies if the file was uploaded (i.e. not already on the server) and is mangaged by Drupal. Multiple fids are separated using a | character.',
       ),
       'arguments' => array(
         'type' => 'text',
         'size' => 'normal',
         'not null' => FALSE,
-        'description' => 'Holds a serialized PHP array containing the key/value paris that are used for arguments of the job.'
+        'description' => 'Holds a serialized PHP array containing the key/value paris that are used for arguments of the job.',
       ),
       'submit_date' => array(
         'type' => 'int',
         'not null' => TRUE,
-        'description' => 'UNIX integer submit time'
+        'description' => 'UNIX integer submit time',
       ),
     ),
     'indexes' => array(
@@ -433,6 +436,7 @@ function tripal_tripal_import_schema() {
     'primary key' => array('import_id'),
   );
 }
+
 /**
  *
  * @return
@@ -443,25 +447,25 @@ function tripal_tripal_token_formats_schema() {
       'tripal_format_id' => array(
         'type' => 'serial',
         'unsigned' => TRUE,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'content_type' => array(
         'type' => 'varchar',
         'length' => 255,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'application' => array(
         'type' => 'varchar',
         'length' => 255,
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'format' => array(
         'type' => 'text',
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
       'tokens' => array(
         'type' => 'text',
-        'not null' => TRUE
+        'not null' => TRUE,
       ),
     ),
     'unique keys' => array(
@@ -470,13 +474,14 @@ function tripal_tripal_token_formats_schema() {
     'primary key' => array('tripal_format_id'),
   );
 }
+
 function tripal_tripal_variables_schema() {
 
-   return array(
+  return array(
     'description' => 'This table houses a list of unique variable names that ' .
       'can be used in the tripal_node_variables table.',
     'fields' => array(
-      'variable_id' => array (
+      'variable_id' => array(
         'type' => 'serial',
         'not null' => TRUE,
       ),
@@ -490,16 +495,16 @@ function tripal_tripal_variables_schema() {
         'not null' => TRUE,
       ),
     ),
-    'primary key' => array (
-        0 => 'variable_id',
+    'primary key' => array(
+      0 => 'variable_id',
     ),
-    'unique keys' => array (
-      'tripal_variables_c1' => array (
+    'unique keys' => array(
+      'tripal_variables_c1' => array(
         0 => 'name',
       ),
     ),
-    'indexes' => array (
-      'tripal_variable_names_idx1' => array (
+    'indexes' => array(
+      'tripal_variable_names_idx1' => array(
         0 => 'variable_id',
       ),
     ),
@@ -507,6 +512,7 @@ function tripal_tripal_variables_schema() {
 
   return $schema;
 }
+
 /**
  * @section
  * Schema Definitions.
@@ -516,8 +522,8 @@ function tripal_tripal_variables_schema() {
 /**
  * The base table for Biological Data Entities.
  *
- * This contains the actual data. For example, if you have a 5 genes and 10 mRNA then
- * this table will have 15 records and include both genes and mRNA's.
+ * This contains the actual data. For example, if you have a 5 genes and 10
+ * mRNA then this table will have 15 records and include both genes and mRNA's.
  */
 function tripal_tripal_entity_schema() {
 
@@ -591,14 +597,15 @@ function tripal_tripal_entity_schema() {
     'unique keys' => array(),
     'primary key' => array('id'),
   );
+
   return $schema;
 }
 
 /**
  * The base table for TripalVocab schema.
  *
- * This contains the actual data. For example, if you have a 5 genes and 10 mRNA then
- * this table will have 15 records and include both genes and mRNA's.
+ * This contains the actual data. For example, if you have a 5 genes and 10
+ * mRNA then this table will have 15 records and include both genes and mRNA's.
  */
 function tripal_tripal_vocab_schema() {
 
@@ -641,14 +648,15 @@ function tripal_tripal_vocab_schema() {
     'unique keys' => array('vocabulary' => array('vocabulary')),
     'primary key' => array('id'),
   );
+
   return $schema;
 }
 
 /**
  * The base table for TripalTerm entities.
  *
- * This contains the actual data. For example, if you have a 5 genes and 10 mRNA then
- * this table will have 15 records and include both genes and mRNA's.
+ * This contains the actual data. For example, if you have a 5 genes and 10
+ * mRNA then this table will have 15 records and include both genes and mRNA's.
  */
 function tripal_tripal_term_schema() {
 
@@ -713,6 +721,7 @@ function tripal_tripal_term_schema() {
     'unique keys' => array('vocab_term' => array('vocab_id', 'accession')),
     'primary key' => array('id'),
   );
+
   return $schema;
 }
 
@@ -720,8 +729,8 @@ function tripal_tripal_term_schema() {
  * The base table for TripalEntity entities.
  *
  * This table contains a list of Biological Data Types.
- * For the example above (5 genes and 10 mRNAs), there would only be two records in
- * this table one for "gene" and another for "mRNA".
+ * For the example above (5 genes and 10 mRNAs), there would only be two
+ * records in this table one for "gene" and another for "mRNA".
  */
 function tripal_tripal_bundle_schema() {
 
@@ -770,6 +779,7 @@ function tripal_tripal_bundle_schema() {
       'name' => array('name'),
     ),
   );
+
   return $schema;
 }
 
@@ -778,55 +788,56 @@ function tripal_tripal_bundle_schema() {
  * Additional Tripal Bundle Information.
  *
  * This table is used for storing any additonal information describing
- * a tripal bundle. For example, this is a good place to store title/url formats.
+ * a tripal bundle. For example, this is a good place to store title/url
+ * formats.
  */
 function tripal_tripal_bundle_variables_schema() {
 
   $schema = array(
     'description' => 'This table is used for storing any additonal information describing
       a tripal bundle. For example, this is a good place to store title/url formats.',
-    'fields' => array (
-      'bundle_variable_id' => array (
+    'fields' => array(
+      'bundle_variable_id' => array(
         'type' => 'serial',
         'not null' => TRUE,
       ),
-      'bundle_id' => array (
+      'bundle_id' => array(
         'type' => 'int',
         'not null' => TRUE,
       ),
-      'variable_id' => array (
+      'variable_id' => array(
         'type' => 'int',
         'not null' => TRUE,
       ),
-      'value' => array (
+      'value' => array(
         'type' => 'text',
         'not null' => FALSE,
       ),
-      'rank' => array (
+      'rank' => array(
         'type' => 'int',
         'not null' => TRUE,
         'default' => 0,
       ),
     ),
-    'primary key' => array (
+    'primary key' => array(
       0 => 'bundle_variable_id',
     ),
-    'unique keys' => array (
-      'tripal_bundle_variables_c1' => array (
+    'unique keys' => array(
+      'tripal_bundle_variables_c1' => array(
         0 => 'bundle_id',
         1 => 'variable_id',
         2 => 'rank',
       ),
     ),
-    'indexes' => array (
-      'tripal_bundle_variables_idx1' => array (
+    'indexes' => array(
+      'tripal_bundle_variables_idx1' => array(
         0 => 'variable_id',
       ),
     ),
-    'foreign keys' => array (
-      'tripal_variables' => array (
+    'foreign keys' => array(
+      'tripal_variables' => array(
         'table' => 'tripal_variables',
-        'columns' => array (
+        'columns' => array(
           'variable_id' => 'variable_id',
         ),
       ),
@@ -847,44 +858,44 @@ function tripal_tripal_admin_notifications_schema() {
   $schema = array(
     'description' => 'This table is used for information describing administrative
      notifications. For example, when new fields are available.',
-    'fields' => array (
-      'note_id' => array (
+    'fields' => array(
+      'note_id' => array(
         'type' => 'serial',
         'not null' => TRUE,
       ),
-      'details' => array (
+      'details' => array(
         'description' => 'Description and additional information relating to the notification.',
         'type' => 'text',
         'not null' => TRUE,
       ),
-      'title' => array (
+      'title' => array(
         'description' => 'Title of the notification.',
         'type' => 'text',
         'not null' => TRUE,
       ),
-      'actions' => array (
+      'actions' => array(
         'description' => 'Actions that can be performed on the notification, like disimissal or import.',
         'type' => 'text',
         'not null' => FALSE,
       ),
-      'submitter_id' => array (
+      'submitter_id' => array(
         'description' => 'A unique id that should be specific to the notification to ensure notifications are not duplicated.',
         'type' => 'text',
         'not null' => TRUE,
       ),
-      'enabled' => array (
+      'enabled' => array(
         'description' => 'Boolean indicating whether the notification is enabled or disabled (disabled will not be shown on the dashboard).',
         'type' => 'int',
         'not null' => TRUE,
         'default' => 1,
       ),
-      'type' => array (
+      'type' => array(
         'description' => 'Type of the notification, relating to what tripal function the notification belongs to, IE Fields, Jobs, Vocabulary.',
         'type' => 'text',
         'not null' => FALSE,
       ),
     ),
-    'primary key' => array (
+    'primary key' => array(
       0 => 'note_id',
     ),
   );
@@ -895,18 +906,18 @@ function tripal_tripal_admin_notifications_schema() {
 /**
  * Tripal cvterm entity index schema
  *
- * This schema is for storing cvterm usage for entities.  The CVterm browser uses this schema to provide
- * filterable lists of entities that associate with a given CVterm and its child terms.
+ * This schema is for storing cvterm usage for entities.  The CVterm browser
+ * uses this schema to provide filterable lists of entities that associate with
+ * a given CVterm and its child terms.
  *
  * @return array
  */
 function tripal_cvterm_entity_index_schema() {
-  //Create a tripal_cvterm_index table with columns: cvterm_accession, entities array.
 
   $schema = array(
     'description' => 'This table is used for tracking cvterm annotations.',
-    'fields' => array (
-      'cvterm_entity_id' => array (
+    'fields' => array(
+      'cvterm_entity_id' => array(
         'type' => 'serial',
         'not null' => TRUE,
       ),
@@ -915,13 +926,19 @@ function tripal_cvterm_entity_index_schema() {
         'type' => 'int',
         'not null' => TRUE,
       ),
-      'entities_array' => array (
+      'bundle_id' => array(
+        'description' => 'Bundle table.',
+        'type' => 'varchar',
+        'not null' => TRUE,
+      ),
+      'entities_array' => array(
         'description' => 'Entities associated with this term and all child terms',
         'type' => 'text',
         'not null' => TRUE,
       ),
-    'primary key' => array (
-      0 => 'cvterm_entity_id',
+    ),
+    'primary key' => array(
+      'cvterm_entity_id',
     ),
     'foreign keys' => array(
       'cvterm' => array(
@@ -946,13 +963,13 @@ function tripal_update_7300() {
       'description' => 'The short name for the vocabulary (e.g. SO, PATO, etc.).',
       'type' => 'varchar',
       'length' => 128,
-      'not null' => TRUE
+      'not null' => TRUE,
     );
-    db_change_field('tripal_vocab', 'vocabulary', 'vocabulary',$spec);
+    db_change_field('tripal_vocab', 'vocabulary', 'vocabulary', $spec);
   }
   catch (\PDOException $e) {
     $error = $e->getMessage();
-    throw new DrupalUpdateException('Could not perform update: '. $error);
+    throw new DrupalUpdateException('Could not perform update: ' . $error);
   }
 }
 
@@ -968,7 +985,7 @@ function tripal_update_7301() {
   catch (\PDOException $e) {
     $transaction->rollback();
     $error = $e->getMessage();
-    throw new DrupalUpdateException('Could not perform update: '. $error);
+    throw new DrupalUpdateException('Could not perform update: ' . $error);
   }
 }
 
@@ -984,7 +1001,7 @@ function tripal_update_7302() {
   catch (\PDOException $e) {
     $transaction->rollback();
     $error = $e->getMessage();
-    throw new DrupalUpdateException('Could not perform update: '. $error);
+    throw new DrupalUpdateException('Could not perform update: ' . $error);
   }
 }
 
@@ -1001,7 +1018,7 @@ function tripal_update_7303() {
   catch (\PDOException $e) {
     $transaction->rollback();
     $error = $e->getMessage();
-    throw new DrupalUpdateException('Could not perform update: '. $error);
+    throw new DrupalUpdateException('Could not perform update: ' . $error);
   }
 }
 
@@ -1032,7 +1049,7 @@ function tripal_update_7305() {
     db_change_field('tripal_import', 'fid', 'fid', array(
       'type' => 'text',
       'not null' => FALSE,
-      'description' => 'The file IDs of the to import. This only applies if the file was uploaded (i.e. not already on the server) and is mangaged by Drupal. Multiple fids are separated using a | character.'
+      'description' => 'The file IDs of the to import. This only applies if the file was uploaded (i.e. not already on the server) and is mangaged by Drupal. Multiple fids are separated using a | character.',
     ));
   }
   catch (\PDOException $e) {
@@ -1058,6 +1075,7 @@ function tripal_update_7306() {
     throw new DrupalUpdateException('Could not add the tripal_collection table:' . $error);
   }
 }
+
 /**
  * Adds a new Data search menu for the Tripal created search tools.  If you
  * have customized any of the Tripal content search forms then those forms will
@@ -1089,7 +1107,7 @@ function tripal_update_7308() {
     if (db_field_exists('tripal_collection', 'fields')) {
       db_drop_field('tripal_collection', 'fields');
     }
-     $schema = array();
+    $schema = array();
     $schema['tripal_collection_bundle'] = tripal_tripal_collection_bundle_schema();
     db_create_table('tripal_collection_bundle', $schema['tripal_collection_bundle']);
 
@@ -1109,7 +1127,7 @@ function tripal_update_7309() {
   $transaction = db_transaction();
   try {
     if (!db_field_exists('tripal_collection_bundle', 'site_id')) {
-       $field = array(
+      $field = array(
         'type' => 'int',
         'size' => 'normal',
         'not null' => FALSE,
@@ -1129,7 +1147,6 @@ function tripal_update_7309() {
 * Adds a table for tracking cvterm - entity usage information.  This table is used
 * in the CVterm browser.
 */
-
 function tripal_update_7310() {
   $transaction = db_transaction();
   try {
@@ -1137,12 +1154,12 @@ function tripal_update_7310() {
 
     db_create_table('tripal_cvterm_entity_index', $schema['tripal_cvterm_entity_index']);
 
-  }    catch (\PDOException $e) {
-        $transaction->rollback();
-        $error = $e->getMessage();
-        throw new DrupalUpdateException('Could not add the tripal_collection table:' . $error);
-      }
-
-      }
-
   }
+  catch (\PDOException $e) {
+    $transaction->rollback();
+    $error = $e->getMessage();
+    throw new DrupalUpdateException('Could not add the tripal_collection table:' . $error);
+  }
+
+}
+

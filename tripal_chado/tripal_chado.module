@@ -66,6 +66,8 @@ require_once "includes/TripalFields/ChadoFieldFormatter.inc";
 
 require_once "includes/ChadoDatabaseConnection.inc";
 
+require_once "includes/ChadoEntityChildCvterm.inc";
+
 tripal_chado_set_globals();
 
 /**
