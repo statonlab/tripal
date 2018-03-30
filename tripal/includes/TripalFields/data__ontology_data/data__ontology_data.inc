@@ -118,9 +118,9 @@ class data__ontology_data extends TripalField {
     //Look up all cvterm:entity mappings for this field's CV
     $query = db_select("chado.cvterm", 'CVT')
       ->fields("CVT", "cvterm_id")
-      ->condition("cv_id", $cv_id)
-      ->join("public.cvterm_entity_index", "CEI", "CVT.cvterm_id = CEI.cvterm_id")
-      ->fields("CEI", ["bundle_id", "entities"])
+      ->condition("cv_id", $cv_id);
+      $query->join("public.cvterm_entity_index", "CEI", "CVT.cvterm_id = CEI.cvterm_id");
+      $query->fields("CEI", ["bundle_id", "entities"])
       ->condition("bundle_id", $target_bundle);
 
 
@@ -177,9 +177,9 @@ class data__ontology_data extends TripalField {
         //fetch all features of that type associated with this organism
         //TODO: ALSO FETCH TITLES OF CHILDREN
         $query = db_select($bundle_table, 'bt');
-        $query->fields('bt', ['record_id', 'entity_id'])
-          ->join('chado.feature', "cf", 'bt.record_id = cf.feature_id')
-          ->condition('cf.organism_id', '=', $record_id);
+        $query->fields('bt', ['record_id', 'entity_id']);
+          $query->join('chado.feature', "cf", 'bt.record_id = cf.feature_id');
+          $query->condition('cf.organism_id', '=', $record_id);
         $results = $query->fetchAll();
 
         if ($results) {
@@ -197,17 +197,21 @@ class data__ontology_data extends TripalField {
     $settings = $this->instance['settings'];
 
     //defaults...
-    // if (!isset($settings['CV'])) { $settings['CV'] = self::$default_settings['CV']; }
-    // if (!isset($settings['target_bundle'])) { $settings['target_bundle'] = self::$default_settings['target_bundle']; }
+
+//    if (!isset($settings['CV'])) {
+//      $settings['CV'] = self::$default_settings['CV'];
+//    }
+//    if (!isset($settings['target_bundle'])) {
+//      $settings['target_bundle'] = self::$default_settings['target_bundle'];
+//    }
 
 
     //lacey warns people :P
-    $element['msg'] = array(
-      '#type' => 'markup',
-      '#markup' => '<div class="messages warning">Settings are only saved after you click "Update" within this box <br />AND "Save" at the bottom of the page!</div>',
-    );
+//    $element['msg'] = array(
+//      '#type' => 'markup',
+//      '#markup' => '<div class="messages warning">Settings are only saved after you click "Update" within this box <br />AND "Save" at the bottom of the page!</div>',
+//    );
 
-    //lacey warns people :P
     $element['instructions'] = array(
       '#type' => 'markup',
       '#markup' => '<div><p>The ontology data browser provides an interactive tree of a CV.  Records that relate to the entity this field displays on will appear on the tree.</p><p>
@@ -215,27 +219,54 @@ Before you can use this field, you must choose which CV to display, and what ent
 </p> </div>',
     );
 
-    $cv_options = [1 => "KEGG", 2 => "GO"];
+    $reasonable_cvs = [
+      'INTERPRO',
+      'EDAM',
+      'biological_process',
+      'molecular_function',
+      'cellular_component',
+      'sequence',
+      'SIO',
+    ];
+
+    $results = db_select("chado.cv", 'CV')
+      ->fields("CV", ["cv_id", "name"])
+      ->condition("name", $reasonable_cvs, 'IN')
+      ->execute();
+    $cv_options = [];
+    foreach ($results as $result) {
+      $cv_options[$result->cv_id] =  $result->name;
+    }
 
     // Add in all the general settings
     //-------------------------------------------
     $element['CV'] = array(
       '#type' => 'select',
       '#title' => 'CV',
-      '#default_value' => $settings['title'],
       '#description' => 'The CV you would like to map entities to.',
       '#options' => $cv_options,
     );
 
-    //TODO: Look at qualify base tables for this istance, the nget all entities.
+    //TODO: Look at qualify base tables for this instance, then get all entities.
 
-    $target_bundles = ["gene", "mrna"];
+    $base_tables = ["feature", "biomaterial"];
 
+
+    $target_bundles = [];
+
+    $query = db_select("public.chado_bundle", 'CB')
+    ->fields("CB", ["bundle_id", "data_table"]);
+    $query->join("public.tripal_bundle", "TB", "CB.bundle_id = TB.id");
+      $results = $query->fields("TB", ["label"])
+      ->execute();
+
+    foreach ($results as $result) {
+      $target_bundles[$result->bundle_id] =  $result->label;
+    }
 
     $element['target_bundle'] = array(
       '#type' => 'select',
-      '#title' => 'CV',
-      '#default_value' => $settings['title'],
+      '#title' => 'Target Bundle to Map Onto CV Tree',
       '#description' => 'The entity type you are mapping.  For example, if mapping features to an organism, you would select the feature bundle here.',
       '#options' => $target_bundles,
     );
