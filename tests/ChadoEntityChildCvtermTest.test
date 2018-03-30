@@ -60,4 +60,24 @@ class entity_child_cvterm_test extends TestCase {
 
   }
 
-}
+  private function _add_feature_with_pathy_prop(){
+
+    //insert mother term
+    tripal_insert_cvterm();
+
+    //insert child term
+
+    //insert feature
+
+    //add prop to feature
+
+  }
+
+  private function _clean_up_feature_with_pathy_prop(){
+
+  }
+
+
+
+
+  }

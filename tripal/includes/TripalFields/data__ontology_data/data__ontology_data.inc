@@ -103,25 +103,25 @@ class data__ontology_data extends TripalField {
     $entity->{$field_name}['und'][0]['value'] = NULL;
 
 
-    $child_entities = $this - fetch_associated_features($entity);
+    $child_entities = $this->fetch_associated_features($entity);
     //this is an array with key 1 = bundle, key 2 = entity ids. (in case we need to filter by bundle type).
 
+    $settings = $this->instance['settings'];
+    $cv_id = $settings['CV'];
+
     //retrieve cvterms from cvterm->entity index
-    //TODO: make it so this is set in the field settings
-    $cv_id = 10;
 
-    //TODO:  look up which target bundle to include based on field settings instead
-    $target_bundles = [10];
-
+    $target_bundle = $settings['target_bundle'];
     $child_entity_cvterms = [];
 
 
-    $query = db_select("chado.cv", 'CV')
-      ->join("chado.cvterm", "CVT", "CV.cv_id = CVT.cv_id")
+    //Look up all cvterm:entity mappings for this field's CV
+    $query = db_select("chado.cvterm", 'CVT')
       ->fields("CVT", "cvterm_id")
+      ->condition("cv_id", $cv_id)
       ->join("public.cvterm_entity_index", "CEI", "CVT.cvterm_id = CEI.cvterm_id")
       ->fields("CEI", ["bundle_id", "entities"])
-      ->condition("bundle_id", $target_bundles, 'IN');
+      ->condition("bundle_id", $target_bundle);
 
 
     $results = $query->execute();
@@ -129,24 +129,18 @@ class data__ontology_data extends TripalField {
     foreach ($results as $result) {
       $cvterm_id = $result->cvterm_id;
       $entities_serial = $result->entities;
-      $entities = unserialize($entities_serial);
-
-      foreach ($target_bundles as $bundle_id) {
-        $mapped_entities = $child_entities[$bundle_id];
-        $matched = array_intersect_key($mapped_entities, $entities);
-        //TODO:  what do we want the end object to be?
-        //An array with CVTERM[bundle][entity_id] = ['title', 'relationshiptype', 'pathlength'] which is a combination of the two arrays right?
-        $child_entity_cvterms[$cvterm_id] = $matched;
-      }
+      $entities_with_term_info = unserialize($entities_serial);
+      $mapped_entities = $child_entities[$target_bundle];
+      $matched = array_intersect_key($entities_with_term_info, $mapped_entities);
+      $child_entity_cvterms[$cvterm_id] = $matched;        //The matched array should have all the values from entities_with_term_info
     }
 
     $entity->{$field_name}['und'][0]['value'] = $child_entity_cvterms;
 
-
-    //maybe hte formatter does this instead...
+    //Note: the formatter does this instead...
     drupal_add_js(array(
       'tripal' => array(
-        'cv_lookup_entity_targets' => $child_entity_cvterms
+        'cv_lookup_entity_targets' => $child_entity_cvterms,
       ),
     ), 'setting');
 
@@ -197,5 +191,56 @@ class data__ontology_data extends TripalField {
     return $child_entities;
   }
 
+  public function settingsForm($has_data) {
 
+    // Retrieve the current settings.
+    $settings = $this->instance['settings'];
+
+    //defaults...
+    // if (!isset($settings['CV'])) { $settings['CV'] = self::$default_settings['CV']; }
+    // if (!isset($settings['target_bundle'])) { $settings['target_bundle'] = self::$default_settings['target_bundle']; }
+
+
+    //lacey warns people :P
+    $element['msg'] = array(
+      '#type' => 'markup',
+      '#markup' => '<div class="messages warning">Settings are only saved after you click "Update" within this box <br />AND "Save" at the bottom of the page!</div>',
+    );
+
+    //lacey warns people :P
+    $element['instructions'] = array(
+      '#type' => 'markup',
+      '#markup' => '<div><p>The ontology data browser provides an interactive tree of a CV.  Records that relate to the entity this field displays on will appear on the tree.</p><p>
+Before you can use this field, you must choose which CV to display, and what entity types will map to this bundle. Currently, the following mappings are supported: Organism <- feature.  
+</p> </div>',
+    );
+
+    $cv_options = [1 => "KEGG", 2 => "GO"];
+
+    // Add in all the general settings
+    //-------------------------------------------
+    $element['CV'] = array(
+      '#type' => 'select',
+      '#title' => 'CV',
+      '#default_value' => $settings['title'],
+      '#description' => 'The CV you would like to map entities to.',
+      '#options' => $cv_options,
+    );
+
+    //TODO: Look at qualify base tables for this istance, the nget all entities.
+
+    $target_bundles = ["gene", "mrna"];
+
+
+    $element['target_bundle'] = array(
+      '#type' => 'select',
+      '#title' => 'CV',
+      '#default_value' => $settings['title'],
+      '#description' => 'The entity type you are mapping.  For example, if mapping features to an organism, you would select the feature bundle here.',
+      '#options' => $target_bundles,
+    );
+
+    return $element;
+
+  }
 }
