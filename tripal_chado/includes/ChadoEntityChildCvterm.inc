@@ -4,6 +4,9 @@ class ChadoEntityChildCvterm {
 
 
   public function update_all_entities() {
+    //First, empty db
+    db_truncate("public.tripal_cvterm_entity_index")->execute();
+
     $o_array = [];
 
     $bundles = $this->get_all_bundles();
@@ -11,30 +14,39 @@ class ChadoEntityChildCvterm {
     foreach ($bundles as $bundle) {
 
       $cvterm_tracker = [];
-      if ($bundle->data_table != "feature" || $bundle->data_table != "biomaterial") {
+      if ($bundle->data_table !== "feature" && $bundle->data_table !== "biomaterial") {
         continue;
       }
 
       $cbd_table = "public.chado_" . $bundle->name;
       //get all entities in this bundle
-
-      $entities = db_select($cbd_table, 'cbd')->fields('entity_id', 'record_id');
+      $entities = db_select($cbd_table, 'cbd')->fields('cbd', [
+        'entity_id',
+        'record_id',
+      ])->execute()->fetchAll();
 
       foreach ($entities as $entity) {
         $types = NULL;
         $eid = $entity->entity_id;
         $rid = $entity->record_id;
         //directly associated cvterms
-        $cvterms = $this->get_all_associated_cvterms($bundle, $rid);
+        $cvterms = $this->get_all_associated_cvterms($bundle->data_table, $rid);
+        //why is this always NULL?
+
+        if (!$cvterms) {
+          continue;
+        }
+
         foreach ($cvterms as $cvterm => $relationship) {
-          $cvterm_tracker[$cvterm][$entity]["relationship"] = $relationship;
-          $cvterm_tracker[$cvterm][$entity]["path_length"] = 0;
+          $cvterm_tracker[$cvterm][$eid]["relationship"] = $relationship;
+          $cvterm_tracker[$cvterm][$eid]["path_length"] = 0;
         }
       }
-
       //Loop through the cvterms, retrieve all child terms defined in cvtermpath, and add them in copying the relationship type
       foreach ($cvterm_tracker as $cvterm => $entity_list) {
         $children = $this->fetch_ancestors($cvterm);
+
+      //TODO: This code is current untested, need terms with ancestors
         foreach ($children as $child_cvterm => $ancestor_info) {
           //add each individual ancestor term
           $entities = array_keys($entity_list);
@@ -44,8 +56,8 @@ class ChadoEntityChildCvterm {
           }
         }
       }
-      //want to insert into public.tripal_cvterm_entity_index
 
+      //Insert into public.tripal_cvterm_entity_index
 
       foreach ($cvterm_tracker as $cvterm => $entities) {
         $serialized_entities = serialize($entities);
@@ -53,7 +65,7 @@ class ChadoEntityChildCvterm {
           ->fields([
             "cvterm_id" => $cvterm,
             "bundle_id" => $bundle->id,
-            "entities" => $serialized_entities
+            "entities_array" => $serialized_entities,
           ])
           ->execute();
       }
@@ -97,7 +109,7 @@ class ChadoEntityChildCvterm {
    *  - Property type in recordprop table
    *  - Property cvalue in recordprop table
    *
-   * @param $base_table
+   * @param $base_table - the chado base table (ie feature)
    * @param $record_id
    *
    * @return array|null  A nested array where each cvterm ID is a key, and the
@@ -120,8 +132,9 @@ class ChadoEntityChildCvterm {
         ->condition("feature_id", $record_id);
       $type = $query->execute()->fetchObject();
     }
-    if ($type) {
-      $out[$type] = "type";
+
+    if ($type->type_id) {
+      $out[$type->type_id] = "type";
     }
 
     $query = db_select($prop_table, "P");
@@ -130,7 +143,7 @@ class ChadoEntityChildCvterm {
     $prop_types = $query->execute()->fetchAll();
 
     foreach ($prop_types as $term) {
-      $out[$term] = "prop_type";
+      $out[$term->type_id] = "prop_type";
     }
 
     if (db_field_exists($prop_table, "cvalue_id")) {
@@ -140,7 +153,7 @@ class ChadoEntityChildCvterm {
       $prop_cvalues = $query->execute()->fetchAll();
 
       foreach ($prop_cvalues as $term) {
-        $out[$term] = "prop_value";
+        $out[$term->type_id] = "prop_value";
       }
     }
 

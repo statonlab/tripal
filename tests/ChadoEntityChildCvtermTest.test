@@ -60,6 +60,17 @@ class entity_child_cvterm_test extends TestCase {
 
   }
 
+  //WARNING: this test runs the update all entities job!
+  //It's going to take a long time!  Run it to populate your entity term index...
+  public function tests_update_all_entities(){
+    $obj = $this->obj;
+    $obj->update_all_entities();
+
+    $result = db_select("public.tripal_cvterm_entity_index", 't')->fields('t')->execute();
+
+    $this->assertNotEmpty($result);
+  }
+
   private function _add_feature_with_pathy_prop(){
 
     //insert mother term

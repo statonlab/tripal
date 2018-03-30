@@ -102,7 +102,6 @@ class data__ontology_data extends TripalField {
 
     $entity->{$field_name}['und'][0]['value'] = NULL;
 
-
     $child_entities = $this->fetch_associated_features($entity);
     //this is an array with key 1 = bundle, key 2 = entity ids. (in case we need to filter by bundle type).
 
@@ -117,16 +116,16 @@ class data__ontology_data extends TripalField {
 
     //Look up all cvterm:entity mappings for this field's CV
     $query = db_select("chado.cvterm", 'CVT')
-      ->fields("CVT", "cvterm_id")
+      ->fields("CVT", ["cvterm_id"])
       ->condition("cv_id", $cv_id);
-      $query->join("public.cvterm_entity_index", "CEI", "CVT.cvterm_id = CEI.cvterm_id");
-      $query->fields("CEI", ["bundle_id", "entities"])
+    $query->join("public.tripal_cvterm_entity_index", "CEI", "CVT.cvterm_id = CEI.cvterm_id");
+    $query->fields("CEI", ["bundle_id", "entities_array"])
       ->condition("bundle_id", $target_bundle);
-
 
     $results = $query->execute();
     //NEXT: filter the array to just entities mapped on this instance of the field
     foreach ($results as $result) {
+      dpm($result);
       $cvterm_id = $result->cvterm_id;
       $entities_serial = $result->entities;
       $entities_with_term_info = unserialize($entities_serial);
@@ -158,16 +157,18 @@ class data__ontology_data extends TripalField {
    */
   private function fetch_associated_features($entity) {
     $entity_id = $entity->id;
-    $bundle = tripal_load_bundle_entity(array('name' => $entity->bundle));
-    $record_id = $entity->record_id;
+   // $bundle = tripal_load_bundle_entity(array('name' => $entity->bundle));
+
     $child_entities = [];
+    $record_id = $entity->chado_record_id;
 
     //If organism, we'll load all the features associated with it in the type_id column
-    if ($bundle->data_table == 'organism') {
-      $query = db_select('public.tripal_bundle', 'tb')
-        ->fields('bundle_id', 'type_id')
-        ->condition('data_table', '=', 'feature');
-      $feature_bundles = $query->fetchAll();
+    if ($entity->chado_table == 'organism') {
+
+      $query = db_select('public.chado_bundle', 'tb')
+        ->fields('tb', ['bundle_id', 'type_id', 'data_table'])
+        ->condition('data_table', 'feature', '=' );
+      $feature_bundles = $query->execute()->fetchAll();
 
       foreach ($feature_bundles as $fb) {
         $type_id = $fb->type_id;
@@ -178,9 +179,9 @@ class data__ontology_data extends TripalField {
         //TODO: ALSO FETCH TITLES OF CHILDREN
         $query = db_select($bundle_table, 'bt');
         $query->fields('bt', ['record_id', 'entity_id']);
-          $query->join('chado.feature', "cf", 'bt.record_id = cf.feature_id');
-          $query->condition('cf.organism_id', '=', $record_id);
-        $results = $query->fetchAll();
+        $query->join('chado.feature', "cf", 'bt.record_id = cf.feature_id');
+        $query->condition('cf.organism_id', $record_id, '=');
+        $results = $query->execute()->fetchAll();
 
         if ($results) {
           $child_entities[$bundle_table] = $results;
@@ -191,7 +192,11 @@ class data__ontology_data extends TripalField {
     return $child_entities;
   }
 
-  public function settingsForm($has_data) {
+
+//TODO:  this applies to ALL uses of this field.  i want it just for the instance.  how?
+
+  public
+  function instanceSettingsForm() {
 
     // Retrieve the current settings.
     $settings = $this->instance['settings'];
@@ -235,7 +240,7 @@ Before you can use this field, you must choose which CV to display, and what ent
       ->execute();
     $cv_options = [];
     foreach ($results as $result) {
-      $cv_options[$result->cv_id] =  $result->name;
+      $cv_options[$result->cv_id] = $result->name;
     }
 
     // Add in all the general settings
@@ -255,13 +260,14 @@ Before you can use this field, you must choose which CV to display, and what ent
     $target_bundles = [];
 
     $query = db_select("public.chado_bundle", 'CB')
-    ->fields("CB", ["bundle_id", "data_table"]);
+      ->fields("CB", ["bundle_id", "data_table"])
+      ->condition("data_table", $base_tables, 'IN');
     $query->join("public.tripal_bundle", "TB", "CB.bundle_id = TB.id");
-      $results = $query->fields("TB", ["label"])
+    $results = $query->fields("TB", ["label"])
       ->execute();
 
     foreach ($results as $result) {
-      $target_bundles[$result->bundle_id] =  $result->label;
+      $target_bundles[$result->bundle_id] = $result->label;
     }
 
     $element['target_bundle'] = array(
@@ -273,5 +279,7 @@ Before you can use this field, you must choose which CV to display, and what ent
 
     return $element;
 
+
   }
+
 }

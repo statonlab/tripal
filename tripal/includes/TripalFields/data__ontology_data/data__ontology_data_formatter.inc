@@ -9,8 +9,7 @@
 class data__ontology_data_formatter extends TripalFieldFormatter {
 
   // The default label for this field.
-  public static $default_label = 'Ontoloyg data';
-
+  public static $default_label = 'Ontology data';
   // The list of field types for which this formatter is appropriate.
   public static $field_types = array('data__ontology_data');
 
@@ -81,6 +80,8 @@ class data__ontology_data_formatter extends TripalFieldFormatter {
    */
   public function view(&$element, $entity_type, $entity, $langcode, $items, $display) {
 
+    dpm($element);
+    dpm($items);
     // Get the settings
     $settings = $display['settings'];
   }
