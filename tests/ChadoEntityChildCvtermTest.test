@@ -68,7 +68,7 @@ class entity_child_cvterm_test extends TestCase {
 
     $result = db_select("public.tripal_cvterm_entity_index", 't')->fields('t')->execute();
 
-    $this->assertNotEmpty($result);
+    $this->assertNotEquals($result->rowCount(), 0);
   }
 
   private function _add_feature_with_pathy_prop(){

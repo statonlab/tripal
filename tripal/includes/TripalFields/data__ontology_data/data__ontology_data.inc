@@ -105,6 +105,7 @@ class data__ontology_data extends TripalField {
     $child_entities = $this->fetch_associated_features($entity);
     //this is an array with key 1 = bundle, key 2 = entity ids. (in case we need to filter by bundle type).
 
+
     $settings = $this->instance['settings'];
     $cv_id = $settings['CV'];
 
@@ -113,6 +114,9 @@ class data__ontology_data extends TripalField {
     $target_bundle = $settings['target_bundle'];
     $child_entity_cvterms = [];
 
+
+    //CHANGE CV_ID TO 20 FOR OUR TEST CASE
+    //$cv_id = 20;
 
     //Look up all cvterm:entity mappings for this field's CV
     $query = db_select("chado.cvterm", 'CVT')
@@ -123,15 +127,18 @@ class data__ontology_data extends TripalField {
       ->condition("bundle_id", $target_bundle);
 
     $results = $query->execute();
+
     //NEXT: filter the array to just entities mapped on this instance of the field
     foreach ($results as $result) {
-      dpm($result);
       $cvterm_id = $result->cvterm_id;
-      $entities_serial = $result->entities;
+      $entities_serial = $result->entities_array;
       $entities_with_term_info = unserialize($entities_serial);
-      $mapped_entities = $child_entities[$target_bundle];
+
+      $target_bundle_table = "public.chado_bio_data_" . $target_bundle;
+      $mapped_entities = $child_entities[$target_bundle_table];
       $matched = array_intersect_key($entities_with_term_info, $mapped_entities);
-      $child_entity_cvterms[$cvterm_id] = $matched;        //The matched array should have all the values from entities_with_term_info
+      $child_entity_cvterms[$cvterm_id] = $matched;
+      //TODO: we're missing the titles.  They are in $mapped_entities, keyed by the entity ID (just like the other arrray)  We could loop through to get them...
     }
 
     $entity->{$field_name}['und'][0]['value'] = $child_entity_cvterms;
@@ -170,18 +177,20 @@ class data__ontology_data extends TripalField {
         ->condition('data_table', 'feature', '=' );
       $feature_bundles = $query->execute()->fetchAll();
 
+      //TODO: refactor this.  we're only mapping one entity type!
       foreach ($feature_bundles as $fb) {
         $type_id = $fb->type_id;
         $bundle_id = $fb->bundle_id;
         $bundle_table = "public.chado_bio_data_" . $bundle_id;
 
         //fetch all features of that type associated with this organism
-        //TODO: ALSO FETCH TITLES OF CHILDREN
         $query = db_select($bundle_table, 'bt');
-        $query->fields('bt', ['record_id', 'entity_id']);
+        $query->fields('bt', ['entity_id']);
         $query->join('chado.feature', "cf", 'bt.record_id = cf.feature_id');
+        $query->join('public.tripal_entity', 'te', 'te.id = bt.entity_id');
+        $query->fields('te', ['title']);
         $query->condition('cf.organism_id', $record_id, '=');
-        $results = $query->execute()->fetchAll();
+        $results = $query->execute()->fetchAllAssoc('entity_id');//this ensures the key is the entity ID!
 
         if ($results) {
           $child_entities[$bundle_table] = $results;
@@ -192,8 +201,6 @@ class data__ontology_data extends TripalField {
     return $child_entities;
   }
 
-
-//TODO:  this applies to ALL uses of this field.  i want it just for the instance.  how?
 
   public
   function instanceSettingsForm() {
