@@ -14,6 +14,8 @@ class ChadoEntityChildCvterm {
     foreach ($bundles as $bundle) {
 
       $cvterm_tracker = [];
+      //Right now we're only populating feature and biomaterial.
+      //TODO: write more bundle cases.
       if ($bundle->data_table !== "feature" && $bundle->data_table !== "biomaterial") {
         continue;
       }
@@ -46,7 +48,7 @@ class ChadoEntityChildCvterm {
       foreach ($cvterm_tracker as $cvterm => $entity_list) {
         $children = $this->fetch_ancestors($cvterm);
 
-      //TODO: This code is current untested, need terms with ancestors
+        //TODO: This code is current untested, need terms with ancestors
         foreach ($children as $child_cvterm => $ancestor_info) {
           //add each individual ancestor term
           $entities = array_keys($entity_list);
@@ -108,6 +110,7 @@ class ChadoEntityChildCvterm {
    *  - Type ID in record table
    *  - Property type in recordprop table
    *  - Property cvalue in recordprop table
+   *  - _cvterm tables
    *
    * @param $base_table - the chado base table (ie feature)
    * @param $record_id
@@ -122,41 +125,53 @@ class ChadoEntityChildCvterm {
 
     $chado_table = "chado." . $base_table;
     $prop_table = "chado." . $base_table . "prop";
+    $cvterm_table = "chado." . $base_table . "_cvterm";
+
     if ($base_table != 'feature') {
       return NULL;
     }
+    $id_column = "feature_id";
 
+    //1  the type_id in the base table
+    $query = db_select($chado_table, "CT");
     if (db_field_exists($chado_table, "type_id")) {
-      $query = db_select($chado_table, "CT");
       $query->fields("CT", ["type_id"])
-        ->condition("feature_id", $record_id);
-      $type = $query->execute()->fetchObject();
-    }
-
-    if ($type->type_id) {
-      $out[$type->type_id] = "type";
-    }
-
-    $query = db_select($prop_table, "P");
-    $query->fields("P", ["type_id"])
-      ->condition("feature_id", $record_id);
-    $prop_types = $query->execute()->fetchAll();
-
-    foreach ($prop_types as $term) {
-      $out[$term->type_id] = "prop_type";
-    }
-
-    if (db_field_exists($prop_table, "cvalue_id")) {
-      $query = db_select($prop_table, "P");
-      $query->fields("P", ["type_id"])
-        ->condition("feature_id", $record_id);
-      $prop_cvalues = $query->execute()->fetchAll();
-
-      foreach ($prop_cvalues as $term) {
-        $out[$term->type_id] = "prop_value";
+        ->condition("CT.feature_id", $record_id);
+      $result = $query->execute()->fetchObject();
+      if ($result) {
+        $out[$result->type_id] = "type";
       }
     }
 
+    //2 the prop table info
+    $prop_fields = ["type_id"];
+    $prop_fields_alias = ["prop_type_id"];
+
+    if (db_field_exists($prop_table, "cvalue_id")) {
+      $prop_fields = ["type_id", "cvalue_id"];
+      $prop_fields_alias = ["prop_type_id", "prop_cvalue_id"];
+    }
+    $query = db_select($prop_table, "P");
+    $query->fields("P", $prop_fields, $prop_fields_alias)
+      ->condition("P." . $id_column, $record_id);
+    $result = $query->execute()->fetchObject();
+    if ($result) {
+      foreach ($result as $column => $cvterm) {
+        $out[$cvterm] = $column;
+      }
+    }
+  //3 the _cvterm table
+    if (db_table_exists($cvterm_table)) {
+      $query = db_select($cvterm_table, "CTCV");
+      $query->fields("CTCV", ["cvterm_id"])
+        ->condition("CTCV." . $id_column, $record_id);
+      $results = $query->execute()->fetchAll();
+      if ($result) {
+        foreach ($result as $column => $cvterm) {
+          $out[$cvterm] = $column;
+        }
+      }
+    }
     return $out;
   }
 
