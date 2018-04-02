@@ -44,6 +44,7 @@ class ChadoEntityChildCvterm {
           $cvterm_tracker[$cvterm][$eid]["path_length"] = 0;
         }
       }
+
       //Loop through the cvterms, retrieve all child terms defined in cvtermpath, and add them in copying the relationship type
       foreach ($cvterm_tracker as $cvterm => $entity_list) {
         $children = $this->fetch_ancestors($cvterm);
@@ -152,7 +153,6 @@ class ChadoEntityChildCvterm {
       $records[] = $object->object_id;
     }
 
-
     //1  the type_id in the base table
     $query = db_select($chado_table, "CT");
     if (db_field_exists($chado_table, "type_id")) {
@@ -179,22 +179,25 @@ class ChadoEntityChildCvterm {
     $result = $query->execute()->fetchAll();
     if ($result) {
       foreach ($result as $column => $cvterm) {
-        $out[$cvterm] = $column;
+        if ($cvterm->type_id) {
+          $out[$cvterm->type_id] = "proptype";
+        }
+        if ($cvterm->cvalue_id) {
+          $out[$cvterm->cvalue_id] = "propcval";
+        }
       }
     }
 
   //3 the _cvterm table
     if (db_table_exists($cvterm_table)) {
-
       $query = db_select($cvterm_table, "CTCV");
       $query->fields("CTCV", ["cvterm_id"])
         ->condition("CTCV." . $id_column, $records, 'IN');
 
       $results = $query->execute()->fetchAll();
       if ($results) {
-
         foreach ($results as $column => $cvterm) {
-          $out[$cvterm] = $column;
+          $out[$cvterm->cvterm_id] = "cvterm";
         }
       }
     }
