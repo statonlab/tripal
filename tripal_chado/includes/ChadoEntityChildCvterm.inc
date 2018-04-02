@@ -122,7 +122,6 @@ class ChadoEntityChildCvterm {
 
   public function get_all_associated_cvterms($base_table, $record_id) {
     $out = [];
-
     $chado_table = "chado." . $base_table;
     $prop_table = "chado." . $base_table . "prop";
     $cvterm_table = "chado." . $base_table . "_cvterm";
@@ -132,13 +131,36 @@ class ChadoEntityChildCvterm {
     }
     $id_column = "feature_id";
 
+    //get all related features
+
+    $records = [$record_id];
+
+    $query = db_select($chado_table . "_relationship", "CR");
+    $query->fields("CR", ["subject_id"])
+    ->condition("CR.object_id", $record_id);
+    $subjects = $query->execute()->fetchAll();
+
+    foreach ($subjects as $subject){
+      $records[] = $subject->subject_id;
+     }
+    $query = db_select($chado_table . "_relationship", "CR");
+    $query->fields("CR", ["object_id"])
+      ->condition("CR.subject_id", $record_id);
+    $objects = $query->execute()->fetchAll();
+
+    foreach ($objects as $object){
+      $records[] = $object->object_id;
+    }
+
+
     //1  the type_id in the base table
     $query = db_select($chado_table, "CT");
     if (db_field_exists($chado_table, "type_id")) {
       $query->fields("CT", ["type_id"])
-        ->condition("CT.feature_id", $record_id);
-      $result = $query->execute()->fetchObject();
-      if ($result) {
+        ->condition("CT.feature_id", $records, 'IN');
+      $results = $query->execute()->fetchAll();
+
+      foreach ($results as $result){
         $out[$result->type_id] = "type";
       }
     }
@@ -153,21 +175,25 @@ class ChadoEntityChildCvterm {
     }
     $query = db_select($prop_table, "P");
     $query->fields("P", $prop_fields, $prop_fields_alias)
-      ->condition("P." . $id_column, $record_id);
-    $result = $query->execute()->fetchObject();
+      ->condition("P." . $id_column, $records, 'IN');
+    $result = $query->execute()->fetchAll();
     if ($result) {
       foreach ($result as $column => $cvterm) {
         $out[$cvterm] = $column;
       }
     }
+
   //3 the _cvterm table
     if (db_table_exists($cvterm_table)) {
+
       $query = db_select($cvterm_table, "CTCV");
       $query->fields("CTCV", ["cvterm_id"])
-        ->condition("CTCV." . $id_column, $record_id);
+        ->condition("CTCV." . $id_column, $records, 'IN');
+
       $results = $query->execute()->fetchAll();
-      if ($result) {
-        foreach ($result as $column => $cvterm) {
+      if ($results) {
+
+        foreach ($results as $column => $cvterm) {
           $out[$cvterm] = $column;
         }
       }
