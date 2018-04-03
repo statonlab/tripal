@@ -14,7 +14,7 @@ class data__ontology_data_formatter extends TripalFieldFormatter {
   // The list of field types for which this formatter is appropriate.
   public static $field_types = array('data__ontology_data');
 
-  private  $entity_term_map = null;
+  private $entity_term_map = NULL;
 
   // The list of default settings for this formatter.
   public static $default_settings = array(
@@ -158,31 +158,27 @@ class data__ontology_data_formatter extends TripalFieldFormatter {
     drupal_add_css(drupal_get_path('module', 'tripal') . '/theme/css/tripal.cv_lookup.css');
     drupal_add_js(drupal_get_path('module', 'tripal') . '/theme/js/tripal.cv_lookup.js', 'file');
 
-
-    $element[0] = array(
-      // We create a render array to produce the desired markup,
-      '#type' => 'markup',
-      '#markup' => $content,
-    );
+    $element[0] = $content;
   }
 
 
   /**
-   * A helper function to format an array of terms into a list for the web page.
+   * Given a list of children terms, format the tips of the cv tree.
+   * The field specific functionality here is we
    *
    * @param $children
-   *   A list of children terms.
+   *
+   * @return string
    */
 
   function field_lookup_term_children_format($children) {
 
-   $map =  $this->entity_term_map;
-
-   dpm($children);
+    $map = $this->entity_term_map;
 
     $items = '<ul id="tripal-cv-lookup-tree">';
     foreach ($children as $child) {
 
+      $child_name = $child['vocabulary']['short_name'] . ":" . $child['accession'];
 
       $grand = tripal_get_term_children($child['vocabulary']['short_name'], $child['accession']);
       $num_grand = count($grand);
@@ -198,11 +194,28 @@ class data__ontology_data_formatter extends TripalFieldFormatter {
       $items .= '<i class = "tree-node-icon ' . $class . '"></i>';
       $items .= l($child['name'], 'cv/lookup/' . $child['vocabulary']['short_name'] . '/' . $child['accession'], array('attributes' => array('target' => '_blank')));
       if ($child['accession'] != $child['name']) {
-        $items .= ' [' . $child['vocabulary']['short_name'] . ':' . $child['accession'] . '] ';
+        $items .= ' [' . $child_name . '] ';
       }
-      if ($num_grand > 0) {
-        $items .= ' (' . $num_grand . ')';
+//      if ($num_grand > 0) {
+//        $items .= ' (' . $num_grand . ')';
+//      }
+      //Get term info
+
+      $child_mapping = $map[$child_name];
+      $num_mapped = count($child_mapping);
+
+      if ($num_mapped == 0) {
+        $items .= "  No associated records.";
       }
+      else {
+        $record_word = "records.";
+        if ($num_mapped == 1) {
+          $record_word = "record.";
+        }
+        $flattened_entities = implode(",", array_keys($child_mapping));
+        $items .= l("  {$num_mapped} " . $record_word, 'entities/' . $flattened_entities);
+      }
+
       $items .= '</li>';
     }
     $items .= '</ul>';
