@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @class
  * Purpose:
@@ -12,6 +13,8 @@ class data__ontology_data_formatter extends TripalFieldFormatter {
   public static $default_label = 'Ontology data';
   // The list of field types for which this formatter is appropriate.
   public static $field_types = array('data__ontology_data');
+
+  private  $entity_term_map = null;
 
   // The list of default settings for this formatter.
   public static $default_settings = array(
@@ -67,24 +70,150 @@ class data__ontology_data_formatter extends TripalFieldFormatter {
    *  into a CSV file will always be identical.  The view need not show all
    *  of the data in the 'values' array.
    *
-   *  @param $element
-   *  @param $entity_type
-   *  @param $entity
-   *  @param $langcode
-   *  @param $items
-   *  @param $display
+   * @param $element
+   * @param $entity_type
+   * @param $entity
+   * @param $langcode
+   * @param $items
+   * @param $display
    *
-   *  @return
+   * @return
    *    An element array compatible with that returned by the
    *    hook_field_formatter_view() function.
    */
   public function view(&$element, $entity_type, $entity, $langcode, $items, $display) {
 
-    dpm($element);
-    dpm($items);
     // Get the settings
     $settings = $display['settings'];
+
+    $term_to_entity_map = $items[0]['value'];
+    $this->entity_term_map = $term_to_entity_map;
+
+    $vocabulary_name = $items[0]['cv'];
+
+
+    $vocab = tripal_get_vocabulary_details($vocabulary_name); //short name
+
+    // If we can't find the term then just return a message.
+    if (!$vocab) {
+      drupal_set_message('The vocabulary ' . $vocabulary_name . ' cannot be found on this site', 'error');
+
+      return '';
+    }
+
+    $has_root = TRUE;
+
+    $root_terms = tripal_get_vocabulary_root_terms($vocabulary_name);
+    if (count($root_terms) == 0) {
+      $root_terms = tripal_get_vocabulary_terms($vocabulary_name, 25);
+      $has_root = FALSE;
+    }
+    $items = $this->field_lookup_term_children_format($root_terms);
+
+    if (count($root_terms) == 0) {
+      $items = '<p>This vocabulary has no terms loaded</p>';
+    }
+    else {
+      $items = '<p>Click the + icon (if present) to expand the tree. If ' .
+        'the full ontology or the term heirarchy is not loaded into this site, ' .
+        'then the tree will consist of all terms at the same level. ' .
+        'For some vocabularies, only a subset of terms are loaded</p>' . $items;
+    }
+
+    $onscreen_entity_maps = [];
+
+    //TODO: Filter based on visible CVterms
+
+
+    drupal_add_js(array(
+      'tripal' => array(
+        'cv_lookup' => array(
+          'vocabulary' => $vocabulary_name,
+          'entities' => $onscreen_entity_maps,
+        ),
+      ),
+    ), 'setting');
+
+
+    $content = array(
+      'vocab_table' => array(
+        '#type' => 'item',
+        '#title' => 'Details',
+        '#markup' => '<p>A vocabulary is always identified by its short name and sometimes it may offer multiple sub-vocabularies with different names. Both are listed below.</p>',
+      ),
+      'vocab_browser' => array(
+        '#type' => 'item',
+        '#title' => 'Term Browser',
+        '#markup' => $items,
+      ),
+    );
+    if (!$has_root) {
+      $content['pager'] = array(
+        '#type' => 'markup',
+        '#markup' => theme('pager'),
+      );
+    }
+
+    // Add support for our custom tree viewer
+    drupal_add_css(drupal_get_path('module', 'tripal') . '/theme/css/tripal.cv_lookup.css');
+    drupal_add_js(drupal_get_path('module', 'tripal') . '/theme/js/tripal.cv_lookup.js', 'file');
+
+
+    $element[0] = array(
+      // We create a render array to produce the desired markup,
+      '#type' => 'markup',
+      '#markup' => $content,
+    );
   }
+
+
+  /**
+   * A helper function to format an array of terms into a list for the web page.
+   *
+   * @param $children
+   *   A list of children terms.
+   */
+
+  function field_lookup_term_children_format($children) {
+
+   $map =  $this->entity_term_map;
+
+   dpm($children);
+
+    $items = '<ul id="tripal-cv-lookup-tree">';
+    foreach ($children as $child) {
+
+
+      $grand = tripal_get_term_children($child['vocabulary']['short_name'], $child['accession']);
+      $num_grand = count($grand);
+      $items .= '<li vocabulary = "' . $child['vocabulary']['short_name'] . '" ' .
+        'accession = "' . $child['accession'] . '" ' .
+        'children = "' . $num_grand . '" ' .
+        'state = "closed" ' .
+        'class = "cv-lookup-tree-node">';
+      $class = 'tree-node-closed';
+      if ($num_grand == 0) {
+        $class = 'tree-node-single';
+      }
+      $items .= '<i class = "tree-node-icon ' . $class . '"></i>';
+      $items .= l($child['name'], 'cv/lookup/' . $child['vocabulary']['short_name'] . '/' . $child['accession'], array('attributes' => array('target' => '_blank')));
+      if ($child['accession'] != $child['name']) {
+        $items .= ' [' . $child['vocabulary']['short_name'] . ':' . $child['accession'] . '] ';
+      }
+      if ($num_grand > 0) {
+        $items .= ' (' . $num_grand . ')';
+      }
+      $items .= '</li>';
+    }
+    $items .= '</ul>';
+
+    if (count($children) == 0) {
+      $items = '';
+    }
+
+    return $items;
+  }
+
 
   /**
    * Provides a summary of the formatter settings.

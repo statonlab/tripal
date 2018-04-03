@@ -144,8 +144,6 @@ function tripal_vocabulary_lookup_vocab_page($vocabulary) {
       'For some vocabularies, only a subset of terms are loaded</p>' . $items;
   }
 
-  //Here's where we pass in vocabulary.
-  //TODO:  Pass in entity info too
 
   drupal_add_js(array(
     'tripal' => array(
@@ -154,36 +152,6 @@ function tripal_vocabulary_lookup_vocab_page($vocabulary) {
       ),
     ),
   ), 'setting');
-
-//There are two ways to display the CV: one just showing hte child terms, the other mapping entities from one bundle onto another.
-  $map_entities = TRUE;
-
-//The entity ID[s???] that is the root of the mapping.  This would be for example an organism entity ID
-  $chosen_source = 1;
-//An array of bundles that will be mapped onto the tree.
-  $chosen_entities = [1, 2];
-
-  //We really want to think about two cases.  One case is the field, where we have a selected set of entities.
-  //The other case is we dont have a particular set of entities, but maybe just a bundle...
-
-
-  drupal_add_js(array(
-    'tripal' => array(
-      'cv_lookup' => array(
-        'vocabulary' => $vocabulary,
-      ),
-    ),
-  ), 'setting');
-
-  //maybe the formatter would do this instead...
-  drupal_add_js(array(
-    'tripal' => array(
-      'cv_lookup_entity_targets' => array(
-        '' => $chosen_entities,
-      ),
-    ),
-  ), 'setting');
-
 
 
   $content = array(

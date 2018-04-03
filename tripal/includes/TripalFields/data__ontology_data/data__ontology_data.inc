@@ -109,6 +109,13 @@ class data__ontology_data extends TripalField {
     $settings = $this->instance['settings'];
     $cv_id = $settings['CV'];
 
+    $query = db_select("chado.db2cv_mview", 'DBCV')
+      ->fields("DBCV", ['dbname'])
+      ->condition('cv_id', $cv_id);
+    $cv_shortname = $query->execute()->fetchField();
+
+    dpm($cv_shortname);
+
     //retrieve cvterms from cvterm->entity index as DB:accession
 
     $target_bundle = $settings['target_bundle'];
@@ -147,13 +154,7 @@ class data__ontology_data extends TripalField {
     }
 
     $entity->{$field_name}['und'][0]['value'] = $child_entity_cvterms;
-
-    //Note: the formatter does this instead...
-    drupal_add_js(array(
-      'tripal' => array(
-        'cv_lookup_entity_targets' => $child_entity_cvterms,
-      ),
-    ), 'setting');
+    $entity->{$field_name}['und'][0]['cv'] = $cv_shortname;
 
   }
 
