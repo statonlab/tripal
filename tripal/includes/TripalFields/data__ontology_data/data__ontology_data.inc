@@ -109,21 +109,22 @@ class data__ontology_data extends TripalField {
     $settings = $this->instance['settings'];
     $cv_id = $settings['CV'];
 
-    //retrieve cvterms from cvterm->entity index
+    //retrieve cvterms from cvterm->entity index as DB:accession
 
     $target_bundle = $settings['target_bundle'];
     $child_entity_cvterms = [];
-
-
-    //CHANGE CV_ID TO 20 FOR OUR TEST CASE
-    //$cv_id = 20;
 
     //Look up all cvterm:entity mappings for this field's CV
     $query = db_select("chado.cvterm", 'CVT')
       ->fields("CVT", ["cvterm_id"])
       ->condition("cv_id", $cv_id);
     $query->join("public.tripal_cvterm_entity_index", "CEI", "CVT.cvterm_id = CEI.cvterm_id");
-    $query->fields("CEI", ["bundle_id", "entities_array"])
+    $query->fields("CEI", [
+      "bundle_id",
+      "database",
+      "accession",
+      "entities_array",
+    ])
       ->condition("bundle_id", $target_bundle);
 
     $results = $query->execute();
@@ -137,7 +138,11 @@ class data__ontology_data extends TripalField {
       $target_bundle_table = "public.chado_bio_data_" . $target_bundle;
       $mapped_entities = $child_entities[$target_bundle_table];
       $matched = array_intersect_key($entities_with_term_info, $mapped_entities);
-      $child_entity_cvterms[$cvterm_id] = $matched;
+
+      //build storage key
+
+      $key = $result->database . ":" . $result->accession;
+      $child_entity_cvterms[$key] = $matched;
       //TODO: we're missing the titles.  They are in $mapped_entities, keyed by the entity ID (just like the other arrray)  We could loop through to get them...
     }
 
@@ -164,7 +169,7 @@ class data__ontology_data extends TripalField {
    */
   private function fetch_associated_features($entity) {
     $entity_id = $entity->id;
-   // $bundle = tripal_load_bundle_entity(array('name' => $entity->bundle));
+    // $bundle = tripal_load_bundle_entity(array('name' => $entity->bundle));
 
     $child_entities = [];
     $record_id = $entity->chado_record_id;
@@ -174,7 +179,7 @@ class data__ontology_data extends TripalField {
 
       $query = db_select('public.chado_bundle', 'tb')
         ->fields('tb', ['bundle_id', 'type_id', 'data_table'])
-        ->condition('data_table', 'feature', '=' );
+        ->condition('data_table', 'feature', '=');
       $feature_bundles = $query->execute()->fetchAll();
 
       //TODO: refactor this.  we're only mapping one entity type!
@@ -190,7 +195,8 @@ class data__ontology_data extends TripalField {
         $query->join('public.tripal_entity', 'te', 'te.id = bt.entity_id');
         $query->fields('te', ['title']);
         $query->condition('cf.organism_id', $record_id, '=');
-        $results = $query->execute()->fetchAllAssoc('entity_id');//this ensures the key is the entity ID!
+        $results = $query->execute()
+          ->fetchAllAssoc('entity_id');//this ensures the key is the entity ID!
 
         if ($results) {
           $child_entities[$bundle_table] = $results;

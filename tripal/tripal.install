@@ -922,8 +922,18 @@ function tripal_cvterm_entity_index_schema() {
         'not null' => TRUE,
       ),
       'cvterm_id' => array(
-        'description' => 'The cvterm_id.',
+        'description' => 'chado cvterm id',
         'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'database' => array(
+        'description' => 'Database shortname for term.',
+        'type' => 'varchar',
+        'not null' => TRUE,
+      ),
+      'accession' => array(
+        'description' => 'Term accession.',
+        'type' => 'varchar',
         'not null' => TRUE,
       ),
       'bundle_id' => array(
@@ -939,6 +949,10 @@ function tripal_cvterm_entity_index_schema() {
     ),
     'primary key' => array(
       'cvterm_entity_id',
+    ),
+    'indexes' => array(
+      'accession' => array('accession'),
+      'db' => array('database'),
     ),
     'foreign keys' => array(
       'cvterm' => array(

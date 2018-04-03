@@ -10,7 +10,7 @@
 class data__ontology_data_widget extends TripalFieldWidget {
 
   // The default label for this field.
-  public static $default_label = 'Ontoloyg data';
+  public static $default_label = 'Ontology data';
 
   // The list of field types for which this formatter is appropriate.
   public static $field_types = array('data__ontology_data');

@@ -2,7 +2,6 @@
 
 class ChadoEntityChildCvterm {
 
-
   public function update_all_entities() {
     //First, empty db
     db_truncate("public.tripal_cvterm_entity_index")->execute();
@@ -63,14 +62,37 @@ class ChadoEntityChildCvterm {
       //Insert into public.tripal_cvterm_entity_index
 
       foreach ($cvterm_tracker as $cvterm => $entities) {
-        $serialized_entities = serialize($entities);
-        db_insert("public.tripal_cvterm_entity_index")
-          ->fields([
-            "cvterm_id" => $cvterm,
-            "bundle_id" => $bundle->id,
-            "entities_array" => $serialized_entities,
-          ])
-          ->execute();
+
+        //look up db and accession for cvterm
+
+        // $full_term = tripal_get_cvterm(array('cvterm_id' => $cvterm));
+        //$full_term = chado_expand_var($full_term, 'foreign_key', "cvterm.dbxref_id");
+
+        $query = db_select("chado.cvterm", "CVT");
+        //$query->join("chado.cvterm_dbxref", "CVTDBX", "CVT.cvterm_id = CVTDBX.cvterm_id");
+        $query->join("chado.dbxref", "DBX", "CVT.dbxref_id = DBX.dbxref_id");
+        $query->fields("DBX", ["accession"]);
+        $query->join("chado.db", "DB", "DBX.db_id = DB.db_id");
+        $query->fields("DB", ["name"]);
+        $query->condition("CVT.cvterm_id", $cvterm);
+
+        $full_term = $query->execute()->fetchObject();
+
+        if ($full_term) {
+          $accession = $full_term->accession;
+          $database = $full_term->name;
+
+          $serialized_entities = serialize($entities);
+          db_insert("public.tripal_cvterm_entity_index")
+            ->fields([
+              "cvterm_id" => $cvterm,
+              "database" => $database,
+              "accession" => $accession,
+              "bundle_id" => $bundle->id,
+              "entities_array" => $serialized_entities,
+            ])
+            ->execute();
+        }
       }
     }
   }
@@ -138,18 +160,18 @@ class ChadoEntityChildCvterm {
 
     $query = db_select($chado_table . "_relationship", "CR");
     $query->fields("CR", ["subject_id"])
-    ->condition("CR.object_id", $record_id);
+      ->condition("CR.object_id", $record_id);
     $subjects = $query->execute()->fetchAll();
 
-    foreach ($subjects as $subject){
+    foreach ($subjects as $subject) {
       $records[] = $subject->subject_id;
-     }
+    }
     $query = db_select($chado_table . "_relationship", "CR");
     $query->fields("CR", ["object_id"])
       ->condition("CR.subject_id", $record_id);
     $objects = $query->execute()->fetchAll();
 
-    foreach ($objects as $object){
+    foreach ($objects as $object) {
       $records[] = $object->object_id;
     }
 
@@ -160,7 +182,7 @@ class ChadoEntityChildCvterm {
         ->condition("CT.feature_id", $records, 'IN');
       $results = $query->execute()->fetchAll();
 
-      foreach ($results as $result){
+      foreach ($results as $result) {
         $out[$result->type_id] = "type";
       }
     }
@@ -188,7 +210,7 @@ class ChadoEntityChildCvterm {
       }
     }
 
-  //3 the _cvterm table
+    //3 the _cvterm table
     if (db_table_exists($cvterm_table)) {
       $query = db_select($cvterm_table, "CTCV");
       $query->fields("CTCV", ["cvterm_id"])
@@ -201,6 +223,7 @@ class ChadoEntityChildCvterm {
         }
       }
     }
+
     return $out;
   }
 
