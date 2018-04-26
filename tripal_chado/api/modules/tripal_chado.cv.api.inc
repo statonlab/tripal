@@ -739,7 +739,8 @@ function tripal_update_cvtermpath_loop_increment(
         }
       }
 
-      $find_query = db_select('cvtermpath');
+      $find_query = db_select('chado.cvtermpath', 'CVTP');
+      $find_query->fields('CVTP', ['subject_id']);
       $find_query->condition('object_id', $origin);
       $find_query->condition('subject_id', $child_id);
       $find_query->condition('type_id', $type_id);
