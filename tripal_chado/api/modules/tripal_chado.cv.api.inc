@@ -739,11 +739,11 @@ function tripal_update_cvtermpath_loop_increment(
         }
       }
 
-      $find_query = db_select('cvtermpath')
-        ->condition('object_id', $origin)
-        ->condition('subject_id', $child_id)
-        ->condition('type_id', $type_id)
-        ->condition('pathdistance', $depth);
+      $find_query = db_select('cvtermpath');
+      $find_query->condition('object_id', $origin);
+      $find_query->condition('subject_id', $child_id);
+      $find_query->condition('type_id', $type_id);
+      $find_query->condition('pathdistance', $depth);
       $exists = $find_query->execute()->fetchObject();
 
       if(!$exists){
@@ -755,7 +755,6 @@ function tripal_update_cvtermpath_loop_increment(
             'type_id' => $type_id,
             'pathdistance' => $depth,
           ]);
-
         try {
           $rows = $query->execute();
         } catch (Exception $e) {
