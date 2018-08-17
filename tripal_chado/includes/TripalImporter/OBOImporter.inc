@@ -614,7 +614,7 @@ class OBOImporter extends TripalImporter {
       catch (Exception $e) {
         watchdog_exception('OBOImporter no such accession found in EBI Ontology Search', $e);
       }
-    
+
       if (empty($defaultcv)) {
         throw new Exception("Could not find a namespace for this OBO file: $file");
       }
@@ -723,7 +723,7 @@ class OBOImporter extends TripalImporter {
             "vocabulary.  Therefore a lookup was performed with the EBI Ontology " .
             "Lookup Service to retrieve the information for this term. " .
             "Please note, that vocabularies with many non-local terms " .
-            "require remote lookups and these lookups can dramatically " . 
+            "require remote lookups and these lookups can dramatically " .
             "decrease loading time. " ,
           array('!vocab' => $defaultcv->name),
           TRIPAL_WARNING
@@ -789,7 +789,7 @@ class OBOImporter extends TripalImporter {
           $defaultcv = $results['ontology_name'];
           $default_db = $results['ontology_prefix'];
           $external = TRUE;
-        } 
+        }
         if (!isset($results['label'])) {
           $results = $this->oboEbiLookup($t['id'], 'query');
           if (array_key_exists('docs', $results)) {
@@ -811,7 +811,7 @@ class OBOImporter extends TripalImporter {
               }
             }
           }
-        } 
+        }
         if ($results['response']['numFound'] == 0 && !isset($results['label'])) {
           // The first search doesn't work, so let's try a broader one.
           $results = $this->oboEbiLookup($t['id'], 'query-non-local');
@@ -836,7 +836,7 @@ class OBOImporter extends TripalImporter {
           }
         }
       }
-    } 
+    }
 
     // Check that the default_cv is in the cv table.
     $sql =  "
@@ -873,7 +873,7 @@ class OBOImporter extends TripalImporter {
             'description' => $ontology_info['config']['description'],
             'url' => $ontology_info['config']['versionIri'],
           );
-          
+
           $db_returned = chado_insert_db($values);
           if ($db_returned) {
             $default_db = $db_returned->name;
@@ -892,7 +892,7 @@ class OBOImporter extends TripalImporter {
       $results = $this->oboEbiLookup($t['id'], 'term');
       if (isset($results['label'])) {
         $t['name'] = $results['label'];
-      } 
+      }
     }
 
     $cvterm = tripal_insert_cvterm($t, array('update_existing' => TRUE));
@@ -1112,7 +1112,7 @@ class OBOImporter extends TripalImporter {
               $rel_name = $oterm->name;
             }
           }
-          
+
           if (empty($dbxref)){
             $results = $this->oboEbiLookup($term_id, 'term');
             if (isset($results['label'])) {
@@ -1160,15 +1160,28 @@ class OBOImporter extends TripalImporter {
         }
 
 
-        // Write the term to the tripal_obo_temp table for future reference
-        $values = array(
-          'id' => $term_id,
-          'stanza' => base64_encode(serialize($oterm)),
-          'type' => 'lookup',
-        );
-        chado_insert_record('tripal_obo_temp', $values);
+        $exists = db_select('chado.tripal_obo_temp', 't')
+          ->fields('t', ['id'])
+          ->condition('t.id', $term_id)
+          ->execute()
+          ->fetchField();
+
+        if (!$exists){
+          // Write the term to the tripal_obo_temp table for future reference
+
+          $values = array(
+            'id' => $term_id,
+            'stanza' => base64_encode(serialize($oterm)),
+            'type' => 'lookup',
+          );
+
+          $success =  chado_insert_record('tripal_obo_temp', $values);
+          if (!$success) {
+            throw new Exception("Cannot insert stanza into temporary table.");
+          }
+        }
       }
-    }    
+    }
     // Make sure the relationship cvterm exists.
     $term = array(
       'name' => $rel,
@@ -1422,7 +1435,7 @@ class OBOImporter extends TripalImporter {
 
       //remove comments from end of lines
       $line = preg_replace('/^(.*?)\!.*$/', '\1', $line);  // TODO: if the explamation is escaped
-      
+
       // Remove annotations surrounded by brackets. These are found
       // in the Trait Ontology (e.g. TO:1000023 {is_inferred="true"})
       // That construct has useful info, but it is not in the OBO 1.4 format
@@ -1436,16 +1449,24 @@ class OBOImporter extends TripalImporter {
         // store the stanza we just finished reading
         if (sizeof($stanza) > 0) {
           // add the term to the temp table
-          $values = array(
-            'id' => $stanza['id'][0],
-            'stanza' => base64_encode(serialize($stanza)),
-            'type' => $type,
-          );
-          $success = chado_insert_record('tripal_obo_temp', $values);
-          if (!$success) {
-            throw new Exception("Cannot insert stanza into temporary table.");
-          }
 
+          $exists = db_select('chado.tripal_obo_temp', 't')
+            ->fields('t', ['id'])
+            ->condition('t.id', $stanza['id'][0])
+            ->execute()
+            ->fetchField();
+
+          if (!$exists){
+            $values = array(
+              'id' => $stanza['id'][0],
+              'stanza' => base64_encode(serialize($stanza)),
+              'type' => $type,
+            );
+            $success = chado_insert_record('tripal_obo_temp', $values);
+            if (!$success) {
+              throw new Exception("Cannot insert stanza into temporary table.");
+            }
+          }
         }
         // get the stanza type:  Term, Typedef or Instance
         $type = preg_replace('/^\s*\[\s*(.+?)\s*\]\s*$/', '\1', $line);
@@ -1488,7 +1509,7 @@ class OBOImporter extends TripalImporter {
         'stanza' => base64_encode(serialize($stanza)),
         'type' => $type,
       );
-      chado_insert_record('tripal_obo_temp', $values);
+     $success =  chado_insert_record('tripal_obo_temp', $values);
       if (!$success) {
         throw new Exception("Cannot insert stanza into temporary table.");
       }
@@ -1697,7 +1718,7 @@ class OBOImporter extends TripalImporter {
         $response = drupal_json_decode($response->data);
       }
     }
-    elseif($type_of_search == 'query') { 
+    elseif($type_of_search == 'query') {
       $options = array();
       $full_url = 'http://www.ebi.ac.uk/ols/api/search?q=' . $accession . '&queryFields=obo_id&local=true';
       $response = drupal_http_request($full_url, $options);
@@ -1705,7 +1726,7 @@ class OBOImporter extends TripalImporter {
         $response = drupal_json_decode($response->data);
       }
     }
-    elseif($type_of_search == 'query-non-local') {    
+    elseif($type_of_search == 'query-non-local') {
       $options = array();
       $full_url = 'http://www.ebi.ac.uk/ols/api/search?q=' . $accession . '&queryFields=obo_id';
       $response = drupal_http_request($full_url, $options);
