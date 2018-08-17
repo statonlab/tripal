@@ -1,0 +1,15 @@
+format-version: 1.2
+data-version: releases/2018-03-09
+saved-by: cooperl
+default-namespace: plant_trait_ontology
+import: http://purl.obolibrary.org/obo/po.owl
+import: http://purl.obolibrary.org/obo/to/imports/chebi_import.owl
+
+ontology: to
+
+[Term]
+id: CHEBI:132502 ! fatty acid 18:3
+is_a: CHEBI:73155 ! trienoic fatty acid
+
+[Term]
+id: CHEBI:73155 ! trienoic fatty acid
