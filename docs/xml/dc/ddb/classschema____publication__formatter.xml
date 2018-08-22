@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/ddb/classschema____publication__formatter" kind="class" language="PHP" prot="public">
+    <compoundname>schema__publication_formatter</compoundname>
+    <basecompoundref refid="d1/dc8/classChadoFieldFormatter" prot="public" virt="non-virtual">ChadoFieldFormatter</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="dc/ddb/classschema____publication__formatter_1ad098a3377692259cd41917aa7f869eaf" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>schema__publication_formatter::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Publication&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" line="5" column="1" bodyfile="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/ddb/classschema____publication__formatter_1aa558f50220926c089b0442d590a35b88" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>schema__publication_formatter::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d4/d2d/classschema____publication" kindref="compound">schema__publication</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" line="8" column="1" bodyfile="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/ddb/classschema____publication__formatter_1a2f1fff37c20c898c5eb2cfb694f18572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>schema__publication_formatter::view</definition>
+        <argsstring>(&amp;$element, $entity_type, $entity, $langcode, $items, $display)</argsstring>
+        <name>view</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$display</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="df/d84/classTripalFieldFormatter_1add25a3663eadef23f3a2981d61aee3f1" kindref="member">TripalFieldFormatter::view()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" line="14" column="1" bodyfile="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" bodystart="14" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="589">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="588">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="589" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="587">
+        <label>schema__publication_formatter</label>
+        <link refid="dc/ddb/classschema____publication__formatter"/>
+        <childnode refid="588" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="592">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="591">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="592" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="590">
+        <label>schema__publication_formatter</label>
+        <link refid="dc/ddb/classschema____publication__formatter"/>
+        <childnode refid="591" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/schema__publication/schema__publication_formatter.inc" bodystart="3" bodyend="61"/>
+    <listofallmembers>
+      <member refid="dc/ddb/classschema____publication__formatter_1ad098a3377692259cd41917aa7f869eaf" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>$default_label</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a2bc2a9a611b58e17444de2b3598367df" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>$default_settings</name></member>
+      <member refid="dc/ddb/classschema____publication__formatter_1aa558f50220926c089b0442d590a35b88" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>$field_types</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1adaeaa7d89dd9b33ce51521cf9669cf34" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>__construct</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1113d3234ec9ef0a691fd07ffd551acd" prot="protected" virt="non-virtual"><scope>schema__publication_formatter</scope><name>ajaxifyPager</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1ae410038836433217c166a74a2501920c" prot="protected" virt="non-virtual"><scope>schema__publication_formatter</scope><name>getPagerElementID</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a855e26f78af9142154bdaa59f5e7120b" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>info</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a3e222cef20a5f6c2ec42ef386e51e05e" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>settingsForm</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a90dce4f342fff3e2208fc3b0b48489f2" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>settingsSummary</name></member>
+      <member refid="dc/ddb/classschema____publication__formatter_1a2f1fff37c20c898c5eb2cfb694f18572" prot="public" virt="non-virtual"><scope>schema__publication_formatter</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d9/de8/classtripal__views__handler__filter" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_filter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">views_handler_filter</basecompoundref>
+    <derivedcompoundref refid="df/dc7/classtripal__views__handler__filter__boolean__operator" prot="public" virt="non-virtual">tripal_views_handler_filter_boolean_operator</derivedcompoundref>
+    <derivedcompoundref refid="d1/d59/classtripal__views__handler__filter__numeric" prot="public" virt="non-virtual">tripal_views_handler_filter_numeric</derivedcompoundref>
+    <derivedcompoundref refid="d9/d94/classtripal__views__handler__filter__string" prot="public" virt="non-virtual">tripal_views_handler_filter_string</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/de8/classtripal__views__handler__filter_1a1da9c379766c26e4f434986abe58c023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter::query</definition>
+        <argsstring>()</argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add this filter to the query. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter.inc" line="8" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter.inc" bodystart="8" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="814">
+        <label>tripal_views_handler_filter_boolean_operator</label>
+        <link refid="df/dc7/classtripal__views__handler__filter__boolean__operator"/>
+        <childnode refid="812" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="817">
+        <label>tripal_views_handler_filter_element_string</label>
+        <link refid="da/df1/classtripal__views__handler__filter__element__string"/>
+        <childnode refid="816" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="815">
+        <label>tripal_views_handler_filter_numeric</label>
+        <link refid="d1/d59/classtripal__views__handler__filter__numeric"/>
+        <childnode refid="812" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="812">
+        <label>tripal_views_handler_filter</label>
+        <link refid="d9/de8/classtripal__views__handler__filter"/>
+        <childnode refid="813" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="813">
+        <label>views_handler_filter</label>
+      </node>
+      <node id="816">
+        <label>tripal_views_handler_filter_string</label>
+        <link refid="d9/d94/classtripal__views__handler__filter__string"/>
+        <childnode refid="812" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="818">
+        <label>tripal_views_handler_filter</label>
+        <link refid="d9/de8/classtripal__views__handler__filter"/>
+        <childnode refid="819" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="819">
+        <label>views_handler_filter</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/views_handlers/tripal_views_handler_filter.inc" line="3" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter.inc" bodystart="3" bodyend="17"/>
+    <listofallmembers>
+      <member refid="d9/de8/classtripal__views__handler__filter_1a1da9c379766c26e4f434986abe58c023" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter</scope><name>query</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

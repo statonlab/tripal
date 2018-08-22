@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d3/dbc/data____accession__formatter_8inc" kind="file" language="PHP">
+    <compoundname>data__accession_formatter.inc</compoundname>
+    <innerclass refid="de/d48/classdata____accession__formatter" prot="public">data__accession_formatter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="de/d48/classdata____accession__formatter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="de/d48/classdata____accession__formatter" kindref="compound">data__accession_formatter</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="d1/dc8/classChadoFieldFormatter" kindref="compound">ChadoFieldFormatter</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>lable<sp/>for<sp/>this<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="de/d48/classdata____accession__formatter_1ab593e2fddd5c4548416442af9dd864e4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="de/d48/classdata____accession__formatter_1ab593e2fddd5c4548416442af9dd864e4" kindref="member">$default_label</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Site<sp/>Accession&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>list<sp/>of<sp/>field<sp/>types<sp/>for<sp/>which<sp/>this<sp/>formatter<sp/>is<sp/>appropriate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="de/d48/classdata____accession__formatter_1ac369b53e7c2ac8c2ae01edd17a62c0e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="de/d48/classdata____accession__formatter_1ac369b53e7c2ac8c2ae01edd17a62c0e1" kindref="member">$field_types</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;data__accession&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="de/d48/classdata____accession__formatter_1a37745931d06335bfe42dbdf9aa1e4479" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="de/d48/classdata____accession__formatter_1a37745931d06335bfe42dbdf9aa1e4479" kindref="member">view</ref>(&amp;<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$entity_type,<sp/>$entity,<sp/>$langcode,<sp/>$items,<sp/>$display)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>$content<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>=<sp/>$items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[0]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>create<sp/>a<sp/>render<sp/>array<sp/>to<sp/>produce<sp/>the<sp/>desired<sp/>markup,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$content,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_formatter.inc"/>
+  </compounddef>
+</doxygen>

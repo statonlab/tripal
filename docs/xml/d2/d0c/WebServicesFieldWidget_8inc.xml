@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/d0c/WebServicesFieldWidget_8inc" kind="file" language="PHP">
+    <compoundname>WebServicesFieldWidget.inc</compoundname>
+    <innerclass refid="d6/d3f/classWebServicesFieldWidget" prot="public">WebServicesFieldWidget</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d6/d3f/classWebServicesFieldWidget" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d6/d3f/classWebServicesFieldWidget" kindref="compound">WebServicesFieldWidget</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="db/d4c/classTripalFieldWidget" kindref="compound">TripalFieldWidget</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_ws/includes/TripalFields/WebServicesFieldWidget.inc"/>
+  </compounddef>
+</doxygen>

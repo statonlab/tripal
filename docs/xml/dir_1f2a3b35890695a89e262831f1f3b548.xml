@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_1f2a3b35890695a89e262831f1f3b548" kind="dir">
+    <compoundname>tripal_ws/includes/TripalWebService</compoundname>
+    <innerfile refid="d0/d04/TripalContentService__v0__1_8inc">TripalContentService_v0_1.inc</innerfile>
+    <innerfile refid="d8/d03/TripalDocService__v0__1_8inc">TripalDocService_v0_1.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_ws/includes/TripalWebService/"/>
+  </compounddef>
+</doxygen>

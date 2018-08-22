@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/dea/classdata____sequence__coordinates__widget" kind="class" language="PHP" prot="public">
+    <compoundname>data__sequence_coordinates_widget</compoundname>
+    <basecompoundref refid="d0/df2/classChadoFieldWidget" prot="public" virt="non-virtual">ChadoFieldWidget</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d2/dea/classdata____sequence__coordinates__widget_1a38da2ab64d6e4cdff7a163ce87c59a2c" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__sequence_coordinates_widget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Sequence Coordinates&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" line="5" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dea/classdata____sequence__coordinates__widget_1a5a9affaca70539fe04e9451c72d6ed1e" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__sequence_coordinates_widget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d2/d73/classdata____sequence__coordinates" kindref="compound">data__sequence_coordinates</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" line="8" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/dea/classdata____sequence__coordinates__widget_1a0a9b111d80fa3a3b819acb6b5e38acb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data__sequence_coordinates_widget::form</definition>
+        <argsstring>(&amp;$widget, &amp;$form, &amp;$form_state, $langcode, $items, $delta, $element)</argsstring>
+        <name>form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$widget</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" kindref="member">TripalFieldWidget::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" line="14" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dea/classdata____sequence__coordinates__widget_1afdf0513d87af6988ba2d4021a6a40c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data__sequence_coordinates_widget::submit</definition>
+        <argsstring>($form, &amp;$form_state, $entity_type, $entity, $langcode, $delta)</argsstring>
+        <name>submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" kindref="member">TripalFieldWidget::submit()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" line="23" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="255">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="253">
+        <label>data__sequence_coordinates_widget</label>
+        <link refid="d2/dea/classdata____sequence__coordinates__widget"/>
+        <childnode refid="254" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="255" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="258">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="256">
+        <label>data__sequence_coordinates_widget</label>
+        <link refid="d2/dea/classdata____sequence__coordinates__widget"/>
+        <childnode refid="257" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="257">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc" bodystart="3" bodyend="26"/>
+    <listofallmembers>
+      <member refid="d2/dea/classdata____sequence__coordinates__widget_1a38da2ab64d6e4cdff7a163ce87c59a2c" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>$default_label</name></member>
+      <member refid="d2/dea/classdata____sequence__coordinates__widget_1a5a9affaca70539fe04e9451c72d6ed1e" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>__construct</name></member>
+      <member refid="d2/dea/classdata____sequence__coordinates__widget_1a0a9b111d80fa3a3b819acb6b5e38acb1" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>info</name></member>
+      <member refid="d2/dea/classdata____sequence__coordinates__widget_1afdf0513d87af6988ba2d4021a6a40c97" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>theme</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>data__sequence_coordinates_widget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

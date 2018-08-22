@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_aa0fefd0bba711e3290daf2f3977049e" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/so__transcript</compoundname>
+    <innerfile refid="df/d2b/so____transcript_8inc">so__transcript.inc</innerfile>
+    <innerfile refid="d4/d86/so____transcript__formatter_8inc">so__transcript_formatter.inc</innerfile>
+    <innerfile refid="d3/d88/so____transcript__widget_8inc">so__transcript_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/so__transcript/"/>
+  </compounddef>
+</doxygen>

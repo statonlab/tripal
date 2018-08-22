@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d2c/tripal__analysis__base_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_analysis_base.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$analysis</definition>
+        <argsstring></argsstring>
+        <name>$analysis</name>
+        <initializer>= $variables[&apos;node&apos;]-&gt;analysis</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="2" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$headers</definition>
+        <argsstring></argsstring>
+        <name>$headers</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="12" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$rows</definition>
+        <argsstring></argsstring>
+        <name>$rows</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="18" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1a6c3fe53c8aca8eae2dab9bfc1c9e6237" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$rows[]</definition>
+        <argsstring>[]</argsstring>
+        <name>$rows</name>
+        <initializer>= array(
+  array(
+    &apos;data&apos; =&gt; &apos;Analysis Name&apos;,
+    &apos;header&apos; =&gt; TRUE,
+    &apos;width&apos; =&gt; &apos;20%&apos;,
+  ),
+  $analysis-&gt;name
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="21" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1a9cd64e3508f6c0a0584ab9e759ad5fe1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$software</definition>
+        <argsstring></argsstring>
+        <name>$software</name>
+        <initializer>= $analysis-&gt;program</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="31" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1a99a2b085f0a29bd5d799fdcbb63d261b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$source</definition>
+        <argsstring></argsstring>
+        <name>$source</name>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="47" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" prot="public" static="no" mutable="no">
+        <type>if(user_access(&apos;view ids&apos;))</type>
+        <definition>if (user_access( &apos;view ids&apos;)) $table</definition>
+        <argsstring></argsstring>
+        <name>$table</name>
+        <initializer>= array(
+  &apos;header&apos; =&gt; $headers,
+  &apos;rows&apos; =&gt; $rows,
+  &apos;attributes&apos; =&gt; array(
+    &apos;id&apos; =&gt; &apos;tripal_analysis-table-base&apos;,
+    &apos;class&apos; =&gt; &apos;tripal-data-table&apos;
+  ),
+  &apos;sticky&apos; =&gt; FALSE,
+  &apos;caption&apos; =&gt; &apos;&apos;,
+  &apos;colgroups&apos; =&gt; array(),
+  &apos;empty&apos; =&gt; &apos;&apos;,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="93" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d2c/tripal__analysis__base_8tpl_8php_1aa682f3569592ce2259d67e9d68256476" prot="public" static="no" mutable="no">
+        <type>if($analysis-&gt;sourceuri)</type>
+        <definition>if ( $analysis-&gt;sourceuri) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+  $source = $analysis-&gt;sourcename</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" line="51" column="1" bodyfile="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" refkind="member"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">]-&gt;analysis;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref><sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>(<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>,</highlight><highlight class="stringliteral">&apos;field&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;analysis.description&apos;</highlight><highlight class="normal">);<sp/>?&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal__analysis-data-block-desc<sp/>tripal-data-block-desc&quot;</highlight><highlight class="normal">&gt;&lt;/div&gt;&lt;?php<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$headers<sp/>array<sp/>is<sp/>an<sp/>array<sp/>of<sp/>fields<sp/>to<sp/>use<sp/>as<sp/>the<sp/>colum<sp/>headers.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>additional<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>table<sp/>for<sp/>the<sp/>analysis<sp/>has<sp/>a<sp/>vertical<sp/>header<sp/>(down<sp/>the<sp/>first<sp/>column)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>so<sp/>we<sp/>do<sp/>not<sp/>provide<sp/>headers<sp/>here,<sp/>but<sp/>specify<sp/>them<sp/>in<sp/>the<sp/>$rows<sp/>array<sp/>below.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" refkind="member"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$rows<sp/>array<sp/>contains<sp/>an<sp/>array<sp/>of<sp/>rows<sp/>where<sp/>each<sp/>row<sp/>is<sp/>an<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>values<sp/>for<sp/>each<sp/>column<sp/>of<sp/>the<sp/>table<sp/>in<sp/>that<sp/>row.<sp/><sp/>Additional<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" refkind="member"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Analysis<sp/>Name<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a6c3fe53c8aca8eae2dab9bfc1c9e6237" refkind="member"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Analysis<sp/>Name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;20%&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;name</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implementation<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a9cd64e3508f6c0a0584ab9e759ad5fe1" refkind="member"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a9cd64e3508f6c0a0584ab9e759ad5fe1" kindref="member">$software</ref><sp/>=<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;program;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;programversion<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;n/a&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a9cd64e3508f6c0a0584ab9e759ad5fe1" kindref="member">$software</ref><sp/>.=<sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;programversion<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;algorithm){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a9cd64e3508f6c0a0584ab9e759ad5fe1" kindref="member">$software</ref><sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;.<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;algorithm;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Method&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a9cd64e3508f6c0a0584ab9e759ad5fe1" kindref="member">$software</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Source<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a99a2b085f0a29bd5d799fdcbb63d261b" refkind="member"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a99a2b085f0a29bd5d799fdcbb63d261b" kindref="member">$source</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;sourceuri){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a99a2b085f0a29bd5d799fdcbb63d261b" kindref="member">$source</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&lt;a<sp/>href=\&quot;$analysis-&gt;sourceuri\&quot;&gt;$analysis-&gt;sourcename&lt;/a&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="51" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1aa682f3569592ce2259d67e9d68256476" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a99a2b085f0a29bd5d799fdcbb63d261b" kindref="member">$source</ref><sp/>=<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;sourcename;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;sourceversion){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a99a2b085f0a29bd5d799fdcbb63d261b" kindref="member">$source</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;sourceversion<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Source&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a99a2b085f0a29bd5d799fdcbb63d261b" kindref="member">$source</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date<sp/>performed<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Date<sp/>performed&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/^(\d+-\d+-\d+)<sp/>.*/&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;$1&quot;</highlight><highlight class="normal">,<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;timeexecuted),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>allow<sp/>site<sp/>admins<sp/>to<sp/>see<sp/>the<sp/>analysis<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(user_access(</highlight><highlight class="stringliteral">&apos;view<sp/>ids&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Analysis<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Analysis<sp/>ID&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-site-admin-only-table-row&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;analysis_id,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-site-admin-only-table-row&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$table<sp/>array<sp/>contains<sp/>the<sp/>headers<sp/>and<sp/>rows<sp/>array<sp/>as<sp/>well<sp/>as<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>options<sp/>for<sp/>controlling<sp/>the<sp/>display<sp/>of<sp/>the<sp/>table.<sp/><sp/>Additional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" refkind="member"><highlight class="normal"><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref>,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_analysis-table-base&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>once<sp/>we<sp/>have<sp/>our<sp/>table<sp/>array<sp/>structure<sp/>defined,<sp/>we<sp/>call<sp/>Drupal&apos;s<sp/>theme_table()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>function<sp/>to<sp/>generate<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">print<sp/>theme_table(<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" kindref="member">$table</ref>);<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists(<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>,<sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">))<sp/>{<sp/>?&gt;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>&lt;div<sp/>style=</highlight><highlight class="stringliteral">&quot;text-align:<sp/>justify&quot;</highlight><highlight class="normal">&gt;&lt;?php<sp/>print<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>-&gt;description;<sp/>?&gt;&lt;/div&gt;<sp/>&lt;?php<sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}<sp/>?&gt;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_analysis/theme/templates/tripal_analysis_base.tpl.php"/>
+  </compounddef>
+</doxygen>

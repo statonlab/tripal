@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_74caecb962696074e65d0ef2d1a88310" kind="dir">
+    <compoundname>tripal</compoundname>
+    <innerdir refid="dir_a00108a747527a3ebb98ea67d7eb59f3">tripal/api</innerdir>
+    <innerdir refid="dir_39c81c0969235be589dc99fdaf69ec62">tripal/includes</innerdir>
+    <innerdir refid="dir_9c6ddf19bdd2f5a043c67bc2fe31bb3b">tripal/theme</innerdir>
+    <innerdir refid="dir_b10a55eba37e4107002e7fd6ef570954">tripal/views_handlers</innerdir>
+    <innerfile refid="d1/d1e/tripal_8drush_8inc">tripal.drush.inc</innerfile>
+    <innerfile refid="dd/d0e/tripal_8module">tripal.module</innerfile>
+    <innerfile refid="d4/d6f/tripal_8views_8inc">tripal.views.inc</innerfile>
+    <innerfile refid="d4/d44/tripal_8views__default_8inc">tripal.views_default.inc</innerfile>
+    <innerfile refid="dc/d5f/tripal__views__query_8inc">tripal_views_query.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal/"/>
+  </compounddef>
+</doxygen>

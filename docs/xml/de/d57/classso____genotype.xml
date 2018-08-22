@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="de/d57/classso____genotype" kind="class" language="PHP" prot="public">
+    <compoundname>so__genotype</compoundname>
+    <basecompoundref refid="d2/d2e/classChadoField" prot="public" virt="non-virtual">ChadoField</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="de/d57/classso____genotype_1a9d388c5b7047907223c04afc843c8fbe" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>so__genotype::$default_formatter</definition>
+        <argsstring></argsstring>
+        <name>$default_formatter</name>
+        <initializer>= &apos;<ref refid="d5/dd8/classso____genotype__formatter" kindref="compound">so__genotype_formatter</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="45" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d57/classso____genotype_1aa7804be02963e810c3e16cc71ec00879" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>so__genotype::$default_instance_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_instance_settings</name>
+        <initializer>= array(
+    
+    &apos;term_vocabulary&apos; =&gt; &apos;SO&apos;,
+    
+    &apos;term_name&apos; =&gt; &apos;Genotype&apos;,
+    
+    &apos;term_accession&apos; =&gt; &apos;0001027&apos;,
+    
+    
+    
+    &apos;term_fixed&apos; =&gt; FALSE,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="28" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d57/classso____genotype_1a5b72021cb2d8434972c0451c7cac93ad" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>so__genotype::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Genotype&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="15" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d57/classso____genotype_1a4101623891ada63ce23abec4f209efab" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>so__genotype::$default_widget</definition>
+        <argsstring></argsstring>
+        <name>$default_widget</name>
+        <initializer>= &apos;<ref refid="d5/d28/classso____genotype__widget" kindref="compound">so__genotype_widget</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="42" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d57/classso____genotype_1a83a9ffa7c2d1384de2f59213cef88a02" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>so__genotype::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;Associates an indviddual or organization with
+          this record.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="18" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="de/d57/classso____genotype_1a536acfe5b8906c1efa142a8a4085379d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>so__genotype::$field</definition>
+        <argsstring></argsstring>
+        <name>$field</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="52" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d57/classso____genotype_1a2c57d52ea11036fe3374fa6355491a33" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>so__genotype::$instance</definition>
+        <argsstring></argsstring>
+        <name>$instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="56" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d57/classso____genotype_1af634c9f6943cfaebedbdb4f53c618377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>so__genotype::elementInfo</definition>
+        <argsstring>()</argsstring>
+        <name>elementInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a96952e870cbe0b4a48d72f0d1c20b21c" kindref="member">TripalField::elementInfo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="62" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="62" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d57/classso____genotype_1ae3431c120bd7c46d343616c2bb602be1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>so__genotype::load</definition>
+        <argsstring>($entity)</argsstring>
+        <name>load</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a892a0cff2ff98ef41beefa55527cdd9c" kindref="member">TripalField::load()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="107" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="107" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="690">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="691" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="691">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+      <node id="689">
+        <label>so__genotype</label>
+        <link refid="de/d57/classso____genotype"/>
+        <childnode refid="690" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="693">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="694" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="694">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+      <node id="692">
+        <label>so__genotype</label>
+        <link refid="de/d57/classso____genotype"/>
+        <childnode refid="693" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/so__genotype/so__genotype.inc" bodystart="3" bodyend="168"/>
+    <listofallmembers>
+      <member refid="d2/d2e/classChadoField_1aec5fc1b49043cd79b3afd757f5b9b8af" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$default_description</name></member>
+      <member refid="de/d57/classso____genotype_1a9d388c5b7047907223c04afc843c8fbe" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$default_formatter</name></member>
+      <member refid="de/d57/classso____genotype_1aa7804be02963e810c3e16cc71ec00879" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$default_instance_settings</name></member>
+      <member refid="de/d57/classso____genotype_1a5b72021cb2d8434972c0451c7cac93ad" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$default_label</name></member>
+      <member refid="d2/d2e/classChadoField_1a9817680008bd4ddb9b79963e5693eb04" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$default_settings</name></member>
+      <member refid="de/d57/classso____genotype_1a4101623891ada63ce23abec4f209efab" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$default_widget</name></member>
+      <member refid="de/d57/classso____genotype_1a83a9ffa7c2d1384de2f59213cef88a02" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$description</name></member>
+      <member refid="d2/d2e/classChadoField_1a937549576f1c0f4b780b00bd75f76ce1" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$download_formatters</name></member>
+      <member refid="de/d57/classso____genotype_1a536acfe5b8906c1efa142a8a4085379d" prot="protected" virt="non-virtual"><scope>so__genotype</scope><name>$field</name></member>
+      <member refid="de/d57/classso____genotype_1a2c57d52ea11036fe3374fa6355491a33" prot="protected" virt="non-virtual"><scope>so__genotype</scope><name>$instance</name></member>
+      <member refid="d2/d2e/classChadoField_1aced383d240ca9dd98182dbb108428789" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$module</name></member>
+      <member refid="d9/d83/classTripalField_1a873652ed4421c1bc211cdca2346352b8" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$no_data</name></member>
+      <member refid="d9/d83/classTripalField_1a0bfccf918c71c300fccea11387d8aefc" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>$no_ui</name></member>
+      <member refid="d9/d83/classTripalField_1a12856487b2ad310c3dfcee9eae0e86ad" prot="protected" virt="non-virtual"><scope>so__genotype</scope><name>$term</name></member>
+      <member refid="d9/d83/classTripalField_1a931ee11a0e3b061a1674f51d186a0988" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>__construct</name></member>
+      <member refid="d9/d83/classTripalField_1a9c44d0017dbdc82ad4f532ce8cb71c4c" prot="protected" virt="non-virtual"><scope>so__genotype</scope><name>_addViewsDataElement</name></member>
+      <member refid="d9/d83/classTripalField_1a643ad3ef2e6fb2c673574b680afedc5e" prot="protected" virt="non-virtual"><scope>so__genotype</scope><name>_addWebServiceElement</name></member>
+      <member refid="d9/d83/classTripalField_1a650474e013a387db620223a4265e503d" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>createInstance</name></member>
+      <member refid="de/d57/classso____genotype_1af634c9f6943cfaebedbdb4f53c618377" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>elementInfo</name></member>
+      <member refid="d9/d83/classTripalField_1a36a8044117bb191fba3a0afd117e5434" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>getField</name></member>
+      <member refid="d9/d83/classTripalField_1a7b9ceac2a0d39163bf55e4ed29bed952" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>getFieldName</name></member>
+      <member refid="d9/d83/classTripalField_1af7de8b5df22756288b7a348764df68e0" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>getFieldTerm</name></member>
+      <member refid="d9/d83/classTripalField_1a3db0d92e211e261afea7e105750d2e9f" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>getFieldTermID</name></member>
+      <member refid="d9/d83/classTripalField_1a1c29066b53a4ffce951132920e5ac0bf" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>getInstance</name></member>
+      <member refid="d9/d83/classTripalField_1af7335ce38156505ff54bd1757bb536b0" prot="protected" virt="non-virtual"><scope>so__genotype</scope><name>getPagerElementID</name></member>
+      <member refid="d9/d83/classTripalField_1ac8bf46bbbeaf0bae8bf6b979cc1733ca" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>info</name></member>
+      <member refid="d2/d2e/classChadoField_1a47395feda70f37e0ba66c4e3fe4e61dc" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>instanceSettingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1ade5041044ae4a23ee6bc47ce8266506a" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>instanceSettingsFormValidate</name></member>
+      <member refid="de/d57/classso____genotype_1ae3431c120bd7c46d343616c2bb602be1" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>load</name></member>
+      <member refid="d2/d2e/classChadoField_1af990f3973aee880c2a0bb7737dab1c47" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>query</name></member>
+      <member refid="d2/d2e/classChadoField_1a601b04d112c9d4e5721240646aacd676" prot="protected" virt="non-virtual"><scope>so__genotype</scope><name>queryJoinOnce</name></member>
+      <member refid="d2/d2e/classChadoField_1a6286dc84a2995106bd910f6487ec942c" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>queryOrder</name></member>
+      <member refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>settingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1a2d4baff5cde41b3f39f373ab7f4ad9ef" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>settingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1ae8ae933722cd9340c3994a700427330a" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>validate</name></member>
+      <member refid="d9/d83/classTripalField_1aa0233ddbb9411c58c7eafc657fef97a6" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>viewsData</name></member>
+      <member refid="d9/d83/classTripalField_1a2db49fcfd34816cd41683a5c7722491a" prot="public" virt="non-virtual"><scope>so__genotype</scope><name>webServicesData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

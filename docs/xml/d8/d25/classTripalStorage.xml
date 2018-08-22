@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d8/d25/classTripalStorage" kind="class" language="PHP" prot="public">
+    <compoundname>TripalStorage</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d8/d25/classTripalStorage_1a0177c5d3d7c9b35303ada9721fb166f4" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalStorage::$information</definition>
+        <argsstring></argsstring>
+        <name>$information</name>
+        <initializer>= array(
+    &apos;label&apos; =&gt; &apos;&apos;,
+    &apos;description&apos; =&gt; &apos;&apos;,
+    &apos;settings&apos; =&gt; array(),
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalStorage.inc" line="7" column="1" bodyfile="tripal/includes/TripalStorage.inc" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d25/classTripalStorage_1a2a39e891438d889ef8c0fd9f0181fe96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalStorage::info</definition>
+        <argsstring>()</argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides default information about this storage type.</para><para>This function corresponds to the hook_field_storage_info() function of the Drupal Storage API.</para><para><simplesect kind="return"><para>An array whose keys the same as for the hook_field_storage_info() function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalStorage.inc" line="23" column="1" bodyfile="tripal/includes/TripalStorage.inc" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d25/classTripalStorage_1a93cd7ec084550fef9a79b0dbe6bb8a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalStorage::load</definition>
+        <argsstring>($entity_type, $entities, $age, $fields, $options)</argsstring>
+        <name>load</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entities</declname>
+        </param>
+        <param>
+          <declname>$age</declname>
+        </param>
+        <param>
+          <declname>$fields</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads the fields that are supported by the storage backend.</para><para>This function should behave just as the hook_field_storage_load() function. See the documentation for that hook for example implementation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of entity (typically a bundle of <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$entities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of entity objects to add fields to, keyed by entity ID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$age</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FIELD_LOAD_CURRENT to load the most recent revision for all fields, or FIELD_LOAD_REVISION to load the version indicated by each entity. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array listing the fields to be loaded. The keys of the array are field IDs, and the values of the array are the entity IDs (or revision IDs, depending on the $age parameter) to add each field to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of additional options, with the following keys:<itemizedlist>
+<listitem><para>deleted: If TRUE, deleted fields should be loaded as well as non-deleted fields. If unset or FALSE, only non-deleted fields should be loaded. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalStorage.inc" line="53" column="1" bodyfile="tripal/includes/TripalStorage.inc" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d25/classTripalStorage_1a2b7e9f0d1c0dd128e92554698fb004b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalStorage::query</definition>
+        <argsstring>($query)</argsstring>
+        <name>query</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Searches for entities that match field conditions.</para><para>This function is similar to the hook_field_storage_query(). Each <ref refid="d8/d25/classTripalStorage" kindref="compound">TripalStorage</ref> class is responsible for querying it&apos;s own storage system using the conditions provided in the $query argument.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="d1/dcd/classTripalFieldQuery" kindref="compound">TripalFieldQuery</ref> object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>See EntityFieldQuery::execute() for the return values. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalStorage.inc" line="71" column="1" bodyfile="tripal/includes/TripalStorage.inc" bodystart="71" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal/includes/TripalStorage.inc" line="3" column="1" bodyfile="tripal/includes/TripalStorage.inc" bodystart="3" bodyend="74"/>
+    <listofallmembers>
+      <member refid="d8/d25/classTripalStorage_1a0177c5d3d7c9b35303ada9721fb166f4" prot="public" virt="non-virtual"><scope>TripalStorage</scope><name>$information</name></member>
+      <member refid="d8/d25/classTripalStorage_1a2a39e891438d889ef8c0fd9f0181fe96" prot="public" virt="non-virtual"><scope>TripalStorage</scope><name>info</name></member>
+      <member refid="d8/d25/classTripalStorage_1a93cd7ec084550fef9a79b0dbe6bb8a8d" prot="public" virt="non-virtual"><scope>TripalStorage</scope><name>load</name></member>
+      <member refid="d8/d25/classTripalStorage_1a2b7e9f0d1c0dd128e92554698fb004b7" prot="public" virt="non-virtual"><scope>TripalStorage</scope><name>query</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

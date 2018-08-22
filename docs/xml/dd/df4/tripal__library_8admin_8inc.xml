@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/df4/tripal__library_8admin_8inc" kind="file" language="PHP">
+    <compoundname>tripal_library.admin.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dd/df4/tripal__library_8admin_8inc_1a34593894b4226a97138a2201dda0b1ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_library_admin</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_library_admin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Administrative settings form </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/includes/tripal_library.admin.inc" line="47" column="1" bodyfile="legacy/tripal_library/includes/tripal_library.admin.inc" bodystart="47" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/df4/tripal__library_8admin_8inc_1a13c6c234502a09611b7080d574b3d575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_library_admin_libraries_listing</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_library_admin_libraries_listing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Admin launchpad </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/includes/tripal_library.admin.inc" line="12" column="1" bodyfile="legacy/tripal_library/includes/tripal_library.admin.inc" bodystart="12" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Admin launchpad </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="12" refid="dd/df4/tripal__library_8admin_8inc_1a13c6c234502a09611b7080d574b3d575" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dd/df4/tripal__library_8admin_8inc_1a13c6c234502a09611b7080d574b3d575" kindref="member">tripal_library_admin_libraries_listing</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>breadcrumb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>$breadcrumb<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Home&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;&lt;front&gt;&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Administration&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Tripal&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Chado&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/legacy&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Libraries&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/legacy/tripal_library&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>drupal_set_breadcrumb($breadcrumb);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>view</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>$view<sp/>=<sp/>views_embed_view(</highlight><highlight class="stringliteral">&apos;tripal_library_admin_libraries&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;default&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($view))<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>$view;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;p&gt;The<sp/>Tripal<sp/>Library<sp/>Module<sp/>uses<sp/>primarily<sp/>views<sp/>to<sp/>provide<sp/>an<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;administrative<sp/>interface.<sp/>Currently<sp/>one<sp/>or<sp/>more<sp/>views<sp/>needed<sp/>for<sp/>this<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;administrative<sp/>interface<sp/>are<sp/>disabled.<sp/>&lt;strong&gt;Click<sp/>each<sp/>of<sp/>the<sp/>following<sp/>links<sp/>to<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;enable<sp/>the<sp/>pertinent<sp/>views&lt;/strong&gt;:&lt;/p&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;ul&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;li&gt;&apos;</highlight><highlight class="normal">.l(</highlight><highlight class="stringliteral">&apos;Library<sp/>Admin&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/legacy/tripal_library/views/libraries/enable&apos;</highlight><highlight class="normal">).</highlight><highlight class="stringliteral">&apos;&lt;/li&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;/ul&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="dd/df4/tripal__library_8admin_8inc_1a34593894b4226a97138a2201dda0b1ba" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dd/df4/tripal__library_8admin_8inc_1a34593894b4226a97138a2201dda0b1ba" kindref="member">tripal_library_admin</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>your<sp/>module<sp/>is<sp/>using<sp/>the<sp/>Chado<sp/>Node:<sp/>Title<sp/>&amp;<sp/>Path<sp/>API<sp/>to<sp/>allow<sp/>custom<sp/>titles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>your<sp/>node<sp/>type<sp/>then<sp/>you<sp/>need<sp/>to<sp/>add<sp/>the<sp/>configuration<sp/>form<sp/>for<sp/>this<sp/>functionality.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>$details<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_library&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>name<sp/>of<sp/>the<sp/>MODULE<sp/>implementing<sp/>the<sp/>content<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;content_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;chado_library&apos;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>name<sp/>of<sp/>the<sp/>content<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>An<sp/>array<sp/>of<sp/>options<sp/>to<sp/>use<sp/>under<sp/>&quot;Page<sp/>Titles&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>key<sp/>should<sp/>be<sp/>the<sp/>token<sp/>and<sp/>the<sp/>value<sp/>should<sp/>be<sp/>the<sp/>human-readable<sp/>option</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;[library.name]&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Library<sp/>Name<sp/>Only&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>there<sp/>should<sp/>always<sp/>be<sp/>one<sp/>options<sp/>matching<sp/>the<sp/>unique<sp/>constraint.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;[library.name],<sp/>[library.uniquename]<sp/>([library.type_id&gt;cvterm.name])<sp/>[library.organism_id&gt;organism.genus]<sp/>[library.organism_id&gt;organism.species]&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Unique<sp/>Contraint:<sp/>Includes<sp/>the<sp/>name,<sp/>type<sp/>and<sp/>organism<sp/>scientific<sp/>name&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>token<sp/>indicating<sp/>the<sp/>unique<sp/>constraint<sp/>in<sp/>the<sp/>options<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;unique_option&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[library.name],<sp/>[library.uniquename]<sp/>([library.type_id&gt;cvterm.name])<sp/>[library.organism_id&gt;organism.genus]<sp/>[library.organism_id&gt;organism.species]&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>call<sp/>adds<sp/>the<sp/>configuration<sp/>form<sp/>to<sp/>your<sp/>current<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>sub-form<sp/>handles<sp/>it&apos;s<sp/>own<sp/>validation<sp/>&amp;<sp/>submit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="d8/d43/group__tripal__legacy__chado__node__api_1gae15385749a7549bd6a0265f3d438f151" kindref="member">chado_add_admin_form_set_title</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state,<sp/>$details);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>URL<sp/>ALIAS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>$details<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_library&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;content_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;chado_library&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;/library/[library.library_id]&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Library<sp/>ID&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;/library/[library.organism_id&gt;organism.genus]/[library.organism_id&gt;organism.species]/[library.type_id&gt;cvterm.name]/[library.uniquename]&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Unique<sp/>Contraint:<sp/>Includes<sp/>the<sp/>name,<sp/>uniquename,<sp/>type<sp/>and<sp/>scientific<sp/>name&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>call<sp/>adds<sp/>the<sp/>configuration<sp/>form<sp/>to<sp/>your<sp/>current<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>sub-form<sp/>handles<sp/>it&apos;s<sp/>own<sp/>validation<sp/>&amp;<sp/>submit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="d8/d43/group__tripal__legacy__chado__node__api_1ga8bab59be7bf1fb6ea3fb0486fda79a8d" kindref="member">chado_add_admin_form_set_url</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state,<sp/>$details);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>system_settings_form(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_library/includes/tripal_library.admin.inc"/>
+  </compounddef>
+</doxygen>

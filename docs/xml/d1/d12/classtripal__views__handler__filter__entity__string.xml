@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d12/classtripal__views__handler__filter__entity__string" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_filter_entity_string</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">views_handler_filter</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d1/d12/classtripal__views__handler__filter__entity__string_1a6cd32d1f0f8d3fa3c656259cd8160817" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::$always_multiple</definition>
+        <argsstring></argsstring>
+        <name>$always_multiple</name>
+        <initializer>= TRUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="16" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a5e89b21bf4bbb6347356d60541614d25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::admin_summary</definition>
+        <argsstring>()</argsstring>
+        <name>admin_summary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="127" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="127" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1aa4e37ea65a5fd4182cc98390362e7006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_contains</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_contains</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="225" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="225" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a0b95c739bfa52acb9bf91685772d9741" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_empty</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_empty</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="246" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="246" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1af8fd757d5c19735e23ef86ef156a78ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_ends</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_ends</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="234" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="234" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1ad79c3f87a3f819de75548d00e805cac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_equal</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_equal</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="222" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="222" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a75096342870e253204bea294cba76f30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_not</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_not</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="240" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="240" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a595fc4cd8a83276162657448ab1420dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_not_ends</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_not_ends</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="237" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="237" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1acf671b559d66368777156910483defde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_not_starts</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_not_starts</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="231" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="231" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a99effc929a454c46e270865bc1b90648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_regex</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_regex</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="243" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="243" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1afc1b20547e02bb252e6fcf8412915c36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::op_starts</definition>
+        <argsstring>($field)</argsstring>
+        <name>op_starts</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="228" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="228" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a7c8d2b6290913fa8aec0c64595232897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::operator</definition>
+        <argsstring>()</argsstring>
+        <name>operator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="208" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1afc84f854f6df638b8e38f5c26b1b71f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::operator_options</definition>
+        <argsstring>($which=&apos;title&apos;)</argsstring>
+        <name>operator_options</name>
+        <param>
+          <declname>$which</declname>
+          <defval>&apos;<ref refid="d0/d42/tripal__feature__teaser_8tpl_8php_1ab5501754233ec6aec5f04ef03f3bfc28" kindref="member">title</ref>&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Build strings from the <ref refid="d1/d12/classtripal__views__handler__filter__entity__string_1ae879fbee06f984e5d434cf7998514d51" kindref="member">operators()</ref> for &apos;select&apos; options </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="118" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="118" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a103701b353d1bbb7e61cf331b70046c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::operator_values</definition>
+        <argsstring>($values=1)</argsstring>
+        <name>operator_values</name>
+        <param>
+          <declname>$values</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="146" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="146" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1ae879fbee06f984e5d434cf7998514d51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::operators</definition>
+        <argsstring>()</argsstring>
+        <name>operators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This kind of construct makes it relatively easy for a child class to add or remove functionality by overriding this function and adding/removing items from this array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="31" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="31" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1ae1a73acd83061b49abd242a84ebdd477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::option_definition</definition>
+        <argsstring>()</argsstring>
+        <name>option_definition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="18" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1a98958cb5e94020829c290a4f69172599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::query</definition>
+        <argsstring>()</argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add this filter to the query.</para><para>Due to the nature of fapi, the value and the operator have an unintended level of indirection. You will find them in $this-&gt;operator and $this-&gt;value respectively. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="219" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="219" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d12/classtripal__views__handler__filter__entity__string_1ab29cbdd41e2072a0e58e4b11970494ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_entity_string::value_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>value_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide a simple textfield for equality </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="160" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="160" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Basic textfield filter to handle string filtering commands including equality, like, not like, etc. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="834">
+        <label>tripal_views_handler_filter_entity_string</label>
+        <link refid="d1/d12/classtripal__views__handler__filter__entity__string"/>
+        <childnode refid="835" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="835">
+        <label>views_handler_filter</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="836">
+        <label>tripal_views_handler_filter_entity_string</label>
+        <link refid="d1/d12/classtripal__views__handler__filter__entity__string"/>
+        <childnode refid="837" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="837">
+        <label>views_handler_filter</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" line="14" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_entity_string.inc" bodystart="14" bodyend="248"/>
+    <listofallmembers>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a6cd32d1f0f8d3fa3c656259cd8160817" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>$always_multiple</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a5e89b21bf4bbb6347356d60541614d25" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>admin_summary</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1aa4e37ea65a5fd4182cc98390362e7006" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_contains</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a0b95c739bfa52acb9bf91685772d9741" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_empty</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1af8fd757d5c19735e23ef86ef156a78ca" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_ends</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1ad79c3f87a3f819de75548d00e805cac9" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_equal</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a75096342870e253204bea294cba76f30" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_not</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a595fc4cd8a83276162657448ab1420dc" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_not_ends</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1acf671b559d66368777156910483defde" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_not_starts</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a99effc929a454c46e270865bc1b90648" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_regex</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1afc1b20547e02bb252e6fcf8412915c36" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>op_starts</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a7c8d2b6290913fa8aec0c64595232897" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>operator</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1afc84f854f6df638b8e38f5c26b1b71f3" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>operator_options</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a103701b353d1bbb7e61cf331b70046c4" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>operator_values</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1ae879fbee06f984e5d434cf7998514d51" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>operators</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1ae1a73acd83061b49abd242a84ebdd477" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>option_definition</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1a98958cb5e94020829c290a4f69172599" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>query</name></member>
+      <member refid="d1/d12/classtripal__views__handler__filter__entity__string_1ab29cbdd41e2072a0e58e4b11970494ea" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_entity_string</scope><name>value_form</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

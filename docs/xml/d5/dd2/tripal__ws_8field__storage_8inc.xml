@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/dd2/tripal__ws_8field__storage_8inc" kind="file" language="PHP">
+    <compoundname>tripal_ws.field_storage.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/dd2/tripal__ws_8field__storage_8inc_1a923bed034235418f6085ea8a48f7962f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_field_storage_info</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_ws_field_storage_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_field_storage_info(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.field_storage.inc" line="6" column="1" bodyfile="tripal_ws/includes/tripal_ws.field_storage.inc" bodystart="6" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dd2/tripal__ws_8field__storage_8inc_1a131b30a492bcd42cfc43382fa9f1dc36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_field_storage_load</definition>
+        <argsstring>($entity_type, $entities, $age, $fields, $options)</argsstring>
+        <name>tripal_ws_field_storage_load</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entities</declname>
+        </param>
+        <param>
+          <declname>$age</declname>
+        </param>
+        <param>
+          <declname>$fields</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_field_storage_load().</para><para>Responsible for loading the fields from the Chado database and adding their values to the entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.field_storage.inc" line="22" column="1" bodyfile="tripal_ws/includes/tripal_ws.field_storage.inc" bodystart="22" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dd2/tripal__ws_8field__storage_8inc_1a5587f895a35371065c8050e5e8133be2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_field_storage_query</definition>
+        <argsstring>($query)</argsstring>
+        <name>tripal_ws_field_storage_query</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_field_storage_query(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.field_storage.inc" line="69" column="1" bodyfile="tripal_ws/includes/tripal_ws.field_storage.inc" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dd2/tripal__ws_8field__storage_8inc_1a128f48c89279539834f1a38edbd149b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_field_storage_write</definition>
+        <argsstring>($entity_type, $entity, $op, $fields)</argsstring>
+        <name>tripal_ws_field_storage_write</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$op</declname>
+        </param>
+        <param>
+          <declname>$fields</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_field_storage_write(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.field_storage.inc" line="75" column="1" bodyfile="tripal_ws/includes/tripal_ws.field_storage.inc" bodystart="75" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d5/dd2/tripal__ws_8field__storage_8inc_1a923bed034235418f6085ea8a48f7962f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dd2/tripal__ws_8field__storage_8inc_1a923bed034235418f6085ea8a48f7962f" kindref="member">tripal_ws_field_storage_info</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>array(</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;field_tripal_ws_storage&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Tripal<sp/>Web<sp/>Services&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Retrieves<sp/>fields<sp/>data<sp/>from<sp/>a<sp/>remote<sp/>site<sp/>using<sp/>Tripal<sp/>web<sp/>services.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="d5/dd2/tripal__ws_8field__storage_8inc_1a131b30a492bcd42cfc43382fa9f1dc36" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dd2/tripal__ws_8field__storage_8inc_1a131b30a492bcd42cfc43382fa9f1dc36" kindref="member">tripal_ws_field_storage_load</ref>($entity_type,<sp/>$entities,<sp/>$age,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1ab2303c817e3b402b77b7f99627b9c319" kindref="member">$fields</ref>,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>$load_current<sp/>=<sp/>$age<sp/>==<sp/>FIELD_LOAD_CURRENT;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>global<sp/>$language;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>$langcode<sp/>=<sp/>$language-&gt;language;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($entities<sp/>as<sp/>$id<sp/>=&gt;<sp/>$entity)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>through<sp/>the<sp/>entity&apos;s<sp/>fields<sp/>so<sp/>we<sp/>can<sp/>get<sp/>the<sp/>column<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that<sp/>need<sp/>to<sp/>be<sp/>selected<sp/>from<sp/>each<sp/>of<sp/>the<sp/>tables<sp/>represented.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1ab2303c817e3b402b77b7f99627b9c319" kindref="member">$fields</ref><sp/>as<sp/>$field_id<sp/>=&gt;<sp/>$ids)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>By<sp/>the<sp/>time<sp/>this<sp/>hook<sp/>runs,<sp/>the<sp/>relevant<sp/>field<sp/>definitions<sp/>have<sp/>been</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>populated<sp/>and<sp/>cached<sp/>in<sp/>FieldInfo,<sp/>so<sp/>calling<sp/>field_info_field_by_id()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>on<sp/>each<sp/>field<sp/>individually<sp/>is<sp/>more<sp/>efficient<sp/>than<sp/>loading<sp/>all<sp/>fields<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>memory<sp/>upfront<sp/>with<sp/>field_info_field_by_ids().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$field<sp/>=<sp/>field_info_field_by_id($field_id);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$field_name<sp/>=<sp/>$field[</highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$field_type<sp/>=<sp/>$field[</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$field_module<sp/>=<sp/>$field[</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>instance<sp/>for<sp/>this<sp/>field.<sp/><sp/>If<sp/>no<sp/>instance<sp/>exists<sp/>then<sp/>skip</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>loading<sp/>of<sp/>this<sp/>field.<sp/>This<sp/>can<sp/>happen<sp/>when<sp/>a<sp/>field<sp/>is<sp/>deleted<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>bundle<sp/>using<sp/>the<sp/>user<sp/>UI<sp/>form.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>how<sp/>to<sp/>deal<sp/>with<sp/>deleted<sp/>fields?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$instance<sp/>=<sp/>field_info_instance($entity_type,<sp/>$field_name,<sp/>$entity-&gt;bundle);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$instance)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>an<sp/>empty<sp/>value<sp/>by<sp/>default,<sp/>and<sp/>let<sp/>the<sp/>hook<sp/>function<sp/>update<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;{$field_name}[</highlight><highlight class="stringliteral">&apos;und&apos;</highlight><highlight class="normal">][0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/d0f/group__tripal__fields__api_1gabb7ea3717ca825f758cfa9eb5c259ac0" kindref="member">tripal_load_include_field_class</ref>($field_type);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(class_exists($field_type)<sp/>&amp;&amp;<sp/>method_exists($field_type,<sp/></highlight><highlight class="stringliteral">&apos;load&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$tfield<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>$field_type($field,<sp/>$instance);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$tfield-&gt;load($entity);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end:<sp/>foreach<sp/>($fields<sp/>as<sp/>$field_id<sp/>=&gt;<sp/>$ids)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end:<sp/>foreach<sp/>($entities<sp/>as<sp/>$id<sp/>=&gt;<sp/>$entity)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="d5/dd2/tripal__ws_8field__storage_8inc_1a5587f895a35371065c8050e5e8133be2" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dd2/tripal__ws_8field__storage_8inc_1a5587f895a35371065c8050e5e8133be2" kindref="member">tripal_ws_field_storage_query</ref>($query)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75" refid="d5/dd2/tripal__ws_8field__storage_8inc_1a128f48c89279539834f1a38edbd149b2" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dd2/tripal__ws_8field__storage_8inc_1a128f48c89279539834f1a38edbd149b2" kindref="member">tripal_ws_field_storage_write</ref>($entity_type,<sp/>$entity,<sp/>$op,<sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1ab2303c817e3b402b77b7f99627b9c319" kindref="member">$fields</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tripal_ws/includes/tripal_ws.field_storage.inc"/>
+  </compounddef>
+</doxygen>

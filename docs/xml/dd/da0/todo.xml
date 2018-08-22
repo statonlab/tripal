@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/da0/todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000015"/>Member <ref refid="d8/d43/group__tripal__legacy__chado__node__api_1gaf604eef6001c517ea9e08b6609528b8f" kindref="member">chado_set_node_url</ref>  ($node)</term></varlistentry>
+<listitem><para>handle re-directing for old URLs or at least ensure a page not found error is displayed. </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000018"/>Member <ref refid="df/d3a/tripal__core_8form__elements_8inc_1a19b06f170f895011f1993d48143bd31e" kindref="member">sequence_combo_value_callback</ref>  ($element, $input=FALSE, &amp;$form_state)</term></varlistentry>
+<listitem><para>: test/fix this callback. </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000019"/>Member <ref refid="df/d1a/tripal__analysis_8admin_8inc_1a2c7f5dbdc2e9a497b7fd7beeb377f8d6" kindref="member">tripal_analysis_admin_validate</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>Stephen: Why is validate used rather then submit? </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000020"/>Member <ref refid="d4/d16/tripal__analysis__privacy_8inc_1a98adb8f1d2442e482ca44c173ecd7adc" kindref="member">tripal_analysis_set_feature_permission</ref>  ($analysis_id, $nid)</term></varlistentry>
+<listitem><para>Stephen: ensure the $nid param is defined correctly </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000010"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1a9a3366fe6a124f53613f274060b78544" kindref="member">tripal_bulk_loader_delete_template_record_form</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Needs to be debugged </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000011"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1aa1ea355ba78d13d18511dbbb786a9210" kindref="member">tripal_bulk_loader_delete_template_record_form_submit</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Needs to be debugged </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000012"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1a7cf8827ad29b065cb358dc3544bea115" kindref="member">tripal_bulk_loader_duplicate_template_record_form</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Needs to be debugged </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000013"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1a838b3a9ce376fe6595d63bb0ed2a652a" kindref="member">tripal_bulk_loader_duplicate_template_record_form_submit</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Needs to be debugged </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000007"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1a9a1b281a2794003c2c70a9b98a95566d" kindref="member">tripal_bulk_loader_edit_template_record_form</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Needs to be debugged </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000009"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1a29ecc0fb7abd02d63a45b345098a5158" kindref="member">tripal_bulk_loader_edit_template_record_form_submit</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Needs to be debugged </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000008"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1aba7bab09499f0ba90e2858e236d2433a" kindref="member">tripal_bulk_loader_edit_template_record_form_validate</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Needs to be debugged </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000006"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1a1db6bf605c67dd2d91b0df90118e851c" kindref="member">tripal_bulk_loader_export_template_form</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>Make array presented to the user more readable. (ie: unserialize and print to the screen) </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000005"/>Member <ref refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc_1a49507d343154fbe30955f75b8484055d" kindref="member">tripal_bulk_loader_import_template_form</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>Make array presented to the user more readable. (ie: unserialize and print to the screen) </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000014"/>Member <ref refid="d4/d69/tripal__bulk__loader_8views_8inc_1a24960f077a30aaa7944dbb0f65abccc7" kindref="member">tripal_bulk_loader_views_data</ref>  ()</term></varlistentry>
+<listitem><para>: Add support for materialized views relationships using the new method </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000002"/>Member <ref refid="d5/dc7/tripal__chado__views__integration__UI_8inc_1a7e03b50aef6dd982a93f92ab074dbb4e" kindref="member">tripal_chado_views_integration_form</ref>  ($form, &amp;$form_state)</term></varlistentry>
+<listitem><para>: Add ability to manage custom fields D7 </para><para>: Update relationship handler to work with the new tripal_views_join method </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000004"/>Member <ref refid="d4/db6/tripal__chado__views_8views_8inc_1a126d23fe1315aab953a328a6d5dfada4" kindref="member">tripal_chado_views_views_data</ref>  ()</term></varlistentry>
+<listitem><para>: Add support for materialized views relationships using the new method </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000003"/>Member <ref refid="d4/db6/tripal__chado__views_8views_8inc_1a5904fa81e88fafedf50a28a69c8c1002" kindref="member">tripal_chado_views_views_handlers</ref>  ()</term></varlistentry>
+<listitem><para>: get handlers working </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000017"/>Member <ref refid="d7/d5f/tripal__core_8DEPRECATED_8inc_1a2602f7ddf53eb368b1687e691677300b" kindref="member">tripal_core_report_error</ref>  ($type, $severity, $message, $variables=array(), $options=array())</term></varlistentry>
+<listitem><para>Remove. This was not in Tripal 1.x.  </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000001"/>Member <ref refid="dd/df2/tripal__chado_8cv_8inc_1a73c404a4d874c28cea541fd1a6acf18a" kindref="member">tripal_cv_cv_edit_form</ref>  ($form, &amp;$form_state, $cv_id=NULL)</term></varlistentry>
+<listitem><para>Modify this form to use Drupal AJAX </para></listitem>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000016"/>Member <ref refid="d7/d5f/tripal__core_8DEPRECATED_8inc_1a1c18cd45eafb40cd3c4c3e2377be6401" kindref="member">tripal_file_directory_path</ref>  ()</term></varlistentry>
+<listitem><para>Remove. This was not in Tripal 1.x. </para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

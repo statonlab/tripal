@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_83219201523e7db11e7eea41811f4c96" kind="dir">
+    <compoundname>tripal_chado_views/api</compoundname>
+    <innerfile refid="d6/d66/tripal__chado__views_8api_8inc">tripal_chado_views.api.inc</innerfile>
+    <innerfile refid="dd/d44/tripal__chado__views_8DEPRECATED_8inc">tripal_chado_views.DEPRECATED.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado_views/api/"/>
+  </compounddef>
+</doxygen>

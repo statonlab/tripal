@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d37/group__tripal__chado__migrate__api" kind="group">
+    <compoundname>tripal_chado_migrate_api</compoundname>
+    <title>Chado Entity</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/d37/group__tripal__chado__migrate__api_1ga5d161e0cae8f0bf8448e9377c46d7da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_migrate_tripal_content_type</definition>
+        <argsstring>($type=array())</argsstring>
+        <name>chado_migrate_tripal_content_type</name>
+        <param>
+          <declname>$type</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Migrate Tripal content types</para><para>Migrate specified Tripal content type and publish all its content. The content type will be created if it does not already exist.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A type array specifying the vocabular, accession, term_name, and chado data_table e.g. $type = array( &apos;vocabulary&apos; =&gt; &apos;OBI&apos;, &apos;accession&apos; =&gt; &apos;0100026&apos;, &apos;term_name&apos; =&gt; &apos;organism&apos;, &apos;storage_args&apos; =&gt; array ( &apos;data_table&apos; =&gt; $table ) ) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.migrate.api.inc" line="34" column="1" bodyfile="tripal_chado/api/tripal_chado.migrate.api.inc" bodystart="34" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) to migrate content. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

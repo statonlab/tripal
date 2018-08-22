@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_af8c0301be7db3222393cd78439c334d" kind="dir">
+    <compoundname>legacy/tripal_genetic/theme/templates</compoundname>
+    <innerfile refid="db/deb/tripal__feature__genotypes_8tpl_8php">tripal_feature_genotypes.tpl.php</innerfile>
+    <innerfile refid="d6/df6/tripal__genetic__help_8tpl_8php">tripal_genetic_help.tpl.php</innerfile>
+    <innerfile refid="de/d3c/tripal__stock__genotypes_8tpl_8php">tripal_stock_genotypes.tpl.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_genetic/theme/templates/"/>
+  </compounddef>
+</doxygen>

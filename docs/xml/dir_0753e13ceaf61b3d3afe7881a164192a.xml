@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_0753e13ceaf61b3d3afe7881a164192a" kind="dir">
+    <compoundname>legacy/tripal_library</compoundname>
+    <innerdir refid="dir_1439daa21d9f69cd9b4cdea8fa55a8c1">legacy/tripal_library/api</innerdir>
+    <innerdir refid="dir_c098516f3449af662bd7e43c17cdad4b">legacy/tripal_library/includes</innerdir>
+    <innerdir refid="dir_817306f2110dfc7b5bd0a11e35876dee">legacy/tripal_library/theme</innerdir>
+    <innerfile refid="d0/d01/tripal__library_8module">tripal_library.module</innerfile>
+    <innerfile refid="d4/d8d/tripal__library_8views__default_8inc">tripal_library.views_default.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_library/"/>
+  </compounddef>
+</doxygen>

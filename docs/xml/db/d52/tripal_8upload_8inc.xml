@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="db/d52/tripal_8upload_8inc" kind="file" language="PHP">
+    <compoundname>tripal.upload.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="db/d52/tripal_8upload_8inc_1ace22a178297a67d83b8c10ea9566d00f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_file_upload</definition>
+        <argsstring>($type, $filename, $action=NULL, $chunk=0)</argsstring>
+        <name>tripal_file_upload</name>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <param>
+          <declname>$filename</declname>
+        </param>
+        <param>
+          <declname>$action</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$chunk</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.upload.inc" line="3" column="1" bodyfile="tripal/includes/tripal.upload.inc" bodystart="3" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d52/tripal_8upload_8inc_1a4c6b669b38d36bea5f95c9a995871ef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_file_upload_merge</definition>
+        <argsstring>($filename, $type, $user_dir)</argsstring>
+        <name>tripal_file_upload_merge</name>
+        <param>
+          <declname>$filename</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <param>
+          <declname>$user_dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Merges all chunks into a single file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.upload.inc" line="91" column="1" bodyfile="tripal/includes/tripal.upload.inc" bodystart="91" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d52/tripal_8upload_8inc_1a6b5866df52f175a84f2acc1fd0d3b028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_file_upload_put</definition>
+        <argsstring>($filename, $chunk, $user_dir)</argsstring>
+        <name>tripal_file_upload_put</name>
+        <param>
+          <declname>$filename</declname>
+        </param>
+        <param>
+          <declname>$chunk</declname>
+        </param>
+        <param>
+          <declname>$user_dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves the contents of the file being sent to the server.</para><para>The file is saved using the filename the chunk number as an extension. This function uses file locking to prevent two jobs from writing to the same file at the same time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.upload.inc" line="270" column="1" bodyfile="tripal/includes/tripal.upload.inc" bodystart="270" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d52/tripal_8upload_8inc_1af4f80304f865c859664b2803e26991bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_file_upload_read_log</definition>
+        <argsstring>($temp_dir)</argsstring>
+        <name>tripal_file_upload_read_log</name>
+        <param>
+          <declname>$temp_dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads the upload log file.</para><para>The log file is used to keep track of which chunks have been uploaded. The format is an array with a key of &apos;chunks_written&apos; which each element a key/value pair containing the chunk index as the key and the chunk size as the value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$temp_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory where the log file will be written. It must be a unique directory where only chunks from a single file are kept. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.upload.inc" line="316" column="1" bodyfile="tripal/includes/tripal.upload.inc" bodystart="316" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d52/tripal_8upload_8inc_1abb29fdd9db1c708b14db47e5ae874915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_file_upload_verify</definition>
+        <argsstring>($filename, $chunk, $user_dir)</argsstring>
+        <name>tripal_file_upload_verify</name>
+        <param>
+          <declname>$filename</declname>
+        </param>
+        <param>
+          <declname>$chunk</declname>
+        </param>
+        <param>
+          <declname>$user_dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the size of a chunk to see if is fully uploaded.</para><para><simplesect kind="return"><para>returns a JSON array with a status, message and the current chunk. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.upload.inc" line="230" column="1" bodyfile="tripal/includes/tripal.upload.inc" bodystart="230" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d52/tripal_8upload_8inc_1a3aa8653f3b4538612d67a8c75afca631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_file_upoad_write_log</definition>
+        <argsstring>($temp_dir, $log)</argsstring>
+        <name>tripal_file_upoad_write_log</name>
+        <param>
+          <declname>$temp_dir</declname>
+        </param>
+        <param>
+          <declname>$log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the upload log file.</para><para>The log file is used to keep track of which chunks have been uploaded. The format is an array with a key of &apos;chunks_written&apos; which each element a key/value pair containing the chunk index as the key and the chunk size as the value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$temp_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory where the log file will be written. It must be a unique directory where only chunks from a single file are kept. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log array, that is serialized and then written to the file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.upload.inc" line="355" column="1" bodyfile="tripal/includes/tripal.upload.inc" bodystart="355" bodyend="372"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="db/d52/tripal_8upload_8inc_1ace22a178297a67d83b8c10ea9566d00f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d52/tripal_8upload_8inc_1ace22a178297a67d83b8c10ea9566d00f" kindref="member">tripal_file_upload</ref>($type,<sp/>$filename,<sp/>$action<sp/>=<sp/>NULL,<sp/>$chunk<sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>global<sp/>$user;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>$module<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">,<sp/>$_GET)<sp/>?<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>$file_size<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;file_size&apos;</highlight><highlight class="normal">,<sp/>$_GET)<sp/>?<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;file_size&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>$chunk_size<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;chunk_size&apos;</highlight><highlight class="normal">,<sp/>$_GET)<sp/>?<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;chunk_size&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>$user_dir<sp/>=<sp/><ref refid="d5/df3/group__tripal__files__api_1ga0d79c86d0c06c1be1d9369995df71f67" kindref="member">tripal_get_user_files_dir</ref>($user);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d5/df3/group__tripal__files__api_1gaf1746f1c5f793e8e26c517542aed4c28" kindref="member">tripal_is_user_files_dir_writeable</ref>($user))<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;The<sp/>user\&apos;s<sp/>data<sp/>directory<sp/>is<sp/>not<sp/>writeable:<sp/>!user_dir.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>watchdog(</highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">,<sp/>$message,<sp/>array(</highlight><highlight class="stringliteral">&apos;!user_dir&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$user_dir),<sp/>WATCHDOG_ERROR);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_json_output(array(</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;status&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;message&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$message,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;file_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>we<sp/>don&apos;t<sp/>go<sp/>over<sp/>the<sp/>user&apos;s<sp/>quota,<sp/>but<sp/>only<sp/>do<sp/>this<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>before<sp/>loading<sp/>the<sp/>first<sp/>chunk<sp/>so<sp/>we<sp/>don&apos;t<sp/>repeat<sp/>it<sp/>over<sp/>and<sp/>over<sp/>again.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($action<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;check&apos;</highlight><highlight class="normal"><sp/>and<sp/>$chunk<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>$usage<sp/>=<sp/><ref refid="d6/d6d/tripal_8quotas_8api_8inc_1a3e7ba6026fad571974c3485bd8fc5914" kindref="member">tripal_get_user_usage</ref>($user-&gt;uid);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>$quota<sp/>=<sp/><ref refid="d6/d6d/tripal_8quotas_8api_8inc_1a76e4b460bfb777bb70e4674d24f3a9fe" kindref="member">tripal_get_user_quota</ref>($user-&gt;uid);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>$quota_size<sp/>=<sp/>$quota-&gt;custom_quota;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($file_size<sp/>+<sp/>$usage<sp/>&gt;<sp/>$quota_size)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_json_output(array(</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;status&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;message&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&quot;Unfortunately,<sp/>you<sp/>can<sp/>not<sp/>upload<sp/>this<sp/>file<sp/>as<sp/>the<sp/>size<sp/>exceeds<sp/>the<sp/>remainder<sp/>of<sp/>your<sp/>quota.<sp/>See<sp/>your<sp/>account<sp/>page<sp/>under<sp/>the<sp/>&apos;Uploads&apos;<sp/>tab<sp/>to<sp/>manage<sp/>your<sp/>uploaded<sp/>files.&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;file_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>we<sp/>don&apos;t<sp/>go<sp/>over<sp/>the<sp/>max<sp/>file<sp/>upload<sp/>size.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>$upload_max<sp/>=<sp/>variable_get(</highlight><highlight class="stringliteral">&apos;tripal_upload_max_size&apos;</highlight><highlight class="normal">,<sp/>10000000000);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($file_size<sp/>&gt;<sp/>$upload_max)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$message<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&quot;Unfortunately,<sp/>you<sp/>can<sp/>not<sp/>upload<sp/>this<sp/>file<sp/>as<sp/>the<sp/>size<sp/>exceeds<sp/>the<sp/>the<sp/>maximum<sp/>file<sp/>size<sp/>allowed<sp/>by<sp/>this<sp/>site:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d5/df3/group__tripal__files__api_1ga958a192b7e34752767c7b9ff53e18ffa" kindref="member">tripal_format_bytes</ref>($upload_max)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;.<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(user_access(</highlight><highlight class="stringliteral">&apos;administer<sp/>tripal&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$message<sp/>.=<sp/>t(</highlight><highlight class="stringliteral">&apos;You<sp/>can<sp/>manage<sp/>the<sp/>file<sp/>upload<sp/>by<sp/>visiting:<sp/>Home<sp/>»<sp/>Administration<sp/>»<sp/>Tripal<sp/>»<sp/>User<sp/>File<sp/>Management.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_json_output(array(</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;status&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;message&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$message,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;file_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Allow<sp/>the<sp/>module<sp/>that<sp/>will<sp/>own<sp/>the<sp/>file<sp/>to<sp/>make<sp/>some<sp/>checks.<sp/>The<sp/>module</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>allowed<sp/>to<sp/>stop<sp/>the<sp/>upload<sp/>as<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>$hook_name<sp/>=<sp/>$module<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_file_upload_check&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(function_exists($hook_name))<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>$details<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;filename&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$filename,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;file_size&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$file_size,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;chunk_size&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$chunk_size,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>$status<sp/>=<sp/>$hook_name($action,<sp/>$details,<sp/>$message);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($status<sp/>===<sp/>FALSE)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_json_output(array(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;status&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;message&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$message,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;file_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>($action)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>action<sp/>is<sp/>&apos;save&apos;<sp/>then<sp/>the<sp/>callee<sp/>is<sp/>sending<sp/>a<sp/>chunk<sp/>of<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;save&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d52/tripal_8upload_8inc_1a6b5866df52f175a84f2acc1fd0d3b028" kindref="member">tripal_file_upload_put</ref>($filename,<sp/>$chunk,<sp/>$user_dir);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;check&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d52/tripal_8upload_8inc_1abb29fdd9db1c708b14db47e5ae874915" kindref="member">tripal_file_upload_verify</ref>($filename,<sp/>$chunk,<sp/>$user_dir);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;merge&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d52/tripal_8upload_8inc_1a4c6b669b38d36bea5f95c9a995871ef8" kindref="member">tripal_file_upload_merge</ref>($filename,<sp/>$type,<sp/>$user_dir);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91" refid="db/d52/tripal_8upload_8inc_1a4c6b669b38d36bea5f95c9a995871ef8" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d52/tripal_8upload_8inc_1a4c6b669b38d36bea5f95c9a995871ef8" kindref="member">tripal_file_upload_merge</ref>($filename,<sp/>$type,<sp/>$user_dir)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>global<sp/>$user;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>$module<sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>$status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;merging&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>the<sp/>paths<sp/>to<sp/>the<sp/>temp<sp/>directory<sp/>and<sp/>merged<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>$temp_dir<sp/>=<sp/>$user_dir<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/temp&apos;</highlight><highlight class="normal"><sp/>.<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$filename;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>$merge_file<sp/>=<sp/>$user_dir<sp/>.<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$filename;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>temp<sp/>directory<sp/>where<sp/>the<sp/>chunks<sp/>are<sp/>found<sp/>does<sp/>not<sp/>exist<sp/>and<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>client<sp/>is<sp/>requesting<sp/>merge<sp/>then<sp/>most<sp/>likely<sp/>the<sp/>file<sp/>has<sp/>already<sp/>been</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>merged<sp/>and<sp/>the<sp/>user<sp/>hit<sp/>the<sp/>upload<sp/>button<sp/>again.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file_exists($temp_dir))<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>upload<sp/>log.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>$log<sp/>=<sp/><ref refid="db/d52/tripal_8upload_8inc_1af4f80304f865c859664b2803e26991bd" kindref="member">tripal_file_upload_read_log</ref>($temp_dir);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>up<sp/>with<sp/>the<sp/>expected<sp/>file<sp/>size.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>$merge_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>the<sp/>new<sp/>merged<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>$merge_fh<sp/>=<sp/>fopen($merge_file,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($merge_fh){</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(flock($merge_fh,<sp/>LOCK_EX))<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$chunks_written<sp/>=<sp/>$log[</highlight><highlight class="stringliteral">&apos;chunks_written&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$max_chunk<sp/>=<sp/>max(array_keys($chunks_written));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>through<sp/>the<sp/>chunks<sp/>in<sp/>order<sp/>and<sp/>see<sp/>if<sp/>any<sp/>are<sp/>missing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>so<sp/>then<sp/>break<sp/>out<sp/>of<sp/>the<sp/>loop<sp/>and<sp/>fail.<sp/>Otherwise<sp/>concatentate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>them<sp/>together.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>($i<sp/>=<sp/>0;<sp/>$i<sp/>&lt;=<sp/>$max_chunk;<sp/>$i++)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists($i,<sp/>$chunks_written))<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Missing<sp/>some<sp/>chunks.<sp/>Cannot<sp/>complete<sp/>file<sp/>merge.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$merge_size<sp/>+=<sp/>$chunks_written[$i];</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$chunk_file<sp/>=<sp/>$temp_dir<sp/>.<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$filename<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;.chunk.&apos;</highlight><highlight class="normal"><sp/>.<sp/>$i;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$cfh<sp/>=<sp/>fopen($chunk_file,<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($data<sp/>=<sp/>fread($cfh,<sp/>1024))<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fwrite($merge_fh,<sp/>$data);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fclose($cfh);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>for<sp/>($i<sp/>=<sp/>0;<sp/>$i<sp/>&lt;=<sp/>$max_chunk;<sp/>$i++)<sp/>{<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filesize($merge_file)<sp/>!=<sp/>$merge_size)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;File<sp/>was<sp/>uploaded<sp/>but<sp/>final<sp/>merged<sp/>size<sp/>is<sp/>incorrect:<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$merge_file<sp/>.<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Cannot<sp/>lock<sp/>merged<sp/>file<sp/>for<sp/>writing:<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$merge_file<sp/>.<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Cannot<sp/>open<sp/>merged<sp/>file:<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$merge_file<sp/>.<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>flock($merge_fh,<sp/>LOCK_UN);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose($merge_fh);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>merged<sp/>file<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file_exists($merge_file))<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>$status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>$message<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Merge<sp/>file<sp/>is<sp/>missing<sp/>after<sp/>upload<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$merge_file<sp/>.<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>$file_id<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>file<sp/>has<sp/>been<sp/>successfully<sp/>merged<sp/>then<sp/>do<sp/>a<sp/>few<sp/>other<sp/>things...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($status<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">)<sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>if<sp/>this<sp/>file<sp/>is<sp/>already<sp/>managed<sp/>if<sp/>so,<sp/>then<sp/>it<sp/>has<sp/>been<sp/>uploaded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>before<sp/>and<sp/>we<sp/>don&apos;t<sp/>need<sp/>to<sp/>add<sp/>a<sp/>managed<sp/>item<sp/>again.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>$fid<sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;file_managed&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;fm&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;fm&apos;</highlight><highlight class="normal">,<sp/>[</highlight><highlight class="stringliteral">&apos;fid&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;uri&apos;</highlight><highlight class="normal">,<sp/>$merge_file)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchField();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>file<sp/>if<sp/>it<sp/>is<sp/>not<sp/>already<sp/>managed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$fid)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>stdClass();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file-&gt;uri<sp/>=<sp/>$merge_file;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file-&gt;filename<sp/>=<sp/>$filename;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file-&gt;filemime<sp/>=<sp/>file_get_mimetype($merge_file);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file-&gt;uid<sp/>=<sp/>$user-&gt;uid;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file-&gt;status<sp/>=<sp/>FILE_STATUS_PERMANENT;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>file_save($file);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$fid<sp/>=<sp/>$file-&gt;fid;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reload<sp/>the<sp/>file<sp/>object<sp/>to<sp/>get<sp/>a<sp/>full<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>$file_id<sp/>=<sp/>$fid;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>file_load($fid);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>file<sp/>as<sp/>being<sp/>managed<sp/>by<sp/>Tripal.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>file_usage_add($file,<sp/></highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">,<sp/>$type,<sp/>0);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>file<sp/>expiration.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/d6d/tripal_8quotas_8api_8inc_1ad7b54983d4fcd9ccb86e81b07832d71b" kindref="member">tripal_reset_file_expiration</ref>($fid);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Generate<sp/>an<sp/>md5<sp/>file<sp/>the<sp/>uploaded<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>$full_path<sp/>=<sp/>drupal_realpath($file-&gt;uri);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>$md5sum<sp/>=<sp/>md5_file($full_path);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>$md5sum_file<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;$full_path.md5&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite($md5sum_file,<sp/>$md5sum);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose($md5sum_file);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>temporary<sp/>directory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>file_unmanaged_delete_recursive($temp_dir);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>let<sp/>the<sp/>submitting<sp/>module<sp/>deal<sp/>with<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>$function<sp/>=<sp/>$module<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_handle_uploaded_file&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(function_exists($function))<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$function($file,<sp/>$type);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>$status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;completed&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($status<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;failed&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>watchdog(</highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">,<sp/>$message,<sp/>array(),<sp/>WATCHDOG_ERROR);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>drupal_json_output(array(</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;status&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/>$status,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;message&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$message,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;file_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$file_id,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>));</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230" refid="db/d52/tripal_8upload_8inc_1abb29fdd9db1c708b14db47e5ae874915" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d52/tripal_8upload_8inc_1abb29fdd9db1c708b14db47e5ae874915" kindref="member">tripal_file_upload_verify</ref>($filename,<sp/>$chunk,<sp/>$user_dir)<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>$chunk_size<sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;chunk_size&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>chunked<sp/>file<sp/>in<sp/>a<sp/>temp<sp/>folder.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>$temp_dir<sp/>=<sp/>$user_dir<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/temp&apos;</highlight><highlight class="normal"><sp/>.<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$filename;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file_exists($temp_dir))<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir($temp_dir,<sp/>0700,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>upload<sp/>log.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>$log<sp/>=<sp/><ref refid="db/d52/tripal_8upload_8inc_1af4f80304f865c859664b2803e26991bd" kindref="member">tripal_file_upload_read_log</ref>($temp_dir);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>$chunks_written<sp/>=<sp/>$log[</highlight><highlight class="stringliteral">&apos;chunks_written&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>$max_chunk<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($chunks_written)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>$max_chunk<sp/>=<sp/>max(array_keys($chunks_written));</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>through<sp/>the<sp/>chunks<sp/>in<sp/>order<sp/>and<sp/>see<sp/>if<sp/>any<sp/>are<sp/>missing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>so<sp/>then<sp/>break<sp/>out<sp/>of<sp/>the<sp/>loop<sp/>and<sp/>this<sp/>is<sp/>the<sp/>chunk<sp/>to<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>on.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>($i<sp/>=<sp/>0;<sp/>$i<sp/>&lt;=<sp/>$max_chunk;<sp/>$i++)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists($i,<sp/>$chunks_written))<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>drupal_json_output(array(</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;status&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;success&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;message&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;curr_chunk&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/>$i,</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/>));</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270" refid="db/d52/tripal_8upload_8inc_1a6b5866df52f175a84f2acc1fd0d3b028" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d52/tripal_8upload_8inc_1a6b5866df52f175a84f2acc1fd0d3b028" kindref="member">tripal_file_upload_put</ref>($filename,<sp/>$chunk,<sp/>$user_dir)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>HTTP<sp/>PUT<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>$putdata<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;php://input&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>$size<sp/>=<sp/>$_SERVER[</highlight><highlight class="stringliteral">&apos;CONTENT_LENGTH&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Store<sp/>the<sp/>chunked<sp/>file<sp/>in<sp/>a<sp/>temp<sp/>folder.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>$temp_dir<sp/>=<sp/>$user_dir<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/temp/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$filename;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file_exists($temp_dir))<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir($temp_dir,<sp/>0700,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>the<sp/>file<sp/>for<sp/>writing<sp/>if<sp/>doesn&apos;t<sp/>already<sp/>exist<sp/>with<sp/>the<sp/>proper<sp/>size.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/>$chunk_file<sp/>=<sp/>$temp_dir<sp/>.<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$filename<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;.chunk.&apos;</highlight><highlight class="normal"><sp/>.<sp/>$chunk;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file_exists($chunk_file)<sp/>or<sp/>filesize($chunk_file)<sp/>!=<sp/>$size)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>data<sp/>1<sp/>KB<sp/>at<sp/>a<sp/>time<sp/>and<sp/>write<sp/>to<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>$fh<sp/>=<sp/>fopen($chunk_file,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lock<sp/>the<sp/>file<sp/>for<sp/>writing.<sp/>We<sp/>don&apos;t<sp/>want<sp/>two<sp/>different</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>processes<sp/>trying<sp/>to<sp/>write<sp/>to<sp/>the<sp/>same<sp/>file<sp/>at<sp/>the<sp/>same<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(flock($fh,<sp/>LOCK_EX))<sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($data<sp/>=<sp/>fread($putdata,<sp/>1024))<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fwrite($fh,<sp/>$data);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>flock($fh,<sp/>LOCK_UN);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fclose($fh);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>fclose($putdata);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>current<sp/>log,<sp/>updated<sp/>and<sp/>re-write<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/>$log<sp/>=<sp/><ref refid="db/d52/tripal_8upload_8inc_1af4f80304f865c859664b2803e26991bd" kindref="member">tripal_file_upload_read_log</ref>($temp_dir);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/>$log[</highlight><highlight class="stringliteral">&apos;chunks_written&apos;</highlight><highlight class="normal">][$chunk]<sp/>=<sp/>$size;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><ref refid="db/d52/tripal_8upload_8inc_1a3aa8653f3b4538612d67a8c75afca631" kindref="member">tripal_file_upoad_write_log</ref>($temp_dir,<sp/>$log);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316" refid="db/d52/tripal_8upload_8inc_1af4f80304f865c859664b2803e26991bd" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d52/tripal_8upload_8inc_1af4f80304f865c859664b2803e26991bd" kindref="member">tripal_file_upload_read_log</ref>($temp_dir)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/>$log_file<sp/>=<sp/>$temp_dir<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/tripal_upload.log&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/>$log<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file_exists($log_file))<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>$fh<sp/>=<sp/>fopen($log_file,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($fh<sp/>and<sp/>flock($fh,<sp/>LOCK_EX))<sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$contents<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($data<sp/>=<sp/>fread($fh,<sp/>1024))<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$contents<sp/>.=<sp/>$data;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$log<sp/>=<sp/>unserialize($contents);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>flock($fh,<sp/>LOCK_UN);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose($fh);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_array($log))<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>$log<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;chunks_written&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$log;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="355" refid="db/d52/tripal_8upload_8inc_1a3aa8653f3b4538612d67a8c75afca631" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d52/tripal_8upload_8inc_1a3aa8653f3b4538612d67a8c75afca631" kindref="member">tripal_file_upoad_write_log</ref>($temp_dir,<sp/>$log)<sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/>$log_file<sp/>=<sp/>$temp_dir<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/tripal_upload.log&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$log<sp/>or<sp/>!is_array($log))<sp/>{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>$log<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;chunks_written&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>last<sp/>chunk<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/>$fh<sp/>=<sp/>fopen($log_file,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($fh<sp/>and<sp/>flock($fh,<sp/>LOCK_EX))<sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite($fh,<sp/>serialize($log));</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/>flock($fh,<sp/>LOCK_UN);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/>fclose($fh);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/includes/tripal.upload.inc"/>
+  </compounddef>
+</doxygen>

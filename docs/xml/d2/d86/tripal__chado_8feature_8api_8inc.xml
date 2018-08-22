@@ -1,0 +1,843 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/d86/tripal__chado_8feature_8api_8inc" kind="file" language="PHP">
+    <compoundname>tripal_chado.feature.api.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/d2b/group__tripal__feature__api_1gad2b3fc57d09a70e6d51d0ddaea6d46e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_autocomplete_feature</definition>
+        <argsstring>($string=&apos;&apos;)</argsstring>
+        <name>chado_autocomplete_feature</name>
+        <param>
+          <declname>$string</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used for autocomplete in forms for identifying for publications.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field in the publication to search on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.feature.api.inc" line="30" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.feature.api.inc" bodystart="30" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d2b/group__tripal__feature__api_1gaef992c7d62acbecc21a578a5be756d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_bulk_feature_sequences</definition>
+        <argsstring>($options)</argsstring>
+        <name>chado_get_bulk_feature_sequences</name>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the bulk sequences for a given feature.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of options for selecting a feature. Valid keys include:<itemizedlist>
+<listitem><para>org_commonname: The common name of the organism for which sequences should be retrieved</para></listitem><listitem><para>genus: The genus of the organism for which sequences should be retrieved</para></listitem><listitem><para>species: The species of the organism for which sequences should be retrieved</para></listitem><listitem><para>analysis_name: The name of an analysis to which sequences belong. Only those that are associated with the analysis will be retrieved.</para></listitem><listitem><para>type: The type of feature (a sequence ontology term).</para></listitem><listitem><para>feature_name: the name of the feature. Can be an array of feature names.</para></listitem><listitem><para>feature_uname: the uniquename of the feature. Can be an array of feature unique names.</para></listitem><listitem><para>upstream: An integer specifing the number of upstream bases to include in the output</para></listitem><listitem><para>downstream: An integer specifying the number of downstream bases to include in the output.</para></listitem><listitem><para>derive_from_parent: Set to &apos;1&apos; if the sequence should be obtained from the parent to which this feature is aligned.</para></listitem><listitem><para>aggregate: Set to &apos;1&apos; if the sequence should only contain sub features, excluding intro sub feature sequence. For example, set this option to obtain just the coding sequence of an mRNA.</para></listitem><listitem><para>sub_feature_types: Only include sub features (or child features) of the types provided in the array</para></listitem><listitem><para>relationship_type: If a relationship name is provided (e.g. sequence_of) then any sequences that are in relationships of this type with matched sequences are also included</para></listitem><listitem><para>relationship_part: If a relationship is provided in the preceeding argument then the rel_part must be either &apos;object&apos; or &apos;subject&apos; to indicate which side of the relationship the matched features belong</para></listitem><listitem><para>width: Indicate the number of bases to use per line. A new line will be added after the specified number of bases on each line.</para></listitem><listitem><para>is_html: Set to &apos;1&apos; if the sequence is meant to be displayed on a web page. This will cause a <linebreak/>
+ tag to separate lines of the FASTA sequence. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns an array of sequences. The sequences will be in an array with the following keys for each sequence: &apos;types&apos; =&gt; an array of feature types that were used to derive the sequence (e.g. from an aggregated sequence) &apos;upstream&apos; =&gt; the number of upstream bases in the sequence &apos;downstream&apos; =&gt; the number of downstream bases in the sequence &apos;defline&apos; =&gt; the definintion line used to create a FASTA sequence &apos;residues&apos; =&gt; the residues &apos;featureloc_id&apos; =&gt; the featureloc_id if from an alignment </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.feature.api.inc" line="591" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.feature.api.inc" bodystart="591" bodyend="694"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d2b/group__tripal__feature__api_1gafff166da121c6152911e3a3f7296737b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_fasta_defline</definition>
+        <argsstring>($feature, $notes=&apos;&apos;, $featureloc=NULL, $type=&apos;&apos;, $length=0)</argsstring>
+        <name>chado_get_fasta_defline</name>
+        <param>
+          <declname>$feature</declname>
+        </param>
+        <param>
+          <declname>$notes</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$featureloc</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$type</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$length</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a definition line that can be used in a FASTA file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$feature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single feature object containing all the fields from the chado.feature table. Best case is to provide an object generated by the <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$notes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: additional notes to be added to the definition line. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$featureloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: a single featureloc object generated using chado_generate_var that contains a record from the chado.featureloc table. Provide this if the sequence was obtained by using the alignment rather than from the feature.residues column. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: the type of sequence. By default the feature type is used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: the length of the sequence.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string of the format: uniquename|name|type|feature_id or if an alignment: srcfeature_name:fmin..fmax[+-]; alignment of uniquename|name|type|feature_id. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.feature.api.inc" line="722" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.feature.api.inc" bodystart="722" bodyend="761"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d2b/group__tripal__feature__api_1ga85d33061cd26a50a2f96a17aeb352701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_feature_sequences</definition>
+        <argsstring>($feature, $options)</argsstring>
+        <name>chado_get_feature_sequences</name>
+        <param>
+          <declname>$feature</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the sequences for a given feature.</para><para>If a feature has multiple alignments or multiple relationships then multiple sequences will be returned.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$feature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array describing the feature. Valid keys include:<itemizedlist>
+<listitem><para>feature_id: The feature_id of the feature for which the sequence will be retrieved.</para></listitem><listitem><para>name: The feature name. This will appear on the FASTA definition line.</para></listitem><listitem><para>parent_id: (optional) only retrieve a sequence if &apos;derive_from_parent&apos; is true and the parent matches this ID.</para></listitem><listitem><para>featureloc_id: (optional) only retrieve a sequence if &apos;derive_from_parent&apos; is true and the alignment is defined with this featureloc_id. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of options. Valid keys include:<itemizedlist>
+<listitem><para>width: Indicate the number of bases to use per line. A new line will be added after the specified number of bases on each line.</para></listitem><listitem><para>is_html: Set to &apos;1&apos; if the sequence is meant to be displayed on a web page. This will cause a <linebreak/>
+ tag to separate lines of the FASTA sequence.</para></listitem><listitem><para>derive_from_parent: Set to &apos;1&apos; if the sequence should be obtained from the parent to which this feature is aligned.</para></listitem><listitem><para>aggregate: Set to &apos;1&apos; if the sequence should only contain sub features, excluding intro sub feature sequence. For example, set this option to obtain just the coding sequence of an mRNA.</para></listitem><listitem><para>upstream: An integer specifing the number of upstream bases to include in the output.</para></listitem><listitem><para>downstream: An integer specifying the number of downstream bases to include in the output.</para></listitem><listitem><para>sub_feature_types: Only include sub features (or child features) of the types provided in the array.</para></listitem><listitem><para>relationship_type: If a relationship name is provided (e.g. sequence_of) then any sequences that are in relationships of this type with matched sequences are also included.</para></listitem><listitem><para>relationship_part: If a relationship is provided in the preceeding argument then the rel_part must be either &apos;object&apos; or &apos;subject&apos; to indicate which side of the relationship the matched features belong.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an array of matching sequence in the following keys for each sequence:<itemizedlist>
+<listitem><para>types: an array of feature types that were used to derive the sequence (e.g. from an aggregated sequence)</para></listitem><listitem><para>upstream: the number of upstream bases included in the sequence</para></listitem><listitem><para>downstream: the number of downstream bases included in the sequence</para></listitem><listitem><para>defline: the definintion line used to create a FASTA sequence</para></listitem><listitem><para>residues: the residues</para></listitem><listitem><para>featureloc_id: the featureloc_id if the sequences is from an alignment </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.feature.api.inc" line="139" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.feature.api.inc" bodystart="139" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d2b/group__tripal__feature__api_1ga5d04d3fe86da8346cf9591c910299f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_location_string</definition>
+        <argsstring>($featureloc)</argsstring>
+        <name>chado_get_location_string</name>
+        <param>
+          <declname>$featureloc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string representing a feature location in an alignment.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$featureloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single featureloc object generated using chado_generate_var that contains a record from the chado.featureloc table.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string of the format: uniquename:featurelocmin..featurelocmax.strand </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.feature.api.inc" line="775" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.feature.api.inc" bodystart="775" bodyend="787"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d2b/group__tripal__feature__api_1gabfcc11db9eb273962be0cc93208f37d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_reverse_compliment_sequence</definition>
+        <argsstring>($sequence)</argsstring>
+        <name>chado_reverse_compliment_sequence</name>
+        <param>
+          <declname>$sequence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs a reverse compliment of a nucleotide sequence.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$sequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nucelotide sequence.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an upper-case reverse complemented sequence. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.feature.api.inc" line="64" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.feature.api.inc" bodystart="64" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides API functions specificially for managing feature records in Chado. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="30" refid="d4/d2b/group__tripal__feature__api_1gad2b3fc57d09a70e6d51d0ddaea6d46e0" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d2b/group__tripal__feature__api_1gad2b3fc57d09a70e6d51d0ddaea6d46e0" kindref="member">chado_autocomplete_feature</ref>($string<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>F.feature_id,<sp/>F.uniquename,<sp/>F.name,</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>O.genus,<sp/>O,species,</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>CVT.name<sp/>as<sp/>type</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>{feature}<sp/>F</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{organism}<sp/>O<sp/>ON<sp/>O.organism_id<sp/>=<sp/>F.organism_id</highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVT<sp/>ON<sp/>CVT.cvterm_id<sp/>=<sp/>F.type_id</highlight></codeline>
+<codeline lineno="40"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>WHERE<sp/>lower(F.uniquename)<sp/>like<sp/>lower(:str)</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>ORDER<sp/>by<sp/>F.uniquename</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>LIMIT<sp/>25<sp/>OFFSET<sp/>0</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a453d38e7abc0e2e60ede7b331f871554" kindref="member">$features</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:str&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$string<sp/>.<sp/></highlight><highlight class="charliteral">&apos;%&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref><sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a453d38e7abc0e2e60ede7b331f871554" kindref="member">$features</ref>-&gt;fetchObject())<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>$key<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$feature-&gt;uniquename<sp/>[id:<sp/>$feature-&gt;feature_id]&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>$items[$key]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$feature-&gt;uniquename<sp/>($feature-&gt;name,<sp/>$feature-&gt;type,<sp/>$feature-&gt;genus<sp/>$feature-&gt;species)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>drupal_json_output($items);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="d4/d2b/group__tripal__feature__api_1gabfcc11db9eb273962be0cc93208f37d1" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d2b/group__tripal__feature__api_1gabfcc11db9eb273962be0cc93208f37d1" kindref="member">chado_reverse_compliment_sequence</ref>($sequence)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>strtoupper($sequence);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>strrev($seq);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;A&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;t&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;G&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;c&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;R&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;W&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;S&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;K&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;M&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;k&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;D&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;h&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;V&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;d&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>$seq<sp/>=<sp/>str_replace(</highlight><highlight class="stringliteral">&quot;B&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;v&quot;</highlight><highlight class="normal">,<sp/>$seq);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>strtoupper($seq);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="d4/d2b/group__tripal__feature__api_1ga85d33061cd26a50a2f96a17aeb352701" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d2b/group__tripal__feature__api_1ga85d33061cd26a50a2f96a17aeb352701" kindref="member">chado_get_feature_sequences</ref>(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>values<sp/>for<sp/>finding<sp/>the<sp/>feature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>$feature_id<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>)<sp/>?<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>[</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>$parent_id<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;parent_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>)<sp/>?<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>[</highlight><highlight class="stringliteral">&apos;parent_id&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>$featureloc_id<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;featureloc_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>)<sp/>?<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>[</highlight><highlight class="stringliteral">&apos;featureloc_id&apos;</highlight><highlight class="normal">]<sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>$feature_name<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>)<sp/>?<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>values<sp/>for<sp/>building<sp/>the<sp/>sequence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>$num_bases_per_line<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>50;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>$derive_from_parent<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;derive_from_parent&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;derive_from_parent&apos;</highlight><highlight class="normal">]<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>$aggregate<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;aggregate&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;aggregate&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>$upstream<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>$downstream<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>$sub_features<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;sub_feature_types&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;sub_feature_types&apos;</highlight><highlight class="normal">]<sp/><sp/>:<sp/>array();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>$relationship<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;relationship_type&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;relationship_type&apos;</highlight><highlight class="normal">]<sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>$rel_part<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;relationship_part&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;relationship_part&apos;</highlight><highlight class="normal">]<sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>$is_html<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;is_html&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;is_html&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>$is_txt<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;is_txt&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;is_txt&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>$is_raw<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;is_raw&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;is_raw&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$upstream)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>$upstream<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$downstream)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>$downstream<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>sub_features<sp/>variable<sp/>is<sp/>an<sp/>array.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_array($sub_features))<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_feature&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&apos;sub_features&apos;<sp/>option<sp/>must<sp/>be<sp/>an<sp/>array<sp/>for<sp/>function<sp/>chado_get_feature_sequences().&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>array();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>a<sp/>relationship<sp/>was<sp/>specified<sp/>then<sp/>retreive<sp/>and<sp/>the<sp/>sequences<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>have<sp/>the<sp/>given<sp/>relationship<sp/>and<sp/>the<sp/>recurse<sp/>to<sp/>extract<sp/>the<sp/>appropriate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>sequence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($rel_part<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;object&quot;</highlight><highlight class="normal"><sp/>or<sp/>$rel_part<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;subject&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($rel_part<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;subject&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="182"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SELECT<sp/>FO.feature_id,<sp/>FO.name,<sp/>FO.uniquename,<sp/>CVTO.name<sp/>as<sp/>feature_type,<sp/>O.genus,<sp/>O.species</highlight></codeline>
+<codeline lineno="183"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>{feature}<sp/>FS</highlight></codeline>
+<codeline lineno="184"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature_relationship}<sp/>FR<sp/>ON<sp/>FR.subject_id<sp/><sp/><sp/>=<sp/>FS.feature_id</highlight></codeline>
+<codeline lineno="185"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVTFR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>CVTFR.cvterm_id<sp/>=<sp/>FR.type_id</highlight></codeline>
+<codeline lineno="186"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>FO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>FO.feature_id<sp/><sp/><sp/>=<sp/>FR.object_id</highlight></codeline>
+<codeline lineno="187"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVTO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>CVTO.cvterm_id<sp/><sp/>=<sp/>FO.type_id</highlight></codeline>
+<codeline lineno="188"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{organism}<sp/>O<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>O.organism_id<sp/><sp/><sp/>=<sp/>FO.organism_id</highlight></codeline>
+<codeline lineno="189"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHERE</highlight></codeline>
+<codeline lineno="190"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FS.feature_id<sp/>=<sp/>:feature_id<sp/>AND</highlight></codeline>
+<codeline lineno="191"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CVTFR.name<sp/><sp/><sp/><sp/>=<sp/>:relationship</highlight></codeline>
+<codeline lineno="192"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a453d38e7abc0e2e60ede7b331f871554" kindref="member">$features</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_id,<sp/></highlight><highlight class="stringliteral">&apos;:relationship&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$relationship));</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($rel_part<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;object&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="197"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SELECT<sp/>FS.feature_id,<sp/>FS.name,<sp/>FS.uniquename,<sp/>CVTO.name<sp/>as<sp/>feature_type,<sp/>O.genus,<sp/>O.species</highlight></codeline>
+<codeline lineno="198"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>{feature}<sp/>FO</highlight></codeline>
+<codeline lineno="199"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature_relationship}<sp/>FR<sp/>ON<sp/>FR.object_id<sp/><sp/><sp/><sp/>=<sp/>FO.feature_id</highlight></codeline>
+<codeline lineno="200"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVTFR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>CVTFR.cvterm_id<sp/>=<sp/>FR.type_id</highlight></codeline>
+<codeline lineno="201"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>FS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>FS.feature_id<sp/><sp/><sp/>=<sp/>FR.subject_id</highlight></codeline>
+<codeline lineno="202"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVTO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>CVTO.cvterm_id<sp/><sp/>=<sp/>FS.type_id</highlight></codeline>
+<codeline lineno="203"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{organism}<sp/>O<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ON<sp/>O.organism_id<sp/><sp/><sp/>=<sp/>FS.organism_id</highlight></codeline>
+<codeline lineno="204"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHERE</highlight></codeline>
+<codeline lineno="205"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FO.feature_id<sp/>=<sp/>:feature_id<sp/>AND</highlight></codeline>
+<codeline lineno="206"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CVTFR.name<sp/><sp/><sp/><sp/>=<sp/>:relationship</highlight></codeline>
+<codeline lineno="207"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a453d38e7abc0e2e60ede7b331f871554" kindref="member">$features</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_id,<sp/></highlight><highlight class="stringliteral">&apos;:relationship&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$relationship));</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>$sequences<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref><sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a453d38e7abc0e2e60ede7b331f871554" kindref="member">$features</ref>-&gt;fetchObject())<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recurse<sp/>and<sp/>get<sp/>the<sp/>sequences<sp/>for<sp/>these<sp/>in<sp/>the<sp/>relationship.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($rel_part<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;subject&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$defline<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$feature_name,<sp/>$relationship,<sp/>$feature-&gt;uniquename<sp/>$feature-&gt;feature_type<sp/>($feature-&gt;genus<sp/>$feature-&gt;species)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($rel_part<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;object&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$defline<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$feature-&gt;uniquename<sp/>$feature-&gt;feature_type<sp/>($feature-&gt;genus<sp/>$feature-&gt;species),<sp/>$relationship,<sp/>$feature_name&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d4/d2b/group__tripal__feature__api_1ga85d33061cd26a50a2f96a17aeb352701" kindref="member">chado_get_feature_sequences</ref>(</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;feature_id,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$defline,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parent_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$parent_id,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$num_bases_per_line,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;derive_from_parent&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$derive_from_parent,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;aggregate&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$aggregate,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$upstream,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$downstream,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sub_features&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$sub_features,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>the<sp/>queries<sp/>we&apos;re<sp/>going<sp/>to<sp/>use<sp/>later<sp/>during<sp/>the<sp/>render<sp/>phase</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>SQL<sp/>statement<sp/>uses<sp/>conditionals<sp/>in<sp/>the<sp/>select<sp/>clause<sp/>to<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>cases<sp/>cases<sp/>where<sp/>the<sp/>alignment<sp/>is<sp/>in<sp/>the<sp/>reverse<sp/>direction<sp/>and<sp/>when</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>upstream<sp/>and<sp/>downstream<sp/>extensions<sp/>go<sp/>beyond<sp/>the<sp/>lenght<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>parent<sp/>sequence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>$parent_sql<sp/>=</highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="244"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT<sp/>featureloc_id,<sp/>srcname,<sp/>srcfeature_id,<sp/>strand,<sp/>srctypename,<sp/>typename,</highlight></codeline>
+<codeline lineno="245"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>fmin,<sp/>fmax,<sp/>upstream,<sp/>downstream,<sp/>adjfmin,<sp/>adjfmax,</highlight></codeline>
+<codeline lineno="246"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>substring(residues<sp/>from<sp/>(cast(adjfmin<sp/>as<sp/>int4)<sp/>+<sp/>1)<sp/>for<sp/>cast((upstream<sp/>+<sp/>(fmax<sp/>-<sp/>fmin)<sp/>+<sp/>downstream)<sp/>as<sp/>int4))<sp/><sp/>as<sp/>residues,</highlight></codeline>
+<codeline lineno="247"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>genus,<sp/>species</highlight></codeline>
+<codeline lineno="248"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>(</highlight></codeline>
+<codeline lineno="249"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>SELECT</highlight></codeline>
+<codeline lineno="250"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FL.featureloc_id,<sp/>OF.name<sp/>srcname,<sp/>FL.srcfeature_id,<sp/>FL.strand,</highlight></codeline>
+<codeline lineno="251"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OCVT.name<sp/>as<sp/>srctypename,<sp/>SCVT.name<sp/>as<sp/>typename,</highlight></codeline>
+<codeline lineno="252"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FL.fmin,<sp/>FL.fmax,<sp/>OO.genus,<sp/>OO.species,</highlight></codeline>
+<codeline lineno="253"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="254"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.strand<sp/>&gt;=<sp/>0<sp/>THEN</highlight></codeline>
+<codeline lineno="255"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="256"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmin<sp/>-<sp/>:upstream<sp/>&lt;=<sp/>0<sp/>THEN<sp/>0</highlight></codeline>
+<codeline lineno="257"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>FL.fmin<sp/>-<sp/>:upstream</highlight></codeline>
+<codeline lineno="258"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="259"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.strand<sp/>&lt;<sp/>0<sp/>THEN</highlight></codeline>
+<codeline lineno="260"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="261"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmin<sp/>-<sp/>:downstream<sp/>&lt;=<sp/>0<sp/>THEN<sp/>0</highlight></codeline>
+<codeline lineno="262"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>FL.fmin<sp/>-<sp/>:downstream</highlight></codeline>
+<codeline lineno="263"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="264"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END<sp/>as<sp/>adjfmin,</highlight></codeline>
+<codeline lineno="265"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="266"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.strand<sp/>&gt;=<sp/>0<sp/>THEN</highlight></codeline>
+<codeline lineno="267"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="268"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmax<sp/>+<sp/>:downstream<sp/>&gt;<sp/>OF.seqlen<sp/>THEN<sp/>OF.seqlen</highlight></codeline>
+<codeline lineno="269"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>FL.fmax<sp/>+<sp/>:downstream</highlight></codeline>
+<codeline lineno="270"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="271"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.strand<sp/>&lt;<sp/>0<sp/>THEN</highlight></codeline>
+<codeline lineno="272"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="273"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmax<sp/>+<sp/>:upstream<sp/>&gt;<sp/>OF.seqlen<sp/>THEN<sp/>OF.seqlen</highlight></codeline>
+<codeline lineno="274"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>FL.fmax<sp/>+<sp/>:upstream</highlight></codeline>
+<codeline lineno="275"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="276"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END<sp/>as<sp/>adjfmax,</highlight></codeline>
+<codeline lineno="277"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="278"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.strand<sp/>&gt;=<sp/>0<sp/>THEN</highlight></codeline>
+<codeline lineno="279"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="280"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmin<sp/>-<sp/>:upstream<sp/>&lt;=<sp/>0<sp/>THEN<sp/>FL.fmin</highlight></codeline>
+<codeline lineno="281"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>:upstream</highlight></codeline>
+<codeline lineno="282"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="283"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE</highlight></codeline>
+<codeline lineno="284"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="285"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmax<sp/>+<sp/>:upstream<sp/>&gt;<sp/>OF.seqlen<sp/>THEN<sp/>OF.seqlen<sp/>-<sp/>FL.fmax</highlight></codeline>
+<codeline lineno="286"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>:upstream</highlight></codeline>
+<codeline lineno="287"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="288"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END<sp/>as<sp/>upstream,</highlight></codeline>
+<codeline lineno="289"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="290"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.strand<sp/>&gt;=<sp/>0<sp/>THEN</highlight></codeline>
+<codeline lineno="291"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="292"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmax<sp/>+<sp/>:downstream<sp/>&gt;<sp/>OF.seqlen<sp/>THEN<sp/>OF.seqlen<sp/>-<sp/>FL.fmax</highlight></codeline>
+<codeline lineno="293"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>:downstream</highlight></codeline>
+<codeline lineno="294"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="295"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE</highlight></codeline>
+<codeline lineno="296"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CASE</highlight></codeline>
+<codeline lineno="297"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHEN<sp/>FL.fmin<sp/>-<sp/>:downstream<sp/>&lt;=<sp/>0<sp/>THEN<sp/>FL.fmin</highlight></codeline>
+<codeline lineno="298"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ELSE<sp/>:downstream</highlight></codeline>
+<codeline lineno="299"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END</highlight></codeline>
+<codeline lineno="300"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>END<sp/>as<sp/>downstream,</highlight></codeline>
+<codeline lineno="301"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OF.residues</highlight></codeline>
+<codeline lineno="302"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>{featureloc}<sp/>FL</highlight></codeline>
+<codeline lineno="303"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>SF<sp/><sp/><sp/>on<sp/>FL.feature_id<sp/><sp/><sp/><sp/>=<sp/>SF.feature_id</highlight></codeline>
+<codeline lineno="304"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/><sp/>SCVT<sp/>on<sp/>SF.type_id<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>SCVT.cvterm_id</highlight></codeline>
+<codeline lineno="305"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>OF<sp/><sp/><sp/>on<sp/>FL.srcfeature_id<sp/>=<sp/>OF.feature_id</highlight></codeline>
+<codeline lineno="306"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/><sp/>OCVT<sp/>on<sp/>OF.type_id<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>OCVT.cvterm_id</highlight></codeline>
+<codeline lineno="307"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{organism}<sp/>OO<sp/><sp/>on<sp/>OF.organism_id<sp/><sp/><sp/>=<sp/>OO.organism_id</highlight></codeline>
+<codeline lineno="308"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>WHERE<sp/>SF.feature_id<sp/>=<sp/>:feature_id<sp/>and<sp/>NOT<sp/>(OF.residues<sp/>=<sp/>\&apos;\&apos;<sp/>or<sp/>OF.residues<sp/>IS<sp/>NULL))<sp/>as<sp/>tbl1</highlight></codeline>
+<codeline lineno="309"><highlight class="stringliteral"><sp/><sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>query<sp/>is<sp/>meant<sp/>to<sp/>get<sp/>all<sp/>of<sp/>the<sp/>sub<sp/>features<sp/>of<sp/>any<sp/>given</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>feature<sp/>(arg<sp/>#1)<sp/>and<sp/>order<sp/>them<sp/>as<sp/>they<sp/>appear<sp/>on<sp/>the<sp/>reference</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>feature<sp/>(arg<sp/>#2).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/>$sfsql<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="314"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT<sp/>SF.feature_id,<sp/>CVT.name<sp/>as<sp/>type_name,<sp/>SF.type_id</highlight></codeline>
+<codeline lineno="315"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>{feature_relationship}<sp/>FR</highlight></codeline>
+<codeline lineno="316"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>SF<sp/><sp/><sp/><sp/>ON<sp/>SF.feature_id<sp/>=<sp/>FR.subject_id</highlight></codeline>
+<codeline lineno="317"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVT<sp/><sp/><sp/><sp/>ON<sp/>CVT.cvterm_id<sp/>=<sp/>SF.type_id</highlight></codeline>
+<codeline lineno="318"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{featureloc}<sp/>FL<sp/>ON<sp/>FL.feature_id<sp/>=<sp/>FR.subject_id</highlight></codeline>
+<codeline lineno="319"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>PF<sp/><sp/><sp/><sp/>ON<sp/>PF.feature_id<sp/>=<sp/>FL.srcfeature_id</highlight></codeline>
+<codeline lineno="320"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>WHERE<sp/>FR.object_id<sp/>=<sp/>:feature_id<sp/>and<sp/>PF.feature_id<sp/>=<sp/>:srcfeature_id</highlight></codeline>
+<codeline lineno="321"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>ORDER<sp/>BY<sp/>FL.fmin<sp/>ASC</highlight></codeline>
+<codeline lineno="322"><highlight class="stringliteral"><sp/><sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>counting<sp/>the<sp/>number<sp/>of<sp/>children.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/>$fsql<sp/>=</highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="325"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT<sp/>count(*)<sp/>as<sp/>num_children</highlight></codeline>
+<codeline lineno="326"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>{feature_relationship}<sp/>FR</highlight></codeline>
+<codeline lineno="327"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>SF<sp/><sp/><sp/><sp/>ON<sp/>SF.feature_id<sp/>=<sp/>FR.subject_id</highlight></codeline>
+<codeline lineno="328"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVT<sp/><sp/><sp/><sp/>ON<sp/>CVT.cvterm_id<sp/>=<sp/>SF.type_id</highlight></codeline>
+<codeline lineno="329"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{featureloc}<sp/>FL<sp/>ON<sp/>FL.feature_id<sp/>=<sp/>FR.subject_id</highlight></codeline>
+<codeline lineno="330"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{feature}<sp/>PF<sp/><sp/><sp/><sp/>ON<sp/>PF.feature_id<sp/>=<sp/>FL.srcfeature_id</highlight></codeline>
+<codeline lineno="331"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>WHERE<sp/>FR.object_id<sp/>=<sp/>:feature_id<sp/>and<sp/>PF.feature_id<sp/>=<sp/>:srcfeature_id</highlight></codeline>
+<codeline lineno="332"><highlight class="stringliteral"><sp/><sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>array<sp/>to<sp/>be<sp/>returned.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/>$sequences<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>need<sp/>to<sp/>get<sp/>the<sp/>sequence<sp/>from<sp/>the<sp/>parent<sp/>then<sp/>do<sp/>so<sp/>now.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($derive_from_parent)<sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Execute<sp/>the<sp/>query<sp/>to<sp/>get<sp/>the<sp/>sequence<sp/>from<sp/>the<sp/>parent.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>$parents<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($parent_sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$upstream,<sp/></highlight><highlight class="stringliteral">&apos;:downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$downstream,<sp/></highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_id));</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($parent<sp/>=<sp/>$parents-&gt;fetchObject())<sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>user<sp/>specified<sp/>a<sp/>particular<sp/>parent<sp/>and<sp/>this<sp/>one<sp/>doesn&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>match<sp/>then<sp/>skip<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($parent_id<sp/>and<sp/>$parent_id<sp/>!=<sp/>$parent-&gt;srcfeature_id)<sp/>{</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>user<sp/>specified<sp/>a<sp/>particular<sp/>featureloc_id<sp/>and<sp/>this<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>doesn&apos;t<sp/>match<sp/>then<sp/>skip<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($featureloc_id<sp/>and<sp/>$featureloc_id<sp/>!=<sp/>$parent-&gt;featureloc_id)<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>sequence<sp/>for<sp/>each<sp/>parent.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$seq<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$notes<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>are<sp/>to<sp/>aggregate<sp/>then<sp/>we<sp/>will<sp/>ignore<sp/>the<sp/>feature<sp/>returned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>by<sp/>the<sp/>query<sp/>above<sp/>and<sp/>rebuild<sp/>it<sp/>using<sp/>the<sp/>sub<sp/>features.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($aggregate)<sp/>{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>get<sp/>the<sp/>sub<sp/>features<sp/>that<sp/>are<sp/>located<sp/>on<sp/>the<sp/>parent.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$children<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sfsql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_id,<sp/></highlight><highlight class="stringliteral">&apos;:srcfeature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$parent-&gt;srcfeature_id));</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$num_children<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($fsql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_id,<sp/></highlight><highlight class="stringliteral">&apos;:srcfeature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$parent-&gt;srcfeature_id))-&gt;fetchField();</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>through<sp/>the<sp/>sub<sp/>features<sp/>and<sp/>concat<sp/>their<sp/>sequences.<sp/>They</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>should<sp/>already<sp/>be<sp/>in<sp/>order.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$already_processed_children<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($child<sp/>=<sp/>$children-&gt;fetchObject())<sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>some<sp/>cases,<sp/>a<sp/>feature<sp/>may<sp/>be<sp/>discontinuous<sp/>(i.e.<sp/>one<sp/>feature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>spread<sp/>over<sp/>several<sp/>positions).<sp/>In<sp/>this<sp/>case,<sp/>the<sp/>feature<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>appear<sp/>multiple<sp/>times<sp/>and<sp/>we<sp/>want<sp/>to<sp/>prevent<sp/>addition<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sequence<sp/>multiple<sp/>times.<sp/><sp/>A<sp/>simple<sp/>check<sp/>to<sp/>make<sp/>sure<sp/>we<sp/>haven&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>seen<sp/>the<sp/>feature<sp/>already<sp/>should<sp/>suffice.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($already_processed_children)<sp/>&gt;<sp/>0<sp/>and<sp/>in_array($child-&gt;feature_id,<sp/>$already_processed_children)){</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$already_processed_children[]<sp/>=<sp/>$child-&gt;feature_id;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>callee<sp/>has<sp/>specified<sp/>that<sp/>only<sp/>certain<sp/>sub<sp/>features<sp/>should<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>included<sp/>then<sp/>continue<sp/>if<sp/>this<sp/>child<sp/>is<sp/>not<sp/>one<sp/>of<sp/>those<sp/>allowed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>subfeatures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($sub_features)<sp/>&gt;<sp/>0<sp/>and<sp/>!in_array($child-&gt;type_name,<sp/>$sub_features))<sp/>{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$i++;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>up<sp/>with<sp/>the<sp/>types.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!in_array($child-&gt;type_name,<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref>[]<sp/>=<sp/>$child-&gt;type_name;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>first<sp/>sub<sp/>feature<sp/>we<sp/>need<sp/>to<sp/>include<sp/>the<sp/>upstream<sp/>bases.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>check<sp/>if<sp/>the<sp/>feature<sp/>is<sp/>in<sp/>the<sp/>foward<sp/>direction<sp/>or<sp/>the<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reverse.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($i<sp/>==<sp/>0<sp/>and<sp/>$parent-&gt;strand<sp/>&gt;=<sp/>0)<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------<sp/>ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>....----&gt;<sp/><sp/>----&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>up<sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$q<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($parent_sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$upstream,<sp/></highlight><highlight class="stringliteral">&apos;:downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,<sp/></highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$child-&gt;feature_id));</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/>($i<sp/>==<sp/>0<sp/>and<sp/>$parent-&gt;strand<sp/>&lt;<sp/>0)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>reverse<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------<sp/>ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>....&lt;----<sp/><sp/>&lt;----</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>down<sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$q<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($parent_sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,<sp/></highlight><highlight class="stringliteral">&apos;:downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$downstream,<sp/></highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$child-&gt;feature_id));</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Next,<sp/>if<sp/>the<sp/>last<sp/>sub<sp/>feature<sp/>we<sp/>need<sp/>to<sp/>include<sp/>the<sp/>downstream<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bases.<sp/>First<sp/>check<sp/>if<sp/>the<sp/>feature<sp/>is<sp/>in<sp/>teh<sp/>forward<sp/>direction<sp/>or<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>reverse.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/>($i<sp/>==<sp/>$num_children<sp/>-<sp/>1<sp/>and<sp/>$parent-&gt;strand<sp/>&gt;=<sp/>0)<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>forward<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------<sp/>ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>----&gt;<sp/><sp/>----&gt;....</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/>down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$q<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($parent_sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,<sp/></highlight><highlight class="stringliteral">&apos;:downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$downstream,<sp/></highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$child-&gt;feature_id));</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>elseif<sp/>($i<sp/>==<sp/>$num_children<sp/>-<sp/>1<sp/>and<sp/>$parent-&gt;strand<sp/>&lt;<sp/>0)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>reverse<sp/>direction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------------<sp/>ref</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;----<sp/><sp/>&lt;----....</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$q<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($parent_sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$upstream,<sp/></highlight><highlight class="stringliteral">&apos;:downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,<sp/></highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$child-&gt;feature_id));</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>internal<sp/>sub<sp/>features<sp/>we<sp/>don&apos;t<sp/>want<sp/>upstream<sp/>or<sp/>downstream<sp/>bases.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$q<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($parent_sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,<sp/></highlight><highlight class="stringliteral">&apos;:downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,<sp/></highlight><highlight class="stringliteral">&apos;:feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$child-&gt;feature_id));</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($subseq<sp/>=<sp/>$q-&gt;fetchObject())<sp/>{</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>concatenate<sp/>the<sp/>sequences<sp/>of<sp/>all<sp/>the<sp/>sub<sp/>features</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($subseq-&gt;srcfeature_id<sp/>==<sp/>$parent-&gt;srcfeature_id)<sp/>{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$seq<sp/>.=<sp/>$subseq-&gt;residues;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($subseq-&gt;upstream<sp/>&gt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$notes<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;Includes<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$subseq-&gt;upstream<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>bases<sp/>upstream.<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($subseq-&gt;downstream<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$notes<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;Includes<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$subseq-&gt;downstream<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>bases<sp/>downstream.<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$i++;</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>isn&apos;t<sp/>an<sp/>aggregate<sp/>then<sp/>use<sp/>the<sp/>parent<sp/>residues.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$seq<sp/>=<sp/>$parent-&gt;residues;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($parent-&gt;upstream<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$notes<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;Includes<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$parent-&gt;upstream<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>bases<sp/>upstream.<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($parent-&gt;downstream<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$notes<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;Includes<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$parent-&gt;downstream<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>bases<sp/>downstream.<sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>reverse<sp/>compliment<sp/>if<sp/>feature<sp/>is<sp/>on<sp/>the<sp/>reverse<sp/>strand.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$dir<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;forward&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$length<sp/>=<sp/>strlen($seq);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($parent-&gt;strand<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$seq<sp/>=<sp/><ref refid="d4/d2b/group__tripal__feature__api_1gabfcc11db9eb273962be0cc93208f37d1" kindref="member">chado_reverse_compliment_sequence</ref>($seq);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$dir<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;reverse&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>format<sp/>for<sp/>display.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($is_html)<sp/>{</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$seq<sp/>=<sp/>wordwrap($seq,<sp/>$num_bases_per_line,<sp/></highlight><highlight class="stringliteral">&quot;&lt;br&gt;&quot;</highlight><highlight class="normal">,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($is_txt)<sp/>{</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$seq<sp/>=<sp/>wordwrap($seq,<sp/>$num_bases_per_line,<sp/></highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$seq)<sp/>{</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$notes<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>sequence<sp/>available.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count(<ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref>)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$notes<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;Excludes<sp/>all<sp/>bases<sp/>but<sp/>those<sp/>of<sp/>type(s):<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>implode(</highlight><highlight class="stringliteral">&apos;,<sp/>&apos;</highlight><highlight class="normal">,<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref>)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;.<sp/>&quot;</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>the<sp/>definition<sp/>line<sp/>for<sp/>this<sp/>feature.<sp/>To<sp/>construct<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>defline<sp/>we<sp/>need<sp/>a<sp/>featureloc<sp/>record,<sp/>so<sp/>we&apos;ll<sp/>create<sp/>one<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>information<sp/>we<sp/>have.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>stdClass;</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;feature_id<sp/>=<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;fmin<sp/>=<sp/>$parent-&gt;adjfmin;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;fmax<sp/>=<sp/>$parent-&gt;adjfmax;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;strand<sp/>=<sp/>$parent-&gt;strand;</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>stdClass;</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id-&gt;name<sp/>=<sp/>$parent-&gt;srcname;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id-&gt;type_id<sp/>=<sp/>$parent-&gt;srctypename;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id-&gt;organism_id<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>stdClass;</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id-&gt;organism_id-&gt;genus<sp/>=<sp/>$parent-&gt;genus;</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id-&gt;organism_id-&gt;species<sp/>=<sp/>$parent-&gt;species;</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>proper<sp/>feature<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$f<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;feature&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_id));</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$defline<sp/>=<sp/><ref refid="d4/d2b/group__tripal__feature__api_1gafff166da121c6152911e3a3f7296737b" kindref="member">chado_get_fasta_defline</ref>($f,<sp/>$notes,<sp/>$featureloc,<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>$length);</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sequences[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;types&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref>,</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$parent-&gt;upstream,</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>$parent-&gt;downstream,</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;defline&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$defline,</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;residues&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$seq,</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;featureloc_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$parent-&gt;featureloc_id,</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;length&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$length,</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>are<sp/>not<sp/>getting<sp/>the<sp/>sequence<sp/>from<sp/>the<sp/>parent<sp/>sequence<sp/>then</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>what<sp/>comes<sp/>through<sp/>from<sp/>the<sp/>feature<sp/>record.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>$f<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;feature&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_id));</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/>$f<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>($f,<sp/></highlight><highlight class="stringliteral">&apos;field&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;feature.residues&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ae0b563a9d2ff83fe90b8a4f16ba21eaa" kindref="member">$residues</ref><sp/>=<sp/>$f-&gt;residues;</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>$length<sp/>=<sp/>strlen(<ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ae0b563a9d2ff83fe90b8a4f16ba21eaa" kindref="member">$residues</ref>);</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($is_html)<sp/>{</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ae0b563a9d2ff83fe90b8a4f16ba21eaa" kindref="member">$residues</ref><sp/>=<sp/>wordwrap(<ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ae0b563a9d2ff83fe90b8a4f16ba21eaa" kindref="member">$residues</ref>,<sp/>$num_bases_per_line,<sp/></highlight><highlight class="stringliteral">&quot;&lt;br&gt;&quot;</highlight><highlight class="normal">,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ae0b563a9d2ff83fe90b8a4f16ba21eaa" kindref="member">$residues</ref><sp/>=<sp/>wordwrap(<ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ae0b563a9d2ff83fe90b8a4f16ba21eaa" kindref="member">$residues</ref>,<sp/>$num_bases_per_line,<sp/></highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>definintion<sp/>line<sp/>for<sp/>this<sp/>feature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/>$defline<sp/>=<sp/><ref refid="d4/d2b/group__tripal__feature__api_1gafff166da121c6152911e3a3f7296737b" kindref="member">chado_get_fasta_defline</ref>($f,<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>NULL,<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>$length);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"></highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>to<sp/>the<sp/>sequence<sp/>array.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/>$sequences[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;types&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$f-&gt;type_id-&gt;name,</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>0,</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;defline&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>$defline,</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;residues&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/><ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ae0b563a9d2ff83fe90b8a4f16ba21eaa" kindref="member">$residues</ref>,</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;length&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$length,</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$sequences;</highlight></codeline>
+<codeline lineno="538"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight></codeline>
+<codeline lineno="591" refid="d4/d2b/group__tripal__feature__api_1gaef992c7d62acbecc21a578a5be756d6d" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d2b/group__tripal__feature__api_1gaef992c7d62acbecc21a578a5be756d6d" kindref="member">chado_get_bulk_feature_sequences</ref>(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"></highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>values<sp/>for<sp/>building<sp/>the<sp/>sequence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/>$org_commonname<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;org_commonname&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;org_commonname&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/>$genus<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;genus&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;genus&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/>$species<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;species&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;species&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/>$analysis_name<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;analysis_name&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_name&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/>$type<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/>$feature_name<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;feature_name&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;feature_name&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/>$feature_uname<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;feature_uname&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;feature_uname&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/>$derive_from_parent<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;derive_from_parent&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;derive_from_parent&apos;</highlight><highlight class="normal">]<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/>$aggregate<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;aggregate&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;aggregate&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/>$sub_features<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;sub_feature_types&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;sub_feature_types&apos;</highlight><highlight class="normal">]<sp/><sp/>:<sp/>array();</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/>$relationship<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;relationship_type&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;relationship_type&apos;</highlight><highlight class="normal">]<sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/>$rel_part<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;relationship_part&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;relationship_part&apos;</highlight><highlight class="normal">]<sp/><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/>$num_bases_per_line<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>50;</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"><sp/><sp/>$upstream<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/>$downstream<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">]<sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$type<sp/>and<sp/>!$feature_name<sp/>and<sp/>!$genus)<sp/>{</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;Please<sp/>provide<sp/>a<sp/>type,<sp/>feature<sp/>name<sp/>or<sp/>genus\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"></highlight></codeline>
+<codeline lineno="615"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>list<sp/>of<sp/>features.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/>$vars<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/>$sql<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="618"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT<sp/>DISTINCT<sp/>F.feature_id,<sp/>F.name,<sp/>F.uniquename,</highlight></codeline>
+<codeline lineno="619"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>O.genus,<sp/>O.species,<sp/>CVT.name<sp/>as<sp/>feature_type</highlight></codeline>
+<codeline lineno="620"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>{feature}<sp/>F</highlight></codeline>
+<codeline lineno="621"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{organism}<sp/>O<sp/>on<sp/>O.organism_id<sp/>=<sp/>F.organism_id</highlight></codeline>
+<codeline lineno="622"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{cvterm}<sp/>CVT<sp/>on<sp/>CVT.cvterm_id<sp/>=<sp/>F.type_id</highlight></codeline>
+<codeline lineno="623"><highlight class="stringliteral"><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($analysis_name)<sp/>{</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="626"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{analysisfeature}<sp/>AF<sp/>on<sp/>AF.feature_id<sp/>=<sp/>F.feature_id</highlight></codeline>
+<codeline lineno="627"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{analysis}<sp/>A<sp/>on<sp/>AF.analysis_id<sp/>=<sp/>A.analysis_id</highlight></codeline>
+<codeline lineno="628"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;WHERE<sp/>(1=1)<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="631"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($org_commonname)<sp/>{</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>O.common_name<sp/>=<sp/>:common_name<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&apos;:common_name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$org_commonname;</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($genus)<sp/>{</highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>O.genus<sp/>=<sp/>:genus<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&apos;:genus&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$genus;</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($species)<sp/>{</highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>O.species<sp/>=<sp/>:species<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&apos;:species&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$species;</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($type)<sp/>{</highlight></codeline>
+<codeline lineno="644"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>CVT.name<sp/>=<sp/>:cvtname<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&apos;:cvtname&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$type;</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($feature_name)<sp/>{</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($feature_name))<sp/>{</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>F.name<sp/>IN<sp/>(&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($feature_name<sp/>as<sp/>$i<sp/>=&gt;<sp/>$fname)<sp/>{</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;:fname$i,<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&quot;:fname$i&quot;</highlight><highlight class="normal">]<sp/>=<sp/>$fname;</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>trailing<sp/>comma<sp/>and<sp/>close<sp/>the<sp/>parenthesis.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/>substr($sql,<sp/>0,<sp/>-2)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>F.name<sp/>=<sp/>:fname&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&apos;:fname&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$feature_name;</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($feature_uname)<sp/>{</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($feature_uname))<sp/>{</highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>F.uniquename<sp/>IN<sp/>(&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($feature_uname<sp/>as<sp/>$i<sp/>=&gt;<sp/>$funame)<sp/>{</highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;:funame$i,<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&quot;:funame$i&quot;</highlight><highlight class="normal">]<sp/>=<sp/>$funame;</highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>trailing<sp/>comma<sp/>and<sp/>close<sp/>the<sp/>parenthesis.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/>substr($sql,<sp/>0,<sp/>-2)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>F.uniquename<sp/>=<sp/>:funame&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&apos;:funame&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$feature_uname;</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($analysis_name)<sp/>{</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>A.name<sp/>=<sp/>:aname&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/>$vars[</highlight><highlight class="stringliteral">&apos;:aname&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$analysis_name;</highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/>$num_bases_per_line<sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><sp/><sp/>$num_seqs<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/>$q<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sql,<sp/>$vars);</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"></highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><sp/><sp/>$sequences<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref><sp/>=<sp/>$q-&gt;fetchObject())<sp/>{</highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>sequences</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/>$seqs<sp/>=<sp/><ref refid="d4/d2b/group__tripal__feature__api_1ga85d33061cd26a50a2f96a17aeb352701" kindref="member">chado_get_feature_sequences</ref>(array(</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;feature_id),<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/>$sequences<sp/>=<sp/>array_merge($sequences,<sp/>$seqs);</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/>$num_seqs++;</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"></highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$sequences;</highlight></codeline>
+<codeline lineno="694"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"></highlight></codeline>
+<codeline lineno="722" refid="d4/d2b/group__tripal__feature__api_1gafff166da121c6152911e3a3f7296737b" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d2b/group__tripal__feature__api_1gafff166da121c6152911e3a3f7296737b" kindref="member">chado_get_fasta_defline</ref>(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>,<sp/>$notes<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>$featureloc<sp/>=<sp/>NULL,<sp/>$type<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>$length<sp/>=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="723"><highlight class="normal"></highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>featureloc<sp/>object<sp/>has<sp/>the<sp/>srcfeature<sp/>if<sp/>not,<sp/>then<sp/>add<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($featureloc)<sp/>{</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_object($featureloc-&gt;srcfeature_id))<sp/>{</highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;feature&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$featureloc-&gt;srcfeature_id));</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_object($featureloc-&gt;srcfeature_id-&gt;organism_id))<sp/>{</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$featureloc-&gt;srcfeature_id-&gt;organism_id<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;organism&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;organism_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$featureloc-&gt;srcfeature_id-&gt;organism_id));</highlight></codeline>
+<codeline lineno="731"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>feature<sp/>object<sp/>has<sp/>the<sp/>organism<sp/>if<sp/>not,<sp/>then<sp/>add<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_object(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;organism_id))<sp/>{</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;organism_id<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;organism&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;organism_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;organism_id));</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="737"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>a<sp/>type<sp/>is<sp/>not<sp/>provided<sp/>then<sp/>use<sp/>the<sp/>default<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$type)<sp/>{</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/>$type<sp/>=<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;type_id-&gt;name;</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>the<sp/>definition<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/>$defline<sp/>=<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;uniquename<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;ID=&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;uniquename<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;|&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Name=&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;name<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;|&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;organism=&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;organism_id-&gt;genus<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;organism_id-&gt;species<sp/>.<sp/><sp/></highlight><highlight class="stringliteral">&quot;|&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type=&apos;</highlight><highlight class="normal"><sp/>.<sp/>$type<sp/>.<sp/></highlight><highlight class="charliteral">&apos;|&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($length<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/>$defline<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;length=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$length<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;bp|&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="752"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($featureloc)<sp/>{</highlight></codeline>
+<codeline lineno="753"><highlight class="normal"><sp/><sp/><sp/><sp/>$defline<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;location=Sequence<sp/>derived<sp/>from<sp/>alignment<sp/>at<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d4/d2b/group__tripal__feature__api_1ga5d04d3fe86da8346cf9591c910299f6e" kindref="member">chado_get_location_string</ref>($featureloc);</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"><sp/><sp/><sp/><sp/>$defline<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(&quot;</highlight><highlight class="normal"><sp/>.<sp/>$featureloc-&gt;srcfeature_id-&gt;organism_id-&gt;genus<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$featureloc-&gt;srcfeature_id-&gt;organism_id-&gt;species<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;)|&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="755"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($notes)<sp/>{</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/>$defline<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;Notes=$notes|&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/>$defline<sp/>=<sp/>substr($defline,<sp/>0,<sp/>-1);<sp/></highlight><highlight class="comment">//<sp/>remove<sp/>the<sp/>trailing<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$defline;</highlight></codeline>
+<codeline lineno="761"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"></highlight></codeline>
+<codeline lineno="775" refid="d4/d2b/group__tripal__feature__api_1ga5d04d3fe86da8346cf9591c910299f6e" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d2b/group__tripal__feature__api_1ga5d04d3fe86da8346cf9591c910299f6e" kindref="member">chado_get_location_string</ref>($featureloc)<sp/>{</highlight></codeline>
+<codeline lineno="776"><highlight class="normal"><sp/><sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref><sp/>=<sp/>$featureloc-&gt;feature_id;</highlight></codeline>
+<codeline lineno="777"><highlight class="normal"></highlight></codeline>
+<codeline lineno="778"><highlight class="normal"><sp/><sp/>$strand<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="779"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($featureloc-&gt;strand<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/>$strand<sp/>=<sp/></highlight><highlight class="charliteral">&apos;+&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/>elseif<sp/>($featureloc-&gt;strand<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/><sp/><sp/>$strand<sp/>=<sp/></highlight><highlight class="charliteral">&apos;-&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$featureloc-&gt;srcfeature_id-&gt;name<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"><sp/>.<sp/>($featureloc-&gt;fmin<sp/>+<sp/>1)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;..&quot;</highlight><highlight class="normal"><sp/>.<sp/>$featureloc-&gt;fmax<sp/>.<sp/><sp/>$strand;</highlight></codeline>
+<codeline lineno="787"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/api/modules/tripal_chado.feature.api.inc"/>
+  </compounddef>
+</doxygen>

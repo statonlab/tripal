@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="db/d79/classdata____sequence__checksum" kind="class" language="PHP" prot="public">
+    <compoundname>data__sequence_checksum</compoundname>
+    <basecompoundref refid="d2/d2e/classChadoField" prot="public" virt="non-virtual">ChadoField</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="db/d79/classdata____sequence__checksum_1a07b1268ee7ce38fb16b030e156a1d4eb" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__sequence_checksum::$default_formatter</definition>
+        <argsstring></argsstring>
+        <name>$default_formatter</name>
+        <initializer>= &apos;<ref refid="d0/d86/classdata____sequence__checksum__formatter" kindref="compound">data__sequence_checksum_formatter</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="44" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d79/classdata____sequence__checksum_1a4561f52454adf1dd7187ab4fe33c2ca0" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__sequence_checksum::$default_instance_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_instance_settings</name>
+        <initializer>= array(
+    
+    &apos;term_vocabulary&apos; =&gt; &apos;data&apos;,
+    
+    &apos;term_name&apos; =&gt; &apos;sequence_checksum&apos;,
+    
+    &apos;term_accession&apos; =&gt; &apos;2190&apos;,
+    
+    
+    
+    &apos;term_fixed&apos; =&gt; FALSE,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="27" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d79/classdata____sequence__checksum_1adbdc963d30a0eebb4fcec2e91c9eb8ee" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__sequence_checksum::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Sequence checksum&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="15" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d79/classdata____sequence__checksum_1a48582df1e01286f5d0d14e6e1e3195ae" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__sequence_checksum::$default_widget</definition>
+        <argsstring></argsstring>
+        <name>$default_widget</name>
+        <initializer>= &apos;<ref refid="dc/d89/classdata____sequence__checksum__widget" kindref="compound">data__sequence_checksum_widget</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="41" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d79/classdata____sequence__checksum_1a9b169cb9bce6288f0c92cdd77e6eca83" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__sequence_checksum::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;A field for generating MD5 checksum for a sequence.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="18" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="db/d79/classdata____sequence__checksum_1a63660f363dd3f42eeabd0090a9ad883c" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>data__sequence_checksum::$field</definition>
+        <argsstring></argsstring>
+        <name>$field</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="51" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d79/classdata____sequence__checksum_1ac03357a70e434a401e42c29f0c7c3dad" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>data__sequence_checksum::$instance</definition>
+        <argsstring></argsstring>
+        <name>$instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="55" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d79/classdata____sequence__checksum_1a4e0446181435192caaef74e5c953c5bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data__sequence_checksum::elementInfo</definition>
+        <argsstring>()</argsstring>
+        <name>elementInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a96952e870cbe0b4a48d72f0d1c20b21c" kindref="member">TripalField::elementInfo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="60" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="60" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="217">
+        <label>data__sequence_checksum</label>
+        <link refid="db/d79/classdata____sequence__checksum"/>
+        <childnode refid="218" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="220">
+        <label>data__sequence_checksum</label>
+        <link refid="db/d79/classdata____sequence__checksum"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/data__sequence_checksum/data__sequence_checksum.inc" bodystart="3" bodyend="74"/>
+    <listofallmembers>
+      <member refid="d2/d2e/classChadoField_1aec5fc1b49043cd79b3afd757f5b9b8af" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$default_description</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1a07b1268ee7ce38fb16b030e156a1d4eb" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$default_formatter</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1a4561f52454adf1dd7187ab4fe33c2ca0" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$default_instance_settings</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1adbdc963d30a0eebb4fcec2e91c9eb8ee" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$default_label</name></member>
+      <member refid="d2/d2e/classChadoField_1a9817680008bd4ddb9b79963e5693eb04" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$default_settings</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1a48582df1e01286f5d0d14e6e1e3195ae" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$default_widget</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1a9b169cb9bce6288f0c92cdd77e6eca83" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$description</name></member>
+      <member refid="d2/d2e/classChadoField_1a937549576f1c0f4b780b00bd75f76ce1" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$download_formatters</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1a63660f363dd3f42eeabd0090a9ad883c" prot="protected" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$field</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1ac03357a70e434a401e42c29f0c7c3dad" prot="protected" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$instance</name></member>
+      <member refid="d2/d2e/classChadoField_1aced383d240ca9dd98182dbb108428789" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$module</name></member>
+      <member refid="d9/d83/classTripalField_1a873652ed4421c1bc211cdca2346352b8" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$no_data</name></member>
+      <member refid="d9/d83/classTripalField_1a0bfccf918c71c300fccea11387d8aefc" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$no_ui</name></member>
+      <member refid="d9/d83/classTripalField_1a12856487b2ad310c3dfcee9eae0e86ad" prot="protected" virt="non-virtual"><scope>data__sequence_checksum</scope><name>$term</name></member>
+      <member refid="d9/d83/classTripalField_1a931ee11a0e3b061a1674f51d186a0988" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>__construct</name></member>
+      <member refid="d9/d83/classTripalField_1a9c44d0017dbdc82ad4f532ce8cb71c4c" prot="protected" virt="non-virtual"><scope>data__sequence_checksum</scope><name>_addViewsDataElement</name></member>
+      <member refid="d9/d83/classTripalField_1a643ad3ef2e6fb2c673574b680afedc5e" prot="protected" virt="non-virtual"><scope>data__sequence_checksum</scope><name>_addWebServiceElement</name></member>
+      <member refid="d9/d83/classTripalField_1a650474e013a387db620223a4265e503d" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>createInstance</name></member>
+      <member refid="db/d79/classdata____sequence__checksum_1a4e0446181435192caaef74e5c953c5bd" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>elementInfo</name></member>
+      <member refid="d9/d83/classTripalField_1a36a8044117bb191fba3a0afd117e5434" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>getField</name></member>
+      <member refid="d9/d83/classTripalField_1a7b9ceac2a0d39163bf55e4ed29bed952" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>getFieldName</name></member>
+      <member refid="d9/d83/classTripalField_1af7de8b5df22756288b7a348764df68e0" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>getFieldTerm</name></member>
+      <member refid="d9/d83/classTripalField_1a3db0d92e211e261afea7e105750d2e9f" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>getFieldTermID</name></member>
+      <member refid="d9/d83/classTripalField_1a1c29066b53a4ffce951132920e5ac0bf" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>getInstance</name></member>
+      <member refid="d9/d83/classTripalField_1af7335ce38156505ff54bd1757bb536b0" prot="protected" virt="non-virtual"><scope>data__sequence_checksum</scope><name>getPagerElementID</name></member>
+      <member refid="d9/d83/classTripalField_1ac8bf46bbbeaf0bae8bf6b979cc1733ca" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>info</name></member>
+      <member refid="d2/d2e/classChadoField_1a47395feda70f37e0ba66c4e3fe4e61dc" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>instanceSettingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1ade5041044ae4a23ee6bc47ce8266506a" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>instanceSettingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1a892a0cff2ff98ef41beefa55527cdd9c" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>load</name></member>
+      <member refid="d2/d2e/classChadoField_1af990f3973aee880c2a0bb7737dab1c47" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>query</name></member>
+      <member refid="d2/d2e/classChadoField_1a601b04d112c9d4e5721240646aacd676" prot="protected" virt="non-virtual"><scope>data__sequence_checksum</scope><name>queryJoinOnce</name></member>
+      <member refid="d2/d2e/classChadoField_1a6286dc84a2995106bd910f6487ec942c" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>queryOrder</name></member>
+      <member refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>settingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1a2d4baff5cde41b3f39f373ab7f4ad9ef" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>settingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1ae8ae933722cd9340c3994a700427330a" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>validate</name></member>
+      <member refid="d9/d83/classTripalField_1aa0233ddbb9411c58c7eafc657fef97a6" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>viewsData</name></member>
+      <member refid="d9/d83/classTripalField_1a2db49fcfd34816cd41683a5c7722491a" prot="public" virt="non-virtual"><scope>data__sequence_checksum</scope><name>webServicesData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

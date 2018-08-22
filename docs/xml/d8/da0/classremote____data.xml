@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d8/da0/classremote____data" kind="class" language="PHP" prot="public">
+    <compoundname>remote__data</compoundname>
+    <basecompoundref refid="d8/d36/classWebServicesField" prot="public" virt="non-virtual">WebServicesField</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a644ede8abf5510c4fee9035dfd093c15" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$default_description</definition>
+        <argsstring></argsstring>
+        <name>$default_description</name>
+        <initializer>= &apos;Allows for inclusion of remote data from another Tripal site.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="22" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a8745b0a79e59028d070e5799a97f64cd" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$default_formatter</definition>
+        <argsstring></argsstring>
+        <name>$default_formatter</name>
+        <initializer>= &apos;<ref refid="d2/d1f/classremote____data__formatter" kindref="compound">remote__data_formatter</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="28" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a823c0a2c800798739b25f9977b065f2c" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$default_instance_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_instance_settings</name>
+        <initializer>= array(
+    
+    &apos;term_vocabulary&apos; =&gt; &apos;schema&apos;,
+    
+    &apos;term_name&apos; =&gt; &apos;Thing&apos;,
+    
+    &apos;term_accession&apos; =&gt; &apos;property&apos;,
+    
+    
+    &apos;term_fixed&apos; =&gt; FALSE,
+    
+    
+    
+    
+    
+    &apos;auto_attach&apos; =&gt; FALSE,
+    
+    &apos;data_info&apos; =&gt; array(
+      &apos;<ref refid="d9/d83/classTripalField_1a13bf29985f7baeb3ebaadafbd5a1b4af" kindref="member">query</ref>&apos; =&gt; &apos;&apos;,
+      &apos;remote_site&apos; =&gt; &apos;&apos;,
+      &apos;description&apos; =&gt; &apos;&apos;,
+      &apos;rd_field_name&apos; =&gt; &apos;&apos;,
+      &apos;site_logo&apos; =&gt; &apos;&apos;,
+    ),
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="56" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a1d0eed2a90cd7d2ae2859865a30c8695" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Remote Tripal Site&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="19" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a2a8ab9698b1fafea037a55b7a3d34dbf" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$default_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_settings</name>
+        <initializer>= array(
+    &apos;storage&apos; =&gt; &apos;field_tripal_ws_storage&apos;,
+    
+    
+    
+    
+    
+    
+    &apos;searchable_keys&apos; =&gt; array(),
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="38" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1ad5ce3dfeb89141df0ef4d97c7fbe84fd" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$default_widget</definition>
+        <argsstring></argsstring>
+        <name>$default_widget</name>
+        <initializer>= &apos;<ref refid="d2/da1/classremote____data__widget" kindref="compound">remote__data_widget</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="25" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a9de77b53a23487cdf37bc8a1e00c806e" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$module</definition>
+        <argsstring></argsstring>
+        <name>$module</name>
+        <initializer>= &apos;tripal_ws&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="31" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1aadbf7fb00e1bfea5d17cee41c2ca58f2" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$no_data</definition>
+        <argsstring></argsstring>
+        <name>$no_data</name>
+        <initializer>= TRUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="92" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a11bfdbebb98bd6485520da20ff08e345" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data::$no_ui</definition>
+        <argsstring></argsstring>
+        <name>$no_ui</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="86" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/da0/classremote____data_1a5704864f3242f4ad189c9139fdb9b291" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>remote__data::$loaded_via_ws</definition>
+        <argsstring></argsstring>
+        <name>$loaded_via_ws</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="99" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/da0/classremote____data_1ac03ff827e9d2fed0a5e397c80ac1812d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>remote__data::$remote_site</definition>
+        <argsstring></argsstring>
+        <name>$remote_site</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="95" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/da0/classremote____data_1a0a2978bdc7c484f69e7a6807d2eb866c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data::__construct</definition>
+        <argsstring>($field, $instance)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <param>
+          <declname>$instance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="101" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="101" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da0/classremote____data_1a3182bc6dfaa8303bea594b13957990d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data::instanceSettingsForm</definition>
+        <argsstring>()</argsstring>
+        <name>instanceSettingsForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" kindref="member">TripalField::settingsForm()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="281" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="281" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da0/classremote____data_1a66ce3d68eb71affe8f6091d6fb23cef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data::instanceSettingsFormValidate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>instanceSettingsFormValidate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="416" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="416" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da0/classremote____data_1aba47f4ec93be86c74bc3f9622d073d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data::load</definition>
+        <argsstring>($entity)</argsstring>
+        <name>load</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d36/classWebServicesField_1a302b20587033caff4303824d0bcd63d1" kindref="member">WebServicesField::load()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="129" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="129" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/da0/classremote____data_1af8f3eab6c5b06eea74ad65b74a2d62a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data::buildRemoteURL</definition>
+        <argsstring>($remote_site, $query)</argsstring>
+        <name>buildRemoteURL</name>
+        <param>
+          <declname>$remote_site</declname>
+        </param>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to build the full URL for the query. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="234" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="234" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/da0/classremote____data_1a93817315cbcec44053ffc05ef50cf876" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data::makeRemoteRequest</definition>
+        <argsstring>($query)</argsstring>
+        <name>makeRemoteRequest</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes a request to a remote Tripal web services site.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The query string. This string is added to the URL for the remote website. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array on success or null if request fails. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="256" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="256" bodyend="276"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="468">
+        <label>WebServicesField</label>
+        <link refid="d8/d36/classWebServicesField"/>
+        <childnode refid="469" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="469">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+      <node id="467">
+        <label>remote__data</label>
+        <link refid="d8/da0/classremote____data"/>
+        <childnode refid="468" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="471">
+        <label>WebServicesField</label>
+        <link refid="d8/d36/classWebServicesField"/>
+        <childnode refid="472" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+      <node id="470">
+        <label>remote__data</label>
+        <link refid="d8/da0/classremote____data"/>
+        <childnode refid="471" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" line="9" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data.inc" bodystart="9" bodyend="430"/>
+    <listofallmembers>
+      <member refid="d8/da0/classremote____data_1a644ede8abf5510c4fee9035dfd093c15" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$default_description</name></member>
+      <member refid="d8/da0/classremote____data_1a8745b0a79e59028d070e5799a97f64cd" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$default_formatter</name></member>
+      <member refid="d8/da0/classremote____data_1a823c0a2c800798739b25f9977b065f2c" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$default_instance_settings</name></member>
+      <member refid="d8/da0/classremote____data_1a1d0eed2a90cd7d2ae2859865a30c8695" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$default_label</name></member>
+      <member refid="d8/da0/classremote____data_1a2a8ab9698b1fafea037a55b7a3d34dbf" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$default_settings</name></member>
+      <member refid="d8/da0/classremote____data_1ad5ce3dfeb89141df0ef4d97c7fbe84fd" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$default_widget</name></member>
+      <member refid="d9/d83/classTripalField_1ae93bd40e83e1abb9425a9a21eb29c0dc" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$download_formatters</name></member>
+      <member refid="d9/d83/classTripalField_1ac348ce236b7cac6147688950011fdba6" prot="protected" virt="non-virtual"><scope>remote__data</scope><name>$field</name></member>
+      <member refid="d9/d83/classTripalField_1a727666618c87cb60c6ab9f5e446d6426" prot="protected" virt="non-virtual"><scope>remote__data</scope><name>$instance</name></member>
+      <member refid="d8/da0/classremote____data_1a5704864f3242f4ad189c9139fdb9b291" prot="private" virt="non-virtual"><scope>remote__data</scope><name>$loaded_via_ws</name></member>
+      <member refid="d8/da0/classremote____data_1a9de77b53a23487cdf37bc8a1e00c806e" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$module</name></member>
+      <member refid="d8/da0/classremote____data_1aadbf7fb00e1bfea5d17cee41c2ca58f2" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$no_data</name></member>
+      <member refid="d8/da0/classremote____data_1a11bfdbebb98bd6485520da20ff08e345" prot="public" virt="non-virtual"><scope>remote__data</scope><name>$no_ui</name></member>
+      <member refid="d8/da0/classremote____data_1ac03ff827e9d2fed0a5e397c80ac1812d" prot="private" virt="non-virtual"><scope>remote__data</scope><name>$remote_site</name></member>
+      <member refid="d9/d83/classTripalField_1a12856487b2ad310c3dfcee9eae0e86ad" prot="protected" virt="non-virtual"><scope>remote__data</scope><name>$term</name></member>
+      <member refid="d8/da0/classremote____data_1a0a2978bdc7c484f69e7a6807d2eb866c" prot="public" virt="non-virtual"><scope>remote__data</scope><name>__construct</name></member>
+      <member refid="d9/d83/classTripalField_1a9c44d0017dbdc82ad4f532ce8cb71c4c" prot="protected" virt="non-virtual"><scope>remote__data</scope><name>_addViewsDataElement</name></member>
+      <member refid="d9/d83/classTripalField_1a643ad3ef2e6fb2c673574b680afedc5e" prot="protected" virt="non-virtual"><scope>remote__data</scope><name>_addWebServiceElement</name></member>
+      <member refid="d8/da0/classremote____data_1af8f3eab6c5b06eea74ad65b74a2d62a6" prot="private" virt="non-virtual"><scope>remote__data</scope><name>buildRemoteURL</name></member>
+      <member refid="d9/d83/classTripalField_1a650474e013a387db620223a4265e503d" prot="public" virt="non-virtual"><scope>remote__data</scope><name>createInstance</name></member>
+      <member refid="d9/d83/classTripalField_1a96952e870cbe0b4a48d72f0d1c20b21c" prot="public" virt="non-virtual"><scope>remote__data</scope><name>elementInfo</name></member>
+      <member refid="d9/d83/classTripalField_1a36a8044117bb191fba3a0afd117e5434" prot="public" virt="non-virtual"><scope>remote__data</scope><name>getField</name></member>
+      <member refid="d9/d83/classTripalField_1a7b9ceac2a0d39163bf55e4ed29bed952" prot="public" virt="non-virtual"><scope>remote__data</scope><name>getFieldName</name></member>
+      <member refid="d9/d83/classTripalField_1af7de8b5df22756288b7a348764df68e0" prot="public" virt="non-virtual"><scope>remote__data</scope><name>getFieldTerm</name></member>
+      <member refid="d9/d83/classTripalField_1a3db0d92e211e261afea7e105750d2e9f" prot="public" virt="non-virtual"><scope>remote__data</scope><name>getFieldTermID</name></member>
+      <member refid="d9/d83/classTripalField_1a1c29066b53a4ffce951132920e5ac0bf" prot="public" virt="non-virtual"><scope>remote__data</scope><name>getInstance</name></member>
+      <member refid="d9/d83/classTripalField_1af7335ce38156505ff54bd1757bb536b0" prot="protected" virt="non-virtual"><scope>remote__data</scope><name>getPagerElementID</name></member>
+      <member refid="d9/d83/classTripalField_1ac8bf46bbbeaf0bae8bf6b979cc1733ca" prot="public" virt="non-virtual"><scope>remote__data</scope><name>info</name></member>
+      <member refid="d8/da0/classremote____data_1a3182bc6dfaa8303bea594b13957990d8" prot="public" virt="non-virtual"><scope>remote__data</scope><name>instanceSettingsForm</name></member>
+      <member refid="d8/da0/classremote____data_1a66ce3d68eb71affe8f6091d6fb23cef7" prot="public" virt="non-virtual"><scope>remote__data</scope><name>instanceSettingsFormValidate</name></member>
+      <member refid="d8/da0/classremote____data_1aba47f4ec93be86c74bc3f9622d073d2a" prot="public" virt="non-virtual"><scope>remote__data</scope><name>load</name></member>
+      <member refid="d8/da0/classremote____data_1a93817315cbcec44053ffc05ef50cf876" prot="private" virt="non-virtual"><scope>remote__data</scope><name>makeRemoteRequest</name></member>
+      <member refid="d9/d83/classTripalField_1a13bf29985f7baeb3ebaadafbd5a1b4af" prot="public" virt="non-virtual"><scope>remote__data</scope><name>query</name></member>
+      <member refid="d9/d83/classTripalField_1ab25da330b54416993407b7a9b2944daf" prot="public" virt="non-virtual"><scope>remote__data</scope><name>queryOrder</name></member>
+      <member refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" prot="public" virt="non-virtual"><scope>remote__data</scope><name>settingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1a2d4baff5cde41b3f39f373ab7f4ad9ef" prot="public" virt="non-virtual"><scope>remote__data</scope><name>settingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1ae8ae933722cd9340c3994a700427330a" prot="public" virt="non-virtual"><scope>remote__data</scope><name>validate</name></member>
+      <member refid="d9/d83/classTripalField_1aa0233ddbb9411c58c7eafc657fef97a6" prot="public" virt="non-virtual"><scope>remote__data</scope><name>viewsData</name></member>
+      <member refid="d9/d83/classTripalField_1a2db49fcfd34816cd41683a5c7722491a" prot="public" virt="non-virtual"><scope>remote__data</scope><name>webServicesData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

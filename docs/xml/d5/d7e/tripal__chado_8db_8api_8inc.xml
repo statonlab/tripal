@@ -1,0 +1,713 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/d7e/tripal__chado_8db_8api_8inc" kind="file" language="PHP">
+    <compoundname>tripal_chado.db.api.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1gac3b4716887c1f66b26f13ba6b265803d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_associate_dbxref</definition>
+        <argsstring>($basetable, $record_id, $dbxref, $options=array())</argsstring>
+        <name>chado_associate_dbxref</name>
+        <param>
+          <declname>$basetable</declname>
+        </param>
+        <param>
+          <declname>$record_id</declname>
+        </param>
+        <param>
+          <declname>$dbxref</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a record to a database reference linking table (ie: feature_dbxref).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$basetable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base table for which the dbxref should be associated. Thus to associate a dbxref with a feature the basetable=feature and dbxref_id is added to the feature_dbxref table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$record_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The primary key of the basetable to associate the dbxref with. This should be in integer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$dbxref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array describing the dbxref. Valid keys include: &apos;accession&apos; =&gt; the accession for the dbxref, &apos;db_name&apos; =&gt; the name of the database the dbxref belongs to. &apos;db_id&apos; =&gt; the primary key of the database the dbxref belongs to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of options. Valid keys include:<itemizedlist>
+<listitem><para>insert_dbxref: Insert the dbxref if it doesn&apos;t already exist. TRUE is the default. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="480" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="480" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1gadb1b725f80fd565eeee9c27e11a86eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_autocomplete_dbxref</definition>
+        <argsstring>($db_id, $string=&apos;&apos;)</argsstring>
+        <name>chado_autocomplete_dbxref</name>
+        <param>
+          <declname>$db_id</declname>
+        </param>
+        <param>
+          <declname>$string</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used in autocomplete forms for searching for accession that begin with the provided string.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$db_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DB ID in which to search for the term. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="591" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="591" bodyend="609"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1gae84b79a2d8af437fde99aa8a3fdc9de3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_db</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>chado_get_db</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a chado db variable.</para><para>Example Usage: <programlisting><codeline><highlight class="normal">$select_values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;SOFP&apos;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$db_object<sp/>=<sp/>chado_get_db($select_values);</highlight></codeline>
+</programlisting></para><para>The above code selects the SOFP db and returns the following object: <programlisting><codeline><highlight class="normal">$db_object<sp/>=<sp/>stdClass<sp/>Object<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[db_id]<sp/>=&gt;<sp/>49</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[name]<sp/>=&gt;<sp/>SOFP</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[description]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[urlprefix]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[url]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the key stating what the identifier is. Supported keys (only on of the following unique keys is required):<itemizedlist>
+<listitem><para>db_id: the chado db.db_id primary key.</para></listitem><listitem><para>name: the chado db.name field (assume unique). </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the db record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the cv will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, an array of objects will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="65" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="65" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1ga83ae3c1c2e710c5cb6dd69d55b198c84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_db_select_options</definition>
+        <argsstring>()</argsstring>
+        <name>chado_get_db_select_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an options array to be used in a form element which provides a list of all chado dbs.</para><para><simplesect kind="return"><para>An array(db_id =&gt; name) for each db in the chado db table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="146" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="146" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1gaf354741688d7bf4119ec8bd43965357e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_dbxref</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>chado_get_dbxref</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a chado database reference variable.</para><para>Example Usage: <programlisting><codeline><highlight class="normal">$identifiers<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;accession&apos;<sp/>=&gt;<sp/>&apos;synonym&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;db_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;SOFP&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$dbxref_object<sp/>=<sp/>chado_get_dbxref($identifiers);</highlight></codeline>
+</programlisting> The above code selects the synonym database reference and returns the following object: <programlisting><codeline><highlight class="normal">$dbxref_object<sp/>=<sp/>stdClass<sp/>Object<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[dbxref_id]<sp/>=&gt;<sp/>2581</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[accession]<sp/>=&gt;<sp/>synonym</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[description]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[version]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_db_id]<sp/>=&gt;<sp/>49</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_name]<sp/>=&gt;<sp/>SOFP</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_description]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_urlprefix]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_url]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array apropriate for use with the chado_generate_var for uniquely identifying a dbxref record. Alternatively, there are also some specially handled keys. They are:<itemizedlist>
+<listitem><para>property: An array/object describing the property to select records for. It should at least have either a type_name (if unique across cvs) or type_id. Other supported keys include: cv_id/cv_name (of the type), value and rank. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the dbxref record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the dbxref will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, FALSE will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="214" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="214" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1ga6692fee7456db781256e4108808fa34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_dbxref_url</definition>
+        <argsstring>($dbxref)</argsstring>
+        <name>chado_get_dbxref_url</name>
+        <param>
+          <declname>$dbxref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a URL for the controlled vocabulary term.</para><para>If the URL and URL prefix are provided for the database record of a cvterm then a URL can be created for the term. By default, the db.name and dbxref.accession are concatenated and appended to the end of the db.urlprefix. But Tripal supports the use of {db} and {accession} tokens when if present in the db.urlprefix string will be replaced with the db.name and dbxref.accession respectively.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$dbxref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A dbxref object as created by the <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> function.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the URL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="303" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="303" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1ga7f331faea3ff3c493fe64ee5ccb972de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_insert_db</definition>
+        <argsstring>($values, $options=array())</argsstring>
+        <name>chado_insert_db</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new database to the Chado DB table and returns the DB object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of the values of the db (those to be inserted):<itemizedlist>
+<listitem><para>name: The name of the database. This name is usually used as the prefix for CV term accessions.</para></listitem><listitem><para>description: (Optional) A description of the database. By default no description is required.</para></listitem><listitem><para>url: (Optional) The URL for the database.</para></listitem><listitem><para>urlprefix: (Optional) The URL that is to be used as a prefix when constructing a link to a database term. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional. An associative array of options that can include:<itemizedlist>
+<listitem><para>update_existing: Set this to &apos;1&apos; to force an update of the database if it already exists. The default is to not update. If the database exists then nothing is added.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An object populated with fields from the newly added database. If the database already exists it returns the values in the current entry. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="355" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="355" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d96/group__tripal__chado__database__api_1gacbea95be42e994968414915482a7ff34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_insert_dbxref</definition>
+        <argsstring>($values)</argsstring>
+        <name>chado_insert_dbxref</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a database reference.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of the values to be inserted including:<itemizedlist>
+<listitem><para>db_id: the database_id of the database the reference is from.</para></listitem><listitem><para>accession: the accession.</para></listitem><listitem><para>version: (Optional) The version of the database reference.</para></listitem><listitem><para>description: (Optional) A description of the database reference.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The newly inserted dbxref as an object, similar to that returned by the <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.db.api.inc" line="418" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.db.api.inc" bodystart="418" bodyend="456"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides API functions specificially for managing external database reference records in Chado. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="65" refid="da/d96/group__tripal__chado__database__api_1gae84b79a2d8af437fde99aa8a3fdc9de3" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1gae84b79a2d8af437fde99aa8a3fdc9de3" kindref="member">chado_get_db</ref>($identifiers,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array())<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Defaults.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;include_fk&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tells<sp/>chado_generate_var<sp/>not<sp/>to<sp/>follow<sp/>any<sp/>foreign<sp/>keys.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;include_fk&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Error<sp/>Checking<sp/>of<sp/>parameters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_array($identifiers))<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_chado_database_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_db:<sp/>The<sp/>identifier<sp/>passed<sp/>in<sp/>is<sp/>expected<sp/>to<sp/>be<sp/>an<sp/>array<sp/>with<sp/>the<sp/>key</highlight></codeline>
+<codeline lineno="79"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matching<sp/>a<sp/>column<sp/>name<sp/>in<sp/>the<sp/>db<sp/>table<sp/>(ie:<sp/>db_id<sp/>or<sp/>name).<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>elseif<sp/>(empty($identifiers))<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_chado_database_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_db:<sp/>You<sp/>did<sp/>not<sp/>pass<sp/>in<sp/>anything<sp/>to<sp/>identify<sp/>the<sp/>db<sp/>you<sp/>want.<sp/>The<sp/>identifier</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>expected<sp/>to<sp/>be<sp/>an<sp/>array<sp/>with<sp/>the<sp/>key<sp/>matching<sp/>a<sp/>column<sp/>name<sp/>in<sp/>the<sp/>db<sp/>table</highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ie:<sp/>db_id<sp/>or<sp/>name).<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Try<sp/>to<sp/>get<sp/>the<sp/>db.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>$db<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;db&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>$identifiers,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Ensure<sp/>the<sp/>db<sp/>is<sp/>singular.<sp/>If<sp/>it&apos;s<sp/>an<sp/>array<sp/>then<sp/>it<sp/>is<sp/>not<sp/>singular.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($db))<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_chado_database_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_db:<sp/>The<sp/>identifiers<sp/>you<sp/>passed<sp/>in<sp/>were<sp/>not<sp/>unique.<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Report<sp/>an<sp/>error<sp/>if<sp/>$db<sp/>is<sp/>FALSE<sp/>since<sp/>then<sp/>chado_generate_var<sp/>has<sp/>failed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>elseif<sp/>($db<sp/>===<sp/>FALSE)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_chado_database_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_db:<sp/>chado_generate_var()<sp/>failed<sp/>to<sp/>return<sp/>a<sp/>db<sp/>based<sp/>on<sp/>the<sp/>identifiers</highlight></codeline>
+<codeline lineno="123"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>you<sp/>passed<sp/>in.<sp/>You<sp/>should<sp/>check<sp/>that<sp/>your<sp/>identifiers<sp/>are<sp/>correct,<sp/>as<sp/>well<sp/>as,<sp/>look</highlight></codeline>
+<codeline lineno="124"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>a<sp/>chado_generate_var<sp/>error<sp/>for<sp/>additional<sp/>clues.<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Else,<sp/>as<sp/>far<sp/>we<sp/>know,<sp/>everything<sp/>is<sp/>fine<sp/>so<sp/>give<sp/>them<sp/>their<sp/>db<sp/>:)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$db;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="da/d96/group__tripal__chado__database__api_1ga83ae3c1c2e710c5cb6dd69d55b198c84" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1ga83ae3c1c2e710c5cb6dd69d55b198c84" kindref="member">chado_get_db_select_options</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>$dbs<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>db_id,<sp/>name<sp/>FROM<sp/>{db}<sp/>ORDER<sp/>BY<sp/>name&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Select<sp/>a<sp/>Database&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($dbs<sp/>as<sp/>$db)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[$db-&gt;db_id]<sp/>=<sp/>$db-&gt;name;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="da/d96/group__tripal__chado__database__api_1gaf354741688d7bf4119ec8bd43965357e" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1gaf354741688d7bf4119ec8bd43965357e" kindref="member">chado_get_dbxref</ref>($identifiers,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array())<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Defaults.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;include_fk&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tells<sp/>chado_generate_var<sp/>not<sp/>only<sp/>expand<sp/>the<sp/>db.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;include_fk&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Error<sp/>Checking<sp/>of<sp/>parameters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_array($identifiers))<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_db_api&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_dbxref:<sp/>The<sp/>identifier<sp/>passed<sp/>in<sp/>is<sp/>expected<sp/>to<sp/>be<sp/>an<sp/>array<sp/>with<sp/>the<sp/>key</highlight></codeline>
+<codeline lineno="226"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matching<sp/>a<sp/>column<sp/>name<sp/>in<sp/>the<sp/>dbxref<sp/>table<sp/>(ie:<sp/>dbxref_id<sp/>or<sp/>name).<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE))</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>elseif<sp/>(empty($identifiers))<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_db_api&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_dbxref:<sp/>You<sp/>did<sp/>not<sp/>pass<sp/>in<sp/>anything<sp/>to<sp/>identify<sp/>the<sp/>dbxref<sp/>you<sp/>want.<sp/>The<sp/>identifier</highlight></codeline>
+<codeline lineno="233"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>expected<sp/>to<sp/>be<sp/>an<sp/>array<sp/>with<sp/>the<sp/>key<sp/>matching<sp/>a<sp/>column<sp/>name<sp/>in<sp/>the<sp/>dbxref<sp/>table</highlight></codeline>
+<codeline lineno="234"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ie:<sp/>dbxref_id<sp/>or<sp/>name).<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE))</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>one<sp/>of<sp/>the<sp/>identifiers<sp/>is<sp/>property<sp/>then<sp/>use<sp/>chado_get_record_with_property().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($identifiers[</highlight><highlight class="stringliteral">&apos;property&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref><sp/>=<sp/>$identifiers[</highlight><highlight class="stringliteral">&apos;property&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>unset($identifiers[</highlight><highlight class="stringliteral">&apos;property&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>$dbxref<sp/>=<sp/><ref refid="d0/d77/group__tripal__chado__prop__api_1ga03550ae7e873bb2dc52ebf3818676b9d" kindref="member">chado_get_record_with_property</ref>(</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;base_records&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$identifiers),</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;type_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>),</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Else<sp/>we<sp/>have<sp/>a<sp/>simple<sp/>case<sp/>and<sp/>we<sp/>can<sp/>just<sp/>use<sp/>chado_generate_var<sp/>to<sp/>get<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>analysis.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>$dbxref<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/>$identifiers,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Ensure<sp/>the<sp/>dbxref<sp/>is<sp/>singular.<sp/>If<sp/>it&apos;s<sp/>an<sp/>array<sp/>then<sp/>it<sp/>is<sp/>not<sp/>singular.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($dbxref))<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_db_api&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_dbxref:<sp/>The<sp/>identifiers<sp/>you<sp/>passed<sp/>in<sp/>were<sp/>not<sp/>unique.<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE))</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Report<sp/>an<sp/>error<sp/>if<sp/>$dbxref<sp/>is<sp/>FALSE<sp/>since<sp/>then<sp/>chado_generate_var<sp/>has<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>failed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>elseif<sp/>($dbxref<sp/>===<sp/>FALSE)<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_db_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_get_dbxref:<sp/>chado_generate_var()<sp/>failed<sp/>to<sp/>return<sp/>a<sp/>dbxref<sp/>based<sp/>on<sp/>the<sp/>identifiers</highlight></codeline>
+<codeline lineno="271"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>you<sp/>passed<sp/>in.<sp/>You<sp/>should<sp/>check<sp/>that<sp/>your<sp/>identifiers<sp/>are<sp/>correct,<sp/>as<sp/>well<sp/>as,<sp/>look</highlight></codeline>
+<codeline lineno="272"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>a<sp/>chado_generate_var<sp/>error<sp/>for<sp/>additional<sp/>clues.<sp/>You<sp/>passed<sp/>in<sp/>%identifier.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%identifier&apos;</highlight><highlight class="normal">=&gt;<sp/>print_r($identifiers,<sp/>TRUE)</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Else,<sp/>as<sp/>far<sp/>we<sp/>know,<sp/>everything<sp/>is<sp/>fine<sp/>so<sp/>give<sp/>them<sp/>their<sp/>dbxref<sp/>:)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$dbxref;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="da/d96/group__tripal__chado__database__api_1ga6692fee7456db781256e4108808fa34d" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1ga6692fee7456db781256e4108808fa34d" kindref="member">chado_get_dbxref_url</ref>($dbxref)<sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/>$final_url<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>URL<sp/>for<sp/>the<sp/>term.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($dbxref-&gt;db_id-&gt;urlprefix)<sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>$db_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>$acc_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>$url<sp/>=<sp/>$dbxref-&gt;db_id-&gt;urlprefix;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>URL<sp/>prefix<sp/>has<sp/>replacement<sp/>tokens<sp/>then<sp/>use<sp/>those.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>$url<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&apos;/\{db\}/&apos;</highlight><highlight class="normal">,<sp/>$dbxref-&gt;db_id-&gt;name,<sp/>$url,<sp/>-1,<sp/>$db_count);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>$url<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&apos;/\{accession\}/&apos;</highlight><highlight class="normal">,<sp/>$dbxref-&gt;accession,<sp/>$url,<sp/>-1,<sp/>$acc_count);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>$final_url<sp/>=<sp/>$url;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>no<sp/>replacements<sp/>were<sp/>made<sp/>above<sp/>then<sp/>tokens<sp/>weren&apos;t<sp/>used<sp/>and<sp/>we<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>default<sp/>to<sp/>just<sp/>appending<sp/>the<sp/>db<sp/>name<sp/>and<sp/>accession<sp/>to<sp/>the<sp/>end.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$db_count<sp/>and<sp/>!$acc_count)<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$final_url<sp/>=<sp/>$dbxref-&gt;db_id-&gt;urlprefix<sp/>.<sp/>$dbxref-&gt;db_id-&gt;name<sp/>.<sp/></highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal"><sp/>.<sp/>$dbxref-&gt;accession;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>URL<sp/>prefix<sp/>is<sp/>relative<sp/>then<sp/>convert<sp/>it<sp/>to<sp/>a<sp/>full<sp/>URL.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!preg_match(</highlight><highlight class="stringliteral">&apos;/^(http|https)/&apos;</highlight><highlight class="normal">,<sp/>$final_url))<sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$final_url<sp/>=<sp/>url($final_url,<sp/>array(</highlight><highlight class="stringliteral">&apos;absolute&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE));</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$final_url;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355" refid="da/d96/group__tripal__chado__database__api_1ga7f331faea3ff3c493fe64ee5ccb972de" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1ga7f331faea3ff3c493fe64ee5ccb972de" kindref="member">chado_insert_db</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array())<sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>Values.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/>$dbname<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref><sp/>=<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/>$url<sp/>=<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/>$urlprefix<sp/>=<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;urlprefix&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;urlprefix&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/>$update<sp/>=<sp/>(isset(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;update_existing&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;update_existing&apos;</highlight><highlight class="normal">]<sp/>:<sp/>TRUE;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>the<sp/>values<sp/>array<sp/>for<sp/>inserting/updating.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/>$ins_values<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$dbname,</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref>,</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$url,</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;urlprefix&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$urlprefix</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>database<sp/>record<sp/>if<sp/>it<sp/>already<sp/>exists.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/>$sel_values<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$dbname);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;db&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/>$sel_values);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>does<sp/>not<sp/>exists<sp/>then<sp/>add<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($result)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>$ins_options<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;statement_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;ins_db_nadeurur&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>$success<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" kindref="member">chado_insert_record</ref>(</highlight><highlight class="stringliteral">&apos;db&apos;</highlight><highlight class="normal">,<sp/>$ins_values,<sp/>$ins_options);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$success)<sp/>{</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_chado&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>create<sp/>db<sp/>&apos;$dbname&apos;.&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;db&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/>$sel_values);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>exists<sp/>and<sp/>update<sp/>is<sp/>enabled<sp/>the<sp/>do<sp/>the<sp/>update.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/>elseif<sp/>($update)<sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>$upd_options<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;statement_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;upd_db_nadeurur&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>$success<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga35aa655c2c929858ab05df18bc807541" kindref="member">chado_update_record</ref>(</highlight><highlight class="stringliteral">&apos;db&apos;</highlight><highlight class="normal">,<sp/>$sel_values,<sp/>$ins_values,<sp/>$upd_options);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$success)<sp/>{</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_chado&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>update<sp/>db<sp/>&apos;$dbname&apos;.&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;db&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/>$sel_values);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>the<sp/>database<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$result[0];</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418" refid="da/d96/group__tripal__chado__database__api_1gacbea95be42e994968414915482a7ff34" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1gacbea95be42e994968414915482a7ff34" kindref="member">chado_insert_dbxref</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/>$db_id<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/>$accession<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/>$version<sp/>=<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref><sp/>=<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/>$ins_values<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$db_id,</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>$accession,</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$version,</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>to<sp/>see<sp/>if<sp/>the<sp/>dbxref<sp/>exists.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/>$sel_values<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$db_id,</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$accession,</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$version</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/>$sel_values);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>doesn&apos;t<sp/>already<sp/>exist<sp/>then<sp/>add<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$result)<sp/>{</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/>$success<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" kindref="member">chado_insert_record</ref>(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/>$ins_values);</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$success)<sp/>{</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_chado&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>insert<sp/>the<sp/>dbxref<sp/>record<sp/>$accession&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/>$sel_values);</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($result[0]))<sp/>{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$result[0];</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="456"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480" refid="da/d96/group__tripal__chado__database__api_1gac3b4716887c1f66b26f13ba6b265803d" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1gac3b4716887c1f66b26f13ba6b265803d" kindref="member">chado_associate_dbxref</ref>($basetable,<sp/>$record_id,<sp/>$dbxref,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array())<sp/>{</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/>$linking_table<sp/>=<sp/>$basetable<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_dbxref&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/>$foreignkey_name<sp/>=<sp/>$basetable<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_id&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>Values.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;insert_dbxref&apos;</highlight><highlight class="normal">]<sp/>=<sp/>(isset(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;insert_dbxref&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;insert_dbxref&apos;</highlight><highlight class="normal">]<sp/>:<sp/>TRUE;</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>dbxref_id<sp/>is<sp/>set<sp/>then<sp/>we<sp/>know<sp/>it<sp/>already<sp/>exists.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Otherwise,<sp/>select<sp/>to<sp/>check.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($dbxref[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$dbxref[</highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($dbxref[</highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$dbxref[</highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(isset($dbxref[</highlight><highlight class="stringliteral">&apos;db_name&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$dbxref[</highlight><highlight class="stringliteral">&apos;db_name&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_chado_database_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_associate_dbxref:<sp/>The<sp/>dbxref<sp/>needs<sp/>to<sp/>have<sp/>either<sp/>the<sp/>db_name<sp/>or<sp/>db_id</highlight></codeline>
+<codeline lineno="505"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>supplied.<sp/>You<sp/>were<sp/>trying<sp/>to<sp/>associate<sp/>a<sp/>dbxref<sp/>with<sp/>the<sp/>%base<sp/>%record_id</highlight></codeline>
+<codeline lineno="506"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>supplied<sp/>the<sp/>dbxref<sp/>values:<sp/>%dbxref.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%base&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$basetable,<sp/></highlight><highlight class="stringliteral">&apos;%record_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$record_id,<sp/></highlight><highlight class="stringliteral">&apos;%dbxref&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>print_r($dbxref,TRUE))</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/>$select<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($select)<sp/>{</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$dbxref[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$select[0]-&gt;dbxref_id;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>elseif<sp/>(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;insert_dbxref&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Insert<sp/>the<sp/>dbxref.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$insert<sp/>=<sp/><ref refid="da/d96/group__tripal__chado__database__api_1gacbea95be42e994968414915482a7ff34" kindref="member">chado_insert_dbxref</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($insert-&gt;dbxref_id))<sp/>{</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$dbxref[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$insert-&gt;dbxref_id;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_chado_database_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_associate_dbxref:<sp/>Unable<sp/>to<sp/>insert<sp/>the<sp/>dbxref<sp/>using<sp/>the<sp/>dbxref<sp/>values:<sp/>%dbxref.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%dbxref&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>print_r($dbxref,TRUE))</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;chado_associate_dbxref:<sp/>The<sp/>dbxref<sp/>doesn&apos;t<sp/>already<sp/>exist.<sp/>You<sp/>supplied<sp/>the<sp/>dbxref<sp/>values:<sp/>%dbxref.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%dbxref&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>print_r($dbxref,TRUE))</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>add<sp/>the<sp/>link<sp/>between<sp/>the<sp/>record<sp/>&amp;<sp/>dbxref.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($dbxref[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">]<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$dbxref[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$foreignkey_name<sp/>=&gt;<sp/>$record_id</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>($linking_table,<sp/>array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>it<sp/>doesn&apos;t<sp/>already<sp/>exist<sp/>then<sp/>add<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$result)<sp/>{</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$success<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" kindref="member">chado_insert_record</ref>($linking_table,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$success)<sp/>{</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_api&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>insert<sp/>the<sp/>%base<sp/>record<sp/>%accession&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%base&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$linking_table,<sp/></highlight><highlight class="stringliteral">&apos;%accession&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$dbxref[</highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>($linking_table,<sp/>array(</highlight><highlight class="charliteral">&apos;*&apos;</highlight><highlight class="normal">),<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($result[0]))<sp/>{</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$result[0];</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="575"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="591" refid="da/d96/group__tripal__chado__database__api_1gadb1b725f80fd565eeee9c27e11a86eed" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d96/group__tripal__chado__database__api_1gadb1b725f80fd565eeee9c27e11a86eed" kindref="member">chado_autocomplete_dbxref</ref>($db_id,<sp/>$string<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$db_id)<sp/>{</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>drupal_json_output(array());</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="596"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT<sp/>dbxref_id,<sp/>accession</highlight></codeline>
+<codeline lineno="597"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>{dbxref}</highlight></codeline>
+<codeline lineno="598"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>WHERE<sp/>db_id<sp/>=<sp/>:db_id<sp/>and<sp/>lower(accession)<sp/>like<sp/>lower(:accession)</highlight></codeline>
+<codeline lineno="599"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>ORDER<sp/>by<sp/>accession</highlight></codeline>
+<codeline lineno="600"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>LIMIT<sp/>25<sp/>OFFSET<sp/>0</highlight></codeline>
+<codeline lineno="601"><highlight class="stringliteral"><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:db_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$db_id,<sp/></highlight><highlight class="stringliteral">&apos;:accession&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$string<sp/>.<sp/></highlight><highlight class="charliteral">&apos;%&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref><sp/>as<sp/>$ref)<sp/>{</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"><sp/><sp/><sp/><sp/>$items[$ref-&gt;accession]<sp/>=<sp/>$ref-&gt;accession;</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/>drupal_json_output($items);</highlight></codeline>
+<codeline lineno="609"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/api/modules/tripal_chado.db.api.inc"/>
+  </compounddef>
+</doxygen>

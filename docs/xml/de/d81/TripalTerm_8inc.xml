@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="de/d81/TripalTerm_8inc" kind="file" language="PHP">
+    <compoundname>TripalTerm.inc</compoundname>
+    <innerclass refid="d9/d5a/classTripalTerm" prot="public">TripalTerm</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="5" refid="d9/d5a/classTripalTerm" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/d5a/classTripalTerm" kindref="compound">TripalTerm</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>Entity<sp/>{</highlight></codeline>
+<codeline lineno="6" refid="d9/d5a/classTripalTerm_1a6d6dddee6fe19802cee9916664973ec8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1a6d6dddee6fe19802cee9916664973ec8" kindref="member">__construct</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array())<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::__construct(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/></highlight><highlight class="stringliteral">&apos;TripalTerm&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>vocabulary<sp/>for<sp/>this<sp/>term</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>$vocab<sp/>=<sp/>entity_load(</highlight><highlight class="stringliteral">&apos;TripalVocab&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$this-&gt;vocab_id));</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>$vocab<sp/>=<sp/>reset($vocab);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;vocab<sp/>=<sp/>$vocab;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>term<sp/>description<sp/>from<sp/>the<sp/>storage<sp/>backend</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;definition<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;url<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>$term_details<sp/>=<sp/><ref refid="de/d00/group__tripal__terms__api_1gaf99a705ba9ec49d8d1e46aa0300505c0" kindref="member">tripal_get_term_details</ref>($vocab-&gt;vocabulary,<sp/>$this-&gt;accession);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($term_details)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($term_details<sp/>and<sp/>$term_details[</highlight><highlight class="stringliteral">&apos;definition&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;definition<sp/>=<sp/>$term_details[</highlight><highlight class="stringliteral">&apos;definition&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($term_details<sp/>and<sp/>$term_details[</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;url<sp/>=<sp/>$term_details[</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="d9/d5a/classTripalTerm_1adf124e8cf1f379b9c3b4ba411db44521" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1adf124e8cf1f379b9c3b4ba411db44521" kindref="member">defaultLabel</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;name;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d9/d5a/classTripalTerm_1a15bf55a23e76ef228f935274b470c173" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1a15bf55a23e76ef228f935274b470c173" kindref="member">defaultUri</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>$vocab<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;TODO&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>array(</highlight><highlight class="stringliteral">&apos;path&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;/vocabulary/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$vocab<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/term/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$this-&gt;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d9/d5a/classTripalTerm_1adedcf4510f6bde8f58c7388d037f74cd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1adedcf4510f6bde8f58c7388d037f74cd" kindref="member">getName</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;name;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42" refid="d9/d5a/classTripalTerm_1a47883728442b145b0160291de5c4e833" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1a47883728442b145b0160291de5c4e833" kindref="member">getAccession</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;vocab-&gt;vocabulary<sp/>.<sp/></highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal"><sp/>.<sp/>$this-&gt;accession;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45" refid="d9/d5a/classTripalTerm_1a0baa89131dff5655ff2236eebccab49b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1a0baa89131dff5655ff2236eebccab49b" kindref="member">getDefinition</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;definition;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48" refid="d9/d5a/classTripalTerm_1aa9cdb66df756e19e89e1c5e738d154c2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1aa9cdb66df756e19e89e1c5e738d154c2" kindref="member">getURL</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;url;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51" refid="d9/d5a/classTripalTerm_1a43fac77124381d449027e0d541cc506c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1a43fac77124381d449027e0d541cc506c" kindref="member">getVocab</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;vocab;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54" refid="d9/d5a/classTripalTerm_1a58278f1ef53d58545e0072a0b30b2b01" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/d5a/classTripalTerm_1a58278f1ef53d58545e0072a0b30b2b01" kindref="member">getID</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;id;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/includes/TripalTerm.inc"/>
+  </compounddef>
+</doxygen>

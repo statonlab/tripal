@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d3/dca/classsbo____database__cross__reference__widget" kind="class" language="PHP" prot="public">
+    <compoundname>sbo__database_cross_reference_widget</compoundname>
+    <basecompoundref refid="d0/df2/classChadoFieldWidget" prot="public" virt="non-virtual">ChadoFieldWidget</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d3/dca/classsbo____database__cross__reference__widget_1a12a33a683c49152fc3c295fbb423e53e" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sbo__database_cross_reference_widget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Cross reference&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" line="5" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dca/classsbo____database__cross__reference__widget_1a2481978acfc15bb51cef3f3dbc506b3b" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sbo__database_cross_reference_widget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="de/dbf/classsbo____database__cross__reference" kindref="compound">sbo__database_cross_reference</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" line="8" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/dca/classsbo____database__cross__reference__widget_1a6abedbf53059b0bc6dfbbe10e894ee27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbo__database_cross_reference_widget::form</definition>
+        <argsstring>(&amp;$widget, &amp;$form, &amp;$form_state, $langcode, $items, $delta, $element)</argsstring>
+        <name>form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$widget</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" kindref="member">TripalFieldWidget::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" line="14" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" bodystart="14" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dca/classsbo____database__cross__reference__widget_1a9ab49a5fe288b1e4900cd3641cba47f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbo__database_cross_reference_widget::theme</definition>
+        <argsstring>($element)</argsstring>
+        <name>theme</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" kindref="member">TripalFieldWidget::theme()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" line="148" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" bodystart="148" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dca/classsbo____database__cross__reference__widget_1a2987f174f8ef809133bc0881a857a407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbo__database_cross_reference_widget::validate</definition>
+        <argsstring>($element, $form, &amp;$form_state, $langcode, $delta)</argsstring>
+        <name>validate</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" kindref="member">TripalFieldWidget::validate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" line="106" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" bodystart="106" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="499">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="497">
+        <label>sbo__database_cross_reference_widget</label>
+        <link refid="d3/dca/classsbo____database__cross__reference__widget"/>
+        <childnode refid="498" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="498">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="499" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="502">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="500">
+        <label>sbo__database_cross_reference_widget</label>
+        <link refid="d3/dca/classsbo____database__cross__reference__widget"/>
+        <childnode refid="501" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="501">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="502" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__database_cross_reference/sbo__database_cross_reference_widget.inc" bodystart="3" bodyend="163"/>
+    <listofallmembers>
+      <member refid="d3/dca/classsbo____database__cross__reference__widget_1a12a33a683c49152fc3c295fbb423e53e" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>$default_label</name></member>
+      <member refid="d3/dca/classsbo____database__cross__reference__widget_1a2481978acfc15bb51cef3f3dbc506b3b" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>__construct</name></member>
+      <member refid="d3/dca/classsbo____database__cross__reference__widget_1a6abedbf53059b0bc6dfbbe10e894ee27" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>info</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>submit</name></member>
+      <member refid="d3/dca/classsbo____database__cross__reference__widget_1a9ab49a5fe288b1e4900cd3641cba47f9" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>theme</name></member>
+      <member refid="d3/dca/classsbo____database__cross__reference__widget_1a2987f174f8ef809133bc0881a857a407" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>sbo__database_cross_reference_widget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

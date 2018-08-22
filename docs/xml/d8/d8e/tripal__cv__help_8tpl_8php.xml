@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d8/d8e/tripal__cv__help_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_cv_help.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d8/d8e/tripal__cv__help_8tpl_8php_1abb1109365e1f107c123e8bfe652085f5" prot="public" static="no" mutable="no">
+        <type>print l(&apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_cv&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for</type>
+        <definition>print l ( &apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_cv&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for creating</definition>
+        <argsstring></argsstring>
+        <name>creating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_cv/theme/templates/tripal_cv_help.tpl.php" line="15" column="1" bodyfile="legacy/tripal_cv/theme/templates/tripal_cv_help.tpl.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d8e/tripal__cv__help_8tpl_8php_1ad26b5a8a20c5e042a6932ddac5606304" prot="public" static="no" mutable="no">
+        <type>print l(&apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_cv&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for editing and other administrative tasks&lt;/p &gt;&lt;/li &gt;&lt; li &gt;&lt; p &gt;&lt; b &gt; Loading of Ontologies Controlled</type>
+        <definition>print l ( &apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_cv&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for editing and other administrative tasks&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;b&gt; Loading of Ontologies Controlled Vocabularies&lt;/b &gt;</definition>
+        <argsstring></argsstring>
+        <name>Vocabularies&lt;/b &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_cv/theme/templates/tripal_cv_help.tpl.php" line="17" column="1" bodyfile="legacy/tripal_cv/theme/templates/tripal_cv_help.tpl.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/><sp/>&lt;h3&gt;<ref refid="d2/d60/tripal__organism__help_8tpl_8php_1a3a16ad4c29f1655bacb90adeedb740f0" kindref="member">Module</ref><sp/>Description:&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/>&lt;p&gt;The<sp/>Tripal<sp/>CV<sp/>(Controlled<sp/>Vocabularies)<sp/><ref refid="d2/d60/tripal__organism__help_8tpl_8php_1a3a16ad4c29f1655bacb90adeedb740f0" kindref="member">Module</ref><sp/>provides</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>functionality<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>managing<sp/>controlled<sp/>vocabularies<sp/>and<sp/>the<sp/>terms<sp/>they<sp/>are</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>comprised<sp/>of.<sp/>The<sp/>flexibility<sp/>and<sp/>extendibility<sp/>of<sp/>the<sp/>chado<sp/>schema<sp/>depends</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>on<sp/>controlled<sp/>vocabularies.<sp/>For<sp/>example,<sp/>by<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>a<sp/>controlled<sp/>vocabulary<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>feature<sp/>types<sp/>the<sp/>chado<sp/>schema<sp/>can<sp/>describe<sp/>features<sp/>of<sp/>any<sp/>type,<sp/>even<sp/>those</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>we<sp/>have<sp/>not<sp/>concieved<sp/>of<sp/>yet.&lt;/p&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>&lt;h3&gt;Setup<sp/>Instructions:&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>&lt;p&gt;After<sp/>installation<sp/>of<sp/>the<sp/>controlled<sp/>vocabulary<sp/>module,<sp/>the<sp/>following<sp/>tasks<sp/>should<sp/>be<sp/>performed:&lt;/p&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;ol&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Set<sp/>Permissions&lt;/b&gt;:<sp/>By<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal"><sp/>only<sp/>the<sp/>site<sp/>administrator<sp/>account<sp/>has<sp/>access<sp/>to<sp/>create,<sp/>edit,<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="d8/d8e/tripal__cv__help_8tpl_8php_1ad26b5a8a20c5e042a6932ddac5606304" refkind="member"><highlight class="normal"><sp/><sp/><sp/>or<sp/>administer<sp/>vocabularies<sp/>and<sp/>terms.<sp/>Navigate<sp/>to<sp/>the<sp/>&lt;?php<sp/>print<sp/>l(</highlight><highlight class="stringliteral">&apos;permissions<sp/>page&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/user/permissions&apos;</highlight><highlight class="normal">)?&gt;<sp/>and<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/>permissions<sp/>under<sp/>the<sp/></highlight><highlight class="stringliteral">&apos;tripal_cv&apos;</highlight><highlight class="normal"><sp/>section<sp/>as<sp/>appropriate<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>your<sp/>site.<sp/>For<sp/>a<sp/>simple<sp/>setup,<sp/>allow<sp/>anonymous</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>users<sp/>access<sp/>to<sp/>view<sp/>content<sp/>and<sp/>create<sp/>a<sp/>special<sp/>role<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="d8/d8e/tripal__cv__help_8tpl_8php_1abb1109365e1f107c123e8bfe652085f5" kindref="member">creating</ref>,<sp/>editing<sp/>and<sp/>other<sp/>administrative<sp/>tasks.&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Loading<sp/>of<sp/>Ontologies/Controlled<sp/>Vocabularies&lt;/b&gt;:<sp/>You<sp/>can<sp/>access<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>loader<sp/>at<sp/>&lt;?php</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print<sp/>l(</highlight><highlight class="stringliteral">&apos;Admin-&gt;Tripal<sp/>Management-&gt;Tripal<sp/>CV-&gt;Load<sp/>Ontology<sp/>With<sp/>OBO<sp/>File&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/loaders/chado_vocabs/obo_loader&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?&gt;.<sp/>This<sp/>loader<sp/>allows<sp/>you<sp/>to<sp/>choose<sp/>from<sp/>a<sp/>list<sp/>of<sp/>common<sp/>ontologies<sp/>or</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enter<sp/>the<sp/>URL<sp/>or<sp/>location<sp/>to<sp/>an<sp/>OBO<sp/>file.<sp/>Even<sp/>the<sp/>list<sp/>of<sp/>common</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ontologies<sp/>is<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>a<sp/>URL<sp/>ensuring<sp/>you<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal"><sp/>the<sp/>most<sp/>up<sp/>to<sp/>date<sp/>ontology.&lt;/p&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;p&gt;NOTE:<sp/>in<sp/>some<sp/>cases,<sp/>community<sp/>developed<sp/>ontologies<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>your</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data<sp/>may<sp/>not<sp/>yet<sp/>be<sp/>developed.<sp/>In<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal">,<sp/>it<sp/>is<sp/>suggested<sp/>that<sp/>you<sp/>begin</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>developement<sp/>of<sp/>an<sp/>ontology<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>one<sp/>of<sp/>the<sp/>online<sp/>tools.<sp/>You<sp/>might<sp/>find</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>that<sp/>many<sp/>researchers<sp/>are<sp/>trying<sp/>to<sp/>deal<sp/>with<sp/>the<sp/>same<sp/>data<sp/>and<sp/>are<sp/>willing</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to<sp/>help<sp/>you<sp/>in<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>endevor.<sp/>&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/ol&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>&lt;h3&gt;Features<sp/>of<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/><ref refid="d2/d60/tripal__organism__help_8tpl_8php_1a3a16ad4c29f1655bacb90adeedb740f0" kindref="member">Module</ref>:&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>&lt;p&gt;Aside<sp/>from<sp/>the<sp/>data<sp/>loading<sp/>described<sp/>above,<sp/>the<sp/>Tripal<sp/>Controlled<sp/>Vocabulary<sp/>(CV)<sp/>module<sp/>also<sp/>provides<sp/>the<sp/>following<sp/>functionality:&lt;/p&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;ul&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Create/Update/Delete<sp/>A<sp/>Controlled<sp/>Vocaulbulary&lt;/b&gt;:<sp/>to<sp/>create<sp/>your<sp/>own<sp/>controlled<sp/>vocabulary<sp/>go<sp/>to</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/>l(</highlight><highlight class="stringliteral">&apos;the<sp/>page<sp/>for<sp/>adding<sp/>a<sp/>vocbulary&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/tripal_cv/cv/add&apos;</highlight><highlight class="normal">)<sp/>?&gt;<sp/>and</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fill<sp/>out<sp/>the<sp/>form<sp/>provided.<sp/>To<sp/>Update/Delete<sp/>a<sp/>controlled<sp/>vocabulary<sp/>go<sp/>to</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/>print<sp/>l(</highlight><highlight class="stringliteral">&apos;the<sp/>page<sp/>for<sp/>editing<sp/>a<sp/>vocuabulary&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/tripal_cv/cv/edit&apos;</highlight><highlight class="normal">)<sp/>?&gt;,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>select<sp/>the<sp/>existing<sp/>vocabulary<sp/>you<sp/>want<sp/>to<sp/>modify<sp/>and<sp/>then</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edit<sp/>it<sp/>as<sp/>desired.<sp/>This<sp/>only<sp/>modifies<sp/>the<sp/>vocabulary<sp/>itself.<sp/>See<sp/>the<sp/>next<sp/>section<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>adding,<sp/>removing,<sp/>editing</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>terms<sp/>of<sp/>a<sp/>vocabulary.&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Create<sp/>a<sp/>Controlled<sp/>Vocaulbulary<sp/>Term&lt;/b&gt;:<sp/>Use</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/>print<sp/>l(</highlight><highlight class="stringliteral">&apos;the<sp/>page<sp/>for<sp/>adding<sp/>a<sp/>new<sp/>CV<sp/>term&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/tripal_cv/cvterm/add&apos;</highlight><highlight class="normal">)<sp/>?&gt;,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>select<sp/>the<sp/>controlled<sp/>vocabulary<sp/>you<sp/>want<sp/>to<sp/>add<sp/>terms<sp/>to<sp/>and<sp/>then<sp/>fill</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out<sp/>the<sp/>form.&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/ul&gt;</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_cv/theme/templates/tripal_cv_help.tpl.php"/>
+  </compounddef>
+</doxygen>

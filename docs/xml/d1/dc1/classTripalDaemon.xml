@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/dc1/classTripalDaemon" kind="class" language="PHP" prot="public">
+    <compoundname>TripalDaemon</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DrushDaemon</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d1/dc1/classTripalDaemon_1afe5323f91f48109a6db38a3cb1ceb60c" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalDaemon::$do_parallel</definition>
+        <argsstring></argsstring>
+        <name>$do_parallel</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="39" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc1/classTripalDaemon_1ab215e4bee4f7b4f2604dda0e1ad9d48d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalDaemon::$loop_interval</definition>
+        <argsstring></argsstring>
+        <name>$loop_interval</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="24" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc1/classTripalDaemon_1afda0e18585c39d5757958d9357913f42" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalDaemon::$max_num_jobs</definition>
+        <argsstring></argsstring>
+        <name>$max_num_jobs</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="43" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc1/classTripalDaemon_1a853073c61a3561e00b26e7f2c5e592a1" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalDaemon::$queue</definition>
+        <argsstring></argsstring>
+        <name>$queue</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="32" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/dc1/classTripalDaemon_1ac1a229a9652c2330b54a8b78b49802fe" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalDaemon::$tripal_jobs</definition>
+        <argsstring></argsstring>
+        <name>$tripal_jobs</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="29" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1adb0792e21e59145e76a36ffa477aaee8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::checkJobStatus</definition>
+        <argsstring>($job_id=FALSE)</argsstring>
+        <name>checkJobStatus</name>
+        <param>
+          <declname>$job_id</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check the status of a given (or all running) jobs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job_id of a specific job to check the status us. (OPTIONAL) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="242" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="242" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1a7fc1c5d36101cbe8f6664173bc1c66fa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::executeTask</definition>
+        <argsstring>($iteration_number)</argsstring>
+        <name>executeTask</name>
+        <param>
+          <declname>$iteration_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements DaemonAPIDaemon::executeTask() function.</para><para>This gets executed once per loop iteration &amp; does the following:<orderedlist>
+<listitem><para>Checks to see if there are any Tripal Jobs waiting to be executed.</para></listitem><listitem><para>If there are then they are run (jobs with a higher priority and higher job_id are run first.</para></listitem></orderedlist>
+</para><para>This function will log how many jobs have been found and when each one was started/completed, as well as, it&apos;s status upon completion.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametername>$iteration_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an integer stating the current iteration of the loop you are on. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="59" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="59" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1ae982a294c6ba78d5dbab72586426e8a7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::getStatusDetails</definition>
+        <argsstring>()</argsstring>
+        <name>getStatusDetails</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override to include additional daemon-specific settings for use in reports.</para><para><simplesect kind="return"><para>array An array of status details where the key should be a human-readable name for your detail and the value should be the current state. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="296" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="296" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1a419099e112056b59452cc0b26c9a6ede" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::getTripalJobID</definition>
+        <argsstring>()</argsstring>
+        <name>getTripalJobID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get job_id of Tripal Job to run.</para><para>NOTE: This function should only return a job_id if we are aloud to run it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="90" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="90" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1a6cdd2a3f29d24965351b716f4c32a805" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::runParallelTripalJob</definition>
+        <argsstring>($job_id)</argsstring>
+        <name>runParallelTripalJob</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run Parallel Tripal Job. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="189" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="189" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1ac109d9aa3dc5901df037cfc33e38e65b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::runSequentialTripalJob</definition>
+        <argsstring>($job)</argsstring>
+        <name>runSequentialTripalJob</name>
+        <param>
+          <declname>$job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run Sequential Tripal Job. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="223" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="223" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1aa8546f228a9b6686bea8c4f3b514c635" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::runTripalJob</definition>
+        <argsstring>($job_id)</argsstring>
+        <name>runTripalJob</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run Tripal Job. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="149" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="149" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/dc1/classTripalDaemon_1a6274f72f0aade217daaa436b01935c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalDaemon::setParallel</definition>
+        <argsstring>($do_parallel, $max_num_jobs)</argsstring>
+        <name>setParallel</name>
+        <param>
+          <declname>$do_parallel</declname>
+        </param>
+        <param>
+          <declname>$max_num_jobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set whether we should run parallel jobs or not.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$do_parallel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boolean indicating whether to allow parallel processing of jobs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$max_num_jobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integer indicating the maximum number of jobs to run at once. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_daemon/TripalDaemon.inc" line="313" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="313" bodyend="316"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the main class for the Tripal Daemon.</para><para>It extends the DaemonAPIDaemon class provided by the Daemon API in order to implement tripal job checking and execution functionality. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="933">
+        <label>DrushDaemon</label>
+      </node>
+      <node id="932">
+        <label>TripalDaemon</label>
+        <link refid="d1/dc1/classTripalDaemon"/>
+        <childnode refid="933" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="935">
+        <label>DrushDaemon</label>
+      </node>
+      <node id="934">
+        <label>TripalDaemon</label>
+        <link refid="d1/dc1/classTripalDaemon"/>
+        <childnode refid="935" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_daemon/TripalDaemon.inc" line="14" column="1" bodyfile="tripal_daemon/TripalDaemon.inc" bodystart="14" bodyend="317"/>
+    <listofallmembers>
+      <member refid="d1/dc1/classTripalDaemon_1afe5323f91f48109a6db38a3cb1ceb60c" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>$do_parallel</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1ab215e4bee4f7b4f2604dda0e1ad9d48d" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>$loop_interval</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1afda0e18585c39d5757958d9357913f42" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>$max_num_jobs</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1a853073c61a3561e00b26e7f2c5e592a1" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>$queue</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1ac1a229a9652c2330b54a8b78b49802fe" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>$tripal_jobs</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1adb0792e21e59145e76a36ffa477aaee8" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>checkJobStatus</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1a7fc1c5d36101cbe8f6664173bc1c66fa" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>executeTask</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1ae982a294c6ba78d5dbab72586426e8a7" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>getStatusDetails</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1a419099e112056b59452cc0b26c9a6ede" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>getTripalJobID</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1a6cdd2a3f29d24965351b716f4c32a805" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>runParallelTripalJob</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1ac109d9aa3dc5901df037cfc33e38e65b" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>runSequentialTripalJob</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1aa8546f228a9b6686bea8c4f3b514c635" prot="protected" virt="non-virtual"><scope>TripalDaemon</scope><name>runTripalJob</name></member>
+      <member refid="d1/dc1/classTripalDaemon_1a6274f72f0aade217daaa436b01935c91" prot="public" virt="non-virtual"><scope>TripalDaemon</scope><name>setParallel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

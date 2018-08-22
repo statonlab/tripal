@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d6/d56/tripal__chado_8chado__v1__1_8inc" kind="file" language="PHP">
+    <compoundname>tripal_chado.chado_v1_1.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d6/d56/tripal__chado_8chado__v1__1_8inc_1a842575156e53c8e782a22c3d5ff9c1db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_add_analysisfeatureprop_table</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_chado_add_analysisfeatureprop_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a legacy custom chado table (analysisfeatureprop) to store properties of analysisfeature links. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/setup/tripal_chado.chado_v1_1.inc" line="7" column="1" bodyfile="tripal_chado/includes/setup/tripal_chado.chado_v1_1.inc" bodystart="7" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="7" refid="d6/d56/tripal__chado_8chado__v1__1_8inc_1a842575156e53c8e782a22c3d5ff9c1db" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d6/d56/tripal__chado_8chado__v1__1_8inc_1a842575156e53c8e782a22c3d5ff9c1db" kindref="member">tripal_chado_add_analysisfeatureprop_table</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>analysisfeatureprop<sp/>table<sp/>in<sp/>chado.<sp/><sp/>This<sp/>is<sp/>needed<sp/>for<sp/>Chado</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>version<sp/>1.11,<sp/>the<sp/>table<sp/>exists<sp/>in<sp/>Chado<sp/>1.2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!db_table_exists(</highlight><highlight class="stringliteral">&apos;chado.analysisfeatureprop&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>CREATE<sp/>TABLE<sp/>{analysisfeatureprop}<sp/>(</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>analysisfeatureprop_id<sp/>SERIAL<sp/>PRIMARY<sp/>KEY,</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>analysisfeature_id<sp/><sp/><sp/><sp/><sp/>INTEGER<sp/>NOT<sp/>NULL,</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type_id<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INTEGER<sp/>NOT<sp/>NULL,</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TEXT,</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rank<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INTEGER<sp/>NOT<sp/>NULL,</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONSTRAINT<sp/>analysisfeature_id_type_id_rank<sp/>UNIQUE<sp/>(analysisfeature_id,<sp/>type_id,<sp/>rank),</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONSTRAINT<sp/>analysisfeatureprop_analysisfeature_id_fkey<sp/>FOREIGN<sp/>KEY<sp/>(analysisfeature_id)<sp/>REFERENCES<sp/>{analysisfeature}(analysisfeature_id)<sp/>ON<sp/>DELETE<sp/>CASCADE<sp/>DEFERRABLE<sp/>INITIALLY<sp/>DEFERRED,</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CONSTRAINT<sp/>analysisfeatureprop_type_id_fkey<sp/>FOREIGN<sp/>KEY<sp/>(type_id)<sp/>REFERENCES<sp/>{cvterm}(cvterm_id)<sp/>ON<sp/>DELETE<sp/>CASCADE<sp/>DEFERRABLE<sp/>INITIALLY<sp/>DEFERRED</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sql);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/setup/tripal_chado.chado_v1_1.inc"/>
+  </compounddef>
+</doxygen>

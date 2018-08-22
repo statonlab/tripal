@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="da/d27/classsio____references__widget" kind="class" language="PHP" prot="public">
+    <compoundname>sio__references_widget</compoundname>
+    <basecompoundref refid="d0/df2/classChadoFieldWidget" prot="public" virt="non-virtual">ChadoFieldWidget</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="da/d27/classsio____references__widget_1a1ac6387944cb2dfbf4f3e88a42066d96" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sio__references_widget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;References&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" line="5" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/classsio____references__widget_1a23ccccdf30104d7989341507a682940d" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sio__references_widget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d4/df3/classsio____references" kindref="compound">sio__references</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" line="8" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d27/classsio____references__widget_1a4b2c08cba40a41274e719bec5f326fce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sio__references_widget::form</definition>
+        <argsstring>(&amp;$widget, &amp;$form, &amp;$form_state, $langcode, $items, $delta, $element)</argsstring>
+        <name>form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$widget</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" kindref="member">TripalFieldWidget::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" line="14" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/classsio____references__widget_1ac97502ba3e9d24a9e7271b57aca76c1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sio__references_widget::submit</definition>
+        <argsstring>($form, &amp;$form_state, $entity_type, $entity, $langcode, $delta)</argsstring>
+        <name>submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" kindref="member">TripalFieldWidget::submit()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" line="24" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" bodystart="24" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="649">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="647">
+        <label>sio__references_widget</label>
+        <link refid="da/d27/classsio____references__widget"/>
+        <childnode refid="648" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="648">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="649" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="652">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="650">
+        <label>sio__references_widget</label>
+        <link refid="da/d27/classsio____references__widget"/>
+        <childnode refid="651" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="651">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="652" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__references/sio__references_widget.inc" bodystart="3" bodyend="27"/>
+    <listofallmembers>
+      <member refid="da/d27/classsio____references__widget_1a1ac6387944cb2dfbf4f3e88a42066d96" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>$default_label</name></member>
+      <member refid="da/d27/classsio____references__widget_1a23ccccdf30104d7989341507a682940d" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>__construct</name></member>
+      <member refid="da/d27/classsio____references__widget_1a4b2c08cba40a41274e719bec5f326fce" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>info</name></member>
+      <member refid="da/d27/classsio____references__widget_1ac97502ba3e9d24a9e7271b57aca76c1b" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>theme</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>sio__references_widget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

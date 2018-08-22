@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/dc8/tripal__feature__featurepos_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_feature_featurepos.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$feature</definition>
+        <argsstring></argsstring>
+        <name>$feature</name>
+        <initializer>= $variables[&apos;node&apos;]-&gt;feature</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" line="9" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dc8/tripal__feature__featurepos_8tpl_8php_1af713538be40c67baf455aab564afe2b4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$featurepos_pager_id</definition>
+        <argsstring></argsstring>
+        <name>$featurepos_pager_id</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" line="6" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a7d59799f7a679fab8ebfd9c8c951cccb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$map_positions</definition>
+        <argsstring></argsstring>
+        <name>$map_positions</name>
+        <initializer>= $feature-&gt;featurepos-&gt;map_feature_id</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" line="35" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a78c94ea0922f3889be9667b13df550dc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$num_results_per_page</definition>
+        <argsstring></argsstring>
+        <name>$num_results_per_page</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" line="5" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$options</definition>
+        <argsstring></argsstring>
+        <name>$options</name>
+        <initializer>= array(
+  &apos;return_array&apos; =&gt; 1,
+  &apos;order_by&apos; =&gt; array(
+    &apos;map_feature_id&apos; =&gt; &apos;ASC&apos;
+  ),
+  &apos;pager&apos; =&gt; array(
+    &apos;limit&apos; =&gt; $num_results_per_page,
+    &apos;element&apos; =&gt; $featurepos_pager_id
+  ),
+  &apos;include_fk&apos; =&gt; array(
+    &apos;map_feature_id&apos; =&gt; array(
+      &apos;type_id&apos; =&gt; 1,
+      &apos;organism_id&apos; =&gt; 1,
+    ),
+    &apos;featuremap_id&apos; =&gt; array(
+       &apos;unittype_id&apos; =&gt; 1,
+    ),
+  ),
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" line="10" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a98645aa3e311d4e0aab0aa9d65d42708" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$total_records</definition>
+        <argsstring></argsstring>
+        <name>$total_records</name>
+        <initializer>= <ref refid="de/dc4/group__tripal__chado__query__api_1ga91a009002dbe996de1fc872f62680821" kindref="member">chado_pager_get_count</ref>($featurepos_pager_id)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" line="38" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>expand<sp/>the<sp/>feature<sp/>object<sp/>to<sp/>include<sp/>the<sp/>records<sp/>from<sp/>the<sp/>featurepos<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>specify<sp/>the<sp/>number<sp/>of<sp/>features<sp/>to<sp/>show<sp/>by<sp/>default<sp/>and<sp/>the<sp/>unique<sp/>pager<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a78c94ea0922f3889be9667b13df550dc" refkind="member"><highlight class="normal"><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a78c94ea0922f3889be9667b13df550dc" kindref="member">$num_results_per_page</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="6" refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1af713538be40c67baf455aab564afe2b4" refkind="member"><highlight class="normal"><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1af713538be40c67baf455aab564afe2b4" kindref="member">$featurepos_pager_id</ref><sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>maps<sp/>associated<sp/>with<sp/>this<sp/>feature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" refkind="member"><highlight class="normal"><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">]-&gt;feature;</highlight></codeline>
+<codeline lineno="10" refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" refkind="member"><highlight class="normal"><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;return_array&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;order_by&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;map_feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;ASC&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;pager&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;limit&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a78c94ea0922f3889be9667b13df550dc" kindref="member">$num_results_per_page</ref>,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;element&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1af713538be40c67baf455aab564afe2b4" kindref="member">$featurepos_pager_id</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;include_fk&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;map_feature_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;organism_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;featuremap_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;unittype_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref><sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>(<ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>,<sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;featurepos&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>because<sp/>the<sp/>featurepos<sp/>table<sp/>has<sp/><sp/>FK<sp/>relationships<sp/>with<sp/>map_feature_id<sp/>and<sp/>feature_id<sp/>with<sp/>the<sp/>feature<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>function<sp/>call<sp/>above<sp/>will<sp/>try<sp/>to<sp/>expand<sp/>both<sp/>and<sp/>will<sp/>create<sp/>an<sp/>array<sp/>of<sp/>matches<sp/>for<sp/>each<sp/>FK.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>we<sp/>only<sp/>want<sp/>to<sp/>show<sp/>the<sp/>map<sp/>that<sp/>this<sp/>feature<sp/>belongs<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a7d59799f7a679fab8ebfd9c8c951cccb" refkind="member"><highlight class="normal"><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a7d59799f7a679fab8ebfd9c8c951cccb" kindref="member">$map_positions</ref><sp/>=<sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>-&gt;featurepos-&gt;map_feature_id;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>total<sp/>number<sp/>of<sp/>records</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a98645aa3e311d4e0aab0aa9d65d42708" refkind="member"><highlight class="normal"><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a98645aa3e311d4e0aab0aa9d65d42708" kindref="member">$total_records</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga91a009002dbe996de1fc872f62680821" kindref="member">chado_pager_get_count</ref>(<ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1af713538be40c67baf455aab564afe2b4" kindref="member">$featurepos_pager_id</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(count(<ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a7d59799f7a679fab8ebfd9c8c951cccb" kindref="member">$map_positions</ref>)<sp/>&gt;<sp/>0){<sp/>?&gt;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_feature-data-block-desc<sp/>tripal-data-block-desc&quot;</highlight><highlight class="normal">&gt;This<sp/>feature<sp/>is<sp/>contained<sp/>in<sp/>the<sp/>following<sp/>&lt;?php<sp/>print<sp/>number_format($total_records)<sp/>?&gt;<sp/>map(s):&lt;/div&gt;&lt;?php</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$headers<sp/>array<sp/>is<sp/>an<sp/>array<sp/>of<sp/>fields<sp/>to<sp/>use<sp/>as<sp/>the<sp/>colum<sp/>headers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>additional<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Map<sp/>Name&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Landmark&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Type&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Position&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$rows<sp/>array<sp/>contains<sp/>an<sp/>array<sp/>of<sp/>rows<sp/>where<sp/>each<sp/>row<sp/>is<sp/>an<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>values<sp/>for<sp/>each<sp/>column<sp/>of<sp/>the<sp/>table<sp/>in<sp/>that<sp/>row.<sp/><sp/>Additional<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>through<sp/>our<sp/>map<sp/>positions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a7d59799f7a679fab8ebfd9c8c951cccb" kindref="member">$map_positions</ref><sp/>as<sp/>$position){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>$map_feature<sp/>=<sp/>$position-&gt;map_feature_id;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>if<sp/>there<sp/>are<sp/>any<sp/>values<sp/>in<sp/>the<sp/>featureposprop<sp/>table<sp/>for<sp/>the<sp/>start<sp/>and<sp/>stop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>$mappos<sp/>=<sp/>$position-&gt;mappos;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;return_array&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include_fk&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>$position<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>($position,<sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;featureposprop&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>$featureposprop<sp/>=<sp/>$position-&gt;featureposprop;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>$start<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>$stop<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($featureposprop))<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($featureposprop<sp/>as<sp/>$index<sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>-&gt;type_id-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;start&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$start<sp/>=<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>-&gt;value;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>-&gt;type_id-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;stop&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$stop<sp/>=<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>-&gt;value;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($start<sp/>and<sp/>$stop<sp/>and<sp/>$start<sp/>!=<sp/>$stop)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$mappos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$start-$stop&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($start<sp/>and<sp/>!$stop)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$mappos<sp/>=<sp/>$start;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($start<sp/>and<sp/>$stop<sp/>and<sp/>$start<sp/>==<sp/>$stop)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$mappos<sp/>=<sp/>$start;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>map<sp/>name<sp/>feature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>$map_name<sp/>=<sp/><sp/>$position-&gt;featuremap_id-&gt;name;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists($position-&gt;featuremap_id,<sp/></highlight><highlight class="stringliteral">&apos;nid&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$map_name<sp/>=<sp/>l($map_name,<sp/></highlight><highlight class="stringliteral">&apos;node/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$position-&gt;featuremap_id-&gt;nid,<sp/>array(</highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;target&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;_blank&apos;</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>landmark</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>$landmark<sp/>=<sp/>$map_feature-&gt;name;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists($map_feature,<sp/></highlight><highlight class="stringliteral">&apos;nid&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$landmark<sp/>=<sp/><sp/>l($landmark,<sp/></highlight><highlight class="stringliteral">&apos;node/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$map_feature-&gt;nid,<sp/>array(</highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;target&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;_blank&apos;</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$map_name,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$landmark,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$map_feature-&gt;type_id-&gt;name,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$mappos<sp/>.<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$position-&gt;featuremap_id-&gt;unittype_id-&gt;name,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$table<sp/>array<sp/>contains<sp/>the<sp/>headers<sp/>and<sp/>rows<sp/>array<sp/>as<sp/>well<sp/>as<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>options<sp/>for<sp/>controlling<sp/>the<sp/>display<sp/>of<sp/>the<sp/>table.<sp/><sp/>Additional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_feature-table-featurepos&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>once<sp/>we<sp/>have<sp/>our<sp/>table<sp/>array<sp/>structure<sp/>defined,<sp/>we<sp/>call<sp/>Drupal&apos;s<sp/>theme_table()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>function<sp/>to<sp/>generate<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>print<sp/>theme_table(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$pager<sp/>array<sp/>values<sp/>that<sp/>control<sp/>the<sp/>behavior<sp/>of<sp/>the<sp/>pager.<sp/><sp/>For</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>documentation<sp/>on<sp/>the<sp/>values<sp/>allows<sp/>in<sp/>this<sp/>array<sp/>see:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes!pager.inc/function/theme_pager/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>here<sp/>we<sp/>add<sp/>the<sp/>paramter<sp/>&apos;block&apos;<sp/>=&gt;<sp/>&apos;features&apos;.<sp/>This<sp/>is<sp/>because</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>pager<sp/>is<sp/>not<sp/>on<sp/>the<sp/>default<sp/>block<sp/>that<sp/>appears.<sp/>When<sp/>the<sp/>user<sp/>clicks<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>page<sp/>number<sp/>we<sp/>want<sp/>the<sp/>browser<sp/>to<sp/>re-appear<sp/>with<sp/>the<sp/>page<sp/>is<sp/>loaded.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>remove<sp/>the<sp/>&apos;pane&apos;<sp/>parameter<sp/>from<sp/>the<sp/>original<sp/>query<sp/>parameters<sp/>because</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Drupal<sp/>won&apos;t<sp/>reset<sp/>the<sp/>parameter<sp/>if<sp/>it<sp/>already<sp/>exists.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>$get<sp/>=<sp/>$_GET;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>unset($_GET[</highlight><highlight class="stringliteral">&apos;pane&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>$pager<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tags&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;element&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1af713538be40c67baf455aab564afe2b4" kindref="member">$featurepos_pager_id</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parameters&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;pane&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;featurepos&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;quantity&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="dd/dc8/tripal__feature__featurepos_8tpl_8php_1a78c94ea0922f3889be9667b13df550dc" kindref="member">$num_results_per_page</ref>,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>print<sp/>theme_pager($pager);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>$_GET<sp/>=<sp/>$get;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_featuremap/theme/templates/tripal_feature_featurepos.tpl.php"/>
+  </compounddef>
+</doxygen>

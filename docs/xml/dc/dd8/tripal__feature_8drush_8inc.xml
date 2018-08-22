@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/dd8/tripal__feature_8drush_8inc" kind="file" language="PHP">
+    <compoundname>tripal_feature.drush.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gab8a4552fb1eeb38fca65c4bd772568e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_feature_sync</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_feature_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sync Chado Features with Drupal (ie: create nodes) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="128" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga3fa15a33a3b3ea8810beaf34676e77d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_feature_tripal_get_sequence</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_feature_tripal_get_sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the sequence of the indicated features </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="73" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="73" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga118d9d82fb9c3e525eaba400f6f910de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_feature_drush_command</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_feature_drush_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a drush command and constructs the full help for that command</para><para><simplesect kind="return"><para>And array of command descriptions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="30" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="30" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gae158600e287097bc1ef94514c6147f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_feature_drush_help</definition>
+        <argsstring>($command)</argsstring>
+        <name>tripal_feature_drush_help</name>
+        <param>
+          <declname>$command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Describes each drush command implemented by the module</para><para><simplesect kind="return"><para>The first line of description when executing the help for a given command </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="15" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="15" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains function relating to drush-integration of this module. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="15" refid="dc/d00/group__tripal__drush_1gae158600e287097bc1ef94514c6147f70" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1gae158600e287097bc1ef94514c6147f70" kindref="member">tripal_feature_drush_help</ref>($command)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>($command)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;drush:tripal-get_sequence&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dt(</highlight><highlight class="stringliteral">&apos;Prints<sp/>sequences<sp/>that<sp/>match<sp/>specified<sp/>categories.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="dc/d00/group__tripal__drush_1ga118d9d82fb9c3e525eaba400f6f910de" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga118d9d82fb9c3e525eaba400f6f910de" kindref="member">tripal_feature_drush_command</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>$items[</highlight><highlight class="stringliteral">&apos;tripal-get-sequence&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Prints<sp/>sequences<sp/>that<sp/>match<sp/>specified<sp/>categories.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;options&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;org&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>organism\&apos;s<sp/>common<sp/>name.<sp/>If<sp/>specified,<sp/>features<sp/>for<sp/>this<sp/>organism<sp/>will<sp/>be<sp/>retrieved.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;genus&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>organism\&apos;s<sp/>genus.<sp/>If<sp/>specified,<sp/>features<sp/>for<sp/>all<sp/>organism<sp/>with<sp/>this<sp/>genus<sp/>will<sp/>be<sp/>retrieved.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;species&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>organism\&apos;s<sp/>species<sp/>name.<sp/>If<sp/>specified,<sp/>features<sp/>for<sp/>this<sp/>all<sp/>organism<sp/>with<sp/>this<sp/>species<sp/>will<sp/>be<sp/>retrieved.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>analysis<sp/>name.<sp/>If<sp/>specified,<sp/>features<sp/>for<sp/>this<sp/>analysis<sp/>will<sp/>be<sp/>retrieved.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>type<sp/>of<sp/>feature<sp/>to<sp/>retrieve<sp/>(e.g.<sp/>mRNA).<sp/>All<sp/>features<sp/>that<sp/>match<sp/>this<sp/>type<sp/>will<sp/>be<sp/>retrieved.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>name<sp/>of<sp/>the<sp/>feature<sp/>to<sp/>retrieve.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;up&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;An<sp/>integer<sp/>value<sp/>specifying<sp/>the<sp/>number<sp/>of<sp/>upstream<sp/>bases<sp/>to<sp/>include.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;down&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;An<sp/>integer<sp/>value<sp/>specifying<sp/>the<sp/>number<sp/>of<sp/>downstream<sp/>bases<sp/>to<sp/>incldue.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parent&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Set<sp/>this<sp/>argument<sp/>to<sp/>1<sp/>to<sp/>retrieve<sp/>the<sp/>sequence<sp/>from<sp/>the<sp/>parent<sp/>in<sp/>an<sp/>alignment<sp/>rather<sp/>than<sp/>the<sp/>residues<sp/>column<sp/>of<sp/>the<sp/>feature<sp/>itself.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;agg&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Set<sp/>this<sp/>argument<sp/>to<sp/>1<sp/>to<sp/>aggregate<sp/>sub<sp/>features<sp/>into<sp/>a<sp/>single<sp/>sequence.<sp/><sp/>This<sp/>is<sp/>useful,<sp/>for<sp/>example,<sp/>for<sp/>obtaining<sp/>CDS<sp/>sequence<sp/>from<sp/>an<sp/>mRNA&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;child&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Set<sp/>this<sp/>argument<sp/>to<sp/>the<sp/>exact<sp/>sequence<sp/>ontology<sp/>term<sp/>for<sp/>the<sp/>children<sp/>to<sp/>aggregate.<sp/><sp/>This<sp/>is<sp/>useful<sp/>in<sp/>the<sp/>case<sp/>where<sp/>a<sp/>gene<sp/>has<sp/>exons<sp/>as<sp/>well<sp/>as<sp/>CDSs<sp/>and<sp/>UTRs.<sp/><sp/>You<sp/>may<sp/>sepcify<sp/>as<sp/>many<sp/>feature<sp/>types<sp/>as<sp/>desired<sp/>by<sp/>separating<sp/>each<sp/>with<sp/>a<sp/>single<sp/>comma<sp/>(no<sp/>spaces).<sp/>Term<sp/>matching<sp/>is<sp/>case-sensitive.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;relationship&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Retrieves<sp/>the<sp/>sequence<sp/>of<sp/>any<sp/>feature<sp/>in<sp/>the<sp/>specified<sp/>relationship<sp/>with<sp/>the<sp/>matched<sp/>features.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rel_part&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;If<sp/>a<sp/>relationship<sp/>is<sp/>provided,<sp/>then<sp/>this<sp/>will<sp/>be<sp/>&quot;subject&quot;<sp/>or<sp/>&quot;object&quot;<sp/>indicating<sp/>the<sp/>side<sp/>of<sp/>the<sp/>relationship<sp/>for<sp/>the<sp/>matched<sp/>features.<sp/>If<sp/>the<sp/>matched<sp/>features<sp/>are<sp/>the<sp/>&quot;object&quot;<sp/>then<sp/>the<sp/>&quot;subject&quot;<sp/>features<sp/>will<sp/>have<sp/>their<sp/>sequences<sp/>included<sp/>in<sp/>the<sp/>output<sp/>(and<sp/>vice<sp/>versa).&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>number<sp/>of<sp/>nucleotides<sp/>per<sp/>row<sp/>(defaults<sp/>to<sp/>50).&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;examples&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Standard<sp/>example&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>tripal-current-job&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;aliases&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;trp-get-seq&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>$items[</highlight><highlight class="stringliteral">&apos;tripal-feature-sync&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Syncs<sp/>an<sp/>individual<sp/>feature.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;options&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>feature<sp/>ID<sp/>of<sp/>the<sp/>feature<sp/>to<sp/>sync&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;examples&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Standard<sp/>example&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>tripal-feature-sync<sp/>--id=48273&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;aliases&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;trp-fsync&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$items;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="dc/d00/group__tripal__drush_1ga3fa15a33a3b3ea8810beaf34676e77d2" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga3fa15a33a3b3ea8810beaf34676e77d2" kindref="member">drush_tripal_feature_tripal_get_sequence</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>$org_commonname<sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;org&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>$genus<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;genus&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>$species<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;species&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>$analysis_name<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>$type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>$feature_name<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>$upstream<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;up&apos;</highlight><highlight class="normal">)<sp/><sp/><sp/>?<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;up&apos;</highlight><highlight class="normal">)<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>$downstream<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;down&apos;</highlight><highlight class="normal">)<sp/>?<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;down&apos;</highlight><highlight class="normal">)<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>$derive_from_parent<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;parent&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>$aggregate<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;agg&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>$child<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;child&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>$relationship<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;relationship&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>$rel_part<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;rel_part&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>$width<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal">)<sp/>?<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal">)<sp/>:<sp/>50;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($relationship<sp/>and<sp/>!$rel_part)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;Please<sp/>specify<sp/>both<sp/>&apos;relationship&apos;<sp/>and<sp/>a<sp/>&apos;rel_part&apos;<sp/>arguments.<sp/>Both<sp/>must<sp/>be<sp/>used<sp/>together\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;org_commonname&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$org_commonname,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;genus&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$genus,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;species&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$species,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;analysis_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$analysis_name,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$type,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;feature_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$feature_name,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$upstream,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$downstream,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;derive_from_parent&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$derive_from_parent,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;aggregate&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$aggregate,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sub_feature_types&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>explode(</highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">,<sp/>$child),</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;relationship_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$relationship,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;relationship_part&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$rel_part,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$width</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>$seqs<sp/>=<sp/><ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga8a2dee0b493a0220813976933c47f6db" kindref="member">tripal_get_bulk_feature_sequences</ref>(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($seqs)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>sequences<sp/>found<sp/>that<sp/>match<sp/>the<sp/>criteria.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($seqs<sp/>as<sp/>$seq)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;&gt;&quot;</highlight><highlight class="normal"><sp/>.<sp/>$seq[</highlight><highlight class="stringliteral">&apos;defline&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/>$seq[</highlight><highlight class="stringliteral">&apos;residues&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="dc/d00/group__tripal__drush_1gab8a4552fb1eeb38fca65c4bd772568e2" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1gab8a4552fb1eeb38fca65c4bd772568e2" kindref="member">drush_tripal_feature_sync</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>$feature_id<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>tripal_feature_sync_feature($feature_id);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_feature/tripal_feature.drush.inc"/>
+  </compounddef>
+</doxygen>

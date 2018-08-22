@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d8/de0/classrdfs____type" kind="class" language="PHP" prot="public">
+    <compoundname>rdfs__type</compoundname>
+    <basecompoundref refid="d9/d83/classTripalField" prot="public" virt="non-virtual">TripalField</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d8/de0/classrdfs____type_1aa8892044bd85c48b6b03aafacc5e40a2" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>rdfs__type::$default_formatter</definition>
+        <argsstring></argsstring>
+        <name>$default_formatter</name>
+        <initializer>= &apos;<ref refid="d7/d2c/classrdfs____type__formatter" kindref="compound">rdfs__type_formatter</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="44" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/de0/classrdfs____type_1a9cfb649057cdbda1276397fce8a38733" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>rdfs__type::$default_instance_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_instance_settings</name>
+        <initializer>= array(
+    
+    &apos;term_vocabulary&apos; =&gt; &apos;rdfs&apos;,
+    
+    &apos;term_name&apos; =&gt; &apos;type&apos;,
+    
+    &apos;term_accession&apos; =&gt; &apos;type&apos;,
+    
+    
+    
+    &apos;term_fixed&apos; =&gt; TRUE,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="23" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/de0/classrdfs____type_1a4d676a00e1abb29ae49e9c1b3dbba959" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>rdfs__type::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Content Type&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="6" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/de0/classrdfs____type_1a3fc1af664558e010d708b97025e42462" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>rdfs__type::$default_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_settings</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="14" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/de0/classrdfs____type_1a2d7a62ca103bf9cb83bc0415dc9aac49" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>rdfs__type::$default_widget</definition>
+        <argsstring></argsstring>
+        <name>$default_widget</name>
+        <initializer>= &apos;<ref refid="d8/d5e/classrdfs____type__widget" kindref="compound">rdfs__type_widget</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="41" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/de0/classrdfs____type_1af7c3d32fdbca75bd862398b2630218f3" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>rdfs__type::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;The resource content type.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="9" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/de0/classrdfs____type_1a6bc8bd8ad5b380070b4c7ae558cebd02" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>rdfs__type::$storage</definition>
+        <argsstring></argsstring>
+        <name>$storage</name>
+        <initializer>= &apos;tripal_no_storage&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="38" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/de0/classrdfs____type_1a74b935c0fde40221494004818b0a4f23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rdfs__type::load</definition>
+        <argsstring>($entity)</argsstring>
+        <name>load</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a892a0cff2ff98ef41beefa55527cdd9c" kindref="member">TripalField::load()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="49" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/de0/classrdfs____type_1ae23659ec84bcbe6a0061ef6d6425e665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rdfs__type::settingsForm</definition>
+        <argsstring>($has_data)</argsstring>
+        <name>settingsForm</name>
+        <param>
+          <declname>$has_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" kindref="member">TripalField::settingsForm()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="58" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="58" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/de0/classrdfs____type_1a3baab3e2893e3ef1b6858d9ef442e004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rdfs__type::settingsFormValidate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>settingsFormValidate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a2d4baff5cde41b3f39f373ab7f4ad9ef" kindref="member">TripalField::settingsFormValidate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="71" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="71" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="455">
+        <label>rdfs__type</label>
+        <link refid="d8/de0/classrdfs____type"/>
+        <childnode refid="456" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="456">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="457">
+        <label>rdfs__type</label>
+        <link refid="d8/de0/classrdfs____type"/>
+        <childnode refid="458" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="458">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" line="3" column="1" bodyfile="tripal/includes/TripalFields/rdfs__type/rdfs__type.inc" bodystart="3" bodyend="75"/>
+    <listofallmembers>
+      <member refid="d9/d83/classTripalField_1ac880dadc11b4c4301feecfa6ff5e70f8" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$default_description</name></member>
+      <member refid="d8/de0/classrdfs____type_1aa8892044bd85c48b6b03aafacc5e40a2" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$default_formatter</name></member>
+      <member refid="d8/de0/classrdfs____type_1a9cfb649057cdbda1276397fce8a38733" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$default_instance_settings</name></member>
+      <member refid="d8/de0/classrdfs____type_1a4d676a00e1abb29ae49e9c1b3dbba959" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$default_label</name></member>
+      <member refid="d8/de0/classrdfs____type_1a3fc1af664558e010d708b97025e42462" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$default_settings</name></member>
+      <member refid="d8/de0/classrdfs____type_1a2d7a62ca103bf9cb83bc0415dc9aac49" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$default_widget</name></member>
+      <member refid="d8/de0/classrdfs____type_1af7c3d32fdbca75bd862398b2630218f3" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$description</name></member>
+      <member refid="d9/d83/classTripalField_1ae93bd40e83e1abb9425a9a21eb29c0dc" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$download_formatters</name></member>
+      <member refid="d9/d83/classTripalField_1ac348ce236b7cac6147688950011fdba6" prot="protected" virt="non-virtual"><scope>rdfs__type</scope><name>$field</name></member>
+      <member refid="d9/d83/classTripalField_1a727666618c87cb60c6ab9f5e446d6426" prot="protected" virt="non-virtual"><scope>rdfs__type</scope><name>$instance</name></member>
+      <member refid="d9/d83/classTripalField_1a8098e08f179bb4eb529ba79dc03fe2bf" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$module</name></member>
+      <member refid="d9/d83/classTripalField_1a873652ed4421c1bc211cdca2346352b8" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$no_data</name></member>
+      <member refid="d9/d83/classTripalField_1a0bfccf918c71c300fccea11387d8aefc" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$no_ui</name></member>
+      <member refid="d8/de0/classrdfs____type_1a6bc8bd8ad5b380070b4c7ae558cebd02" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>$storage</name></member>
+      <member refid="d9/d83/classTripalField_1a12856487b2ad310c3dfcee9eae0e86ad" prot="protected" virt="non-virtual"><scope>rdfs__type</scope><name>$term</name></member>
+      <member refid="d9/d83/classTripalField_1a931ee11a0e3b061a1674f51d186a0988" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>__construct</name></member>
+      <member refid="d9/d83/classTripalField_1a9c44d0017dbdc82ad4f532ce8cb71c4c" prot="protected" virt="non-virtual"><scope>rdfs__type</scope><name>_addViewsDataElement</name></member>
+      <member refid="d9/d83/classTripalField_1a643ad3ef2e6fb2c673574b680afedc5e" prot="protected" virt="non-virtual"><scope>rdfs__type</scope><name>_addWebServiceElement</name></member>
+      <member refid="d9/d83/classTripalField_1a650474e013a387db620223a4265e503d" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>createInstance</name></member>
+      <member refid="d9/d83/classTripalField_1a96952e870cbe0b4a48d72f0d1c20b21c" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>elementInfo</name></member>
+      <member refid="d9/d83/classTripalField_1a36a8044117bb191fba3a0afd117e5434" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>getField</name></member>
+      <member refid="d9/d83/classTripalField_1a7b9ceac2a0d39163bf55e4ed29bed952" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>getFieldName</name></member>
+      <member refid="d9/d83/classTripalField_1af7de8b5df22756288b7a348764df68e0" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>getFieldTerm</name></member>
+      <member refid="d9/d83/classTripalField_1a3db0d92e211e261afea7e105750d2e9f" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>getFieldTermID</name></member>
+      <member refid="d9/d83/classTripalField_1a1c29066b53a4ffce951132920e5ac0bf" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>getInstance</name></member>
+      <member refid="d9/d83/classTripalField_1af7335ce38156505ff54bd1757bb536b0" prot="protected" virt="non-virtual"><scope>rdfs__type</scope><name>getPagerElementID</name></member>
+      <member refid="d9/d83/classTripalField_1ac8bf46bbbeaf0bae8bf6b979cc1733ca" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>info</name></member>
+      <member refid="d9/d83/classTripalField_1a6ebb1f27b527656c1b8f2eb8b7c162f5" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>instanceSettingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1ade5041044ae4a23ee6bc47ce8266506a" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>instanceSettingsFormValidate</name></member>
+      <member refid="d8/de0/classrdfs____type_1a74b935c0fde40221494004818b0a4f23" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>load</name></member>
+      <member refid="d9/d83/classTripalField_1a13bf29985f7baeb3ebaadafbd5a1b4af" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>query</name></member>
+      <member refid="d9/d83/classTripalField_1ab25da330b54416993407b7a9b2944daf" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>queryOrder</name></member>
+      <member refid="d8/de0/classrdfs____type_1ae23659ec84bcbe6a0061ef6d6425e665" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>settingsForm</name></member>
+      <member refid="d8/de0/classrdfs____type_1a3baab3e2893e3ef1b6858d9ef442e004" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>settingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1ae8ae933722cd9340c3994a700427330a" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>validate</name></member>
+      <member refid="d9/d83/classTripalField_1aa0233ddbb9411c58c7eafc657fef97a6" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>viewsData</name></member>
+      <member refid="d9/d83/classTripalField_1a2db49fcfd34816cd41683a5c7722491a" prot="public" virt="non-virtual"><scope>rdfs__type</scope><name>webServicesData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

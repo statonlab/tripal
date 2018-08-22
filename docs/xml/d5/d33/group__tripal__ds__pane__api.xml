@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/d33/group__tripal__ds__pane__api" kind="group">
+    <compoundname>tripal_ds_pane_api</compoundname>
+    <title>Tripal DS API</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Tripal DS allows for the extension of the display suite module interface used to display the tripal entity fields. The API allows for other modules to integrate Tripal Pane creation, placement, and formatting. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

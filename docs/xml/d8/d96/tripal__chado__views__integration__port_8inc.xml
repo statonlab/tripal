@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d8/d96/tripal__chado__views__integration__port_8inc" kind="file" language="PHP">
+    <compoundname>tripal_chado_views_integration_port.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d8/d96/tripal__chado__views__integration__port_8inc_1ac8d04f8f2c804d1c0f1c4aa7f55eeff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_views_integration_export_form</definition>
+        <argsstring>($form, &amp;$form_state, $setup_id)</argsstring>
+        <name>tripal_chado_views_integration_export_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$setup_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Form: The form to export a particular tripal views integration</para><para>No submit is needed since the setup_id is in the path and the export code is rendered based on that</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state of the form </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$setup_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tripal views integration setup id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/includes/tripal_chado_views_integration_port.inc" line="21" column="1" bodyfile="tripal_chado_views/includes/tripal_chado_views_integration_port.inc" bodystart="21" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d96/tripal__chado__views__integration__port_8inc_1ab1d68e92ed4b90e34f2e397412a9a395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_views_integration_import_form</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_chado_views_integration_import_form</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Form: Imports a tripal views integration </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/includes/tripal_chado_views_integration_port.inc" line="49" column="1" bodyfile="tripal_chado_views/includes/tripal_chado_views_integration_port.inc" bodystart="49" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d96/tripal__chado__views__integration__port_8inc_1a43efce9567c8b7760a7dc9b36c8243f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_views_integration_import_form_submit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_chado_views_integration_import_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Submit: Imports a tripal views integration</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/includes/tripal_chado_views_integration_port.inc" line="97" column="1" bodyfile="tripal_chado_views/includes/tripal_chado_views_integration_port.inc" bodystart="97" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains the UI to import/export tripal views integration setups between sites </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="21" refid="d8/d96/tripal__chado__views__integration__port_8inc_1ac8d04f8f2c804d1c0f1c4aa7f55eeff0" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d96/tripal__chado__views__integration__port_8inc_1ac8d04f8f2c804d1c0f1c4aa7f55eeff0" kindref="member">tripal_chado_views_integration_export_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state,<sp/>$setup_id)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>$defn_array<sp/>=<sp/><ref refid="d1/d5e/group__tripal__chado__views__api_1ga17fc7a59376724fb261bf15bd1b9db1b" kindref="member">tripal_export_views_integration</ref>($setup_id);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>$t<sp/>=<sp/>var_export($defn_array,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>$t<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/\n\s+array/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;array&quot;</highlight><highlight class="normal">,<sp/>$t);<sp/></highlight><highlight class="comment">//<sp/>move<sp/>array(<sp/>to<sp/>previous<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>$t<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/true/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;TRUE&quot;</highlight><highlight class="normal">,<sp/>$t);<sp/></highlight><highlight class="comment">//<sp/>upper<sp/>case<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>$t<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/false/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;FALSE&quot;</highlight><highlight class="normal">,<sp/>$t);<sp/></highlight><highlight class="comment">//<sp/>upper<sp/>case<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>$t<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/array\(/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;array<sp/>(&quot;</highlight><highlight class="normal">,<sp/>$t);<sp/></highlight><highlight class="comment">//<sp/>put<sp/>a<sp/>space<sp/>between<sp/>array<sp/>and<sp/>paren</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;export&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textarea&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Export&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Simply<sp/>copy<sp/>the<sp/>provided<sp/>export<sp/>into<sp/>the<sp/>Import<sp/>text<sp/>area<sp/>on<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;another<sp/>tripal<sp/>views<sp/>enabled<sp/>website<sp/>to<sp/>port<sp/>the<sp/>integration<sp/>between<sp/>websites.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>20,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$t,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="d8/d96/tripal__chado__views__integration__port_8inc_1ab1d68e92ed4b90e34f2e397412a9a395" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d96/tripal__chado__views__integration__port_8inc_1ab1d68e92ed4b90e34f2e397412a9a395" kindref="member">tripal_chado_views_integration_import_form</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Name<sp/>(optional)&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;A<sp/>human-readable<sp/>name<sp/>for<sp/>your<sp/>integration.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>$priorities<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(range(-10,<sp/>10)<sp/>as<sp/>$v)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>$priorities[$v]<sp/>=<sp/>(string)<sp/>$v;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;views_type&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;row_priority&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;select&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Priority<sp/>(optional)&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>level<sp/>of<sp/>priority<sp/>your<sp/>Views<sp/>integration<sp/>has<sp/>in<sp/>relation<sp/>to<sp/>the<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight><highlight class="stringliteral">&apos;default<sp/>core<sp/>and<sp/>module<sp/>definitions.<sp/>The<sp/>views<sp/>integration<sp/>definition<sp/>with<sp/>the<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight><highlight class="stringliteral">&apos;lightest<sp/>priority<sp/>will<sp/>be<sp/>used.<sp/>For<sp/>example,<sp/>if<sp/>there<sp/>is<sp/>a<sp/>definition<sp/>created<sp/>by<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight><highlight class="stringliteral">&apos;core<sp/>with<sp/>a<sp/>priority<sp/>of<sp/>10<sp/>and<sp/>another<sp/>by<sp/>a<sp/>custom<sp/>module<sp/>of<sp/>5<sp/>and<sp/>yours<sp/>is<sp/>-1<sp/>then<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.</highlight><highlight class="stringliteral">&apos;your<sp/>definition<sp/>will<sp/>be<sp/>used<sp/>for<sp/>that<sp/>table<sp/>because<sp/>-1<sp/>is<sp/>lighter<sp/>than<sp/>both<sp/>5<sp/>and<sp/>10.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$priorities,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-1,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;import&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textarea&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Import&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Simply<sp/>copy<sp/>the<sp/>provided<sp/>export<sp/>into<sp/>the<sp/>text<sp/>area<sp/>to<sp/>port<sp/>the<sp/>integration<sp/>between<sp/>websites.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>20,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Submit&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="d8/d96/tripal__chado__views__integration__port_8inc_1a43efce9567c8b7760a7dc9b36c8243f6" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d96/tripal__chado__views__integration__port_8inc_1a43efce9567c8b7760a7dc9b36c8243f6" kindref="member">tripal_chado_views_integration_import_form_submit</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//$defn_array<sp/>=<sp/>unserialize($form_state[&apos;values&apos;][&apos;import&apos;]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>convert<sp/>the<sp/>array<sp/>into<sp/>a<sp/>real<sp/>PHP<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>$defn_array<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>eval(</highlight><highlight class="stringliteral">&quot;\$defn_array<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;import&apos;</highlight><highlight class="normal">]<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>optional<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>$defn_array[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;row_priority&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>$defn_array[</highlight><highlight class="stringliteral">&apos;priority&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;row_priority&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>views<sp/>integration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>$success<sp/>=<sp/><ref refid="d1/d5e/group__tripal__chado__views__api_1gad30e8fd9ff4c54293177951877f7effa" kindref="member">tripal_add_views_integration</ref>($defn_array);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($success)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&quot;Successfully<sp/>imported<sp/>%name<sp/>Integration&quot;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;%name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$defn_array[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">])));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>import<sp/>%name<sp/>Integration&quot;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;%name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$defn_array[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">])),<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado_views/includes/tripal_chado_views_integration_port.inc"/>
+  </compounddef>
+</doxygen>

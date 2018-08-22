@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/db7/group__tripal__jobs__api" kind="group">
+    <compoundname>tripal_jobs_api</compoundname>
+    <title>Jobs</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1gae7fa345a83829ddc37f727c8d04c02d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_job</definition>
+        <argsstring>($job_name, $modulename, $callback, $arguments, $uid, $priority=10, $includes=array(), $ignore_duplicate=FALSE)</argsstring>
+        <name>tripal_add_job</name>
+        <param>
+          <declname>$job_name</declname>
+        </param>
+        <param>
+          <declname>$modulename</declname>
+        </param>
+        <param>
+          <declname>$callback</declname>
+        </param>
+        <param>
+          <declname>$arguments</declname>
+        </param>
+        <param>
+          <declname>$uid</declname>
+        </param>
+        <param>
+          <declname>$priority</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <declname>$includes</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$ignore_duplicate</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a job to the Tripal Job queue</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The human readable name for the job </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$modulename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the module adding the job </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of a function to be called when the job is executed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of arguments to be passed on to the callback </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$uid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uid of the user adding the job </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority at which to run the job where the highest priority is 10 and the lowest priority is 1. The default priority is 10. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$includes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of paths to files that should be included in order to execute the job. Use the module_load_include function to get a path for a given file. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$ignore_duplicate.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE to not add the job if it has the same name as another job which has not yet run. The default is TRUE.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The job_id of the registered job, or FALSE on failure.</para></simplesect>
+Example usage:</para><para><programlisting><codeline><highlight class="normal">$args<sp/>=<sp/>array($dfile,<sp/>$organism_id,<sp/>$type,<sp/>$library_id,<sp/>$re_name,<sp/>$re_uname,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$re_accession,<sp/>$db_id,<sp/>$rel_type,<sp/>$re_subject,<sp/>$parent_type,<sp/>$method,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$user-&gt;uid,<sp/>$analysis_id,<sp/>$match_type);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">$includes<sp/>=<sp/>array()</highlight></codeline>
+<codeline><highlight class="normal">$includes[]<sp/>=<sp/>module_load_include(&apos;inc&apos;,<sp/>&apos;tripal_chado&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;includes/loaders/tripal_chado.fasta_loader&apos;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">tripal_add_job(&quot;Import<sp/>FASTA<sp/>file:<sp/>$dfile&quot;,<sp/>&apos;tripal_feature&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;tripal_feature_load_fasta&apos;,<sp/>$args,<sp/>$user-&gt;uid,<sp/>10,<sp/>$includes);</highlight></codeline>
+</programlisting></para><para>The code above is copied from the tripal_feature/fasta_loader.php file. The snipped first builds an array of arguments that will then be passed to the tripal_add_job function. The number of arguments provided in the $arguments variable should match the argument set for the callback function provided as the third argument. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="78" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="78" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga7d1baa38344008ac242385fbabca10c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_cancel_job</definition>
+        <argsstring>($job_id, $redirect=TRUE)</argsstring>
+        <name>tripal_cancel_job</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <param>
+          <declname>$redirect</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cancel a Tripal Job currently waiting in the job queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job_id of the job to be cancelled</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FALSE if the an error occured or the job could not be canceled, TRUE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="303" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="303" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga4228960dcf9f37b7db8c773aca9ac3c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_execute_job</definition>
+        <argsstring>($job_id, $redirect=TRUE)</argsstring>
+        <name>tripal_execute_job</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <param>
+          <declname>$redirect</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Execute a specific Tripal Job.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job id to be exeuted. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>bool</parametertype>
+<parametername>$redirect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[optional] Whether to redirect to the job page or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="553" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="553" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga9dfd4a60577476458f57f3da139f6f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_active_jobs</definition>
+        <argsstring>($modulename=NULL)</argsstring>
+        <name>tripal_get_active_jobs</name>
+        <param>
+          <declname>$modulename</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of jobs that are active.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$modulename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Limit the list returned to those that were added by a specific module. If no module name is provided then all active jobs are returned.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of objects where each object describes a tripal job. If no jobs were found then an empty array is returned. Each object will have the following members:<itemizedlist>
+<listitem><para>job_id: The unique ID number for the job.</para></listitem><listitem><para>uid: The ID of the user that submitted the job.</para></listitem><listitem><para>job_name: The human-readable name of the job.</para></listitem><listitem><para>modulename: The name of the module that submitted the job.</para></listitem><listitem><para>callback: The callback function to be called when the job is run.</para></listitem><listitem><para>arguments: An array of arguments to be passed to the callback function.</para></listitem><listitem><para>progress: The percent progress of completion if the job is running.</para></listitem><listitem><para>status: The status of the job: Waiting, Completed, Running or Cancelled.</para></listitem><listitem><para>submit_date: The UNIX timestamp when the job was submitted.</para></listitem><listitem><para>start_time: The UNIX timestamp for when the job started running.</para></listitem><listitem><para>end_time: The UNIX timestampe when the job completed running.</para></listitem><listitem><para>error_msg: Any error message that occured during execution of the job.</para></listitem><listitem><para>prirotiy: The execution priority of the job (value between 1 and 10) </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="521" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="521" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga3d676afee039417282e6655a26323bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_job</definition>
+        <argsstring>($job_id)</argsstring>
+        <name>tripal_get_job</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve information regarding a tripal job</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier of the job</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An object representing a record from the tripal_job table or FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="136" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="136" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1gabaecb27e1728625549669a3001eca55c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_job_progress</definition>
+        <argsstring>($job_id)</argsstring>
+        <name>tripal_get_job_progress</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the current proress of a job.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job_id to get the progress for</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A value between 0 and 100 indicating the percentage complete of the job. FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="480" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="480" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1gab9662b101766216caf761807eb2d5e6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_is_job_running</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_is_job_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates if any jobs are running.</para><para>This function will check the system to see if a job has a process ID and if that process ID is still running. It will update the job status accordingly before returning.</para><para><simplesect kind="return"><para>Returns TRUE if any job is running or FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="161" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="161" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga3232e2191042d96566b8ce3379f9c2a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_launch_job</definition>
+        <argsstring>($do_parallel=0, $job_id=NULL, $max_jobs=-1, $single=0)</argsstring>
+        <name>tripal_launch_job</name>
+        <param>
+          <declname>$do_parallel</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <declname>$job_id</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$max_jobs</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <declname>$single</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function used to manually launch all queued tripal jobs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$do_parallel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean indicating whether jobs should be attempted to run in parallel</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>To launch a specific job provide the job id. This option should be used sparingly as the jobs queue managment system should launch jobs based on order and priority. However there are times when a specific job needs to be launched and this argument will allow it. Only jobs which have not been run previously will run. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$max_jobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of jobs that should be run concurrently. If -1 then unlimited. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$single</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ensures only a single job is run rather then the entire queue. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="347" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="347" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga3de6b96aba36fd173ae6118ce40897c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_max_jobs_exceeded</definition>
+        <argsstring>($max_jobs)</argsstring>
+        <name>tripal_max_jobs_exceeded</name>
+        <param>
+          <declname>$max_jobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check for too many concurrent jobs.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$max_jobs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of concurrent jobs to allow; -1 = no limit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="200" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="200" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga3b535cc716ccea28d82c0bd274a3efa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_rerun_job</definition>
+        <argsstring>($job_id, $goto_jobs_page=TRUE)</argsstring>
+        <name>tripal_rerun_job</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <param>
+          <declname>$goto_jobs_page</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set a job to be re-run (ie: add it back into the job queue).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job_id of the job to be re-ran </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$goto_jobs_page</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to TRUE then after the re run job is added Drupal will redirect to the jobs page </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="245" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="245" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/db7/group__tripal__jobs__api_1ga9d47a24fd67bb0434432d6f10f2d1054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_set_job_progress</definition>
+        <argsstring>($job_id, $percentage)</argsstring>
+        <name>tripal_set_job_progress</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <param>
+          <declname>$percentage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An internal function for setting the progress for a current job.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job_id to set the progress for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$percentage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The progress to set the job to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on success and False otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.jobs.api.inc" line="453" column="1" bodyfile="tripal/api/tripal.jobs.api.inc" bodystart="453" bodyend="466"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Tripal offers a job management subsystem for managing tasks that may require an extended period of time for completion. Tripal provides several administrative tasks that may time out and not complete due to limitations of the web server. To circumvent this, as well as provide more fine-grained control and monitoring, Tripal uses a jobs management system.</para><para>The Tripal jobs management system allows administrators to submit tasks to be performed which can then be launched through a UNIX command-line PHP script or cron job. This command-line script can be added to a cron entry along-side the Drupal cron entry for automatic, regular launching of Tripal jobs. The order of execution of waiting jobs is determined first by priority and second by the order the jobs were entered. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

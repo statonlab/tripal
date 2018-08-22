@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_95c61758ff3f450f385ed5ab44f03296" kind="dir">
+    <compoundname>legacy/tripal_project/includes</compoundname>
+    <innerfile refid="d5/dd4/tripal__project_8admin_8inc">tripal_project.admin.inc</innerfile>
+    <innerfile refid="db/d97/tripal__project_8chado__node_8inc">tripal_project.chado_node.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_project/includes/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="da/de2/tripal__cv_8cv__defaults_8inc" kind="file" language="PHP">
+    <compoundname>tripal_cv.cv_defaults.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/de2/tripal__cv_8cv__defaults_8inc_1a9499085196ec02c7f4d2b48580b111f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>theme_tripal_cv_admin_set_defaults_form</definition>
+        <argsstring>($variables)</argsstring>
+        <name>theme_tripal_cv_admin_set_defaults_form</name>
+        <param>
+          <declname>$variables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$variables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" line="234" column="1" bodyfile="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" bodystart="234" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="da/de2/tripal__cv_8cv__defaults_8inc_1a28be362207936915332d29507a239c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_cv_admin_ajax_new_default_field_callback</definition>
+        <argsstring>($form, $form_state)</argsstring>
+        <name>tripal_cv_admin_ajax_new_default_field_callback</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" line="226" column="1" bodyfile="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" bodystart="226" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="da/de2/tripal__cv_8cv__defaults_8inc_1a56549f265f55dda49d3223d1a538ab28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_cv_admin_set_defaults_form</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_cv_admin_set_defaults_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" line="7" column="1" bodyfile="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" bodystart="7" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="da/de2/tripal__cv_8cv__defaults_8inc_1a9cb05eb729f6cb43b7740eb2cd67b5d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_cv_admin_set_defaults_form_submit</definition>
+        <argsstring>($form, $form_state)</argsstring>
+        <name>tripal_cv_admin_set_defaults_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" line="199" column="1" bodyfile="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc" bodystart="199" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="da/de2/tripal__cv_8cv__defaults_8inc_1a56549f265f55dda49d3223d1a538ab28" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/de2/tripal__cv_8cv__defaults_8inc_1a56549f265f55dda49d3223d1a538ab28" kindref="member">tripal_cv_admin_set_defaults_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;instructions&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Much<sp/>of<sp/>the<sp/>data<sp/>housed<sp/>in<sp/>Chado<sp/>is<sp/>typed,<sp/>meaning<sp/>that<sp/>a<sp/>&apos;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;controlled<sp/>vocabulary<sp/>describes<sp/>what<sp/>type<sp/>of<sp/>data<sp/>the<sp/>record<sp/>is.<sp/>For<sp/>example,<sp/>&apos;</highlight><highlight class="normal">.</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;a<sp/>feature<sp/>must<sp/>have<sp/>a<sp/>&quot;type&quot;<sp/>which<sp/>is<sp/>typically<sp/>a<sp/>term<sp/>from<sp/>&apos;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;the<sp/>Sequence<sp/>Ontology.<sp/>Record<sp/>properties<sp/>typically<sp/>have<sp/>a<sp/>type<sp/>as<sp/>well.<sp/>&apos;</highlight><highlight class="normal">.</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Tripal<sp/>allows<sp/>the<sp/>administrator<sp/>to<sp/>set<sp/>a<sp/>default<sp/>type<sp/>for<sp/>each<sp/>table<sp/>in<sp/>&apos;</highlight><highlight class="normal">.</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Chado<sp/>that<sp/>requires<sp/>a<sp/>type<sp/>from<sp/>a<sp/>vocabulary.<sp/>By<sp/>default,<sp/>autocomplete<sp/>fields,<sp/>&apos;</highlight><highlight class="normal">.</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type<sp/>select<sp/>boxes<sp/>and<sp/>type<sp/>validation<sp/>occur<sp/>using<sp/>the<sp/>default<sp/>vocabularies<sp/>set<sp/>below.<sp/>&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>list<sp/>of<sp/>all<sp/>tables<sp/>that<sp/>use<sp/>the<sp/>cvterm<sp/>table<sp/>as<sp/>an<sp/>FK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>$cvterm_schema<sp/>=<sp/><ref refid="d4/d51/group__tripal__chado__schema__api_1ga4b5ac309e4f88af0e2454099336ac1d8" kindref="member">chado_get_schema</ref>(</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>$referring_tables<sp/>=<sp/>$cvterm_schema[</highlight><highlight class="stringliteral">&apos;referring_tables&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>list<sp/>of<sp/>tables<sp/>that<sp/>already<sp/>have<sp/>default<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>$cv_defaults<sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_cv_defaults&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;TCD&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;TCD&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;cv_default_id&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;table_name&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;cv_id&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;orderBy(</highlight><highlight class="stringliteral">&apos;table_name&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ASC&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;execute();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>list<sp/>of<sp/>vocabularies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>$cvs<sp/>=<sp/><ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaaa1de332dfbd88bd1d717549d7c3810d" kindref="member">tripal_get_cv_select_options</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;fieldset&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Configured<sp/>Defaults&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>following<sp/>tables<sp/>have<sp/>a<sp/>default<sp/>vocabulary&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#tree&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($cv_defaults<sp/>as<sp/>$cv_default)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>$cv_default_id<sp/>=<sp/>$cv_default-&gt;cv_default_id;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>$cv<sp/>=<sp/><ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga9f03e9576873f620ecd0435f81add17d" kindref="member">tripal_get_cv</ref>(array(</highlight><highlight class="stringliteral">&apos;cv_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_default-&gt;cv_id));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;hidden&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_default_id,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;table_name-display&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_default-&gt;table_name</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;field_name-display&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_default-&gt;field_name</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>for<sp/>use<sp/>in<sp/>submit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;table_name&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;hidden&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_default-&gt;table_name</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;field_name&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;hidden&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_default-&gt;field_name</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Selectbox<sp/>to<sp/>set<sp/>the<sp/>vocabulary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty($cv))<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$default_cv<sp/>=<sp/>$cv_default-&gt;cv_id;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$cvs[0]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;NONE<sp/>SET&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$default_cv<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;vocabulary&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;select&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cvs,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$default_cv,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Actions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>$view_terms<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;New<sp/>Vocabulary&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/loaders/chado_vocabs/chado_cv/add&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>$add_term<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty($cv))<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$view_terms<sp/>=<sp/>l(</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;View<sp/>Terms&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/loaders/chado_vocabs/chado_cvterms&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;query&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;cv&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv-&gt;name))</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$add_term<sp/>=<sp/>l(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Add<sp/>Term&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/loaders/chado_vocabs/chado_cv/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$cv-&gt;cv_id<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/cvterm/add&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;view-terms&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$view_terms</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">][$cv_default_id][</highlight><highlight class="stringliteral">&quot;add-new-term&quot;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$add_term</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Update<sp/>Defaults&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Adding<sp/>new<sp/>CV<sp/>Defaults</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;fieldset&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Add<sp/>New<sp/>Defaults&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;You<sp/>can<sp/>use<sp/>the<sp/>form<sp/>below<sp/>to<sp/>add<sp/>a<sp/>default<sp/>controlled<sp/>vocabulary</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>a<sp/>table/field<sp/>combination<sp/>not<sp/>available<sp/>in<sp/>the<sp/>&quot;Configured<sp/>Defaults&quot;<sp/>section<sp/>above.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#collapsible&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#collapsed&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#tree&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#prefix&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&lt;div<sp/>id=&quot;new-default&quot;&gt;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#suffix&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&lt;/div&gt;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>$tripal_msg<sp/>=<sp/><ref refid="d9/dae/group__tripal__notify__api_1ga8c4c41c79200e1d3c8145386f12eaa4e" kindref="member">tripal_set_message</ref>(</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;If<sp/>you<sp/>are<sp/>developing<sp/>a<sp/>custom<sp/>module<sp/>and<sp/>would<sp/>like<sp/>to<sp/>use<sp/>the<sp/>Default<sp/>Controlled</highlight></codeline>
+<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>Vocabulary<sp/>API<sp/>to<sp/>flexibly<sp/>set<sp/>the<sp/>controlled<sp/>vocabulary,<sp/>then<sp/>it<sp/>is<sp/>better<sp/>to<sp/>set</highlight></codeline>
+<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>default<sp/>programatically<sp/>rather<sp/>than<sp/>through<sp/>this<sp/>interface.<sp/>To<sp/>do<sp/>this<sp/>&lt;ol&gt;</highlight></codeline>
+<codeline lineno="129"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;Tell<sp/>Tripal<sp/>about<sp/>the<sp/>table/field<sp/>you<sp/>would<sp/>like<sp/>to<sp/>set<sp/>the<sp/>default<sp/>for.<sp/>This</highlight></codeline>
+<codeline lineno="130"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>done<sp/>by<sp/>implementing<sp/>hook_install()<sp/>in<sp/>your<sp/>modules<sp/>.install<sp/>file<sp/>and<sp/>adding</highlight></codeline>
+<codeline lineno="131"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>call<sp/>to<sp/>&lt;code&gt;tripal_set_default_cv([table<sp/>name],<sp/>[field<sp/>name],<sp/>[cv<sp/>name])&lt;/code&gt;<sp/>which</highlight></codeline>
+<codeline lineno="132"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>will<sp/>set<sp/>the<sp/>default<sp/>for<sp/>&lt;code&gt;[table<sp/>name].[field<sp/>name]&lt;/code&gt;<sp/>to<sp/>the<sp/>&lt;code&gt;[cv<sp/>name]&lt;/code&gt;<sp/>controlled</highlight></codeline>
+<codeline lineno="133"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vocabulary.<sp/>This<sp/>vocabulary<sp/>must<sp/>already<sp/>exist.&lt;/li&gt;</highlight></codeline>
+<codeline lineno="134"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;Then<sp/>everywhere<sp/>in<sp/>your<sp/>module<sp/>that<sp/>you<sp/>need<sp/>to<sp/>know<sp/>the<sp/>controlled<sp/>vocabulary,</highlight></codeline>
+<codeline lineno="135"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>you<sp/>call<sp/>&lt;code&gt;tripal_get_default_cv([table<sp/>name],<sp/>[field<sp/>name])&lt;/code&gt;<sp/>which<sp/>will<sp/>return</highlight></codeline>
+<codeline lineno="136"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>an<sp/>object<sp/>describing<sp/>the<sp/>set<sp/>default<sp/>controlled<sp/>vocabulary<sp/>or<sp/>call</highlight></codeline>
+<codeline lineno="137"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;code&gt;tripal_get_cvterm_default_select_options([table<sp/>name],<sp/>[field<sp/>name],<sp/>[field<sp/>friendly<sp/>name])&lt;/code&gt;</highlight></codeline>
+<codeline lineno="138"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>you<sp/>would<sp/>like<sp/>an<sp/>array<sp/>of<sp/>options<sp/>for<sp/>use<sp/>in<sp/>a<sp/>select<sp/>or<sp/>autocomplete<sp/>form<sp/>element.&lt;/li&gt;&lt;/ol&gt;</highlight></codeline>
+<codeline lineno="139"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;return_html&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;instructions&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$tripal_msg</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>$chado_tables<sp/>=<sp/><ref refid="d4/d51/group__tripal__chado__schema__api_1gab04e970eafe1a6789ad11d4e266ebe4b" kindref="member">chado_get_table_names</ref>(TRUE);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>$chado_tables[0]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Select<sp/>a<sp/>Table&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;select&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Table<sp/>Name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;The<sp/>name<sp/>of<sp/>the<sp/>table<sp/>you<sp/>would<sp/>like<sp/>to<sp/>set<sp/>a<sp/>controlled<sp/>vocabulary<sp/>default<sp/>for.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$chado_tables,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#ajax&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;callback&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_cv_admin_ajax_new_default_field_callback&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;wrapper&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;new-default&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>(isset($form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">]))?<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">]<sp/>:<sp/>FALSE;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a19d2a3d21fe02053311fde465e6ae2e9" kindref="member">$columns</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Select<sp/>a<sp/>Field&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>table<sp/>description</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>$table_desc<sp/>=<sp/><ref refid="d4/d51/group__tripal__chado__schema__api_1ga4b5ac309e4f88af0e2454099336ac1d8" kindref="member">chado_get_schema</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($table_desc[</highlight><highlight class="stringliteral">&apos;foreign<sp/>keys&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($table_desc[</highlight><highlight class="stringliteral">&apos;foreign<sp/>keys&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;columns&apos;</highlight><highlight class="normal">]<sp/>as<sp/>$left_column<sp/>=&gt;<sp/>$right_column)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a19d2a3d21fe02053311fde465e6ae2e9" kindref="member">$columns</ref>[$left_column]<sp/>=<sp/>$left_column;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;field&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;select&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Field<sp/>Name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;The<sp/>name<sp/>of<sp/>the<sp/>field<sp/>you<sp/>would<sp/>like<sp/>to<sp/>set<sp/>a<sp/>controlled<sp/>vocabulary<sp/>default<sp/>for.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a19d2a3d21fe02053311fde465e6ae2e9" kindref="member">$columns</ref>,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>$cvs[0]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Select<sp/>a<sp/>Vocabulary&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;select&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Vocabulary&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;The<sp/>default<sp/>controlled<sp/>vocabulary<sp/>you<sp/>would<sp/>like<sp/>to<sp/>set<sp/>for<sp/>this<sp/>field.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cvs,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;add_new&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Set<sp/>New<sp/>Default&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="da/de2/tripal__cv_8cv__defaults_8inc_1a9cb05eb729f6cb43b7740eb2cd67b5d2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/de2/tripal__cv_8cv__defaults_8inc_1a9cb05eb729f6cb43b7740eb2cd67b5d2" kindref="member">tripal_cv_admin_set_defaults_form_submit</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;triggering_element&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Update<sp/>Defaults&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">]<sp/>as<sp/>$default_cv)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty($default_cv[</highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/ddc/group__tripal__legacy__chado__cv__api_1ga7a1256f4cf89d3cddf830feebc9ff144" kindref="member">tripal_set_default_cv</ref>(</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$default_cv[</highlight><highlight class="stringliteral">&apos;table_name&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$default_cv[</highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">//<sp/>We<sp/>are<sp/>passing<sp/>in<sp/>the<sp/>cv_id<sp/>so<sp/>we<sp/>don&apos;t<sp/>need<sp/>the<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$default_cv[</highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;triggering_element&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Set<sp/>New<sp/>Default&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty($form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/ddc/group__tripal__legacy__chado__cv__api_1ga7a1256f4cf89d3cddf830feebc9ff144" kindref="member">tripal_set_default_cv</ref>(</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;field&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">//<sp/>We<sp/>are<sp/>passing<sp/>in<sp/>the<sp/>cv_id<sp/>so<sp/>we<sp/>don&apos;t<sp/>need<sp/>the<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="da/de2/tripal__cv_8cv__defaults_8inc_1a28be362207936915332d29507a239c63" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/de2/tripal__cv_8cv__defaults_8inc_1a28be362207936915332d29507a239c63" kindref="member">tripal_cv_admin_ajax_new_default_field_callback</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;new&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="da/de2/tripal__cv_8cv__defaults_8inc_1a9499085196ec02c7f4d2b48580b111f2" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/de2/tripal__cv_8cv__defaults_8inc_1a9499085196ec02c7f4d2b48580b111f2" kindref="member">theme_tripal_cv_admin_set_defaults_form</ref>($variables)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;element&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;table_name&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Table<sp/>Name&apos;</highlight><highlight class="normal">),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;20%&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Field<sp/>Name&apos;</highlight><highlight class="normal">),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;20%&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Default<sp/>Vocabulary&apos;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;30%&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;actions&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Actions&apos;</highlight><highlight class="normal">),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;30%&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">]<sp/>as<sp/>$key<sp/>=&gt;<sp/>$value)<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_numeric($key))<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>$action_links<sp/>=<sp/>&apos;&lt;ul<sp/>class=&quot;links<sp/>inline&quot;&gt;&apos;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!empty($value[&apos;view-terms&apos;]))<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$action_links<sp/>.=<sp/>&apos;&lt;li&gt;&apos;<sp/>.<sp/>drupal_render($value[&apos;view-terms&apos;])<sp/>.<sp/>&apos;&lt;/li&gt;&apos;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!empty($value[&apos;add-new-term&apos;]))<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$action_links<sp/>.=<sp/>&apos;&lt;li&gt;&apos;<sp/>.<sp/>drupal_render($value[&apos;add-new-term&apos;])<sp/>.<sp/>&apos;&lt;/li&gt;&apos;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>$action_links<sp/>.=<sp/>&apos;&lt;/li&gt;&lt;/ul&gt;&apos;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drupal_render($value[</highlight><highlight class="stringliteral">&apos;table_name-display&apos;</highlight><highlight class="normal">]),</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drupal_render($value[</highlight><highlight class="stringliteral">&apos;field_name-display&apos;</highlight><highlight class="normal">]),</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drupal_render($value[</highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal">]),</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$action_links</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>$settings_table<sp/>=<sp/>theme(</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">,<sp/>array(</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref>,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/>));</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;existing&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$settings_table,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>I<sp/>believe<sp/>rendering<sp/>of<sp/>the<sp/>form<sp/>should<sp/>not<sp/>happen<sp/>here.<sp/>But<sp/>rather</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>form<sp/>should<sp/>be<sp/>returned<sp/>as<sp/>is.<sp/>This<sp/>way<sp/>other<sp/>modules<sp/>can<sp/>have<sp/>access</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>the<sp/>form<sp/>elements<sp/>via<sp/>the<sp/>hook_form_alter.<sp/><sp/>Rather,<sp/>there<sp/>should</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>be<sp/>a<sp/>theme<sp/>function<sp/>for<sp/>the<sp/>form<sp/>where<sp/>the<sp/>rendering<sp/>in<sp/>the<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>should<sp/>occur.<sp/><sp/>See<sp/>the<sp/>tripal_pub_importer_setup_form()<sp/>for<sp/>an<sp/>exmaple.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>drupal_render_children(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_cv/includes/tripal_cv.cv_defaults.inc"/>
+  </compounddef>
+</doxygen>

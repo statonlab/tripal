@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/d2e/classChadoField" kind="class" language="PHP" prot="public">
+    <compoundname>ChadoField</compoundname>
+    <basecompoundref refid="d9/d83/classTripalField" prot="public" virt="non-virtual">TripalField</basecompoundref>
+    <derivedcompoundref refid="d3/d1c/classchado__linker____contact" prot="public" virt="non-virtual">chado_linker__contact</derivedcompoundref>
+    <derivedcompoundref refid="d7/d66/classchado__linker____prop" prot="public" virt="non-virtual">chado_linker__prop</derivedcompoundref>
+    <derivedcompoundref refid="d9/dfa/classdata____accession" prot="public" virt="non-virtual">data__accession</derivedcompoundref>
+    <derivedcompoundref refid="d9/d45/classdata____protein__sequence" prot="public" virt="non-virtual">data__protein_sequence</derivedcompoundref>
+    <derivedcompoundref refid="df/d0f/classdata____sequence" prot="public" virt="non-virtual">data__sequence</derivedcompoundref>
+    <derivedcompoundref refid="db/d79/classdata____sequence__checksum" prot="public" virt="non-virtual">data__sequence_checksum</derivedcompoundref>
+    <derivedcompoundref refid="d2/d73/classdata____sequence__coordinates" prot="public" virt="non-virtual">data__sequence_coordinates</derivedcompoundref>
+    <derivedcompoundref refid="d8/d69/classdata____sequence__length" prot="public" virt="non-virtual">data__sequence_length</derivedcompoundref>
+    <derivedcompoundref refid="d5/d97/classefo____array__design" prot="public" virt="non-virtual">efo__array_design</derivedcompoundref>
+    <derivedcompoundref refid="d8/dd4/classgo____gene__expression" prot="public" virt="non-virtual">go__gene_expression</derivedcompoundref>
+    <derivedcompoundref refid="d3/d51/classlocal____contact" prot="public" virt="non-virtual">local__contact</derivedcompoundref>
+    <derivedcompoundref refid="d8/dc2/classlocal____source__data" prot="public" virt="non-virtual">local__source_data</derivedcompoundref>
+    <derivedcompoundref refid="dd/d87/classobi____organism" prot="public" virt="non-virtual">obi__organism</derivedcompoundref>
+    <derivedcompoundref refid="d3/d4d/classogi____location__on__map" prot="public" virt="non-virtual">ogi__location_on_map</derivedcompoundref>
+    <derivedcompoundref refid="d6/d08/classoperation____analysis" prot="public" virt="non-virtual">operation__analysis</derivedcompoundref>
+    <derivedcompoundref refid="d3/dbf/classoperation____phylotree__vis" prot="public" virt="non-virtual">operation__phylotree_vis</derivedcompoundref>
+    <derivedcompoundref refid="de/dbf/classsbo____database__cross__reference" prot="public" virt="non-virtual">sbo__database_cross_reference</derivedcompoundref>
+    <derivedcompoundref refid="d1/d20/classsbo____phenotype" prot="public" virt="non-virtual">sbo__phenotype</derivedcompoundref>
+    <derivedcompoundref refid="d8/da0/classsbo____relationship" prot="public" virt="non-virtual">sbo__relationship</derivedcompoundref>
+    <derivedcompoundref refid="d4/dfb/classschema____additional__type" prot="public" virt="non-virtual">schema__additional_type</derivedcompoundref>
+    <derivedcompoundref refid="db/d5a/classschema____alternate__name" prot="public" virt="non-virtual">schema__alternate_name</derivedcompoundref>
+    <derivedcompoundref refid="d4/d2d/classschema____publication" prot="public" virt="non-virtual">schema__publication</derivedcompoundref>
+    <derivedcompoundref refid="d2/d4b/classsep____protocol" prot="public" virt="non-virtual">sep__protocol</derivedcompoundref>
+    <derivedcompoundref refid="da/d79/classsio____annotation" prot="public" virt="non-virtual">sio__annotation</derivedcompoundref>
+    <derivedcompoundref refid="d4/df3/classsio____references" prot="public" virt="non-virtual">sio__references</derivedcompoundref>
+    <derivedcompoundref refid="dc/d2e/classsio____vocabulary" prot="public" virt="non-virtual">sio__vocabulary</derivedcompoundref>
+    <derivedcompoundref refid="d0/d77/classso____cds" prot="public" virt="non-virtual">so__cds</derivedcompoundref>
+    <derivedcompoundref refid="de/d57/classso____genotype" prot="public" virt="non-virtual">so__genotype</derivedcompoundref>
+    <derivedcompoundref refid="d1/dbb/classso____transcript" prot="public" virt="non-virtual">so__transcript</derivedcompoundref>
+    <derivedcompoundref refid="dd/d84/classtaxrank____infraspecific__taxon" prot="public" virt="non-virtual">taxrank__infraspecific_taxon</derivedcompoundref>
+    <derivedcompoundref refid="d2/dc3/classuo____unit" prot="public" virt="non-virtual">uo__unit</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d2/d2e/classChadoField_1aec5fc1b49043cd79b3afd757f5b9b8af" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>ChadoField::$default_description</definition>
+        <argsstring></argsstring>
+        <name>$default_description</name>
+        <initializer>= &apos;The generic base class for all Chado fields. Replace this text as appropriate for the child implementation.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="9" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d2e/classChadoField_1a694708bd1d5a2d536796bcf84c4a1e97" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>ChadoField::$default_instance_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_instance_settings</name>
+        <initializer>= array(
+    
+    &apos;term_vocabulary&apos; =&gt; &apos;schema&apos;,
+    
+    &apos;term_name&apos; =&gt; &apos;Thing&apos;,
+    
+    &apos;term_accession&apos; =&gt; &apos;Thing&apos;,
+    
+    
+    
+    &apos;term_fixed&apos; =&gt; FALSE,
+    
+    &apos;chado_table&apos; =&gt; &apos;&apos;,
+    
+    &apos;chado_column&apos; =&gt; &apos;&apos;,
+    
+    &apos;base_table&apos; =&gt; &apos;&apos;,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="27" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d2e/classChadoField_1a20e10e4ab5d3db3d222af40822b9dbc8" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>ChadoField::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Chado Field&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="6" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d2e/classChadoField_1a9817680008bd4ddb9b79963e5693eb04" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>ChadoField::$default_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_settings</name>
+        <initializer>= array(
+    &apos;storage&apos; =&gt; &apos;field_chado_storage&apos;,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="16" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d2e/classChadoField_1a937549576f1c0f4b780b00bd75f76ce1" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>ChadoField::$download_formatters</definition>
+        <argsstring></argsstring>
+        <name>$download_formatters</name>
+        <initializer>= array(
+    &apos;<ref refid="d5/db9/classTripalTabDownloader" kindref="compound">TripalTabDownloader</ref>&apos;,
+    &apos;<ref refid="d5/dde/classTripalCSVDownloader" kindref="compound">TripalCSVDownloader</ref>&apos;,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="48" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d2e/classChadoField_1aced383d240ca9dd98182dbb108428789" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>ChadoField::$module</definition>
+        <argsstring></argsstring>
+        <name>$module</name>
+        <initializer>= &apos;tripal_chado&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="54" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/d2e/classChadoField_1a47395feda70f37e0ba66c4e3fe4e61dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChadoField::instanceSettingsForm</definition>
+        <argsstring>()</argsstring>
+        <name>instanceSettingsForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a6ebb1f27b527656c1b8f2eb8b7c162f5" kindref="member">TripalField::instanceSettingsForm()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="155" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="155" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d2e/classChadoField_1af990f3973aee880c2a0bb7737dab1c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChadoField::query</definition>
+        <argsstring>($query, $condition)</argsstring>
+        <name>query</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$condition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a13bf29985f7baeb3ebaadafbd5a1b4af" kindref="member">TripalField::query()</ref></para></simplesect>
+In addition to the rules to follow for the <ref refid="d9/d83/classTripalField_1a13bf29985f7baeb3ebaadafbd5a1b4af" kindref="member">TripalField::query</ref> function these should also be followed for the <ref refid="d2/d2e/classChadoField_1af990f3973aee880c2a0bb7737dab1c47" kindref="member">ChadoField::query</ref> implementation.</para><para><itemizedlist>
+<listitem><para>When giving alias to joined tables be sure to use aliases that are unique to avoid conflicts with other fields.</para></listitem><listitem><para>When joining with the base table its alias is &apos;base&apos;.</para></listitem><listitem><para>You may join to materialized views if need be to help speed queries. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="67" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="67" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d2e/classChadoField_1a6286dc84a2995106bd910f6487ec942c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChadoField::queryOrder</definition>
+        <argsstring>($query, $order)</argsstring>
+        <name>queryOrder</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1ab25da330b54416993407b7a9b2944daf" kindref="member">TripalField::queryOrder()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="93" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="93" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d2/d2e/classChadoField_1a601b04d112c9d4e5721240646aacd676" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChadoField::queryJoinOnce</definition>
+        <argsstring>($query, $table, $alias, $condition, $type=&apos;INNER&apos;)</argsstring>
+        <name>queryJoinOnce</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$alias</declname>
+        </param>
+        <param>
+          <declname>$condition</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+          <defval>&apos;INNER&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A convient way to join a table to a query without duplicates.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SelectQuery object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table to join. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$alias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table alias to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The join condition. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of join: INNER, LEFT OUTER, or RIGHT OUTER. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="132" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="132" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="90">
+        <label>sio__references</label>
+        <link refid="d4/df3/classsio____references"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>data__sequence_checksum</label>
+        <link refid="db/d79/classdata____sequence__checksum"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>schema__additional_type</label>
+        <link refid="d4/dfb/classschema____additional__type"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>local__contact</label>
+        <link refid="d3/d51/classlocal____contact"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>ogi__location_on_map</label>
+        <link refid="d3/d4d/classogi____location__on__map"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>sbo__phenotype</label>
+        <link refid="d1/d20/classsbo____phenotype"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>operation__phylotree_vis</label>
+        <link refid="d3/dbf/classoperation____phylotree__vis"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>taxrank__infraspecific_taxon</label>
+        <link refid="dd/d84/classtaxrank____infraspecific__taxon"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>data__sequence_coordinates</label>
+        <link refid="d2/d73/classdata____sequence__coordinates"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>data__sequence</label>
+        <link refid="df/d0f/classdata____sequence"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>sbo__relationship</label>
+        <link refid="d8/da0/classsbo____relationship"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>so__transcript</label>
+        <link refid="d1/dbb/classso____transcript"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>so__cds</label>
+        <link refid="d0/d77/classso____cds"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>sio__annotation</label>
+        <link refid="da/d79/classsio____annotation"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>schema__alternate_name</label>
+        <link refid="db/d5a/classschema____alternate__name"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>efo__array_design</label>
+        <link refid="d5/d97/classefo____array__design"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>data__sequence_length</label>
+        <link refid="d8/d69/classdata____sequence__length"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>uo__unit</label>
+        <link refid="d2/dc3/classuo____unit"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>sbo__database_cross_reference</label>
+        <link refid="de/dbf/classsbo____database__cross__reference"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>operation__analysis</label>
+        <link refid="d6/d08/classoperation____analysis"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>go__gene_expression</label>
+        <link refid="d8/dd4/classgo____gene__expression"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>schema__publication</label>
+        <link refid="d4/d2d/classschema____publication"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>sio__vocabulary</label>
+        <link refid="dc/d2e/classsio____vocabulary"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+      <node id="66">
+        <label>chado_linker__contact</label>
+        <link refid="d3/d1c/classchado__linker____contact"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>chado_linker__prop</label>
+        <link refid="d7/d66/classchado__linker____prop"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>obi__organism</label>
+        <link refid="dd/d87/classobi____organism"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>data__protein_sequence</label>
+        <link refid="d9/d45/classdata____protein__sequence"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>data__accession</label>
+        <link refid="d9/dfa/classdata____accession"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>sep__protocol</label>
+        <link refid="d2/d4b/classsep____protocol"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>local__source_data</label>
+        <link refid="d8/dc2/classlocal____source__data"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>so__genotype</label>
+        <link refid="de/d57/classso____genotype"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="97">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="98" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/ChadoField.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoField.inc" bodystart="3" bodyend="173"/>
+    <listofallmembers>
+      <member refid="d2/d2e/classChadoField_1aec5fc1b49043cd79b3afd757f5b9b8af" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$default_description</name></member>
+      <member refid="d9/d83/classTripalField_1ad73be894eba7acd0ebf39ec6e6135639" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$default_formatter</name></member>
+      <member refid="d2/d2e/classChadoField_1a694708bd1d5a2d536796bcf84c4a1e97" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$default_instance_settings</name></member>
+      <member refid="d2/d2e/classChadoField_1a20e10e4ab5d3db3d222af40822b9dbc8" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$default_label</name></member>
+      <member refid="d2/d2e/classChadoField_1a9817680008bd4ddb9b79963e5693eb04" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$default_settings</name></member>
+      <member refid="d9/d83/classTripalField_1ac8caafeee15102a42825fe1bd4277fb7" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$default_widget</name></member>
+      <member refid="d2/d2e/classChadoField_1a937549576f1c0f4b780b00bd75f76ce1" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$download_formatters</name></member>
+      <member refid="d9/d83/classTripalField_1ac348ce236b7cac6147688950011fdba6" prot="protected" virt="non-virtual"><scope>ChadoField</scope><name>$field</name></member>
+      <member refid="d9/d83/classTripalField_1a727666618c87cb60c6ab9f5e446d6426" prot="protected" virt="non-virtual"><scope>ChadoField</scope><name>$instance</name></member>
+      <member refid="d2/d2e/classChadoField_1aced383d240ca9dd98182dbb108428789" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$module</name></member>
+      <member refid="d9/d83/classTripalField_1a873652ed4421c1bc211cdca2346352b8" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$no_data</name></member>
+      <member refid="d9/d83/classTripalField_1a0bfccf918c71c300fccea11387d8aefc" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>$no_ui</name></member>
+      <member refid="d9/d83/classTripalField_1a12856487b2ad310c3dfcee9eae0e86ad" prot="protected" virt="non-virtual"><scope>ChadoField</scope><name>$term</name></member>
+      <member refid="d9/d83/classTripalField_1a931ee11a0e3b061a1674f51d186a0988" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>__construct</name></member>
+      <member refid="d9/d83/classTripalField_1a9c44d0017dbdc82ad4f532ce8cb71c4c" prot="protected" virt="non-virtual"><scope>ChadoField</scope><name>_addViewsDataElement</name></member>
+      <member refid="d9/d83/classTripalField_1a643ad3ef2e6fb2c673574b680afedc5e" prot="protected" virt="non-virtual"><scope>ChadoField</scope><name>_addWebServiceElement</name></member>
+      <member refid="d9/d83/classTripalField_1a650474e013a387db620223a4265e503d" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>createInstance</name></member>
+      <member refid="d9/d83/classTripalField_1a96952e870cbe0b4a48d72f0d1c20b21c" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>elementInfo</name></member>
+      <member refid="d9/d83/classTripalField_1a36a8044117bb191fba3a0afd117e5434" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>getField</name></member>
+      <member refid="d9/d83/classTripalField_1a7b9ceac2a0d39163bf55e4ed29bed952" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>getFieldName</name></member>
+      <member refid="d9/d83/classTripalField_1af7de8b5df22756288b7a348764df68e0" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>getFieldTerm</name></member>
+      <member refid="d9/d83/classTripalField_1a3db0d92e211e261afea7e105750d2e9f" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>getFieldTermID</name></member>
+      <member refid="d9/d83/classTripalField_1a1c29066b53a4ffce951132920e5ac0bf" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>getInstance</name></member>
+      <member refid="d9/d83/classTripalField_1af7335ce38156505ff54bd1757bb536b0" prot="protected" virt="non-virtual"><scope>ChadoField</scope><name>getPagerElementID</name></member>
+      <member refid="d9/d83/classTripalField_1ac8bf46bbbeaf0bae8bf6b979cc1733ca" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>info</name></member>
+      <member refid="d2/d2e/classChadoField_1a47395feda70f37e0ba66c4e3fe4e61dc" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>instanceSettingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1ade5041044ae4a23ee6bc47ce8266506a" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>instanceSettingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1a892a0cff2ff98ef41beefa55527cdd9c" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>load</name></member>
+      <member refid="d2/d2e/classChadoField_1af990f3973aee880c2a0bb7737dab1c47" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>query</name></member>
+      <member refid="d2/d2e/classChadoField_1a601b04d112c9d4e5721240646aacd676" prot="protected" virt="non-virtual"><scope>ChadoField</scope><name>queryJoinOnce</name></member>
+      <member refid="d2/d2e/classChadoField_1a6286dc84a2995106bd910f6487ec942c" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>queryOrder</name></member>
+      <member refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>settingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1a2d4baff5cde41b3f39f373ab7f4ad9ef" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>settingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1ae8ae933722cd9340c3994a700427330a" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>validate</name></member>
+      <member refid="d9/d83/classTripalField_1aa0233ddbb9411c58c7eafc657fef97a6" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>viewsData</name></member>
+      <member refid="d9/d83/classTripalField_1a2db49fcfd34816cd41683a5c7722491a" prot="public" virt="non-virtual"><scope>ChadoField</scope><name>webServicesData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

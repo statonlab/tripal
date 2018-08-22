@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a952ad5a6460d2848d59eedef6beb721" kind="dir">
+    <compoundname>legacy/tripal_genetic/includes</compoundname>
+    <innerfile refid="d0/da2/tripal__genetic_8admin_8inc">tripal_genetic.admin.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_genetic/includes/"/>
+  </compounddef>
+</doxygen>

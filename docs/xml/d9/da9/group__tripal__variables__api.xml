@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d9/da9/group__tripal__variables__api" kind="group">
+    <compoundname>tripal_variables_api</compoundname>
+    <title>Variables</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d9/da9/group__tripal__variables__api_1ga377e23d9ee9f48da4394389fa3d6404b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_variable</definition>
+        <argsstring>($name)</argsstring>
+        <name>tripal_get_variable</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the variable name record.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the variable to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A record object containg the variable. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.variables.api.inc" line="76" column="1" bodyfile="tripal/api/tripal.variables.api.inc" bodystart="76" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/da9/group__tripal__variables__api_1ga5e75a5502190885c06fa72cc55545383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_variable</definition>
+        <argsstring>($name, $description)</argsstring>
+        <name>tripal_insert_variable</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new variable name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the variable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description for the variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A record object containg the variable that was added if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.variables.api.inc" line="36" column="1" bodyfile="tripal/api/tripal.variables.api.inc" bodystart="36" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) for managing variables associated with Tripal managed content. The Tripal Variables API supports storing any type of variable such as a property or setting that should be associated with a Tripal managed content. Variables are meant to store non-biological information only because biological data should be stored together in the primary data store (e.g. Chado). Be aware that any data stored as a Tripal Variable will not be made visible through services such as Tripal Web Services and therefore can be a good place to hide application specific settings. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

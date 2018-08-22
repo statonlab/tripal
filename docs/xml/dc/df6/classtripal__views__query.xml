@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/df6/classtripal__views__query" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_query</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">views_plugin_query</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a4982252db953f91a6788e8982044c75a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::add_field</definition>
+        <argsstring>($table_alias, $field_name, $alias=&apos;&apos;, $params=array())</argsstring>
+        <name>add_field</name>
+        <param>
+          <declname>$table_alias</declname>
+        </param>
+        <param>
+          <declname>$field_name</declname>
+        </param>
+        <param>
+          <declname>$alias</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$params</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="61" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="61" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a68084cd60eb950967c62066c2bb8056b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::add_orderby</definition>
+        <argsstring>($table, $field_name=NULL, $order=&apos;ASC&apos;, $alias=&apos;&apos;, $params=array())</argsstring>
+        <name>add_orderby</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$field_name</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$order</declname>
+          <defval>&apos;ASC&apos;</defval>
+        </param>
+        <param>
+          <declname>$alias</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$params</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overrides <ref refid="dc/df6/classtripal__views__query_1a68084cd60eb950967c62066c2bb8056b" kindref="member">add_orderby()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="204" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="204" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a2faba73cd6eb36c26e11d95ec68b521b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::add_relationship</definition>
+        <argsstring>($alias, $join, $base, $link_point=NULL)</argsstring>
+        <name>add_relationship</name>
+        <param>
+          <declname>$alias</declname>
+        </param>
+        <param>
+          <declname>$join</declname>
+        </param>
+        <param>
+          <declname>$base</declname>
+        </param>
+        <param>
+          <declname>$link_point</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function copied from views_plugin_query_default::add_relationship </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="408" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="408" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1af92f22120bed2337fafff1489cf9f3b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::add_where</definition>
+        <argsstring>($group, $field_name, $value=NULL, $operator=NULL)</argsstring>
+        <name>add_where</name>
+        <param>
+          <declname>$group</declname>
+        </param>
+        <param>
+          <declname>$field_name</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$operator</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a simple WHERE clause to the query.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WHERE group to add these to; groups are used to create AND/OR sections. Groups cannot be nested. Use 0 as the default group. If the group does not yet exist it will be created as an AND group. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the field to check. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to test the field against. In most cases, this is a scalar. For more complex options, it is an array. The meaning of each element in the array is dependent on the $operator. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$operator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The comparison operator, such as =, &lt;, or &gt;=. It also accepts more complex options such as IN, LIKE, or BETWEEN. Defaults to IN if $value is an array = otherwise. If $field is a string you have to use &apos;formula&apos; here. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="89" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="89" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a3a62b47335454a65cdb0cb0858db6e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::add_where_expression</definition>
+        <argsstring>($group, $snippet, $args=array())</argsstring>
+        <name>add_where_expression</name>
+        <param>
+          <declname>$group</declname>
+        </param>
+        <param>
+          <declname>$snippet</declname>
+        </param>
+        <param>
+          <declname>$args</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add&apos;s a where exression clause to a query.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WHERE group to add these to; groups are used to create AND/OR sections. Groups cannot be nested. Use 0 as the default group. If the group does not yet exist it will be created as an AND group. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$snippet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The snippet to check. This can be either a column or a complex expression like &quot;UPPER(table.field) = &apos;value&apos;&quot;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of arguments. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="178" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="178" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a371b7c1d547cd587ea61bde566c13d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::build</definition>
+        <argsstring>(&amp;$view)</argsstring>
+        <name>build</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overrides <ref refid="dc/df6/classtripal__views__query_1a371b7c1d547cd587ea61bde566c13d11" kindref="member">build()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="242" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="242" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1af8e170c17b0b62bed7e663b7bd07f236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::ensure_table</definition>
+        <argsstring>($table, $relationship=NULL, $join=NULL)</argsstring>
+        <name>ensure_table</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$relationship</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$join</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure a table exists in the queue.</para><para>This function overrides the views_plugin_query version of the function but does nothing other than return the &quot;table&quot; (or bundle) name as we won&apos;t be using aliases for bundles.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unaliased name of the table to ensure. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$relationship</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The relationship to ensure the table links to. Each relationship will get a unique instance of the table being added. If not specified, will be the primary table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$join</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A views_join object (or derived object) to join the alias in.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The alias used to refer to this specific table, or NULL if the table cannot be ensured. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="25" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a283a7630442dcbbc8043648fdb6e9c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::execute</definition>
+        <argsstring>(&amp;$view)</argsstring>
+        <name>execute</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="263" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="263" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a062d7eb3ad925e765fc6cd12eb54ad10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::init</definition>
+        <argsstring>($base_table=&apos;tripal_entity&apos;, $base_field=&apos;id&apos;, $options)</argsstring>
+        <name>init</name>
+        <param>
+          <declname>$base_table</declname>
+          <defval>&apos;tripal_entity&apos;</defval>
+        </param>
+        <param>
+          <declname>$base_field</declname>
+          <defval>&apos;id&apos;</defval>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="33" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="33" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df6/classtripal__views__query_1a8fb849f2a503a18e6171fb31f4278a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_query::placeholder</definition>
+        <argsstring>()</argsstring>
+        <name>placeholder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a unique placeholders for handlers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal_views_query.inc" line="397" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="397" bodyend="402"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="905">
+        <label>views_plugin_query</label>
+      </node>
+      <node id="904">
+        <label>tripal_views_query</label>
+        <link refid="dc/df6/classtripal__views__query"/>
+        <childnode refid="905" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="907">
+        <label>views_plugin_query</label>
+      </node>
+      <node id="906">
+        <label>tripal_views_query</label>
+        <link refid="dc/df6/classtripal__views__query"/>
+        <childnode refid="907" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/tripal_views_query.inc" line="3" column="1" bodyfile="tripal/tripal_views_query.inc" bodystart="3" bodyend="421"/>
+    <listofallmembers>
+      <member refid="dc/df6/classtripal__views__query_1a4982252db953f91a6788e8982044c75a" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>add_field</name></member>
+      <member refid="dc/df6/classtripal__views__query_1a68084cd60eb950967c62066c2bb8056b" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>add_orderby</name></member>
+      <member refid="dc/df6/classtripal__views__query_1a2faba73cd6eb36c26e11d95ec68b521b" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>add_relationship</name></member>
+      <member refid="dc/df6/classtripal__views__query_1af92f22120bed2337fafff1489cf9f3b8" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>add_where</name></member>
+      <member refid="dc/df6/classtripal__views__query_1a3a62b47335454a65cdb0cb0858db6e62" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>add_where_expression</name></member>
+      <member refid="dc/df6/classtripal__views__query_1a371b7c1d547cd587ea61bde566c13d11" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>build</name></member>
+      <member refid="dc/df6/classtripal__views__query_1af8e170c17b0b62bed7e663b7bd07f236" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>ensure_table</name></member>
+      <member refid="dc/df6/classtripal__views__query_1a283a7630442dcbbc8043648fdb6e9c2c" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>execute</name></member>
+      <member refid="dc/df6/classtripal__views__query_1a062d7eb3ad925e765fc6cd12eb54ad10" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>init</name></member>
+      <member refid="dc/df6/classtripal__views__query_1a8fb849f2a503a18e6171fb31f4278a96" prot="public" virt="non-virtual"><scope>tripal_views_query</scope><name>placeholder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

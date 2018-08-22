@@ -1,0 +1,926 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="de/dc4/group__tripal__chado__query__api" kind="group">
+    <compoundname>tripal_chado_query_api</compoundname>
+    <title>Chado Query</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga505526c4020094917810067bfc4c42b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_db_select</definition>
+        <argsstring>($table, $alias=NULL, array $options=array())</argsstring>
+        <name>chado_db_select</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$alias</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>array</type>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A replacment for db_select when querying Chado.</para><para>Use this function instead of db_select when querying Chado tables.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base table for this query. May be a string or another SelectQuery object. If a query object is passed, it will be used as a subselect. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$alias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The alias for the base table of this query. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options to control how the query operates.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new SelectQuery object for this connection. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="2066" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="2066" bodyend="2085"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1gaad9a3b9f75cdf27faac5d05d39d4831d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_delete_record</definition>
+        <argsstring>($table, $match, $options=NULL)</argsstring>
+        <name>chado_delete_record</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$match</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a generic function for deleting a record(s) from any chado table.</para><para>Use this function to delete a record(s) in any Chado table. The first argument specifies the table to delete from and the second is an array of values to match for locating the record(s) to be deleted. The arrays are mutli-dimensional such that foreign key lookup values can be specified.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the chado table for inserting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$match</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the values for locating a record to update. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Currently there are no options. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success this function returns TRUE. On failure, it returns FALSE.</para></simplesect>
+Example usage: <programlisting><codeline><highlight class="normal">*$umatch<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g7&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">*$uvalues<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;mRNA&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$result<sp/>=<sp/>chado_update_record(&apos;feature&apos;,<sp/>$umatch,<sp/>$uvalues);</highlight></codeline>
+</programlisting> The above code species that a feature with a given uniquename, organism_id, and type_id (the unique constraint for the feature table) will be deleted. The organism_id is specified as a nested array that uses the organism_id foreign key constraint to lookup the specified values to find the exact organism_id. The same nested struture is also used for specifying the values to update. The function will find all records that match the columns specified and delete them.</para><para>: Support Complex filtering as is done in <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="972" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="972" bodyend="1074"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga6e68ea2778dcfe74d6bb672dc00158d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_schema_name</definition>
+        <argsstring>($schema=&apos;chado&apos;)</argsstring>
+        <name>chado_get_schema_name</name>
+        <param>
+          <declname>$schema</declname>
+          <defval>&apos;chado&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the name of the PostgreSQL schema housing Chado or Drupal.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$schema</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wehter you want the schema name for &apos;chado&apos; or &apos;drupal&apos;. Chado is the default. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the PostgreSQL schema housing the $schema specified. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1992" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1992" bodyend="2010"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga58c9cf065ae5581e5c8cb43b32ff92b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_table_max_rank</definition>
+        <argsstring>($tablename, $where_options)</argsstring>
+        <name>chado_get_table_max_rank</name>
+        <param>
+          <declname>$tablename</declname>
+        </param>
+        <param>
+          <declname>$where_options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get max rank for a given set of criteria.</para><para>This function was developed with the many property tables in chado in mind but will work for any table with a rank.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tablename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the chado table you want to select the max rank from this table must contain a rank column of type integer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>where_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array( &lt;column_name&gt; =&gt; array( &apos;type&apos; =&gt; &lt;type of column: INT/STRING&gt;, &apos;value&apos; =&gt; &lt;the value=&quot;&quot; you=&quot;&quot; want=&quot;&quot; to=&quot;&quot; filter=&quot;&quot; on&gt;=&quot;&quot;&gt;, &apos;exact&apos; =&gt; &lt;if TRUE use =; if FALSE use ~&gt;, ) ) where options should include the id and type for that table to correctly group a set of records together where the only difference are the value and rank.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The maximum rank. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="243" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="243" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_insert_record</definition>
+        <argsstring>($table, $values, $options=array())</argsstring>
+        <name>chado_insert_record</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a generic routine for inserting into any Chado table</para><para>Use this function to insert a record into any Chado table. The first argument specifies the table for inserting and the second is an array of values to be inserted. The array is mutli-dimensional such that foreign key lookup values can be specified.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the chado table for inserting </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the values for inserting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options such as:<itemizedlist>
+<listitem><para>skip_validation: TRUE or FALSE. If TRUE will skip all the validation steps and just try to insert as is. This is much faster but results in unhandled non user-friendly errors if the insert fails.</para></listitem><listitem><para>return_record: by default, the function will return the record but with the primary keys added after insertion. To simply return TRUE on success set this option to FALSE</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success this function returns the inserted record with the new primary keys added to the returned array. On failure, it returns FALSE.</para></simplesect>
+Example usage: <programlisting><codeline><highlight class="normal">$values<sp/>=<sp/><sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>chado_insert_record(&apos;feature&apos;,$values);</highlight></codeline>
+</programlisting> The above code inserts a record into the feature table. The $values array is nested such that the organism is selected by way of the organism_id foreign key constraint by specifying the genus and species. The cvterm is also specified using its foreign key and the cv_id for the cvterm is nested as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="423" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="423" bodyend="650"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga91a009002dbe996de1fc872f62680821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_pager_get_count</definition>
+        <argsstring>($element)</argsstring>
+        <name>chado_pager_get_count</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A function to retrieve the total number of records for a pager that was generated using the <ref refid="de/dc4/group__tripal__chado__query__api_1gac91ff3e1e9d83a71cfe5505d18c89744" kindref="member">chado_pager_query()</ref> function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The $element argument that was passed to the chado_pager_query function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1848" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1848" bodyend="1858"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1gac91ff3e1e9d83a71cfe5505d18c89744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_pager_query</definition>
+        <argsstring>($query, $args, $limit, $element, $count_query=&apos;&apos;)</argsstring>
+        <name>chado_pager_query</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$args</declname>
+        </param>
+        <param>
+          <declname>$limit</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$count_query</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this function instead of pager_query() when selecting a subset of records from a Chado table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SQL statement to execute, this is followed by a variable number of args used as substitution values in the SQL statement. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of arguments for the query. They keys are the placeholders </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of query results to display per page. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An numeric identifier used to distinguish between multiple pagers on one page. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$count_query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An SQL query used to count matching records.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A database query result resource or FALSE if the query was not executed correctly </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1803" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1803" bodyend="1837"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_query</definition>
+        <argsstring>($sql, $args=array())</argsstring>
+        <name>chado_query</name>
+        <param>
+          <declname>$sql</declname>
+        </param>
+        <param>
+          <declname>$args</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A substitute for db_query() when querying from Chado.</para><para>This function is needed to avoid switching databases when making query to the chado database.</para><para>Will use a chado persistent connection if it already exists.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$sql</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sql statement to execute</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of arguments, with the same structure as passed to the db_query() function of Drupal.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DatabaseStatementInterface A prepared statement object, already executed.</para></simplesect>
+Example usage: <programlisting><codeline><highlight class="normal">$sql<sp/>=<sp/>&quot;SELECT<sp/>F.name,<sp/>CVT.name<sp/>as<sp/>type_name,<sp/>ORG.common_name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>{feature}<sp/>F</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEFT<sp/>JOIN<sp/>{cvterm}<sp/>CVT<sp/>ON<sp/>F.type_id<sp/>=<sp/>CVT.cvterm_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEFT<sp/>JOIN<sp/>{organism}<sp/>ORG<sp/>ON<sp/>F.organism_id<sp/>=<sp/>ORG.organism_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHERE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F.uniquename<sp/>=<sp/>:feature_uniquename&quot;;</highlight></codeline>
+<codeline><highlight class="normal">$args<sp/>=<sp/>array(<sp/>&apos;:feature_uniquename&apos;<sp/>=&gt;<sp/>$form_state[&apos;values&apos;][&apos;uniquename&apos;]<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>chado_query($sql,<sp/>$args);</highlight></codeline>
+<codeline><highlight class="normal">while<sp/>($r<sp/>=<sp/>$results-&gt;fetchObject())<sp/>{<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Do<sp/>something<sp/>with<sp/>the<sp/>record<sp/>object<sp/>$r</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1656" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1656" bodyend="1737"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga5efd428891631486ead2970f548fc78b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_schema_get_foreign_key</definition>
+        <argsstring>($table_desc, $field, $values, $options=NULL)</argsstring>
+        <name>chado_schema_get_foreign_key</name>
+        <param>
+          <declname>$table_desc</declname>
+        </param>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the value of a foreign key relationship.</para><para>This function is used by chado_select_record, chado_insert_record, and chado_update_record to iterate through the associate array of values that gets passed to each of those routines. The values array is nested where foreign key constraints are used to specify a value that. <linebreak/>
+See documentation for any of those functions for further information.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A table description for the table with the foreign key relationship to be identified generated by hook_chado_&lt;table name&gt;_schema() </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field in the table that is the foreign key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the values </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of additional options where the key is the option and the value is the value of that option. These options are passed on to chado_select_record.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Additional Options Include:<itemizedlist>
+<listitem><para>case_insensitive_columns An array of columns to do a case insensitive search on.</para></listitem><listitem><para>regex_columns An array of columns where the value passed in should be treated as a regular expression</para></listitem></itemizedlist>
+</para><para><simplesect kind="return"><para>A string containg the results of the foreign key lookup, or FALSE if failed.</para></simplesect>
+Example usage: <programlisting><codeline><highlight class="normal">$values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$value<sp/>=<sp/>chado_schema_get_foreign_key(&apos;feature&apos;,<sp/>&apos;organism_id&apos;,$values);</highlight></codeline>
+</programlisting> The above code selects a record from the feature table using the three fields that uniquely identify a feature. The $columns array simply lists the columns to select. The $values array is nested such that the organism is identified by way of the organism_id foreign key constraint by specifying the genus and species. The cvterm is also specified using its foreign key and the cv_id for the cvterm is nested as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1909" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1909" bodyend="1979"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_select_record</definition>
+        <argsstring>($table, $columns, $values, $options=NULL)</argsstring>
+        <name>chado_select_record</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$columns</declname>
+        </param>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a generic routine for selecting data from a Chado table.</para><para>Use this function to perform a simple select from any Chado table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the chado table for inserting </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$columns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of column names </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the values for filtering the results. In the case where multiple values for the same time are to be selected an additional entry for the field should appear for each value. If you need to filter results using more complex methods see the &apos;Complex Filtering&apos; section below. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of additional options where the key is the option and the value is the value of that option.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Additional Options Include:<itemizedlist>
+<listitem><para>has_record Set this argument to &apos;TRUE&apos; to have this function return a numeric value for the number of records rather than the array of records. this can be useful in &apos;if&apos; statements to check the presence of particula records.</para></listitem><listitem><para>return_sql Set this to &apos;TRUE&apos; to have this function return an array where the first element is the sql that would have been run and the second is an array of arguments.</para></listitem><listitem><para>case_insensitive_columns An array of columns to do a case insensitive search on.</para></listitem><listitem><para>regex_columns An array of columns where the value passed in should be treated as a regular expression</para></listitem><listitem><para>order_by An associative array containing the column names of the table as keys and the type of sort (i.e. ASC, DESC) as the values. The results in the query will be sorted by the key values in the direction listed by the value</para></listitem><listitem><para>is_duplicate: TRUE or FALSE. Checks the values submited to see if they violate any of the unique constraints. If not, the record is returned, if so, FALSE is returned.</para></listitem><listitem><para>pager: Use this option if it is desired to return only a subset of results so that they may be shown with in a Drupal-style pager. This should be an array with two keys: &apos;limit&apos; and &apos;element&apos;. The value of &apos;limit&apos; should specify the number of records to return and &apos;element&apos; is a unique integer to differentiate between pagers when more than one appear on a page. The &apos;element&apos; should start with zero and increment by one for each pager. -limit: Specifies the number of records to return. -offset: Indicates the number of records to skip before returning records.</para></listitem></itemizedlist>
+</para><para><simplesect kind="return"><para>An array of results, FALSE if the query was not executed correctly, an empty array if no records were matched, or the number of records in the dataset if $has_record is set. If the option &apos;is_duplicate&apos; is provided and the record is a duplicate it will return the duplicated record. If the &apos;has_record&apos; option is provided a value of TRUE will be returned if a record exists and FALSE will bee returned if there are not records.</para></simplesect>
+Example usage: <programlisting><codeline><highlight class="normal">$columns<sp/>=<sp/>array(&apos;feature_id&apos;,<sp/>&apos;name&apos;);</highlight></codeline>
+<codeline><highlight class="normal">$values<sp/>=<sp/><sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>array(&apos;sinensis&apos;,<sp/>&apos;clementina&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$options<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;order_by&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;ASC&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>chado_select_record(&apos;feature&apos;,$columns,$values,$options);</highlight></codeline>
+</programlisting> The above code selects a record from the feature table using the three fields that uniquely identify a feature. The $columns array simply lists the columns to select. The $values array is nested such that the organism is identified by way of the organism_id foreign key constraint by specifying the genus and species. The cvterm is also specified using its foreign key and the cv_id for the cvterm is nested as well. In the example above, two different species are allowed to match</para><para>Complex Filtering: All of the documentation above supports filtering based on &apos;is equal to&apos; or &apos;is NULL&apos;. If your criteria doesn&apos;t fall into one of these two categories then you need to provide an array with additional details such as the operator as well as the value. An example follows and will be discussed in detail. <programlisting><codeline><highlight class="normal"><sp/>$columns<sp/>=<sp/>array(&apos;feature_id&apos;,<sp/>&apos;fmin&apos;,<sp/>&apos;fmax&apos;);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Regular<sp/>criteria<sp/>specifying<sp/>the<sp/>parent<sp/>feature<sp/>to<sp/>retrieve<sp/>locations<sp/>from.</highlight></codeline>
+<codeline><highlight class="normal">$values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;srcfeature_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;MtChr01&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;pseudomolecule&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Complex<sp/>filtering<sp/>to<sp/>specify<sp/>the<sp/>range<sp/>to<sp/>return<sp/>locations<sp/>from.</highlight></codeline>
+<codeline><highlight class="normal">$values[&apos;fmin&apos;][]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;op&apos;<sp/>=&gt;<sp/>&apos;&gt;&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;data&apos;<sp/>=&gt;<sp/>15</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$values[&apos;fmin&apos;][]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;op&apos;<sp/>=&gt;<sp/>&apos;&lt;&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;data&apos;<sp/>=&gt;<sp/>100</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$results<sp/>=<sp/>chado_select_record(&apos;featureloc&apos;,<sp/>$columns,<sp/>$values);</highlight></codeline>
+</programlisting> The above code example will return all of the name, start and end of all the features that start within MtChr1:15-100bp. Note that complex filtering can be used in conjunction with basic filtering and that multiple criteria, even for the same field can be entered. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1203" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1203" bodyend="1578"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga66adc458ea9a4fb41f262fcc5071b194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_select_record_check_value_type</definition>
+        <argsstring>(&amp;$op, &amp;$value, $type)</argsstring>
+        <name>chado_select_record_check_value_type</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$op</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$value</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper Function: check that the value is the correct type.</para><para>This function is used by <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> when building the $where clause array to ensure that any single values are the correct type based on the table definition. Furthermore, it ensures that NULL&apos;s are caught changing the operator to &apos;IS NULL&apos;. <programlisting><codeline><highlight class="normal">$op<sp/>=<sp/>&apos;=&apos;;</highlight></codeline>
+<codeline><highlight class="normal">chado_select_record_check_value_type($op,<sp/>$value,<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$table_desc[&apos;fields&apos;][$field][&apos;type&apos;]);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">$where[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;field&apos;<sp/>=&gt;<sp/>$field,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;op&apos;<sp/>=&gt;<sp/>$op,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;data&apos;<sp/>=&gt;<sp/>$value</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operator being used. This is mostly passed in to allow it to be changed if a NULL value is detected. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be checked and adjusted. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type from the table definition that&apos;s used to determine the type of value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1610" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1610" bodyend="1619"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1gab385af166be5f0707544ccbc18c3fe72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_set_active</definition>
+        <argsstring>($dbname=&apos;default&apos;)</argsstring>
+        <name>chado_set_active</name>
+        <param>
+          <declname>$dbname</declname>
+          <defval>&apos;default&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the Tripal Database</para><para>The chado_set_active function is used to prevent namespace collisions when Chado and Drupal are installed in the same database but in different schemas. It is also used when using Drupal functions such as db_table_exists().</para><para>The connection settings can be altered through the hook hook_chado_connection_alter.</para><para>Current active connection name is stored in the global variable $GLOBALS[&apos;chado_active_db&apos;].</para><para><simplesect kind="see"><para><ref refid="de/dc4/group__tripal__chado__query__api_1gac7cbda77e8539c43333732b1b0b59ec7" kindref="member">hook_chado_connection_alter()</ref></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$dbname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Global variable $GLOBALS[&apos;chado_active_db&apos;]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="328" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="328" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga35aa655c2c929858ab05df18bc807541" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_update_record</definition>
+        <argsstring>($table, $match, $values, $options=NULL)</argsstring>
+        <name>chado_update_record</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$match</declname>
+        </param>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a generic routine for updating into any Chado table.</para><para>Use this function to update a record in any Chado table. The first argument specifies the table for inserting, the second is an array of values to matched for locating the record for updating, and the third argument give the values to update. The arrays are mutli-dimensional such that foreign key lookup values can be specified.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the chado table for inserting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$match</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the values for locating a record to update. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the values for updating. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options such as:<itemizedlist>
+<listitem><para>return_record: by default, the function will return the TRUE if the record was succesfully updated. However, set this option to TRUE to return the record that was updated. The returned record will have the fields provided but the primary key (if available for the table) will be added to the record.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success this function returns TRUE. On failure, it returns FALSE.</para></simplesect>
+Example usage: <programlisting><codeline><highlight class="normal"><sp/>$umatch<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g7&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>$uvalues<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;mRNA&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>$result<sp/>=<sp/>chado_update_record(&apos;feature&apos;,$umatch,$uvalues);</highlight></codeline>
+</programlisting> The above code species that a feature with a given uniquename, organism_id, and type_id (the unique constraint for the feature table) will be updated. The organism_id is specified as a nested array that uses the organism_id foreign key constraint to lookup the specified values to find the exact organism_id. The same nested struture is also used for specifying the values to update. The function will find the record that matches the columns specified and update the record with the avlues in the $uvalues array.</para><para>: Support Complex filtering as is done in <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="719" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="719" bodyend="913"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1gac7cbda77e8539c43333732b1b0b59ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_chado_connection_alter</definition>
+        <argsstring>(&amp;$settings)</argsstring>
+        <name>hook_chado_connection_alter</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alter Chado connection settings.</para><para>This hook is useful for multi-chado instances. Tripal core functions call the <ref refid="de/dc4/group__tripal__chado__query__api_1gab385af166be5f0707544ccbc18c3fe72" kindref="member">chado_set_active()</ref> function (e.g. chado_query) but there is no opportunity elsewhere to set the active database. This is useful in two cases: 1) Users are managed at the database level as in the case of SouthGreen Bioinformatics Platform tools (e.g. Banana Genone Hub). This allows custom modules to change the database connections on a per-user basis, and each user permissions is managed at the database level. Users are managed at the database level to provid the same access restrictions across various tools that use Chado (e,g, Artemis) 2) When there are simply two Chado instances housed in different Chado databases and the module needs to control which one is being used at any given time.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array containing</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="de/dc4/group__tripal__chado__query__api_1gab385af166be5f0707544ccbc18c3fe72" kindref="member">chado_set_active()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="293" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="293" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1gaa0f6f7f4ca867f2b0339d4076b13d75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_chado_get_schema_name_alter</definition>
+        <argsstring>($schema_name, $context)</argsstring>
+        <name>hook_chado_get_schema_name_alter</name>
+        <param>
+          <declname>$schema_name</declname>
+        </param>
+        <param>
+          <declname>$context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alter the name of the schema housing Chado and/or Drupal.</para><para>This example implementation shows a solution for the case where your chado database was well established in the &quot;public&quot; schema and you added Drupal later in a &quot;drupal&quot; schema. Please note that this has not been tested and while we can ensure that Tripal will work as expected, we have no control over whether Drupal is compatible with not being in the public schema. That&apos;s why we recommened the organization we have (ie: Chado in a &quot;chado&quot; schema and Drupal in the "public schema).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$schema_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current name of the schema as known by Tripal. This is likely the default set in <ref refid="de/dc4/group__tripal__chado__query__api_1ga6e68ea2778dcfe74d6bb672dc00158d8" kindref="member">chado_get_schema_name()</ref> but in the case of multiple alter hooks, it might be different. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an array of items to provide context.<itemizedlist>
+<listitem><para>schema: this is the schema that was passed to <ref refid="de/dc4/group__tripal__chado__query__api_1ga6e68ea2778dcfe74d6bb672dc00158d8" kindref="member">chado_get_schema_name()</ref> and will be either &quot;chado&quot; or &quot;drupal&quot;. This should be used to determine you are changing the name of the correct schema. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="2034" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="2034" bodyend="2047"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dc4/group__tripal__chado__query__api_1ga7802d34a5601ff376cf74f03b9e4385c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_chado_query_alter</definition>
+        <argsstring>(&amp;$sql, &amp;$args)</argsstring>
+        <name>hook_chado_query_alter</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$sql</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This hook provides a way for module developers to alter any/all queries on the chado schema by Tripal.</para><para>Example: a module developer might want to remove schema prefixing from queries and rely on the search path. This alter hook would allow them to do that by implementing mymodule_chado_query_alter($sql, $args) and using a regular expression to remove table prefixing from the query.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$sql</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string describing the SQL query to be executed by Tripal. All parameters should be indicated by :tokens with values being in the $args array and all tables should be prefixed with the schema name described in <ref refid="de/dc4/group__tripal__chado__query__api_1ga6e68ea2778dcfe74d6bb672dc00158d8" kindref="member">chado_get_schema_name()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of arguments where the key is the token used in $sql (for example, :value) and the value is the value you would like substituted in. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.query.api.inc" line="1760" column="1" bodyfile="tripal_chado/api/tripal_chado.query.api.inc" bodystart="1760" bodyend="1778"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an API for querying of chado including inserting, updating, deleting and selecting from specific chado tables. There is also a generic function, <ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query()</ref>, to execute and SQL statement on chado. It is ideal to use these functions to interact with chado in order to keep your module compatible with both local &amp; external chado databases. Furthermore, it ensures connection to the chado database is taken care of for you.</para><para>Generic Queries to a specifc chado table:</para><para>chado_select_record( [table name], [columns to select], [specify record to select], [options*] ) This function allows you to select various columns from the specified chado table. Although you can only select from a single table, you can specify the record to select using values from related tables through use of a nested array. For example, the following code shows you how to select the name and uniquename of a feature based on it&apos;s type and source organism. <programlisting><codeline><highlight class="normal">$values<sp/>=<sp/><sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>chado_select_record(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;feature&apos;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>table<sp/>to<sp/>select<sp/>from</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>array(&apos;name&apos;,<sp/>&apos;uniquename&apos;),<sp/><sp/><sp/><sp/>//<sp/>columns<sp/>to<sp/>select</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>$values<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>record<sp/>to<sp/>select<sp/>(see<sp/>variable<sp/>defn.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>above)</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>chado_insert_record( [table name], [values to insert], [options*] ) This function allows you to insert a single record into a specific table. The values to insert are specified using an associative array where the keys are the column names to insert into and they point to the value to be inserted into that column. If the column is a foreign key, the key will point to an array specifying the record in the foreign table and then the primary key of that record will be inserted in the column. For example, the following code will insert a feature and for the type_id, the cvterm.cvterm_id of the cvterm record will be inserted and for the organism_id, the organism.organism_id of the organism_record will be inserted. <programlisting><codeline><highlight class="normal">$values<sp/>=<sp/><sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>chado_insert_record(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;feature&apos;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>table<sp/>to<sp/>insert<sp/>into</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$values<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>values<sp/>to<sp/>insert</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>chado_update_record( [table name], [specify record to update], [values to change], [options*] ) This function allows you to update records in a specific chado table. The record(s) you wish to update are specified the same as in the select function above and the values to be update are specified the same as the values to be inserted were. For example, the following code species that a feature with a given uniquename, organism_id, and type_id (the unique constraint for the feature table) will be updated with a new name, and the type changed from a gene to an mRNA. <programlisting><codeline><highlight class="normal">$umatch<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g7&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$uvalues<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;orange1.1g000034m.g&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;mRNA&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$result<sp/>=<sp/>chado_update_record(&apos;feature&apos;,$umatch,$uvalues);</highlight></codeline>
+</programlisting></para><para>chado_delete_record( [table name], [specify records to delete], [options*] ) This function allows you to delete records from a specific chado table. The record(s) to delete are specified the same as the record to select/update was above. For example, the following code will delete all genes from the organism Citrus sinensis. <programlisting><codeline><highlight class="normal">$values<sp/>=<sp/><sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;organism_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;genus&apos;<sp/>=&gt;<sp/>&apos;Citrus&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;species&apos;<sp/>=&gt;<sp/>&apos;sinensis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;cv_id&apos;<sp/>=&gt;<sp/>array<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;is_obsolete&apos;<sp/>=&gt;<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>chado_select_record(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;feature&apos;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>table<sp/>to<sp/>select<sp/>from</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>$values<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>records<sp/>to<sp/>delete<sp/>(see<sp/>variable<sp/>defn.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>above)</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>Generic Queries for any SQL:</para><para>Often it is necessary to select from more then one table in chado or to execute other complex queries that cannot be handled efficiently by the above functions. It is for this reason that the chado_query( [sql string], [arguments to sub-in to the sql] ) function was created. This function allows you to execute any SQL directly on the chado database and should be used with care. If any user input will be used in the query make sure to put a placeholder in your SQL string and then define the value in the arguments array. This will make sure that the user input is santized and safe through type-checking and escaping. The following code shows an example of how to use user input resulting from a form and would be called withing the form submit function. <programlisting><codeline><highlight class="normal">$sql<sp/>=<sp/>&quot;SELECT<sp/>F.name,<sp/>CVT.name<sp/>as<sp/>type_name,<sp/>ORG.common_name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>feature<sp/>F</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEFT<sp/>JOIN<sp/>cvterm<sp/>CVT<sp/>ON<sp/>F.type_id<sp/>=<sp/>CVT.cvterm_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEFT<sp/>JOIN<sp/>organism<sp/>ORG<sp/>ON<sp/>F.organism_id<sp/>=<sp/>ORG.organism_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHERE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>F.uniquename<sp/>=<sp/>:feature_uniquename&quot;;</highlight></codeline>
+<codeline><highlight class="normal">$args<sp/>=<sp/>array(<sp/>&apos;:feature_uniquename&apos;<sp/>=&gt;<sp/>$form_state[&apos;values&apos;][&apos;uniquename&apos;]<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>chado_query(<sp/>$sql,<sp/>$args<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">foreach<sp/>($result<sp/>as<sp/>$r)<sp/>{<sp/>[Do<sp/>something<sp/>with<sp/>the<sp/>records<sp/>here]<sp/>}</highlight></codeline>
+</programlisting></para><para>If you are going to need more then a couple fields, you might want to use the Chado Variables API (specifically <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>) to select all of the common fields needed including following foreign keys.</para><para>Loading of Variables from chado data:</para><para>These functions, <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> and <ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var()</ref>, generate objects containing the full details of a record(s) in chado. These should be used in all theme templates.</para><para>This differs from the objects returned by chado_select_record in so far as all foreign key relationships have been followed meaning you have more complete details. Thus this function should be used whenever you need a full variable and chado_select_record should be used if you only case about a few columns.</para><para>The initial variable is generated by the chado_generate_var([table], [filter criteria], [optional options]) function. An example of how to use this function is: <programlisting><codeline><highlight class="normal">$values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal">&apos;name&apos;<sp/>=&gt;<sp/>&apos;Medtr4g030710&apos;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$features<sp/>=<sp/>chado_generate_var(&apos;feature&apos;,<sp/>$values);</highlight></codeline>
+</programlisting> This will return an object if there is only one feature with the name Medtr4g030710 or it will return an array of feature objects if more than one feature has that name.</para><para>Some tables and fields are excluded by default. To have those tables &amp; fields added to your variable you can use the chado_expand_var([chado variable], [type], [what to expand], [optional options]) function. An example of how to use this function is: <programlisting><codeline><highlight class="normal">Get<sp/>a<sp/>chado<sp/>object<sp/>to<sp/>be<sp/>expanded</highlight></codeline>
+<codeline><highlight class="normal">$values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal">&apos;name&apos;<sp/>=&gt;<sp/>&apos;Medtr4g030710&apos;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$features<sp/>=<sp/>chado_generate_var(&apos;feature&apos;,<sp/>$values);</highlight></codeline>
+<codeline><highlight class="normal">Expand<sp/>the<sp/>organism<sp/>node</highlight></codeline>
+<codeline><highlight class="normal">$feature<sp/>=<sp/>chado_expand_var($feature,<sp/>&apos;node&apos;,<sp/>&apos;organism&apos;);</highlight></codeline>
+<codeline><highlight class="normal">Expand<sp/>the<sp/>feature.residues<sp/>field</highlight></codeline>
+<codeline><highlight class="normal">$feature<sp/>=<sp/>chado_expand_var($feature,<sp/>&apos;field&apos;,<sp/>&apos;feature.residues&apos;);</highlight></codeline>
+<codeline><highlight class="normal">Expand<sp/>the<sp/>feature<sp/>properties<sp/>(featureprop<sp/>table)</highlight></codeline>
+<codeline><highlight class="normal">$feature<sp/>=<sp/>chado_expand_var($feature,<sp/>&apos;table&apos;,<sp/>&apos;featureprop&apos;);</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

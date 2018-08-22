@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/dc7/classtripal__views__handler__filter__boolean__operator" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_filter_boolean_operator</compoundname>
+    <basecompoundref refid="d9/de8/classtripal__views__handler__filter" prot="public" virt="non-virtual">tripal_views_handler_filter</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1ac5a5bb114b52232c5570555f0d449e64" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::$accept_null</definition>
+        <argsstring></argsstring>
+        <name>$accept_null</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="8" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1aacf46ddf20a0daf51fb6f1a45f1c39f9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::$always_multiple</definition>
+        <argsstring></argsstring>
+        <name>$always_multiple</name>
+        <initializer>= TRUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="4" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1ad19403dfd6bb414b4b0efdb85d020aad" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::$no_operator</definition>
+        <argsstring></argsstring>
+        <name>$no_operator</name>
+        <initializer>= TRUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="6" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1aa10ff8b0e11fa8a13123081f94f93415" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::admin_summary</definition>
+        <argsstring>()</argsstring>
+        <name>admin_summary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="109" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="109" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1a58b9a42e51378dc582599ce184b2ba4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::construct</definition>
+        <argsstring>()</argsstring>
+        <name>construct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="10" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="10" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1a69d3fbda2c077031939f8091f0fb7172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::expose_options</definition>
+        <argsstring>()</argsstring>
+        <name>expose_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="126" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1a767cb6dca21c3ad66c64fe20b6fdfc6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::get_value_options</definition>
+        <argsstring>()</argsstring>
+        <name>get_value_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the possible options for this filter.</para><para>Child classes should override this function to set the possible values for the filter. Since this is a boolean filter, the array should have two possible keys: 1 for &quot;True&quot; and 0 for &quot;False&quot;, although the labels can be whatever makes sense for the filter. These values are used for configuring the filter, when the filter is exposed, and in the admin summary of the filter. Normally, this should be static data, but if it&apos;s dynamic for some reason, child classes should use a guard to reduce database hits as much as possible. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="37" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="37" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1a8b15d315ba0fcfef9b40e242c964e85c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::operator_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>operator_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="64" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1ad716d0ecad8e056d5293e721a3b23887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::option_definition</definition>
+        <argsstring>()</argsstring>
+        <name>option_definition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="56" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1a919ce9b356cbb43dc11b5217ce8d496a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::value_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>value_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="68" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="68" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc7/classtripal__views__handler__filter__boolean__operator_1aead3aefcbecc3510195ef80a03bd51f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_boolean_operator::value_validate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>value_validate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="103" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="103" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="820">
+        <label>tripal_views_handler_filter_boolean_operator</label>
+        <link refid="df/dc7/classtripal__views__handler__filter__boolean__operator"/>
+        <childnode refid="821" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="821">
+        <label>tripal_views_handler_filter</label>
+        <link refid="d9/de8/classtripal__views__handler__filter"/>
+        <childnode refid="822" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="822">
+        <label>views_handler_filter</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="823">
+        <label>tripal_views_handler_filter_boolean_operator</label>
+        <link refid="df/dc7/classtripal__views__handler__filter__boolean__operator"/>
+        <childnode refid="824" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="824">
+        <label>tripal_views_handler_filter</label>
+        <link refid="d9/de8/classtripal__views__handler__filter"/>
+        <childnode refid="825" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="825">
+        <label>views_handler_filter</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" line="2" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_filter_boolean_operator.inc" bodystart="2" bodyend="132"/>
+    <listofallmembers>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1ac5a5bb114b52232c5570555f0d449e64" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>$accept_null</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1aacf46ddf20a0daf51fb6f1a45f1c39f9" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>$always_multiple</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1ad19403dfd6bb414b4b0efdb85d020aad" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>$no_operator</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1aa10ff8b0e11fa8a13123081f94f93415" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>admin_summary</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1a58b9a42e51378dc582599ce184b2ba4d" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>construct</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1a69d3fbda2c077031939f8091f0fb7172" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>expose_options</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1a767cb6dca21c3ad66c64fe20b6fdfc6d" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>get_value_options</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1a8b15d315ba0fcfef9b40e242c964e85c" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>operator_form</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1ad716d0ecad8e056d5293e721a3b23887" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>option_definition</name></member>
+      <member refid="d9/de8/classtripal__views__handler__filter_1a1da9c379766c26e4f434986abe58c023" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>query</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1a919ce9b356cbb43dc11b5217ce8d496a" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>value_form</name></member>
+      <member refid="df/dc7/classtripal__views__handler__filter__boolean__operator_1aead3aefcbecc3510195ef80a03bd51f6" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_boolean_operator</scope><name>value_validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

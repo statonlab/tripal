@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d7/dd7/views__handler__field__residues_8inc" kind="file" language="PHP">
+    <compoundname>views_handler_field_residues.inc</compoundname>
+    <innerclass refid="df/d15/classviews__handler__field__residues" prot="public">views_handler_field_residues</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains <ref refid="df/d15/classviews__handler__field__residues" kindref="compound">views_handler_field_residues</ref> field handler </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="13" refid="df/d15/classviews__handler__field__residues" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="df/d15/classviews__handler__field__residues" kindref="compound">views_handler_field_residues</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>views_handler_field<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="df/d15/classviews__handler__field__residues_1ad39e5e2e5bef7732beef4a4ffec80976" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d15/classviews__handler__field__residues_1ad39e5e2e5bef7732beef4a4ffec80976" kindref="member">construct</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::construct();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;additional_fields[</highlight><highlight class="stringliteral">&apos;residues&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;feature&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;field&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;residues&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="df/d15/classviews__handler__field__residues_1a0979626ccfe3eda7a3025991301ffed7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d15/classviews__handler__field__residues_1a0979626ccfe3eda7a3025991301ffed7" kindref="member">query</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;ensure_my_table();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;add_additional_fields();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="df/d15/classviews__handler__field__residues_1a84ae80eb748f874c524196ab3f5a2d81" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d15/classviews__handler__field__residues_1a84ae80eb748f874c524196ab3f5a2d81" kindref="member">render</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>a<sp/>&lt;br&gt;<sp/>every<sp/>100<sp/>bp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ereg_replace(</highlight><highlight class="stringliteral">&quot;(.{100})&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\\1&lt;br<sp/>/&gt;&quot;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>-&gt;feature_residues);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_feature/views_handlers/views_handler_field_residues.inc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="da/d23/tripal__contact__base_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_contact_base.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$contact</definition>
+        <argsstring></argsstring>
+        <name>$contact</name>
+        <initializer>= $variables[&apos;node&apos;]-&gt;contact</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" line="2" column="1" bodyfile="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/tripal__contact__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$headers</definition>
+        <argsstring></argsstring>
+        <name>$headers</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" line="11" column="1" bodyfile="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/tripal__contact__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$rows</definition>
+        <argsstring></argsstring>
+        <name>$rows</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" line="17" column="1" bodyfile="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/tripal__contact__base_8tpl_8php_1a6c3fe53c8aca8eae2dab9bfc1c9e6237" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$rows[]</definition>
+        <argsstring>[]</argsstring>
+        <name>$rows</name>
+        <initializer>= array(
+  array(
+    &apos;data&apos; =&gt; &apos;Name&apos;,
+    &apos;header&apos; =&gt; TRUE,
+    &apos;width&apos; =&gt; &apos;20%&apos;,
+  ),
+  $contact-&gt;name,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" line="20" column="1" bodyfile="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d23/tripal__contact__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" prot="public" static="no" mutable="no">
+        <type>if(user_access(&apos;view ids&apos;))</type>
+        <definition>if (user_access( &apos;view ids&apos;)) $table</definition>
+        <argsstring></argsstring>
+        <name>$table</name>
+        <initializer>= array(
+  &apos;header&apos; =&gt; $headers,
+  &apos;rows&apos; =&gt; $rows,
+  &apos;attributes&apos; =&gt; array(
+    &apos;id&apos; =&gt; &apos;tripal_contact-table-base&apos;,
+    &apos;class&apos; =&gt; &apos;tripal-data-table&apos;
+  ),
+  &apos;sticky&apos; =&gt; FALSE,
+  &apos;caption&apos; =&gt; &apos;&apos;,
+  &apos;colgroups&apos; =&gt; array(),
+  &apos;empty&apos; =&gt; &apos;&apos;,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" line="56" column="1" bodyfile="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2" refid="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" refkind="member"><highlight class="normal"><ref refid="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" kindref="member">$contact</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">]-&gt;contact;<sp/>?&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_contact-data-block-desc<sp/>tripal-data-block-desc&quot;</highlight><highlight class="normal">&gt;&lt;/div&gt;<sp/>&lt;?php</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$headers<sp/>array<sp/>is<sp/>an<sp/>array<sp/>of<sp/>fields<sp/>to<sp/>use<sp/>as<sp/>the<sp/>colum<sp/>headers.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>additional<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>table<sp/>for<sp/>the<sp/>contact<sp/>has<sp/>a<sp/>vertical<sp/>header<sp/>(down<sp/>the<sp/>first<sp/>column)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>so<sp/>we<sp/>do<sp/>not<sp/>provide<sp/>headers<sp/>here,<sp/>but<sp/>specify<sp/>them<sp/>in<sp/>the<sp/>$rows<sp/>array<sp/>below.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="da/d23/tripal__contact__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" refkind="member"><highlight class="normal"><ref refid="da/d23/tripal__contact__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$rows<sp/>array<sp/>contains<sp/>an<sp/>array<sp/>of<sp/>rows<sp/>where<sp/>each<sp/>row<sp/>is<sp/>an<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>values<sp/>for<sp/>each<sp/>column<sp/>of<sp/>the<sp/>table<sp/>in<sp/>that<sp/>row.<sp/><sp/>Additional<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="da/d23/tripal__contact__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" refkind="member"><highlight class="normal"><ref refid="da/d23/tripal__contact__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Contact<sp/>Name<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="da/d23/tripal__contact__base_8tpl_8php_1a6c3fe53c8aca8eae2dab9bfc1c9e6237" refkind="member"><highlight class="normal"><ref refid="da/d23/tripal__contact__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;width&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;20%&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><ref refid="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" kindref="member">$contact</ref>-&gt;name,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Contact<sp/>Type<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="da/d23/tripal__contact__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Type&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" kindref="member">$contact</ref>-&gt;type_id-&gt;name,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>allow<sp/>site<sp/>admins<sp/>to<sp/>see<sp/>the<sp/>contact<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(user_access(</highlight><highlight class="stringliteral">&apos;view<sp/>ids&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pub<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="da/d23/tripal__contact__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Contact<sp/>ID&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-site-admin-only-table-row&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" kindref="member">$contact</ref>-&gt;contact_id,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-site-admin-only-table-row&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$table<sp/>array<sp/>contains<sp/>the<sp/>headers<sp/>and<sp/>rows<sp/>array<sp/>as<sp/>well<sp/>as<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>options<sp/>for<sp/>controlling<sp/>the<sp/>display<sp/>of<sp/>the<sp/>table.<sp/><sp/>Additional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="da/d23/tripal__contact__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" refkind="member"><highlight class="normal"><ref refid="da/d23/tripal__contact__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="da/d23/tripal__contact__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref>,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="da/d23/tripal__contact__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_contact-table-base&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>once<sp/>we<sp/>have<sp/>our<sp/>table<sp/>array<sp/>structure<sp/>defined,<sp/>we<sp/>call<sp/>Drupal&apos;s<sp/>theme_table()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>function<sp/>to<sp/>generate<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">print<sp/>theme_table(<ref refid="da/d23/tripal__contact__base_8tpl_8php_1ac85908e6cb229e644c7f4d1ae77299d6" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists(<ref refid="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" kindref="member">$contact</ref>,<sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">))<sp/>{<sp/>?&gt;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>&lt;div<sp/>style=</highlight><highlight class="stringliteral">&quot;text-align:<sp/>justify&quot;</highlight><highlight class="normal">&gt;&lt;?php<sp/>print<sp/><ref refid="da/d23/tripal__contact__base_8tpl_8php_1afd33e8d1f281f29797152c06814a07bf" kindref="member">$contact</ref>-&gt;description;<sp/>?&gt;&lt;/div&gt;<sp/>&lt;?php<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}<sp/>?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_contact/theme/templates/tripal_contact_base.tpl.php"/>
+  </compounddef>
+</doxygen>

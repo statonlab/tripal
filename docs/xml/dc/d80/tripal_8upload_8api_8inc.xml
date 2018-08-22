@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/d80/tripal_8upload_8api_8inc" kind="file" language="PHP">
+    <compoundname>tripal.upload.api.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/dbc/group__tripal__upload__api_1ga42dfaef56e346dff03fec0a05a953b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_file_upload_check</definition>
+        <argsstring>($action, $details, &amp;$message)</argsstring>
+        <name>hook_file_upload_check</name>
+        <param>
+          <declname>$action</declname>
+        </param>
+        <param>
+          <declname>$details</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to interact with the Tripal file uploader during upload.</para><para>This function is called prior to an &apos;action&apos; aoccuring and allows the module that is responsible for the file upload to halt an upload if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current action that is being peformed during the upload process. The actions are: &apos;save&apos;, &apos;check&apos; and &apos;merge&apos;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing details about the upload process. Valid keys include:<itemizedlist>
+<listitem><para>filename: The name of the file.</para></listitem><listitem><para>file_size: The total size of the file.</para></listitem><listitem><para>chunk_size: The size of the chunk.</para></listitem><listitem><para>fid: The file ID of the file. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An error message to report to the user if the function returns FALSE.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the upload should continue. FALSE if a problem occurs and the upload should be terminated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.upload.api.inc" line="130" column="1" bodyfile="tripal/api/tripal.upload.api.inc" bodystart="130" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) for working with file uploads. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="130" refid="d5/dbc/group__tripal__upload__api_1ga42dfaef56e346dff03fec0a05a953b24" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dbc/group__tripal__upload__api_1ga42dfaef56e346dff03fec0a05a953b24" kindref="member">hook_file_upload_check</ref>($action,<sp/>$details,<sp/>&amp;$message){</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>($action)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;save&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Place<sp/>code<sp/>here<sp/>when<sp/>chunks<sp/>are<sp/>being<sp/>saved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;check&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Place<sp/>code<sp/>here<sp/>when<sp/>a<sp/>chunck<sp/>is<sp/>being<sp/>checked<sp/>if<sp/>the<sp/>upload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>completed<sp/>successfully.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;merge&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Place<sp/>code<sp/>here<sp/>when<sp/>all<sp/>chunks<sp/>will<sp/>be<sp/>merged.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TRUE;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/api/tripal.upload.api.inc"/>
+  </compounddef>
+</doxygen>

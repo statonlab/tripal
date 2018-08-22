@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d6/d08/classoperation____analysis" kind="class" language="PHP" prot="public">
+    <compoundname>operation__analysis</compoundname>
+    <basecompoundref refid="d2/d2e/classChadoField" prot="public" virt="non-virtual">ChadoField</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d6/d08/classoperation____analysis_1ab03409e9c94e3e985ff2baaff15cb954" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__analysis::$default_formatter</definition>
+        <argsstring></argsstring>
+        <name>$default_formatter</name>
+        <initializer>= &apos;<ref refid="d6/d42/classoperation____analysis__formatter" kindref="compound">operation__analysis_formatter</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="35" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d08/classoperation____analysis_1a42c75f9dc19297b8650776e32d04a048" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__analysis::$default_instance_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_instance_settings</name>
+        <initializer>= [
+    
+    &apos;term_vocabulary&apos; =&gt; &apos;operation&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="18" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d08/classoperation____analysis_1a16e5fbbd05fabdc1dd09248d5d0b7cad" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__analysis::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Analysis&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="6" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d08/classoperation____analysis_1ae9295ad522a032c6c3a0b22583fd3906" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>static operation__analysis::$default_widget</definition>
+        <argsstring></argsstring>
+        <name>$default_widget</name>
+        <initializer>= &apos;<ref refid="d3/d82/classoperation____analysis__widget" kindref="compound">operation__analysis_widget</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="32" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d08/classoperation____analysis_1a5dd335c3479ea3a4c2cf4a8ed7f19b1e" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__analysis::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;Application of analytical methods to existing data of a specific type.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="9" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d08/classoperation____analysis_1afd676a68d352a9a2b8db0191d31dc270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>operation__analysis::elementInfo</definition>
+        <argsstring>()</argsstring>
+        <name>elementInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a96952e870cbe0b4a48d72f0d1c20b21c" kindref="member">TripalField::elementInfo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="77" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="77" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d08/classoperation____analysis_1aa025d8883c0e63f67f9c9b33a0549f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>operation__analysis::load</definition>
+        <argsstring>($entity)</argsstring>
+        <name>load</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a892a0cff2ff98ef41beefa55527cdd9c" kindref="member">TripalField::load()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="41" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="41" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d08/classoperation____analysis_1ab42921358bd5df3b63f4e33a2b059df3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>operation__analysis::query</definition>
+        <argsstring>($query, $condition)</argsstring>
+        <name>query</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$condition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d2/d2e/classChadoField_1af990f3973aee880c2a0bb7737dab1c47" kindref="member">ChadoField::query()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="110" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="110" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d08/classoperation____analysis_1a0990e79da7632740f0fac86c40d40c22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>operation__analysis::queryOrder</definition>
+        <argsstring>($query, $order)</argsstring>
+        <name>queryOrder</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d2/d2e/classChadoField_1a6286dc84a2995106bd910f6487ec942c" kindref="member">ChadoField::queryOrder()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="131" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="131" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="414">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="415" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="413">
+        <label>operation__analysis</label>
+        <link refid="d6/d08/classoperation____analysis"/>
+        <childnode refid="414" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="415">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="417">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="418" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>operation__analysis</label>
+        <link refid="d6/d08/classoperation____analysis"/>
+        <childnode refid="417" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__analysis/operation__analysis.inc" bodystart="3" bodyend="145"/>
+    <listofallmembers>
+      <member refid="d2/d2e/classChadoField_1aec5fc1b49043cd79b3afd757f5b9b8af" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$default_description</name></member>
+      <member refid="d6/d08/classoperation____analysis_1ab03409e9c94e3e985ff2baaff15cb954" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$default_formatter</name></member>
+      <member refid="d6/d08/classoperation____analysis_1a42c75f9dc19297b8650776e32d04a048" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$default_instance_settings</name></member>
+      <member refid="d6/d08/classoperation____analysis_1a16e5fbbd05fabdc1dd09248d5d0b7cad" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$default_label</name></member>
+      <member refid="d2/d2e/classChadoField_1a9817680008bd4ddb9b79963e5693eb04" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$default_settings</name></member>
+      <member refid="d6/d08/classoperation____analysis_1ae9295ad522a032c6c3a0b22583fd3906" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$default_widget</name></member>
+      <member refid="d6/d08/classoperation____analysis_1a5dd335c3479ea3a4c2cf4a8ed7f19b1e" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$description</name></member>
+      <member refid="d2/d2e/classChadoField_1a937549576f1c0f4b780b00bd75f76ce1" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$download_formatters</name></member>
+      <member refid="d9/d83/classTripalField_1ac348ce236b7cac6147688950011fdba6" prot="protected" virt="non-virtual"><scope>operation__analysis</scope><name>$field</name></member>
+      <member refid="d9/d83/classTripalField_1a727666618c87cb60c6ab9f5e446d6426" prot="protected" virt="non-virtual"><scope>operation__analysis</scope><name>$instance</name></member>
+      <member refid="d2/d2e/classChadoField_1aced383d240ca9dd98182dbb108428789" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$module</name></member>
+      <member refid="d9/d83/classTripalField_1a873652ed4421c1bc211cdca2346352b8" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$no_data</name></member>
+      <member refid="d9/d83/classTripalField_1a0bfccf918c71c300fccea11387d8aefc" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>$no_ui</name></member>
+      <member refid="d9/d83/classTripalField_1a12856487b2ad310c3dfcee9eae0e86ad" prot="protected" virt="non-virtual"><scope>operation__analysis</scope><name>$term</name></member>
+      <member refid="d9/d83/classTripalField_1a931ee11a0e3b061a1674f51d186a0988" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>__construct</name></member>
+      <member refid="d9/d83/classTripalField_1a9c44d0017dbdc82ad4f532ce8cb71c4c" prot="protected" virt="non-virtual"><scope>operation__analysis</scope><name>_addViewsDataElement</name></member>
+      <member refid="d9/d83/classTripalField_1a643ad3ef2e6fb2c673574b680afedc5e" prot="protected" virt="non-virtual"><scope>operation__analysis</scope><name>_addWebServiceElement</name></member>
+      <member refid="d9/d83/classTripalField_1a650474e013a387db620223a4265e503d" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>createInstance</name></member>
+      <member refid="d6/d08/classoperation____analysis_1afd676a68d352a9a2b8db0191d31dc270" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>elementInfo</name></member>
+      <member refid="d9/d83/classTripalField_1a36a8044117bb191fba3a0afd117e5434" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>getField</name></member>
+      <member refid="d9/d83/classTripalField_1a7b9ceac2a0d39163bf55e4ed29bed952" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>getFieldName</name></member>
+      <member refid="d9/d83/classTripalField_1af7de8b5df22756288b7a348764df68e0" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>getFieldTerm</name></member>
+      <member refid="d9/d83/classTripalField_1a3db0d92e211e261afea7e105750d2e9f" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>getFieldTermID</name></member>
+      <member refid="d9/d83/classTripalField_1a1c29066b53a4ffce951132920e5ac0bf" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>getInstance</name></member>
+      <member refid="d9/d83/classTripalField_1af7335ce38156505ff54bd1757bb536b0" prot="protected" virt="non-virtual"><scope>operation__analysis</scope><name>getPagerElementID</name></member>
+      <member refid="d9/d83/classTripalField_1ac8bf46bbbeaf0bae8bf6b979cc1733ca" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>info</name></member>
+      <member refid="d2/d2e/classChadoField_1a47395feda70f37e0ba66c4e3fe4e61dc" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>instanceSettingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1ade5041044ae4a23ee6bc47ce8266506a" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>instanceSettingsFormValidate</name></member>
+      <member refid="d6/d08/classoperation____analysis_1aa025d8883c0e63f67f9c9b33a0549f27" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>load</name></member>
+      <member refid="d6/d08/classoperation____analysis_1ab42921358bd5df3b63f4e33a2b059df3" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>query</name></member>
+      <member refid="d2/d2e/classChadoField_1a601b04d112c9d4e5721240646aacd676" prot="protected" virt="non-virtual"><scope>operation__analysis</scope><name>queryJoinOnce</name></member>
+      <member refid="d6/d08/classoperation____analysis_1a0990e79da7632740f0fac86c40d40c22" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>queryOrder</name></member>
+      <member refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>settingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1a2d4baff5cde41b3f39f373ab7f4ad9ef" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>settingsFormValidate</name></member>
+      <member refid="d9/d83/classTripalField_1ae8ae933722cd9340c3994a700427330a" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>validate</name></member>
+      <member refid="d9/d83/classTripalField_1aa0233ddbb9411c58c7eafc657fef97a6" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>viewsData</name></member>
+      <member refid="d9/d83/classTripalField_1a2db49fcfd34816cd41683a5c7722491a" prot="public" virt="non-virtual"><scope>operation__analysis</scope><name>webServicesData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

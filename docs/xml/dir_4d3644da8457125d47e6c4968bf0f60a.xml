@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_4d3644da8457125d47e6c4968bf0f60a" kind="dir">
+    <compoundname>legacy/tripal_phenotype</compoundname>
+    <innerdir refid="dir_d0b544d5f850470ff51e67bf916770cf">legacy/tripal_phenotype/theme</innerdir>
+    <innerfile refid="d9/da3/tripal__phenotype_8module">tripal_phenotype.module</innerfile>
+    <innerfile refid="da/d3a/tripal__phenotype_8views__default_8inc">tripal_phenotype.views_default.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_phenotype/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,727 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/d59/group__tripal__ws__api" kind="group">
+    <compoundname>tripal_ws_api</compoundname>
+    <title>Web Services</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gaabfe1c20d0c4dd02be61e0c3339b0bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_tripal_update_remote_entity_field</definition>
+        <argsstring>($field_data, $context, $depth=0)</argsstring>
+        <name>_tripal_update_remote_entity_field</name>
+        <param>
+          <declname>$field_data</declname>
+        </param>
+        <param>
+          <declname>$context</declname>
+        </param>
+        <param>
+          <declname>$depth</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A helper function for the tripal_get_remote_entity() function.</para><para>This function converts the field&apos;s key elements to their vocabulary term accessions.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field array as returned by web services. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The web service JSON-LD context for the bundle to which the field belongs. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="706" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="706" bodyend="748"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1ga67aefbd45d52c779ca53e5248e2cb002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_tripal_ws_value</definition>
+        <argsstring>(&amp;$items, $field, $instance)</argsstring>
+        <name>hook_tripal_ws_value</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <param>
+          <declname>$instance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adjust the values of a field for display in web services.</para><para>This hook should be used sparingly. It is meant primarily to adjust 3rd Party (non Tripal) fields so that they work with web services. The caller should adjust the $items array as needed. This change only affects the value displayed in web services. Web services expect that every field have a &apos;value&apos; element for each of the items. If a field for some reason does not have a &apos;value&apos; element then this hook will allow setting of that element.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of items for the field. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field instance array. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="40" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="40" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1ga1f675c5d12b2693a96e273266d94389a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_site</definition>
+        <argsstring>($name, $url, $version, $description)</argsstring>
+        <name>tripal_add_site</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$url</declname>
+        </param>
+        <param>
+          <declname>$version</declname>
+        </param>
+        <param>
+          <declname>$description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new site to the web services table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of site to be included. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL of site to be added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Version of the API being used. default to 1 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A description of the site and any additional info that would be helpful for admins.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the site is successfully added, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="130" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="130" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1ga423162ba2093c4eaa263480c56d1b07a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_clear_remote_cache</definition>
+        <argsstring>($site_id)</argsstring>
+        <name>tripal_clear_remote_cache</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the cached remote site documentation and context.</para><para>When querying a remote website, the site&apos;s API documenation and page context is cached to make re-use of that information easier in the future. This function can be used to clear those caches.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="398" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="398" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gaeb4f0c0437b910b3265718424967ab62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_API_doc</definition>
+        <argsstring>($site_id)</argsstring>
+        <name>tripal_get_remote_API_doc</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the API documentation for a remote Tripal web service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The vocabulary of a remote Tripal web service, or FALSE if an error occured. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="416" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="416" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gaa2730a7f144bf318af7d3c9893a57f54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_content</definition>
+        <argsstring>($site_id, $path=&apos;&apos;, $query=&apos;&apos;)</argsstring>
+        <name>tripal_get_remote_content</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$path</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$query</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Makes a request to the &quot;content&quot; service of a remote Tripal web site.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The web service path for the content (excluding &apos;web-servcies/vX.x/content&apos;). To retrieve the full content listing leave this paramter empty. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An query string to appear after the ? in a URL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The JSON response formatted in a PHP array or FALSE if a problem occured. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="244" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="244" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gafa217795f272e54f81654828a0506234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_content_context</definition>
+        <argsstring>($site_id, $context_url, $bundle_accession, $field_accession=&apos;&apos;)</argsstring>
+        <name>tripal_get_remote_content_context</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$context_url</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <param>
+          <declname>$field_accession</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the JSON-LD context for a bundle or field on a remote Tripal site.</para><para>The $site_id, $bundle_accession and $field_accession variables are not needed to retrieve the context, but are used for caching the context to make subsequent calls execute faster. This function is meant to be used only for the &apos;content&apos; service provided by Tripal.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$context_url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Full URL for the context file on the remote Tripal site. This URL can be found in the &apos;&apos; key of any response from a remote Tripal web services call. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the property (i.e. field) of the Class (i.e. content type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The JSON-LD context mapping array. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="380" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="380" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1ga71b6139da4c605252b6c539215d072f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_content_doc</definition>
+        <argsstring>($site_id, $bundle_accession)</argsstring>
+        <name>tripal_get_remote_content_doc</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retreive the content type information from a remote Tripal site.</para><para>The array returned is equivalent to the Hydra Vocabulary &quot;supportedClass&quot; stanza.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A PHP array corresponding to the Hydra Class stanza (i.e. a content type). Returns NULL if the class ID cannot be found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="857" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="857" bodyend="871"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1ga7e5d7b4d8e3e2b41352639f2953e64c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_context</definition>
+        <argsstring>($context_url, $cache_id)</argsstring>
+        <name>tripal_get_remote_context</name>
+        <param>
+          <declname>$context_url</declname>
+        </param>
+        <param>
+          <declname>$cache_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the JSON-LD context for any remote Tripal web service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$context_url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Full URL for the context file on the remote Tripal site. This URL can be found in the &apos;&apos; key of any response from a remote Tripal web services call. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$cache_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique ID for caching of this context result to speed furture queries. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The JSON-LD context mapping array, or FALSE if the context could not be retrieved. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="329" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="329" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gacce8c27bef223dc195354a329e39d640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_field_doc</definition>
+        <argsstring>($site_id, $bundle_accession, $field_accession)</argsstring>
+        <name>tripal_get_remote_field_doc</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <param>
+          <declname>$field_accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the field information for a content type from a remote Tripal site.</para><para>The array returned is equivalent to the Hydra Vocabulary &quot;supportedProperty&quot; stanza that belongs to a Hydra Class (content type).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the property (i.e. field) of the Class (i.e. content type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A PHP array corresponding to the Hydra property stanza (field) that belongs to the given Class (i.e. a content type). Retruns NULL if the property cannot be found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="894" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="894" bodyend="907"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gaa4a572e98c30c3596c6dec4afd6a4811" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_field_formatters</definition>
+        <argsstring>($site_id, $bundle_accession, $field_accession)</argsstring>
+        <name>tripal_get_remote_field_formatters</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <param>
+          <declname>$field_accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of download formatters for a remote field.</para><para>All Tripal fields support the abilty for inclusion in files that can downloaded. This function is used to identify what formatters these fields are appropriate for. If those download formatter classes exist on this site then the field can be used with that formatter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the property (i.e. field) of the Class (i.e. content type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of field downloader class names that are compoatible with the field and which exist on this site. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="932" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="932" bodyend="950"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gaf420ee503552d259852ba61f1123ea83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_field_info</definition>
+        <argsstring>($site_id, $bundle_accession, $field_accession)</argsstring>
+        <name>tripal_get_remote_field_info</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <param>
+          <declname>$field_accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Behaves similar to the field_info_field() function but for remote fields.</para><para>Returns a &quot;fake&quot; field info array for fields attached to content types on remote Tripal sites.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the property (i.e. field) of the Class (i.e. content type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array similar to that returned by the field_info_field function of Drupal for local fields. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="770" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="770" bodyend="790"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1ga882c3206ab764a16d99b034b35050323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_remote_field_instance_info</definition>
+        <argsstring>($site_id, $bundle_accession, $field_accession)</argsstring>
+        <name>tripal_get_remote_field_instance_info</name>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <param>
+          <declname>$field_accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Behaves similar to the field_info_instance() function but for remote fields.</para><para>Returns a &quot;fake&quot; instance info array for fields attached to content types on remote Tripal sites.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the property (i.e. field) of the Class (i.e. content type). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array similar to that returned by the field_info_instance function of Drupal for local fields. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="812" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="812" bodyend="837"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1ga1b303b60ce0c548c2da95a7b6fbde04b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_web_services</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_web_services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a list of <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> implementations.</para><para>The <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> classes can be added by a site developer that wishes to create a new Tripal compatible web serivce. The class file should be placed in the [module]/includes/TripalWebService directory. Tripal will support any service as long as it is in this directory and extends the <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> class.</para><para><simplesect kind="return"><para>A list of <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="66" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="66" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gad01c76a2bb50c6438f53388abf4bae64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_include_web_service_class</definition>
+        <argsstring>($class)</argsstring>
+        <name>tripal_load_include_web_service_class</name>
+        <param>
+          <declname>$class</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads the <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> class file into scope.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> class to include.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the field type class file was found, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="97" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="97" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gaa8ee3243cd4e5ff9951fe21c456836d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_remote_entities</definition>
+        <argsstring>($remote_entity_ids, $site_id, $bundle_accession, $field_ids)</argsstring>
+        <name>tripal_load_remote_entities</name>
+        <param>
+          <declname>$remote_entity_ids</declname>
+        </param>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <param>
+          <declname>$field_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queries a remote site for an array of bulk entity ids.</para><para>This function returns an array of &quot;fake&quot; entities containing values for fields specified.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$remote_entity_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of the remote ids. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accessions for the fields available on the remote content type. Any remote fields that matches these IDs will be added to the entity returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of fake entity objects where the key is the entity_id and the value is the object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="504" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="504" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gaa7baa2401471aab9ee0181e9f093b13a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_remote_entity</definition>
+        <argsstring>($remote_entity_id, $site_id, $bundle_accession, $field_ids)</argsstring>
+        <name>tripal_load_remote_entity</name>
+        <param>
+          <declname>$remote_entity_id</declname>
+        </param>
+        <param>
+          <declname>$site_id</declname>
+        </param>
+        <param>
+          <declname>$bundle_accession</declname>
+        </param>
+        <param>
+          <declname>$field_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queries a remote site for an entity.</para><para>This function returns a &quot;fake&quot; entity containing values for all fields specified.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$remote_entity_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A remote entity ID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numeric site ID for the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accession for the content type on the remote Tripal site. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary term accessions for the fields available on the remote content type. Any remote fields that matches these IDs will be added to the entity returned. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A fake entity object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="597" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="597" bodyend="691"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d59/group__tripal__ws__api_1gac8f2b660e1b7934464e4017d3caf2c90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_remove_site</definition>
+        <argsstring>($record_id)</argsstring>
+        <name>tripal_remove_site</name>
+        <param>
+          <declname>$record_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a site from the web services table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$record_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the record to be deleted.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the record was successfully deleted, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/api/tripal_ws.api.inc" line="186" column="1" bodyfile="tripal_ws/api/tripal_ws.api.inc" bodystart="186" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>{@ The Tripal Web Services API provides a set of functions for interacting with the Tripal Web Services. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

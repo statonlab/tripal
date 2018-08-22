@@ -1,0 +1,587 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="db/d4c/classTripalFieldWidget" kind="class" language="PHP" prot="public">
+    <compoundname>TripalFieldWidget</compoundname>
+    <derivedcompoundref refid="d0/df2/classChadoFieldWidget" prot="public" virt="non-virtual">ChadoFieldWidget</derivedcompoundref>
+    <derivedcompoundref refid="d8/d5e/classrdfs____type__widget" prot="public" virt="non-virtual">rdfs__type_widget</derivedcompoundref>
+    <derivedcompoundref refid="d6/d3f/classWebServicesFieldWidget" prot="public" virt="non-virtual">WebServicesFieldWidget</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="db/d4c/classTripalFieldWidget_1a00d706009dc93fe3fab9c501ce9de090" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalFieldWidget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Tripal Field.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="5" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d4c/classTripalFieldWidget_1abce38c5b76dc1a27ffacca0736d9114a" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalFieldWidget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;no_widget&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="8" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalFieldWidget::__construct</definition>
+        <argsstring>($field, $instance=NULL)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <param>
+          <declname>$instance</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates a new <ref refid="db/d4c/classTripalFieldWidget" kindref="compound">TripalFieldWidget</ref> object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array containing the field data as returned by field_info_field() </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional). Set the instance of this field when one is available. This is necessary when working with instance specific functions such as the formatterSettingsForm, widgetForm, etc. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="21" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalFieldWidget::form</definition>
+        <argsstring>(&amp;$widget, &amp;$form, &amp;$form_state, $langcode, $items, $delta, $element)</argsstring>
+        <name>form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$widget</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides the form for editing of this field.</para><para>This function corresponds to the hook_field_widget_form() function of the Drupal Field API.</para><para>This form is diplayed when the user creates a new entity or edits an existing entity. If the field is attached to the entity then the form provided by this function will be displayed.</para><para>At a minimum, the form must have a &apos;value&apos; element. For Tripal, the &apos;value&apos; element of a field always corresponds to the value that is presented to the end-user either directly on the page (with formatting) or via web services, or some other mechanism. However, the &apos;value&apos; is sometimes not enough for a field. For example, the Tripal Chado module maps fields to table columns and sometimes those columns are foreign keys therefore, the Tripal Chado modules does not just use the &apos;value&apos; but adds additional elements to help link records via FKs. But even in this case the &apos;value&apos; element must always be present in the return form and in such cases it&apos;s value should be set equal to that added in the &apos;load&apos; function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$widget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The form structure where widgets are being attached to. This might be a full form structure, or a sub-element of a larger form. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the current state of the form. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$langcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The language associated with $items. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of default values for this field. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order of this item in the array of subelements (0, 1, 2, etc). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A form element array containing basic properties for the widget:<itemizedlist>
+<listitem><para>#entity_type: The name of the entity the field is attached to.</para></listitem><listitem><para>#bundle: The name of the field bundle the field is contained in.</para></listitem><listitem><para>#field_name: The name of the field.</para></listitem><listitem><para>#language: The language the field is being edited in.</para></listitem><listitem><para>#field_parents: The &apos;parents&apos; space for the field in the form. Most widgets can simply overlook this property. This identifies the location where the field values are placed within $form_state[&apos;values&apos;], and is used to access processing information for the field through the field_form_get_state() and field_form_set_state() functions.</para></listitem><listitem><para>#columns: A list of field storage columns of the field.</para></listitem><listitem><para><ref refid="d0/d42/tripal__feature__teaser_8tpl_8php_1ab5501754233ec6aec5f04ef03f3bfc28" kindref="member">title</ref>: The sanitized element label for the field instance, ready for output.</para></listitem><listitem><para>#description: The sanitized element description for the field instance, ready for output.</para></listitem><listitem><para>#required: A Boolean indicating whether the element value is required; for required multiple value fields, only the first widget&apos;s values are required.</para></listitem><listitem><para>#delta: The order of this item in the array of subelements; see $delta above </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="103" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="103" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalFieldWidget::submit</definition>
+        <argsstring>($form, &amp;$form_state, $entity_type, $entity, $langcode, $delta)</argsstring>
+        <name>submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs extra commands when the entity form is submitted.</para><para>Drupal typically does not provide a submit hook for fields. The <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> provides one to allow for behind-the-scenes actions to occur. This function should never be used for updates, deletes or inserts for the Chado table associated with the field. Rather, the storage backend should be allowed to handle inserts, updates deletes. However, it is permissible to perform inserts, updates or deletions within Chado using this function. Those operations can be performed if needed but on other tables not directly associated with the field.</para><para>An example is the chado.feature_synonym table. The chado_linker__synonym field allows the user to provide a brand new synonynm and it must add it to the chado.synonym table prior to the record in the chado.feature_synonym table. This insert occurs in the widgetFormSubmit function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of $entity. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity for the operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field structure for the operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The instance structure for $field on $entity&apos;s bundle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$langcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The language associated with $items. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$entity-&gt;{$field[&apos;field_name&apos;]}[$langcode], or an empty array if unset. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The submitted form array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The form state array. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="174" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalFieldWidget::theme</definition>
+        <argsstring>($element)</argsstring>
+        <name>theme</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The theme function for the widget.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A form element array containing basic properties for the widget:<itemizedlist>
+<listitem><para>#entity_type: The name of the entity the field is attached to.</para></listitem><listitem><para>#bundle: The name of the field bundle the field is contained in.</para></listitem><listitem><para>#field_name: The name of the field.</para></listitem><listitem><para>#language: The language the field is being edited in.</para></listitem><listitem><para>#field_parents: The &apos;parents&apos; space for the field in the form. Most widgets can simply overlook this property. This identifies the location where the field values are placed within $form_state[&apos;values&apos;], and is used to access processing information for the field through the field_form_get_state() and field_form_set_state() functions.</para></listitem><listitem><para>#columns: A list of field storage columns of the field.</para></listitem><listitem><para><ref refid="d0/d42/tripal__feature__teaser_8tpl_8php_1ab5501754233ec6aec5f04ef03f3bfc28" kindref="member">title</ref>: The sanitized element label for the field instance, ready for output.</para></listitem><listitem><para>#description: The sanitized element description for the field instance, ready for output.</para></listitem><listitem><para>#required: A Boolean indicating whether the element value is required; for required multiple value fields, only the first widget&apos;s values are required.</para></listitem><listitem><para>#delta: The order of this item in the array of subelements; see $delta above</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A drupal renderable array or HTML or an empty string if no theming is to be applied. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="207" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="207" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalFieldWidget::validate</definition>
+        <argsstring>($element, $form, &amp;$form_state, $langcode, $delta)</argsstring>
+        <name>validate</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs validation of the widget form.</para><para>Use this validate to ensure that form values are entered correctly. The &apos;value&apos; key of this field must be set in the $form_state[&apos;values&apos;] array anytime data is entered by the user. It may be the case that there are other fields for helping select a value. In the end those helper fields must be used to set the &apos;value&apos; field. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="124" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalFieldWidget::validateDefaults</definition>
+        <argsstring>($element, $form, &amp;$form_state, $langcode, $delta)</argsstring>
+        <name>validateDefaults</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs validation of the widget form when setting defaults.</para><para>Use this validate to ensure that form values are entered correctly when a user edits the defaults on the field edit page (available from the &quot;managed fields&quot; section of the Content type page. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="135" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="135" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static TripalFieldWidget::info</definition>
+        <argsstring>()</argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides information about the widgets provided by this field.</para><para>This function corresponds to the hook_field_widget_info() function of the Drupal Field API.</para><para>This is a static function as it provides default values for all of the widgets for this field type, and thus we don&apos;t need an instantiated object to provide this information.</para><para><simplesect kind="return"><para>An associative array with key/value pairs compatible with those from the hook_field_widget_info() function of the Drupal Field API. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="40" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="40" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1080">
+        <label>WebServicesFieldWidget</label>
+        <link refid="d6/d3f/classWebServicesFieldWidget"/>
+        <childnode refid="1046" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1046">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="1056">
+        <label>efo__array_design_widget</label>
+        <link refid="dd/df0/classefo____array__design__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1052">
+        <label>data__sequence_checksum_widget</label>
+        <link refid="dc/d89/classdata____sequence__checksum__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1049">
+        <label>chado_linker__prop_widget</label>
+        <link refid="df/d9b/classchado__linker____prop__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1078">
+        <label>uo__unit_widget</label>
+        <link refid="d9/d1a/classuo____unit__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1065">
+        <label>sbo__phenotype_widget</label>
+        <link refid="d5/da4/classsbo____phenotype__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1055">
+        <label>data__sequence_widget</label>
+        <link refid="d9/d7f/classdata____sequence__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1053">
+        <label>data__sequence_coordinates_widget</label>
+        <link refid="d2/dea/classdata____sequence__coordinates__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1051">
+        <label>data__protein_sequence_widget</label>
+        <link refid="de/d3d/classdata____protein__sequence__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1064">
+        <label>sbo__database_cross_reference_widget</label>
+        <link refid="d3/dca/classsbo____database__cross__reference__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1062">
+        <label>operation__analysis_widget</label>
+        <link refid="d3/d82/classoperation____analysis__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1050">
+        <label>data__accession_widget</label>
+        <link refid="dd/dde/classdata____accession__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1072">
+        <label>sio__references_widget</label>
+        <link refid="da/d27/classsio____references__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1067">
+        <label>schema__additional_type_widget</label>
+        <link refid="d4/de8/classschema____additional__type__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1073">
+        <label>sio__vocabulary_widget</label>
+        <link refid="d9/d60/classsio____vocabulary__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1068">
+        <label>schema__alternate_name_widget</label>
+        <link refid="da/dce/classschema____alternate__name__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1069">
+        <label>schema__publication_widget</label>
+        <link refid="d2/dbd/classschema____publication__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1079">
+        <label>rdfs__type_widget</label>
+        <link refid="d8/d5e/classrdfs____type__widget"/>
+        <childnode refid="1046" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1063">
+        <label>operation__phylotree_vis_widget</label>
+        <link refid="dd/db2/classoperation____phylotree__vis__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1047">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="1046" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1048">
+        <label>chado_linker__contact_widget</label>
+        <link refid="da/da6/classchado__linker____contact__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1066">
+        <label>sbo__relationship_widget</label>
+        <link refid="d2/da7/classsbo____relationship__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1054">
+        <label>data__sequence_length_widget</label>
+        <link refid="da/d6a/classdata____sequence__length__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1060">
+        <label>obi__organism_widget</label>
+        <link refid="d8/dd2/classobi____organism__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1070">
+        <label>sep__protocol_widget</label>
+        <link refid="d5/de4/classsep____protocol__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1074">
+        <label>so__cds_widget</label>
+        <link refid="d7/d7a/classso____cds__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1081">
+        <label>remote__data_widget</label>
+        <link refid="d2/da1/classremote____data__widget"/>
+        <childnode refid="1080" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1075">
+        <label>so__genotype_widget</label>
+        <link refid="d5/d28/classso____genotype__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1059">
+        <label>local__source_data_widget</label>
+        <link refid="d3/dd1/classlocal____source__data__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1076">
+        <label>so__transcript_widget</label>
+        <link refid="d9/dda/classso____transcript__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1077">
+        <label>taxrank__infraspecific_taxon_widget</label>
+        <link refid="d1/df6/classtaxrank____infraspecific__taxon__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1071">
+        <label>sio__annotation_widget</label>
+        <link refid="d2/db9/classsio____annotation__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1058">
+        <label>local__contact_widget</label>
+        <link refid="da/dd9/classlocal____contact__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1061">
+        <label>ogi__location_on_map_widget</label>
+        <link refid="d7/db2/classogi____location__on__map__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1057">
+        <label>go__gene_expression_widget</label>
+        <link refid="de/d79/classgo____gene__expression__widget"/>
+        <childnode refid="1047" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="tripal/includes/TripalFields/TripalFieldWidget.inc" line="3" column="1" bodyfile="tripal/includes/TripalFields/TripalFieldWidget.inc" bodystart="3" bodyend="209"/>
+    <listofallmembers>
+      <member refid="db/d4c/classTripalFieldWidget_1a00d706009dc93fe3fab9c501ce9de090" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>$default_label</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1abce38c5b76dc1a27ffacca0736d9114a" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>__construct</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>info</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>theme</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>TripalFieldWidget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

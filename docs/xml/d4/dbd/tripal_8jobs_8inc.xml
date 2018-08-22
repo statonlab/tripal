@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/dbd/tripal_8jobs_8inc" kind="file" language="PHP">
+    <compoundname>tripal.jobs.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/dbd/tripal_8jobs_8inc_1aef4843154738218f4681963d7f730c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_jobs_admin_view</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_jobs_admin_view</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a landing page for tripal jobs admin </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.jobs.inc" line="12" column="1" bodyfile="tripal/includes/tripal.jobs.inc" bodystart="12" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/tripal_8jobs_8inc_1adf2fcc4a497c4ae7a06cfe69e4b7eeef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_jobs_report</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_jobs_report</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the Tripal Job Report</para><para><simplesect kind="return"><para>The HTML to be rendered which describes the job report </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.jobs.inc" line="106" column="1" bodyfile="tripal/includes/tripal.jobs.inc" bodystart="106" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/tripal_8jobs_8inc_1a3bab835e5bd2f70d2df1c37e8e133dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_jobs_report_form</definition>
+        <argsstring>($form, &amp;$form_state=NULL)</argsstring>
+        <name>tripal_jobs_report_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>NO LONGER USED: REPLACED BY VIEW </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.jobs.inc" line="43" column="1" bodyfile="tripal/includes/tripal.jobs.inc" bodystart="43" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/tripal_8jobs_8inc_1abdc5b19f08608fc6e748e139d65d4fd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_jobs_report_form_submit</definition>
+        <argsstring>($form, &amp;$form_state=NULL)</argsstring>
+        <name>tripal_jobs_report_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>NO LONGER USED: REPLACED BY VIEW </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.jobs.inc" line="92" column="1" bodyfile="tripal/includes/tripal.jobs.inc" bodystart="92" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/tripal_8jobs_8inc_1ae0c7a8ee09f5bf6972ca4e12af855bd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_jobs_status_view</definition>
+        <argsstring>($job_id)</argsstring>
+        <name>tripal_jobs_status_view</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Runs a Tripal job from within the request.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.jobs.inc" line="375" column="1" bodyfile="tripal/includes/tripal.jobs.inc" bodystart="375" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dbd/tripal_8jobs_8inc_1a311a7addb29b8b1ac8e5474dca8eeee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_jobs_view</definition>
+        <argsstring>($job_id)</argsstring>
+        <name>tripal_jobs_view</name>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the HTML code to display a given job</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The job_id of the job to display</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The HTML describing the indicated job </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.jobs.inc" line="224" column="1" bodyfile="tripal/includes/tripal.jobs.inc" bodystart="224" bodyend="368"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains functions related to the display of Tripal jobs in a Tripal website. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="12" refid="d4/dbd/tripal_8jobs_8inc_1aef4843154738218f4681963d7f730c0d" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/dbd/tripal_8jobs_8inc_1aef4843154738218f4681963d7f730c0d" kindref="member">tripal_jobs_admin_view</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>breadcrumb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>$breadcrumb<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Home&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;&lt;front&gt;&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Administration&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Tripal&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Jobs&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/tripal_jobs&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>drupal_set_breadcrumb($breadcrumb);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>view</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>$view<sp/>=<sp/>views_embed_view(</highlight><highlight class="stringliteral">&apos;tripal_admin_jobs&apos;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&apos;default&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($view))<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/>$view;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;p&gt;The<sp/>Tripal<sp/>Jobs<sp/>management<sp/>system<sp/>uses<sp/>primarily<sp/>views<sp/>to<sp/>provide<sp/>an<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;administrative<sp/>interface.<sp/>Currently<sp/>one<sp/>or<sp/>more<sp/>views<sp/>needed<sp/>for<sp/>this<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;administrative<sp/>interface<sp/>are<sp/>disabled.<sp/>&lt;strong&gt;Go<sp/>to<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/>l(</highlight><highlight class="stringliteral">&apos;Administration<sp/>&gt;<sp/>Structure<sp/>&gt;<sp/>Views&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/structure/views&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&apos;<sp/>and<sp/>enable<sp/>the<sp/>view<sp/>titled<sp/>&quot;Tripal<sp/>Jobs<sp/>(Admin)&quot;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="d4/dbd/tripal_8jobs_8inc_1a3bab835e5bd2f70d2df1c37e8e133dde" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/dbd/tripal_8jobs_8inc_1a3bab835e5bd2f70d2df1c37e8e133dde" kindref="member">tripal_jobs_report_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>default<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>$default_status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>$default_job_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">,<sp/>$form_state))<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>$default_status<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">,<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>$default_job_name<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">,<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$default_status<sp/>and<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">,<sp/>$_SESSION))<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>$job_status<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">,<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$default_job_name<sp/>and<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">,<sp/>$_SESSION))<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>$default_job_name<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">,<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;select&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Filter<sp/>by<sp/>Job<sp/>Status&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$default_status,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;All<sp/>Jobs&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Running&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Running&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Waiting&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Waiting&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Completed&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Completed&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Cancelled&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Cancelled&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Error&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Error&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Filter<sp/>by<sp/>Job<sp/>Name&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>jobs<sp/>will<sp/>be<sp/>filtered<sp/>if<sp/>text<sp/>provided<sp/>is<sp/>contained<sp/>in<sp/>the<sp/>job<sp/>name&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$default_job_name,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Filter&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="d4/dbd/tripal_8jobs_8inc_1abdc5b19f08608fc6e748e139d65d4fd3" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/dbd/tripal_8jobs_8inc_1abdc5b19f08608fc6e748e139d65d4fd3" kindref="member">tripal_jobs_report_form_submit</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>$job_status<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>$job_name<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$job_status;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$job_name;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106" refid="d4/dbd/tripal_8jobs_8inc_1adf2fcc4a497c4ae7a06cfe69e4b7eeef" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/dbd/tripal_8jobs_8inc_1adf2fcc4a497c4ae7a06cfe69e4b7eeef" kindref="member">tripal_jobs_report</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>run<sp/>the<sp/>following<sp/>function<sp/>which<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>change<sp/>the<sp/>status<sp/>of<sp/>jobs<sp/>that<sp/>have<sp/>errored<sp/>out</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>tripal_get_running_jobs();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>$job_status<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>$job_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">,<sp/>$_SESSION))<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>$job_status<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">,<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>$job_name<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">,<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;tripal_job_filter&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_name&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>build<sp/>the<sp/>SQL<sp/>for<sp/>getting<sp/>the<sp/>jobs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="121"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT</highlight></codeline>
+<codeline lineno="122"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>TJ.job_id,TJ.uid,TJ.job_name,TJ.modulename,TJ.progress,</highlight></codeline>
+<codeline lineno="123"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>TJ.status<sp/>as<sp/>job_status,<sp/>TJ,submit_date,TJ.start_time,</highlight></codeline>
+<codeline lineno="124"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>TJ.end_time,TJ.priority,U.name<sp/>as<sp/>username</highlight></codeline>
+<codeline lineno="125"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>{tripal_jobs}<sp/>TJ</highlight></codeline>
+<codeline lineno="126"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{users}<sp/>U<sp/>on<sp/>TJ.uid<sp/>=<sp/>U.uid</highlight></codeline>
+<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>WHERE<sp/>1=1</highlight></codeline>
+<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>$args<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($job_status)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>TJ.status<sp/>=<sp/>:status<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>$args[</highlight><highlight class="stringliteral">&apos;:status&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$job_status;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($job_name)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;AND<sp/>TJ.job_name<sp/>like<sp/>:job_name&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>$args[</highlight><highlight class="stringliteral">&apos;:job_name&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;%$job_name%&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>ORDER<sp/>BY<sp/>job_id<sp/>DESC<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>the<sp/>SQL<sp/>that<sp/>returns<sp/>the<sp/>total<sp/>number<sp/>of<sp/>records</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>$count_sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>count(*)<sp/>as<sp/>total<sp/>FROM<sp/>($sql)<sp/>as<sp/>t1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>$result<sp/>=<sp/>db_query($count_sql,<sp/>$args);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>$total_jobs<sp/>=<sp/>$result-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>the<sp/>pager</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a5a4ced940d4c82d488b8dfee492bd430" kindref="member">$num_per_page</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>$page<sp/>=<sp/>pager_find_page();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>pager_default_initialize($total_jobs-&gt;total,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a5a4ced940d4c82d488b8dfee492bd430" kindref="member">$num_per_page</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>$pager_sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$sql<sp/>LIMIT<sp/><sp/>:number<sp/>OFFSET<sp/>:offset&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>$args[</highlight><highlight class="stringliteral">&apos;:number&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a5a4ced940d4c82d488b8dfee492bd430" kindref="member">$num_per_page</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>$args[</highlight><highlight class="stringliteral">&apos;:offset&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a5a4ced940d4c82d488b8dfee492bd430" kindref="member">$num_per_page</ref><sp/>*<sp/>$page;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>$jobs<sp/>=<sp/>db_query($pager_sql,<sp/>$args);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>through<sp/>the<sp/>jobs<sp/>and<sp/>build<sp/>the<sp/>table<sp/>rows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($jobs<sp/>as<sp/>$job)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>$submit<sp/>=<sp/><ref refid="d0/d54/group__tripal__DEPRECATED__jobs__api_1gaab4da1ed7e6957ad5847a66f48b2e31c" kindref="member">tripal_get_job_submit_date</ref>($job);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>$start<sp/>=<sp/><ref refid="d0/d54/group__tripal__DEPRECATED__jobs__api_1ga113d1f9f4790528b57a4f90199f631e1" kindref="member">tripal_get_job_start</ref>($job);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>$end<sp/>=<sp/><ref refid="d0/d54/group__tripal__DEPRECATED__jobs__api_1gade2aebd639f2dcd160d8012d2a424f64" kindref="member">tripal_get_job_end</ref>($job);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>$cancel_link<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>$execute_link<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($job-&gt;start_time<sp/>==<sp/>0<sp/>and<sp/>$job-&gt;end_time<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$cancel_link<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&lt;a<sp/>href=\&quot;&quot;</highlight><highlight class="normal"><sp/>.<sp/>url(</highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/cancel/&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_id)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&gt;Cancel&lt;/a&gt;&lt;br<sp/>/&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$execute_link<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&lt;a<sp/>href=\&quot;&quot;</highlight><highlight class="normal"><sp/>.<sp/>url(</highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/execute/&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_id)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&gt;Execute&lt;/a&gt;&lt;br<sp/>/&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>$rerun_link<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&lt;a<sp/>href=\&quot;&quot;</highlight><highlight class="normal"><sp/>.<sp/>url(</highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/rerun/&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_id)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&gt;Re-run&lt;/a&gt;&lt;br<sp/>/&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>$view_link<sp/>=</highlight><highlight class="stringliteral">&quot;&lt;a<sp/>href=\&quot;&quot;</highlight><highlight class="normal"><sp/>.<sp/>url(</highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/view/&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_id)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&gt;View&lt;/a&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;job_id,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;username,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;job_name,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Submit<sp/>Date:<sp/>$submit&lt;br&gt;Start<sp/>Time:<sp/>$start&lt;br&gt;End<sp/>Time:<sp/>$end&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;priority,</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;progress<sp/>.<sp/></highlight><highlight class="charliteral">&apos;%&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;job_status,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;$execute_link<sp/>$cancel_link<sp/>$rerun_link<sp/>$view_link&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>header<sp/>for<sp/>the<sp/>jobs<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Job<sp/>ID&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;User&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Job<sp/>Name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Dates&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;style&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&quot;white-space:<sp/>nowrap&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Priority&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Progress&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Status&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Action&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref>,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;No<sp/>jobs<sp/>have<sp/>been<sp/>submitted&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>the<sp/>report<sp/>page</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Waiting<sp/>jobs<sp/>are<sp/>executed<sp/>first<sp/>by<sp/>priority<sp/>level<sp/>(the<sp/>lower<sp/>the<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;number<sp/>the<sp/>higher<sp/>the<sp/>priority)<sp/>and<sp/>second<sp/>by<sp/>the<sp/>order<sp/>they<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;were<sp/>entered&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>$report_form<sp/>=<sp/>drupal_get_form(</highlight><highlight class="stringliteral">&apos;tripal_jobs_report_form&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>drupal_render($report_form);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>theme_table(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>theme(</highlight><highlight class="stringliteral">&apos;pager&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="d4/dbd/tripal_8jobs_8inc_1a311a7addb29b8b1ac8e5474dca8eeee7" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/dbd/tripal_8jobs_8inc_1a311a7addb29b8b1ac8e5474dca8eeee7" kindref="member">tripal_jobs_view</ref>($job_id)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>breadcrumb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>$breadcrumb<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Home&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;&lt;front&gt;&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Administration&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Tripal&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Jobs&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/tripal_jobs&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>drupal_set_breadcrumb($breadcrumb);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>job<sp/>record</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>$sql<sp/>=</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>TJ.job_id,TJ.uid,TJ.job_name,TJ.modulename,TJ.progress,</highlight></codeline>
+<codeline lineno="237"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TJ.status<sp/>as<sp/>job_status,<sp/>TJ,submit_date,TJ.start_time,</highlight></codeline>
+<codeline lineno="238"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TJ.end_time,TJ.priority,U.name<sp/>as<sp/>username,TJ.arguments,</highlight></codeline>
+<codeline lineno="239"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TJ.callback,TJ.error_msg,TJ.pid</highlight></codeline>
+<codeline lineno="240"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/>FROM<sp/>{tripal_jobs}<sp/>TJ</highlight></codeline>
+<codeline lineno="241"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>users<sp/>U<sp/>on<sp/>TJ.uid<sp/>=<sp/>U.uid</highlight></codeline>
+<codeline lineno="242"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/>WHERE<sp/>TJ.job_id<sp/>=<sp/>:job_id&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref><sp/>=<sp/>db_query($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:job_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$job_id));</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>$job<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref>-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>do<sp/>not<sp/>know<sp/>what<sp/>the<sp/>arguments<sp/>are<sp/>for<sp/>and<sp/>we<sp/>want<sp/>to<sp/>provide<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>meaningful<sp/>description<sp/>to<sp/>the<sp/>end-user.<sp/>So<sp/>we<sp/>use<sp/>a<sp/>callback<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>defined<sp/>in<sp/>the<sp/>module<sp/>that<sp/>created<sp/>the<sp/>job<sp/>to<sp/>describe<sp/>in<sp/>an<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>arguments<sp/>provided.<sp/><sp/>If<sp/>the<sp/>callback<sp/>fails<sp/>then<sp/>just<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>arguments<sp/>as<sp/>they<sp/>are.<sp/><sp/>Historically,<sp/>job<sp/>arguments<sp/>were<sp/>separated<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>two<sp/>colon.<sp/>We<sp/>now<sp/>store<sp/>them<sp/>as<sp/>a<sp/>serialized<sp/>array.<sp/>So,<sp/>we<sp/>need<sp/>to<sp/>handle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>both<sp/>cases.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(preg_match(</highlight><highlight class="stringliteral">&quot;/::/&quot;</highlight><highlight class="normal">,<sp/>$job-&gt;arguments))<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>preg_split(</highlight><highlight class="stringliteral">&quot;/::/&quot;</highlight><highlight class="normal">,<sp/>$job-&gt;arguments);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>unserialize($job-&gt;arguments);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>$arg_hook<sp/>=<sp/>$job-&gt;modulename<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;_job_describe_args&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_callable($arg_hook))<sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>$new_args<sp/>=<sp/>call_user_func_array($arg_hook,<sp/>array($job-&gt;callback,<sp/>$args));</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($new_args)<sp/>and<sp/>count($new_args))<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;arguments<sp/>=<sp/>$new_args;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$job-&gt;arguments<sp/>=<sp/>$args;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>$job-&gt;arguments<sp/>=<sp/>$args;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>generate<sp/>the<sp/>list<sp/>of<sp/>arguments<sp/>for<sp/>display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><ref refid="db/dd8/generate__chado__schema__file_8php_1a61eded163d962fc248b3cf209000979b" kindref="member">$arguments</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($job-&gt;arguments<sp/>as<sp/>$key<sp/>=&gt;<sp/>$value)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($value))<sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$value<sp/>=<sp/>print_r($value,TRUE);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/dd8/generate__chado__schema__file_8php_1a61eded163d962fc248b3cf209000979b" kindref="member">$arguments</ref><sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;$key:<sp/>$value&lt;br&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>build<sp/>the<sp/>links</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>$links<sp/><sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Return<sp/>to<sp/>jobs<sp/>list&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/&quot;</highlight><highlight class="normal">)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;<sp/>|<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/>$links<sp/>.=<sp/>l(</highlight><highlight class="stringliteral">&apos;Re-run<sp/>this<sp/>job&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/rerun/&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_id)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;<sp/>|<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($job-&gt;start_time<sp/>==<sp/>0<sp/>and<sp/>$job-&gt;end_time<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>$links<sp/>.=<sp/>l(</highlight><highlight class="stringliteral">&apos;Cancel<sp/>this<sp/>job&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/cancel/&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_id)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;<sp/>|<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>$links<sp/>.=<sp/>l(</highlight><highlight class="stringliteral">&apos;Execute<sp/>this<sp/>job&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;admin/tripal/tripal_jobs/execute/&quot;</highlight><highlight class="normal">.$job-&gt;job_id);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>our<sp/>start<sp/>and<sp/>end<sp/>times<sp/>more<sp/>legible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/>$job-&gt;submit_date<sp/>=<sp/><ref refid="d0/d54/group__tripal__DEPRECATED__jobs__api_1gaab4da1ed7e6957ad5847a66f48b2e31c" kindref="member">tripal_get_job_submit_date</ref>($job);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/>$job-&gt;start_time<sp/>=<sp/><ref refid="d0/d54/group__tripal__DEPRECATED__jobs__api_1ga113d1f9f4790528b57a4f90199f631e1" kindref="member">tripal_get_job_start</ref>($job);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/>$job-&gt;end_time<sp/>=<sp/><ref refid="d0/d54/group__tripal__DEPRECATED__jobs__api_1gade2aebd639f2dcd160d8012d2a424f64" kindref="member">tripal_get_job_end</ref>($job);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>construct<sp/>the<sp/>table<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Detail&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Value&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>construct<sp/>the<sp/>table<sp/>rows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Job<sp/>Description&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;job_name);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Submitting<sp/>Module&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;modulename);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Callback<sp/>function&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;callback);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Arguments&apos;</highlight><highlight class="normal">,<sp/><ref refid="db/dd8/generate__chado__schema__file_8php_1a61eded163d962fc248b3cf209000979b" kindref="member">$arguments</ref>);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Progress&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;progress<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;%&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Status&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;job_status);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Process<sp/>ID&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;pid);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Submit<sp/>Date&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;submit_date);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Start<sp/>time&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;start_time);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;End<sp/>time&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;end_time);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Priority&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;priority);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Submitting<sp/>User&apos;</highlight><highlight class="normal">,<sp/>$job-&gt;username);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref>,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/>$content[</highlight><highlight class="stringliteral">&apos;links&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&lt;p&gt;&apos;</highlight><highlight class="normal"><sp/>.<sp/>substr($links,<sp/>0,<sp/>-2)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;&lt;/p&gt;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/>$content[</highlight><highlight class="stringliteral">&apos;job_title&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;item&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Job<sp/>Title&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$job-&gt;job_name,</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/>$content[</highlight><highlight class="stringliteral">&apos;job_status&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;item&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Status&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$job-&gt;job_status,</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/>$content[</highlight><highlight class="stringliteral">&apos;details_fset&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;fieldset&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Job<sp/>Details&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#collapsed&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#collapsible&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;collapsible&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;collapsed&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#attached&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;js&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;misc/collapse.js&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;misc/form.js&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/>$content[</highlight><highlight class="stringliteral">&apos;details_fset&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_details&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>theme_table(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>),</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/>$content[</highlight><highlight class="stringliteral">&apos;log_fset&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;fieldset&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Job<sp/>Logs&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#collapsed&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#collapsible&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;collapsible&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;collapsed&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#attached&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;js&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;misc/collapse.js&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;misc/form.js&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/>$content[</highlight><highlight class="stringliteral">&apos;log_fset&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;job_logs&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&lt;pre&gt;&apos;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;error_msg<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;&lt;/pre&gt;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$content;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375" refid="d4/dbd/tripal_8jobs_8inc_1ae0c7a8ee09f5bf6972ca4e12af855bd0" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/dbd/tripal_8jobs_8inc_1ae0c7a8ee09f5bf6972ca4e12af855bd0" kindref="member">tripal_jobs_status_view</ref>($job_id)<sp/>{</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>breadcrumb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/>$breadcrumb<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Home&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;&lt;front&gt;&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Administration&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Tripal&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/>$breadcrumb[]<sp/>=<sp/>l(</highlight><highlight class="stringliteral">&apos;Jobs&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/tripal_jobs&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>drupal_set_breadcrumb($breadcrumb);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/>$job<sp/>=<sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3d676afee039417282e6655a26323bcd" kindref="member">tripal_get_job</ref>($job_id);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/>drupal_add_css(drupal_get_path<sp/>(</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/theme/css/tripal_jobs.css&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/>drupal_add_js(drupal_get_path<sp/>(</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/theme/js/tripal_jobs.js&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/>$markup<sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&lt;h2&gt;Job<sp/>Progress&lt;/h2&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/>$markup<sp/>.=<sp/><sp/></highlight><highlight class="stringliteral">&quot;&lt;p&gt;Job:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_name<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;<sp/>(&apos;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;progress<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;%<sp/>Complete)&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/>$markup<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;br&gt;Status:<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;status<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;&lt;/p&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/>$markup<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;div<sp/>id=&quot;tripal-jobs-progress-bar&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/>$markup<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;p&gt;&apos;</highlight><highlight class="normal"><sp/>.<sp/>l(</highlight><highlight class="stringliteral">&apos;Refresh<sp/>Page&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/tripal_jobs/status/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$job_id)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;&lt;/p&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/>drupal_add_js(</highlight><highlight class="stringliteral">&apos;var<sp/>progress_percent<sp/>=<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;progress<sp/>.<sp/></highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;inline&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Reload<sp/>the<sp/>page<sp/>every<sp/>30<sp/>seconds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/>$meta<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#tag&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;meta&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;http-equiv&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;refresh&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;content&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><sp/></highlight><highlight class="stringliteral">&apos;30&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/>drupal_add_html_head($meta,<sp/></highlight><highlight class="stringliteral">&apos;tripal_job_status_page&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/>$page<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$markup,</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$page;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tripal/includes/tripal.jobs.inc"/>
+  </compounddef>
+</doxygen>

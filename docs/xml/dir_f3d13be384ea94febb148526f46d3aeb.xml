@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_f3d13be384ea94febb148526f46d3aeb" kind="dir">
+    <compoundname>legacy/tripal_db/theme/templates</compoundname>
+    <innerfile refid="d4/d27/tripal__db__help_8tpl_8php">tripal_db_help.tpl.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_db/theme/templates/"/>
+  </compounddef>
+</doxygen>

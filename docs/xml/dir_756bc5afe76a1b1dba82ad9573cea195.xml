@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_756bc5afe76a1b1dba82ad9573cea195" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/operation__phylotree_vis</compoundname>
+    <innerfile refid="df/dc9/operation____phylotree__vis_8inc">operation__phylotree_vis.inc</innerfile>
+    <innerfile refid="db/dcf/operation____phylotree__vis__formatter_8inc">operation__phylotree_vis_formatter.inc</innerfile>
+    <innerfile refid="d3/d59/operation____phylotree__vis__widget_8inc">operation__phylotree_vis_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/"/>
+  </compounddef>
+</doxygen>

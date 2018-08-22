@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d8/d74/tripal__ws_8fields_8inc" kind="file" language="PHP">
+    <compoundname>tripal_ws.fields.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d8/d74/tripal__ws_8fields_8inc_1a80ebe2779f808acfcb7c190f99bdf210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_bundle_create_user_field</definition>
+        <argsstring>($new_field, $bundle)</argsstring>
+        <name>tripal_ws_bundle_create_user_field</name>
+        <param>
+          <declname>$new_field</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_bundle_create_user_field().</para><para>A priviledged user has the ability to add new fields to the bundle. The <ref refid="d8/da0/classremote____data" kindref="compound">remote__data</ref> field is allowed to be added dynamically by the user. But, Drupal doesn&apos;t know how to deal with it, so this function is called for any field attached to a <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> bundle type. Any fields whose <ref refid="d9/d83/classTripalField_1a8098e08f179bb4eb529ba79dc03fe2bf" kindref="member">TripalField::$module</ref> argument is set to &apos;tripal_ws&apos; and that can be added dynamically will result in a call to this function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.fields.inc" line="37" column="1" bodyfile="tripal_ws/includes/tripal_ws.fields.inc" bodystart="37" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d74/tripal__ws_8fields_8inc_1af0b759766b09df78eeac53ec549ac3d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_bundle_fields_info</definition>
+        <argsstring>($entity_type, $bundle)</argsstring>
+        <name>tripal_ws_bundle_fields_info</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements <ref refid="df/d0f/group__tripal__fields__api_1ga47ce54f169c677db85d0c2f0fa711054" kindref="member">hook_bundle_fields_info()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.fields.inc" line="10" column="1" bodyfile="tripal_ws/includes/tripal_ws.fields.inc" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d74/tripal__ws_8fields_8inc_1a086578e92fea06fab78015b39773dcba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_bundle_instances_info</definition>
+        <argsstring>($entity_type, $bundle)</argsstring>
+        <name>tripal_ws_bundle_instances_info</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements <ref refid="df/d0f/group__tripal__fields__api_1ga776a3c15b005158009c518351ff77b38" kindref="member">hook_bundle_instances_info()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.fields.inc" line="20" column="1" bodyfile="tripal_ws/includes/tripal_ws.fields.inc" bodystart="20" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains all field specific code outside the classes. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="10" refid="d8/d74/tripal__ws_8fields_8inc_1af0b759766b09df78eeac53ec549ac3d6" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d74/tripal__ws_8fields_8inc_1af0b759766b09df78eeac53ec549ac3d6" kindref="member">tripal_ws_bundle_fields_info</ref>($entity_type,<sp/>$bundle)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1ab2303c817e3b402b77b7f99627b9c319" kindref="member">$fields</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>fields<sp/>are<sp/>added<sp/>programmatically.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1ab2303c817e3b402b77b7f99627b9c319" kindref="member">$fields</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d8/d74/tripal__ws_8fields_8inc_1a086578e92fea06fab78015b39773dcba" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d74/tripal__ws_8fields_8inc_1a086578e92fea06fab78015b39773dcba" kindref="member">tripal_ws_bundle_instances_info</ref>($entity_type,<sp/>$bundle)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>$instances<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>field<sp/>instances<sp/>are<sp/>added<sp/>programmatically.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$instances;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="d8/d74/tripal__ws_8fields_8inc_1a80ebe2779f808acfcb7c190f99bdf210" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d74/tripal__ws_8fields_8inc_1a80ebe2779f808acfcb7c190f99bdf210" kindref="member">tripal_ws_bundle_create_user_field</ref>($new_field,<sp/>$bundle)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>table<sp/>this<sp/>bundle<sp/>is<sp/>mapped<sp/>to.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>$term<sp/>=<sp/><ref refid="d5/dce/group__tripal__entities__api_1ga8d7df332ef5e92725a5044692e85ead2" kindref="member">tripal_load_term_entity</ref>(array(</highlight><highlight class="stringliteral">&apos;term_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$bundle-&gt;term_id));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>$vocab<sp/>=<sp/>$term-&gt;vocab;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>$params<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;vocabulary&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$vocab-&gt;vocabulary,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$term-&gt;accession,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>allow<sp/>site<sp/>admins<sp/>to<sp/>add<sp/>new<sp/>chado_linker__prop<sp/>fields<sp/>to<sp/>an<sp/>entity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>will<sp/>allow<sp/>us<sp/>to<sp/>properly<sp/>add<sp/>them.<sp/><sp/>But<sp/>at<sp/>this<sp/>point<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>know<sp/>the<sp/>controlled<sp/>vocabulary<sp/>term.<sp/><sp/>We&apos;ll<sp/>have<sp/>to<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>defaults<sp/>and<sp/>let<sp/>the<sp/>user<sp/>set<sp/>it<sp/>using<sp/>the<sp/>interface.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($new_field[</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;remote__data&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>$field_name<sp/>=<sp/>$new_field[</highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>$field_type<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;remote__data&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>add<sp/>the<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>field_create_field(array(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$field_name,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$field_type,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cardinality&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FIELD_CARDINALITY_UNLIMITED,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;locked&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;storage&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;field_tripal_ws_storage&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>add<sp/>the<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>field_create_instance(array(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$field_name,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;entity_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;TripalEntity&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;bundle&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$bundle-&gt;name,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$new_field[</highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;required&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;auto_attach&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;term_vocabulary&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;term_accession&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;term_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;widget&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;remote__data_widget&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;display_label&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;display&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;default&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;inline&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;remote__data_formatter&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;settings&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_ws/includes/tripal_ws.fields.inc"/>
+  </compounddef>
+</doxygen>

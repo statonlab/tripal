@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/dde/classdata____accession__widget" kind="class" language="PHP" prot="public">
+    <compoundname>data__accession_widget</compoundname>
+    <basecompoundref refid="d0/df2/classChadoFieldWidget" prot="public" virt="non-virtual">ChadoFieldWidget</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="dd/dde/classdata____accession__widget_1a543cb31d92027ccdc1ab7f99b3b95024" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__accession_widget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Site Accession&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" line="4" column="1" bodyfile="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/dde/classdata____accession__widget_1a04a36fc2d9630d40e6dd90e3131030f0" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>data__accession_widget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d9/dfa/classdata____accession" kindref="compound">data__accession</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" line="7" column="1" bodyfile="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/dde/classdata____accession__widget_1a5abfc8bbbc0a0c5cb09aab4092cdf1d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data__accession_widget::form</definition>
+        <argsstring>(&amp;$widget, &amp;$form, &amp;$form_state, $langcode, $items, $delta, $element)</argsstring>
+        <name>form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$widget</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" kindref="member">TripalFieldWidget::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" line="12" column="1" bodyfile="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" bodystart="12" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dde/classdata____accession__widget_1a8088a64bbace76a50b10c98da1a9fa54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data__accession_widget::submit</definition>
+        <argsstring>($form, &amp;$form_state, $entity_type, $entity, $langcode, $delta)</argsstring>
+        <name>submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" kindref="member">TripalFieldWidget::submit()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" line="128" column="1" bodyfile="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" bodystart="128" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dde/classdata____accession__widget_1a735abe0380ff42ed5bffed24a3ff9d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data__accession_widget::theme</definition>
+        <argsstring>($element)</argsstring>
+        <name>theme</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" kindref="member">TripalFieldWidget::theme()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" line="158" column="1" bodyfile="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" bodystart="158" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dde/classdata____accession__widget_1a81388dc904fa481e2d3f63cecb853321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data__accession_widget::validate</definition>
+        <argsstring>($element, $form, &amp;$form_state, $langcode, $delta)</argsstring>
+        <name>validate</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" kindref="member">TripalFieldWidget::submit()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" line="86" column="1" bodyfile="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" bodystart="86" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="189">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="187">
+        <label>data__accession_widget</label>
+        <link refid="dd/dde/classdata____accession__widget"/>
+        <childnode refid="188" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="189" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="192">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="190">
+        <label>data__accession_widget</label>
+        <link refid="dd/dde/classdata____accession__widget"/>
+        <childnode refid="191" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="192" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" line="2" column="1" bodyfile="tripal_chado/includes/TripalFields/data__accession/data__accession_widget.inc" bodystart="2" bodyend="179"/>
+    <listofallmembers>
+      <member refid="dd/dde/classdata____accession__widget_1a543cb31d92027ccdc1ab7f99b3b95024" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>$default_label</name></member>
+      <member refid="dd/dde/classdata____accession__widget_1a04a36fc2d9630d40e6dd90e3131030f0" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>__construct</name></member>
+      <member refid="dd/dde/classdata____accession__widget_1a5abfc8bbbc0a0c5cb09aab4092cdf1d3" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>info</name></member>
+      <member refid="dd/dde/classdata____accession__widget_1a8088a64bbace76a50b10c98da1a9fa54" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>submit</name></member>
+      <member refid="dd/dde/classdata____accession__widget_1a735abe0380ff42ed5bffed24a3ff9d3b" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>theme</name></member>
+      <member refid="dd/dde/classdata____accession__widget_1a81388dc904fa481e2d3f63cecb853321" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>data__accession_widget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

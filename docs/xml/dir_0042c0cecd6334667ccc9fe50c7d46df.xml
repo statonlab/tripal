@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_0042c0cecd6334667ccc9fe50c7d46df" kind="dir">
+    <compoundname>legacy/tripal_library/theme/templates</compoundname>
+    <innerfile refid="d5/dd6/tripal__feature__libraries_8tpl_8php">tripal_feature_libraries.tpl.php</innerfile>
+    <innerfile refid="d5/d5b/tripal__library__base_8tpl_8php">tripal_library_base.tpl.php</innerfile>
+    <innerfile refid="dd/d72/tripal__library__features_8tpl_8php">tripal_library_features.tpl.php</innerfile>
+    <innerfile refid="d1/d8f/tripal__library__help_8tpl_8php">tripal_library_help.tpl.php</innerfile>
+    <innerfile refid="d7/dd1/tripal__library__properties_8tpl_8php">tripal_library_properties.tpl.php</innerfile>
+    <innerfile refid="d5/df7/tripal__library__publications_8tpl_8php">tripal_library_publications.tpl.php</innerfile>
+    <innerfile refid="df/da4/tripal__library__references_8tpl_8php">tripal_library_references.tpl.php</innerfile>
+    <innerfile refid="d4/d17/tripal__library__synonyms_8tpl_8php">tripal_library_synonyms.tpl.php</innerfile>
+    <innerfile refid="d4/d6b/tripal__library__teaser_8tpl_8php">tripal_library_teaser.tpl.php</innerfile>
+    <innerfile refid="dd/d03/tripal__library__terms_8tpl_8php">tripal_library_terms.tpl.php</innerfile>
+    <innerfile refid="d8/d90/tripal__organism__libraries_8tpl_8php">tripal_organism_libraries.tpl.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_library/theme/templates/"/>
+  </compounddef>
+</doxygen>

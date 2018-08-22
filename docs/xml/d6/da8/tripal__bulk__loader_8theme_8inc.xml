@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d6/da8/tripal__bulk__loader_8theme_8inc" kind="file" language="PHP">
+    <compoundname>tripal_bulk_loader.theme.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d6/da8/tripal__bulk__loader_8theme_8inc_1afb5f6a8194bff7606652695ace2752f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_bulk_loader_field_regex_fieldset</definition>
+        <argsstring>($variables)</argsstring>
+        <name>tripal_bulk_loader_field_regex_fieldset</name>
+        <param>
+          <declname>$variables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Theme the regex data in the tripal_bulk_loader_template_field_form form </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/theme/tripal_bulk_loader.theme.inc" line="6" column="1" bodyfile="tripal_bulk_loader/theme/tripal_bulk_loader.theme.inc" bodystart="6" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/da8/tripal__bulk__loader_8theme_8inc_1afc05ea6fc65f1ca303b5c435fe1a78a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_bulk_loader_preprocess_tripal_bulk_loader_template</definition>
+        <argsstring>(&amp;$variables)</argsstring>
+        <name>tripal_bulk_loader_preprocess_tripal_bulk_loader_template</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$variables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Preprocessor function for the tripal_bulk_loader template </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/theme/tripal_bulk_loader.theme.inc" line="40" column="1" bodyfile="tripal_bulk_loader/theme/tripal_bulk_loader.theme.inc" bodystart="40" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d6/da8/tripal__bulk__loader_8theme_8inc_1afb5f6a8194bff7606652695ace2752f7" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d6/da8/tripal__bulk__loader_8theme_8inc_1afb5f6a8194bff7606652695ace2752f7" kindref="member">tripal_bulk_loader_field_regex_fieldset</ref>($variables)<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;element&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>drupal_add_tabledrag(</highlight><highlight class="stringliteral">&apos;regex_list_form_id&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;order&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;sibling&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;rank-weight&apos;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>needed<sp/>for<sp/>table<sp/>dragging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Match<sp/>Pattern&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Replacement<sp/>Pattern&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Order&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(element_children(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>)<sp/>as<sp/>$key)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>$row<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>$row[</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal">][]<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[$key][</highlight><highlight class="stringliteral">&apos;pattern&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>$row[</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal">][]<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[$key][</highlight><highlight class="stringliteral">&apos;replace&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>$row[</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal">][]<sp/>=<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[$key][</highlight><highlight class="stringliteral">&apos;new_index&apos;</highlight><highlight class="normal">])<sp/>.<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[$key][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>$row[</highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal">][]<sp/>=<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[$key][</highlight><highlight class="stringliteral">&apos;submit-delete&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>$row[</highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;draggable&apos;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>needed<sp/>for<sp/>table<sp/>dragging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>$row;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>theme(</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">,<sp/>array(</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d8/d21/tripal__bulk__loader__modify__template__base__form__fields_8tpl_8php_1a4f44601f2b9dc8a1644bce53c94ce622" kindref="member">$header</ref>,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;regex_list_form_id&apos;</highlight><highlight class="normal">),<sp/></highlight><highlight class="comment">//<sp/>needed<sp/>for<sp/>table<sp/>dragging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="d6/da8/tripal__bulk__loader_8theme_8inc_1afc05ea6fc65f1ca303b5c435fe1a78a1" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d6/da8/tripal__bulk__loader_8theme_8inc_1afc05ea6fc65f1ca303b5c435fe1a78a1" kindref="member">tripal_bulk_loader_preprocess_tripal_bulk_loader_template</ref>(&amp;$variables)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>$resource<sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_bulk_loader_template&apos;</highlight><highlight class="normal">,</highlight><highlight class="charliteral">&apos;t&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="charliteral">&apos;t&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;template_id&apos;</highlight><highlight class="normal">,<sp/>$variables[</highlight><highlight class="stringliteral">&apos;template_id&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;execute();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1aa3e9534005fd516d941f6a5569896e01" kindref="member">$template</ref><sp/>=<sp/>$resource-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1aa3e9534005fd516d941f6a5569896e01" kindref="member">$template</ref>-&gt;template_array<sp/>=<sp/>unserialize(<ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1aa3e9534005fd516d941f6a5569896e01" kindref="member">$template</ref>-&gt;template_array);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>$variables[</highlight><highlight class="stringliteral">&apos;template&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1aa3e9534005fd516d941f6a5569896e01" kindref="member">$template</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_bulk_loader/theme/tripal_bulk_loader.theme.inc"/>
+  </compounddef>
+</doxygen>

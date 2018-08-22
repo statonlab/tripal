@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_d47719437f8293fc6295ccd8eaebfd64" kind="dir">
+    <compoundname>tripal_ws/includes/TripalFields</compoundname>
+    <innerdir refid="dir_4b7c0b685b272702cbc5649f112f5698">tripal_ws/includes/TripalFields/remote__data</innerdir>
+    <innerfile refid="dc/d32/WebServicesField_8inc">WebServicesField.inc</innerfile>
+    <innerfile refid="da/d7a/WebServicesFieldFormatter_8inc">WebServicesFieldFormatter.inc</innerfile>
+    <innerfile refid="d2/d0c/WebServicesFieldWidget_8inc">WebServicesFieldWidget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_ws/includes/TripalFields/"/>
+  </compounddef>
+</doxygen>

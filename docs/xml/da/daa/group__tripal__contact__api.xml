@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="da/daa/group__tripal__contact__api" kind="group">
+    <compoundname>tripal_contact_api</compoundname>
+    <title>Chado Contact</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/daa/group__tripal__contact__api_1ga8d649fe7fd398917ee2219689704292a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_autocomplete_contact</definition>
+        <argsstring>($text)</argsstring>
+        <name>chado_autocomplete_contact</name>
+        <param>
+          <declname>$text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used in autocomplete forms for contacts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.contact.api.inc" line="128" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.contact.api.inc" bodystart="128" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="da/daa/group__tripal__contact__api_1ga98af424a7500b68af030a813132085f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_insert_contact</definition>
+        <argsstring>($values)</argsstring>
+        <name>chado_insert_contact</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a contact to the Chado contact table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of values to be inserted. Valid keys include:<itemizedlist>
+<listitem><para>name: The name of the contact.</para></listitem><listitem><para>description: Text describing the contact.</para></listitem><listitem><para>type_name: The type of contact. Must be a term in the tripal_contact vocabulary.</para></listitem><listitem><para>properties: An associative array containing a list of key value pairs for the properites. The key&apos;s must be valid terms in the tripal_contact vocabulary (e.g. Affiliation, Address, etc).</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success, an array is returned containing the fields of the contact record including the newly added contact_id. On failure, FALSE is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.contact.api.inc" line="38" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.contact.api.inc" bodystart="38" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides API functions for working with chado records in Chado that go beyond the generic Chado API functions. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

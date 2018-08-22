@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/dac/classtripal__views__handler__field__sequence" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_field_sequence</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">views_handler_field</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/dac/classtripal__views__handler__field__sequence_1aff94a769fef6e068c63f48bdffd3dc4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_sequence::options_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>options_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" line="18" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" bodystart="18" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dac/classtripal__views__handler__field__sequence_1a2369b8606e77ce9cfd5872ffdcdb632c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_sequence::query</definition>
+        <argsstring>()</argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" line="77" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" bodystart="77" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dac/classtripal__views__handler__field__sequence_1af2fa9ad1d9a33669de17ad59c72eddd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_sequence::render</definition>
+        <argsstring>($values)</argsstring>
+        <name>render</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{}</para><para>Prior to display of results we want to format the sequence </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" line="95" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" bodystart="95" bodyend="266"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Handles display of sequence data. If will aggregate sequences that need to be aggregated (e.g. coding sequences) and provide </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="808">
+        <label>tripal_views_handler_field_sequence</label>
+        <link refid="df/dac/classtripal__views__handler__field__sequence"/>
+        <childnode refid="809" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="809">
+        <label>views_handler_field</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="810">
+        <label>tripal_views_handler_field_sequence</label>
+        <link refid="df/dac/classtripal__views__handler__field__sequence"/>
+        <childnode refid="811" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="811">
+        <label>views_handler_field</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" line="13" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_field_sequence.inc" bodystart="13" bodyend="268"/>
+    <listofallmembers>
+      <member refid="df/dac/classtripal__views__handler__field__sequence_1aff94a769fef6e068c63f48bdffd3dc4c" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_sequence</scope><name>options_form</name></member>
+      <member refid="df/dac/classtripal__views__handler__field__sequence_1a2369b8606e77ce9cfd5872ffdcdb632c" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_sequence</scope><name>query</name></member>
+      <member refid="df/dac/classtripal__views__handler__field__sequence_1af2fa9ad1d9a33669de17ad59c72eddd5" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_sequence</scope><name>render</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

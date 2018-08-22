@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/df6/tripal__daemon_8module" kind="file" language="C++">
+    <compoundname>tripal_daemon.module</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@file</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Non-Drush<sp/>Tripal<sp/>Daemon<sp/>functionality.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">require_once(&apos;includes/tripal_daemon.blocks.inc&apos;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_daemon_api_info().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Registers<sp/>our<sp/>Daemon<sp/>with<sp/>the<sp/>Daemon<sp/>API</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_daemon_daemon_api_info()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$daemon<sp/>=<sp/>array();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$daemon[&apos;tripal_daemon&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;machine_name&apos;<sp/>=&gt;<sp/>&apos;tripal_daemon&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;Tripal<sp/>Job<sp/>Daemon&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;module&apos;<sp/>=&gt;<sp/>&apos;tripal_daemon&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;class&apos;<sp/>=&gt;<sp/>&apos;TripalDaemon&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$daemon;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_daemon/tripal_daemon.module"/>
+  </compounddef>
+</doxygen>

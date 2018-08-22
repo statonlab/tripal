@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/df3/group__tripal__files__api" kind="group">
+    <compoundname>tripal_files_api</compoundname>
+    <title>Files</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/df3/group__tripal__files__api_1gac1d4faf07d61e04ccfbfb58d468dfe6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_create_files_dir</definition>
+        <argsstring>($module_name, $path=FALSE)</argsstring>
+        <name>tripal_create_files_dir</name>
+        <param>
+          <declname>$module_name</declname>
+        </param>
+        <param>
+          <declname>$path</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a directory for a module in the Drupal&apos;s public files directory.</para><para>Previously it was recommended that this function be called during installation of the module in the .install file. However this causes permission problems if the module is installed via drush with a user account that is not the same as the web user. Therefore, this function should not be called in a location accessiblve via a drush command. The <ref refid="d5/df3/group__tripal__files__api_1gaf679228ad38f8f75e70b89997382db8c" kindref="member">tripal_get_files_dir()</ref> and <ref refid="d5/df3/group__tripal__files__api_1ga33cd06a29579429f0e4ad5d59c2b085c" kindref="member">tripal_get_files_stream()</ref> will automatically create the directory if it doesn&apos;t exist so there is little need to call this function directly.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$module_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the module being installed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional sub-path to create </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.files.api.inc" line="37" column="1" bodyfile="tripal/api/tripal.files.api.inc" bodystart="37" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/df3/group__tripal__files__api_1ga958a192b7e34752767c7b9ff53e18ffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_format_bytes</definition>
+        <argsstring>($bytes, $precision=2)</argsstring>
+        <name>tripal_format_bytes</name>
+        <param>
+          <declname>$bytes</declname>
+        </param>
+        <param>
+          <declname>$precision</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Formats a size (in bytes) in human readable format.</para><para>Function taken from php.net</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the file in bytes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$precision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of decimal places to use in the final number if needed</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string A formatted string indicating the size of the file </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.files.api.inc" line="145" column="1" bodyfile="tripal/api/tripal.files.api.inc" bodystart="145" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/df3/group__tripal__files__api_1gaf679228ad38f8f75e70b89997382db8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_files_dir</definition>
+        <argsstring>($module_name=FALSE)</argsstring>
+        <name>tripal_get_files_dir</name>
+        <param>
+          <declname>$module_name</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the Drupal relative directory for a Tripal module.</para><para>Each Tripal module has a unique data directory which was created using the tripal_create_files_dir function during installation. This function retrieves the directory path.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$module_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) The name of the module.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The path within the Drupal installation where the data directory resides </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.files.api.inc" line="82" column="1" bodyfile="tripal/api/tripal.files.api.inc" bodystart="82" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/df3/group__tripal__files__api_1ga33cd06a29579429f0e4ad5d59c2b085c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_files_stream</definition>
+        <argsstring>($module_name=FALSE)</argsstring>
+        <name>tripal_get_files_stream</name>
+        <param>
+          <declname>$module_name</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the Drupal stream (e.g. public://...) for a Tripal module.</para><para>Each Tripal module has a unique data directory which was created using the tripal_create_files_dir function during installation. This function retrieves the directory path.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$module_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) The name of the module.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The path within the Drupal installation where the data directory resides </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.files.api.inc" line="114" column="1" bodyfile="tripal/api/tripal.files.api.inc" bodystart="114" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/df3/group__tripal__files__api_1ga0d79c86d0c06c1be1d9369995df71f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_user_files_dir</definition>
+        <argsstring>($user)</argsstring>
+        <name>tripal_get_user_files_dir</name>
+        <param>
+          <declname>$user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the URI for the dedicated directory for a user&apos;s files.</para><para>This directory is used by the file uploader and by data collections.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Drupal user object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The URI of the directory. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.files.api.inc" line="212" column="1" bodyfile="tripal/api/tripal.files.api.inc" bodystart="212" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/df3/group__tripal__files__api_1ga316a6a81ef03df302cf89ad195711ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_user_uploads</definition>
+        <argsstring>($uid, $allowed_types=array(), $module=&apos;tripal&apos;)</argsstring>
+        <name>tripal_get_user_uploads</name>
+        <param>
+          <declname>$uid</declname>
+        </param>
+        <param>
+          <declname>$allowed_types</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$module</declname>
+          <defval>&apos;tripal&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of files uploaded by a user.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$uid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the user whose files should be retrieved. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$allowed_types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of valid extensions to restrict the files to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the module that is managing the file.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of file objects. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.files.api.inc" line="174" column="1" bodyfile="tripal/api/tripal.files.api.inc" bodystart="174" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/df3/group__tripal__files__api_1gaf1746f1c5f793e8e26c517542aed4c28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_is_user_files_dir_writeable</definition>
+        <argsstring>($user)</argsstring>
+        <name>tripal_is_user_files_dir_writeable</name>
+        <param>
+          <declname>$user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the user&apos;s dedicated directory is accessible and writeable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Drupal user object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the user&apos;s directory is writeable. FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.files.api.inc" line="230" column="1" bodyfile="tripal/api/tripal.files.api.inc" bodystart="230" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) for managing files within the Tripal data directory structure. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

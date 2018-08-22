@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="de/dfd/tripal_8d3js_8api_8inc" kind="file" language="PHP">
+    <compoundname>tripal.d3js.api.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="db/d54/group__tripal__d3js__api_1gafe3571aa0b93a1516786f56c2e80e47a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_d3js</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_add_d3js</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load D3.js releated javascripts for the current page. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.d3js.api.inc" line="31" column="1" bodyfile="tripal/api/tripal.d3js.api.inc" bodystart="31" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides the API for loading d3js onto pages. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="db/d54/group__tripal__d3js__api_1gafe3571aa0b93a1516786f56c2e80e47a" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d54/group__tripal__d3js__api_1gafe3571aa0b93a1516786f56c2e80e47a" kindref="member">tripal_add_d3js</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" kindref="member">$library</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;loaded&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>try<sp/>to<sp/>load<sp/>d3.js<sp/>using<sp/>the<sp/>libraries<sp/>API.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>will<sp/>work<sp/>if<sp/>the<sp/>site<sp/>admin<sp/>has<sp/>saved<sp/>d3.js<sp/>in<sp/>their<sp/>libraries<sp/>folder.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(module_exists(</highlight><highlight class="stringliteral">&apos;libraries_api&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" kindref="member">$library</ref><sp/>=<sp/>libraries_load(</highlight><highlight class="stringliteral">&apos;d3&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>were<sp/>not<sp/>able<sp/>to<sp/>load<sp/>d3.js<sp/>using<sp/>the<sp/>libraries<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>revert<sp/>to<sp/>loading<sp/>the<sp/>remote<sp/>files<sp/>manually.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset(<ref refid="d5/d5b/tripal__library__base_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" kindref="member">$library</ref>[</highlight><highlight class="stringliteral">&apos;loaded&apos;</highlight><highlight class="normal">])<sp/>OR<sp/>!<ref refid="d5/d5b/tripal__library__base_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" kindref="member">$library</ref>[</highlight><highlight class="stringliteral">&apos;loaded&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>SSL<sp/>is<sp/>being<sp/>used<sp/>then<sp/>use<sp/>a<sp/>secure<sp/>CDN<sp/>for<sp/>d3.js</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_SERVER[</highlight><highlight class="stringliteral">&apos;HTTPS&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_add_js(</highlight><highlight class="stringliteral">&apos;https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_add_js(</highlight><highlight class="stringliteral">&apos;http://d3js.org/d3.v3.min.js&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/api/tripal.d3js.api.inc"/>
+  </compounddef>
+</doxygen>

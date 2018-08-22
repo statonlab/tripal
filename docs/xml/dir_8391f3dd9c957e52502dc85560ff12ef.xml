@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_8391f3dd9c957e52502dc85560ff12ef" kind="dir">
+    <compoundname>tripal/includes/TripalFields</compoundname>
+    <innerdir refid="dir_fd421f375cf12c96c2dc4115c8afe93a">tripal/includes/TripalFields/content_type</innerdir>
+    <innerdir refid="dir_798e00d92320eba5d6b9d44af2e3bc95">tripal/includes/TripalFields/rdfs__type</innerdir>
+    <innerfile refid="d3/d6c/TripalField_8inc">TripalField.inc</innerfile>
+    <innerfile refid="d1/d64/TripalFieldFormatter_8inc">TripalFieldFormatter.inc</innerfile>
+    <innerfile refid="d5/de0/TripalFieldWidget_8inc">TripalFieldWidget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal/includes/TripalFields/"/>
+  </compounddef>
+</doxygen>

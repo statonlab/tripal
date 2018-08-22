@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d6/d3f/classWebServicesFieldWidget" kind="class" language="PHP" prot="public">
+    <compoundname>WebServicesFieldWidget</compoundname>
+    <basecompoundref refid="db/d4c/classTripalFieldWidget" prot="public" virt="non-virtual">TripalFieldWidget</basecompoundref>
+    <derivedcompoundref refid="d2/da1/classremote____data__widget" prot="public" virt="non-virtual">remote__data_widget</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1178">
+        <label>WebServicesFieldWidget</label>
+        <link refid="d6/d3f/classWebServicesFieldWidget"/>
+        <childnode refid="1179" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1179">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="1180">
+        <label>remote__data_widget</label>
+        <link refid="d2/da1/classremote____data__widget"/>
+        <childnode refid="1178" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1181">
+        <label>WebServicesFieldWidget</label>
+        <link refid="d6/d3f/classWebServicesFieldWidget"/>
+        <childnode refid="1182" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1182">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_ws/includes/TripalFields/WebServicesFieldWidget.inc" line="3" column="1" bodyfile="tripal_ws/includes/TripalFields/WebServicesFieldWidget.inc" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+      <member refid="db/d4c/classTripalFieldWidget_1a00d706009dc93fe3fab9c501ce9de090" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>$default_label</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1abce38c5b76dc1a27ffacca0736d9114a" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>__construct</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>info</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>theme</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>WebServicesFieldWidget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

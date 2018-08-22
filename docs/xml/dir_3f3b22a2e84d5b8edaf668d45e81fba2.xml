@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_3f3b22a2e84d5b8edaf668d45e81fba2" kind="dir">
+    <compoundname>legacy/tripal_featuremap/includes</compoundname>
+    <innerfile refid="d6/d86/tripal__featuremap_8admin_8inc">tripal_featuremap.admin.inc</innerfile>
+    <innerfile refid="d2/d7d/tripal__featuremap_8chado__node_8inc">tripal_featuremap.chado_node.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_featuremap/includes/"/>
+  </compounddef>
+</doxygen>

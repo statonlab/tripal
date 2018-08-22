@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d6/d0f/tripal__db_8module" kind="file" language="C++">
+    <compoundname>tripal_db.module</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@file</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>General<sp/>functions<sp/>for<sp/>the<sp/>db<sp/>module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@defgroup<sp/>tripal_legacy_db<sp/>Legacy<sp/>Database<sp/>Reference<sp/>Module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_modules</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@{</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Provides<sp/>functions<sp/>for<sp/>managing<sp/>chado<sp/>database<sp/>references<sp/>which<sp/>link<sp/>chado<sp/>content,<sp/>such</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>as<sp/>features<sp/>and<sp/>stocks,<sp/>to<sp/>records/pages<sp/>in<sp/>external<sp/>databases/websites.<sp/>For<sp/>example,</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>you<sp/>might<sp/>have<sp/>a<sp/>feature<sp/>record<sp/>in<sp/>your<sp/>site<sp/>which<sp/>is<sp/>also<sp/>in<sp/>the<sp/>NCBI<sp/>website<sp/>and<sp/>by</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>adding<sp/>a<sp/>database<sp/>refrence<sp/>to<sp/>your<sp/>feature,<sp/>an<sp/>automatic<sp/>link<sp/>to<sp/>the<sp/>content<sp/>at<sp/>NCBI</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>is<sp/>created.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;api/tripal_db.DEPRECATED.inc&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_menu().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_db</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_db_menu()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_db/views/dbs/enable&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Enable<sp/>Database<sp/>Administrative<sp/>View&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_enable_view&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_db_admin_dbs&apos;,<sp/>&apos;admin/tripal/legacy/tripal_db&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>db<sp/>cross-references&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_db/views/dbxrefs/enable&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Enable<sp/>Reference<sp/>Administrative<sp/>View&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_enable_view&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_db_admin_dbxrefs&apos;,<sp/>&apos;admin/tripal/legacy/tripal_db&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>db<sp/>cross-references&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_db/dbxref/auto_name/%/%&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_db_dbxref_accession_autocomplete&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(6,<sp/>7),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>db<sp/>cross-references&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_help().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Purpose:<sp/>Adds<sp/>a<sp/>help<sp/>page<sp/>to<sp/>the<sp/>module<sp/>list</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_db_help<sp/>($path,<sp/>$arg)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>($path<sp/>==<sp/>&apos;admin/help#tripal_db&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>theme(&apos;tripal_db_help&apos;,<sp/>array());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_permission().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Set<sp/>the<sp/>permission<sp/>types<sp/>that<sp/>the<sp/>chado<sp/>module<sp/>uses.<sp/><sp/>Essentially<sp/>we</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>want<sp/>permissionis<sp/>that<sp/>protect<sp/>creation,<sp/>editing<sp/>and<sp/>deleting<sp/>of<sp/>chado</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>data<sp/>objects</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_db</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_db_permission()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;administer<sp/>db<sp/>cross-references&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>t(&apos;Administer<sp/>External<sp/>Database<sp/>Cross-references.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&apos;Allows<sp/>the<sp/>user<sp/>to<sp/>add,<sp/>edit<sp/>or<sp/>delete<sp/>external<sp/>databases<sp/>references<sp/>stored<sp/>in<sp/>the<sp/>Chado<sp/>database.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_views_api().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Essentially<sp/>this<sp/>hook<sp/>tells<sp/>drupal<sp/>that<sp/>there<sp/>is<sp/>views<sp/>support<sp/>for</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>for<sp/>this<sp/>module<sp/>which<sp/>then<sp/>includes<sp/>tripal_db.views.inc<sp/>where<sp/>all<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>views<sp/>integration<sp/>code<sp/>is</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_db</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_db_views_api()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(&apos;api&apos;<sp/>=&gt;<sp/>3.0);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>Implements<sp/>hook_theme().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>We<sp/>need<sp/>to<sp/>let<sp/>drupal<sp/>know<sp/>about<sp/>our<sp/>theme<sp/>functions<sp/>and<sp/>their<sp/>arguments.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>We<sp/>create<sp/>theme<sp/>functions<sp/>to<sp/>allow<sp/>users<sp/>of<sp/>the<sp/>module<sp/>to<sp/>customize<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>look<sp/>and<sp/>feel<sp/>of<sp/>the<sp/>output<sp/>generated<sp/>in<sp/>this<sp/>module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_db</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_db_theme($existing,<sp/>$type,<sp/>$theme,<sp/>$path)<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>$items<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_db_help&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_db_help&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/><sp/>array(NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>This<sp/>function<sp/>is<sp/>intended<sp/>to<sp/>be<sp/>used<sp/>in<sp/>autocomplete<sp/>forms</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>for<sp/>searching<sp/>for<sp/>accession<sp/>that<sp/>begin<sp/>with<sp/>the<sp/>provided<sp/>string</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$db_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/><sp/>The<sp/>DB<sp/>ID<sp/>in<sp/>which<sp/>to<sp/>search<sp/>for<sp/>the<sp/>term</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$string</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/><sp/>The<sp/>string<sp/>to<sp/>search<sp/>for</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@return</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/><sp/>A<sp/>json<sp/>array<sp/>of<sp/>terms<sp/>that<sp/>begin<sp/>with<sp/>the<sp/>provided<sp/>string</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_db_api</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_db_dbxref_accession_autocomplete($db_id,<sp/>$string<sp/>=<sp/>&apos;&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>(!$db_id)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>drupal_json_output(array());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$sql<sp/>=<sp/>&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SELECT<sp/>dbxref_id,<sp/>accession</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>FROM<sp/>{dbxref}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WHERE<sp/>db_id<sp/>=<sp/>:db_id<sp/>and<sp/>lower(accession)<sp/>like<sp/>lower(:accession)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ORDER<sp/>by<sp/>accession</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LIMIT<sp/>25<sp/>OFFSET<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$results<sp/>=<sp/>chado_query($sql,<sp/>array(&apos;:db_id&apos;<sp/>=&gt;<sp/>$db_id,<sp/>&apos;:accession&apos;<sp/>=&gt;<sp/>$string<sp/>.<sp/>&apos;%&apos;));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>foreach<sp/>($results<sp/>as<sp/>$ref)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$items[$ref-&gt;accession]<sp/>=<sp/>$ref-&gt;accession;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_json_output($items);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_db/tripal_db.module"/>
+  </compounddef>
+</doxygen>

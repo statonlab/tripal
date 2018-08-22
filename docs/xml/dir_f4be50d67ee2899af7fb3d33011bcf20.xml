@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_f4be50d67ee2899af7fb3d33011bcf20" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields</compoundname>
+    <innerdir refid="dir_b4132788ec1c1b40d537829cc3862cfc">tripal_chado/includes/TripalFields/chado_linker__contact</innerdir>
+    <innerdir refid="dir_dfe74650179e53d099a9806f6c79a2f1">tripal_chado/includes/TripalFields/chado_linker__prop</innerdir>
+    <innerdir refid="dir_527ed289418eb173b1ad4f3abcc8c5d7">tripal_chado/includes/TripalFields/data__accession</innerdir>
+    <innerdir refid="dir_787eef3129a8608960053841c75bf695">tripal_chado/includes/TripalFields/data__protein_sequence</innerdir>
+    <innerdir refid="dir_faae393f8f2bdd80a4442d1aa088776b">tripal_chado/includes/TripalFields/data__sequence</innerdir>
+    <innerdir refid="dir_6b4d8f302d244d38748bd10254e00364">tripal_chado/includes/TripalFields/data__sequence_checksum</innerdir>
+    <innerdir refid="dir_9609a498d9dba7d5114300350d9cac2e">tripal_chado/includes/TripalFields/data__sequence_coordinates</innerdir>
+    <innerdir refid="dir_2cad99cb1073d4fcc81a05c6d4a1cb0b">tripal_chado/includes/TripalFields/data__sequence_coordinates_table</innerdir>
+    <innerdir refid="dir_0e9d391d3a0c07e0b7d760f62e187273">tripal_chado/includes/TripalFields/data__sequence_length</innerdir>
+    <innerdir refid="dir_e5bfd73b6c706d447f75066b9010b159">tripal_chado/includes/TripalFields/efo__array_design</innerdir>
+    <innerdir refid="dir_5752b6f0ac3d79aba3a7299455eb10c9">tripal_chado/includes/TripalFields/go__gene_expression</innerdir>
+    <innerdir refid="dir_7749818c30096625589e3476db3cdc10">tripal_chado/includes/TripalFields/local__contact</innerdir>
+    <innerdir refid="dir_a5d713c1b3ac27a6d57e031b80368c65">tripal_chado/includes/TripalFields/local__source_data</innerdir>
+    <innerdir refid="dir_2de44f74ad300a5384770729e8007d7d">tripal_chado/includes/TripalFields/obi__organism</innerdir>
+    <innerdir refid="dir_98cb722fd5e1afcfaf6e271bf3446b5f">tripal_chado/includes/TripalFields/ogi__location_on_map</innerdir>
+    <innerdir refid="dir_4b5842dc210c114ab6a07190f2c6b1a5">tripal_chado/includes/TripalFields/operation__analysis</innerdir>
+    <innerdir refid="dir_756bc5afe76a1b1dba82ad9573cea195">tripal_chado/includes/TripalFields/operation__phylotree_vis</innerdir>
+    <innerdir refid="dir_a069c636454339e343fe0327275ca1c5">tripal_chado/includes/TripalFields/sbo__database_cross_reference</innerdir>
+    <innerdir refid="dir_fcfbf111a2833bd2e4cebac617be5748">tripal_chado/includes/TripalFields/sbo__phenotype</innerdir>
+    <innerdir refid="dir_5205e767739eb3b0c2bdf70d938f9c16">tripal_chado/includes/TripalFields/sbo__relationship</innerdir>
+    <innerdir refid="dir_dcd66b64573e6db7e3f1ef7f70c039a6">tripal_chado/includes/TripalFields/sbo__relationship_table</innerdir>
+    <innerdir refid="dir_2d7439b9d56da4a7ef5ab76bea532c23">tripal_chado/includes/TripalFields/schema__additional_type</innerdir>
+    <innerdir refid="dir_4e1f61767ca5fc0c21e03cd4cd414822">tripal_chado/includes/TripalFields/schema__alternate_name</innerdir>
+    <innerdir refid="dir_2dd00a99ac9636f476cfdfca76ff733c">tripal_chado/includes/TripalFields/schema__publication</innerdir>
+    <innerdir refid="dir_2fb550c2428052f36e4e0f18137781c6">tripal_chado/includes/TripalFields/sep__protocol</innerdir>
+    <innerdir refid="dir_75f75645d4377157a719f73965774b5a">tripal_chado/includes/TripalFields/sio__annotation</innerdir>
+    <innerdir refid="dir_66cbff2d2d85f8b87d968b6a1b5aea79">tripal_chado/includes/TripalFields/sio__references</innerdir>
+    <innerdir refid="dir_b3667e5abef72f8c4064b0a3300d867c">tripal_chado/includes/TripalFields/sio__vocabulary</innerdir>
+    <innerdir refid="dir_ac0f5df0b8f80c8bbc9d0daf6e2d6a43">tripal_chado/includes/TripalFields/so__cds</innerdir>
+    <innerdir refid="dir_cd18685ca29231099f83f2771f76236d">tripal_chado/includes/TripalFields/so__genotype</innerdir>
+    <innerdir refid="dir_aa0fefd0bba711e3290daf2f3977049e">tripal_chado/includes/TripalFields/so__transcript</innerdir>
+    <innerdir refid="dir_fb8889c0ff9c876f94e546018ad87da2">tripal_chado/includes/TripalFields/taxrank__infraspecific_taxon</innerdir>
+    <innerdir refid="dir_389b5bd1c732f21df1405a2d6ee4282c">tripal_chado/includes/TripalFields/uo__unit</innerdir>
+    <innerfile refid="d7/d51/ChadoField_8inc">ChadoField.inc</innerfile>
+    <innerfile refid="d2/dc1/ChadoFieldFormatter_8inc">ChadoFieldFormatter.inc</innerfile>
+    <innerfile refid="dc/d24/ChadoFieldWidget_8inc">ChadoFieldWidget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/"/>
+  </compounddef>
+</doxygen>

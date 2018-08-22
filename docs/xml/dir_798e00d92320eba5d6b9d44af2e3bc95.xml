@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_798e00d92320eba5d6b9d44af2e3bc95" kind="dir">
+    <compoundname>tripal/includes/TripalFields/rdfs__type</compoundname>
+    <innerfile refid="d3/ddb/rdfs____type_8inc">rdfs__type.inc</innerfile>
+    <innerfile refid="df/d0a/rdfs____type__formatter_8inc">rdfs__type_formatter.inc</innerfile>
+    <innerfile refid="dc/d20/rdfs____type__widget_8inc">rdfs__type_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal/includes/TripalFields/rdfs__type/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/db2/classoperation____phylotree__vis__widget" kind="class" language="PHP" prot="public">
+    <compoundname>operation__phylotree_vis_widget</compoundname>
+    <basecompoundref refid="d0/df2/classChadoFieldWidget" prot="public" virt="non-virtual">ChadoFieldWidget</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="dd/db2/classoperation____phylotree__vis__widget_1a582d0579f33db49c4658bd689cc7d526" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__phylotree_vis_widget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Phylogenetic tree visualisation&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_widget.inc" line="6" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_widget.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db2/classoperation____phylotree__vis__widget_1a7bdf7fc0c771b2fcc108b775fdb0afbb" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__phylotree_vis_widget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d3/dbf/classoperation____phylotree__vis" kindref="compound">operation__phylotree_vis</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_widget.inc" line="9" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_widget.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="445">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="443">
+        <label>operation__phylotree_vis_widget</label>
+        <link refid="dd/db2/classoperation____phylotree__vis__widget"/>
+        <childnode refid="444" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="444">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="448">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="446">
+        <label>operation__phylotree_vis_widget</label>
+        <link refid="dd/db2/classoperation____phylotree__vis__widget"/>
+        <childnode refid="447" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="447">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="448" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_widget.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_widget.inc" bodystart="3" bodyend="11"/>
+    <listofallmembers>
+      <member refid="dd/db2/classoperation____phylotree__vis__widget_1a582d0579f33db49c4658bd689cc7d526" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>$default_label</name></member>
+      <member refid="dd/db2/classoperation____phylotree__vis__widget_1a7bdf7fc0c771b2fcc108b775fdb0afbb" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>__construct</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>info</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>theme</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_widget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

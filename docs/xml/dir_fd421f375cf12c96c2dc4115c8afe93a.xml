@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_fd421f375cf12c96c2dc4115c8afe93a" kind="dir">
+    <compoundname>tripal/includes/TripalFields/content_type</compoundname>
+    <innerfile refid="d3/de9/content__type_8inc">content_type.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal/includes/TripalFields/content_type/"/>
+  </compounddef>
+</doxygen>

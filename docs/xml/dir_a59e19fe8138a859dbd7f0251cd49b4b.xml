@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a59e19fe8138a859dbd7f0251cd49b4b" kind="dir">
+    <compoundname>legacy/tripal_contact/theme</compoundname>
+    <innerdir refid="dir_cb668e2fad3e41d645bf24166144d5b6">legacy/tripal_contact/theme/templates</innerdir>
+    <innerfile refid="d9/d7f/tripal__contact_8theme_8inc">tripal_contact.theme.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_contact/theme/"/>
+  </compounddef>
+</doxygen>

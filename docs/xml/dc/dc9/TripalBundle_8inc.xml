@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/dc9/TripalBundle_8inc" kind="file" language="PHP">
+    <compoundname>TripalBundle.inc</compoundname>
+    <innerclass refid="d4/daf/classTripalBundle" prot="public">TripalBundle</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="5" refid="d4/daf/classTripalBundle" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>Entity<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="d4/daf/classTripalBundle_1a65da458e342e49712d88af1012b3e917" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/daf/classTripalBundle_1a65da458e342e49712d88af1012b3e917" kindref="member">__construct</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(),<sp/>$entity_type)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::__construct(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/>$entity_type);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;term<sp/>=<sp/><ref refid="d5/dce/group__tripal__entities__api_1ga8d7df332ef5e92725a5044692e85ead2" kindref="member">tripal_load_term_entity</ref>(array(</highlight><highlight class="stringliteral">&apos;term_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$this-&gt;term_id));</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>$vocab<sp/>=<sp/>$this-&gt;term-&gt;vocab;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;accession<sp/>=<sp/>$vocab-&gt;vocabulary<sp/>.<sp/></highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal"><sp/>.<sp/>$this-&gt;term-&gt;accession;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/includes/TripalBundle.inc"/>
+  </compounddef>
+</doxygen>

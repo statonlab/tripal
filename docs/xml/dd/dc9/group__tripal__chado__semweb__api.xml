@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/dc9/group__tripal__chado__semweb__api" kind="group">
+    <compoundname>tripal_chado_semweb_api</compoundname>
+    <title>Semantic Web</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dd/dc9/group__tripal__chado__semweb__api_1ga0ac94bd34b4d54f22d1c03263f7165a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_add_semweb_table</definition>
+        <argsstring>($chado_table)</argsstring>
+        <name>chado_add_semweb_table</name>
+        <param>
+          <declname>$chado_table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new Chado table to the semantic web support for Chado.</para><para>Newly added tables (i.e. custom tables) need to be integrated into the semantic web infrastructure. After a new table is created and added to the Chado schema, this function should be called to indicate that the table should be included in the semantic web. No associations are made for the columns. The associations should be added using the <ref refid="dd/dc9/group__tripal__chado__semweb__api_1ga98dd8b3c407bcfde6944d889be7b9edf" kindref="member">chado_associate_semweb_term()</ref> function.</para><para>If the table has already been added previously then this function does nothing. It will not overwrite existing assocations.</para><para>Temporary tables (e.g. Tripal tables that begin with &apos;tripal_&apos; and end with &apos;_temp&apos;, are not supported.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$chado_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the Chado table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.semweb.api.inc" line="38" column="1" bodyfile="tripal_chado/api/tripal_chado.semweb.api.inc" bodystart="38" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dc9/group__tripal__chado__semweb__api_1ga98dd8b3c407bcfde6944d889be7b9edf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_associate_semweb_term</definition>
+        <argsstring>($chado_table, $chado_column, $term, $update=FALSE)</argsstring>
+        <name>chado_associate_semweb_term</name>
+        <param>
+          <declname>$chado_table</declname>
+        </param>
+        <param>
+          <declname>$chado_column</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$update</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associates a controlled vocabulary term with a field in a Chado table.</para><para>For sharing of data via the semantic web we need to associate a term from a controlled vocabulary with every column of every table in Chado.</para><para>Temporary tables (e.g. Tripal tables that begin with &apos;tripal_&apos; and end with &apos;_temp&apos;, are not supported.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$chado_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table in Chado. This argument is optional. If left empty or set to NULL then all fields in all Chado tables with that have the $column_name will be associated with the provided $term. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$chado_column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column name in the Chado table to which the term should be associated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A cvterm object as returned by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE if the association should be updated to use the new term if a term is already associated with the table and column. Default is FALSE. If not TRUE and a term is already associated, then no change occurs.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boolean Returns TRUE if the association was made successfully and FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.semweb.api.inc" line="95" column="1" bodyfile="tripal_chado/api/tripal_chado.semweb.api.inc" bodystart="95" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dc9/group__tripal__chado__semweb__api_1gab89580d008861a41f7d92d7f8b29b59d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_format_semweb_term</definition>
+        <argsstring>($cvterm)</argsstring>
+        <name>chado_format_semweb_term</name>
+        <param>
+          <declname>$cvterm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Formats a controlled vocabulary term from Chado for use with Tripal.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$cvterm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A cvterm object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The semantic web name for the term. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.semweb.api.inc" line="228" column="1" bodyfile="tripal_chado/api/tripal_chado.semweb.api.inc" bodystart="228" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dc9/group__tripal__chado__semweb__api_1ga246f04672ee7b1ec746971395c83a963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_semweb_column</definition>
+        <argsstring>($chado_table, $term)</argsstring>
+        <name>chado_get_semweb_column</name>
+        <param>
+          <declname>$chado_table</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retreive the column name in a Chado table that matches a given term.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$chado_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the Chado table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term. This can be a term name or a unique identifer of the form {db}:{accession} or of the form {db}__{term_name}.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the Chado column that matches the given term or FALSE if the term is not mapped to the Chado table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.semweb.api.inc" line="249" column="1" bodyfile="tripal_chado/api/tripal_chado.semweb.api.inc" bodystart="249" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/dc9/group__tripal__chado__semweb__api_1gae4d00bef6ae53acb91c2c021eef279a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_semweb_term</definition>
+        <argsstring>($chado_table, $chado_column, $options=array())</argsstring>
+        <name>chado_get_semweb_term</name>
+        <param>
+          <declname>$chado_table</declname>
+        </param>
+        <param>
+          <declname>$chado_column</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the term that maps to the given Chado table and field.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$chado_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the Chado table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$chado_column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the Chado field. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of one or more of the following keys: -return_object: Set to TRUE to return the cvterm object rather than the string version of the term.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string-based representation of the term (e.g. SO:0000704). If the &apos;return_object&apos; options is provided then a cvterm object is returned. returns NULL if no term is mapped to the table and column. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.semweb.api.inc" line="200" column="1" bodyfile="tripal_chado/api/tripal_chado.semweb.api.inc" bodystart="200" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) for semantic web support. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

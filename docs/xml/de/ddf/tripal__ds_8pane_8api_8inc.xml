@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="de/ddf/tripal__ds_8pane_8api_8inc" kind="file" language="PHP">
+    <compoundname>tripal_ds.pane.api.inc</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Tripal offers a display suite integration for additional fields. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="37"><highlight class="keyword">function</highlight><highlight class="normal"><sp/>tripal_ds_create_field($field_label,<sp/>$field_name,<sp/>$bundle_name)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>$field_name<sp/>=<sp/>str_replace(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">,<sp/>strtolower($field_name));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Build<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>passes<sp/>parameters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>$group_field_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;gp_&apos;</highlight><highlight class="normal">.$field_name;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Create<sp/>the<sp/>field<sp/>groups.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="d9/d3e/tripal__ds_8field__group_8inc_1af2204bbcd1d1e7bcb97eb97cca2c8ccf" kindref="member">tripal_ds_additional_fields_field_group_info</ref>($bundle_name,<sp/>$field_label,<sp/>$group_field_name,<sp/>$field_name);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//Place<sp/>the<sp/>field<sp/>groups<sp/>in<sp/>the<sp/>layout.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>tripal_ds_update_ds_layout($bundle_name,<sp/>$field_name,<sp/>$group_field_name);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_ds/api/tripal_ds.pane.api.inc"/>
+  </compounddef>
+</doxygen>

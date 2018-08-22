@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/def/tripal__views__handler__filter__textarea_8inc" kind="file" language="PHP">
+    <compoundname>tripal_views_handler_filter_textarea.inc</compoundname>
+    <innerclass refid="d1/d11/classtripal__views__handler__filter__textarea" prot="public">tripal_views_handler_filter_textarea</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contants <ref refid="d1/d11/classtripal__views__handler__filter__textarea" kindref="compound">tripal_views_handler_filter_textarea</ref> Filter Handler </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="13" refid="d1/d11/classtripal__views__handler__filter__textarea" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/d11/classtripal__views__handler__filter__textarea" kindref="compound">tripal_views_handler_filter_textarea</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>views_handler_filter<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="d1/d11/classtripal__views__handler__filter__textarea_1abf6c273dd63543f19fe1014b45a09cc2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d11/classtripal__views__handler__filter__textarea_1abf6c273dd63543f19fe1014b45a09cc2" kindref="member">value_form</ref>(&amp;<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::value_form(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;<ref refid="d1/d11/classtripal__views__handler__filter__textarea_1abf6c273dd63543f19fe1014b45a09cc2" kindref="member">value_form</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textarea&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;%label&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;%label&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal">])),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$this-&gt;value,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#multiple&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Provide<sp/>search<sp/>values<sp/>for<sp/>%label.<sp/>Please<sp/>place<sp/>each<sp/>search</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>on<sp/>a<sp/>separate<sp/>line<sp/>or<sp/>separated<sp/>by<sp/>commas.&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;%label&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal">])),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">]<sp/>=<sp/>&amp;$this-&gt;value_form;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="d1/d11/classtripal__views__handler__filter__textarea_1a90acdecb398b39b5d5ed0f76bd957be8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d11/classtripal__views__handler__filter__textarea_1a90acdecb398b39b5d5ed0f76bd957be8" kindref="member">exposed_form</ref>(&amp;<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>do<sp/>anything<sp/>if<sp/>the<sp/>form<sp/>isn&apos;t<sp/>exposed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(empty($this-&gt;options[</highlight><highlight class="stringliteral">&apos;exposed&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rebuild<sp/>the<sp/>form<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>$value<sp/>=<sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;identifier&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;<ref refid="d1/d11/classtripal__views__handler__filter__textarea_1abf6c273dd63543f19fe1014b45a09cc2" kindref="member">value_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[$value]<sp/>=<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>unset(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[$value][</highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;exposed_translate(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[$value],<sp/></highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($value<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>unset(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="d1/d11/classtripal__views__handler__filter__textarea_1a674e359c45ba2d9b73a67d9e4bed55cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d11/classtripal__views__handler__filter__textarea_1a674e359c45ba2d9b73a67d9e4bed55cc" kindref="member">query</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>it<sp/>is<sp/>not<sp/>set<sp/>or<sp/>empty<sp/>then<sp/>don&apos;t<sp/>restrict<sp/>the<sp/>query</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$this-&gt;value)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;ensure_my_table();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>$field<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;$this-&gt;table.$this-&gt;real_field&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>form<sp/>element<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($this-&gt;value))<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$value<sp/>=<sp/>$this-&gt;value[0];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$value<sp/>=<sp/>$this-&gt;value;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>remove<sp/>extra<sp/>spaces<sp/>and<sp/>new<sp/>lines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>$value<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/\s+,/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">,<sp/>$value);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>$value<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/\s+\n/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,<sp/>$value);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>$value<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/,\n/&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">,<sp/>$value);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>preg_split(</highlight><highlight class="stringliteral">&quot;/[\n,]+/&quot;</highlight><highlight class="normal">,<sp/>$value);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array_filter(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$operator<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;IN&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$operator<sp/>=<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;<ref refid="d1/d11/classtripal__views__handler__filter__textarea_1a674e359c45ba2d9b73a67d9e4bed55cc" kindref="member">query</ref>-&gt;add_where($this-&gt;options[</highlight><highlight class="stringliteral">&apos;group&apos;</highlight><highlight class="normal">],<sp/>$field,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/>$operator);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_textarea.inc"/>
+  </compounddef>
+</doxygen>

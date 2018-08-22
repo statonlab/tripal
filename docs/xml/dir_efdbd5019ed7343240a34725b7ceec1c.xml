@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_efdbd5019ed7343240a34725b7ceec1c" kind="dir">
+    <compoundname>legacy/tripal_natural_diversity/theme/templates</compoundname>
+    <innerfile refid="dd/dde/tripal__feature__nd__genotypes_8tpl_8php">tripal_feature_nd_genotypes.tpl.php</innerfile>
+    <innerfile refid="d5/dc9/tripal__natural__diversity__help_8tpl_8php">tripal_natural_diversity_help.tpl.php</innerfile>
+    <innerfile refid="de/da2/tripal__stock__nd__genotypes_8tpl_8php">tripal_stock_nd_genotypes.tpl.php</innerfile>
+    <innerfile refid="d7/d99/tripal__stock__nd__phenotypes_8tpl_8php">tripal_stock_nd_phenotypes.tpl.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_natural_diversity/theme/templates/"/>
+  </compounddef>
+</doxygen>

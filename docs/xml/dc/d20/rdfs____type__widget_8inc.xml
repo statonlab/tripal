@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/d20/rdfs____type__widget_8inc" kind="file" language="PHP">
+    <compoundname>rdfs__type_widget.inc</compoundname>
+    <innerclass refid="d8/d5e/classrdfs____type__widget" prot="public">rdfs__type_widget</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d8/d5e/classrdfs____type__widget" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d8/d5e/classrdfs____type__widget" kindref="compound">rdfs__type_widget</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="db/d4c/classTripalFieldWidget" kindref="compound">TripalFieldWidget</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>lable<sp/>for<sp/>this<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d8/d5e/classrdfs____type__widget_1a3219de21efe17893401d24720abd12b1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d8/d5e/classrdfs____type__widget_1a3219de21efe17893401d24720abd12b1" kindref="member">$default_label</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Content<sp/>Type&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>list<sp/>of<sp/>field<sp/>types<sp/>for<sp/>which<sp/>this<sp/>formatter<sp/>is<sp/>appropriate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d8/d5e/classrdfs____type__widget_1ae2e053e67f98c88527758d4ac2274d0a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d8/d5e/classrdfs____type__widget_1ae2e053e67f98c88527758d4ac2274d0a" kindref="member">$field_types</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;rdfs__type&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="d8/d5e/classrdfs____type__widget_1a16ba97de2c737375cd20ea925e3e65fc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d8/d5e/classrdfs____type__widget_1a16ba97de2c737375cd20ea925e3e65fc" kindref="member">form</ref>(&amp;$widget,<sp/>&amp;<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state,<sp/>$langcode,<sp/>$items,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$delta,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::form($widget,<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state,<sp/>$langcode,<sp/>$items,<sp/>$delta,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>$widget[</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array_key_exists($delta,<sp/>$items)<sp/>?<sp/>$items[$delta][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/includes/TripalFields/rdfs__type/rdfs__type_widget.inc"/>
+  </compounddef>
+</doxygen>

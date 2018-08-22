@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/d3a/tripal__core_8form__elements_8inc" kind="file" language="PHP">
+    <compoundname>tripal_core.form_elements.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d3a/tripal__core_8form__elements_8inc_1a60f946534baf62bbbefdfa4e41d46e27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>expand_file_upload_combo</definition>
+        <argsstring>($element, $form_state, $complete_form)</argsstring>
+        <name>expand_file_upload_combo</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$complete_form</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Upload File and keep track of previously uploaded files. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc" line="40" column="1" bodyfile="legacy/tripal_core/includes/tripal_core.form_elements.inc" bodystart="40" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d3a/tripal__core_8form__elements_8inc_1ab6c00b1623713f7066020a50b18100d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>expand_sequence_combo</definition>
+        <argsstring>($element, $form_state, $complete_form)</argsstring>
+        <name>expand_sequence_combo</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$complete_form</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve Sequence bases form element. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc" line="162" column="1" bodyfile="legacy/tripal_core/includes/tripal_core.form_elements.inc" bodystart="162" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d3a/tripal__core_8form__elements_8inc_1a242aebd4fe0e0236d5bf7d0028a9b2f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>file_upload_combo_value_callback</definition>
+        <argsstring>($element, $input=FALSE, &amp;$form_state)</argsstring>
+        <name>file_upload_combo_value_callback</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$input</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate all content passed into the file upload combo form element. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc" line="104" column="1" bodyfile="legacy/tripal_core/includes/tripal_core.form_elements.inc" bodystart="104" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d3a/tripal__core_8form__elements_8inc_1a19b06f170f895011f1993d48143bd31e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sequence_combo_value_callback</definition>
+        <argsstring>($element, $input=FALSE, &amp;$form_state)</argsstring>
+        <name>sequence_combo_value_callback</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$input</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate all content passed into the sequence combo form element D7<xrefsect id="dd/da0/todo_1_todo000018"><xreftitle>Todo</xreftitle><xrefdescription><para>: test/fix this callback.</para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc" line="202" column="1" bodyfile="legacy/tripal_core/includes/tripal_core.form_elements.inc" bodystart="202" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d3a/tripal__core_8form__elements_8inc_1abc8fba8d1591fd3c9dad08d379c5c67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>theme_file_upload_combo</definition>
+        <argsstring>($variables)</argsstring>
+        <name>theme_file_upload_combo</name>
+        <param>
+          <declname>$variables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Theme the file upload combo form element. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc" line="86" column="1" bodyfile="legacy/tripal_core/includes/tripal_core.form_elements.inc" bodystart="86" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d3a/tripal__core_8form__elements_8inc_1a72555f479c8fcae30e25607ce048a622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>theme_sequence_combo</definition>
+        <argsstring>($variables)</argsstring>
+        <name>theme_sequence_combo</name>
+        <param>
+          <declname>$variables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Theme the file sequence form element. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc" line="227" column="1" bodyfile="legacy/tripal_core/includes/tripal_core.form_elements.inc" bodystart="227" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d3a/tripal__core_8form__elements_8inc_1a71e18d9d4e3d6ba3a2a8a55fab090b0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_core_element_info</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_core_element_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Register form elements. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc" line="12" column="1" bodyfile="legacy/tripal_core/includes/tripal_core.form_elements.inc" bodystart="12" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Form elements used Various places in Tripal </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="12" refid="df/d3a/tripal__core_8form__elements_8inc_1a71e18d9d4e3d6ba3a2a8a55fab090b0b" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d3a/tripal__core_8form__elements_8inc_1a71e18d9d4e3d6ba3a2a8a55fab090b0b" kindref="member">tripal_core_element_info</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>$elements<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>$elements[</highlight><highlight class="stringliteral">&apos;file_upload_combo&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#input&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#process&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;expand_file_upload_combo&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value_callback&apos;</highlight><highlight class="normal"><sp/>=&gt;</highlight><highlight class="stringliteral">&apos;file_upload_combo_value_callback&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#theme&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;theme_file_upload_combo&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#theme_wrappers&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;form_element&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>$elements[</highlight><highlight class="stringliteral">&apos;sequence_combo&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#input&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#process&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;expand_sequence_combo&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value_callback&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;sequence_combo_value_callback&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#theme&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;theme_sequence_combo&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#theme_wrappers&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;form_element&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#tree&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$elements;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="df/d3a/tripal__core_8form__elements_8inc_1a60f946534baf62bbbefdfa4e41d46e27" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d3a/tripal__core_8form__elements_8inc_1a60f946534baf62bbbefdfa4e41d46e27" kindref="member">expand_file_upload_combo</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$form_state,<sp/>$complete_form)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>default<sp/>values<sp/>for<sp/>each<sp/>field</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(empty(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;items&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;items_file&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#tree&apos;</highlight><highlight class="normal">]<sp/>=<sp/>TRUE;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>items<sp/>text<sp/>area<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>$parents<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#parents&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>$parents[]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;items&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;items&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textarea&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;items&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;items&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>file<sp/>upload<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>$parents<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#parents&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>$parents[]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;items_file&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;items_file&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;file&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><sp/></highlight><highlight class="stringliteral">&apos;File<sp/>upload&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;items_file&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;items_file&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>hidden<sp/>elelment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>$parents<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#parents&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>$parents[]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;hidden&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>(isset(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal">]))<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal">]<sp/>:<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="df/d3a/tripal__core_8form__elements_8inc_1abc8fba8d1591fd3c9dad08d379c5c67f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d3a/tripal__core_8form__elements_8inc_1abc8fba8d1591fd3c9dad08d379c5c67f" kindref="member">theme_file_upload_combo</ref>($variables)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;element&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;items&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>This<sp/>space<sp/>forces<sp/>our<sp/>fields<sp/>to<sp/>have<sp/>a<sp/>little<sp/>room<sp/>in<sp/>between.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;items_file&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>This<sp/>space<sp/>forces<sp/>our<sp/>fields<sp/>to<sp/>have<sp/>a<sp/>little<sp/>room<sp/>in<sp/>between.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="df/d3a/tripal__core_8form__elements_8inc_1a242aebd4fe0e0236d5bf7d0028a9b2f4" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d3a/tripal__core_8form__elements_8inc_1a242aebd4fe0e0236d5bf7d0028a9b2f4" kindref="member">file_upload_combo_value_callback</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$input<sp/>=<sp/>FALSE,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($input<sp/>==<sp/>FALSE)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>items<sp/>in<sp/>the<sp/>textbox</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/><sp/>$input[</highlight><highlight class="stringliteral">&apos;items&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($items)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>split<sp/>on<sp/>new<sp/>line<sp/>or<sp/>comma</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>$vals<sp/><sp/>=<sp/>preg_split(</highlight><highlight class="stringliteral">&quot;/[\n,]+/&quot;</highlight><highlight class="normal">,<sp/>$items);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>through<sp/>the<sp/>values<sp/>and<sp/>trim<sp/>surrounding<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($vals<sp/>as<sp/>$i<sp/>=&gt;<sp/>$value)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[]<sp/>=<sp/>trim($value);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>merge<sp/>any<sp/>items<sp/>from<sp/>the<sp/>file<sp/>upload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>$file<sp/>=<sp/>file_save_upload(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">],<sp/>array());</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($file)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>$file_path<sp/>=<sp/>$file-&gt;uri;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>$input[</highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$file_path;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>need<sp/>to<sp/>add<sp/>our<sp/>file<sp/>path<sp/>to<sp/>the<sp/>$_GET<sp/>element<sp/>as<sp/>if<sp/>it<sp/>were</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>submitted<sp/>along<sp/>with<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>$_GET[<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">]][</highlight><highlight class="stringliteral">&apos;file_path&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$file_path;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>$fh<sp/>=<sp/>fopen($file_path,<sp/></highlight><highlight class="charliteral">&apos;r&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($line<sp/>=<sp/>fgets($fh))<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$items<sp/>=<sp/>trim($line);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>split<sp/>on<sp/>new<sp/>line<sp/>or<sp/>comma</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$vals<sp/><sp/>=<sp/>preg_split(</highlight><highlight class="stringliteral">&quot;/[\n,]+/&quot;</highlight><highlight class="normal">,<sp/>$items);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>through<sp/>the<sp/>values<sp/>and<sp/>trim<sp/>surrounding<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($vals<sp/>as<sp/>$i<sp/>=&gt;<sp/>$value)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[]<sp/>=<sp/>trim($value);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose($fh);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>a<sp/>new<sp/>&apos;items_array&apos;<sp/>element<sp/>that<sp/>contains<sp/>the<sp/>array<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>submitted<sp/>items<sp/>from<sp/>both<sp/>the<sp/>textbox<sp/>and<sp/>the<sp/>input<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>$input[</highlight><highlight class="stringliteral">&apos;items_array&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$input;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="df/d3a/tripal__core_8form__elements_8inc_1ab6c00b1623713f7066020a50b18100d5" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d3a/tripal__core_8form__elements_8inc_1ab6c00b1623713f7066020a50b18100d5" kindref="member">expand_sequence_combo</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$form_state,<sp/>$complete_form)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>default<sp/>values<sp/>for<sp/>each<sp/>field</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(empty(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#tree&apos;</highlight><highlight class="normal">]<sp/>=<sp/>TRUE;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>the<sp/>upstream<sp/>box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>$parents<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#parents&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>$parents[]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Get<sp/>Upstream<sp/>Bases&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Specify<sp/>the<sp/>number<sp/>of<sp/>upstream<sp/>bases<sp/>to<sp/>include<sp/>in<sp/>the<sp/>sequence&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>the<sp/>downstream<sp/>box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>$parents<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#parents&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>$parents[]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#prefix&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&lt;br&gt;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Get<sp/>Downstream<sp/>Bases&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Specify<sp/>the<sp/>number<sp/>of<sp/>downstream<sp/>bases<sp/>to<sp/>include<sp/>in<sp/>the<sp/>sequence&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="df/d3a/tripal__core_8form__elements_8inc_1a19b06f170f895011f1993d48143bd31e" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d3a/tripal__core_8form__elements_8inc_1a19b06f170f895011f1993d48143bd31e" kindref="member">sequence_combo_value_callback</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$input<sp/>=<sp/>FALSE,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>$upstream<sp/>=<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">]][</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>$downstream<sp/>=<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">]][</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($upstream<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>form_set_error(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>positive<sp/>number<sp/>for<sp/>upstream<sp/>bases&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($upstream<sp/>and<sp/>!preg_match(</highlight><highlight class="stringliteral">&apos;/^\d+$/&apos;</highlight><highlight class="normal">,<sp/>$upstream))<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>form_set_error(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>decimal<sp/>number<sp/>for<sp/>upstream<sp/>bases&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($downstream<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>form_set_error(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>positive<sp/>number<sp/>for<sp/>downstream<sp/>bases&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($downstream<sp/>and<sp/>!preg_match(</highlight><highlight class="stringliteral">&apos;/^\d+$/&apos;</highlight><highlight class="normal">,<sp/>$downstream))<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>form_set_error(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>decimal<sp/>number<sp/>for<sp/>downstream<sp/>bases&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="df/d3a/tripal__core_8form__elements_8inc_1a72555f479c8fcae30e25607ce048a622" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d3a/tripal__core_8form__elements_8inc_1a72555f479c8fcae30e25607ce048a622" kindref="member">theme_sequence_combo</ref>($variables)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;element&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;upstream&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>This<sp/>space<sp/>forces<sp/>our<sp/>fields<sp/>to<sp/>have<sp/>a<sp/>little<sp/>room<sp/>in<sp/>between.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/>$output<sp/>.=<sp/>drupal_render(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[</highlight><highlight class="stringliteral">&apos;downstream&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$output;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_core/includes/tripal_core.form_elements.inc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_319503f46ad77c60b88d00bb48041f09" kind="dir">
+    <compoundname>legacy/tripal_natural_diversity/includes</compoundname>
+    <innerfile refid="d1/d1a/tripal__natural__diversity_8admin_8inc">tripal_natural_diversity.admin.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_natural_diversity/includes/"/>
+  </compounddef>
+</doxygen>

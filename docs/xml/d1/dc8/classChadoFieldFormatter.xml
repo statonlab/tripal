@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/dc8/classChadoFieldFormatter" kind="class" language="PHP" prot="public">
+    <compoundname>ChadoFieldFormatter</compoundname>
+    <basecompoundref refid="df/d84/classTripalFieldFormatter" prot="public" virt="non-virtual">TripalFieldFormatter</basecompoundref>
+    <derivedcompoundref refid="db/df7/classchado__linker____contact__formatter" prot="public" virt="non-virtual">chado_linker__contact_formatter</derivedcompoundref>
+    <derivedcompoundref refid="dc/d4d/classchado__linker____prop__formatter" prot="public" virt="non-virtual">chado_linker__prop_formatter</derivedcompoundref>
+    <derivedcompoundref refid="de/d48/classdata____accession__formatter" prot="public" virt="non-virtual">data__accession_formatter</derivedcompoundref>
+    <derivedcompoundref refid="de/ddf/classdata____protein__sequence__formatter" prot="public" virt="non-virtual">data__protein_sequence_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d0/d86/classdata____sequence__checksum__formatter" prot="public" virt="non-virtual">data__sequence_checksum_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d1/d34/classdata____sequence__coordinates__formatter" prot="public" virt="non-virtual">data__sequence_coordinates_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d0/dcf/classdata____sequence__coordinates__table__formatter" prot="public" virt="non-virtual">data__sequence_coordinates_table_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d9/dd2/classdata____sequence__formatter" prot="public" virt="non-virtual">data__sequence_formatter</derivedcompoundref>
+    <derivedcompoundref refid="db/d73/classdata____sequence__length__formatter" prot="public" virt="non-virtual">data__sequence_length_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d6/dd4/classefo____array__design__formatter" prot="public" virt="non-virtual">efo__array_design_formatter</derivedcompoundref>
+    <derivedcompoundref refid="db/d1a/classgo____gene__expression__formatter" prot="public" virt="non-virtual">go__gene_expression_formatter</derivedcompoundref>
+    <derivedcompoundref refid="dc/ddd/classlocal____contact__formatter" prot="public" virt="non-virtual">local__contact_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d7/d6a/classlocal____source__data__formatter" prot="public" virt="non-virtual">local__source_data_formatter</derivedcompoundref>
+    <derivedcompoundref refid="db/dda/classobi____organism__formatter" prot="public" virt="non-virtual">obi__organism_formatter</derivedcompoundref>
+    <derivedcompoundref refid="de/dcf/classogi____location__on__map__formatter" prot="public" virt="non-virtual">ogi__location_on_map_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d6/d42/classoperation____analysis__formatter" prot="public" virt="non-virtual">operation__analysis_formatter</derivedcompoundref>
+    <derivedcompoundref refid="db/d21/classoperation____phylotree__vis__formatter" prot="public" virt="non-virtual">operation__phylotree_vis_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d7/d9c/classsbo____database__cross__reference__formatter" prot="public" virt="non-virtual">sbo__database_cross_reference_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d3/d41/classsbo____phenotype__formatter" prot="public" virt="non-virtual">sbo__phenotype_formatter</derivedcompoundref>
+    <derivedcompoundref refid="dd/d29/classsbo____relationship__formatter" prot="public" virt="non-virtual">sbo__relationship_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d3/d5e/classsbo____relationship__table__formatter" prot="public" virt="non-virtual">sbo__relationship_table_formatter</derivedcompoundref>
+    <derivedcompoundref refid="dc/df7/classschema____additional__type__formatter" prot="public" virt="non-virtual">schema__additional_type_formatter</derivedcompoundref>
+    <derivedcompoundref refid="de/d9f/classschema____alternate__name__formatter" prot="public" virt="non-virtual">schema__alternate_name_formatter</derivedcompoundref>
+    <derivedcompoundref refid="dc/ddb/classschema____publication__formatter" prot="public" virt="non-virtual">schema__publication_formatter</derivedcompoundref>
+    <derivedcompoundref refid="da/d95/classsep____protocol__formatter" prot="public" virt="non-virtual">sep__protocol_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d3/db1/classsio____annotation__formatter" prot="public" virt="non-virtual">sio__annotation_formatter</derivedcompoundref>
+    <derivedcompoundref refid="df/de6/classsio____references__formatter" prot="public" virt="non-virtual">sio__references_formatter</derivedcompoundref>
+    <derivedcompoundref refid="da/d18/classsio____vocabulary__formatter" prot="public" virt="non-virtual">sio__vocabulary_formatter</derivedcompoundref>
+    <derivedcompoundref refid="da/d9b/classso____cds__formatter" prot="public" virt="non-virtual">so__cds_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d5/dd8/classso____genotype__formatter" prot="public" virt="non-virtual">so__genotype_formatter</derivedcompoundref>
+    <derivedcompoundref refid="d6/d33/classso____transcript__formatter" prot="public" virt="non-virtual">so__transcript_formatter</derivedcompoundref>
+    <derivedcompoundref refid="db/da6/classtaxrank____infraspecific__taxon__formatter" prot="public" virt="non-virtual">taxrank__infraspecific_taxon_formatter</derivedcompoundref>
+    <derivedcompoundref refid="dc/d5e/classuo____unit__formatter" prot="public" virt="non-virtual">uo__unit_formatter</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="106">
+        <label>data__sequence_coordinates_formatter</label>
+        <link refid="d1/d34/classdata____sequence__coordinates__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="125">
+        <label>sep__protocol_formatter</label>
+        <link refid="da/d95/classsep____protocol__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>chado_linker__contact_formatter</label>
+        <link refid="db/df7/classchado__linker____contact__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>taxrank__infraspecific_taxon_formatter</label>
+        <link refid="db/da6/classtaxrank____infraspecific__taxon__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="109">
+        <label>data__sequence_length_formatter</label>
+        <link refid="db/d73/classdata____sequence__length__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>operation__phylotree_vis_formatter</label>
+        <link refid="db/d21/classoperation____phylotree__vis__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>sio__references_formatter</label>
+        <link refid="df/de6/classsio____references__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>go__gene_expression_formatter</label>
+        <link refid="db/d1a/classgo____gene__expression__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>data__protein_sequence_formatter</label>
+        <link refid="de/ddf/classdata____protein__sequence__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>sbo__relationship_table_formatter</label>
+        <link refid="d3/d5e/classsbo____relationship__table__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>local__source_data_formatter</label>
+        <link refid="d7/d6a/classlocal____source__data__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>so__genotype_formatter</label>
+        <link refid="d5/dd8/classso____genotype__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>data__sequence_checksum_formatter</label>
+        <link refid="d0/d86/classdata____sequence__checksum__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>data__sequence_coordinates_table_formatter</label>
+        <link refid="d0/dcf/classdata____sequence__coordinates__table__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>uo__unit_formatter</label>
+        <link refid="dc/d5e/classuo____unit__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>sbo__database_cross_reference_formatter</label>
+        <link refid="d7/d9c/classsbo____database__cross__reference__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="123">
+        <label>schema__alternate_name_formatter</label>
+        <link refid="de/d9f/classschema____alternate__name__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>schema__publication_formatter</label>
+        <link refid="dc/ddb/classschema____publication__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>data__accession_formatter</label>
+        <link refid="de/d48/classdata____accession__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>schema__additional_type_formatter</label>
+        <link refid="dc/df7/classschema____additional__type__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>ogi__location_on_map_formatter</label>
+        <link refid="de/dcf/classogi____location__on__map__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>data__sequence_formatter</label>
+        <link refid="d9/dd2/classdata____sequence__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>operation__analysis_formatter</label>
+        <link refid="d6/d42/classoperation____analysis__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>local__contact_formatter</label>
+        <link refid="dc/ddd/classlocal____contact__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>chado_linker__prop_formatter</label>
+        <link refid="dc/d4d/classchado__linker____prop__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>sio__annotation_formatter</label>
+        <link refid="d3/db1/classsio____annotation__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>sbo__phenotype_formatter</label>
+        <link refid="d3/d41/classsbo____phenotype__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>so__transcript_formatter</label>
+        <link refid="d6/d33/classso____transcript__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>so__cds_formatter</label>
+        <link refid="da/d9b/classso____cds__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>efo__array_design_formatter</label>
+        <link refid="d6/dd4/classefo____array__design__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>sio__vocabulary_formatter</label>
+        <link refid="da/d18/classsio____vocabulary__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>sbo__relationship_formatter</label>
+        <link refid="dd/d29/classsbo____relationship__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>obi__organism_formatter</label>
+        <link refid="db/dda/classobi____organism__formatter"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="135">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="134">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="135" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/ChadoFieldFormatter.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoFieldFormatter.inc" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+      <member refid="df/d84/classTripalFieldFormatter_1ac8fad36595af3d070265537ad448ca33" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>$default_label</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a2bc2a9a611b58e17444de2b3598367df" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>$default_settings</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1a6085acb78aef363bc03b85d69b6201" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>$field_types</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1adaeaa7d89dd9b33ce51521cf9669cf34" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>__construct</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1113d3234ec9ef0a691fd07ffd551acd" prot="protected" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>ajaxifyPager</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1ae410038836433217c166a74a2501920c" prot="protected" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>getPagerElementID</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a855e26f78af9142154bdaa59f5e7120b" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>info</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a3e222cef20a5f6c2ec42ef386e51e05e" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>settingsForm</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a90dce4f342fff3e2208fc3b0b48489f2" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>settingsSummary</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1add25a3663eadef23f3a2981d61aee3f1" prot="public" virt="non-virtual"><scope>ChadoFieldFormatter</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

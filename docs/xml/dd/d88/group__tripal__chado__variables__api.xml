@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/d88/group__tripal__chado__variables__api" kind="group">
+    <compoundname>tripal_chado_variables_api</compoundname>
+    <title>Semantic Web</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_expand_var</definition>
+        <argsstring>($object, $type, $to_expand, $table_options=array())</argsstring>
+        <name>chado_expand_var</name>
+        <param>
+          <declname>$object</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <param>
+          <declname>$to_expand</declname>
+        </param>
+        <param>
+          <declname>$table_options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves fields, or tables that were excluded by default from a variable.</para><para>The <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> function automatically excludes some fields and tables from the default form of a variable. Fields that are extremely long, such as text fields are automatically excluded to prevent long page loads. Linking tables that have a many-to-one relationship with the record are also excluded. This function allows for custom expansion of the record created by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> by specifyin the field and tables that should be added.</para><para>Example Usage: <programlisting><codeline><highlight class="normal">//<sp/>Get<sp/>a<sp/>chado<sp/>object<sp/>to<sp/>be<sp/>expanded</highlight></codeline>
+<codeline><highlight class="normal">$values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;Medtr4g030710&apos;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$features<sp/>=<sp/>chado_generate_var(&apos;feature&apos;,<sp/>$values);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Expand<sp/>the<sp/>feature.residues<sp/>field</highlight></codeline>
+<codeline><highlight class="normal">$feature<sp/>=<sp/>chado_expand_var($feature,<sp/>&apos;field&apos;,<sp/>&apos;feature.residues&apos;);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Expand<sp/>the<sp/>feature<sp/>properties<sp/>(featureprop<sp/>table)</highlight></codeline>
+<codeline><highlight class="normal">$feature<sp/>=<sp/>chado_expand_var($feature,<sp/>&apos;table&apos;,<sp/>&apos;featureprop&apos;);</highlight></codeline>
+</programlisting></para><para>If a field is requested, it&apos;s value is added where it normally is expected in the record. If a table is requested then a new key/value element is added to the record. The key is the table&apos;s name and the value is an array of records (of the same type created by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). For example, expanding a &apos;feature&apos; record to include a &apos;pub&apos; record via the &apos;feature_pub&apos; table. The following provides a simple example for how the &apos;feature_pub&apos; table is added.</para><para><programlisting><codeline><highlight class="normal">array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;feature_id&apos;<sp/>=&gt;<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;blah&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;blah&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>....</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;feature_pub<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>[pub<sp/>object],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>[pub<sp/>object],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>[pub<sp/>object],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>[pub<sp/>object],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para><para>where [pub object] is a record of a publication as created by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>.</para><para>If the requested table has multiple foreign keys, such as the &apos;featureloc&apos; or &apos;feature_genotype&apos; tables, then an additional level is added to the array where the foreign key column names are added. An example feature record with an expanded featureloc table is shown below:</para><para><programlisting><codeline><highlight class="normal">array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;feature_id&apos;<sp/>=&gt;<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;blah&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;uniquename&apos;<sp/>=&gt;<sp/>&apos;blah&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>....</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;featureloc<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;srcfeature_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[feature<sp/>object],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;feature_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[feature<sp/>object],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This must be an object generated using <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates what is being expanded. Must be one of &apos;field&apos;, &apos;foreign_key&apos;, &apos;table&apos;, &apos;node&apos;. While field and node are self-explanitory, it might help to note that &apos;table&apos; refers to tables that have a foreign key pointing to the current table (ie: featureprop is a table that can be expanded for features) and &apos;foreign_key&apos; expands a foreign key in the current table that might have been excluded (ie: feature.type_id for features). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$to_expand</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the field/foreign_key/table/node to be expanded </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$table_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><itemizedlist>
+<listitem><para>order_by: An array containing options for the base table. For example, an option of &apos;order_by&apos; may be used to sort results in the base table if more than one are returned. The options must be compatible with the options accepted by the <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> function.</para></listitem><listitem><para>return_array: Additionally, The option &apos;return_array&apos; can be provided to force the function to expand tables as an array. Default behavior is to expand a table as single record if only one record exists or to expand as an array if multiple records exist.</para></listitem><listitem><para>include_fk: an array of FK relationships to follow. By default, the chado_expand_var function will follow all FK relationships but this may generate more queries then is desired slowing down this function call when there are lots of FK relationships to follow. Provide an array specifying the fields to include. For example, if expanding a property table (e.g. featureprop) and you want the CV and accession but do not want the DB the following array would work: $table_options = array( &apos;include_fk&apos; =&gt; array( &apos;type_id&apos; =&gt; array( &apos;cv_id&apos; =&gt; 1, &apos;dbxref_id&apos; =&gt; 1, ) ) );</para><para>The above array will expand the &apos;type_id&apos; of the property table but only further expand the cv_id and the dbxref_id and will go no further.</para></listitem><listitem><para>pager: Use this option if it is desired to return only a subset of results so that they may be shown within a Drupal-style pager. This should be an array with two keys: &apos;limit&apos; and &apos;element&apos;. The value of &apos;limit&apos; should specify the number of records to return and &apos;element&apos; is a unique integer to differentiate between pagers when more than one appear on a page. The &apos;element&apos; should start with zero and increment by one for each pager. This only works when type is a &apos;table&apos;.</para></listitem><listitem><para>filter: This options is only used where type=table and allows you to expand only a subset of results based on the given criteria. Criteria should provided as an array of [field name] =&gt; [value] similar to the values array provided to <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. For example, when expanding the featureprop table for a feature, you will already get only properties for that feature, this option allows you to further get only properties of a given type by passing in array(&apos;type_id&apos; =&gt; array(&apos;name&apos; =&gt; [name of type])) </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A chado object supplemented with the field/table/node requested to be expanded. If the type is a table and it has already been expanded no changes is made to the returned object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.variables.api.inc" line="620" column="1" bodyfile="tripal_chado/api/tripal_chado.variables.api.inc" bodystart="620" bodyend="1148"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_generate_var</definition>
+        <argsstring>($table, $values, $base_options=array())</argsstring>
+        <name>chado_generate_var</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$base_options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates an object containing the full details of a record(s) in Chado.</para><para>The object returned contains key/value pairs where the keys are the fields in the Chado table.</para><para>The returned object differs from the array returned by <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> as all foreign key relationships in the Chado table have been followed and those data are also included. This function automatically excludes some fields and tables. Fields that are extremely long, such as text fields are automatically excluded to prevent long page loads. Linking tables that have a many-to-one relationship with the record are also excluded. Use the <ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var()</ref> to manually add in excluded fields and data from linker tables.</para><para>Example Usage: <programlisting><codeline><highlight class="normal">$values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;Medtr4g030710&apos;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$feature<sp/>=<sp/>chado_generate_var(&apos;feature&apos;,<sp/>$values);</highlight></codeline>
+</programlisting></para><para>The $values array passed to this fucntion can be of the same format used by the <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> function.</para><para>If a field is a foreign key then its value is an object that contains key/value pairs for that record. The following code provides examples for retrieving values associated with the record, either as columns in the original Chado table or as columns in linked records through foreign keys: <programlisting><codeline><highlight class="normal">//<sp/>Get<sp/>the<sp/>feature<sp/>name.</highlight></codeline>
+<codeline><highlight class="normal">$name<sp/>=<sp/>$feature-&gt;name;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>the<sp/>feature<sp/>unique<sp/>name.</highlight></codeline>
+<codeline><highlight class="normal">$uniquename<sp/>=<sp/>$feature-&gt;uniquename;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>the<sp/>feature<sp/>type.<sp/>Because<sp/>the<sp/>type<sp/>name<sp/>is<sp/>obtained<sp/>via</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>a<sp/>foreign<sp/>key<sp/>with<sp/>the<sp/>cvterm<sp/>table,<sp/>the<sp/>objects<sp/>are<sp/>nested</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>and<sp/>we<sp/>can<sp/>follow<sp/>the<sp/>foreign<sp/>key<sp/>fields<sp/>to<sp/>retrieve<sp/>those<sp/>values</highlight></codeline>
+<codeline><highlight class="normal">$type<sp/>=<sp/>$feature-&gt;type_id-&gt;name;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>the<sp/>name<sp/>of<sp/>the<sp/>vocabulary.</highlight></codeline>
+<codeline><highlight class="normal">$cv<sp/>=<sp/>$feature-&gt;type_id-&gt;cv_id-&gt;name;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Get<sp/>the<sp/>vocabulary<sp/>id.</highlight></codeline>
+<codeline><highlight class="normal">$cv_id<sp/>=<sp/>$feature-&gt;type_id-&gt;cv_id-&gt;cv_id;</highlight></codeline>
+</programlisting></para><para>This will return an object if there is only one feature with the name Medtr4g030710 or it will return an array of feature objects if more than one feature has that name.</para><para>Note to Module Designers: Fields can be excluded by default from these objects by implementing one of the following hooks:<itemizedlist>
+<listitem><para>hook_exclude_field_from_tablename_by_default (where tablename is the name of the table): This hook allows you to add fields to be excluded on a per table basis. Simply implement this hook to return an array of fields to be excluded. The following example will ensure that feature.residues is excluded from a feature object by default: <programlisting><codeline><highlight class="normal">mymodule_exclude_field_from_feature_by_default()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(&apos;residues&apos;<sp/>=&gt;<sp/>TRUE);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para></listitem><listitem><para>hook_exclude_type_by_default: This hook allows you to exclude fields using conditional. This function should return an array of postgresql types mapped to criteria. If the field types of any table match the criteria then the field is excluded. Tokens available in criteria are &gt;field_value&lt; and &gt;field_name&lt;. The following example will exclude all text fields with a length &gt; 50. Thus if $feature.residues is longer than 50 it will be excluded, otherwise it will be added. <programlisting><codeline><highlight class="normal">mymodule_exclude_type_by_default()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(&apos;text&apos;<sp/>=&gt;<sp/>&apos;length(&amp;gt;field_value&amp;lt;<sp/>)<sp/>&gt;<sp/>50&apos;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the base table to generate a variable for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A select values array that selects the records you want from the base table (this has the same form as chado_select_record) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$base_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array containing options for the base table. For example, an option of &apos;order_by&apos; may be used to sort results in the base table if more than one are returned. The options must be compatible with the options accepted by the <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> function. Additionally, These options are available for this function: -return_array: can be provided to force the function to always return an array. Default behavior is to return a single record if only one record exists or to return an array if multiple records exist.<itemizedlist>
+<listitem><para>include_fk: an array of FK relationships to follow. By default, the chado_select_record function will follow all FK relationships but this may generate more queries then is desired slowing down this function call when there are lots of FK relationships to follow. Provide an array specifying the fields to include. For example, if expanding a property table (e.g. featureprop) and you want the CV and accession but do not want the DB the following array would work:</para><para>$table_options = array( &apos;include_fk&apos; =&gt; array( &apos;type_id&apos; =&gt; array( &apos;cv_id&apos; =&gt; 1, &apos;dbxref_id&apos; =&gt; 1, ) ) );</para><para>The above array will expand the &apos;type_id&apos; of the property table but only further expand the cv_id and the dbxref_id and will go no further.<itemizedlist>
+<listitem><para>pager: Use this option if it is desired to return only a subset of results so that they may be shown within a Drupal-style pager. This should be an array with two keys: &apos;limit&apos; and &apos;element&apos;. The value of &apos;limit&apos; should specify the number of records to return and &apos;element&apos; is a unique integer to differentiate between pagers when more than one appear on a page. The &apos;element&apos; should start with zero and increment by one for each pager. </para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Either an object (if only one record was selected from the base table) or an array of objects (if more than one record was selected from the base table). If the option &apos;return_array&apos; is provided the function always returns an array. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.variables.api.inc" line="146" column="1" bodyfile="tripal_chado/api/tripal_chado.variables.api.inc" bodystart="146" bodyend="478"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This API generates objects containing the full details of a record(s) in chado. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

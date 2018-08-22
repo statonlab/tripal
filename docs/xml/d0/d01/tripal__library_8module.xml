@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/d01/tripal__library_8module" kind="file" language="C++">
+    <compoundname>tripal_library.module</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@file</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Integrates<sp/>the<sp/>Chado<sp/>Library<sp/>module<sp/>with<sp/>Drupal<sp/>Nodes<sp/>&amp;<sp/>Views</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@defgroup<sp/>tripal_legacy_library<sp/>Library<sp/>Module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_modules</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@{</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Integrates<sp/>the<sp/>Chado<sp/>Library<sp/>module<sp/>with<sp/>Drupal<sp/>Nodes<sp/>&amp;<sp/>Views</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;api/tripal_library.DEPRECATED.inc&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;theme/tripal_library.theme.inc&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;includes/tripal_library.admin.inc&apos;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;includes/tripal_library.chado_node.inc&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_permission().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Set<sp/>the<sp/>permission<sp/>types<sp/>that<sp/>the<sp/>chado<sp/>module<sp/>uses.<sp/><sp/>Essentially<sp/>we</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>want<sp/>permissionis<sp/>that<sp/>protect<sp/>creation,<sp/>editing<sp/>and<sp/>deleting<sp/>of<sp/>chado</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>data<sp/>objects</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_library</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_library_permission()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>chado_library<sp/>content&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>t(&apos;View<sp/>Libraries&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&apos;Allow<sp/>users<sp/>to<sp/>view<sp/>library<sp/>pages.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;create<sp/>chado_library<sp/>content&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>t(&apos;Create<sp/>Libraries&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&apos;Allow<sp/>users<sp/>to<sp/>create<sp/>new<sp/>library<sp/>pages.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;delete<sp/>chado_library<sp/>content&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>t(&apos;Delete<sp/>Libraries&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&apos;Allow<sp/>users<sp/>to<sp/>delete<sp/>library<sp/>pages.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;edit<sp/>chado_library<sp/>content&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>t(&apos;Edit<sp/>Libraries&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&apos;Allow<sp/>users<sp/>to<sp/>edit<sp/>library<sp/>pages.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;administer<sp/>tripal<sp/>library&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>t(&apos;Administer<sp/>Libraries&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&apos;Allow<sp/>users<sp/>to<sp/>administer<sp/>all<sp/>libraries.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_menu().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Menu<sp/>items<sp/>are<sp/>automatically<sp/>added<sp/>for<sp/>the<sp/>new<sp/>node<sp/>types<sp/>created</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>by<sp/>this<sp/>module<sp/>to<sp/>the<sp/>&apos;Create<sp/>Content&apos;<sp/>Navigation<sp/>menu<sp/>item.<sp/><sp/>This<sp/>function</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>adds<sp/>more<sp/>menu<sp/>items<sp/>needed<sp/>for<sp/>this<sp/>module.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_library</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_library_menu()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>The<sp/>administative<sp/>settings<sp/>menu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_library&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Libraries&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Any<sp/>biological<sp/>library.<sp/>Examples<sp/>of<sp/>genomic<sp/>libraries<sp/>include<sp/>BAC,<sp/>cDNA,<sp/>FOSMID,<sp/>etc.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_library_admin_libraries_listing&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal<sp/>library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_NORMAL_ITEM,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_library/help&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Help&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Basic<sp/>Description<sp/>of<sp/>Tripal<sp/>Library<sp/>Module<sp/>Functionality&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;theme&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_library_help&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal<sp/>library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_LOCAL_TASK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>10</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_library/configuration&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Settings&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Configure<sp/>the<sp/>Tripal<sp/>Library<sp/>module&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_library_admin&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal<sp/>library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_LOCAL_TASK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_library/sync&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;<sp/>Sync&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Create<sp/>pages<sp/>on<sp/>this<sp/>site<sp/>for<sp/>libraries<sp/>stored<sp/>in<sp/>Chado&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;chado_node_sync_form&apos;,<sp/>&apos;tripal_library&apos;,<sp/>&apos;chado_library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal<sp/>library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_LOCAL_TASK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_library/chado_library_toc&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;<sp/>TOC&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Manage<sp/>the<sp/>table<sp/>of<sp/>contents<sp/>for<sp/>library<sp/>nodes.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_core_content_type_toc_form&apos;,<sp/>&apos;chado_library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal<sp/>library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_LOCAL_TASK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file&apos;<sp/>=&gt;<sp/><sp/>&apos;includes/tripal_core.toc.inc&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file<sp/>path&apos;<sp/>=&gt;<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;tripal_core&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/tripal_library/views/libraries/enable&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Enable<sp/>Library<sp/>Administrative<sp/>View&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_enable_view&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_library_admin_libraries&apos;,<sp/>&apos;admin/tripal/legacy/tripal_library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal<sp/>library&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_search_biological_data_views().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Adds<sp/>the<sp/>described<sp/>views<sp/>to<sp/>the<sp/>&quot;Search<sp/>Data&quot;<sp/>Page<sp/>created<sp/>by<sp/>Tripal<sp/>Views</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_library_search_biological_data_views()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_user_library&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;machine_name&apos;<sp/>=&gt;<sp/>&apos;tripal_library_user_library&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;human_name&apos;<sp/>=&gt;<sp/>&apos;Libraries&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Biological<sp/>library<sp/>including<sp/>BAC,<sp/>cDNA,<sp/>FOSMID,<sp/>etc.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;link&apos;<sp/>=&gt;<sp/>&apos;chado/library&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_views_api().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Essentially<sp/>this<sp/>hook<sp/>tells<sp/>drupal<sp/>that<sp/>there<sp/>is<sp/>views<sp/>support<sp/>for</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>for<sp/>this<sp/>module<sp/>which<sp/>then<sp/>includes<sp/>tripal_db.views.inc<sp/>where<sp/>all<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>views<sp/>integration<sp/>code<sp/>is</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_library</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_library_views_api()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;api&apos;<sp/>=&gt;<sp/>3.0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>Implements<sp/>hook_theme().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>We<sp/>need<sp/>to<sp/>let<sp/>drupal<sp/>know<sp/>about<sp/>our<sp/>theme<sp/>functions<sp/>and<sp/>their<sp/>arguments.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>We<sp/>create<sp/>theme<sp/>functions<sp/>to<sp/>allow<sp/>users<sp/>of<sp/>the<sp/>module<sp/>to<sp/>customize<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>look<sp/>and<sp/>feel<sp/>of<sp/>the<sp/>output<sp/>generated<sp/>in<sp/>this<sp/>module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_library</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_library_theme($existing,<sp/>$type,<sp/>$theme,<sp/>$path)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$core_path<sp/>=<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;tripal_core&apos;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;node__chado_library&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;node--chado-generic&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;render<sp/>element&apos;<sp/>=&gt;<sp/>&apos;node&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;base<sp/>hook&apos;<sp/>=&gt;<sp/>&apos;node&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$core_path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>tripal_library<sp/>templates</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_base&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_base&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_features&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_features&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_properties&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_properties&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_publications&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_publications&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_references&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_references&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_synonyms&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_synonyms&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_terms&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_terms&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_help&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_help&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/><sp/>array(NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>teaser</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_library_teaser&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_library_teaser&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>tripal_organism<sp/>templates</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_organism_libraries&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_organism_libraries&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>tripal_feature<sp/>templates</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_feature_libraries&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/>array(&apos;node&apos;<sp/>=&gt;<sp/>NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_feature_libraries&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_help().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Adds<sp/>a<sp/>help<sp/>page<sp/>to<sp/>the<sp/>module<sp/>list</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_library</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_library_help<sp/>($path,<sp/>$arg)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>($path<sp/>==<sp/>&apos;admin/help#tripal_library&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>theme(&apos;tripal_library_help&apos;,<sp/>array());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implementation<sp/>of<sp/>hook_form_alter().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$form</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$form_state</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$form_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_library</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_library_form_alter(&amp;$form,<sp/>&amp;$form_state,<sp/>$form_id)<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>($form_id<sp/>==<sp/>&quot;chado_library_node_form&quot;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>turn<sp/>of<sp/>preview<sp/>button<sp/>for<sp/>insert/updates</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$form[&apos;actions&apos;][&apos;preview&apos;][&apos;#access&apos;]<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//remove<sp/>the<sp/>body<sp/>field</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unset($form[&apos;body&apos;]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_library/tripal_library.module"/>
+  </compounddef>
+</doxygen>

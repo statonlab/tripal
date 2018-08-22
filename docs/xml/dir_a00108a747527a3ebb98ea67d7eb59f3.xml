@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a00108a747527a3ebb98ea67d7eb59f3" kind="dir">
+    <compoundname>tripal/api</compoundname>
+    <innerfile refid="dd/d2e/tripal_8collections_8api_8inc">tripal.collections.api.inc</innerfile>
+    <innerfile refid="de/dfd/tripal_8d3js_8api_8inc">tripal.d3js.api.inc</innerfile>
+    <innerfile refid="d8/de2/tripal_8DEPRECATED_8api_8inc">tripal.DEPRECATED.api.inc</innerfile>
+    <innerfile refid="d9/d7f/tripal_8entities_8api_8inc">tripal.entities.api.inc</innerfile>
+    <innerfile refid="de/d61/tripal_8fields_8api_8inc">tripal.fields.api.inc</innerfile>
+    <innerfile refid="dd/df1/tripal_8files_8api_8inc">tripal.files.api.inc</innerfile>
+    <innerfile refid="de/daa/tripal_8importer_8api_8inc">tripal.importer.api.inc</innerfile>
+    <innerfile refid="d6/dd6/tripal_8jobs_8api_8inc">tripal.jobs.api.inc</innerfile>
+    <innerfile refid="dd/d45/tripal_8notice_8api_8inc">tripal.notice.api.inc</innerfile>
+    <innerfile refid="d6/d6d/tripal_8quotas_8api_8inc">tripal.quotas.api.inc</innerfile>
+    <innerfile refid="d3/d90/tripal_8terms_8api_8inc">tripal.terms.api.inc</innerfile>
+    <innerfile refid="dc/d80/tripal_8upload_8api_8inc">tripal.upload.api.inc</innerfile>
+    <innerfile refid="dd/d08/tripal_8variables_8api_8inc">tripal.variables.api.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal/api/"/>
+  </compounddef>
+</doxygen>

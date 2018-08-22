@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/d9b/classWebServicesFieldFormatter" kind="class" language="PHP" prot="public">
+    <compoundname>WebServicesFieldFormatter</compoundname>
+    <basecompoundref refid="df/d84/classTripalFieldFormatter" prot="public" virt="non-virtual">TripalFieldFormatter</basecompoundref>
+    <derivedcompoundref refid="d2/d1f/classremote____data__formatter" prot="public" virt="non-virtual">remote__data_formatter</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1173">
+        <label>WebServicesFieldFormatter</label>
+        <link refid="d5/d9b/classWebServicesFieldFormatter"/>
+        <childnode refid="1174" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1174">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="1175">
+        <label>remote__data_formatter</label>
+        <link refid="d2/d1f/classremote____data__formatter"/>
+        <childnode refid="1173" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1176">
+        <label>WebServicesFieldFormatter</label>
+        <link refid="d5/d9b/classWebServicesFieldFormatter"/>
+        <childnode refid="1177" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1177">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_ws/includes/TripalFields/WebServicesFieldFormatter.inc" line="9" column="1" bodyfile="tripal_ws/includes/TripalFields/WebServicesFieldFormatter.inc" bodystart="9" bodyend="118"/>
+    <listofallmembers>
+      <member refid="df/d84/classTripalFieldFormatter_1ac8fad36595af3d070265537ad448ca33" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>$default_label</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a2bc2a9a611b58e17444de2b3598367df" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>$default_settings</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1a6085acb78aef363bc03b85d69b6201" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>$field_types</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1adaeaa7d89dd9b33ce51521cf9669cf34" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>__construct</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1113d3234ec9ef0a691fd07ffd551acd" prot="protected" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>ajaxifyPager</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1ae410038836433217c166a74a2501920c" prot="protected" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>getPagerElementID</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a855e26f78af9142154bdaa59f5e7120b" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>info</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a3e222cef20a5f6c2ec42ef386e51e05e" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>settingsForm</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a90dce4f342fff3e2208fc3b0b48489f2" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>settingsSummary</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1add25a3663eadef23f3a2981d61aee3f1" prot="public" virt="non-virtual"><scope>WebServicesFieldFormatter</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

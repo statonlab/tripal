@@ -1,0 +1,874 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/dce/group__tripal__entities__api" kind="group">
+    <compoundname>tripal_entities_api</compoundname>
+    <title>Tripal Entities</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga46df8084aa82f744920d66ac59ae9a38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_tripal_get_bundle_field_element_details</definition>
+        <argsstring>($elements, &amp;$field_details)</argsstring>
+        <name>_tripal_get_bundle_field_element_details</name>
+        <param>
+          <declname>$elements</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$field_details</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A recursive helper function for the tripal_get_bundle_details.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$elementInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1533" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1533" bodyend="1562"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gaf9f571c2cb42fe6578e4b2a85432d792" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_bundle_create</definition>
+        <argsstring>(&amp;$bundle, $storage_args)</argsstring>
+        <name>hook_bundle_create</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$storage_args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to perform tasks after a <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> object is created.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The newly created <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$storage_args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments passed to the storage backend for this bundle. These arguments typically provide details for how to associate this bundle with records in the storage system. Each storage system will have its own set of arguments that it will expect. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="80" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga8f8e40c7836f31085b3ba5b151a01304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_bundle_delete</definition>
+        <argsstring>($bundle)</argsstring>
+        <name>hook_bundle_delete</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to perform tasks before a <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> object is deleted.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The newly created <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="112" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gaf8be8ab20c6d9e3ec5a5073508c337a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_bundle_postcreate</definition>
+        <argsstring>(&amp;$bundle)</argsstring>
+        <name>hook_bundle_postcreate</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to perform tasks after fields are added to a <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The newly created <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="91" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gac67a33dfa03f9f2981873a6d94a890c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_entity_create</definition>
+        <argsstring>(&amp;$entity, $entity_type)</argsstring>
+        <name>hook_entity_create</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="63" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga87e87c32adeeefff7ac905b884b06fde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_tripal_cron_notification</definition>
+        <argsstring>()</argsstring>
+        <name>hook_tripal_cron_notification</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to add admin notifications to the associated tripal table during the cron run. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="100" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga7b7a007b158eaa50f4f5fa2e97320003" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_tripal_default_title_format</definition>
+        <argsstring>($bundle, $available_tokens)</argsstring>
+        <name>hook_tripal_default_title_format</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$available_tokens</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implement this hook to define default formats for Tripal Content Types.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref></parametertype>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A tripal content type entity with information to be used for determining the default title format. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$available_tokens</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of available tokens for this particular tripal content type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array An array of potential formats. The lightest weighted format suggested by all modules will be chosen. Each array item should consist of a &apos;weight&apos; and &apos;format&apos;. See the hook implementation below for examples.<itemizedlist>
+<listitem><para>weight: an integer used to determine priority of suggestions. The smaller/lighter the number the higher the priority. Best practice is to use a weight less than 0 for extension modules. specifically, -2 is a good weight for calculated formats and -5 is a good weight for hard-coded formats specific to a given type.</para></listitem><listitem><para>format: a string including approved tokens used to determine the title on Tripal content pages. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="140" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="140" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga2c17dc368ac82e83398f642885bfd9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>theme_token_list</definition>
+        <argsstring>($tokens)</argsstring>
+        <name>theme_token_list</name>
+        <param>
+          <declname>$tokens</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Formats the tokens for display.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$tokens</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of tokens generated via <ref refid="d5/dce/group__tripal__entities__api_1ga7bae80e868c112e2f20e623f7992c79e" kindref="member">tripal_get_entity_tokens()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rendered output describing the available tokens. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1402" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1402" bodyend="1415"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gab6848d2947f13ae562d8fe604de26142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_notification</definition>
+        <argsstring>($title, $details, $type, $actions, $submitter_id)</argsstring>
+        <name>tripal_add_notification</name>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <param>
+          <declname>$details</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <param>
+          <declname>$actions</declname>
+        </param>
+        <param>
+          <declname>$submitter_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to write to the admin notification table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A generic phrase indicating what the notification is for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A human-readable sentence or two describing the issue. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A one word type indicating the type of notification. Tripal types include: Jobs, Fields. If no type is required please pass NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$actions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A serialized PHP associative array containing the link and URL for each action. If not type is required please pass NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$submitter_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique ID provided by the submitter for checking to make sure that the notification is not added more than once. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="381" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="381" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gae741bc8f60274eee9fbe4e2ca062fe83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_create_bundle</definition>
+        <argsstring>($args, &amp;$error=&apos;&apos;)</argsstring>
+        <name>tripal_create_bundle</name>
+        <param>
+          <declname>$args</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$error</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new Tripal Entity type (i.e. bundle).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of arguments that must include the following keys:<itemizedlist>
+<listitem><para>vocabulary: The abbreviated vocabulary for the vocabulary (e.g. RO, SO, PATO).</para></listitem><listitem><para>accession: The unique term ID in the vocabulary $vocabulary (i.e. an accession).</para></listitem><listitem><para>term_name: A human-readable name for this term. This will became the name that appears for the content type. In practice, this should be the name of the term. (E.g. the name for SO:0000704 is gene). </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string, passed by reference, that is filled with the error message if the function fails.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bundle object or FALSE if failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="429" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="429" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gaece8addc446db986888dea9c9a339955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_create_bundle_fields</definition>
+        <argsstring>($bundle, $term)</argsstring>
+        <name>tripal_create_bundle_fields</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refreshes the bundle such that new fields added by modules will be found.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bundle_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the bundle to refresh (e.g. bio_data_4). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term object for the bundle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The array of field instance names that were added. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="682" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="682" bodyend="818"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga5a80b6313c62a09790cdfdb15ac3a122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_entity_label</definition>
+        <argsstring>($entity)</argsstring>
+        <name>tripal_entity_label</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define the entity label callback. This will return the title.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mixed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1426" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1426" bodyend="1431"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga7bad5fec2219d0f880f65290e71ec0d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_bundle_details</definition>
+        <argsstring>($bundle_name)</argsstring>
+        <name>tripal_get_bundle_details</name>
+        <param>
+          <declname>$bundle_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves details, including attached fields, for a given bundle.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bundle_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the bundle (e.g. bio_data_xx)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array containing the name, label, controlled vocabulary details and a list of fields attached to the bundle. Returns FALSE if the bundle does not exist. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1446" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1446" bodyend="1525"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gaf73d3966d163775fcb48e86b1253496c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_bundle_variable</definition>
+        <argsstring>($variable_name, $bundle_id, $default=FALSE)</argsstring>
+        <name>tripal_get_bundle_variable</name>
+        <param>
+          <declname>$variable_name</declname>
+        </param>
+        <param>
+          <declname>$bundle_id</declname>
+        </param>
+        <param>
+          <declname>$default</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="937" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="937" bodyend="960"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga52a167fdb04c89c9ce53db5f803cab63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_content_type</definition>
+        <argsstring>($bundle_name)</argsstring>
+        <name>tripal_get_content_type</name>
+        <param>
+          <declname>$bundle_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves information about a given content type.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bundle_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of a bundle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An object containing information about the bundle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="661" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="661" bodyend="667"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga193227c1fd8a379805e054ab4dd2b4cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_content_types</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_content_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a list of the content types.</para><para><simplesect kind="return"><para>An array of bundles. Each bundle is an object containing information about that bundle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="564" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="564" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gadda52167dced1ec99f937d18da58eda7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_default_title_format</definition>
+        <argsstring>($bundle)</argsstring>
+        <name>tripal_get_default_title_format</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine the default title format to use for an entity.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref></parametertype>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Entity object for the Tripal Bundle that the title format is for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string A default title format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1073" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1073" bodyend="1111"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga7bae80e868c112e2f20e623f7992c79e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_entity_tokens</definition>
+        <argsstring>($bundle, $options=array())</argsstring>
+        <name>tripal_get_entity_tokens</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an array of tokens based on Tripal Entity Fields.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref></parametertype>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle entity for which you want tokens. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of tokens where the key is the machine_name of the token. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1124" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1124" bodyend="1202"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gaed3e1bc34351087f058114cec1c33081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_title_format</definition>
+        <argsstring>($bundle)</argsstring>
+        <name>tripal_get_title_format</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1032" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1032" bodyend="1045"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga5f53c10c88edbd9405697ffd7bca2094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_bundle_entity</definition>
+        <argsstring>($values)</argsstring>
+        <name>tripal_load_bundle_entity</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> entity that matches the given arguments.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array used to match a bundle. Valid keys may:<itemizedlist>
+<listitem><para>id: the numeric id of the bundle.</para></listitem><listitem><para>name: the bundle name (e.g. &apos;bio_data_234&apos;)</para></listitem><listitem><para>label: the bundle label (e.g. &apos;Organism&apos;)</para></listitem><listitem><para>term_id: the term ID to which the bundle belongs</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> entity object or NULL if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="335" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="335" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga9a3271fd80709ab2bac87f2033a67d59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_entity</definition>
+        <argsstring>($entity_type, $ids=FALSE, $reset=FALSE, $field_ids=array(), $cache=TRUE)</argsstring>
+        <name>tripal_load_entity</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$ids</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <declname>$reset</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <declname>$field_ids</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$cache</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="212" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="212" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga8d7df332ef5e92725a5044692e85ead2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_term_entity</definition>
+        <argsstring>($values)</argsstring>
+        <name>tripal_load_term_entity</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a <ref refid="d9/d5a/classTripalTerm" kindref="compound">TripalTerm</ref> entity that matches the given arguments.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array used to match a term. <linebreak/>
+ Valid keys may be:<itemizedlist>
+<listitem><para>vocabulary: Must always be used with accession to uniquely identify a term. <linebreak/>
+ - accession: Must always be used with vocabulary to uniquely identify a term.</para></listitem><listitem><para>term_id: Can be used alone to uniquely identify a term.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="d9/d5a/classTripalTerm" kindref="compound">TripalTerm</ref> entity object or NULL if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="253" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="253" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga1aaa769cc643f35d50f261f8e1b5d540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_vocab_entity</definition>
+        <argsstring>($values)</argsstring>
+        <name>tripal_load_vocab_entity</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a <ref refid="d6/d79/classTripalVocab" kindref="compound">TripalVocab</ref> entity that maches the given arguments.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array used to match a vocabulary. <linebreak/>
+ The valid keys are:<itemizedlist>
+<listitem><para>vocab_id: integer id of the vocabulary.</para></listitem><listitem><para>vocabulary: string name of vocabulary.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="d6/d79/classTripalVocab" kindref="compound">TripalVocab</ref> entity object or NULL if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="297" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="297" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga050b81319c70291ff5e66b0df460b81a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_replace_entity_tokens</definition>
+        <argsstring>($string, &amp;$entity, $bundle_entity=NULL)</argsstring>
+        <name>tripal_replace_entity_tokens</name>
+        <param>
+          <declname>$string</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$bundle_entity</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replace all Tripal Tokens in a given string.</para><para>NOTE: If there is no value for a token then the token is removed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string containing tokens. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype><ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref></parametertype>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity with field values used to find values of tokens. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref></parametertype>
+<parametername>$bundle_entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle enitity containing special values sometimes needed for token replacement.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string will all tokens replaced with values. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1277" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1277" bodyend="1373"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga64ba0896880df6f55c775573634db3ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_save_title_format</definition>
+        <argsstring>($entity, $format)</argsstring>
+        <name>tripal_save_title_format</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$format</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save Page Title Format for a given Tripal Entity Type.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref></parametertype>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Entity object for the Tripal Bundle the title format is for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pattern to be used when generating entity titles for the above type. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="1057" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="1057" bodyend="1060"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1gaa2e8552c4c47bf4b406bc58186864e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_set_bundle_variable</definition>
+        <argsstring>($variable_name, $bundle_id, $value)</argsstring>
+        <name>tripal_set_bundle_variable</name>
+        <param>
+          <declname>$variable_name</declname>
+        </param>
+        <param>
+          <declname>$bundle_id</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save the value of a tripal variable for a given bundle.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$variable_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the variable as in tripal_variables.name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametername>$bundle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identfier for the bundle you want the value for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>$value The value of the variable for the given bundle. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="974" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="974" bodyend="1016"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga118e7306cc739fe083689877cd863984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_tripal_cron_notification</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_tripal_cron_notification</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refreshes the bundle such that new fields added by modules will be found during cron.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$bundle_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the bundle to refresh (e.g. bio_data_4). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="580" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="580" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dce/group__tripal__entities__api_1ga14dfedcffbaa4b759a05052dc2a7ccde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_update_bundle_field</definition>
+        <argsstring>($field_name, $field_info, $entity_type_name, $bundle_name)</argsstring>
+        <name>tripal_update_bundle_field</name>
+        <param>
+          <declname>$field_name</declname>
+        </param>
+        <param>
+          <declname>$field_info</declname>
+        </param>
+        <param>
+          <declname>$entity_type_name</declname>
+        </param>
+        <param>
+          <declname>$bundle_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates an existing field and its attached instance to a bundle.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the field. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing the field information. The following key/value pairs are supported:<itemizedlist>
+<listitem><para>field_type: a valid field type. May be any of the Drupal default fields, one created by the tripal_chado module or another custom module.</para></listitem><listitem><para>widget_type: a valid widget type. May be any of the Drupal default fields, one created by the tripal_chado module or another custom module.</para></listitem><listitem><para>field_settings: an array of settings that are appropriate for the selected field type.</para></listitem><listitem><para>widget_settings: an array of settings that are appropriate for the selected widget type.</para></listitem><listitem><para>description: a default description for this field.</para></listitem><listitem><para>label: a label used as a header for this field.</para></listitem><listitem><para>is_required: indicates if the field is required in the edit form.</para></listitem><listitem><para>cardinality: indicates the number of values this field can support. the default is 1 (meaning only one value). Use a value of FIELD_CARDINALITY_UNLIMITED for unlimited number of values.</para></listitem><listitem><para>default_value: A default value for the field.</para></listitem><listitem><para>format: A string indicating the format for the field. Must be specific to the field. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$entity_type_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity type name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle name.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FALSE if the field could not be updated</para></simplesect>
+TODO: this function really shouldn&apos;t try to create an instance and attach to a bundle at the same time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.entities.api.inc" line="859" column="1" bodyfile="tripal/api/tripal.entities.api.inc" bodystart="859" bodyend="917"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) for working with <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> content types (bundles) and their entities.</para><para>Bundles (Content Types): Bundles are types of content in a Drupal site. <linebreak/>
+By default, Drupal provides the Basic Page and Article content types, and Drupal allows a site developer to create new content types on-the-fly using the administrative interface<ndash/>no programming required. Tripal also provides several Content Type by default. During installation of Tripal the Organism, Gene, Project, Analysis and other content types are created automatically. The site developer can then create new content types for different biological data<ndash/>again, without any programming required.</para><para>In order to to assist with data exchange and use of common data formats, Tripal Bundles are defined using a controlled vocabulary term (cvterm). For example, a &quot;Gene&quot; Bundle is defined using the Sequence Ontology term for gene whose term accession is: SO:0000704. This mapping allows Tripal to compare content across Tripal sites, and expose data to computational tools that understand these vocabularies. By default, Tripal uses Chado as its primary data storage back-end. <linebreak/>
+ Entity: An entity is a discrete data record. Entities are most commonly seen as &quot;pages&quot; on a Drupal web site and are instances of a Bundle (i.e content type). When data is published on a Tripal site such as organisms, genes, germplasm, maps, etc., each record is represented by a single entity with an entity ID as its only attribute. All other information that the entity provides is made available via Fields. <linebreak/>
+ For more information please see: <ulink url="http://tripal.info/tutorials/v3.x/developers-handbook/structure">http://tripal.info/tutorials/v3.x/developers-handbook/structure</ulink> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

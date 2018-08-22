@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d7/d1d/classTripalVocabController" kind="class" language="PHP" prot="public">
+    <compoundname>TripalVocabController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EntityAPIController</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d1d/classTripalVocabController_1a6bf649cbcc9234d00eb62ceade15eb49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalVocabController::__construct</definition>
+        <argsstring>($entity_type)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalVocabController.inc" line="10" column="1" bodyfile="tripal/includes/TripalVocabController.inc" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/classTripalVocabController_1a17c1039c98a4b59e5b1085d6ff33c81b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalVocabController::create</definition>
+        <argsstring>(array $values=array())</argsstring>
+        <name>create</name>
+        <param>
+          <type>array</type>
+          <declname>$values</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalVocabController.inc" line="14" column="1" bodyfile="tripal/includes/TripalVocabController.inc" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/classTripalVocabController_1acfa50070417c021b6eddc9d3fe5bde47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalVocabController::delete</definition>
+        <argsstring>($ids, DatabaseTransaction $transaction=NULL)</argsstring>
+        <name>delete</name>
+        <param>
+          <declname>$ids</declname>
+        </param>
+        <param>
+          <type>DatabaseTransaction</type>
+          <declname>$transaction</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete a single entity.</para><para>Really a convenience function for deleteMultiple(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalVocabController.inc" line="24" column="1" bodyfile="tripal/includes/TripalVocabController.inc" bodystart="24" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/classTripalVocabController_1a2dd24d8d74895718f0e06070005439a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalVocabController::save</definition>
+        <argsstring>($entity, DatabaseTransaction $transaction=NULL)</argsstring>
+        <name>save</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <type>DatabaseTransaction</type>
+          <declname>$transaction</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves the custom fields using drupal_write_record(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalVocabController.inc" line="55" column="1" bodyfile="tripal/includes/TripalVocabController.inc" bodystart="55" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="d7/d1d/classTripalVocabController" kindref="compound">TripalVocabController</ref> extends DrupalDefaultEntityController.</para><para>Our subclass of DrupalDefaultEntityController lets us add a few important create, update, and delete methods. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1128">
+        <label>EntityAPIController</label>
+      </node>
+      <node id="1127">
+        <label>TripalVocabController</label>
+        <link refid="d7/d1d/classTripalVocabController"/>
+        <childnode refid="1128" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1130">
+        <label>EntityAPIController</label>
+      </node>
+      <node id="1129">
+        <label>TripalVocabController</label>
+        <link refid="d7/d1d/classTripalVocabController"/>
+        <childnode refid="1130" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/includes/TripalVocabController.inc" line="8" column="1" bodyfile="tripal/includes/TripalVocabController.inc" bodystart="8" bodyend="113"/>
+    <listofallmembers>
+      <member refid="d7/d1d/classTripalVocabController_1a6bf649cbcc9234d00eb62ceade15eb49" prot="public" virt="non-virtual"><scope>TripalVocabController</scope><name>__construct</name></member>
+      <member refid="d7/d1d/classTripalVocabController_1a17c1039c98a4b59e5b1085d6ff33c81b" prot="public" virt="non-virtual"><scope>TripalVocabController</scope><name>create</name></member>
+      <member refid="d7/d1d/classTripalVocabController_1acfa50070417c021b6eddc9d3fe5bde47" prot="public" virt="non-virtual"><scope>TripalVocabController</scope><name>delete</name></member>
+      <member refid="d7/d1d/classTripalVocabController_1a2dd24d8d74895718f0e06070005439a2" prot="public" virt="non-virtual"><scope>TripalVocabController</scope><name>save</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

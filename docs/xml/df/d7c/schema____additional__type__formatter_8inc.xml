@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/d7c/schema____additional__type__formatter_8inc" kind="file" language="PHP">
+    <compoundname>schema__additional_type_formatter.inc</compoundname>
+    <innerclass refid="dc/df7/classschema____additional__type__formatter" prot="public">schema__additional_type_formatter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="dc/df7/classschema____additional__type__formatter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="dc/df7/classschema____additional__type__formatter" kindref="compound">schema__additional_type_formatter</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="d1/dc8/classChadoFieldFormatter" kindref="compound">ChadoFieldFormatter</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>lable<sp/>for<sp/>this<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="dc/df7/classschema____additional__type__formatter_1a377a9774c306498a86a84ad19cab8771" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="dc/df7/classschema____additional__type__formatter_1a377a9774c306498a86a84ad19cab8771" kindref="member">$default_label</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Type&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>list<sp/>of<sp/>field<sp/>types<sp/>for<sp/>which<sp/>this<sp/>formatter<sp/>is<sp/>appropriate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="dc/df7/classschema____additional__type__formatter_1a9263c2d53c9f05e81fa05d7c5b94bb60" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="dc/df7/classschema____additional__type__formatter_1a9263c2d53c9f05e81fa05d7c5b94bb60" kindref="member">$field_types</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;schema__additional_type&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="dc/df7/classschema____additional__type__formatter_1abd10da3150e7e48d1fde113354dfad0d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/df7/classschema____additional__type__formatter_1abd10da3150e7e48d1fde113354dfad0d" kindref="member">view</ref>(&amp;<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$entity_type,<sp/>$entity,<sp/>$langcode,<sp/>$items,<sp/>$display)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>$content<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($items)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>=<sp/>$items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[0]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$content,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/TripalFields/schema__additional_type/schema__additional_type_formatter.inc"/>
+  </compounddef>
+</doxygen>

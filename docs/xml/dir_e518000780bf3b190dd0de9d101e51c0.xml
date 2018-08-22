@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_e518000780bf3b190dd0de9d101e51c0" kind="dir">
+    <compoundname>legacy/tripal_organism/includes</compoundname>
+    <innerfile refid="d1/d00/tripal__organism_8admin_8inc">tripal_organism.admin.inc</innerfile>
+    <innerfile refid="df/dd2/tripal__organism_8chado__node_8inc">tripal_organism.chado_node.inc</innerfile>
+    <innerfile refid="d3/d47/tripal__organism_8delete_8inc">tripal_organism.delete.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_organism/includes/"/>
+  </compounddef>
+</doxygen>

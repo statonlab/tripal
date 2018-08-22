@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_787eef3129a8608960053841c75bf695" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/data__protein_sequence</compoundname>
+    <innerfile refid="dd/d89/data____protein__sequence_8inc">data__protein_sequence.inc</innerfile>
+    <innerfile refid="df/d38/data____protein__sequence__formatter_8inc">data__protein_sequence_formatter.inc</innerfile>
+    <innerfile refid="da/d70/data____protein__sequence__widget_8inc">data__protein_sequence_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/data__protein_sequence/"/>
+  </compounddef>
+</doxygen>

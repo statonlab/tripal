@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/dd7/data____sequence__formatter_8inc" kind="file" language="PHP">
+    <compoundname>data__sequence_formatter.inc</compoundname>
+    <innerclass refid="d9/dd2/classdata____sequence__formatter" prot="public">data__sequence_formatter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d9/dd2/classdata____sequence__formatter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d9/dd2/classdata____sequence__formatter" kindref="compound">data__sequence_formatter</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="d1/dc8/classChadoFieldFormatter" kindref="compound">ChadoFieldFormatter</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>lable<sp/>for<sp/>this<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d9/dd2/classdata____sequence__formatter_1a76c031be1a568fcd075f5478775548da" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d9/dd2/classdata____sequence__formatter_1a76c031be1a568fcd075f5478775548da" kindref="member">$default_label</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Sequence&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>list<sp/>of<sp/>field<sp/>types<sp/>for<sp/>which<sp/>this<sp/>formatter<sp/>is<sp/>appropriate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d9/dd2/classdata____sequence__formatter_1a28c391f02e39f1815691d87eb81d00cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d9/dd2/classdata____sequence__formatter_1a28c391f02e39f1815691d87eb81d00cc" kindref="member">$field_types</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;data__sequence&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="d9/dd2/classdata____sequence__formatter_1a0218cc231296cdba6b49037fbbc0439e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d9/dd2/classdata____sequence__formatter_1a0218cc231296cdba6b49037fbbc0439e" kindref="member">view</ref>(&amp;<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$entity_type,<sp/>$entity,<sp/>$langcode,<sp/>$items,<sp/>$display)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>$content<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;There<sp/>is<sp/>no<sp/>sequence.&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($items)<sp/>&gt;<sp/>0<sp/>and<sp/>$items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ab16f02afaae904b371e889bf80851ac3" kindref="member">$num_bases</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&lt;pre<sp/>class=&quot;residues-formatter&quot;&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>.=<sp/>wordwrap($items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">],<sp/><ref refid="d7/dcc/tripal__feature__sequence_8tpl_8php_1ab16f02afaae904b371e889bf80851ac3" kindref="member">$num_bases</ref>,<sp/></highlight><highlight class="stringliteral">&quot;&lt;br&gt;&quot;</highlight><highlight class="normal">,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>.=<sp/></highlight><highlight class="stringliteral">&apos;&lt;/pre&gt;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[0]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>create<sp/>a<sp/>render<sp/>array<sp/>to<sp/>produce<sp/>the<sp/>desired<sp/>markup,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$content,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/TripalFields/data__sequence/data__sequence_formatter.inc"/>
+  </compounddef>
+</doxygen>

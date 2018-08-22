@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d6/da0/OWLStanza_8inc" kind="file" language="PHP">
+    <compoundname>OWLStanza.inc</compoundname>
+    <innerclass refid="d5/dcc/classOWLStanza" prot="public">OWLStanza</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>OWL redesign using Classes (Objects) </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="6" refid="d5/dcc/classOWLStanza" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d5/dcc/classOWLStanza" kindref="compound">OWLStanza</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>XMLReader<sp/>object.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d5/dcc/classOWLStanza_1afa81df122c31bee10bf67087f37712bc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1afa81df122c31bee10bf67087f37712bc" kindref="member">$owl</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>boolean<sp/>(TRUE<sp/>or<sp/>FALSE)<sp/>indicating<sp/>if<sp/>children<sp/>should<sp/>be<sp/>parsed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="d5/dcc/classOWLStanza_1a7a87d2d3e2b2abb2622fc765c795c3f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a7a87d2d3e2b2abb2622fc765c795c3f2" kindref="member">$parse_children</ref><sp/>=<sp/>TRUE;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>XML<sp/>element<sp/>tag<sp/>name<sp/>(e.g.<sp/>‘owl:ObjectProperty’,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>‘owl:AnnotationProperty’,<sp/>&apos;owl:Ontology&apos;).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" kindref="member">$tag_name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>key/value<sp/>associative<sp/>array<sp/>of<sp/>all<sp/>of<sp/>the<sp/>attributes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="d5/dcc/classOWLStanza_1a274ea0d6f0fca25409e440e45e96efb3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a274ea0d6f0fca25409e440e45e96efb3" kindref="member">$attributes</ref><sp/>=<sp/>array<sp/>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>An<sp/>array<sp/>of<sp/>OWLStanza<sp/>objects.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d5/dcc/classOWLStanza_1ae286dcd20aded4b394c27691ba5c133e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1ae286dcd20aded4b394c27691ba5c133e" kindref="member">$children</ref><sp/>=<sp/>array<sp/>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>text<sp/>value<sp/>of<sp/>a<sp/>XML<sp/>element.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="d5/dcc/classOWLStanza_1a132cdb96b924d963c08dffff3058b836" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a132cdb96b924d963c08dffff3058b836" kindref="member">$value</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Indicates<sp/>if<sp/>there<sp/>is<sp/>no<sp/>more<sp/>to<sp/>read<sp/>from<sp/>the<sp/>OWL<sp/>XML<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="d5/dcc/classOWLStanza_1abfddaba3751515642460a430acdaa88f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1abfddaba3751515642460a430acdaa88f" kindref="member">$is_finished</ref><sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="d5/dcc/classOWLStanza_1ad007c97f34abdc373be5adcb100bb3e8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1ad007c97f34abdc373be5adcb100bb3e8" kindref="member">__construct</ref>(<ref refid="d5/dcc/classOWLStanza_1afa81df122c31bee10bf67087f37712bc" kindref="member">$owl</ref>,<sp/><ref refid="d5/dcc/classOWLStanza_1a7a87d2d3e2b2abb2622fc765c795c3f2" kindref="member">$parse_children</ref><sp/>=<sp/>TRUE)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;owl<sp/>=<sp/><ref refid="d5/dcc/classOWLStanza_1afa81df122c31bee10bf67087f37712bc" kindref="member">$owl</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;parse_children<sp/>=<sp/><ref refid="d5/dcc/classOWLStanza_1a7a87d2d3e2b2abb2622fc765c795c3f2" kindref="member">$parse_children</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;<ref refid="d5/dcc/classOWLStanza_1aba5c58b2d209f93ce7c7a9f2098b824e" kindref="member">parse</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="d5/dcc/classOWLStanza_1a9ece250becdcc2beae685a076d9cfee3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a9ece250becdcc2beae685a076d9cfee3" kindref="member">owl_read</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>$retval<sp/>=<sp/>$this-&gt;owl-&gt;read();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($this-&gt;owl-&gt;nodeType<sp/>==<sp/>XMLReader::END_ELEMENT<sp/>and<sp/>$this-&gt;owl-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;rdf:RDF&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;is_finished<sp/>=<sp/>TRUE;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$retval;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="d5/dcc/classOWLStanza_1aba5c58b2d209f93ce7c7a9f2098b824e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1aba5c58b2d209f93ce7c7a9f2098b824e" kindref="member">parse</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>we<sp/>are<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>an<sp/>element.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($this-&gt;owl-&gt;nodeType<sp/>!=<sp/>XMLReader::ELEMENT)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>the<sp/>event<sp/>we&apos;ve<sp/>hit<sp/>the<sp/>end<sp/>of<sp/>the<sp/>file,<sp/>then<sp/>return.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($this-&gt;is_finished)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;<ref refid="d5/dcc/classOWLStanza_1a9ece250becdcc2beae685a076d9cfee3" kindref="member">owl_read</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;tag_name<sp/>=<sp/>$this-&gt;owl-&gt;name;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$has_value<sp/>=<sp/>$this-&gt;owl-&gt;hasValue;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$is_empty<sp/>=<sp/>$this-&gt;owl-&gt;isEmptyElement;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>attributes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$num_attrs<sp/>=<sp/>$this-&gt;owl-&gt;attributeCount;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($num_attrs<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;owl-&gt;moveToFirstAttribute();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>($i<sp/>=<sp/>0;<sp/>$i<sp/>&lt;<sp/>$num_attrs;<sp/>$i++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;attributes[$this-&gt;owl-&gt;name]<sp/>=<sp/>$this-&gt;owl-&gt;value;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;owl-&gt;moveToNextAttribute();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>element<sp/>is<sp/>empty<sp/>then<sp/>just<sp/>return.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($is_empty)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>if<sp/>the<sp/>element<sp/>has<sp/>a<sp/>value.<sp/>If<sp/>so,<sp/>then<sp/>set<sp/>the<sp/>value<sp/>for<sp/>the<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($this-&gt;owl-&gt;hasValue)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;<ref refid="d5/dcc/classOWLStanza_1a9ece250becdcc2beae685a076d9cfee3" kindref="member">owl_read</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;value<sp/>=<sp/>$this-&gt;owl-&gt;value;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>children<sp/>that<sp/>should<sp/>be<sp/>parsed<sp/>within<sp/>the<sp/>Stanza.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($this-&gt;parse_children<sp/>==<sp/>TRUE)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($this-&gt;<ref refid="d5/dcc/classOWLStanza_1a9ece250becdcc2beae685a076d9cfee3" kindref="member">owl_read</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($this-&gt;owl-&gt;nodeType<sp/>==<sp/>XMLReader::END_ELEMENT<sp/>and<sp/>$this-&gt;owl-&gt;name<sp/>==<sp/>$this-&gt;tag_name)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($this-&gt;owl-&gt;nodeType<sp/>==<sp/>XMLReader::ELEMENT)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$child<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza" kindref="compound">OWLStanza</ref>($this-&gt;owl);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;children[]<sp/>=<sp/>$child;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="d5/dcc/classOWLStanza_1a4db61a729c6512566b6ec5887e12758e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a4db61a729c6512566b6ec5887e12758e" kindref="member">getValue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a132cdb96b924d963c08dffff3058b836" kindref="member">$this-&gt;value</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="d5/dcc/classOWLStanza_1aba34b32b4b595f3baa965a57c8fcbf75" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1aba34b32b4b595f3baa965a57c8fcbf75" kindref="member">getChildren</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1ae286dcd20aded4b394c27691ba5c133e" kindref="member">$this-&gt;children</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140" refid="d5/dcc/classOWLStanza_1a4db5540c7d53a333164658569a52b428" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a4db5540c7d53a333164658569a52b428" kindref="member">setChildren</ref>(<ref refid="d5/dcc/classOWLStanza_1ae286dcd20aded4b394c27691ba5c133e" kindref="member">$children</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Makes<sp/>sure<sp/>the<sp/>incoming<sp/>argument<sp/>is<sp/>an<sp/>array.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>is_array<sp/>(<sp/><ref refid="d5/dcc/classOWLStanza_1ae286dcd20aded4b394c27691ba5c133e" kindref="member">$children</ref><sp/>))<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>that<sp/>all<sp/>of<sp/>the<sp/>array<sp/>elements<sp/>are<sp/>OWLStanza<sp/>objects.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<sp/><ref refid="d5/dcc/classOWLStanza_1ae286dcd20aded4b394c27691ba5c133e" kindref="member">$children</ref><sp/>as<sp/>$child<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(get_class<sp/>(<sp/>$child<sp/>)<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;OWLStanza&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>is<sp/>good,<sp/>set<sp/>the<sp/>children.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;children<sp/>=<sp/><ref refid="d5/dcc/classOWLStanza_1ae286dcd20aded4b394c27691ba5c133e" kindref="member">$children</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="d5/dcc/classOWLStanza_1a2c223c111d2d76776a82dd434df4e02f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a2c223c111d2d76776a82dd434df4e02f" kindref="member">getChild</ref>(<ref refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" kindref="member">$tag_name</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($this-&gt;children<sp/>as<sp/>$child)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($child-&gt;getTagName()<sp/>==<sp/><ref refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" kindref="member">$tag_name</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$child;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="d5/dcc/classOWLStanza_1a3f637230cacd57873adf1046f6506ada" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a3f637230cacd57873adf1046f6506ada" kindref="member">getTagName</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" kindref="member">$this-&gt;tag_name</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188" refid="d5/dcc/classOWLStanza_1a980efe24605083ae68477e33f4c3bdcb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a980efe24605083ae68477e33f4c3bdcb" kindref="member">setTagName</ref>(<ref refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" kindref="member">$tag_name</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;tag_name<sp/>=<sp/><ref refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" kindref="member">$tag_name</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="d5/dcc/classOWLStanza_1a4317ae8e2c1d18bb43df36bfd30ca9dc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a4317ae8e2c1d18bb43df36bfd30ca9dc" kindref="member">getAttributes</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a274ea0d6f0fca25409e440e45e96efb3" kindref="member">$this-&gt;attributes</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="d5/dcc/classOWLStanza_1a263b600b6c3f68fa02bf270e729ddb60" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a263b600b6c3f68fa02bf270e729ddb60" kindref="member">setAttributes</ref>(<ref refid="d5/dcc/classOWLStanza_1a274ea0d6f0fca25409e440e45e96efb3" kindref="member">$attributes</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Makes<sp/>sure<sp/>the<sp/>incoming<sp/>argument<sp/>is<sp/>an<sp/>array.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>is_array<sp/>(<sp/><ref refid="d5/dcc/classOWLStanza_1a274ea0d6f0fca25409e440e45e96efb3" kindref="member">$attributes</ref><sp/>))<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>that<sp/>all<sp/>of<sp/>the<sp/>array<sp/>are<sp/>key/values.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<sp/><ref refid="d5/dcc/classOWLStanza_1a274ea0d6f0fca25409e440e45e96efb3" kindref="member">$attributes</ref><sp/>as<sp/>$attribute_name<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(get_class<sp/>($attribute_name<sp/>)<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;OWLStanza&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>is<sp/>good,<sp/>set<sp/>the<sp/>attributes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;attributes<sp/>=<sp/><ref refid="d5/dcc/classOWLStanza_1a274ea0d6f0fca25409e440e45e96efb3" kindref="member">$attributes</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="d5/dcc/classOWLStanza_1a3d027b9e9acb41da218daa5b052ca8a1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a3d027b9e9acb41da218daa5b052ca8a1" kindref="member">getAttribute</ref>($attribute_name)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($this-&gt;attributes<sp/>as<sp/>$aname<sp/>=&gt;<sp/><ref refid="d5/dcc/classOWLStanza_1a132cdb96b924d963c08dffff3058b836" kindref="member">$value</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($aname<sp/>==<sp/>$attribute_name)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a132cdb96b924d963c08dffff3058b836" kindref="member">$value</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="d5/dcc/classOWLStanza_1a96f5676c17971c636926e5d5e8003696" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a96f5676c17971c636926e5d5e8003696" kindref="member">isFinished</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1abfddaba3751515642460a430acdaa88f" kindref="member">$this-&gt;is_finished</ref>;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="d5/dcc/classOWLStanza_1a8d06c16b889091812d29a8ff2104ae13" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dcc/classOWLStanza_1a8d06c16b889091812d29a8ff2104ae13" kindref="member">getXML</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>the<sp/>element<sp/>with<sp/>the<sp/>tag<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>$xml<sp/>=<sp/></highlight><highlight class="charliteral">&apos;&lt;&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d5/dcc/classOWLStanza_1ae301bea2a01fc68d4f67f2d30a29eaa5" kindref="member">$this-&gt;tag_name</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>through<sp/>the<sp/>attributes<sp/>and<sp/>add<sp/>them<sp/>to<sp/>our<sp/>XML<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($this-&gt;attributes)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($this-&gt;attributes<sp/>as<sp/>$aname<sp/>=&gt;<sp/><ref refid="d5/dcc/classOWLStanza_1a132cdb96b924d963c08dffff3058b836" kindref="member">$value</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$xml<sp/>.=<sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$aname<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;=&quot;&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="d5/dcc/classOWLStanza_1a132cdb96b924d963c08dffff3058b836" kindref="member">$value</ref><sp/>.<sp/></highlight><highlight class="charliteral">&apos;&quot;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>stanza<sp/>has<sp/>a<sp/>value<sp/>this<sp/>implies<sp/>there<sp/>are<sp/>no<sp/>children,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>close<sp/>the<sp/>element<sp/>start,<sp/>add<sp/>the<sp/>value<sp/>and<sp/>add<sp/>the<sp/>closing<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tag.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($this-&gt;value)<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$xml<sp/>.=<sp/></highlight><highlight class="charliteral">&apos;&gt;&apos;</highlight><highlight class="normal"><sp/>.<sp/>$this-&gt;value<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;&lt;/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$this-&gt;tag_name<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&gt;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$xml;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we&apos;re<sp/>here,<sp/>we<sp/>do<sp/>not<sp/>have<sp/>a<sp/>value.<sp/>This<sp/>is<sp/>therefore<sp/>an<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>element,<sp/>or<sp/>it<sp/>has<sp/>children.<sp/><sp/>If<sp/>we<sp/>have<sp/>no<sp/>children<sp/>then<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>have<sp/>an<sp/>empty<sp/>element<sp/>and<sp/>we<sp/>can<sp/>close<sp/>it<sp/>out<sp/>and<sp/>return.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($this-&gt;children)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$xml<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>/&gt;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$xml;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>in<sp/>the<sp/>children&apos;s<sp/>XML<sp/>recursively.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>$childs<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($this-&gt;children<sp/>as<sp/>$child)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>want<sp/>to<sp/>add<sp/>two<sp/>character<sp/>indentation<sp/>to<sp/>all<sp/>lines<sp/>returned<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>child<sp/>XML.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$childs<sp/>.=<sp/>preg_replace(</highlight><highlight class="stringliteral">&quot;/^/&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;<sp/><sp/>&quot;</highlight><highlight class="normal">,<sp/>$child-&gt;getXML());</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>$xml<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;&gt;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>$xml<sp/>.=<sp/>$childs;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>$xml<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;&lt;/&quot;</highlight><highlight class="normal"><sp/>.<sp/>$this-&gt;tag_name<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&gt;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$xml;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/loaders/OWLStanza.inc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="de/d03/tripal__featuremap__publication_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_featuremap_publication.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="de/d03/tripal__featuremap__publication_8tpl_8php_1ab0a0ffbe7a93875ed9cbcc495e79cd50" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$featuremap</definition>
+        <argsstring></argsstring>
+        <name>$featuremap</name>
+        <initializer>= $variables[&apos;node&apos;]-&gt;featuremap</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_featuremap_publication.tpl.php" line="2" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_featuremap_publication.tpl.php" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d03/tripal__featuremap__publication_8tpl_8php_1a3ee35299fb96d6403aab22dcdc1ad4fd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$featuremap_pubs</definition>
+        <argsstring></argsstring>
+        <name>$featuremap_pubs</name>
+        <initializer>= $featuremap-&gt;featuremap_pub</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_featuremap_publication.tpl.php" line="7" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_featuremap_publication.tpl.php" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d03/tripal__featuremap__publication_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$options</definition>
+        <argsstring></argsstring>
+        <name>$options</name>
+        <initializer>= array(&apos;return_array&apos; =&gt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_featuremap_publication.tpl.php" line="5" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_featuremap_publication.tpl.php" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2" refid="de/d03/tripal__featuremap__publication_8tpl_8php_1ab0a0ffbe7a93875ed9cbcc495e79cd50" refkind="member"><highlight class="normal"><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1ab0a0ffbe7a93875ed9cbcc495e79cd50" kindref="member">$featuremap</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">]-&gt;featuremap;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>expand<sp/>featuremap<sp/>to<sp/>include<sp/>pubs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" refkind="member"><highlight class="normal"><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;return_array&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1ab0a0ffbe7a93875ed9cbcc495e79cd50" kindref="member">$featuremap</ref><sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>(<ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1ab0a0ffbe7a93875ed9cbcc495e79cd50" kindref="member">$featuremap</ref>,<sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;featuremap_pub&apos;</highlight><highlight class="normal">,<sp/><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="7" refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a3ee35299fb96d6403aab22dcdc1ad4fd" refkind="member"><highlight class="normal"><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a3ee35299fb96d6403aab22dcdc1ad4fd" kindref="member">$featuremap_pubs</ref><sp/>=<sp/><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1ab0a0ffbe7a93875ed9cbcc495e79cd50" kindref="member">$featuremap</ref>-&gt;featuremap_pub;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count(<ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a3ee35299fb96d6403aab22dcdc1ad4fd" kindref="member">$featuremap_pubs</ref>)<sp/>&gt;<sp/>0)<sp/>{<sp/>?&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_featuremap_pub-data-block-desc<sp/>tripal-data-block-desc&quot;</highlight><highlight class="normal">&gt;&lt;/div&gt;<sp/>&lt;?php</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$headers<sp/>array<sp/>is<sp/>an<sp/>array<sp/>of<sp/>fields<sp/>to<sp/>use<sp/>as<sp/>the<sp/>colum<sp/>headers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>additional<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Year&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Publication&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$rows<sp/>array<sp/>contains<sp/>an<sp/>array<sp/>of<sp/>rows<sp/>where<sp/>each<sp/>row<sp/>is<sp/>an<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>values<sp/>for<sp/>each<sp/>column<sp/>of<sp/>the<sp/>table<sp/>in<sp/>that<sp/>row.<sp/><sp/>Additional<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a3ee35299fb96d6403aab22dcdc1ad4fd" kindref="member">$featuremap_pubs</ref><sp/>as<sp/>$featuremap_pub)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>$pub<sp/>=<sp/>$featuremap_pub-&gt;pub_id;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>$pub<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>($pub,<sp/></highlight><highlight class="stringliteral">&apos;field&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;pub.title&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>$citation<sp/>=<sp/>$pub-&gt;title;<sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>the<sp/>title<sp/>as<sp/>the<sp/>default<sp/>citation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>citation<sp/>for<sp/>this<sp/>pub<sp/>if<sp/>it<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;pub_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$pub-&gt;pub_id,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Citation&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;return_array&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>$citation_prop<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;pubprop&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/><ref refid="de/d03/tripal__featuremap__publication_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($citation_prop)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$citation_prop<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>($citation_prop,<sp/></highlight><highlight class="stringliteral">&apos;field&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;pubprop.value&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$citation<sp/>=<sp/>$citation_prop[0]-&gt;value;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>publication<sp/>is<sp/>synced<sp/>then<sp/>link<sp/>to<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists($pub,<sp/></highlight><highlight class="stringliteral">&apos;nid&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>replace<sp/>the<sp/>title<sp/>with<sp/>a<sp/>link</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$link<sp/>=<sp/>l($pub-&gt;title,<sp/></highlight><highlight class="stringliteral">&apos;node/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$pub-&gt;nid<sp/>,array(</highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;target&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;_blank&apos;</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$patterns<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;/(\()/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;/(\))/&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;/(\])/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;/(\[)/&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;/(\{)/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;/(\})/&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;/(\+)/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;/(\.)/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;/(\?)/&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$fixed_title<sp/>=<sp/>preg_replace($patterns,<sp/></highlight><highlight class="stringliteral">&quot;\\\\$1&quot;</highlight><highlight class="normal">,<sp/>$pub-&gt;title);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$citation<sp/>=<sp/>preg_replace(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>.<sp/>str_replace(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">,<sp/>$fixed_title)<sp/>.<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">,<sp/>$link,<sp/>$citation);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$pub-&gt;pyear,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$citation,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$table<sp/>array<sp/>contains<sp/>the<sp/>headers<sp/>and<sp/>rows<sp/>array<sp/>as<sp/>well<sp/>as<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>options<sp/>for<sp/>controlling<sp/>the<sp/>display<sp/>of<sp/>the<sp/>table.<sp/><sp/>Additional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref>,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_featuremap-table-publications&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>once<sp/>we<sp/>have<sp/>our<sp/>table<sp/>array<sp/>structure<sp/>defined,<sp/>we<sp/>call<sp/>Drupal&apos;s<sp/>theme_table()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>function<sp/>to<sp/>generate<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>print<sp/>theme_table(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_featuremap/theme/templates/tripal_featuremap_publication.tpl.php"/>
+  </compounddef>
+</doxygen>

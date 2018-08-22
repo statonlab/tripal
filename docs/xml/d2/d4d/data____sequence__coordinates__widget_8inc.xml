@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/d4d/data____sequence__coordinates__widget_8inc" kind="file" language="PHP">
+    <compoundname>data__sequence_coordinates_widget.inc</compoundname>
+    <innerclass refid="d2/dea/classdata____sequence__coordinates__widget" prot="public">data__sequence_coordinates_widget</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d2/dea/classdata____sequence__coordinates__widget" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d2/dea/classdata____sequence__coordinates__widget" kindref="compound">data__sequence_coordinates_widget</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="d0/df2/classChadoFieldWidget" kindref="compound">ChadoFieldWidget</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>lable<sp/>for<sp/>this<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d2/dea/classdata____sequence__coordinates__widget_1a38da2ab64d6e4cdff7a163ce87c59a2c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d2/dea/classdata____sequence__coordinates__widget_1a38da2ab64d6e4cdff7a163ce87c59a2c" kindref="member">$default_label</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Sequence<sp/>Coordinates&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>list<sp/>of<sp/>field<sp/>types<sp/>for<sp/>which<sp/>this<sp/>formatter<sp/>is<sp/>appropriate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d2/dea/classdata____sequence__coordinates__widget_1a5a9affaca70539fe04e9451c72d6ed1e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d2/dea/classdata____sequence__coordinates__widget_1a5a9affaca70539fe04e9451c72d6ed1e" kindref="member">$field_types</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;data__sequence_coordinates&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d2/dea/classdata____sequence__coordinates__widget_1a0a9b111d80fa3a3b819acb6b5e38acb1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d2/dea/classdata____sequence__coordinates__widget_1a0a9b111d80fa3a3b819acb6b5e38acb1" kindref="member">form</ref>(&amp;$widget,<sp/>&amp;<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state,<sp/>$langcode,<sp/>$items,<sp/>$delta,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::form($widget,<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state,<sp/>$langcode,<sp/>$items,<sp/>$delta,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="d2/dea/classdata____sequence__coordinates__widget_1afdf0513d87af6988ba2d4021a6a40c97" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d2/dea/classdata____sequence__coordinates__widget_1afdf0513d87af6988ba2d4021a6a40c97" kindref="member">submit</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state,<sp/>$entity_type,<sp/>$entity,<sp/>$langcode,<sp/>$delta)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/TripalFields/data__sequence_coordinates/data__sequence_coordinates_widget.inc"/>
+  </compounddef>
+</doxygen>

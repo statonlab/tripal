@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_e1b5bd397b840ff7a45955170b6473c0" kind="dir">
+    <compoundname>legacy/tripal_db</compoundname>
+    <innerdir refid="dir_c8e2bd749c87bd761451f3eec71a1b09">legacy/tripal_db/api</innerdir>
+    <innerdir refid="dir_01cf8a695af4a60833f56d4e23c5f3ca">legacy/tripal_db/theme</innerdir>
+    <innerfile refid="d6/d0f/tripal__db_8module">tripal_db.module</innerfile>
+    <innerfile refid="d4/d45/tripal__db_8views__default_8inc">tripal_db.views_default.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_db/"/>
+  </compounddef>
+</doxygen>

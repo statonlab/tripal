@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d43/classtripal__views__handler__filter__select__id" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_filter_select_id</compoundname>
+    <basecompoundref refid="d0/d76/classtripal__views__handler__filter__select__string" prot="public" virt="non-virtual">tripal_views_handler_filter_select_string</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1a247e5474c20acadfe5c1f6056583c891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::expose_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>expose_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="141" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1a4d3fb90e518fae95035ff0eb5f1fe913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::expose_options</definition>
+        <argsstring>()</argsstring>
+        <name>expose_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="156" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1a0f7fe1aea58c35ed0afad8d6a9806c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::expose_submit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>expose_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="149" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1a8e3ca534b57006b897d63e8655559d7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::get_select_option_where</definition>
+        <argsstring>($table=NULL, $generic_placeholder=TRUE)</argsstring>
+        <name>get_select_option_where</name>
+        <param>
+          <declname>$table</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$generic_placeholder</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For the SQL generating the options, determine the WHERE clauses</para><para><simplesect kind="return"><para>An array of full qualified where clauses (ie: table.myfield = &apos;fred&apos;) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="127" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1a2603c5b11a5185d38975d4a4939762b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::get_select_options</definition>
+        <argsstring>()</argsstring>
+        <name>get_select_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide the options used in the select list. Override this function in extended handlers to easily change option list.</para><para><simplesect kind="return"><para>An array of options where the key is the value of this field in the database </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="35" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="35" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1aaa942e9bfe0cb6d1347935cc9767cf8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::init</definition>
+        <argsstring>(&amp;$view, &amp;$options)</argsstring>
+        <name>init</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$view</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="20" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1af13946de2f4d42fb4dc4ce991ec4dab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::option_definition</definition>
+        <argsstring>()</argsstring>
+        <name>option_definition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="134" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d43/classtripal__views__handler__filter__select__id_1af4319edb45b799bcf9cc05b8fc9c52eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_select_id::value_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>value_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="163" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="163" bodyend="165"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This Handler provides a select list for the type field</para><para>NOTE: This handler only works when applied to the type_id field in the base_table of this view. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="859">
+        <label>tripal_views_handler_filter_select_string</label>
+        <link refid="d0/d76/classtripal__views__handler__filter__select__string"/>
+        <childnode refid="860" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="858">
+        <label>tripal_views_handler_filter_select_id</label>
+        <link refid="d4/d43/classtripal__views__handler__filter__select__id"/>
+        <childnode refid="859" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="860">
+        <label>views_handler_filter_string</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="862">
+        <label>tripal_views_handler_filter_select_string</label>
+        <link refid="d0/d76/classtripal__views__handler__filter__select__string"/>
+        <childnode refid="863" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="861">
+        <label>tripal_views_handler_filter_select_id</label>
+        <link refid="d4/d43/classtripal__views__handler__filter__select__id"/>
+        <childnode refid="862" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="863">
+        <label>views_handler_filter_string</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" line="15" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_select_id.inc" bodystart="15" bodyend="167"/>
+    <listofallmembers>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1a247e5474c20acadfe5c1f6056583c891" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>expose_form</name></member>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1a4d3fb90e518fae95035ff0eb5f1fe913" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>expose_options</name></member>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1a0f7fe1aea58c35ed0afad8d6a9806c1e" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>expose_submit</name></member>
+      <member refid="d0/d76/classtripal__views__handler__filter__select__string_1a37c3ec80d9a18dacbe878a0682265f82" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>exposed_form</name></member>
+      <member refid="d0/d76/classtripal__views__handler__filter__select__string_1ae1927376ca2c3bbc555b9d2a6517bf1f" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>extra_options_form</name></member>
+      <member refid="d0/d76/classtripal__views__handler__filter__select__string_1a5351850e1f9e76202bbf4ed66e0dbf6d" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>extra_options_options</name></member>
+      <member refid="d0/d76/classtripal__views__handler__filter__select__string_1a49d27b6a4bf70dd0203ded96b06637cf" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>extra_options_submit</name></member>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1a8e3ca534b57006b897d63e8655559d7d" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>get_select_option_where</name></member>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1a2603c5b11a5185d38975d4a4939762b1" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>get_select_options</name></member>
+      <member refid="d0/d76/classtripal__views__handler__filter__select__string_1a0888e712556eff62bfb91b0cc579fd0f" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>has_extra_options</name></member>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1aaa942e9bfe0cb6d1347935cc9767cf8f" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>init</name></member>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1af13946de2f4d42fb4dc4ce991ec4dab5" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>option_definition</name></member>
+      <member refid="d0/d76/classtripal__views__handler__filter__select__string_1a1d396d15d2b8ce016ee10529f4df4146" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>query</name></member>
+      <member refid="d4/d43/classtripal__views__handler__filter__select__id_1af4319edb45b799bcf9cc05b8fc9c52eb" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_select_id</scope><name>value_form</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

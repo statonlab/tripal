@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_f3baa6509f3d8fa4e6d6ecf70a00fa7d" kind="dir">
+    <compoundname>tripal_ws/api</compoundname>
+    <innerfile refid="da/d51/tripal__ws_8api_8inc">tripal_ws.api.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_ws/api/"/>
+  </compounddef>
+</doxygen>

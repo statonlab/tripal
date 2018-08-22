@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/dde/classTripalCSVDownloader" kind="class" language="PHP" prot="public">
+    <compoundname>TripalCSVDownloader</compoundname>
+    <basecompoundref refid="dc/d2c/classTripalFieldDownloader" prot="public" virt="non-virtual">TripalFieldDownloader</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d5/dde/classTripalCSVDownloader_1ab33a217aecbe66625dab237375485560" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalCSVDownloader::$default_extension</definition>
+        <argsstring></argsstring>
+        <name>$default_extension</name>
+        <initializer>= &apos;csv&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the default extension for the outputfile. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" line="19" column="1" bodyfile="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dde/classTripalCSVDownloader_1a06a654654767e324c1b779912319b33d" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalCSVDownloader::$full_label</definition>
+        <argsstring></argsstring>
+        <name>$full_label</name>
+        <initializer>= &apos;Comma separated&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A more verbose label that better describes the formatter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" line="14" column="1" bodyfile="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/dde/classTripalCSVDownloader_1af0f2284caa8dfd388544c46ded264fe8" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalCSVDownloader::$label</definition>
+        <argsstring></argsstring>
+        <name>$label</name>
+        <initializer>= &apos;CSV&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the label shown to the user describing this formatter. It should be a short identifier. Use the $full_label for a more descriptive label. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" line="9" column="1" bodyfile="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/dde/classTripalCSVDownloader_1aff228ccfa66b6638e094a76cf2701766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalCSVDownloader::isFieldSupported</definition>
+        <argsstring>($field, $instance)</argsstring>
+        <name>isFieldSupported</name>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <param>
+          <declname>$instance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="dc/d2c/classTripalFieldDownloader_1a84cbe779b4b462b5f2bf0f09cea5f85b" kindref="member">TripalFieldDownloader::isFieldSupported()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" line="24" column="1" bodyfile="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" bodystart="24" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d5/dde/classTripalCSVDownloader_1adb474ba6c04e0c5240247c9e0a88174b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalCSVDownloader::formatEntity</definition>
+        <argsstring>($entity)</argsstring>
+        <name>formatEntity</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>TripalFieldDownloader::format() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" line="34" column="1" bodyfile="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" bodystart="34" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/dde/classTripalCSVDownloader_1ade688686f3d19290304e00c21d5ea30c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalCSVDownloader::getHeader</definition>
+        <argsstring>()</argsstring>
+        <name>getHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="dc/d2c/classTripalFieldDownloader_1a192476f62bd9fae272b93abcbe1c15c5" kindref="member">TripalFieldDownloader::getHeader()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" line="95" column="1" bodyfile="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" bodystart="95" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="928">
+        <label>TripalCSVDownloader</label>
+        <link refid="d5/dde/classTripalCSVDownloader"/>
+        <childnode refid="929" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="929">
+        <label>TripalFieldDownloader</label>
+        <link refid="dc/d2c/classTripalFieldDownloader"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="930">
+        <label>TripalCSVDownloader</label>
+        <link refid="d5/dde/classTripalCSVDownloader"/>
+        <childnode refid="931" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="931">
+        <label>TripalFieldDownloader</label>
+        <link refid="dc/d2c/classTripalFieldDownloader"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" line="3" column="1" bodyfile="tripal/includes/TripalFieldDownloaders/TripalCSVDownloader.inc" bodystart="3" bodyend="103"/>
+    <listofallmembers>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a09494c3a57d609caa1733043866144bf" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$collection</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a1f9fd58b7067bc88a133191b268c7f29" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$collection_bundles</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1aea4b0ce2bac2d123e33c7c3409c37ad8" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$collection_id</name></member>
+      <member refid="d5/dde/classTripalCSVDownloader_1ab33a217aecbe66625dab237375485560" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$default_extension</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a16216815147c4482b2e333df0c11c4aa" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$fh</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a6fa4785efb2a535340391ec193e0ba1a" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$fields</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a2f5fb7770415ca8595d969393a61e165" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$fields2terms</name></member>
+      <member refid="d5/dde/classTripalCSVDownloader_1a06a654654767e324c1b779912319b33d" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$full_label</name></member>
+      <member refid="d5/dde/classTripalCSVDownloader_1af0f2284caa8dfd388544c46ded264fe8" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$label</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a53896a726f9dfe96056215065c7e9dfc" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$outfile</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1ac183290026348048cb5bba03724f567f" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$printable_fields</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a2dd16bad4bb422558edf6fd858986d2f" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>$remote_entity</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1ac90e4afd8996e2d3b6d8f85df6983936" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>__construct</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a8b9de905b1b714f485f249b34862b96e" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>delete</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a71a5d792aa262183b31b20a5d02e9a79" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>download</name></member>
+      <member refid="d5/dde/classTripalCSVDownloader_1adb474ba6c04e0c5240247c9e0a88174b" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>formatEntity</name></member>
+      <member refid="d5/dde/classTripalCSVDownloader_1ade688686f3d19290304e00c21d5ea30c" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>getHeader</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a8dbf1c8cec9d20d0ce3de86f091616f5" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>getURL</name></member>
+      <member refid="d5/dde/classTripalCSVDownloader_1aff228ccfa66b6638e094a76cf2701766" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>isFieldSupported</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a3b3a7920800df7dc0313001016c9cd63" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>setFields</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a6d2c4e80df5d3f864ce30d5ac64791cf" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>setFields2Terms</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a3ff81875391fe20a30b4aeb248c30555" prot="protected" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>setPrintableFields</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a73c339781f2002dc5480ca6b56d224f5" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>write</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a020395a215d492c9f62f18508fa1f0b3" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>writeDone</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1affd25dc798a3c83f52d849eab82d164b" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>writeEntity</name></member>
+      <member refid="dc/d2c/classTripalFieldDownloader_1a52d3a20557a893659bf914030e9d9fd0" prot="public" virt="non-virtual"><scope>TripalCSVDownloader</scope><name>writeInit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

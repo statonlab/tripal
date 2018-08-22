@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d7/df0/classTripalWebServiceResource" kind="class" language="PHP" prot="public">
+    <compoundname>TripalWebServiceResource</compoundname>
+    <derivedcompoundref refid="d4/d46/classTripalWebServiceCollection" prot="public" virt="non-virtual">TripalWebServiceCollection</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d7/df0/classTripalWebServiceResource_1af3309c90c7b4d07d0339db935cb72053" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceResource::$context</definition>
+        <argsstring></argsstring>
+        <name>$context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The JSON-LD compatible context for this resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="17" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df0/classTripalWebServiceResource_1afc493c6b7ee3179182a2bcc38d76489f" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceResource::$data</definition>
+        <argsstring></argsstring>
+        <name>$data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the data portion of the JSON-LD response for this resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="22" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df0/classTripalWebServiceResource_1a8f4882739ef4329a1a21ba75a00e983a" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceResource::$id</definition>
+        <argsstring></argsstring>
+        <name>$id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The unique identifier for this resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="7" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df0/classTripalWebServiceResource_1ad501099f99d16699c20f7cfcf5da1aaa" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceResource::$service_path</definition>
+        <argsstring></argsstring>
+        <name>$service_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The URL path that the service is providing to access this resource. This path plus the $id are concatenated to form the IRI for this resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="29" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df0/classTripalWebServiceResource_1a8d07a6ec2c39a33b43d18521c19a039f" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceResource::$type</definition>
+        <argsstring></argsstring>
+        <name>$type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The unique type of resource. The type must exists in the context for the web service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="12" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1aba7e5659680caaefceed2e6b418e09f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::__construct</definition>
+        <argsstring>($service_path)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$service_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$service_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="38" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="38" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1aa55f5bd32a0239fea04524b99ebd31bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::addContextItem</definition>
+        <argsstring>($name, $iri)</argsstring>
+        <name>addContextItem</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$iri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a term to the &apos;&apos; section for this resource.</para><para>This function should not be called directory. Rather, the addContextTerm() and addContextVocab() functions built into the <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> class should be used as these will help ensure terms are added proper for the context of the web service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$iri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Internationalized Resource Identifiers or it&apos;s shortcut. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="84" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="84" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1ab2ad2eca20c0f1e8cffd7733e07ae144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::addProperty</definition>
+        <argsstring>($key, $value)</argsstring>
+        <name>addProperty</name>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new key/value pair to the web serivces response.</para><para>The value must either be a scalar or another <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> object. If the same key is usesd multiple times then the resulting resource will be presented as an array of elements.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the $key to add. This key must already be present in the web service context by first adding it using the <ref refid="d7/df0/classTripalWebServiceResource_1aa55f5bd32a0239fea04524b99ebd31bf" kindref="member">addContextItem()</ref> member function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the key which must either be a scalar or a <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> instance. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="286" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="286" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1a611090be662c4ca68d6cca030b17e760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::getContext</definition>
+        <argsstring>()</argsstring>
+        <name>getContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the data section of the resource.</para><para>The JSON-LD response constists of two sections the &apos;&apos; section and the data section. This function only returns the data section for this resource</para><para><simplesect kind="return"><para>An associative array containing the data section of the response. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="358" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="358" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1a719e251b7563faea1a921d8d741f3c0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::getData</definition>
+        <argsstring>()</argsstring>
+        <name>getData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the data section of the resource.</para><para>The JSON-LD response constists of two sections the &apos;&apos; section and the data section. This function only returns the data section for this resource</para><para><simplesect kind="return"><para>An associative array containing the data section of the response. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="344" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="344" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1a7eaae7bdf1c29091ca0dc4273c030ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::getID</definition>
+        <argsstring>()</argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the unique identifier for this resource.</para><para>Every resource must have a unique Idientifer. In JSON-LD the &apos;&apos; element identifies the IRI for the resource which will include the unique identifier. The TraiplWebService to which a resource is added will build the IRIs but it needs the unique ID of each resource.</para><para><simplesect kind="return"><para>The unique identifier for the resource. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="257" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="257" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1ac7fc40d7fb4c54fdf06234b3a49a2455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::getProperty</definition>
+        <argsstring>($key)</argsstring>
+        <name>getProperty</name>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the value of a property.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the property.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of the property. This could be a scalar, array or a <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="330" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="330" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1ab06540de2c9a6fbb6747efac33cdd4fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the type of this resource.</para><para><simplesect kind="return"><para>The name of the resource. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="267" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="267" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1a8db6125c692f47cea7fbb9180d63071e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::getURI</definition>
+        <argsstring>($id)</argsstring>
+        <name>getURI</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the IRI for an entity of a given ID in this web service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the resource. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="228" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="228" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1ad23c695c728a65cf98890ec80c6c657c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::removeContextItem</definition>
+        <argsstring>($name, $iri)</argsstring>
+        <name>removeContextItem</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$iri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a term for the &apos;&apos; section for this resource.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$iri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Internationalized Resource Identifiers or it&apos;s shortcut. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="99" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1a507d20c8be494981507dc8561c3d3d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::setContext</definition>
+        <argsstring>($resource)</argsstring>
+        <name>setContext</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies the context from a given <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> resource to this resource.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="368" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="368" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1aefb23aca60d63b72bb7ddf5b9e3b1db9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::setID</definition>
+        <argsstring>($id)</argsstring>
+        <name>setID</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set&apos;s the unique identifier for the resource.</para><para>Every resource must have a unique Idientifer. In JSON-LD the &apos;&apos; element identifies the IRI for the resource which will include the unique identifier. The TraiplWebService to which a resource is added will build the IRIs but it needs the unique ID of each resource.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the resource. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="217" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1ac2a5343c571d4ec6b9d124b9ab3db9b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::setType</definition>
+        <argsstring>($type)</argsstring>
+        <name>setType</name>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the resource type.</para><para>The type exist in the context of the web service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="112" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="112" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1aef910eabe4b92cedf1da64fd6318c400" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::checkKey</definition>
+        <argsstring>($key)</argsstring>
+        <name>checkKey</name>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks a key to ensure it is in the Context before being used.</para><para>This function should be used before adding a property or type to this resource. It ensures that the key for the property is already in the context.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to check. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="129" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="129" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/df0/classTripalWebServiceResource_1a41afb08267d8764d9cd01497a0b7d26b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceResource::checkValue</definition>
+        <argsstring>(&amp;$value)</argsstring>
+        <name>checkValue</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the value to make sure there are no problems with.</para><para>Will also expand any TriaplWebServiceResource by adding their context to this resource and substitute their data in place of the value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="175" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="175" bodyend="203"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1144">
+        <label>TripalWebServiceCollection</label>
+        <link refid="d4/d46/classTripalWebServiceCollection"/>
+        <childnode refid="1143" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1143">
+        <label>TripalWebServiceResource</label>
+        <link refid="d7/df0/classTripalWebServiceResource"/>
+      </node>
+    </inheritancegraph>
+    <location file="tripal_ws/includes/TripalWebServiceResource.inc" line="3" column="1" bodyfile="tripal_ws/includes/TripalWebServiceResource.inc" bodystart="3" bodyend="375"/>
+    <listofallmembers>
+      <member refid="d7/df0/classTripalWebServiceResource_1af3309c90c7b4d07d0339db935cb72053" prot="protected" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>$context</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1afc493c6b7ee3179182a2bcc38d76489f" prot="protected" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>$data</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a8f4882739ef4329a1a21ba75a00e983a" prot="protected" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>$id</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ad501099f99d16699c20f7cfcf5da1aaa" prot="protected" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>$service_path</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a8d07a6ec2c39a33b43d18521c19a039f" prot="protected" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>$type</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1aba7e5659680caaefceed2e6b418e09f5" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>__construct</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1aa55f5bd32a0239fea04524b99ebd31bf" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>addContextItem</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ab2ad2eca20c0f1e8cffd7733e07ae144" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>addProperty</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1aef910eabe4b92cedf1da64fd6318c400" prot="private" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>checkKey</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a41afb08267d8764d9cd01497a0b7d26b" prot="private" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>checkValue</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a611090be662c4ca68d6cca030b17e760" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>getContext</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a719e251b7563faea1a921d8d741f3c0e" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>getData</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a7eaae7bdf1c29091ca0dc4273c030ac8" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>getID</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ac7fc40d7fb4c54fdf06234b3a49a2455" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>getProperty</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ab06540de2c9a6fbb6747efac33cdd4fe" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>getType</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a8db6125c692f47cea7fbb9180d63071e" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>getURI</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ad23c695c728a65cf98890ec80c6c657c" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>removeContextItem</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a507d20c8be494981507dc8561c3d3d93" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>setContext</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1aefb23aca60d63b72bb7ddf5b9e3b1db9" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>setID</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ac2a5343c571d4ec6b9d124b9ab3db9b9" prot="public" virt="non-virtual"><scope>TripalWebServiceResource</scope><name>setType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

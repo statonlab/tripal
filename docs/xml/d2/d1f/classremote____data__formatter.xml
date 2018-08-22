@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/d1f/classremote____data__formatter" kind="class" language="PHP" prot="public">
+    <compoundname>remote__data_formatter</compoundname>
+    <basecompoundref refid="d5/d9b/classWebServicesFieldFormatter" prot="public" virt="non-virtual">WebServicesFieldFormatter</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d2/d1f/classremote____data__formatter_1a968bf72d4f1e4484a9f49e6f7dec79d8" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data_formatter::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Remote Data&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="6" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/classremote____data__formatter_1aef269eb515e01f0ac823193c367ac25b" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data_formatter::$default_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_settings</name>
+        <initializer>= array(
+    &apos;setting1&apos; =&gt; &apos;default_value&apos;,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="10" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/d1f/classremote____data__formatter_1a95167d2ec3d06a42bd801f607ea2a9c9" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data_formatter::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d8/da0/classremote____data" kindref="compound">remote__data</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="8" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/d1f/classremote____data__formatter_1a0ab638f8228108fa89dac3b472aa7453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_formatter::settingsSummary</definition>
+        <argsstring>($view_mode)</argsstring>
+        <name>settingsSummary</name>
+        <param>
+          <declname>$view_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a summary of the formatter settings.</para><para>This function corresponds to the hook_field_formatter_settings_summary() function of the Drupal Field API.</para><para>On the &apos;Manage Display&apos; page of the content type administration page, fields are allowed to provide a settings form. This settings form can be used to allow the site admin to define how the field should be formatted. The settings are then available for the formatter() function of this class. This function provides a text-based description of the settings for the site developer to see. It appears on the manage display page inline with the field. A field must always return a value in this function if the settings form gear button is to appear.</para><para>See the hook_field_formatter_settings_summary() function for more information.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$instance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$view_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string A string that provides a very brief summary of the field settings to the user. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="355" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="355" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d1f/classremote____data__formatter_1a732e90cfadba0d62727a921da9c4fd27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_formatter::view</definition>
+        <argsstring>(&amp;$element, $entity_type, $entity, $langcode, $items, $display)</argsstring>
+        <name>view</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$display</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="df/d84/classTripalFieldFormatter_1add25a3663eadef23f3a2981d61aee3f1" kindref="member">TripalFieldFormatter::view()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="16" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="16" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d2/d1f/classremote____data__formatter_1a60356f8575a3927146c0db6a5b2f7057" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_formatter::createDL</definition>
+        <argsstring>($item, &amp;$pkey=&apos;&apos;, &amp;$content=&apos;&apos;, $depth=0)</argsstring>
+        <name>createDL</name>
+        <param>
+          <declname>$item</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$pkey</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$content</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$depth</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A recursive function for creating an HTML dictionary list from the results for the item provided.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An item from the $items array passed to the <ref refid="d2/d1f/classremote____data__formatter_1a732e90cfadba0d62727a921da9c4fd27" kindref="member">view()</ref> function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An HTML formatted DL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="273" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="273" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d1f/classremote____data__formatter_1aa986cfe9699ecb8e7fc4d1012f3de090" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_formatter::createNestedDL</definition>
+        <argsstring>($item)</argsstring>
+        <name>createNestedDL</name>
+        <param>
+          <declname>$item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A recursive function for creating an HTML dictionary list from the results for the item provided.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An item from the $items array passed to the <ref refid="d2/d1f/classremote____data__formatter_1a732e90cfadba0d62727a921da9c4fd27" kindref="member">view()</ref> function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An HTML formatted DL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="310" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="310" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d1f/classremote____data__formatter_1a5bac473bed96f00454f52319582b61f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_formatter::createTable</definition>
+        <argsstring>($item, &amp;$pkey=&apos;&apos;, &amp;$rows=array(), $depth=0)</argsstring>
+        <name>createTable</name>
+        <param>
+          <declname>$item</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$pkey</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$rows</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$depth</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A recursive function for displaying an item in a table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$item</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An item from the $items array passed to the <ref refid="d2/d1f/classremote____data__formatter_1a732e90cfadba0d62727a921da9c4fd27" kindref="member">view()</ref> function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An HTML formatted Table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="224" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="224" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d1f/classremote____data__formatter_1aaf79348c327b03b1029f330182ab4d62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_formatter::getHeaderLabel</definition>
+        <argsstring>($subfields)</argsstring>
+        <name>getHeaderLabel</name>
+        <param>
+          <declname>$subfields</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the header label given the subfields criteria.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$subfields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of the sequence of subfields. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="177" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="177" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/d1f/classremote____data__formatter_1aa5c323044d10612641e4862566d08e02" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_formatter::refineSubValue</definition>
+        <argsstring>($values, $subfields)</argsstring>
+        <name>refineSubValue</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$subfields</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adjusts the items array to contain only the section/subsection desired.</para><para>The field settings can indicate a field with sub fields that should be displayed (e.g. organism,genus or relationship,clause). We want to adjust the item to only include what the user requested.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$subfields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="195" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="195" bodyend="215"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="474">
+        <label>WebServicesFieldFormatter</label>
+        <link refid="d5/d9b/classWebServicesFieldFormatter"/>
+        <childnode refid="475" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="475">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="473">
+        <label>remote__data_formatter</label>
+        <link refid="d2/d1f/classremote____data__formatter"/>
+        <childnode refid="474" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="477">
+        <label>WebServicesFieldFormatter</label>
+        <link refid="d5/d9b/classWebServicesFieldFormatter"/>
+        <childnode refid="478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="476">
+        <label>remote__data_formatter</label>
+        <link refid="d2/d1f/classremote____data__formatter"/>
+        <childnode refid="477" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" line="3" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_formatter.inc" bodystart="3" bodyend="357"/>
+    <listofallmembers>
+      <member refid="d2/d1f/classremote____data__formatter_1a968bf72d4f1e4484a9f49e6f7dec79d8" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>$default_label</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1aef269eb515e01f0ac823193c367ac25b" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>$default_settings</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1a95167d2ec3d06a42bd801f607ea2a9c9" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>$field_types</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1adaeaa7d89dd9b33ce51521cf9669cf34" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>__construct</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1113d3234ec9ef0a691fd07ffd551acd" prot="protected" virt="non-virtual"><scope>remote__data_formatter</scope><name>ajaxifyPager</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1a60356f8575a3927146c0db6a5b2f7057" prot="private" virt="non-virtual"><scope>remote__data_formatter</scope><name>createDL</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1aa986cfe9699ecb8e7fc4d1012f3de090" prot="private" virt="non-virtual"><scope>remote__data_formatter</scope><name>createNestedDL</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1a5bac473bed96f00454f52319582b61f4" prot="private" virt="non-virtual"><scope>remote__data_formatter</scope><name>createTable</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1aaf79348c327b03b1029f330182ab4d62" prot="private" virt="non-virtual"><scope>remote__data_formatter</scope><name>getHeaderLabel</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1ae410038836433217c166a74a2501920c" prot="protected" virt="non-virtual"><scope>remote__data_formatter</scope><name>getPagerElementID</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a855e26f78af9142154bdaa59f5e7120b" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>info</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1aa5c323044d10612641e4862566d08e02" prot="private" virt="non-virtual"><scope>remote__data_formatter</scope><name>refineSubValue</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a3e222cef20a5f6c2ec42ef386e51e05e" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>settingsForm</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1a0ab638f8228108fa89dac3b472aa7453" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>settingsSummary</name></member>
+      <member refid="d2/d1f/classremote____data__formatter_1a732e90cfadba0d62727a921da9c4fd27" prot="public" virt="non-virtual"><scope>remote__data_formatter</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

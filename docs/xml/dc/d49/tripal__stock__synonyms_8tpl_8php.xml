@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/d49/tripal__stock__synonyms_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_stock_synonyms.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/d49/tripal__stock__synonyms_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$options</definition>
+        <argsstring></argsstring>
+        <name>$options</name>
+        <initializer>= array(&apos;return_array&apos; =&gt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" line="9" column="1" bodyfile="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d49/tripal__stock__synonyms_8tpl_8php_1ab704586a9573a6b31c9299104ddf4c78" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$stock</definition>
+        <argsstring></argsstring>
+        <name>$stock</name>
+        <initializer>= $node-&gt;stock</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" line="5" column="1" bodyfile="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d49/tripal__stock__synonyms_8tpl_8php_1ac2121cf3c63a71f3b70e2a1f13e45234" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$stockprops</definition>
+        <argsstring></argsstring>
+        <name>$stockprops</name>
+        <initializer>= $stock-&gt;stockprop</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" line="11" column="1" bodyfile="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d49/tripal__stock__synonyms_8tpl_8php_1abae12b2322a35ed6074446da480ce693" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$synonyms</definition>
+        <argsstring></argsstring>
+        <name>$synonyms</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" line="6" column="1" bodyfile="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>there<sp/>is<sp/>no<sp/>stock_synonym<sp/>table,<sp/>analogous<sp/>to<sp/>the<sp/>stock_synonym<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Therefore,<sp/>synonyms<sp/>have<sp/>been<sp/>stored<sp/>in<sp/>the<sp/>stockprop<sp/>table<sp/>with<sp/>a<sp/>type<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>&apos;synonym&apos;<sp/>or<sp/>&apos;alias&apos;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ab704586a9573a6b31c9299104ddf4c78" refkind="member"><highlight class="normal"><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ab704586a9573a6b31c9299104ddf4c78" kindref="member">$stock</ref><sp/>=<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref>-&gt;stock;</highlight></codeline>
+<codeline lineno="6" refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1abae12b2322a35ed6074446da480ce693" refkind="member"><highlight class="normal"><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1abae12b2322a35ed6074446da480ce693" kindref="member">$synonyms</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>expand<sp/>the<sp/>stock<sp/>object<sp/>to<sp/>include<sp/>the<sp/>stockprop<sp/>records</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" refkind="member"><highlight class="normal"><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;return_array&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ab704586a9573a6b31c9299104ddf4c78" kindref="member">$stock</ref><sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>(<ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ab704586a9573a6b31c9299104ddf4c78" kindref="member">$stock</ref>,<sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;stockprop&apos;</highlight><highlight class="normal">,<sp/><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="11" refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ac2121cf3c63a71f3b70e2a1f13e45234" refkind="member"><highlight class="normal"><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ac2121cf3c63a71f3b70e2a1f13e45234" kindref="member">$stockprops</ref><sp/>=<sp/><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ab704586a9573a6b31c9299104ddf4c78" kindref="member">$stock</ref>-&gt;stockprop;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>iterate<sp/>through<sp/>all<sp/>of<sp/>the<sp/>properties<sp/>and<sp/>pull<sp/>out<sp/>only<sp/>the<sp/>synonyms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ac2121cf3c63a71f3b70e2a1f13e45234" kindref="member">$stockprops</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1ac2121cf3c63a71f3b70e2a1f13e45234" kindref="member">$stockprops</ref><sp/>as<sp/>$stockprop){<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">($stockprop-&gt;type_id-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;synonym&apos;</highlight><highlight class="normal"><sp/>or<sp/>$stockprop-&gt;type_id-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;alias&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1abae12b2322a35ed6074446da480ce693" kindref="member">$synonyms</ref>[]<sp/>=<sp/>$stockprop;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(count(<ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1abae12b2322a35ed6074446da480ce693" kindref="member">$synonyms</ref>)<sp/>&gt;<sp/>0){<sp/>?&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_stock-data-block-desc<sp/>tripal-data-block-desc&quot;</highlight><highlight class="normal">&gt;The<sp/>stock<sp/></highlight><highlight class="stringliteral">&apos;&lt;?php<sp/>print<sp/>$stock-&gt;name<sp/>?&gt;&apos;</highlight><highlight class="normal"><sp/>has<sp/>the<sp/>following<sp/>synonyms&lt;/div&gt;<sp/>&lt;?php</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$headers<sp/>array<sp/>is<sp/>an<sp/>array<sp/>of<sp/>fields<sp/>to<sp/>use<sp/>as<sp/>the<sp/>colum<sp/>headers.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>additional<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>table<sp/>for<sp/>the<sp/>analysis<sp/>has<sp/>a<sp/>vertical<sp/>header<sp/>(down<sp/>the<sp/>first<sp/>column)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>we<sp/>do<sp/>not<sp/>provide<sp/>headers<sp/>here,<sp/>but<sp/>specify<sp/>them<sp/>in<sp/>the<sp/>$rows<sp/>array<sp/>below.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Synonym&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$rows<sp/>array<sp/>contains<sp/>an<sp/>array<sp/>of<sp/>rows<sp/>where<sp/>each<sp/>row<sp/>is<sp/>an<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>values<sp/>for<sp/>each<sp/>column<sp/>of<sp/>the<sp/>table<sp/>in<sp/>that<sp/>row.<sp/><sp/>Additional<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="dc/d49/tripal__stock__synonyms_8tpl_8php_1abae12b2322a35ed6074446da480ce693" kindref="member">$synonyms</ref><sp/>as<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>-&gt;value,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>$table<sp/>array<sp/>contains<sp/>the<sp/>headers<sp/>and<sp/>rows<sp/>array<sp/>as<sp/>well<sp/>as<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>options<sp/>for<sp/>controlling<sp/>the<sp/>display<sp/>of<sp/>the<sp/>table.<sp/><sp/>Additional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref>,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_stock-table-synonyms&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>once<sp/>we<sp/>have<sp/>our<sp/>table<sp/>array<sp/>structure<sp/>defined,<sp/>we<sp/>call<sp/>Drupal&apos;s<sp/>theme_table()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>function<sp/>to<sp/>generate<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>print<sp/>theme_table(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_stock/theme/templates/tripal_stock_synonyms.tpl.php"/>
+  </compounddef>
+</doxygen>

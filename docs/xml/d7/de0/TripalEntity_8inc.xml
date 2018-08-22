@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d7/de0/TripalEntity_8inc" kind="file" language="PHP">
+    <compoundname>TripalEntity.inc</compoundname>
+    <innerclass refid="db/d44/classTripalEntity" prot="public">TripalEntity</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="5" refid="db/d44/classTripalEntity" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>Entity<sp/>{</highlight></codeline>
+<codeline lineno="6" refid="db/d44/classTripalEntity_1ac95eeb3b66aba12f94cd1eaeca58247f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d44/classTripalEntity_1ac95eeb3b66aba12f94cd1eaeca58247f" kindref="member">__construct</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(),<sp/>$entity_type)<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::__construct(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/>$entity_type);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="db/d44/classTripalEntity_1a2eabc6d842bc1fc591da61f7163b4073" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d44/classTripalEntity_1a2eabc6d842bc1fc591da61f7163b4073" kindref="member">defaultLabel</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$this-&gt;title;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="db/d44/classTripalEntity_1a2375abe1394a786dfba78260769541dc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d44/classTripalEntity_1a2375abe1394a786dfba78260769541dc" kindref="member">defaultUri</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>array(</highlight><highlight class="stringliteral">&apos;path&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;TripalEntity/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$this-&gt;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="db/d44/classTripalEntity_1a20afd965881d213e6193aa6c7c7002ab" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="db/d44/classTripalEntity_1a20afd965881d213e6193aa6c7c7002ab" kindref="member">save</ref>($cache<sp/>=<sp/>array())<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>entity_get_controller($this-&gt;entityType)-&gt;save($this,<sp/>$cache);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/includes/TripalEntity.inc"/>
+  </compounddef>
+</doxygen>

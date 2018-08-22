@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/d2b/tripal__bulk__loader__teaser_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_bulk_loader_teaser.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/d2b/tripal__bulk__loader__teaser_8tpl_8php_1ab5501754233ec6aec5f04ef03f3bfc28" prot="public" static="no" mutable="no">
+        <type>print $node</type>
+        <definition>print $node title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/theme/templates/tripal_bulk_loader_teaser.tpl.php" line="6" column="1" bodyfile="tripal_bulk_loader/theme/templates/tripal_bulk_loader_teaser.tpl.php" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_bulk_loader-teaser<sp/>tripal-teaser&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-bulk_loader-teaser-title<sp/>tripal-teaser-title&quot;</highlight><highlight class="normal">&gt;&lt;?php</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/>l(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref>-&gt;title,<sp/></highlight><highlight class="stringliteral">&quot;node/$node-&gt;nid&quot;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;html&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE));?&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-bulk_loader-teaser-text<sp/>tripal-teaser-text&quot;</highlight><highlight class="normal">&gt;&lt;?php<sp/></highlight></codeline>
+<codeline lineno="6" refid="dc/d2b/tripal__bulk__loader__teaser_8tpl_8php_1ab5501754233ec6aec5f04ef03f3bfc28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref>-&gt;title;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;...<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>l(</highlight><highlight class="stringliteral">&quot;[more]&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;node/$node-&gt;nid&quot;</highlight><highlight class="normal">);<sp/>?&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">&lt;/div&gt;<sp/>&lt;?php<sp/></highlight></codeline>
+    </programlisting>
+    <location file="tripal_bulk_loader/theme/templates/tripal_bulk_loader_teaser.tpl.php"/>
+  </compounddef>
+</doxygen>

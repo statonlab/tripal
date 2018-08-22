@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="da/d05/node--chado-generic_8tpl_8php" kind="file" language="PHP">
+    <compoundname>node--chado-generic.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="da/d05/node--chado-generic_8tpl_8php_1af1ed42d3b543c32ee9550448dd15076c" prot="public" static="no" mutable="no">
+        <type>if($teaser)</type>
+        <definition>if ( $teaser) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+  $node_type = $node-&gt;type</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/theme/templates/node--chado-generic.tpl.php" line="5" column="1" bodyfile="legacy/tripal_core/theme/templates/node--chado-generic.tpl.php" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($teaser)<sp/>{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/>print<sp/>render($content);</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5" refid="da/d05/node--chado-generic_8tpl_8php_1af1ed42d3b543c32ee9550448dd15076c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>$node_type<sp/>=<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref>-&gt;type;<sp/>?&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>&lt;script<sp/>type=</highlight><highlight class="stringliteral">&quot;text/javascript&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>do<sp/>not<sp/>use<sp/>Drupal<sp/>Behaviors<sp/>because<sp/>we<sp/>do<sp/>not<sp/>want<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>code<sp/>to<sp/>be<sp/>executed<sp/>on<sp/>AJAX<sp/>callbacks.<sp/>This<sp/>code<sp/>only<sp/>needs<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>be<sp/>executed<sp/>once<sp/>the<sp/>page<sp/>is<sp/>ready.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>jQuery(document).ready(</highlight><highlight class="keyword">function</highlight><highlight class="normal">($){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hide<sp/>all<sp/>but<sp/>the<sp/>first<sp/>data<sp/>pane</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$(</highlight><highlight class="stringliteral">&quot;.tripal-data-pane&quot;</highlight><highlight class="normal">).hide().filter(</highlight><highlight class="stringliteral">&quot;:first-child&quot;</highlight><highlight class="normal">).show();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>a<sp/>title<sp/>in<sp/>the<sp/>table<sp/>of<sp/>contents<sp/>is<sp/>clicked,<sp/>then</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>show<sp/>the<sp/>corresponding<sp/>item<sp/>in<sp/>the<sp/>details<sp/>box</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$(</highlight><highlight class="stringliteral">&quot;.tripal_toc_list_item_link&quot;</highlight><highlight class="normal">).click(</highlight><highlight class="keyword">function</highlight><highlight class="normal">(){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>$(</highlight><highlight class="keyword">this</highlight><highlight class="normal">).attr(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;-tripal-data-pane&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$(</highlight><highlight class="stringliteral">&quot;.tripal-data-pane&quot;</highlight><highlight class="normal">).hide().filter(</highlight><highlight class="stringliteral">&quot;#&quot;</highlight><highlight class="normal">+<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">).fadeIn(</highlight><highlight class="stringliteral">&apos;fast&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>a<sp/>?pane=<sp/>is<sp/>specified<sp/>in<sp/>the<sp/>URL<sp/>then<sp/>we<sp/>want<sp/>to<sp/>show<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>requested<sp/>content<sp/>pane.<sp/>For<sp/>previous<sp/>version<sp/>of<sp/>Tripal,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>?block=,<sp/>was<sp/>used.<sp/><sp/>We<sp/>support<sp/>it<sp/>here<sp/>for<sp/>backwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compatibility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>pane;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pane<sp/>=<sp/>window.location.href.match(/[\?|\&amp;]pane=(.+?)[\&amp;|\#]/)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pane<sp/>==<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pane<sp/>=<sp/>window.location.href.match(/[\?|\&amp;]pane=(.+)/)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>we<sp/>don&apos;t<sp/>have<sp/>a<sp/>pane<sp/>then<sp/>try<sp/>the<sp/>old<sp/>style<sp/>?block=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pane<sp/>==<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pane<sp/>=<sp/>window.location.href.match(/[\?|\&amp;]block=(.+?)[\&amp;|\#]/)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pane<sp/>==<sp/>null)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pane<sp/>=<sp/>window.location.href.match(/[\?|\&amp;]block=(.+)/)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pane<sp/>!=<sp/>null){</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$(</highlight><highlight class="stringliteral">&quot;.tripal-data-pane&quot;</highlight><highlight class="normal">).hide().filter(</highlight><highlight class="stringliteral">&quot;#&quot;</highlight><highlight class="normal"><sp/>+<sp/>pane[1]<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;-tripal-data-pane&quot;</highlight><highlight class="normal">).show();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>&apos;active&apos;<sp/>class<sp/>from<sp/>the<sp/>links<sp/>section,<sp/>as<sp/>it<sp/>doesn&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>sense<sp/>for<sp/>this<sp/>layout</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$(</highlight><highlight class="stringliteral">&quot;a.active&quot;</highlight><highlight class="normal">).removeClass(</highlight><highlight class="stringliteral">&apos;active&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>&lt;/script&gt;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_&lt;?php<sp/>print<sp/>$node_type?&gt;_contents&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-contents&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;table<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=</highlight><highlight class="stringliteral">&quot;tripal-&lt;?php<sp/>print<sp/>$node_type?&gt;-contents-table&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-contents-table&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;tr<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-contents-table-tr&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/>nowrap<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-contents-table-td<sp/>tripal-contents-table-td-toc&quot;</highlight><highlight class="normal"><sp/><sp/>align=</highlight><highlight class="stringliteral">&quot;left&quot;</highlight><highlight class="normal">&gt;&lt;?php</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>the<sp/>table<sp/>of<sp/>contents.<sp/>It&apos;s<sp/>found<sp/>in<sp/>the<sp/>content<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;tripal_toc&apos;</highlight><highlight class="normal">,<sp/>$content))<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print<sp/>$content[</highlight><highlight class="stringliteral">&apos;tripal_toc&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>may<sp/>want<sp/>to<sp/>add<sp/>the<sp/>links<sp/>portion<sp/>of<sp/>the<sp/>contents<sp/>to<sp/>the<sp/>sidebar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//print<sp/>render($content[&apos;links&apos;]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>remove<sp/>the<sp/>table<sp/>of<sp/>contents<sp/>and<sp/>links<sp/>so<sp/>thye<sp/>doent<sp/>show<sp/>up<sp/>in<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>data<sp/>section<sp/>when<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>$content<sp/>array<sp/>is<sp/>rendered</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unset($content[</highlight><highlight class="stringliteral">&apos;tripal_toc&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unset($content[</highlight><highlight class="stringliteral">&apos;links&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>?&gt;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/td&gt;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-contents-table-td-data&quot;</highlight><highlight class="normal"><sp/>align=</highlight><highlight class="stringliteral">&quot;left&quot;</highlight><highlight class="normal"><sp/>width=</highlight><highlight class="stringliteral">&quot;100%&quot;</highlight><highlight class="normal">&gt;<sp/>&lt;?php</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>print<sp/>the<sp/>rendered<sp/>content</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print<sp/>render($content);<sp/>?&gt;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/td&gt;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/table&gt;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>&lt;/div&gt;<sp/>&lt;?php</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_core/theme/templates/node--chado-generic.tpl.php"/>
+  </compounddef>
+</doxygen>

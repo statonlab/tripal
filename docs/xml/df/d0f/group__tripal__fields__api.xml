@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/d0f/group__tripal__fields__api" kind="group">
+    <compoundname>tripal_fields_api</compoundname>
+    <title>Tripal Fields</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1ga47ce54f169c677db85d0c2f0fa711054" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_bundle_fields_info</definition>
+        <argsstring>($entity_type, $bundle)</argsstring>
+        <name>hook_bundle_fields_info</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to return a bundles field info.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the entity, like &apos;<ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref>&apos;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="93" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1ga776a3c15b005158009c518351ff77b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_bundle_instances_info</definition>
+        <argsstring>($entity_type, $bundle)</argsstring>
+        <name>hook_bundle_instances_info</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to return the field instances of a bundle. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the entity, most likely &apos;<ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref>&apos;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bundle object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="106" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1ga1dc3d3d7722cf83f2384a5c679bb20b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_field_storage_tquery</definition>
+        <argsstring>($conditions, $orderBy)</argsstring>
+        <name>hook_field_storage_tquery</name>
+        <param>
+          <declname>$conditions</declname>
+        </param>
+        <param>
+          <declname>$orderBy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="79" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1gaa60dc49e374ff561fc236dcb9f409753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_format_views_field_element</definition>
+        <argsstring>($field_name, $term)</argsstring>
+        <name>tripal_format_views_field_element</name>
+        <param>
+          <declname>$field_name</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Formats an element of a <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> for use by Drupal Views.</para><para>Sometimes the value of <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> can be more than just a single scalar. In this case the value is an array of key value pairs where each key is a controlled vocabulary term. In order to support fields, filtering and sorting by these sub elements using Drupal Views, the <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> implementation must provide some help to Views by describing these elements, and then implementing a query() function to support them. However, the naming of sub elements must follow a set convention. This function guarantees proper naming for sub elements.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the field to which the element belongs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term object as returned by <ref refid="de/d00/group__tripal__terms__api_1gaf99a705ba9ec49d8d1e46aa0300505c0" kindref="member">tripal_get_term_details()</ref>; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="473" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="473" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1ga5fd1f3f1f01539ca3e1aa7068c4cfa44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_field_formatters</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_field_formatters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a list of TripalFieldFormatters.</para><para>The <ref refid="df/d84/classTripalFieldFormatter" kindref="compound">TripalFieldFormatter</ref> classes can be added by a site developer and should be placed in the [module]/includes/TripalFields directory. Tripal will support any widget as long as it is in this directory and extends the <ref refid="df/d84/classTripalFieldFormatter" kindref="compound">TripalFieldFormatter</ref> class.</para><para><simplesect kind="return"><para>A list of <ref refid="df/d84/classTripalFieldFormatter" kindref="compound">TripalFieldFormatter</ref> names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="284" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="284" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1ga3bbf7162eadbfbf0bcbe9912c6306cc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_field_item_keyval</definition>
+        <argsstring>($items, $delta, $key, $default=&apos;&apos;)</argsstring>
+        <name>tripal_get_field_item_keyval</name>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$key</declname>
+        </param>
+        <param>
+          <declname>$default</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>More easily get the value of a single item from a field&apos;s items array.</para><para>A Drupal field attached to an entity may have multiple items (i.e. it has a cardinality &gt; 1). Each of these items will always have a &apos;value&apos; key that contains the data for that field. However, fields can also have other keys with their own values. You can easily retreive the value of these keys using this function. What makes this function useful is that you can provide a default value to use if the key has no value. This is useful when developing a TripalField::widgetForm function and you need to retreive default values and you don&apos;t want to have to always check if the value is set.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$items</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fields $items array. Compatbile with that returned by field_get_items. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the item.  $key The name of the key within the item. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$default</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A default value to return if the key is not set. By default the empty string is returned.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value assigned to the item&apos;s key; FALSE if the key doesn&apos;t exist or the $default argument if no value is associated with the key. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="441" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="441" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1gaeea3e5fc278ccd89ce3cada7a6634761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_field_types</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_field_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a list of <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> types.</para><para>The <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> classes can be added by a site developer and should be placed in the [module]/includes/TripalFields directory. Tripal will support any field as long as it is in this directory and extends the <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> class. To support dynamic inclusion of new fields this function will look for <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> class files and return a type for each one.</para><para><simplesect kind="return"><para>A list of <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="125" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="125" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1gaa59ad72e57a9ccc3157b0e8c2e2f5db1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_field_widgets</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_field_widgets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a list of TripalFieldWidgets.</para><para>The <ref refid="db/d4c/classTripalFieldWidget" kindref="compound">TripalFieldWidget</ref> classes can be added by a site developer and should be placed in the [module]/includes/TripalFields directory. Tripal will support any widget as long as it is in this directory and extends the <ref refid="db/d4c/classTripalFieldWidget" kindref="compound">TripalFieldWidget</ref> class.</para><para><simplesect kind="return"><para>A list of <ref refid="db/d4c/classTripalFieldWidget" kindref="compound">TripalFieldWidget</ref> names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="189" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="189" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1ga6228dd432f683e12dd97639bbc848314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_include_downloader_class</definition>
+        <argsstring>($class)</argsstring>
+        <name>tripal_load_include_downloader_class</name>
+        <param>
+          <declname>$class</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads the TripalEntityDownloader file into scope.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the class to include.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the downloader class file was found, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="383" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="383" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d0f/group__tripal__fields__api_1gabb7ea3717ca825f758cfa9eb5c259ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_load_include_field_class</definition>
+        <argsstring>($class)</argsstring>
+        <name>tripal_load_include_field_class</name>
+        <param>
+          <declname>$class</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads the <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref> class file into scope.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$class</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The class to include. This can be a <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref>, <ref refid="db/d4c/classTripalFieldWidget" kindref="compound">TripalFieldWidget</ref> or <ref refid="df/d84/classTripalFieldFormatter" kindref="compound">TripalFieldFormatter</ref> class name.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the field type class file was found, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.fields.api.inc" line="341" column="1" bodyfile="tripal/api/tripal.fields.api.inc" bodystart="341" bodyend="370"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) for working with fields attached to <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> content types (bundles).</para><para>Fields: A field is a reusable &quot;data container&quot; that is attached to a Bundle. Programmatically, each field provides one or more primitive data types, with validators and widgets for editing and formatters for display. Each field independently manages the data to which it assigned. Just like with Bundles, Fields are also described using controlled vocabulary terms. For example, a gene Bundle has a field attached that provides the name of the gene. <linebreak/>
+This field only provides the name and nothing more. Tripal uses the schema:name vocabulary term to describe the field. <linebreak/>
+ Field Instances: Fields describe &quot;atomic&quot; units of data that are associated with an entity. <linebreak/>
+For example, a &quot;name&quot; is an atomic unit of data about a Gene or Organism entity. Fields can be reused for multiple Bundles. For example, gene, mRNA, genetic markers and variants all have name data. Despite that all of these Bundles provides a &quot;name&quot;, we only need one field to describe that this data is a &quot;name&quot;. However, we may want to customize a field specific to each bundle. Therefore, an Instance of a field is attached to a bundle, and field instances can then be customized differently. The most important customization is the one that defines the Chado table from which the data for a field is retrieved. Despite that field instances are attached to bundles, they become visible with Entities. When an entity is loaded for display, Drupal examines all of the fields that are attached to the entity&apos;s bundle, and then populates the fields instances with data specific to the entity being loaded. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

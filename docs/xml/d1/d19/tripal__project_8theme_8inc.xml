@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d19/tripal__project_8theme_8inc" kind="file" language="PHP">
+    <compoundname>tripal_project.theme.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d19/tripal__project_8theme_8inc_1a58c3ec19ca8887481b6b129ebc4ef649" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_project_preprocess_tripal_project_relationships</definition>
+        <argsstring>(&amp;$variables)</argsstring>
+        <name>tripal_project_preprocess_tripal_project_relationships</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$variables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_project/theme/tripal_project.theme.inc" line="7" column="1" bodyfile="legacy/tripal_project/theme/tripal_project.theme.inc" bodystart="7" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="7" refid="d1/d19/tripal__project_8theme_8inc_1a58c3ec19ca8887481b6b129ebc4ef649" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d19/tripal__project_8theme_8inc_1a58c3ec19ca8887481b6b129ebc4ef649" kindref="member">tripal_project_preprocess_tripal_project_relationships</ref>(&amp;$variables)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a26a7d69cd5cc291d752925dd312b5d1c" kindref="member">$project</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">]-&gt;project;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>expand<sp/>the<sp/>project<sp/>object<sp/>to<sp/>include<sp/>the<sp/>project<sp/>relationships.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;return_array&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>don&apos;t<sp/>want<sp/>to<sp/>fully<sp/>recurse<sp/>we<sp/>only<sp/>need<sp/>information<sp/>about<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>relationship<sp/>type<sp/>and<sp/>the<sp/>object<sp/>and<sp/>subject<sp/>projects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;include_fk&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;object_project_id&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;subject_project_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a26a7d69cd5cc291d752925dd312b5d1c" kindref="member">$project</ref><sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1gac2d1c767cf1cbff56908b2d6da178e65" kindref="member">chado_expand_var</ref>(<ref refid="de/d47/tripal__project__base_8tpl_8php_1a26a7d69cd5cc291d752925dd312b5d1c" kindref="member">$project</ref>,<sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;project_relationship&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>subject<sp/>relationships</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>$srelationships<sp/>=<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a26a7d69cd5cc291d752925dd312b5d1c" kindref="member">$project</ref>-&gt;project_relationship-&gt;subject_project_id;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>$orelationships<sp/>=<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a26a7d69cd5cc291d752925dd312b5d1c" kindref="member">$project</ref>-&gt;project_relationship-&gt;object_project_id;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>combine<sp/>both<sp/>object<sp/>and<sp/>subject<sp/>relationshisp<sp/>into<sp/>a<sp/>single<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>$relationships<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>$relationships[</highlight><highlight class="stringliteral">&apos;object&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>$relationships[</highlight><highlight class="stringliteral">&apos;subject&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>through<sp/>the<sp/>object<sp/>relationships</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($orelationships)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($orelationships<sp/>as<sp/>$relationship)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>stdClass();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel-&gt;record<sp/>=<sp/>$relationship;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>relationship<sp/>and<sp/>child<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel_type<sp/>=<sp/>t(preg_replace(</highlight><highlight class="stringliteral">&apos;/_/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/>$relationship-&gt;type_id-&gt;name));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>node<sp/>id<sp/>of<sp/>the<sp/>subject</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>nid<sp/>FROM<sp/>{chado_project}<sp/>WHERE<sp/>project_id<sp/>=<sp/>:project_id&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$n<sp/>=<sp/>db_query($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:project_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$relationship-&gt;subject_project_id-&gt;project_id))-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($n)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel-&gt;record-&gt;nid<sp/>=<sp/>$n-&gt;nid;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$relationships[</highlight><highlight class="stringliteral">&apos;object&apos;</highlight><highlight class="normal">][$rel_type][]<sp/>=<sp/>$rel;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>add<sp/>in<sp/>the<sp/>subject<sp/>relationships</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($srelationships)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($srelationships<sp/>as<sp/>$relationship)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>stdClass();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel-&gt;record<sp/>=<sp/>$relationship;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel_type<sp/>=<sp/>t(preg_replace(</highlight><highlight class="stringliteral">&apos;/_/&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/>$relationship-&gt;type_id-&gt;name));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>node<sp/>id<sp/>of<sp/>the<sp/>subject</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>nid<sp/>FROM<sp/>{chado_project}<sp/>WHERE<sp/>project_id<sp/>=<sp/>:project_id&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$n<sp/>=<sp/>db_query($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:project_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$relationship-&gt;object_project_id-&gt;project_id))-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($n)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$rel-&gt;record-&gt;nid<sp/>=<sp/>$n-&gt;nid;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$relationships[</highlight><highlight class="stringliteral">&apos;subject&apos;</highlight><highlight class="normal">][$rel_type][]<sp/>=<sp/>$rel;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a26a7d69cd5cc291d752925dd312b5d1c" kindref="member">$project</ref>-&gt;all_relationships<sp/>=<sp/>$relationships;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_project/theme/tripal_project.theme.inc"/>
+  </compounddef>
+</doxygen>

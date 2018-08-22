@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="db/d21/classoperation____phylotree__vis__formatter" kind="class" language="PHP" prot="public">
+    <compoundname>operation__phylotree_vis_formatter</compoundname>
+    <basecompoundref refid="d1/dc8/classChadoFieldFormatter" prot="public" virt="non-virtual">ChadoFieldFormatter</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="db/d21/classoperation____phylotree__vis__formatter_1a92e82f42a3a1c45f3def6cedd30fa92b" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__phylotree_vis_formatter::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Phylogenetic tree visualisation&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" line="6" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d21/classoperation____phylotree__vis__formatter_1ab52be1adc126dff11c4cd7127e6b9be1" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>operation__phylotree_vis_formatter::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d3/dbf/classoperation____phylotree__vis" kindref="compound">operation__phylotree_vis</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" line="9" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d21/classoperation____phylotree__vis__formatter_1af2b870826d9bbde80a4dc143229c3fdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>operation__phylotree_vis_formatter::view</definition>
+        <argsstring>(&amp;$element, $entity_type, $entity, $langcode, $items, $display)</argsstring>
+        <name>view</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$display</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="df/d84/classTripalFieldFormatter_1add25a3663eadef23f3a2981d61aee3f1" kindref="member">TripalFieldFormatter::view()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" line="14" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" bodystart="14" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="439">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="437">
+        <label>operation__phylotree_vis_formatter</label>
+        <link refid="db/d21/classoperation____phylotree__vis__formatter"/>
+        <childnode refid="438" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="438">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="439" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="442">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="440">
+        <label>operation__phylotree_vis_formatter</label>
+        <link refid="db/d21/classoperation____phylotree__vis__formatter"/>
+        <childnode refid="441" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="441">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="442" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/operation__phylotree_vis/operation__phylotree_vis_formatter.inc" bodystart="3" bodyend="54"/>
+    <listofallmembers>
+      <member refid="db/d21/classoperation____phylotree__vis__formatter_1a92e82f42a3a1c45f3def6cedd30fa92b" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>$default_label</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a2bc2a9a611b58e17444de2b3598367df" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>$default_settings</name></member>
+      <member refid="db/d21/classoperation____phylotree__vis__formatter_1ab52be1adc126dff11c4cd7127e6b9be1" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>$field_types</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1adaeaa7d89dd9b33ce51521cf9669cf34" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>__construct</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1113d3234ec9ef0a691fd07ffd551acd" prot="protected" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>ajaxifyPager</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1ae410038836433217c166a74a2501920c" prot="protected" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>getPagerElementID</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a855e26f78af9142154bdaa59f5e7120b" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>info</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a3e222cef20a5f6c2ec42ef386e51e05e" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>settingsForm</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a90dce4f342fff3e2208fc3b0b48489f2" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>settingsSummary</name></member>
+      <member refid="db/d21/classoperation____phylotree__vis__formatter_1af2b870826d9bbde80a4dc143229c3fdb" prot="public" virt="non-virtual"><scope>operation__phylotree_vis_formatter</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

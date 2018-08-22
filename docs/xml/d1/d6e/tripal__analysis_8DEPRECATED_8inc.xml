@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d6e/tripal__analysis_8DEPRECATED_8inc" kind="file" language="PHP">
+    <compoundname>tripal_analysis.DEPRECATED.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ac48165c964358440360cb281c98de93f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_analysis_delete_property</definition>
+        <argsstring>($analysis_id, $property, $cv_name=&apos;tripal&apos;)</argsstring>
+        <name>tripal_analysis_delete_property</name>
+        <param>
+          <declname>$analysis_id</declname>
+        </param>
+        <param>
+          <declname>$property</declname>
+        </param>
+        <param>
+          <declname>$cv_name</declname>
+          <defval>&apos;tripal&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="da/d58/deprecated_1_deprecated000115"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Restructured API to make naming more readable and consistent. Function was deprecated in Tripal 2.0 and will be removed 2 releases from now. This function has been replaced by the more generic <ref refid="d0/d77/group__tripal__chado__prop__api_1ga6307644a082f6d6c8a8b1269c2cb5e44" kindref="member">chado_delete_property()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="d0/d77/group__tripal__chado__prop__api_1ga6307644a082f6d6c8a8b1269c2cb5e44" kindref="member">chado_delete_property()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" line="157" column="1" bodyfile="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" bodystart="157" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a8c8ef55875c2f7f533dc80b9b08faf37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_analysis_get_node</definition>
+        <argsstring>($analysis_id)</argsstring>
+        <name>tripal_analysis_get_node</name>
+        <param>
+          <declname>$analysis_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="da/d58/deprecated_1_deprecated000116"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Restructured API to make naming more readable and consistent. Function was deprecated in Tripal 2.0 and will be removed 2 releases from now. This function has been replaced by <ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab236e8ac698285cdf4831b53b32f108f" kindref="member">tripal_get_analysis()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab236e8ac698285cdf4831b53b32f108f" kindref="member">tripal_get_analysis()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" line="184" column="1" bodyfile="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" bodystart="184" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a11613083a44eae644167e9a4634a6014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_analysis_get_property</definition>
+        <argsstring>($analysis_id, $property, $cv_name=&apos;tripal&apos;)</argsstring>
+        <name>tripal_analysis_get_property</name>
+        <param>
+          <declname>$analysis_id</declname>
+        </param>
+        <param>
+          <declname>$property</declname>
+        </param>
+        <param>
+          <declname>$cv_name</declname>
+          <defval>&apos;tripal&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="da/d58/deprecated_1_deprecated000112"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Restructured API to make naming more readable and consistent. Function was deprecated in Tripal 2.0 and will be removed 2 releases from now. This function has been replaced by <ref refid="d0/d77/group__tripal__chado__prop__api_1gacde5c2d1e12563cfd3614fb51525ae26" kindref="member">chado_get_property()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="d0/d77/group__tripal__chado__prop__api_1gacde5c2d1e12563cfd3614fb51525ae26" kindref="member">chado_get_property()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" line="58" column="1" bodyfile="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" bodystart="58" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ac4a56ebefca31eee14be9be9f98e20b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_analysis_insert_property</definition>
+        <argsstring>($analysis_id, $property, $value, $update_if_present=0, $cv_name=&apos;tripal&apos;)</argsstring>
+        <name>tripal_analysis_insert_property</name>
+        <param>
+          <declname>$analysis_id</declname>
+        </param>
+        <param>
+          <declname>$property</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <param>
+          <declname>$update_if_present</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <declname>$cv_name</declname>
+          <defval>&apos;tripal&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="da/d58/deprecated_1_deprecated000113"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Restructured API to make naming more readable and consistent. Function was deprecated in Tripal 2.0 and will be removed 2 releases from now. This function has been replaced by <ref refid="d0/d77/group__tripal__chado__prop__api_1gad94d6e8d68c949d1ee56b6edfca6ae70" kindref="member">chado_insert_property()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="d0/d77/group__tripal__chado__prop__api_1gad94d6e8d68c949d1ee56b6edfca6ae70" kindref="member">chado_insert_property()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" line="89" column="1" bodyfile="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" bodystart="89" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1aa5a319a24e8cbe096bcf4e6b4cebfeb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_analysis_register_child</definition>
+        <argsstring>($modulename)</argsstring>
+        <name>tripal_analysis_register_child</name>
+        <param>
+          <declname>$modulename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="da/d58/deprecated_1_deprecated000110"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Restructured API to make naming more readable and consistent. Function was deprecated in Tripal 2.0 and will be removed 2 releases from now. This function has been replaced by tripal_register_analysis_child().</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para>tripal_register_analysis_child(). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" line="14" column="1" bodyfile="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" bodystart="14" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ae81e01372cad6c42593c1e5a5ac554ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_analysis_unregister_child</definition>
+        <argsstring>($modulename)</argsstring>
+        <name>tripal_analysis_unregister_child</name>
+        <param>
+          <declname>$modulename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="da/d58/deprecated_1_deprecated000111"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Restructured API to make naming more readable and consistent. Function was deprecated in Tripal 2.0 and will be removed 2 releases from now. This function has been replaced by tripal_unregister_analysis_child().</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para>tripal_unregister_analysis_child(). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" line="36" column="1" bodyfile="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" bodystart="36" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a6bb5247ceef9add504538a4abf1a9d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_analysis_update_property</definition>
+        <argsstring>($analysis_id, $property, $value, $insert_if_missing=0, $cv_name=&apos;tripal&apos;)</argsstring>
+        <name>tripal_analysis_update_property</name>
+        <param>
+          <declname>$analysis_id</declname>
+        </param>
+        <param>
+          <declname>$property</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <param>
+          <declname>$insert_if_missing</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <declname>$cv_name</declname>
+          <defval>&apos;tripal&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="da/d58/deprecated_1_deprecated000114"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Restructured API to make naming more readable and consistent. Function was deprecated in Tripal 2.0 and will be removed 2 releases from now. This function has been replaced by <ref refid="d0/d77/group__tripal__chado__prop__api_1gada0bbda4e093bbb98b0cba1725859985" kindref="member">chado_update_property()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="d0/d77/group__tripal__chado__prop__api_1gada0bbda4e093bbb98b0cba1725859985" kindref="member">chado_update_property()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" line="123" column="1" bodyfile="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc" bodystart="123" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Wrapper functions to provide backwards compatibility for the tripal analysis api </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="14" refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1aa5a319a24e8cbe096bcf4e6b4cebfeb7" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1aa5a319a24e8cbe096bcf4e6b4cebfeb7" kindref="member">tripal_analysis_register_child</ref>($modulename)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_deprecated&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DEPRECATED:<sp/>%old_function<sp/>has<sp/>been<sp/>replaced<sp/>with<sp/>%new_function.<sp/>Please<sp/>update<sp/>your<sp/>code.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%old_function&apos;</highlight><highlight class="normal">=&gt;</highlight><highlight class="stringliteral">&apos;tripal_analysis_register_child&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%new_function&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_register_analysis_child&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tripal_register_analysis_child($modulename);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ae81e01372cad6c42593c1e5a5ac554ff" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ae81e01372cad6c42593c1e5a5ac554ff" kindref="member">tripal_analysis_unregister_child</ref>($modulename)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_deprecated&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DEPRECATED:<sp/>%old_function<sp/>has<sp/>been<sp/>replaced<sp/>with<sp/>%new_function.<sp/>Please<sp/>update<sp/>your<sp/>code.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%old_function&apos;</highlight><highlight class="normal">=&gt;</highlight><highlight class="stringliteral">&apos;tripal_analysis_unregister_child&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%new_function&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_unregister_analysis_child&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tripal_unregister_analysis_child($modulename);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a11613083a44eae644167e9a4634a6014" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a11613083a44eae644167e9a4634a6014" kindref="member">tripal_analysis_get_property</ref>($analysis_id,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,<sp/>$cv_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_deprecated&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DEPRECATED:<sp/>%old_function<sp/>has<sp/>been<sp/>replaced<sp/>with<sp/>%new_function.<sp/>Please<sp/>update<sp/>your<sp/>code.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%old_function&apos;</highlight><highlight class="normal">=&gt;</highlight><highlight class="stringliteral">&apos;tripal_analysis_get_property&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%new_function&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;chado_get_property&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$analysis_id,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_name,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d0/d77/group__tripal__chado__prop__api_1gacde5c2d1e12563cfd3614fb51525ae26" kindref="member">chado_get_property</ref>(<ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref>,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ac4a56ebefca31eee14be9be9f98e20b1" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ac4a56ebefca31eee14be9be9f98e20b1" kindref="member">tripal_analysis_insert_property</ref>($analysis_id,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,<sp/>$value,<sp/>$update_if_present<sp/>=<sp/>0,<sp/>$cv_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_deprecated&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DEPRECATED:<sp/>%old_function<sp/>has<sp/>been<sp/>replaced<sp/>with<sp/>%new_function.<sp/>Please<sp/>update<sp/>your<sp/>code.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%old_function&apos;</highlight><highlight class="normal">=&gt;</highlight><highlight class="stringliteral">&apos;tripal_analysis_insert_property&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%new_function&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;chado_insert_property&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$analysis_id,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_name,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$value,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;update_if_present&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$update_if_present,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d0/d77/group__tripal__chado__prop__api_1gad94d6e8d68c949d1ee56b6edfca6ae70" kindref="member">chado_insert_property</ref>(<ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref>,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a6bb5247ceef9add504538a4abf1a9d4f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a6bb5247ceef9add504538a4abf1a9d4f" kindref="member">tripal_analysis_update_property</ref>($analysis_id,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,<sp/>$value,<sp/>$insert_if_missing<sp/>=<sp/>0,<sp/>$cv_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_deprecated&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DEPRECATED:<sp/>%old_function<sp/>has<sp/>been<sp/>replaced<sp/>with<sp/>%new_function.<sp/>Please<sp/>update<sp/>your<sp/>code.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%old_function&apos;</highlight><highlight class="normal">=&gt;</highlight><highlight class="stringliteral">&apos;tripal_analysis_update_property&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%new_function&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;chado_update_property&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$analysis_id,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_name,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$value,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;insert_if_missing&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$insert_if_missing,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d0/d77/group__tripal__chado__prop__api_1gada0bbda4e093bbb98b0cba1725859985" kindref="member">chado_update_property</ref>(<ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref>,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ac48165c964358440360cb281c98de93f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1ac48165c964358440360cb281c98de93f" kindref="member">tripal_analysis_delete_property</ref>($analysis_id,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,<sp/>$cv_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;tripal&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_deprecated&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DEPRECATED:<sp/>%old_function<sp/>has<sp/>been<sp/>replaced<sp/>with<sp/>%new_function.<sp/>Please<sp/>update<sp/>your<sp/>code.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%old_function&apos;</highlight><highlight class="normal">=&gt;</highlight><highlight class="stringliteral">&apos;tripal_analysis_delete_property&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%new_function&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;chado_delete_property&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$analysis_id,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$cv_name,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d0/d77/group__tripal__chado__prop__api_1ga6307644a082f6d6c8a8b1269c2cb5e44" kindref="member">chado_delete_property</ref>(<ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref>,<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a8c8ef55875c2f7f533dc80b9b08faf37" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc_1a8c8ef55875c2f7f533dc80b9b08faf37" kindref="member">tripal_analysis_get_node</ref>($analysis_id)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tripal_deprecated&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;DEPRECATED:<sp/>%old_function<sp/>has<sp/>been<sp/>replaced<sp/>with<sp/>%new_function.<sp/>Please<sp/>update<sp/>your<sp/>code.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%old_function&apos;</highlight><highlight class="normal">=&gt;</highlight><highlight class="stringliteral">&apos;tripal_analysis_get_node&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%new_function&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_get_analysis&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab236e8ac698285cdf4831b53b32f108f" kindref="member">tripal_get_analysis</ref>(array(</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$analysis_id));</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_analysis/api/tripal_analysis.DEPRECATED.inc"/>
+  </compounddef>
+</doxygen>

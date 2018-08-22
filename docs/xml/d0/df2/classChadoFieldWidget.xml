@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/df2/classChadoFieldWidget" kind="class" language="PHP" prot="public">
+    <compoundname>ChadoFieldWidget</compoundname>
+    <basecompoundref refid="db/d4c/classTripalFieldWidget" prot="public" virt="non-virtual">TripalFieldWidget</basecompoundref>
+    <derivedcompoundref refid="da/da6/classchado__linker____contact__widget" prot="public" virt="non-virtual">chado_linker__contact_widget</derivedcompoundref>
+    <derivedcompoundref refid="df/d9b/classchado__linker____prop__widget" prot="public" virt="non-virtual">chado_linker__prop_widget</derivedcompoundref>
+    <derivedcompoundref refid="dd/dde/classdata____accession__widget" prot="public" virt="non-virtual">data__accession_widget</derivedcompoundref>
+    <derivedcompoundref refid="de/d3d/classdata____protein__sequence__widget" prot="public" virt="non-virtual">data__protein_sequence_widget</derivedcompoundref>
+    <derivedcompoundref refid="dc/d89/classdata____sequence__checksum__widget" prot="public" virt="non-virtual">data__sequence_checksum_widget</derivedcompoundref>
+    <derivedcompoundref refid="d2/dea/classdata____sequence__coordinates__widget" prot="public" virt="non-virtual">data__sequence_coordinates_widget</derivedcompoundref>
+    <derivedcompoundref refid="da/d6a/classdata____sequence__length__widget" prot="public" virt="non-virtual">data__sequence_length_widget</derivedcompoundref>
+    <derivedcompoundref refid="d9/d7f/classdata____sequence__widget" prot="public" virt="non-virtual">data__sequence_widget</derivedcompoundref>
+    <derivedcompoundref refid="dd/df0/classefo____array__design__widget" prot="public" virt="non-virtual">efo__array_design_widget</derivedcompoundref>
+    <derivedcompoundref refid="de/d79/classgo____gene__expression__widget" prot="public" virt="non-virtual">go__gene_expression_widget</derivedcompoundref>
+    <derivedcompoundref refid="da/dd9/classlocal____contact__widget" prot="public" virt="non-virtual">local__contact_widget</derivedcompoundref>
+    <derivedcompoundref refid="d3/dd1/classlocal____source__data__widget" prot="public" virt="non-virtual">local__source_data_widget</derivedcompoundref>
+    <derivedcompoundref refid="d8/dd2/classobi____organism__widget" prot="public" virt="non-virtual">obi__organism_widget</derivedcompoundref>
+    <derivedcompoundref refid="d7/db2/classogi____location__on__map__widget" prot="public" virt="non-virtual">ogi__location_on_map_widget</derivedcompoundref>
+    <derivedcompoundref refid="d3/d82/classoperation____analysis__widget" prot="public" virt="non-virtual">operation__analysis_widget</derivedcompoundref>
+    <derivedcompoundref refid="dd/db2/classoperation____phylotree__vis__widget" prot="public" virt="non-virtual">operation__phylotree_vis_widget</derivedcompoundref>
+    <derivedcompoundref refid="d3/dca/classsbo____database__cross__reference__widget" prot="public" virt="non-virtual">sbo__database_cross_reference_widget</derivedcompoundref>
+    <derivedcompoundref refid="d5/da4/classsbo____phenotype__widget" prot="public" virt="non-virtual">sbo__phenotype_widget</derivedcompoundref>
+    <derivedcompoundref refid="d2/da7/classsbo____relationship__widget" prot="public" virt="non-virtual">sbo__relationship_widget</derivedcompoundref>
+    <derivedcompoundref refid="d4/de8/classschema____additional__type__widget" prot="public" virt="non-virtual">schema__additional_type_widget</derivedcompoundref>
+    <derivedcompoundref refid="da/dce/classschema____alternate__name__widget" prot="public" virt="non-virtual">schema__alternate_name_widget</derivedcompoundref>
+    <derivedcompoundref refid="d2/dbd/classschema____publication__widget" prot="public" virt="non-virtual">schema__publication_widget</derivedcompoundref>
+    <derivedcompoundref refid="d5/de4/classsep____protocol__widget" prot="public" virt="non-virtual">sep__protocol_widget</derivedcompoundref>
+    <derivedcompoundref refid="d2/db9/classsio____annotation__widget" prot="public" virt="non-virtual">sio__annotation_widget</derivedcompoundref>
+    <derivedcompoundref refid="da/d27/classsio____references__widget" prot="public" virt="non-virtual">sio__references_widget</derivedcompoundref>
+    <derivedcompoundref refid="d9/d60/classsio____vocabulary__widget" prot="public" virt="non-virtual">sio__vocabulary_widget</derivedcompoundref>
+    <derivedcompoundref refid="d7/d7a/classso____cds__widget" prot="public" virt="non-virtual">so__cds_widget</derivedcompoundref>
+    <derivedcompoundref refid="d5/d28/classso____genotype__widget" prot="public" virt="non-virtual">so__genotype_widget</derivedcompoundref>
+    <derivedcompoundref refid="d9/dda/classso____transcript__widget" prot="public" virt="non-virtual">so__transcript_widget</derivedcompoundref>
+    <derivedcompoundref refid="d1/df6/classtaxrank____infraspecific__taxon__widget" prot="public" virt="non-virtual">taxrank__infraspecific_taxon_widget</derivedcompoundref>
+    <derivedcompoundref refid="d9/d1a/classuo____unit__widget" prot="public" virt="non-virtual">uo__unit_widget</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="137">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="146">
+        <label>efo__array_design_widget</label>
+        <link refid="dd/df0/classefo____array__design__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="142">
+        <label>data__sequence_checksum_widget</label>
+        <link refid="dc/d89/classdata____sequence__checksum__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>chado_linker__prop_widget</label>
+        <link refid="df/d9b/classchado__linker____prop__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>uo__unit_widget</label>
+        <link refid="d9/d1a/classuo____unit__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>sbo__phenotype_widget</label>
+        <link refid="d5/da4/classsbo____phenotype__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>data__sequence_widget</label>
+        <link refid="d9/d7f/classdata____sequence__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>data__sequence_coordinates_widget</label>
+        <link refid="d2/dea/classdata____sequence__coordinates__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>data__protein_sequence_widget</label>
+        <link refid="de/d3d/classdata____protein__sequence__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="154">
+        <label>sbo__database_cross_reference_widget</label>
+        <link refid="d3/dca/classsbo____database__cross__reference__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>operation__analysis_widget</label>
+        <link refid="d3/d82/classoperation____analysis__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>data__accession_widget</label>
+        <link refid="dd/dde/classdata____accession__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>sio__references_widget</label>
+        <link refid="da/d27/classsio____references__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>schema__additional_type_widget</label>
+        <link refid="d4/de8/classschema____additional__type__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="163">
+        <label>sio__vocabulary_widget</label>
+        <link refid="d9/d60/classsio____vocabulary__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>schema__alternate_name_widget</label>
+        <link refid="da/dce/classschema____alternate__name__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>schema__publication_widget</label>
+        <link refid="d2/dbd/classschema____publication__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>operation__phylotree_vis_widget</label>
+        <link refid="dd/db2/classoperation____phylotree__vis__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="137" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>chado_linker__contact_widget</label>
+        <link refid="da/da6/classchado__linker____contact__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="156">
+        <label>sbo__relationship_widget</label>
+        <link refid="d2/da7/classsbo____relationship__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>data__sequence_length_widget</label>
+        <link refid="da/d6a/classdata____sequence__length__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>obi__organism_widget</label>
+        <link refid="d8/dd2/classobi____organism__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>sep__protocol_widget</label>
+        <link refid="d5/de4/classsep____protocol__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="164">
+        <label>so__cds_widget</label>
+        <link refid="d7/d7a/classso____cds__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>so__genotype_widget</label>
+        <link refid="d5/d28/classso____genotype__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>local__source_data_widget</label>
+        <link refid="d3/dd1/classlocal____source__data__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>so__transcript_widget</label>
+        <link refid="d9/dda/classso____transcript__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>taxrank__infraspecific_taxon_widget</label>
+        <link refid="d1/df6/classtaxrank____infraspecific__taxon__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="161">
+        <label>sio__annotation_widget</label>
+        <link refid="d2/db9/classsio____annotation__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>local__contact_widget</label>
+        <link refid="da/dd9/classlocal____contact__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>ogi__location_on_map_widget</label>
+        <link refid="d7/db2/classogi____location__on__map__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>go__gene_expression_widget</label>
+        <link refid="de/d79/classgo____gene__expression__widget"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="170">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="169">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="170" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/ChadoFieldWidget.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/ChadoFieldWidget.inc" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+      <member refid="db/d4c/classTripalFieldWidget_1a00d706009dc93fe3fab9c501ce9de090" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>$default_label</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1abce38c5b76dc1a27ffacca0736d9114a" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>__construct</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>info</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>theme</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>ChadoFieldWidget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

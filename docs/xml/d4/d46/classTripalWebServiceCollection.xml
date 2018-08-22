@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d46/classTripalWebServiceCollection" kind="class" language="PHP" prot="public">
+    <compoundname>TripalWebServiceCollection</compoundname>
+    <basecompoundref refid="d7/df0/classTripalWebServiceResource" prot="public" virt="non-virtual">TripalWebServiceResource</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d4/d46/classTripalWebServiceCollection_1a14f0707accd2de73369c1dcf7fb8cf3e" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceCollection::$doPaging</definition>
+        <argsstring></argsstring>
+        <name>$doPaging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set to TRUE if paging should be enabled. Paging is disabled by default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="14" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d46/classTripalWebServiceCollection_1ab1a38c3e956da3625c4bcddc7fdd748a" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceCollection::$itemsPerPage</definition>
+        <argsstring></argsstring>
+        <name>$itemsPerPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When the collection contains more than the itemsPerpage amount then the results will be paged. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="27" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d46/classTripalWebServiceCollection_1ab4f91f94159c514a0b4c8a69a2a9c671" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceCollection::$members</definition>
+        <argsstring></argsstring>
+        <name>$members</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the data portion of the JSON-LD response if this resource is a collection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="9" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d46/classTripalWebServiceCollection_1a81fb2d5139278792aa79fac2a63cde28" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceCollection::$page</definition>
+        <argsstring></argsstring>
+        <name>$page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current page of the pager. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="32" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d46/classTripalWebServiceCollection_1aa0abeb87297de61c5ccb8abbbd261235" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceCollection::$params</definition>
+        <argsstring></argsstring>
+        <name>$params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The parameters as collected by the parent <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref>. We need the parameters because this Resource generates first, next, prev, and last links and we need to maintain the parameters a user may have provided in those links. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="41" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d46/classTripalWebServiceCollection_1acc75358a8485c604a3605298214b66d2" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebServiceCollection::$totalItems</definition>
+        <argsstring></argsstring>
+        <name>$totalItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The total number of items. This variable is used if paging is turned on. Otherwise it&apos;s ignored and the total number of items reported by the collection will be the number of elements in the $members array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="21" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d46/classTripalWebServiceCollection_1add5e290ade819186e87d3399b336f2be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceCollection::__construct</definition>
+        <argsstring>($service_path, $params)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$service_path</declname>
+        </param>
+        <param>
+          <declname>$params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype><ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref></parametertype>
+<parametername>$service</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An instance of a <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> or class that extends it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="49" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="49" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d46/classTripalWebServiceCollection_1a45ce6d757c91da4b078922f24543bc1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceCollection::addMember</definition>
+        <argsstring>($member)</argsstring>
+        <name>addMember</name>
+        <param>
+          <declname>$member</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new member to this resource if it is a collection.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$member</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> member whose type is the same as this resource </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="93" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d46/classTripalWebServiceCollection_1a35ba4a5ed6457ff4840fce73888154a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceCollection::getContext</definition>
+        <argsstring>()</argsstring>
+        <name>getContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the data section of the resource.</para><para>The JSON-LD response constists of two sections the &apos;&apos; section and the data section. This function only returns the data section for this resource</para><para><simplesect kind="return"><para>An associative array containing the data section of the response. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="182" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="182" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d46/classTripalWebServiceCollection_1a56876da501990fb8b140bbf74aefd28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceCollection::getData</definition>
+        <argsstring>()</argsstring>
+        <name>getData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the data section of the resource.</para><para>The JSON-LD response constists of two sections the &apos;&apos; section and the data section. This function only returns the data section for this resource</para><para><simplesect kind="return"><para>An associative array containing the data section of the response. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="120" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="120" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d46/classTripalWebServiceCollection_1a5331eedef80327a3b0b56124afa65885" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceCollection::initPager</definition>
+        <argsstring>($totalItems, $itemsPerPage, $page)</argsstring>
+        <name>initPager</name>
+        <param>
+          <declname>$totalItems</declname>
+        </param>
+        <param>
+          <declname>$itemsPerPage</declname>
+        </param>
+        <param>
+          <declname>$page</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the pager.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$totalItems</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of items available. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$itemsPerPage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of items per page. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="79" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d46/classTripalWebServiceCollection_1affa1d0d767186d8724b3afbb06b64608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebServiceCollection::setType</definition>
+        <argsstring>($type)</argsstring>
+        <name>setType</name>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d7/df0/classTripalWebServiceResource_1ac2a5343c571d4ec6b9d124b9ab3db9b9" kindref="member">TripalWebServiceResource::setType()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="104" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="104" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1139">
+        <label>TripalWebServiceCollection</label>
+        <link refid="d4/d46/classTripalWebServiceCollection"/>
+        <childnode refid="1140" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1140">
+        <label>TripalWebServiceResource</label>
+        <link refid="d7/df0/classTripalWebServiceResource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1141">
+        <label>TripalWebServiceCollection</label>
+        <link refid="d4/d46/classTripalWebServiceCollection"/>
+        <childnode refid="1142" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1142">
+        <label>TripalWebServiceResource</label>
+        <link refid="d7/df0/classTripalWebServiceResource"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_ws/includes/TripalWebServiceCollection.inc" line="3" column="1" bodyfile="tripal_ws/includes/TripalWebServiceCollection.inc" bodystart="3" bodyend="195"/>
+    <listofallmembers>
+      <member refid="d7/df0/classTripalWebServiceResource_1af3309c90c7b4d07d0339db935cb72053" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$context</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1afc493c6b7ee3179182a2bcc38d76489f" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$data</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1a14f0707accd2de73369c1dcf7fb8cf3e" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$doPaging</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a8f4882739ef4329a1a21ba75a00e983a" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$id</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1ab1a38c3e956da3625c4bcddc7fdd748a" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$itemsPerPage</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1ab4f91f94159c514a0b4c8a69a2a9c671" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$members</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1a81fb2d5139278792aa79fac2a63cde28" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$page</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1aa0abeb87297de61c5ccb8abbbd261235" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$params</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ad501099f99d16699c20f7cfcf5da1aaa" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$service_path</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1acc75358a8485c604a3605298214b66d2" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$totalItems</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a8d07a6ec2c39a33b43d18521c19a039f" prot="protected" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>$type</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1add5e290ade819186e87d3399b336f2be" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>__construct</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1aba7e5659680caaefceed2e6b418e09f5" prot="public" virt="non-virtual" ambiguityscope="TripalWebServiceResource::"><scope>TripalWebServiceCollection</scope><name>__construct</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1aa55f5bd32a0239fea04524b99ebd31bf" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>addContextItem</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1a45ce6d757c91da4b078922f24543bc1a" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>addMember</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ab2ad2eca20c0f1e8cffd7733e07ae144" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>addProperty</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1a35ba4a5ed6457ff4840fce73888154a1" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>getContext</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1a56876da501990fb8b140bbf74aefd28f" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>getData</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a7eaae7bdf1c29091ca0dc4273c030ac8" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>getID</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ac7fc40d7fb4c54fdf06234b3a49a2455" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>getProperty</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ab06540de2c9a6fbb6747efac33cdd4fe" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>getType</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a8db6125c692f47cea7fbb9180d63071e" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>getURI</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1a5331eedef80327a3b0b56124afa65885" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>initPager</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1ad23c695c728a65cf98890ec80c6c657c" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>removeContextItem</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1a507d20c8be494981507dc8561c3d3d93" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>setContext</name></member>
+      <member refid="d7/df0/classTripalWebServiceResource_1aefb23aca60d63b72bb7ddf5b9e3b1db9" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>setID</name></member>
+      <member refid="d4/d46/classTripalWebServiceCollection_1affa1d0d767186d8724b3afbb06b64608" prot="public" virt="non-virtual"><scope>TripalWebServiceCollection</scope><name>setType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

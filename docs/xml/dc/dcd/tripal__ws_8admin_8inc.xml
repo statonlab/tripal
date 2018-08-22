@@ -1,0 +1,568 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/dcd/tripal__ws_8admin_8inc" kind="file" language="PHP">
+    <compoundname>tripal_ws.admin.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/dcd/tripal__ws_8admin_8inc_1a586fa95fe01ad8250996cd89ee15e4ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_tripal_sites_edit_form</definition>
+        <argsstring>($form, &amp;$form_state, $tripal_site_id=NULL)</argsstring>
+        <name>tripal_ws_tripal_sites_edit_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$tripal_site_id</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide form to add/edit a Tripal site</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.admin.inc" line="66" column="1" bodyfile="tripal_ws/includes/tripal_ws.admin.inc" bodystart="66" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcd/tripal__ws_8admin_8inc_1a3253b7fc5ec749c3b06b73f31ba11f1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_tripal_sites_edit_form_submit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_ws_tripal_sites_edit_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_submit()</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.admin.inc" line="201" column="1" bodyfile="tripal_ws/includes/tripal_ws.admin.inc" bodystart="201" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcd/tripal__ws_8admin_8inc_1a3e5b4ab407d3256c4b489fc3db154094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_tripal_sites_edit_form_validate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_ws_tripal_sites_edit_form_validate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_validate()</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.admin.inc" line="138" column="1" bodyfile="tripal_ws/includes/tripal_ws.admin.inc" bodystart="138" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcd/tripal__ws_8admin_8inc_1a197f7a6f8ff65fe0dac0463cb833ee0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_tripal_sites_form</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_ws_tripal_sites_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide form to store information of other Tripal sites</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.admin.inc" line="8" column="1" bodyfile="tripal_ws/includes/tripal_ws.admin.inc" bodystart="8" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcd/tripal__ws_8admin_8inc_1a09a3ca3a3a807aa28c283b563e942fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_tripal_sites_remove_form</definition>
+        <argsstring>($form, &amp;$form_state, $id=NULL)</argsstring>
+        <name>tripal_ws_tripal_sites_remove_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$id</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_form() Reset term used by semantic web</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$form </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.admin.inc" line="244" column="1" bodyfile="tripal_ws/includes/tripal_ws.admin.inc" bodystart="244" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcd/tripal__ws_8admin_8inc_1a82258429969d597ec8ebc915fd31707e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_tripal_sites_remove_form_submit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_ws_tripal_sites_remove_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_form_submit()</para><para>Submit function for editing the semantic web term</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.admin.inc" line="313" column="1" bodyfile="tripal_ws/includes/tripal_ws.admin.inc" bodystart="313" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/dcd/tripal__ws_8admin_8inc_1a79d079d37274fa7628d9ced09579c660" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_ws_tripal_sites_remove_form_validate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_ws_tripal_sites_remove_form_validate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_form_validate()</para><para>Validate function for resetting the semantic web term</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/tripal_ws.admin.inc" line="294" column="1" bodyfile="tripal_ws/includes/tripal_ws.admin.inc" bodystart="294" bodyend="303"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="8" refid="dc/dcd/tripal__ws_8admin_8inc_1a197f7a6f8ff65fe0dac0463cb833ee0c" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/dcd/tripal__ws_8admin_8inc_1a197f7a6f8ff65fe0dac0463cb833ee0c" kindref="member">tripal_ws_tripal_sites_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>key_exists(</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">,<sp/>$form_state)<sp/>?<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">]<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>$tripal_site<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;tripal_site&apos;</highlight><highlight class="normal">]<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref><sp/>=</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_sites&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Name&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;URL&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Version&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Description&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Action&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($site<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref>-&gt;fetchObject())<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$site-&gt;name,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$site-&gt;url,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$site-&gt;version,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$site-&gt;description,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;data&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>l(</highlight><highlight class="stringliteral">&apos;Edit&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;/admin/tripal/storage/ws/tripal_sites/edit/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$site-&gt;id)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;<sp/>|<sp/>&apos;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l(</highlight><highlight class="stringliteral">&apos;Remove&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;/admin/tripal/storage/ws/tripal_sites/remove/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$site-&gt;id),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;nowrap&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;No<sp/>configured<sp/>Tripal<sp/>site.&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;colspan&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>5));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>$output<sp/>=<sp/>theme_table(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;instructions&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;item&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>following<sp/>is<sp/>a<sp/>list<sp/>of<sp/>remote<sp/>Tripal<sp/>sites<sp/>with<sp/>which</highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>site<sp/>can<sp/>communicate.<sp/>You<sp/>may<sp/>add<sp/>and<sp/>remove<sp/>site<sp/>as<sp/>needed.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$output</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="dc/dcd/tripal__ws_8admin_8inc_1a586fa95fe01ad8250996cd89ee15e4ab" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/dcd/tripal__ws_8admin_8inc_1a586fa95fe01ad8250996cd89ee15e4ab" kindref="member">tripal_ws_tripal_sites_edit_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state,<sp/>$tripal_site_id<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>$id<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>$name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>$url<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>$version<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($tripal_site_id)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>$site<sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_sites&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">,<sp/>$tripal_site_id)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_object($site))<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$id<sp/>=<sp/>$site-&gt;id;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$name<sp/>=<sp/>$site-&gt;name;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$url<sp/>=<sp/>$site-&gt;url;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$version<sp/>=<sp/>$site-&gt;version;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref><sp/>=<sp/>$site-&gt;description;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;tripal_site_info&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;hidden&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$id,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;tripal_site_info&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Name&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Full<sp/>name<sp/>of<sp/>the<sp/>Tripal<sp/>site.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$name,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#required&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;tripal_site_info&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;URL&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>URL<sp/>of<sp/>the<sp/>Tripal<sp/>site,<sp/>including<sp/>the<sp/>&quot;http://&quot;<sp/>or<sp/>&quot;https://&quot;<sp/>followed<sp/>by<sp/>the<sp/>address<sp/>for<sp/>the<sp/>site\&apos;s<sp/>home<sp/>page.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$url,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#required&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;tripal_site_info&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Version&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Web<sp/>services<sp/>version<sp/>used<sp/>by<sp/>the<sp/>Tripal<sp/>site<sp/>(example:<sp/>v0.1)&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$version,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;tripal_site_info&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Description&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textarea&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref>,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;submit_button&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Save&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;save&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;cancel_button&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;button&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Cancel&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;cancel_button&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#limit_validation_errors&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="dc/dcd/tripal__ws_8admin_8inc_1a3e5b4ab407d3256c4b489fc3db154094" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/dcd/tripal__ws_8admin_8inc_1a3e5b4ab407d3256c4b489fc3db154094" kindref="member">tripal_ws_tripal_sites_edit_form_validate</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;clicked_button&apos;</highlight><highlight class="normal">,<sp/>$form_state))<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;clicked_button&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">]<sp/>==</highlight><highlight class="stringliteral">&apos;cancel_button&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_goto(</highlight><highlight class="stringliteral">&apos;/admin/tripal/storage/ws/tripal_sites&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>URL<sp/>does<sp/>not<sp/>already<sp/>exist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;clicked_button&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;#name&apos;</highlight><highlight class="normal">]<sp/>==</highlight><highlight class="stringliteral">&apos;save&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$url<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$version<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$name<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$check_url<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$check_name<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>updating<sp/>a<sp/>record</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$check_url<sp/>=</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_sites&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">,<sp/>$url)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">,<sp/>$version)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">,<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;&lt;&gt;&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchField();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$check_name<sp/>=</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_sites&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/>$name)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">,<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">],<sp/></highlight><highlight class="stringliteral">&apos;&lt;&gt;&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchField();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>inserting<sp/>a<sp/>record</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$check_url<sp/>=</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_sites&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">,<sp/>$url)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">,<sp/>$version)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchField();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$check_name<sp/>=</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_sites&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;ts&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/>$name)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchField();</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($check_url)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>form_set_error(</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">,<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>URL<sp/>and<sp/>version<sp/>is<sp/>used<sp/>by<sp/>another<sp/>site.&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>form_set_error(</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($check_name)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>form_set_error(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>name<sp/>is<sp/>used<sp/>by<sp/>another<sp/>site.&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="dc/dcd/tripal__ws_8admin_8inc_1a3253b7fc5ec749c3b06b73f31ba11f1d" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/dcd/tripal__ws_8admin_8inc_1a3253b7fc5ec749c3b06b73f31ba11f1d" kindref="member">tripal_ws_tripal_sites_edit_form_submit</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>$id<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>$name<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>$url<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>$version<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref><sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>there<sp/>is<sp/>an<sp/>&apos;id&apos;<sp/>do<sp/>an<sp/>update,<sp/>otherwise<sp/>do<sp/>an<sp/>insert</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($id)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>db_update(</highlight><highlight class="stringliteral">&apos;tripal_sites&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;fields(array(</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$name,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$url,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$version,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="de/d47/tripal__project__base_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>))</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">,<sp/>$id)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;execute();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&apos;Tripal<sp/>site<sp/>\&apos;&apos;</highlight><highlight class="normal"><sp/>.<sp/>$name<sp/>.<sp/></highlight><highlight class="charliteral">&apos;\&apos;</highlight><highlight class="normal"><sp/>has<sp/>been<sp/>updated.</highlight><highlight class="stringliteral">&apos;));</highlight></codeline>
+<codeline lineno="219"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="stringliteral"><sp/><sp/>else<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>db_insert(&apos;</highlight><highlight class="normal">tripal_sites</highlight><highlight class="stringliteral">&apos;)</highlight></codeline>
+<codeline lineno="222"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(array(</highlight></codeline>
+<codeline lineno="223"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">name</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>$name,</highlight></codeline>
+<codeline lineno="224"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">url</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>$url,</highlight></codeline>
+<codeline lineno="225"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">version</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>$version,</highlight></codeline>
+<codeline lineno="226"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">description</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>$description</highlight></codeline>
+<codeline lineno="227"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>))</highlight></codeline>
+<codeline lineno="228"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute();</highlight></codeline>
+<codeline lineno="229"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>drupal_set_message(t(&apos;</highlight><highlight class="normal">Tripal<sp/>site<sp/>\</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"><sp/>.<sp/>$name<sp/>.<sp/></highlight><highlight class="charliteral">&apos;\&apos;</highlight><highlight class="normal"><sp/>has<sp/>been<sp/>added.</highlight><highlight class="stringliteral">&apos;));</highlight></codeline>
+<codeline lineno="230"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="stringliteral"><sp/><sp/>drupal_goto(&apos;</highlight><highlight class="normal">/admin/tripal/storage/ws/tripal_sites</highlight><highlight class="stringliteral">&apos;);</highlight></codeline>
+<codeline lineno="232"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="233"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="244" refid="dc/dcd/tripal__ws_8admin_8inc_1a09a3ca3a3a807aa28c283b563e942fe1" refkind="member"><highlight class="stringliteral">function<sp/>tripal_ws_tripal_sites_remove_form($form,<sp/>&amp;$form_state,<sp/>$id<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="stringliteral"><sp/><sp/>$name<sp/>=<sp/>&apos;</highlight><highlight class="stringliteral">&apos;;</highlight></codeline>
+<codeline lineno="246"><highlight class="stringliteral"><sp/><sp/>$record_id<sp/>=<sp/>&apos;</highlight><highlight class="stringliteral">&apos;;</highlight></codeline>
+<codeline lineno="247"><highlight class="stringliteral"><sp/><sp/>if<sp/>($id)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>$site<sp/>=<sp/>db_select(&apos;</highlight><highlight class="normal">tripal_sites</highlight><highlight class="stringliteral">&apos;,<sp/>&apos;</highlight><highlight class="normal">ts</highlight><highlight class="stringliteral">&apos;)</highlight></codeline>
+<codeline lineno="249"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-&gt;fields(&apos;</highlight><highlight class="normal">ts</highlight><highlight class="stringliteral">&apos;)</highlight></codeline>
+<codeline lineno="250"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-&gt;condition(&apos;</highlight><highlight class="keywordtype">id</highlight><highlight class="stringliteral">&apos;,<sp/>$id)</highlight></codeline>
+<codeline lineno="251"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="252"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="253"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>(is_object($site))<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>$record_id<sp/>=<sp/>$site-&gt;id;</highlight></codeline>
+<codeline lineno="255"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>$name<sp/>=<sp/>$site-&gt;name;</highlight></codeline>
+<codeline lineno="256"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="stringliteral"><sp/><sp/>$form[&apos;</highlight><highlight class="normal">confirmation</highlight><highlight class="stringliteral">&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="259"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#markup</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>&apos;</highlight><highlight class="normal">Really<sp/></highlight><highlight class="keyword">remove</highlight><highlight class="normal"><sp/>the<sp/>\</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"><sp/>.<sp/>$name<sp/>.<sp/></highlight><highlight class="charliteral">&apos;\&apos;</highlight><highlight class="normal"><sp/>Tripal<sp/>site?<sp/></highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="260"><highlight class="stringliteral"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="261"><highlight class="stringliteral"><sp/><sp/>$form[&apos;</highlight><highlight class="normal">tripal_site_id</highlight><highlight class="stringliteral">&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="262"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#type</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>&apos;</highlight><highlight class="normal">value</highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="263"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#value</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>$record_id</highlight></codeline>
+<codeline lineno="264"><highlight class="stringliteral"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="265"><highlight class="stringliteral"><sp/><sp/>$form[&apos;</highlight><highlight class="normal">tripal_site_name</highlight><highlight class="stringliteral">&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="266"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#type</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>&apos;</highlight><highlight class="normal">value</highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="267"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#value</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>$name</highlight></codeline>
+<codeline lineno="268"><highlight class="stringliteral"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="269"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="270"><highlight class="stringliteral"><sp/><sp/>$form[&apos;</highlight><highlight class="normal">submit_button</highlight><highlight class="stringliteral">&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="271"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#type</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>&apos;</highlight><highlight class="normal">submit</highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="272"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#value</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>t(&apos;</highlight><highlight class="normal">Remove</highlight><highlight class="stringliteral">&apos;),</highlight></codeline>
+<codeline lineno="273"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#name</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>&apos;</highlight><highlight class="keyword">remove</highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="274"><highlight class="stringliteral"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="275"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="276"><highlight class="stringliteral"><sp/><sp/>$form[&apos;</highlight><highlight class="normal">cancel_button</highlight><highlight class="stringliteral">&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="277"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#type</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>&apos;</highlight><highlight class="normal">button</highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="278"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#value</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>t(&apos;</highlight><highlight class="normal">Cancel</highlight><highlight class="stringliteral">&apos;),</highlight></codeline>
+<codeline lineno="279"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#name</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>&apos;</highlight><highlight class="normal">cancel_button</highlight><highlight class="stringliteral">&apos;,</highlight></codeline>
+<codeline lineno="280"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="normal">#limit_validation_errors</highlight><highlight class="stringliteral">&apos;<sp/>=&gt;<sp/>array()</highlight></codeline>
+<codeline lineno="281"><highlight class="stringliteral"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="282"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="283"><highlight class="stringliteral"><sp/><sp/>return<sp/>$form;</highlight></codeline>
+<codeline lineno="284"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="285"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="294" refid="dc/dcd/tripal__ws_8admin_8inc_1a79d079d37274fa7628d9ced09579c660" refkind="member"><highlight class="stringliteral">function<sp/>tripal_ws_tripal_sites_remove_form_validate($form,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="stringliteral"><sp/><sp/>if<sp/>(array_key_exists(&apos;</highlight><highlight class="normal">clicked_button</highlight><highlight class="stringliteral">&apos;,<sp/>$form_state))<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>if<sp/>($form_state[&apos;</highlight><highlight class="normal">clicked_button</highlight><highlight class="stringliteral">&apos;][&apos;</highlight><highlight class="normal">#name</highlight><highlight class="stringliteral">&apos;]<sp/>==&apos;</highlight><highlight class="normal">cancel_button</highlight><highlight class="stringliteral">&apos;)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_goto(&apos;</highlight><highlight class="normal">/admin/tripal/storage/ws/tripal_sites</highlight><highlight class="stringliteral">&apos;);</highlight></codeline>
+<codeline lineno="298"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(!$form_state[&apos;</highlight><highlight class="normal">values</highlight><highlight class="stringliteral">&apos;][&apos;</highlight><highlight class="normal">tripal_site_id</highlight><highlight class="stringliteral">&apos;])<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_set_message(t(&apos;</highlight><highlight class="normal">Invalid<sp/>Tripal<sp/>site<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="stringliteral">&apos;),<sp/>&apos;</highlight><highlight class="normal">error</highlight><highlight class="stringliteral">&apos;);</highlight></codeline>
+<codeline lineno="301"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="304"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="313" refid="dc/dcd/tripal__ws_8admin_8inc_1a82258429969d597ec8ebc915fd31707e" refkind="member"><highlight class="stringliteral">function<sp/>tripal_ws_tripal_sites_remove_form_submit($form,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="stringliteral"><sp/><sp/>$id<sp/>=<sp/>$form_state[&apos;</highlight><highlight class="normal">values</highlight><highlight class="stringliteral">&apos;][&apos;</highlight><highlight class="normal">tripal_site_id</highlight><highlight class="stringliteral">&apos;];</highlight></codeline>
+<codeline lineno="315"><highlight class="stringliteral"><sp/><sp/>$name<sp/>=<sp/>$form_state[&apos;</highlight><highlight class="normal">values</highlight><highlight class="stringliteral">&apos;][&apos;</highlight><highlight class="normal">tripal_site_name</highlight><highlight class="stringliteral">&apos;];</highlight></codeline>
+<codeline lineno="316"><highlight class="stringliteral"><sp/><sp/>if<sp/>($id)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>db_delete(&apos;</highlight><highlight class="normal">tripal_sites</highlight><highlight class="stringliteral">&apos;)</highlight></codeline>
+<codeline lineno="318"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(&apos;</highlight><highlight class="keywordtype">id</highlight><highlight class="stringliteral">&apos;,<sp/>$id)</highlight></codeline>
+<codeline lineno="319"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute();</highlight></codeline>
+<codeline lineno="320"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>drupal_set_message(&apos;</highlight><highlight class="normal">The<sp/>Tripal<sp/>site<sp/>\</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"><sp/>.$name<sp/>.<sp/></highlight><highlight class="charliteral">&apos;\&apos;</highlight><highlight class="normal"><sp/>has<sp/>been<sp/>removed.</highlight><highlight class="stringliteral">&apos;);</highlight></codeline>
+<codeline lineno="321"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="stringliteral"><sp/><sp/>drupal_goto(&apos;</highlight><highlight class="normal">/admin/tripal/storage/ws/tripal_sites</highlight><highlight class="stringliteral">&apos;);</highlight></codeline>
+<codeline lineno="323"><highlight class="stringliteral">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_ws/includes/tripal_ws.admin.inc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a217d489db5c72fab34a5ad81c7834de" kind="dir">
+    <compoundname>tripal_chado_views/views/handlers</compoundname>
+    <innerfile refid="da/d4f/tripal__views__handler__area__action__links_8inc">tripal_views_handler_area_action_links.inc</innerfile>
+    <innerfile refid="de/d27/tripal__views__handler__field__sequence_8inc">tripal_views_handler_field_sequence.inc</innerfile>
+    <innerfile refid="dd/d24/tripal__views__handler__filter__file__upload_8inc">tripal_views_handler_filter_file_upload.inc</innerfile>
+    <innerfile refid="d6/db9/tripal__views__handler__filter__no__results_8inc">tripal_views_handler_filter_no_results.inc</innerfile>
+    <innerfile refid="d1/d82/tripal__views__handler__filter__select__cvterm_8inc">tripal_views_handler_filter_select_cvterm.inc</innerfile>
+    <innerfile refid="dd/db8/tripal__views__handler__filter__select__id_8inc">tripal_views_handler_filter_select_id.inc</innerfile>
+    <innerfile refid="df/d52/chado__views_2views_2handlers_2tripal__views__handler__filter__select__string_8inc">tripal_views_handler_filter_select_string.inc</innerfile>
+    <innerfile refid="de/d8b/tripal__views__handler__filter__sequence_8inc">tripal_views_handler_filter_sequence.inc</innerfile>
+    <innerfile refid="d5/def/tripal__views__handler__filter__textarea_8inc">tripal_views_handler_filter_textarea.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado_views/views/handlers/"/>
+  </compounddef>
+</doxygen>

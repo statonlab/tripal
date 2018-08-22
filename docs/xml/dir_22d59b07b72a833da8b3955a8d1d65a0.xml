@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_22d59b07b72a833da8b3955a8d1d65a0" kind="dir">
+    <compoundname>legacy/tripal_project/theme/templates</compoundname>
+    <innerfile refid="de/d47/tripal__project__base_8tpl_8php">tripal_project_base.tpl.php</innerfile>
+    <innerfile refid="df/ddd/tripal__project__contact_8tpl_8php">tripal_project_contact.tpl.php</innerfile>
+    <innerfile refid="da/dbe/tripal__project__help_8tpl_8php">tripal_project_help.tpl.php</innerfile>
+    <innerfile refid="d9/ded/tripal__project__properties_8tpl_8php">tripal_project_properties.tpl.php</innerfile>
+    <innerfile refid="da/db5/tripal__project__publications_8tpl_8php">tripal_project_publications.tpl.php</innerfile>
+    <innerfile refid="d4/d1c/tripal__project__relationships_8tpl_8php">tripal_project_relationships.tpl.php</innerfile>
+    <innerfile refid="d7/d77/tripal__project__teaser_8tpl_8php">tripal_project_teaser.tpl.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_project/theme/templates/"/>
+  </compounddef>
+</doxygen>

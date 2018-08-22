@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_7749818c30096625589e3476db3cdc10" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/local__contact</compoundname>
+    <innerfile refid="dd/db2/local____contact_8inc">local__contact.inc</innerfile>
+    <innerfile refid="d0/d12/local____contact__formatter_8inc">local__contact_formatter.inc</innerfile>
+    <innerfile refid="d6/db4/local____contact__widget_8inc">local__contact_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/local__contact/"/>
+  </compounddef>
+</doxygen>

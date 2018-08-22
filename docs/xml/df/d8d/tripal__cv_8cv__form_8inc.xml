@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/d8d/tripal__cv_8cv__form_8inc" kind="file" language="PHP">
+    <compoundname>tripal_cv.cv_form.inc</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides a form for creating &amp; editing chado controlled vocabularies </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_cv/includes/tripal_cv.cv_form.inc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d3f/group__tripal__custom__tables__api" kind="group">
+    <compoundname>tripal_custom_tables_api</compoundname>
+    <title>Chado Custom Tables</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/d3f/group__tripal__custom__tables__api_1ga1f231a83ef5b725d87965df25ec42283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_create_custom_table</definition>
+        <argsstring>($table, $schema, $skip_if_exists=TRUE, $mview_id=NULL, $redirect=TRUE)</argsstring>
+        <name>chado_create_custom_table</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$schema</declname>
+        </param>
+        <param>
+          <declname>$skip_if_exists</declname>
+          <defval>TRUE</defval>
+        </param>
+        <param>
+          <declname>$mview_id</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$redirect</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new table to the Chado schema.</para><para>This function is simply a wrapper for the db_create_table() function of Drupal, but ensures the table is created inside the Chado schema rather than the Drupal schema. If the table already exists then it will be dropped and recreated using the schema provided. However, it will only drop a table if it exsits in the tripal_custom_tables table. This way the function cannot be used to accidentally alter existing non custom tables. If $skip_if_exists is set then the table is simply added to the tripal_custom_tables and no table is created in Chado.</para><para>If you are creating a materialized view do not use this function, but rather use the <ref refid="d0/de5/group__tripal__mviews__api_1ga6df34f1c008e4269f179d8d2e51ef650" kindref="member">chado_add_mview()</ref>. A materialized view is also considered a custom table and an entry for it will be added to both the tripal_mviews and tripal_custom_tables tables, but only if the <ref refid="d0/de5/group__tripal__mviews__api_1ga6df34f1c008e4269f179d8d2e51ef650" kindref="member">chado_add_mview()</ref> function is used. The optional $mview_id parameters in this function is intended for use by the <ref refid="d0/de5/group__tripal__mviews__api_1ga6df34f1c008e4269f179d8d2e51ef650" kindref="member">chado_add_mview()</ref> function when it calls this function to create the table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to create. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$schema</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A Drupal-style Schema API definition of the table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$skip_if_exists</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set as TRUE to skip dropping and re-creation of the table if it already exists. This is useful if the table was already created through another means and you simply want to make Tripal aware of the table schema. If the table does not exist it will be created. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$mview_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional. If this custom table is also a materialized view then provide it&apos;s mview_id. This paramter is intended only when this function is called by the <ref refid="d0/de5/group__tripal__mviews__api_1ga6df34f1c008e4269f179d8d2e51ef650" kindref="member">chado_add_mview()</ref> function. When creating a custom table you shouldn&apos;t need to use this parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$redirect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional (default: TRUE). By default this function redirects back to admin pages. However, when called by Drush we don&apos;t want to redirect. This parameter allows this to be used as a true API function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE on success, FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.custom_tables.api.inc" line="131" column="1" bodyfile="tripal_chado/api/tripal_chado.custom_tables.api.inc" bodystart="131" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d3f/group__tripal__custom__tables__api_1ga968315cb28d649c528d119be70007db9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_delete_custom_table</definition>
+        <argsstring>($table_id)</argsstring>
+        <name>chado_delete_custom_table</name>
+        <param>
+          <declname>$table_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes the specified custom table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique ID of the custom table for the action to be performed on. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.custom_tables.api.inc" line="367" column="1" bodyfile="tripal_chado/api/tripal_chado.custom_tables.api.inc" bodystart="367" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d3f/group__tripal__custom__tables__api_1ga1a3720b14caf1348cbb817b08042dd53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_edit_custom_table</definition>
+        <argsstring>($table_id, $table_name, $schema, $skip_if_exists=1)</argsstring>
+        <name>chado_edit_custom_table</name>
+        <param>
+          <declname>$table_id</declname>
+        </param>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <param>
+          <declname>$schema</declname>
+        </param>
+        <param>
+          <declname>$skip_if_exists</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Edits a custom table in the chado database. It supports using the Drupal Schema API array.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table_id of the table to edit. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the custom table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$schema</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Use the Schema API array to define the custom table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$skip_if_exists</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set as TRUE to skip dropping and re-creation of the table. This is useful if the table was already created through another means and you simply want to make Tripal aware of the table schema. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.custom_tables.api.inc" line="32" column="1" bodyfile="tripal_chado/api/tripal_chado.custom_tables.api.inc" bodystart="32" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d3f/group__tripal__custom__tables__api_1ga7d64808990d026c8850c9178b1ce653f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_custom_table_id</definition>
+        <argsstring>($table_name)</argsstring>
+        <name>chado_get_custom_table_id</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the custom table id given the name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the custom table.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The unique identifier for the given table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.custom_tables.api.inc" line="323" column="1" bodyfile="tripal_chado/api/tripal_chado.custom_tables.api.inc" bodystart="323" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d3f/group__tripal__custom__tables__api_1gabeba1e119039c237a341e665fa8f9304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_custom_table_names</definition>
+        <argsstring>($include_mview=TRUE)</argsstring>
+        <name>chado_get_custom_table_names</name>
+        <param>
+          <declname>$include_mview</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of custom tables in this site.</para><para><simplesect kind="return"><para>An associative array where the key and value pairs are the table names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.custom_tables.api.inc" line="344" column="1" bodyfile="tripal_chado/api/tripal_chado.custom_tables.api.inc" bodystart="344" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d3f/group__tripal__custom__tables__api_1ga62d7d4f7a7285fd7ab92eabd907fd1a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_validate_custom_table_schema</definition>
+        <argsstring>($schema_array)</argsstring>
+        <name>chado_validate_custom_table_schema</name>
+        <param>
+          <declname>$schema_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is used to validate a Drupal Schema API array prior to passing it ot the chado_create_custom_table_schema(). This function can be used in a form validate function or whenver a schema is provided by a user and needs validation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$schema_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Drupal Schema API compatible array.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An empty string for success or a message string for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.custom_tables.api.inc" line="275" column="1" bodyfile="tripal_chado/api/tripal_chado.custom_tables.api.inc" bodystart="275" bodyend="311"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an API to manage custom tables in Chado. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

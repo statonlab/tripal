@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/df5/tripal__featuremap__help_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_featuremap_help.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d0/df5/tripal__featuremap__help_8tpl_8php_1a89f3390527e7a63d37e174dcdb748dca" prot="public" static="no" mutable="no">
+        <type>print l(&apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_featuremap&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for</type>
+        <definition>print l ( &apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_featuremap&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for creating</definition>
+        <argsstring></argsstring>
+        <name>creating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_featuremap_help.tpl.php" line="12" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_featuremap_help.tpl.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/df5/tripal__featuremap__help_8tpl_8php_1a3026168f41927ce5ca52bb28a37b6531" prot="public" static="no" mutable="no">
+        <type>print l(&apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_featuremap&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for editing and other administrative tasks&lt;/p &gt;&lt;/li &gt;&lt; li &gt;&lt; p &gt;&lt; b &gt; Create a</type>
+        <definition>print l ( &apos;permissions page&apos;, &apos;admin/user/permissions&apos;)?&gt; and set the permissions under the &apos;tripal_featuremap&apos; section as appropriate for your site. For a simple setup allow anonymous users access to view content and create a special role for editing and other administrative tasks&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;b&gt; Create a Map&lt;/b &gt;</definition>
+        <argsstring></argsstring>
+        <name>Map&lt;/b &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_featuremap/theme/templates/tripal_featuremap_help.tpl.php" line="14" column="1" bodyfile="legacy/tripal_featuremap/theme/templates/tripal_featuremap_help.tpl.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;h3&gt;<ref refid="d2/d60/tripal__organism__help_8tpl_8php_1a3a16ad4c29f1655bacb90adeedb740f0" kindref="member">Module</ref><sp/>Description:&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">&lt;p&gt;The<sp/>Tripal<sp/>Map<sp/>module<sp/>is<sp/>an<sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal">for<sp/>the<sp/>Chado<sp/>Map<sp/>module<sp/>which<sp/>groups<sp/>features<sp/>(sequences)<sp/>into<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/>maps<sp/>(typically<sp/>genetic<sp/>maps).</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/>This<sp/>module<sp/>provides<sp/>support<sp/>for<sp/>visualization<sp/>of<sp/>&quot;map&quot;<sp/>pages,<sp/>editing<sp/>and<sp/>updating.</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">&lt;h3&gt;Setup<sp/>Instructions:&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">&lt;ol&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Set<sp/>Permissions&lt;/b&gt;:<sp/>By<sp/>default<sp/>only<sp/>the<sp/>site<sp/>administrator<sp/>account<sp/>has<sp/>access<sp/>to<sp/>create,<sp/>edit,<sp/>delete</highlight></codeline>
+<codeline lineno="10" refid="d0/df5/tripal__featuremap__help_8tpl_8php_1a3026168f41927ce5ca52bb28a37b6531" refkind="member"><highlight class="normal"><sp/><sp/><sp/>or<sp/>administer<sp/>maps.<sp/>Navigate<sp/>to<sp/>the<sp/>&lt;?php<sp/>print<sp/>l(&apos;permissions<sp/>page&apos;,<sp/>&apos;admin/user/permissions&apos;)?&gt;<sp/>and<sp/>set<sp/>the</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>permissions<sp/>under<sp/>the<sp/>&apos;tripal_featuremap&apos;<sp/>section<sp/>as<sp/>appropriate<sp/>for<sp/>your<sp/>site.<sp/>For<sp/>a<sp/>simple<sp/>setup,<sp/>allow<sp/>anonymous<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/>users<sp/>access<sp/>to<sp/>view<sp/>content<sp/>and<sp/>create<sp/>a<sp/>special<sp/>role<sp/>for<sp/><ref refid="d0/df5/tripal__featuremap__help_8tpl_8php_1a89f3390527e7a63d37e174dcdb748dca" kindref="member">creating</ref>,<sp/>editing<sp/>and<sp/>other<sp/>administrative<sp/>tasks.&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Create<sp/>a<sp/>Map&lt;/b&gt;:<sp/><sp/>An<sp/>map<sp/>(called<sp/>a<sp/>feature<sp/>map<sp/>in<sp/>Chado)<sp/>can<sp/>be<sp/>&lt;?php<sp/>print<sp/>l(&apos;created&apos;,<sp/>&apos;node/add/chado-featuremap&apos;)?&gt;<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/>manually<sp/>in<sp/>the<sp/>same<sp/>way<sp/>any<sp/>other<sp/>data<sp/>type.<sp/><sp/>There<sp/>is<sp/>no<sp/>loader<sp/>for<sp/>loading<sp/>large<sp/>files<sp/>of<sp/>map<sp/>information<sp/>including</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/>features<sp/>that<sp/>may<sp/>be<sp/>associated<sp/>with<sp/>these<sp/>maps<sp/>(e.g.<sp/>genetic<sp/>markers).<sp/><sp/>The<sp/>Tripal<sp/>bulk<sp/>loader<sp/>is<sp/>the<sp/>only<sp/>way</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/>to<sp/>load<sp/>this<sp/>type<sp/>of<sp/>data.&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Sync<sp/>any<sp/>Existing<sp/>Maps&lt;/b&gt;:<sp/>Before<sp/>Maps<sp/>can<sp/>be<sp/>viewed<sp/>on<sp/>the<sp/>website,<sp/>they<sp/>must<sp/>first<sp/>be<sp/>&lt;?php<sp/>print<sp/>l(&apos;created<sp/>manually&apos;,<sp/>&apos;node/add/chado-featuremap&apos;)<sp/><sp/>?&gt;<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>or<sp/>if<sp/>they<sp/>already<sp/>exist<sp/>in<sp/>the<sp/>Chado<sp/>database<sp/>they<sp/>must<sp/>be<sp/>synced.<sp/>Near<sp/>the<sp/>top<sp/>of<sp/>the<sp/>&lt;?php<sp/>print<sp/>l(&apos;Map<sp/>Configuration<sp/>page&apos;,<sp/>&apos;admin/tripal/tripal_featuremap/configuration&apos;)<sp/>?&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>there<sp/>is</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>Sync<sp/>Maps<sp/>section<sp/>which<sp/>provides<sp/>list<sp/>of<sp/>maps<sp/>currently<sp/>in<sp/>chado<sp/>which<sp/>can<sp/>be<sp/>sync\&apos;d.</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Simply<sp/>select<sp/>the<sp/>maps<sp/>you<sp/>would<sp/>like<sp/>to<sp/>create<sp/>Drupal/Tripal<sp/>pages<sp/>for<sp/>and<sp/>click<sp/>Sync<sp/>Maps.<sp/>Once<sp/>synced,<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pages<sp/>will<sp/>appear<sp/>on<sp/>the<sp/>site<sp/>for<sp/>maps.&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">&lt;/ol&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">&lt;h3&gt;Features<sp/>of<sp/>this<sp/><ref refid="d2/d60/tripal__organism__help_8tpl_8php_1a3a16ad4c29f1655bacb90adeedb740f0" kindref="member">Module</ref>:&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">&lt;ul&gt;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Edit<sp/>or<sp/>Delete<sp/>Maps&lt;/b&gt;:<sp/>Maps<sp/>can<sp/>be<sp/>manually<sp/>edited<sp/>or<sp/>deleted<sp/>by<sp/>navigating<sp/>to<sp/>the<sp/>map<sp/>page<sp/>and<sp/>clicking<sp/>the<sp/>&quot;Edit&quot;<sp/>button.&lt;/p&gt;&lt;/li&gt;<sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;p&gt;&lt;b&gt;Simple<sp/>Search<sp/>Tool&lt;/b&gt;:<sp/>A<sp/>&lt;?php<sp/>print<sp/>l(&apos;simple<sp/>search<sp/>tool&apos;,&apos;chado/featuremaps&apos;)<sp/>?&gt;<sp/>is<sp/>provided<sp/>for<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>finding<sp/>maps.<sp/>This<sp/>tool<sp/>relies<sp/>on<sp/>Drupal<sp/>Views.<sp/><sp/>&lt;a<sp/>href=&quot;http:</highlight><highlight class="comment">//drupal.org/project/views&quot;&gt;Drupal<sp/>Views&lt;/a&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>which<sp/>must<sp/>be<sp/>installed<sp/>to<sp/>see<sp/>the<sp/>search<sp/>tool.<sp/><sp/>Look<sp/>for<sp/>it<sp/>in<sp/>the<sp/>navigation<sp/>menu<sp/>under<sp/>the<sp/>item<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;Search<sp/>Data&quot;.<sp/>&lt;/p&gt;&lt;/li&gt;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">&lt;/ul&gt;</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_featuremap/theme/templates/tripal_featuremap_help.tpl.php"/>
+  </compounddef>
+</doxygen>

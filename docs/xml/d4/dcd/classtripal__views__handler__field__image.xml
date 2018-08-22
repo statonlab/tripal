@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/dcd/classtripal__views__handler__field__image" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_field_image</compoundname>
+    <basecompoundref refid="d9/d4d/classtripal__views__handler__field" prot="public" virt="non-virtual">tripal_views_handler_field</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/dcd/classtripal__views__handler__field__image_1ace2e05ffba551c7b426363376225ab9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_image::option_definition</definition>
+        <argsstring>()</argsstring>
+        <name>option_definition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overrides <ref refid="d4/dcd/classtripal__views__handler__field__image_1ace2e05ffba551c7b426363376225ab9f" kindref="member">option_definition()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_image.inc" line="15" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_image.inc" bodystart="15" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcd/classtripal__views__handler__field__image_1a235698b41c95d28ac5f380e5a7c7742c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_image::options_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>options_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overrides <ref refid="d4/dcd/classtripal__views__handler__field__image_1a235698b41c95d28ac5f380e5a7c7742c" kindref="member">options_form()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_image.inc" line="26" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_image.inc" bodystart="26" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/dcd/classtripal__views__handler__field__image_1a35b7a1eb1bccb19e27dbb8f1256e6971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_image::render</definition>
+        <argsstring>($values)</argsstring>
+        <name>render</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Render the field.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The values retrieved from the database. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_image.inc" line="49" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_image.inc" bodystart="49" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Views field handler for basic TripalFields fields. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="803">
+        <label>tripal_views_handler_field</label>
+        <link refid="d9/d4d/classtripal__views__handler__field"/>
+        <childnode refid="804" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="802">
+        <label>tripal_views_handler_field_image</label>
+        <link refid="d4/dcd/classtripal__views__handler__field__image"/>
+        <childnode refid="803" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="804">
+        <label>views_handler_field</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="806">
+        <label>tripal_views_handler_field</label>
+        <link refid="d9/d4d/classtripal__views__handler__field"/>
+        <childnode refid="807" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="805">
+        <label>tripal_views_handler_field_image</label>
+        <link refid="d4/dcd/classtripal__views__handler__field__image"/>
+        <childnode refid="806" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="807">
+        <label>views_handler_field</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/views_handlers/tripal_views_handler_field_image.inc" line="10" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_image.inc" bodystart="10" bodyend="71"/>
+    <listofallmembers>
+      <member refid="d9/d4d/classtripal__views__handler__field_1ad28a43fccf570d56b9157ef408a56d58" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_image</scope><name>click_sort</name></member>
+      <member refid="d9/d4d/classtripal__views__handler__field_1a634bd357faf60116a20e1b07c6dc69a9" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_image</scope><name>get_value</name></member>
+      <member refid="d4/dcd/classtripal__views__handler__field__image_1ace2e05ffba551c7b426363376225ab9f" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_image</scope><name>option_definition</name></member>
+      <member refid="d4/dcd/classtripal__views__handler__field__image_1a235698b41c95d28ac5f380e5a7c7742c" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_image</scope><name>options_form</name></member>
+      <member refid="d9/d4d/classtripal__views__handler__field_1aff549f7ac26a78e625722bc95f3e2ce8" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_image</scope><name>query</name></member>
+      <member refid="d4/dcd/classtripal__views__handler__field__image_1a35b7a1eb1bccb19e27dbb8f1256e6971" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_image</scope><name>render</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

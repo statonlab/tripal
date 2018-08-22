@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_170609422e84fed770e9ed2c22d016db" kind="dir">
+    <compoundname>tripal_bulk_loader/includes</compoundname>
+    <innerfile refid="da/d61/tripal__bulk__loader_8admin_8inc">tripal_bulk_loader.admin.inc</innerfile>
+    <innerfile refid="d1/d76/tripal__bulk__loader_8admin_8templates_8inc">tripal_bulk_loader.admin.templates.inc</innerfile>
+    <innerfile refid="d1/d62/tripal__bulk__loader_8chado__node_8inc">tripal_bulk_loader.chado_node.inc</innerfile>
+    <innerfile refid="de/df1/tripal__bulk__loader_8constants_8inc">tripal_bulk_loader.constants.inc</innerfile>
+    <innerfile refid="dd/d2a/tripal__bulk__loader_8loader_8inc">tripal_bulk_loader.loader.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_bulk_loader/includes/"/>
+  </compounddef>
+</doxygen>

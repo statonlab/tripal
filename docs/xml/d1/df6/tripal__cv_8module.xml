@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/df6/tripal__cv_8module" kind="file" language="C++">
+    <compoundname>tripal_cv.module</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@file</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Provides<sp/>functions<sp/>for<sp/>managing<sp/>chado<sp/>controlled<sp/>vocabularies<sp/>which<sp/>are<sp/>used<sp/>ubiquitously</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>throughout<sp/>chado.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@defgroup<sp/>tripal_legacy_cv<sp/>Legacy<sp/>Controlled<sp/>Vocabulary<sp/>Module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_modules</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@{</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Provides<sp/>functions<sp/>for<sp/>managing<sp/>chado<sp/>controlled<sp/>vocabularies<sp/>which<sp/>are<sp/>used<sp/>ubiquitously</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>throughout<sp/>chado.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;api/tripal_cv.DEPRECATED.inc&apos;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;api/tripal_cv.api.inc&apos;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;includes/tripal_cv.admin.inc&apos;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;includes/tripal_cv.cv_form.inc&apos;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;includes/tripal_cv.cv_defaults.inc&apos;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&apos;includes/tripal_cv.cvterm_form.inc&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_init().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Adds<sp/>CSS<sp/>and<sp/>JS<sp/>needed<sp/>for<sp/>this<sp/>modules<sp/>rendered<sp/>content</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_cv</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_init()<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_menu().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Registers<sp/>all<sp/>menu<sp/>items<sp/>associated<sp/>with<sp/>this<sp/>module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_cv</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_menu()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Controlled<sp/>Vocabularies&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Controlled<sp/>Vocabularies<sp/>control<sp/>the<sp/>types<sp/>available<sp/>for<sp/>entities<sp/>and<sp/>fields.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_admin_cv_listing&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_NORMAL_ITEM,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>2,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/help&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Help&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&quot;A<sp/>description<sp/>of<sp/>the<sp/>Tripal<sp/>Controlled<sp/>Vocabulary<sp/>module<sp/>including<sp/>a<sp/>short<sp/>description<sp/>of<sp/>it&apos;s<sp/>usage.&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;theme&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_admin&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_LOCAL_TASK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>10</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/cv/edit/%&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Edit<sp/>a<sp/>Controlled<sp/>Vocabulary&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Edit<sp/>the<sp/>details<sp/>such<sp/>as<sp/>name<sp/>and<sp/>description<sp/>for<sp/>an<sp/>existing<sp/>controlled<sp/>vocabulary.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_cv_edit_form&apos;,<sp/>6),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;user_access&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/cv/add&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Add<sp/>a<sp/>Controlled<sp/>Vocabulary&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Manually<sp/>a<sp/>new<sp/>controlled<sp/>vocabulary.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_cv_add_form&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;user_access&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/cv/%/cvterm/add&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Add<sp/>a<sp/>Controlled<sp/>Vocabulary<sp/>Term&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Add<sp/>a<sp/>new<sp/>controlled<sp/>vocabulary<sp/>term.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_cvterm_add_form&apos;,5),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/cvterm/add&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Add<sp/>a<sp/>Controlled<sp/>Vocabulary<sp/>Term&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Add<sp/>a<sp/>new<sp/>controlled<sp/>vocabulary<sp/>term.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_cvterm_add_form&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/cv/%/cvterm/edit/%&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Edit<sp/>a<sp/>Controlled<sp/>Vocabulary<sp/>Term&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Edit<sp/>an<sp/>existing<sp/>controlled<sp/>vocabulary<sp/>term.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_cvterm_edit_form&apos;,5,8),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/cvterm/auto_name/%/%&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_autocomplete_cvterm&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(6,<sp/>7),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/views/cvs/enable&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Enable<sp/>Vocabulary<sp/>Administrative<sp/>View&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_enable_view&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_admin_cvs&apos;,<sp/>&apos;admin/tripal/vocab&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/vocab/views/cvterms/enable&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Enable<sp/>Vocabulary<sp/>Terms<sp/>Administrative<sp/>View&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_enable_view&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_admin_cvterms&apos;,<sp/>&apos;admin/tripal/vocab&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/legacy/chado/tripal_cv/defaults&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Defaults&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Set<sp/>the<sp/>default<sp/>vocabularies<sp/>for<sp/>properties<sp/>and<sp/>relationships.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_cv_admin_set_defaults_form&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>controlled<sp/>vocabularies&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_LOCAL_TASK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;tripal_cv_chart&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_chart&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_chart&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;cv_browser&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_show_browser&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;tripal_cv_tree&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_tree&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_tree&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;tripal_cv_init_browser&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_init_browser&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_init_browser&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>menu<sp/>item<sp/>for<sp/>interaction<sp/>with<sp/>the<sp/>tree</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;tripal_cv_update_tree&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_update_tree&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_update_tree&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(2,<sp/>3),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>menu<sp/>items<sp/>for<sp/>working<sp/>with<sp/>terms</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;tripal_cv_cvterm_info&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_cvterm_info&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;CV<sp/>Term<sp/>Viewer&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_cvterm_info&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_help().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Adds<sp/>a<sp/>help<sp/>page<sp/>to<sp/>the<sp/>module<sp/>list</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_help<sp/>($path,<sp/>$arg)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>($path<sp/>==<sp/>&apos;admin/help#tripal_cv&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>theme(&apos;tripal_cv_help&apos;,<sp/>array());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_permission().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>Set<sp/>the<sp/>permission<sp/>types<sp/>that<sp/>the<sp/>chado<sp/>module<sp/>uses.<sp/><sp/>Essentially<sp/>we</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>want<sp/>permissionis<sp/>that<sp/>protect<sp/>creation,<sp/>editing<sp/>and<sp/>deleting<sp/>of<sp/>chado</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>data<sp/>objects</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_cv</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_permission()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_views_api().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Essentially<sp/>this<sp/>hook<sp/>tells<sp/>drupal<sp/>that<sp/>there<sp/>is<sp/>views<sp/>support<sp/>for</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>for<sp/>this<sp/>module<sp/>which<sp/>then<sp/>includes<sp/>tripal_cv.views.inc<sp/>where<sp/>all<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>views<sp/>integration<sp/>code<sp/>is</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_cv</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_views_api()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(&apos;api&apos;<sp/>=&gt;<sp/>3.0);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_coder_ignore().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Defines<sp/>the<sp/>path<sp/>to<sp/>the<sp/>file<sp/>(tripal_cv.coder_ignores.txt)<sp/>where<sp/>ignore<sp/>rules<sp/>for<sp/>coder<sp/>are<sp/>stored</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_cv</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_coder_ignore()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;tripal_cv&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;line<sp/>prefix&apos;<sp/>=&gt;<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;tripal_cv&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_form_alter().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Alter<sp/>Forms</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_cv</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_form_alter(&amp;$form,<sp/>&amp;$form_state,<sp/>$form_id)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>($form_id<sp/>==<sp/>&quot;tripal_cv_cvterm_form&quot;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>updating<sp/>the<sp/>form<sp/>through<sp/>the<sp/>ahah<sp/>callback<sp/>sets<sp/>the<sp/>action<sp/>of</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>the<sp/>form<sp/>to<sp/>the<sp/>ahah<sp/>callback<sp/>URL.<sp/>We<sp/>need<sp/>to<sp/>set<sp/>it<sp/>back</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>to<sp/>the<sp/>normal<sp/>form<sp/>URL</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>($form_state[&apos;values&apos;][&apos;form_action&apos;]<sp/>==<sp/>&apos;edit&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$form[&apos;#action&apos;]<sp/>=<sp/>url(&quot;admin/tripal/tripal_cv/cvterm/edit&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$form[&apos;#action&apos;]<sp/>=<sp/>url(&quot;admin/tripal/tripal_cv/cvterm/add&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_theme().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>We<sp/>need<sp/>to<sp/>let<sp/>drupal<sp/>know<sp/>about<sp/>our<sp/>theme<sp/>functions<sp/>and<sp/>their<sp/>arguments.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>We<sp/>create<sp/>theme<sp/>functions<sp/>to<sp/>allow<sp/>users<sp/>of<sp/>the<sp/>module<sp/>to<sp/>customize<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>look<sp/>and<sp/>feel<sp/>of<sp/>the<sp/>output<sp/>generated<sp/>in<sp/>this<sp/>module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_legacy_cv</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_cv_theme($existing,<sp/>$type,<sp/>$theme,<sp/>$path)<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>$items<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_cv_help&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;template&apos;<sp/>=&gt;<sp/>&apos;tripal_cv_help&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;variables&apos;<sp/>=&gt;<sp/><sp/>array(NULL),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;path&apos;<sp/>=&gt;<sp/>&quot;$path/theme/templates&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;tripal_cv_admin_set_defaults_form&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;function&apos;<sp/>=&gt;<sp/>&apos;theme_tripal_cv_admin_set_defaults_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&apos;render<sp/>element&apos;<sp/>=&gt;<sp/>&apos;element&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_cv/tripal_cv.module"/>
+  </compounddef>
+</doxygen>

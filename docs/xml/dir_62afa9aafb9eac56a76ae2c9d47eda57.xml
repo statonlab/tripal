@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_62afa9aafb9eac56a76ae2c9d47eda57" kind="dir">
+    <compoundname>tripal_chado/includes/exporters</compoundname>
+    <innerfile refid="d0/dd1/tripal__chado_8gff__exporter_8inc">tripal_chado.gff_exporter.inc</innerfile>
+    <innerfile refid="da/d99/exporters_2tripal__chado_8seq__extract_8inc">tripal_chado.seq_extract.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/exporters/"/>
+  </compounddef>
+</doxygen>

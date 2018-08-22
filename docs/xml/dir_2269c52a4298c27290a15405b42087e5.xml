@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_2269c52a4298c27290a15405b42087e5" kind="dir">
+    <compoundname>tripal_chado_views</compoundname>
+    <innerdir refid="dir_83219201523e7db11e7eea41811f4c96">tripal_chado_views/api</innerdir>
+    <innerdir refid="dir_ae9f55771400e211d96f7a5fae931fe1">tripal_chado_views/includes</innerdir>
+    <innerdir refid="dir_d15a1e2c2ba000f1dc53e58c4df32785">tripal_chado_views/theme</innerdir>
+    <innerdir refid="dir_77316f7b07834315d5879b9d8e50e19e">tripal_chado_views/views</innerdir>
+    <innerfile refid="dd/dad/tripal__chado__views_8module">tripal_chado_views.module</innerfile>
+    <innerfile refid="d4/db6/tripal__chado__views_8views_8inc">tripal_chado_views.views.inc</innerfile>
+    <innerfile refid="d4/dde/tripal__chado__views_8views__default_8inc">tripal_chado_views.views_default.inc</innerfile>
+    <innerfile refid="dd/d0f/tripal__views__integration__fields__form_8tpl_8php">tripal_views_integration_fields_form.tpl.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado_views/"/>
+  </compounddef>
+</doxygen>

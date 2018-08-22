@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_2e0c0c0005b9d6274f1463f84cec4352" kind="dir">
+    <compoundname>tripal_chado/api/modules</compoundname>
+    <innerfile refid="d0/d35/tripal__chado_8analysis_8api_8inc">tripal_chado.analysis.api.inc</innerfile>
+    <innerfile refid="df/d38/tripal__chado_8contact_8api_8inc">tripal_chado.contact.api.inc</innerfile>
+    <innerfile refid="de/d10/tripal__chado_8cv_8api_8inc">tripal_chado.cv.api.inc</innerfile>
+    <innerfile refid="d5/d7e/tripal__chado_8db_8api_8inc">tripal_chado.db.api.inc</innerfile>
+    <innerfile refid="d2/d86/tripal__chado_8feature_8api_8inc">tripal_chado.feature.api.inc</innerfile>
+    <innerfile refid="dd/d63/tripal__chado_8module_8DEPRECATED_8api_8inc">tripal_chado.module.DEPRECATED.api.inc</innerfile>
+    <innerfile refid="d1/d1f/tripal__chado_8organism_8api_8inc">tripal_chado.organism.api.inc</innerfile>
+    <innerfile refid="d8/d18/tripal__chado_8phylotree_8api_8inc">tripal_chado.phylotree.api.inc</innerfile>
+    <innerfile refid="dd/da3/tripal__chado_8pub_8api_8inc">tripal_chado.pub.api.inc</innerfile>
+    <innerfile refid="df/dd2/tripal__chado_8stock_8api_8inc">tripal_chado.stock.api.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/api/modules/"/>
+  </compounddef>
+</doxygen>

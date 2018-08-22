@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_cd18685ca29231099f83f2771f76236d" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/so__genotype</compoundname>
+    <innerfile refid="da/dc0/so____genotype_8inc">so__genotype.inc</innerfile>
+    <innerfile refid="d5/df5/so____genotype__formatter_8inc">so__genotype_formatter.inc</innerfile>
+    <innerfile refid="d3/d18/so____genotype__widget_8inc">so__genotype_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/so__genotype/"/>
+  </compounddef>
+</doxygen>

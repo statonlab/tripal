@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="da/df3/tripal__organism__feature__counts_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_organism_feature_counts.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="da/df3/tripal__organism__feature__counts_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$headers</definition>
+        <argsstring></argsstring>
+        <name>$headers</name>
+        <initializer>= array(&apos;Feature Type&apos; ,&apos;Count&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" line="28" column="1" bodyfile="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/df3/tripal__organism__feature__counts_8tpl_8php_1ab6511d37d4b38235252feb7977bb5433" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$organism</definition>
+        <argsstring></argsstring>
+        <name>$organism</name>
+        <initializer>= $variables[&apos;node&apos;]-&gt;organism</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" line="3" column="1" bodyfile="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/df3/tripal__organism__feature__counts_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$rows</definition>
+        <argsstring></argsstring>
+        <name>$rows</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" line="34" column="1" bodyfile="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/df3/tripal__organism__feature__counts_8tpl_8php_1a715e132486a85f1eca011dc6e3fc7769" prot="public" static="no" mutable="no">
+        <type>for($j=0; $j&lt; count($types); $j++)</type>
+        <definition>for ( $j=0;$j&lt; count( $types);$j++) $table</definition>
+        <argsstring></argsstring>
+        <name>$table</name>
+        <initializer>= array(
+  &apos;header&apos; =&gt; $headers,
+  &apos;rows&apos; =&gt; $rows,
+  &apos;attributes&apos; =&gt; array(
+    &apos;id&apos; =&gt; &apos;tripal_organism-table-features&apos;,
+    &apos;class&apos; =&gt; &apos;tripal-data-table&apos;
+  ),
+  &apos;sticky&apos; =&gt; FALSE,
+  &apos;caption&apos; =&gt; &apos;&apos;,
+  &apos;colgroups&apos; =&gt; array(),
+  &apos;empty&apos; =&gt; &apos;There are no feature counts to report.  If you have loaded features for this
+    organism then re-populate the organism_feature_count materialized view.&apos;,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" line="49" column="1" bodyfile="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$types</definition>
+        <argsstring></argsstring>
+        <name>$types</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" line="4" column="1" bodyfile="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ab6511d37d4b38235252feb7977bb5433" refkind="member"><highlight class="normal"><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ab6511d37d4b38235252feb7977bb5433" kindref="member">$organism</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">]-&gt;organism;</highlight></codeline>
+<codeline lineno="4" refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" refkind="member"><highlight class="normal"><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(property_exists(<ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ab6511d37d4b38235252feb7977bb5433" kindref="member">$organism</ref>,<sp/></highlight><highlight class="stringliteral">&apos;feature_counts&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ab6511d37d4b38235252feb7977bb5433" kindref="member">$organism</ref>-&gt;feature_counts[</highlight><highlight class="stringliteral">&apos;types&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>$names<sp/><sp/><sp/><sp/>=<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ab6511d37d4b38235252feb7977bb5433" kindref="member">$organism</ref>-&gt;feature_counts[</highlight><highlight class="stringliteral">&apos;names&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}<sp/>?&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_organism-data-block-desc<sp/>tripal-data-block-desc&quot;</highlight><highlight class="normal">&gt;The<sp/>following<sp/>features<sp/>are<sp/>currently<sp/>present<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>organism&lt;/div&gt;<sp/>&lt;?php</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>let<sp/>admins<sp/>know<sp/>they<sp/>can<sp/>customize<sp/>the<sp/>terms<sp/>that<sp/>appear<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">print<sp/><ref refid="d9/dae/group__tripal__notify__api_1ga8c4c41c79200e1d3c8145386f12eaa4e" kindref="member">tripal_set_message</ref>(</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/>Administrators,<sp/>you<sp/>can<sp/>customize<sp/>the<sp/>types<sp/>of<sp/>terms<sp/>that<sp/>appear<sp/>in<sp/>this<sp/>report<sp/>by<sp/>navigating<sp/>to<sp/>the<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>l(</highlight><highlight class="stringliteral">&apos;Tripal<sp/>feature<sp/>configuration<sp/>page&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/legacy/tripal_feature/configuration&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;target&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;_blank&apos;</highlight><highlight class="normal">)))<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"><sp/><sp/>opening<sp/>the<sp/>section<sp/>\&quot;Feature<sp/>Summary<sp/>Report\&quot;<sp/>and<sp/>adding<sp/>the<sp/>list<sp/>of</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/>terms<sp/>you<sp/>want<sp/>to<sp/>appear<sp/>in<sp/>the<sp/>list.<sp/>You<sp/>can<sp/>rename<sp/>terms<sp/>as<sp/>well.<sp/>To<sp/>refresh<sp/>the<sp/>data,re-populate<sp/>the<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>l(</highlight><highlight class="stringliteral">&apos;organism_feature_count&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;admin/tripal/storage/legacy/mviews&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight><highlight class="stringliteral">&apos;target&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;_blank&apos;</highlight><highlight class="normal">)))<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/>materialized<sp/>view.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ae3246842a9b0bc4b8ecf2951cb1a949a" kindref="member">TRIPAL_INFO</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;return_html&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$headers<sp/>array<sp/>is<sp/>an<sp/>array<sp/>of<sp/>fields<sp/>to<sp/>use<sp/>as<sp/>the<sp/>colum<sp/>headers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>additional<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" refkind="member"><highlight class="normal"><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;Feature<sp/>Type&apos;</highlight><highlight class="normal"><sp/>,</highlight><highlight class="stringliteral">&apos;Count&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$rows<sp/>array<sp/>contains<sp/>an<sp/>array<sp/>of<sp/>rows<sp/>where<sp/>each<sp/>row<sp/>is<sp/>an<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>values<sp/>for<sp/>each<sp/>column<sp/>of<sp/>the<sp/>table<sp/>in<sp/>that<sp/>row.<sp/><sp/>Additional<sp/>documentation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" refkind="member"><highlight class="normal"><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>($j<sp/>=<sp/>0;<sp/>$j<sp/>&lt;<sp/>count(<ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref>);<sp/>$j++)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>$type<sp/>=<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a92d70a97331cc6fc0a79d9da50895be8" kindref="member">$types</ref>[$j];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>$name<sp/>=<sp/>$names[$j];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&lt;span<sp/>title=\&quot;&quot;</highlight><highlight class="normal"><sp/>.<sp/>$type-&gt;definition<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&gt;$name&lt;/span&gt;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>number_format($type-&gt;num_features),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>$table<sp/>array<sp/>contains<sp/>the<sp/>headers<sp/>and<sp/>rows<sp/>array<sp/>as<sp/>well<sp/>as<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>options<sp/>for<sp/>controlling<sp/>the<sp/>display<sp/>of<sp/>the<sp/>table.<sp/><sp/>Additional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>documentation<sp/>can<sp/>be<sp/>found<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://api.drupal.org/api/drupal/includes%21theme.inc/function/theme_table/7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a715e132486a85f1eca011dc6e3fc7769" refkind="member"><highlight class="normal"><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a715e132486a85f1eca011dc6e3fc7769" kindref="member">$table</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;header&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a52500036ee807241b8b4b7e2367c49ef" kindref="member">$headers</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;rows&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1ace2ec39e7df3899fa8df9640ec274b03" kindref="member">$rows</ref>,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;attributes&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_organism-table-features&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;class&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal-data-table&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;sticky&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;caption&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;colgroups&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;empty&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;There<sp/>are<sp/>no<sp/>feature<sp/>counts<sp/>to<sp/>report.<sp/><sp/>If<sp/>you<sp/>have<sp/>loaded<sp/>features<sp/>for<sp/>this</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>organism<sp/>then<sp/>re-populate<sp/>the<sp/>organism_feature_count<sp/>materialized<sp/>view.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>once<sp/>we<sp/>have<sp/>our<sp/>table<sp/>array<sp/>structure<sp/>defined,<sp/>we<sp/>call<sp/>Drupal&apos;s<sp/>theme_table()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>function<sp/>to<sp/>generate<sp/>the<sp/>table.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">print<sp/>theme_table(<ref refid="da/df3/tripal__organism__feature__counts_8tpl_8php_1a715e132486a85f1eca011dc6e3fc7769" kindref="member">$table</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_feature/theme/templates/tripal_organism_feature_counts.tpl.php"/>
+  </compounddef>
+</doxygen>

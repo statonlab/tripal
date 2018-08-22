@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_b4132788ec1c1b40d537829cc3862cfc" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/chado_linker__contact</compoundname>
+    <innerfile refid="da/d3d/chado__linker____contact_8inc">chado_linker__contact.inc</innerfile>
+    <innerfile refid="d8/dfd/chado__linker____contact__formatter_8inc">chado_linker__contact_formatter.inc</innerfile>
+    <innerfile refid="dc/d3d/chado__linker____contact__widget_8inc">chado_linker__contact_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/chado_linker__contact/"/>
+  </compounddef>
+</doxygen>

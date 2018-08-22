@@ -1,0 +1,970 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d8/d18/tripal__chado_8phylotree_8api_8inc" kind="file" language="PHP">
+    <compoundname>tripal_chado.phylotree.api.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1ga7a2998cdebaa2248fb4e8ae2ec29d1ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_assign_phylogeny_tree_indices</definition>
+        <argsstring>(&amp;$tree, &amp;$index=1)</argsstring>
+        <name>chado_assign_phylogeny_tree_indices</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$tree</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$index</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through the tree and sets the left and right indicies.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tree array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameters is not used when the function is first called. It is used for recursive calls. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="563" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="563" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1ga8ceaaba29ac6663396a7b1e4252f3dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_delete_phylotree</definition>
+        <argsstring>($phylotree_id)</argsstring>
+        <name>chado_delete_phylotree</name>
+        <param>
+          <declname>$phylotree_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a phylotree record from Chado.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$phylotree_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE on success, FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="537" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="537" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1ga0fa9b2c557cba987d9cbeb49c4238f7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_insert_phylotree</definition>
+        <argsstring>(&amp;$options, &amp;$errors, &amp;$warnings)</argsstring>
+        <name>chado_insert_phylotree</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$errors</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$warnings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inserts a phylotree record into Chado.</para><para>This function validates the options passed prior to insertion of the record, and if validation passes then any values in the options array that needed validation lookups (such as the dbxref, analysis, leaf_type, etc) will have their approriate primary key values added to the options array.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key value pairs with the following keys required: &apos;name&apos;: The name of the tree. This will be displayed to users. &apos;description: A description about the tree &apos;anlaysis_id: The ID of the analysis to which this phylotree should be associated. &apos;analysis&apos;: If the analysis_id key is not used then the analysis name may be provided to identify the analysis to which the tree should be associated. &apos;leaf_type&apos;: A sequence ontology term or the word &apos;organism&apos;. If the type is &apos;organism&apos; then this tree represents a taxonomic tree. The default, if not specified, is the term &apos;polypeptide&apos;. &apos;tree_file&apos;: The path of the file containing the phylogenetic tree to import or a Drupal managed_file numeric ID. &apos;format&apos;: The file format. Currently only &apos;newick is supported&apos;.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Optional keys: &apos;dbxref&apos;: A database cross-reference of the form DB:ACCESSION. Where DB is the database name, which is already present in Chado, and ACCESSION is the unique identifier for this tree in the remote database. &apos;name_re&apos;: If the leaf type is NOT &apos;taxonomy&apos;, then the value of this field can be a regular expression to pull out the name of the feature from the node label in the intput tree. If no value is provided the entire label is used. &apos;match&apos;: Set to &apos;uniquename&apos; if the leaf nodes should be matched with the feature uniquename. &apos;load_now&apos;: If set, the tree will be loaded immediately if a tree_file is provided. Otherwise, the tree will be loaded via a Tripal jobs call. &apos;no_load&apos;: If set the tree file will not be loaded. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$errors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation error messages will be set. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$warnings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation warning messagges will be set. The warnings should not stop an insert or an update but should be provided to the user as information by a drupal_set_message() if appropriate. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE for success and FALSE for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="289" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="289" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1gac8812398c86253221f7b42b7b1468f10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_phylogeny_get_node_types_vocab</definition>
+        <argsstring>()</argsstring>
+        <name>chado_phylogeny_get_node_types_vocab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the vocabulary terms used to describe nodes in the tree.</para><para><simplesect kind="return"><para>Array of vocab info or FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="759" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="759" bodyend="796"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1ga2da3376519fcfdc4414247886776eea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_phylogeny_import_tree</definition>
+        <argsstring>(&amp;$tree, $phylotree, $options, $vocab=array(), $parent=NULL)</argsstring>
+        <name>chado_phylogeny_import_tree</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$tree</declname>
+        </param>
+        <param>
+          <declname>$phylotree</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <declname>$vocab</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through the tree array and creates phylonodes in Chado.</para><para>The function iterates through the tree in a top-down approach adding parent internal nodes prior to leaf nodes. Each node of the tree should have the following fields:</para><para>-name: The name (or label) for this node. -depth: The depth of the node in the tree. -is_root: Set to 1 if this node is a root node. -is_leaf: Set to 1 if this node is a leaf node. -is_internal: Set to 1 if this node is an internal node. -left_index: The index of the node to the left in the tree. -right_index: The index of the node to the right in the tree. -branch_set: An array containing a list of nodes of that are children of the node. -parent: The name of the parent node. -organism_id: The organism_id for associtating the node with an organism. -properties: An array of key/value pairs where the key is the cvterm_id and the value is the property value. These properties will be assocaited with the phylonode.</para><para>Prior to importing the tree the indicies can be set by using the <ref refid="d4/d73/group__tripal__phylotree__api_1ga7a2998cdebaa2248fb4e8ae2ec29d1ae" kindref="member">chado_assign_phylogeny_tree_indices()</ref> function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tree array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$phylotree.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The phylotree object (from Chado). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options provide some direction for how the tree is imported. The following keys can be used: -taxonomy: Set to 1 if this tree is a taxonomic tree. Set to 0 otherwise. -leaf_type: Set to the leaf type name. If this is a non-taxonomic tree that is associated with features, then this should be the Sequence Ontology term for the feature (e.g. polypeptide). If this is a taxonomic tree then this option is not needed. -match: Set to either &apos;name&apos; or &apos;uniquename&apos;. This is used for matching the feature name or uniquename with the node name. This is not needed for taxonomic trees. -match_re: Set to a regular that can be used for matching the node name with the feature name if the node name is not identical to the feature name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$vocab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional. An array containing a set of key/value pairs that maps node types to CV terms. The keys must be &apos;root&apos;, &apos;internal&apos; or &apos;leaf&apos;. If no vocab is provded then the terms provided by the tripal_phylogeny CV will be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This argument is not needed when the funtion is first called. This function is recursive and this argument is used on recursive calls. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="637" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="637" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1ga53849916715df0afcd90ab2f5da59836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_phylogeny_import_tree_file</definition>
+        <argsstring>($file_name, $format, $options=array(), $job_id=NULL)</argsstring>
+        <name>chado_phylogeny_import_tree_file</name>
+        <param>
+          <declname>$file_name</declname>
+        </param>
+        <param>
+          <declname>$format</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$job_id</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports a tree file.</para><para>This function is used as a wrapper for loading a phylogenetic tree using any number of file loaders.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file containing the phylogenetic tree to import. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format of the file. Currently only the &apos;newick&apos; file format is supported. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Options if the phylotree record already exists: &apos;phylotree_id&apos;: The imported nodes will be associated with this tree. &apos;leaf_type&apos;: A sequence ontology term or the word &apos;organism&apos;. If the type is &apos;organism&apos; then this tree represents a taxonomic tree. The default, if not specified, is the term &apos;polypeptide&apos;. &apos;name_re&apos;: If the leaf type is NOT &apos;taxonomy&apos;, then the value of this field can be a regular expression to pull out the name of the feature from the node label in the intput tree. If no value is provided the entire label is used. &apos;match&apos;: Set to &apos;uniquename&apos; if the leaf nodes should be matched with the feature uniquename. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="827" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="827" bodyend="885"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1ga09820d95e5fba28cab902b3854f24f01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_update_phylotree</definition>
+        <argsstring>($phylotree_id, &amp;$options)</argsstring>
+        <name>chado_update_phylotree</name>
+        <param>
+          <declname>$phylotree_id</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates a phylotree record into Chado.</para><para>This function validates the options passed prior to update of the record and if validation passes then any values in the options array that needed validation lookups (such as the dbxref, analysis, leaf_type, etc) will have their approriate primary key values added to the options array. A Drupal File object will be added to the options array for the tree file if one is provided.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$phylotree_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the phylotree to update. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key value pairs with the following optional keys: &apos;name&apos;: The name of the tree. This will be displayed to users. &apos;description: A description about the tree &apos;anlaysis_id: The ID of the analysis to which this phylotree should be associated. &apos;analysis&apos;: If the analysis_id key is not used then the analysis name may be provided to identify the analysis to which the tree should be associated. &apos;leaf_type&apos;: A sequence ontology term or the word &apos;organism&apos;. If the type is &apos;organism&apos; then this tree represents a taxonomic tree. The default, if not specified, is the term &apos;polypeptide&apos;. &apos;tree_file&apos;: The path of the file containing the phylogenetic tree to import or a Drupal managed_file numeric ID. &apos;format&apos;: The file format. Currently only &apos;newick is supported&apos; &apos;dbxref&apos;: A database cross-reference of the form DB:ACCESSION. Where DB is the database name, which is already present in Chado, and ACCESSION is the unique identifier for this tree in the remote database. &apos;name_re&apos;: If the leaf type is NOT &apos;taxonomy&apos;, then the value of this field can be a regular expression to pull out the name of the feature from the node label in the intput tree. If no value is provided the entire label is used. &apos;match&apos;: Set to &apos;uniquename&apos; if the leaf nodes should be matched with the feature uniquename. &apos;load_now&apos;: If set, the tree will be loaded immediately if a tree_file is provided. Otherwise, the tree will be loaded via a Tripal jobs call. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="418" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="418" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d73/group__tripal__phylotree__api_1gaae05ebcb9ef5f17da60a7fcca7131223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_validate_phylotree</definition>
+        <argsstring>($val_type, &amp;$options, &amp;$errors, &amp;$warnings)</argsstring>
+        <name>chado_validate_phylotree</name>
+        <param>
+          <declname>$val_type</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$errors</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$warnings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates an $options array for insert or update of a phylotree record.</para><para>If validation passes then any values that needed validation lookups (such as the dbxref, analysis, leaf_type, etc) will have their approriate primary_keys added to the $options array, and missing default values will also be added.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$val_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of validation. Can be either &apos;insert&apos; or &apos;update&apos;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key/value pairs containing any of the valid keys for either the <ref refid="d4/d73/group__tripal__phylotree__api_1ga0fa9b2c557cba987d9cbeb49c4238f7b" kindref="member">chado_insert_phylotree()</ref> or <ref refid="d4/d73/group__tripal__phylotree__api_1ga09820d95e5fba28cab902b3854f24f01" kindref="member">chado_update_phylotree()</ref> functions. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$errors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation error messages will be set. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$warnings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation warning messagges will be set. The warnings should not stop an insert or an update but should be provided to the user as information by a drupal_set_message() if appropriate. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If validation failes then FALSE is returned. Any options that do not pass validation checks will be added in the $errors array with the key being the option and the value being the error message. If validation is successful then TRUE is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" line="53" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.phylotree.api.inc" bodystart="53" bodyend="232"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides API functions specificially for managing phylogenetic and taxonomic tree records in Chado. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="d4/d73/group__tripal__phylotree__api_1gaae05ebcb9ef5f17da60a7fcca7131223" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1gaae05ebcb9ef5f17da60a7fcca7131223" kindref="member">chado_validate_phylotree</ref>($val_type,<sp/>&amp;<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>,<sp/>&amp;$errors,<sp/>&amp;$warnings)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($val_type<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;insert&apos;</highlight><highlight class="normal"><sp/>and<sp/>$val_type<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;update&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>$val_type<sp/>argument<sp/>must<sp/>be<sp/>either<sp/>&apos;update<sp/>or<sp/>&apos;insert&apos;.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Defaults.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($val_type<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;insert&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Match<sp/>by<sp/>feature<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>regular<sp/>expression<sp/>is<sp/>to<sp/>match<sp/>the<sp/>entire<sp/>node<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;^(.*)$&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>dbxref<sp/>is<sp/>not<sp/>required<sp/>by<sp/>Tripal<sp/>but<sp/>is<sp/>required<sp/>by<sp/>the<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>field<sp/>in<sp/>the<sp/>phylotree<sp/>table.<sp/><sp/>Therefore,<sp/>if<sp/>the<sp/>dbxref<sp/>is<sp/>not<sp/>provided</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>can<sp/>set<sp/>this<sp/>to<sp/>be<sp/>the<sp/>null<sp/>database<sp/>and<sp/>null<sp/>dbxref<sp/>which</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>represented<sp/>as<sp/>&apos;null:local:null&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;null:local:null&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>required<sp/>values<sp/>are<sp/>set.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($val_type<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;insert&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>the<sp/>name<sp/>of<sp/>the<sp/>tree.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>description<sp/>for<sp/>this<sp/>tree.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>either<sp/>the<sp/>full<sp/>path<sp/>to<sp/>the<sp/>tree_file<sp/>or<sp/>a<sp/>Drupal<sp/>managed<sp/>file<sp/>ID<sp/>number.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>or<sp/>!<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>file<sp/>format<sp/>for<sp/>the<sp/>tree<sp/>file.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>file<sp/>format<sp/>is<sp/>correct.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;newick&apos;</highlight><highlight class="normal"><sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;taxonomy&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>file<sp/>format<sp/>is<sp/>not<sp/>supported.<sp/>Currently<sp/>only<sp/>the<sp/>&quot;newick&quot;<sp/>file<sp/>format<sp/>is<sp/>supported.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Does<sp/>the<sp/>phylotree<sp/>ID<sp/>exist<sp/>and<sp/>is<sp/>it<sp/>valid.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>the<sp/>ID<sp/>for<sp/>the<sp/>tree.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>$exists<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;phylotree&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]),<sp/>array(</highlight><highlight class="stringliteral">&apos;has_record&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>1));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$exists)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>phylotree_id<sp/>does<sp/>not<sp/>exist.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>file<sp/>exists<sp/>if<sp/>one<sp/>is<sp/>specified.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>is<sp/>a<sp/>numeric<sp/>Drupal<sp/>file<sp/>then<sp/>all<sp/>is<sp/>good,<sp/>no<sp/>need<sp/>to<sp/>check.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_numeric(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file_exists(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>file<sp/>provided<sp/>does<sp/>not<sp/>exists.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>file<sp/>format<sp/>is<sp/>correct.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>or</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;newick&apos;</highlight><highlight class="normal"><sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;taxonomy&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>supported<sp/>file<sp/>format.<sp/>Currently<sp/>only<sp/>the<sp/>&quot;newick&quot;<sp/>file<sp/>format<sp/>is<sp/>supported.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>no<sp/>leaf<sp/>type<sp/>is<sp/>provided<sp/>then<sp/>use<sp/>the<sp/>polypeptide<sp/>term.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>or<sp/>!<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;polypeptide&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>analysis<sp/>exists.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">),<sp/>array(</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">]));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>analysis<sp/>name<sp/>provided<sp/>does<sp/>not<sp/>exist.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>[0]-&gt;analysis_id;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">),<sp/>array(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">]));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>analysis<sp/>ID<sp/>provided<sp/>does<sp/>not<sp/>exist.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d4/d2c/tripal__analysis__base_8tpl_8php_1ac0935ffbe7c9d02c15cb490893a0b4e9" kindref="member">$analysis</ref>[0]-&gt;analysis_id;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>leaf<sp/>type<sp/>exists.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>$type<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;taxonomy&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;EDAM&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Species<sp/>tree&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$type<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;cvterm_id&apos;</highlight><highlight class="normal">),<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;sequence&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$type<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;cvterm_id&apos;</highlight><highlight class="normal">),<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$type)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>leaf_type<sp/>provided<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>Sequence<sp/>Ontology<sp/>term:<sp/>%term.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$type[0]-&gt;cvterm_id;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>Dbxref<sp/>is<sp/>required<sp/>by<sp/>the<sp/>phylotree<sp/>module,<sp/>but<sp/>if<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>tree<sp/>was<sp/>generated<sp/>in-house<sp/>and<sp/>the<sp/>site<sp/>admin<sp/>doens&apos;t<sp/>want<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>assign<sp/>a<sp/>local<sp/>dbxref<sp/>then<sp/>we<sp/>will<sp/>set<sp/>it<sp/>to<sp/>the<sp/>null<sp/>db</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>the<sp/>local:null<sp/>dbxref.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;null:local:null&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>$matches<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>preg_match(</highlight><highlight class="stringliteral">&apos;/^(.*?):(.*)$/&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">],<sp/>$matches);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>$db_name<sp/>=<sp/>$matches[1];</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>$accession<sp/>=<sp/>$matches[2];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;accession&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$accession,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;db_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$db_name</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>$dbxref<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$dbxref)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;dbxref&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&apos;The<sp/>dbxref<sp/>provided<sp/>does<sp/>not<sp/>exist<sp/>in<sp/>the<sp/>database:<sp/>%dbxref.&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;%dbxref&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$dbxref));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$dbxref-&gt;dbxref_id;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>tree<sp/>name<sp/>is<sp/>unique.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="215"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>SELECT<sp/>*</highlight></codeline>
+<codeline lineno="216"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>{phylotree}<sp/>P</highlight></codeline>
+<codeline lineno="217"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>WHERE</highlight></codeline>
+<codeline lineno="218"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>P.name<sp/>=<sp/>:name</highlight></codeline>
+<codeline lineno="219"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;:name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($val_type<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;update&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$sql<sp/>.=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>AND<sp/>NOT<sp/>P.phylotree_id<sp/>=<sp/>:phylotree_id&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$args[</highlight><highlight class="stringliteral">&apos;:phylotree_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>$result<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga73e802bb6e6daa31f712682939c270fb" kindref="member">chado_query</ref>($sql,<sp/>$args)-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($result)<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$errors[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>t(</highlight><highlight class="stringliteral">&quot;The<sp/>tree<sp/>name<sp/>is<sp/>in<sp/>use<sp/>by<sp/>another<sp/>tree.<sp/>Please<sp/>provide<sp/>a<sp/>different<sp/>unique<sp/>name<sp/>for<sp/>this<sp/>tree.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TRUE;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="289" refid="d4/d73/group__tripal__phylotree__api_1ga0fa9b2c557cba987d9cbeb49c4238f7b" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga0fa9b2c557cba987d9cbeb49c4238f7b" kindref="member">chado_insert_phylotree</ref>(&amp;<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>,<sp/>&amp;$errors,<sp/>&amp;$warnings)<sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/>global<sp/>$user;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">]<sp/>=<sp/>trim(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">]<sp/>=<sp/>trim(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>trim(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]<sp/>=<sp/>trim(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]<sp/>=<sp/>trim(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>the<sp/>incoming<sp/>options.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/>$success<sp/>=<sp/><ref refid="d4/d73/group__tripal__phylotree__api_1gaae05ebcb9ef5f17da60a7fcca7131223" kindref="member">chado_validate_phylotree</ref>(</highlight><highlight class="stringliteral">&apos;insert&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>,<sp/>$errors,<sp/>$warnings);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$success)<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($errors<sp/>as<sp/>$field<sp/>=&gt;<sp/>$message)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,<sp/>$message);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we&apos;re<sp/>here<sp/>then<sp/>all<sp/>is<sp/>good,<sp/>so<sp/>add<sp/>the<sp/>phylotree<sp/>record.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;comment&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/>$phylotree<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" kindref="member">chado_insert_record</ref>(</highlight><highlight class="stringliteral">&apos;phylotree&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$phylotree)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&apos;Unable<sp/>to<sp/>add<sp/>phylotree.&apos;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&apos;warning&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,<sp/></highlight><highlight class="stringliteral">&apos;Insert<sp/>phylotree:<sp/>Unable<sp/>to<sp/>create<sp/>phylotree<sp/>where<sp/>values:<sp/>%values&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%values&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>print_r(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/>TRUE)));</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/>$phylotree_id<sp/>=<sp/>$phylotree[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$phylotree_id;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>tree_file<sp/>is<sp/>numeric<sp/>then<sp/>it<sp/>is<sp/>a<sp/>Drupal<sp/>managed<sp/>file<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>want<sp/>to<sp/>make<sp/>the<sp/>file<sp/>permanent<sp/>and<sp/>associated<sp/>with<sp/>the<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_numeric(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>file_load(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>$file-&gt;status<sp/>=<sp/>FILE_STATUS_PERMANENT;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>file_save($file);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>file_usage_add($file,<sp/></highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">],<sp/>$phylotree_id);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>$real_file_path<sp/>=<sp/>drupal_realpath($file-&gt;uri);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>$real_file_path<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>caller<sp/>has<sp/>requested<sp/>to<sp/>load<sp/>the<sp/>file<sp/>now<sp/>then<sp/>do<sp/>so,<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>submit<sp/>using<sp/>a<sp/>Tripal<sp/>job.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;no_load&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>or<sp/>!<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;no_load&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;load_now&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;load_now&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$phylotree_id,</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">]<sp/>?<sp/></highlight><highlight class="stringliteral">&apos;uniquename&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga53849916715df0afcd90ab2f5da59836" kindref="member">chado_phylogeny_import_tree_file</ref>($real_file_path,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">],<sp/>$args);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$real_file_path,</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;newick&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$phylotree_id,</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">]<sp/>?<sp/></highlight><highlight class="stringliteral">&apos;uniquename&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d0/db7/group__tripal__jobs__api_1gae7fa345a83829ddc37f727c8d04c02d6" kindref="member">tripal_add_job</ref>(</highlight><highlight class="stringliteral">&quot;Import<sp/>Tree<sp/>File:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$file-&gt;filename,<sp/></highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;chado_phylogeny_import_tree_file&apos;</highlight><highlight class="normal">,<sp/>$args,<sp/>$user-&gt;uid))<sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&apos;The<sp/>tree<sp/>visualizations<sp/>will<sp/>appear<sp/>once<sp/>the<sp/>tree<sp/>is<sp/>fully<sp/>imported.&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TRUE;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418" refid="d4/d73/group__tripal__phylotree__api_1ga09820d95e5fba28cab902b3854f24f01" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga09820d95e5fba28cab902b3854f24f01" kindref="member">chado_update_phylotree</ref>($phylotree_id,<sp/>&amp;<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/>global<sp/>$user;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Validate<sp/>the<sp/>incoming<sp/>options.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/>$errors<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/>$warnings<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/>$success<sp/>=<sp/><ref refid="d4/d73/group__tripal__phylotree__api_1gaae05ebcb9ef5f17da60a7fcca7131223" kindref="member">chado_validate_phylotree</ref>(</highlight><highlight class="stringliteral">&apos;update&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>,<sp/>$errors,<sp/>$warnings);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$success)<sp/>{</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($errors<sp/>as<sp/>$field<sp/>=&gt;<sp/>$message)<sp/>{</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,<sp/>$message);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we&apos;re<sp/>here<sp/>then<sp/>all<sp/>is<sp/>good,<sp/>so<sp/>update<sp/>the<sp/>phylotree<sp/>record.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/>$match<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$phylotree_id,</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;analysis_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;dbxref_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;comment&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/>$phylotree<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga35aa655c2c929858ab05df18bc807541" kindref="member">chado_update_record</ref>(</highlight><highlight class="stringliteral">&apos;phylotree&apos;</highlight><highlight class="normal">,<sp/>$match,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/>array(</highlight><highlight class="stringliteral">&apos;return_record&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE));</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$phylotree)<sp/>{</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&apos;Unable<sp/>to<sp/>update<sp/>phylotree.&apos;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&apos;warning&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a179264461824ee52a7a08ebef9150e4b" kindref="member">TRIPAL_WARNING</ref>,</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Update<sp/>phylotree:<sp/>Unable<sp/>to<sp/>update<sp/>phylotree<sp/>where<sp/>values:<sp/>%values&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%values&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>print_r(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>,<sp/>TRUE))</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>have<sp/>a<sp/>tree<sp/>file,<sp/>then<sp/>import<sp/>the<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>any<sp/>existing<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gaad9a3b9f75cdf27faac5d05d39d4831d" kindref="member">chado_delete_record</ref>(</highlight><highlight class="stringliteral">&apos;phylonode&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]));</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>if<sp/>we<sp/>already<sp/>have<sp/>a<sp/>file<sp/>that<sp/>we<sp/>remove<sp/>the<sp/>old<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="469"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>SELECT<sp/>FM.fid</highlight></codeline>
+<codeline lineno="470"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>{file_managed}<sp/>FM</highlight></codeline>
+<codeline lineno="471"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INNER<sp/>JOIN<sp/>{file_usage}<sp/>FU<sp/>on<sp/>FM.fid<sp/>=<sp/>FU.fid</highlight></codeline>
+<codeline lineno="472"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>WHERE<sp/>FU.id<sp/>=<sp/>:id<sp/>and<sp/>FU.module<sp/>=<sp/>&apos;tripal_phylogeny&apos;</highlight></codeline>
+<codeline lineno="473"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/>$fid<sp/>=<sp/>db_query($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]))-&gt;fetchField();</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($fid)<sp/>{</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>file_load($fid);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>file_delete($file,<sp/>TRUE);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>tree_file<sp/>is<sp/>numeric<sp/>then<sp/>it<sp/>is<sp/>a<sp/>Drupal<sp/>managed<sp/>file<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>want<sp/>to<sp/>make<sp/>the<sp/>file<sp/>permanent<sp/>and<sp/>associated<sp/>with<sp/>the<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_numeric(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>file_load(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file-&gt;status<sp/>=<sp/>FILE_STATUS_PERMANENT;</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$file<sp/>=<sp/>file_save($file);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>file_usage_add($file,<sp/></highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;newick&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>a<sp/>job<sp/>to<sp/>parse<sp/>the<sp/>new<sp/>node<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$real_file_path<sp/>=<sp/>drupal_realpath($file-&gt;uri);</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$real_file_path<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;tree_file&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>caller<sp/>has<sp/>requested<sp/>to<sp/>load<sp/>the<sp/>file<sp/>now<sp/>then<sp/>do<sp/>so,<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>submit<sp/>using<sp/>a<sp/>Tripal<sp/>job.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;load_now&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>and<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;load_now&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">]<sp/>?<sp/></highlight><highlight class="stringliteral">&apos;uniquename&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga53849916715df0afcd90ab2f5da59836" kindref="member">chado_phylogeny_import_tree_file</ref>($real_file_path,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal">],<sp/>$args);</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$real_file_path,</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;newick&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">]<sp/>?<sp/></highlight><highlight class="stringliteral">&apos;uniquename&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d0/db7/group__tripal__jobs__api_1gae7fa345a83829ddc37f727c8d04c02d6" kindref="member">tripal_add_job</ref>(</highlight><highlight class="stringliteral">&quot;Import<sp/>Tree<sp/>File:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$file-&gt;filename,<sp/></highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;chado_phylogeny_import_tree_file&apos;</highlight><highlight class="normal">,<sp/>$args,<sp/>$user-&gt;uid))<sp/>{</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&apos;The<sp/>tree<sp/>visualizations<sp/>will<sp/>appear<sp/>once<sp/>the<sp/>tree<sp/>is<sp/>fully<sp/>imported.&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TRUE;</highlight></codeline>
+<codeline lineno="525"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537" refid="d4/d73/group__tripal__phylotree__api_1ga8ceaaba29ac6663396a7b1e4252f3dec" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga8ceaaba29ac6663396a7b1e4252f3dec" kindref="member">chado_delete_phylotree</ref>($phylotree_id)<sp/>{</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>we<sp/>don&apos;t<sp/>have<sp/>a<sp/>phylotree<sp/>id<sp/>for<sp/>this<sp/>node<sp/>then<sp/>this<sp/>isn&apos;t<sp/>a<sp/>node<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>chado_phylotree<sp/>or<sp/>the<sp/>entry<sp/>in<sp/>the<sp/>chado_phylotree<sp/>table<sp/>was<sp/>lost.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$phylotree_id)<sp/>{</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>phylotree_id<sp/>to<sp/>delete<sp/>a<sp/>tree.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>tree</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$phylotree_id);</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gaad9a3b9f75cdf27faac5d05d39d4831d" kindref="member">chado_delete_record</ref>(</highlight><highlight class="stringliteral">&apos;phylotree&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="550"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563" refid="d4/d73/group__tripal__phylotree__api_1ga7a2998cdebaa2248fb4e8ae2ec29d1ae" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga7a2998cdebaa2248fb4e8ae2ec29d1ae" kindref="member">chado_assign_phylogeny_tree_indices</ref>(&amp;$tree,<sp/>&amp;$index<sp/>=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>a<sp/>left<sp/>and<sp/>right<sp/>index<sp/>to<sp/>each<sp/>node.<sp/><sp/>The<sp/>child<sp/>node<sp/>must</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>have<sp/>a<sp/>right<sp/>and<sp/>left<sp/>index<sp/>less<sp/>than<sp/>that<sp/>of<sp/>it&apos;s<sp/>parents.<sp/><sp/>We</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>increment<sp/>the<sp/>index<sp/>by<sp/>100<sp/>to<sp/>give<sp/>space<sp/>for<sp/>new<sp/>nodes<sp/>that<sp/>might</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>be<sp/>added<sp/>later.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/>$tree))<sp/>{</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>$tree[</highlight><highlight class="stringliteral">&apos;left_index&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$index<sp/>+=<sp/>100;</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;is_leaf&apos;</highlight><highlight class="normal">,<sp/>$tree))<sp/>{</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$tree[</highlight><highlight class="stringliteral">&apos;right_index&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$index<sp/>+=<sp/>100;</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;branch_set&apos;</highlight><highlight class="normal">,<sp/>$tree))<sp/>{</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($tree[</highlight><highlight class="stringliteral">&apos;branch_set&apos;</highlight><highlight class="normal">]<sp/>as<sp/>$key<sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga7a2998cdebaa2248fb4e8ae2ec29d1ae" kindref="member">chado_assign_phylogeny_tree_indices</ref>($tree[</highlight><highlight class="stringliteral">&apos;branch_set&apos;</highlight><highlight class="normal">][$key],<sp/>$index);</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$tree[</highlight><highlight class="stringliteral">&apos;right_index&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$index<sp/>+=<sp/>100;</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="580"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"></highlight></codeline>
+<codeline lineno="637" refid="d4/d73/group__tripal__phylotree__api_1ga2da3376519fcfdc4414247886776eea5" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga2da3376519fcfdc4414247886776eea5" kindref="member">chado_phylogeny_import_tree</ref>(&amp;$tree,<sp/>$phylotree,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>,<sp/>$vocab<sp/>=<sp/>array(),<sp/>$parent<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"></highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>vocabulary<sp/>terms<sp/>used<sp/>to<sp/>describe<sp/>nodes<sp/>in<sp/>the<sp/>tree<sp/>if<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>wasn&apos;t<sp/>provided.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($vocab)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/><sp/><sp/>$vocab<sp/>=<sp/><ref refid="d4/d73/group__tripal__phylotree__api_1gac8812398c86253221f7b42b7b1468f10" kindref="member">chado_phylogeny_get_node_types_vocab</ref>();</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($tree)<sp/>and<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/>$tree))<sp/>{</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$phylotree-&gt;phylotree_id,</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;left_idx&apos;</highlight><highlight class="normal"><sp/><sp/>=&gt;<sp/>$tree[</highlight><highlight class="stringliteral">&apos;left_index&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;right_idx&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$tree[</highlight><highlight class="stringliteral">&apos;right_index&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>in<sp/>any<sp/>optional<sp/>values<sp/>to<sp/>the<sp/>$values<sp/>array<sp/>if<sp/>they<sp/>are<sp/>present.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty($tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">])<sp/>and<sp/>$tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;label&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty($tree[</highlight><highlight class="stringliteral">&apos;length&apos;</highlight><highlight class="normal">])<sp/>and<sp/>$tree[</highlight><highlight class="stringliteral">&apos;length&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;distance&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$tree[</highlight><highlight class="stringliteral">&apos;length&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>type<sp/>of<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($tree[</highlight><highlight class="stringliteral">&apos;is_root&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$vocab[</highlight><highlight class="stringliteral">&apos;root&apos;</highlight><highlight class="normal">]-&gt;cvterm_id;</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($tree[</highlight><highlight class="stringliteral">&apos;is_internal&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$vocab[</highlight><highlight class="stringliteral">&apos;internal&apos;</highlight><highlight class="normal">]-&gt;cvterm_id;</highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;parent_phylonode_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$parent[</highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="665"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TOOD:<sp/>a<sp/>feature<sp/>may<sp/>be<sp/>associated<sp/>here<sp/>but<sp/>it<sp/>is<sp/>recommended<sp/>that<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>be<sp/>a<sp/>feature<sp/>of<sp/>type<sp/>SO:match<sp/>and<sp/>should<sp/>represent<sp/>the<sp/>alignment<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>features<sp/>beneath<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($tree[</highlight><highlight class="stringliteral">&apos;is_leaf&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$vocab[</highlight><highlight class="stringliteral">&apos;leaf&apos;</highlight><highlight class="normal">]-&gt;cvterm_id;</highlight></codeline>
+<codeline lineno="671"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;parent_phylonode_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$parent[</highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Match<sp/>this<sp/>leaf<sp/>node<sp/>with<sp/>an<sp/>organism<sp/>or<sp/>feature<sp/>depending<sp/>on<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>of<sp/>tree.<sp/>But<sp/>we<sp/>can&apos;t<sp/>do<sp/>that<sp/>if<sp/>we<sp/>don&apos;t<sp/>have<sp/>a<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!empty($tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">])<sp/>and<sp/>$tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;taxonomy&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"></highlight></codeline>
+<codeline lineno="678"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>a<sp/>sequence-based<sp/>tree.<sp/>Try<sp/>to<sp/>match<sp/>leaf<sp/>nodes<sp/>with<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>features.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First,<sp/>Get<sp/>the<sp/>Name<sp/>and<sp/>uniquename<sp/>for<sp/>the<sp/>feature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$matches<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sel_values<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;name&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sel_values[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$re<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(preg_match(</highlight><highlight class="stringliteral">&quot;/$re/&quot;</highlight><highlight class="normal">,<sp/>$tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">],<sp/>$matches))<sp/>{</highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sel_values[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$matches[1];</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sel_values[</highlight><highlight class="stringliteral">&apos;uniquename&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$re<sp/>=<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(preg_match(</highlight><highlight class="stringliteral">&quot;/$re/&quot;</highlight><highlight class="normal">,<sp/>$tree[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">],<sp/>$matches))<sp/>{</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sel_values[</highlight><highlight class="stringliteral">&apos;uniquename&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$matches[1];</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sel_values[</highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;sequence&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$sel_columns<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="704"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref><sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record</ref>(</highlight><highlight class="stringliteral">&apos;feature&apos;</highlight><highlight class="normal">,<sp/>$sel_columns,<sp/>$sel_values);</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>)<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Found<sp/>multiple<sp/>features,<sp/>cannot<sp/>make<sp/>an<sp/>association.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="708"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count(<ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>)<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;feature_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/><ref refid="d0/d37/tripal__feature__alignments_8tpl_8php_1a306f40abf7512b36a7251235d46684cc" kindref="member">$feature</ref>[0]-&gt;feature_id;</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Could<sp/>not<sp/>find<sp/>a<sp/>feature<sp/>that<sp/>matches<sp/>the<sp/>name<sp/>or<sp/>uniquename</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="715"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="716"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="717"><highlight class="normal"></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Insert<sp/>the<sp/>new<sp/>node<sp/>and<sp/>then<sp/>add<sp/>it&apos;s<sp/>assigned<sp/>phylonode_id<sp/>to<sp/>the<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/>$phylonode<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" kindref="member">chado_insert_record</ref>(</highlight><highlight class="stringliteral">&apos;phylonode&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/>$tree[</highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$phylonode[</highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+<codeline lineno="722"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>a<sp/>taxonomic<sp/>tree,<sp/>so<sp/>assocaite<sp/>this<sp/>node<sp/>with<sp/>an</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="723"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>organism<sp/>if<sp/>one<sp/>is<sp/>provided.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;organism_id&apos;</highlight><highlight class="normal">,<sp/>$tree))<sp/>{</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$tree[</highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;organism_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$tree[</highlight><highlight class="stringliteral">&apos;organism_id&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$pylonode_organism<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" kindref="member">chado_insert_record</ref>(</highlight><highlight class="stringliteral">&apos;phylonode_organism&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="731"><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Associate<sp/>any<sp/>properties.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;properties&apos;</highlight><highlight class="normal">,<sp/>$tree))<sp/>{</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($tree[</highlight><highlight class="stringliteral">&apos;properties&apos;</highlight><highlight class="normal">]<sp/>as<sp/>$type_id<sp/>=&gt;<sp/>$value)<sp/>{</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$tree[</highlight><highlight class="stringliteral">&apos;phylonode_id&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$type_id,</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$value,</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$pylonode_organism<sp/>=<sp/><ref refid="de/dc4/group__tripal__chado__query__api_1ga5c5f09d0a7dc5a6ecf00cc226692bd19" kindref="member">chado_insert_record</ref>(</highlight><highlight class="stringliteral">&apos;phylonodeprop&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($tree)<sp/>and<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;branch_set&apos;</highlight><highlight class="normal">,<sp/>$tree))<sp/>{</highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($tree[</highlight><highlight class="stringliteral">&apos;branch_set&apos;</highlight><highlight class="normal">]<sp/>as<sp/>$key<sp/>=&gt;<sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga2da3376519fcfdc4414247886776eea5" kindref="member">chado_phylogeny_import_tree</ref>($tree[</highlight><highlight class="stringliteral">&apos;branch_set&apos;</highlight><highlight class="normal">][$key],<sp/>$phylotree,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>,<sp/>$vocab,<sp/>$tree);</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="749"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight></codeline>
+<codeline lineno="759" refid="d4/d73/group__tripal__phylotree__api_1gac8812398c86253221f7b42b7b1468f10" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1gac8812398c86253221f7b42b7b1468f10" kindref="member">chado_phylogeny_get_node_types_vocab</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>vocabulary<sp/>terms<sp/>used<sp/>to<sp/>describe<sp/>nodes<sp/>in<sp/>the<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;phylo_leaf&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="766"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="767"><highlight class="normal"><sp/><sp/>$leaf<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$leaf)<sp/>{</highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>find<sp/>the<sp/>leaf<sp/>vocabulary<sp/>term:<sp/>&apos;phylo_leaf&apos;.<sp/>It<sp/>should<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;already<sp/>be<sp/>present<sp/>as<sp/>part<sp/>of<sp/>the<sp/>tripal_phylogeny<sp/>vocabulary.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;phylo_interior&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="775"><highlight class="normal"><sp/><sp/>$internal<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="776"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$internal)<sp/>{</highlight></codeline>
+<codeline lineno="777"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="778"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>find<sp/>the<sp/>leaf<sp/>vocabulary<sp/>term:<sp/>&apos;phylo_interior&apos;.<sp/>It<sp/>should<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="779"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;already<sp/>be<sp/>present<sp/>as<sp/>part<sp/>of<sp/>the<sp/>tripal_phylogeny<sp/>vocabulary.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;phylo_root&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"><sp/><sp/>$root<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$root)<sp/>{</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>find<sp/>the<sp/>leaf<sp/>vocabulary<sp/>term:<sp/>&apos;phylo_root&apos;.<sp/>It<sp/>should<sp/>&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;already<sp/>be<sp/>present<sp/>as<sp/>part<sp/>of<sp/>the<sp/>tripal_phylogeny<sp/>vocabulary.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="789"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/>$vocab<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;leaf&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$leaf,</highlight></codeline>
+<codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;internal&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$internal,</highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;root&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$root,</highlight></codeline>
+<codeline lineno="794"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$vocab;</highlight></codeline>
+<codeline lineno="796"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight></codeline>
+<codeline lineno="798"><highlight class="normal"></highlight></codeline>
+<codeline lineno="827" refid="d4/d73/group__tripal__phylotree__api_1ga53849916715df0afcd90ab2f5da59836" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga53849916715df0afcd90ab2f5da59836" kindref="member">chado_phylogeny_import_tree_file</ref>($file_name,<sp/>$format,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(),<sp/>$job_id<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="828"><highlight class="normal"></highlight></codeline>
+<codeline lineno="829"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>some<sp/>option<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="830"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;leaf_type&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;polypeptide&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;match&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="835"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="836"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;^(.*)$&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="838"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="839"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">]<sp/>=<sp/>trim(<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;name_re&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="840"><highlight class="normal"></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>a<sp/>phylotree<sp/>ID<sp/>is<sp/>not<sp/>passed<sp/>in<sp/>then<sp/>make<sp/>sure<sp/>we<sp/>have<sp/>the<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="842"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>required<sp/>fields<sp/>for<sp/>creating<sp/>a<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="843"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="844"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="845"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="846"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;The<sp/>phylotree_id<sp/>is<sp/>required<sp/>for<sp/>importing<sp/>the<sp/>tree.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="847"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="848"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="849"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="850"><highlight class="normal"></highlight></codeline>
+<codeline lineno="851"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>phylotree<sp/>record.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="852"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="853"><highlight class="normal"><sp/><sp/>$phylotree<sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>(</highlight><highlight class="stringliteral">&apos;phylotree&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>);</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$phylotree)<sp/>{</highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga2240e326e18c3074843ac815e4629ee2" kindref="member">tripal_report_error</ref>(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1a4b04c4b1ce52da710d57abf5c4b09dd3" kindref="member">TRIPAL_ERROR</ref>,</highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Could<sp/>not<sp/>find<sp/>the<sp/>phylotree<sp/>using<sp/>the<sp/>ID<sp/>provided:<sp/>%phylotree_id.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight><highlight class="stringliteral">&apos;%phylotree_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>[</highlight><highlight class="stringliteral">&apos;phylotree_id&apos;</highlight><highlight class="normal">]));</highlight></codeline>
+<codeline lineno="859"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="860"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="861"><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal"><sp/><sp/>$transaction<sp/>=<sp/>db_transaction();</highlight></codeline>
+<codeline lineno="863"><highlight class="normal"><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;\nNOTE:<sp/>Loading<sp/>of<sp/>this<sp/>tree<sp/>file<sp/>is<sp/>performed<sp/>using<sp/>a<sp/>database<sp/>transaction.<sp/>\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="864"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;If<sp/>the<sp/>load<sp/>fails<sp/>or<sp/>is<sp/>terminated<sp/>prematurely<sp/>then<sp/>the<sp/>entire<sp/>set<sp/>of<sp/>\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="865"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;insertions/updates<sp/>is<sp/>rolled<sp/>back<sp/>and<sp/>will<sp/>not<sp/>be<sp/>found<sp/>in<sp/>the<sp/>database\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="866"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="867"><highlight class="normal"></highlight></codeline>
+<codeline lineno="868"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parse<sp/>the<sp/>file<sp/>according<sp/>to<sp/>the<sp/>format<sp/>indicated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="869"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($format<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;newick&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Parse<sp/>the<sp/>tree<sp/>into<sp/>the<sp/>expected<sp/>nested<sp/>node<sp/>format.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>module_load_include(</highlight><highlight class="stringliteral">&apos;inc&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;tripal_chado&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;includes/loaders/tripal_chado.phylotree_newick&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="872"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$tree<sp/>=<sp/><ref refid="d3/d5e/tripal__chado_8phylotree__newick_8inc_1a1d593ff1b4f94ea4d9cfdfb52b4c1dab" kindref="member">tripal_phylogeny_parse_newick_file</ref>($file_name);</highlight></codeline>
+<codeline lineno="873"><highlight class="normal"></highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>the<sp/>right<sp/>and<sp/>left<sp/>indecies<sp/>to<sp/>the<sp/>tree<sp/>ndoes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga7a2998cdebaa2248fb4e8ae2ec29d1ae" kindref="member">chado_assign_phylogeny_tree_indices</ref>($tree);</highlight></codeline>
+<codeline lineno="876"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="877"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>through<sp/>the<sp/>tree<sp/>nodes<sp/>and<sp/>add<sp/>them<sp/>to<sp/>Chado<sp/>in<sp/>accordance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="878"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>the<sp/>details<sp/>in<sp/>the<sp/>$options<sp/>array.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="879"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d73/group__tripal__phylotree__api_1ga2da3376519fcfdc4414247886776eea5" kindref="member">chado_phylogeny_import_tree</ref>($tree,<sp/>$phylotree,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="880"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="881"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="882"><highlight class="normal"><sp/><sp/><sp/><sp/>$transaction-&gt;rollback();</highlight></codeline>
+<codeline lineno="883"><highlight class="normal"><sp/><sp/><sp/><sp/>watchdog_exception(</highlight><highlight class="stringliteral">&apos;tripal_phylogeny&apos;</highlight><highlight class="normal">,<sp/>$e);</highlight></codeline>
+<codeline lineno="884"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="885"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/api/modules/tripal_chado.phylotree.api.inc"/>
+  </compounddef>
+</doxygen>

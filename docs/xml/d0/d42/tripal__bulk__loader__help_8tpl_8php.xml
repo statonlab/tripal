@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/d42/tripal__bulk__loader__help_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_bulk_loader_help.tpl.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;p&gt;The<sp/>bulk<sp/>loader<sp/>is<sp/>a<sp/>tool<sp/>that<sp/>Tripal<sp/>provides<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>loading<sp/>of<sp/>data<sp/>contained<sp/>in<sp/>tab<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">delimited<sp/>files.<sp/>Tripal<sp/>supports<sp/>loading<sp/>of<sp/>files<sp/>in<sp/>standard<sp/>formats<sp/>(e.g.<sp/>FASTA,<sp/>GFF,<sp/>OBO),<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">but<sp/>Chado<sp/>can<sp/>support<sp/>a<sp/>variety<sp/>of<sp/>different<sp/>biological<sp/>data<sp/>types<sp/>and<sp/>there<sp/>are<sp/>often<sp/>no<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">community<sp/>standard<sp/>file<sp/>formats<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>loading<sp/>these<sp/>data.<sp/>For<sp/>example,<sp/>there<sp/>is<sp/>no<sp/>file<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">format<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>importing<sp/>genotype<sp/>and<sp/>phenotype<sp/>data.<sp/>Those<sp/>data<sp/>can<sp/>be<sp/>stored<sp/>in<sp/>the<sp/>feature,<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">stock<sp/>and<sp/>natural<sp/>diversity<sp/>tables<sp/>of<sp/>Chado.<sp/>The<sp/>Bulk<sp/>Loader<sp/>was<sp/>introduced<sp/>in<sp/>Tripal<sp/>v1.1<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">and<sp/>provides<sp/>a<sp/>web<sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal">for<sp/>building<sp/>custom<sp/>data<sp/>loader.<sp/>In<sp/>short,<sp/>the<sp/>site<sp/>developer<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">creates<sp/>the<sp/>bulk<sp/>loader<sp/>&quot;template&quot;.<sp/>This<sp/>template<sp/>can<sp/>then<sp/>be<sp/>used<sp/>and<sp/>re-used<sp/>for<sp/>any<sp/>tab<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">delimited<sp/>file<sp/>that<sp/>follows<sp/>the<sp/>format<sp/>described<sp/>by<sp/>the<sp/>template.<sp/>Additionally,<sp/>bulk<sp/>loading<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">templates<sp/>can<sp/>be<sp/>exported<sp/>allowing<sp/>Tripal<sp/>sites<sp/>to<sp/>share<sp/>loaders<sp/>with<sp/>one<sp/>another.<sp/><sp/>Loading<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">templates<sp/>that<sp/>have<sp/>been<sp/>shared<sp/>are<sp/>available<sp/>on<sp/>the<sp/>Tripal<sp/>website<sp/>here:<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">&lt;?php<sp/>print<sp/>l(&apos;http:</highlight><highlight class="comment">//tripal.info/extensions/bulk-loader-templates&apos;,<sp/>&apos;http://tripal.info/extensions/bulk-loader-templates&apos;);?&gt;.&lt;/p&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">&lt;h3&gt;General<sp/>Usage&lt;/h3&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">&lt;ol&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">&lt;li&gt;&lt;strong&gt;Plan<sp/>how<sp/>to<sp/>store<sp/>your<sp/>data.&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>&lt;br<sp/>/&gt;This<sp/>is<sp/>the<sp/>most<sp/>important<sp/>and<sp/>often<sp/>the<sp/>most<sp/>difficult<sp/>step.<sp/>This</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>is<sp/>because<sp/>it<sp/>requires<sp/>familiarity<sp/>with<sp/>the<sp/>Chado<sp/>database<sp/>schema<sp/>and<sp/>due<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>flexibility<sp/>of<sp/>the<sp/>schema,<sp/>you<sp/>may<sp/>be<sp/>able<sp/>to<sp/>store<sp/>your<sp/>data<sp/>multiple<sp/>ways.<sp/>It<sp/>is</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>considered<sp/>best<sp/>practice<sp/>to<sp/>consult<sp/>the<sp/>GMOD<sp/>website<sp/>and<sp/>the<sp/>Chado<sp/>community<sp/>(via<sp/>the<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>&lt;?php<sp/>print<sp/>l(&apos;gmod-schema<sp/>mailing<sp/>list&apos;,<sp/>&apos;https:</highlight><highlight class="comment">//lists.sourceforge.net/lists/listinfo/gmod-schema&apos;);?&gt;)<sp/>when<sp/>deciding<sp/>how<sp/>to<sp/>store<sp/>data.&lt;/li&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">&lt;li&gt;&lt;strong&gt;Create<sp/>a<sp/>new<sp/>Bulk<sp/>Loading<sp/>Template<sp/>to<sp/>map<sp/>the<sp/>columns<sp/>from<sp/>your<sp/>data<sp/>file<sp/>to<sp/>chado.&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>&lt;br<sp/>/&gt;Creating<sp/>a<sp/>new<sp/>template<sp/>can<sp/>be<sp/>done<sp/>by<sp/>clicking<sp/>on<sp/>the<sp/>&quot;Templates&quot;<sp/>tab<sp/>above</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>and<sp/>then<sp/>the<sp/>&quot;Add<sp/>Template&quot;<sp/>link.<sp/>Note<sp/>that<sp/>the<sp/>template<sp/>is<sp/>designed<sp/>with<sp/>a<sp/>single<sp/>line</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>from<sp/>your<sp/>file<sp/>in<sp/>mind.<sp/>Furthermore,<sp/>the<sp/>term<sp/>&quot;record&quot;<sp/>refers<sp/>to<sp/>a<sp/>single<sp/>entry<sp/>in<sp/>chado</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>and<sp/>the<sp/>term<sp/>&quot;field&quot;<sp/>refers<sp/>to<sp/>a<sp/>column<sp/>in<sp/>a<sp/>specific<sp/>chado<sp/>table.&lt;/li&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">&lt;li&gt;&lt;strong&gt;Create<sp/>a<sp/>Bulk<sp/>Loader<sp/>Job<sp/>with<sp/>file-specific<sp/>details<sp/>that<sp/>uses<sp/>your<sp/>template<sp/>to<sp/>load<sp/>a<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">specific<sp/>file.&lt;/strong&gt;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>&lt;br<sp/>/&gt;Create<sp/>a<sp/>Bulk<sp/>Loading<sp/>Job<sp/>by<sp/>clicking<sp/>on<sp/>the<sp/>&quot;Jobs&quot;<sp/>tab<sp/>above<sp/>and<sp/>then<sp/>&quot;Add<sp/>Bulk<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>Loading<sp/>Job&quot;.<sp/>Remember<sp/>to<sp/>select<sp/>the<sp/>template<sp/>you<sp/>just<sp/>created<sp/>and<sp/>to<sp/>ensure<sp/>that<sp/>you</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>provide<sp/>the<sp/>absolute<sp/>path<sp/>to<sp/>the<sp/>file.<sp/>Note:<sp/>The<sp/>file<sp/>must<sp/>already<sp/>be<sp/>uploaded<sp/>to<sp/>the</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>same<sp/>server<sp/>as<sp/>your<sp/>Drupal<sp/>installation<sp/>and<sp/>must<sp/>be<sp/>readable<sp/>by<sp/>the<sp/>command-line</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>user<sp/>who<sp/>executes<sp/>the<sp/>tripal<sp/>job.&lt;/li&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">&lt;/ol&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">&lt;p&gt;For<sp/>the<sp/>full<sp/>tutorial,<sp/>see<sp/>the<sp/>&lt;?php<sp/>print<sp/>l(&apos;Tripal<sp/>User<sp/>Manual:<sp/>The<sp/>Bulk<sp/>Loader&apos;,<sp/>&apos;http:</highlight><highlight class="comment">//tripal.info/node/109&apos;);?&gt;.&lt;/p&gt;</highlight></codeline>
+    </programlisting>
+    <location file="tripal_bulk_loader/theme/templates/tripal_bulk_loader_help.tpl.php"/>
+  </compounddef>
+</doxygen>

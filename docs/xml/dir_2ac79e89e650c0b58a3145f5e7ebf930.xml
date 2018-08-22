@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_2ac79e89e650c0b58a3145f5e7ebf930" kind="dir">
+    <compoundname>legacy/tripal_core/api</compoundname>
+    <innerfile refid="df/d29/tripal__core_8chado__nodes_8api_8inc">tripal_core.chado_nodes.api.inc</innerfile>
+    <innerfile refid="de/d09/tripal__core_8chado__nodes_8dbxrefs_8api_8inc">tripal_core.chado_nodes.dbxrefs.api.inc</innerfile>
+    <innerfile refid="dc/d25/tripal__core_8chado__nodes_8properties_8api_8inc">tripal_core.chado_nodes.properties.api.inc</innerfile>
+    <innerfile refid="d0/d71/tripal__core_8chado__nodes_8relationships_8api_8inc">tripal_core.chado_nodes.relationships.api.inc</innerfile>
+    <innerfile refid="d4/de0/tripal__core_8chado__nodes_8title__and__path_8inc">tripal_core.chado_nodes.title_and_path.inc</innerfile>
+    <innerfile refid="d7/d5f/tripal__core_8DEPRECATED_8inc">tripal_core.DEPRECATED.inc</innerfile>
+    <innerfile refid="da/dc4/tripal__core_8tripal__variables_8api_8inc">tripal_core.tripal_variables.api.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_core/api/"/>
+  </compounddef>
+</doxygen>

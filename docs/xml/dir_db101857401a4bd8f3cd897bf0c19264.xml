@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_db101857401a4bd8f3cd897bf0c19264" kind="dir">
+    <compoundname>legacy/tripal_organism/theme/templates</compoundname>
+    <innerfile refid="dc/dc0/tripal__organism__base_8tpl_8php">tripal_organism_base.tpl.php</innerfile>
+    <innerfile refid="d2/d60/tripal__organism__help_8tpl_8php">tripal_organism_help.tpl.php</innerfile>
+    <innerfile refid="d5/d66/tripal__organism__properties_8tpl_8php">tripal_organism_properties.tpl.php</innerfile>
+    <innerfile refid="d4/def/tripal__organism__references_8tpl_8php">tripal_organism_references.tpl.php</innerfile>
+    <innerfile refid="d0/da6/tripal__organism__teaser_8tpl_8php">tripal_organism_teaser.tpl.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_organism/theme/templates/"/>
+  </compounddef>
+</doxygen>

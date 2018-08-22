@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/db5/classtripal__views__handler__field__entity" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_field_entity</compoundname>
+    <basecompoundref refid="d9/d4d/classtripal__views__handler__field" prot="public" virt="non-virtual">tripal_views_handler_field</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/db5/classtripal__views__handler__field__entity_1a336adfe1cc7598bfecd2b6921a328252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_entity::get_value</definition>
+        <argsstring>($values, $field=NULL)</argsstring>
+        <name>get_value</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$field</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the value that&apos;s supposed to be rendered.</para><para>This api exists so that other modules can easy set the values of the field without having the need to change the render method as well.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object containing all retrieved values. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional name of the field where the value is stored. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_entity.inc" line="59" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_entity.inc" bodystart="59" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db5/classtripal__views__handler__field__entity_1ad37429d4484721690f27b41c28d33f7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_entity::init</definition>
+        <argsstring>(&amp;$view, &amp;$options)</argsstring>
+        <name>init</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$view</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_entity.inc" line="17" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_entity.inc" bodystart="17" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db5/classtripal__views__handler__field__entity_1a21198bff8f5e431d7ce65087acd95bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_entity::option_definition</definition>
+        <argsstring>()</argsstring>
+        <name>option_definition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_entity.inc" line="28" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_entity.inc" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db5/classtripal__views__handler__field__entity_1a11deaaf43023e49271ab8d36e579c452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_entity::options_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>options_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide link to entity option </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_entity.inc" line="37" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_entity.inc" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db5/classtripal__views__handler__field__entity_1a0a71787ee507ef51dd466041e4bae6e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_entity::render</definition>
+        <argsstring>($values)</argsstring>
+        <name>render</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_entity.inc" line="108" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_entity.inc" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db5/classtripal__views__handler__field__entity_1a42e08c46764e9f826203d622b8e98586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_entity::render_link</definition>
+        <argsstring>($data, $values)</argsstring>
+        <name>render_link</name>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Render whatever the data is as a link to the entity.</para><para>Data should be made XSS safe prior to calling this function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_entity.inc" line="82" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_entity.inc" bodystart="82" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Field handler to provide simple renderer that allows linking to a entity. Definition terms:<itemizedlist>
+<listitem><para>link_to_entity default: Should this field have the checkbox &quot;link to entity&quot; enabled by default. </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="779">
+        <label>tripal_views_handler_field</label>
+        <link refid="d9/d4d/classtripal__views__handler__field"/>
+        <childnode refid="780" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="780">
+        <label>views_handler_field</label>
+      </node>
+      <node id="778">
+        <label>tripal_views_handler_field_entity</label>
+        <link refid="dd/db5/classtripal__views__handler__field__entity"/>
+        <childnode refid="779" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="782">
+        <label>tripal_views_handler_field</label>
+        <link refid="d9/d4d/classtripal__views__handler__field"/>
+        <childnode refid="783" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>views_handler_field</label>
+      </node>
+      <node id="781">
+        <label>tripal_views_handler_field_entity</label>
+        <link refid="dd/db5/classtripal__views__handler__field__entity"/>
+        <childnode refid="782" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/views_handlers/tripal_views_handler_field_entity.inc" line="15" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_entity.inc" bodystart="15" bodyend="112"/>
+    <listofallmembers>
+      <member refid="d9/d4d/classtripal__views__handler__field_1ad28a43fccf570d56b9157ef408a56d58" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>click_sort</name></member>
+      <member refid="dd/db5/classtripal__views__handler__field__entity_1a336adfe1cc7598bfecd2b6921a328252" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>get_value</name></member>
+      <member refid="dd/db5/classtripal__views__handler__field__entity_1ad37429d4484721690f27b41c28d33f7b" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>init</name></member>
+      <member refid="dd/db5/classtripal__views__handler__field__entity_1a21198bff8f5e431d7ce65087acd95bae" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>option_definition</name></member>
+      <member refid="dd/db5/classtripal__views__handler__field__entity_1a11deaaf43023e49271ab8d36e579c452" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>options_form</name></member>
+      <member refid="d9/d4d/classtripal__views__handler__field_1aff549f7ac26a78e625722bc95f3e2ce8" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>query</name></member>
+      <member refid="dd/db5/classtripal__views__handler__field__entity_1a0a71787ee507ef51dd466041e4bae6e3" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>render</name></member>
+      <member refid="dd/db5/classtripal__views__handler__field__entity_1a42e08c46764e9f826203d622b8e98586" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_entity</scope><name>render_link</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

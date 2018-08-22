@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/d97/classefo____array__design" kind="class" language="PHP" prot="public">
+    <compoundname>efo__array_design</compoundname>
+    <basecompoundref refid="d2/d2e/classChadoField" prot="public" virt="non-virtual">ChadoField</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d5/d97/classefo____array__design_1a25622591c93008b36b2a6ee371422215" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>efo__array_design::$default_formatter</definition>
+        <argsstring></argsstring>
+        <name>$default_formatter</name>
+        <initializer>= &apos;<ref refid="d6/dd4/classefo____array__design__formatter" kindref="compound">efo__array_design_formatter</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="35" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d97/classefo____array__design_1a03d6a7609f4475cafb6ca1679e1a17ac" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>efo__array_design::$default_instance_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_instance_settings</name>
+        <initializer>= array(
+    
+    &apos;term_vocabulary&apos; =&gt; &apos;EFO&apos;,
+    
+    &apos;term_name&apos; =&gt; &apos;array design&apos;,
+    
+    &apos;term_accession&apos; =&gt; &apos;0000269&apos;,
+    
+    
+    
+    &apos;term_fixed&apos; =&gt; FALSE,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="18" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d97/classefo____array__design_1a2920c626dc855b77ced3539321b6eea0" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>efo__array_design::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Array Design&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="6" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d97/classefo____array__design_1acd8e8781a4ce9f7a721af1e3cd1aebff" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>efo__array_design::$default_widget</definition>
+        <argsstring></argsstring>
+        <name>$default_widget</name>
+        <initializer>= &apos;<ref refid="dd/df0/classefo____array__design__widget" kindref="compound">efo__array_design_widget</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="32" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d97/classefo____array__design_1a1886a597b276a50301973a6f6cbb00bf" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>efo__array_design::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;An instrument design which describes the design of the array.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="9" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d5/d97/classefo____array__design_1a97bcc2fd17eae64f7770fe68cb123dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>efo__array_design::elementInfo</definition>
+        <argsstring>()</argsstring>
+        <name>elementInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a96952e870cbe0b4a48d72f0d1c20b21c" kindref="member">TripalField::elementInfo()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="114" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="114" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d97/classefo____array__design_1ac02d0649803faef5a313022aa705b3f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>efo__array_design::load</definition>
+        <argsstring>($entity)</argsstring>
+        <name>load</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1a892a0cff2ff98ef41beefa55527cdd9c" kindref="member">TripalField::load()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="75" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="75" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d97/classefo____array__design_1aeb69fb3f39a0f6fbc4c375b14ffa5013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>efo__array_design::query</definition>
+        <argsstring>($query, $condition)</argsstring>
+        <name>query</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$condition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d2/d2e/classChadoField_1af990f3973aee880c2a0bb7737dab1c47" kindref="member">ChadoField::query()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="157" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="157" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d97/classefo____array__design_1a95fa83dc937e0e90cc9a3ecdadb29e6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>efo__array_design::queryOrder</definition>
+        <argsstring>($query, $order)</argsstring>
+        <name>queryOrder</name>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d2/d2e/classChadoField_1a6286dc84a2995106bd910f6487ec942c" kindref="member">ChadoField::queryOrder()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="183" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="183" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="d5/d97/classefo____array__design_1a7c08ab71ef42993d2565d9210c36c0b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>efo__array_design::validate</definition>
+        <argsstring>($entity_type, $entity, $langcode, $items, &amp;$errors)</argsstring>
+        <name>validate</name>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$errors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d9/d83/classTripalField_1ae8ae933722cd9340c3994a700427330a" kindref="member">TripalField::validate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="41" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="41" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="289">
+        <label>efo__array_design</label>
+        <link refid="d5/d97/classefo____array__design"/>
+        <childnode refid="290" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="291" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="292">
+        <label>efo__array_design</label>
+        <link refid="d5/d97/classefo____array__design"/>
+        <childnode refid="293" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>ChadoField</label>
+        <link refid="d2/d2e/classChadoField"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>TripalField</label>
+        <link refid="d9/d83/classTripalField"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design.inc" bodystart="3" bodyend="201"/>
+    <listofallmembers>
+      <member refid="d2/d2e/classChadoField_1aec5fc1b49043cd79b3afd757f5b9b8af" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$default_description</name></member>
+      <member refid="d5/d97/classefo____array__design_1a25622591c93008b36b2a6ee371422215" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$default_formatter</name></member>
+      <member refid="d5/d97/classefo____array__design_1a03d6a7609f4475cafb6ca1679e1a17ac" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$default_instance_settings</name></member>
+      <member refid="d5/d97/classefo____array__design_1a2920c626dc855b77ced3539321b6eea0" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$default_label</name></member>
+      <member refid="d2/d2e/classChadoField_1a9817680008bd4ddb9b79963e5693eb04" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$default_settings</name></member>
+      <member refid="d5/d97/classefo____array__design_1acd8e8781a4ce9f7a721af1e3cd1aebff" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$default_widget</name></member>
+      <member refid="d5/d97/classefo____array__design_1a1886a597b276a50301973a6f6cbb00bf" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$description</name></member>
+      <member refid="d2/d2e/classChadoField_1a937549576f1c0f4b780b00bd75f76ce1" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$download_formatters</name></member>
+      <member refid="d9/d83/classTripalField_1ac348ce236b7cac6147688950011fdba6" prot="protected" virt="non-virtual"><scope>efo__array_design</scope><name>$field</name></member>
+      <member refid="d9/d83/classTripalField_1a727666618c87cb60c6ab9f5e446d6426" prot="protected" virt="non-virtual"><scope>efo__array_design</scope><name>$instance</name></member>
+      <member refid="d2/d2e/classChadoField_1aced383d240ca9dd98182dbb108428789" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$module</name></member>
+      <member refid="d9/d83/classTripalField_1a873652ed4421c1bc211cdca2346352b8" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$no_data</name></member>
+      <member refid="d9/d83/classTripalField_1a0bfccf918c71c300fccea11387d8aefc" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>$no_ui</name></member>
+      <member refid="d9/d83/classTripalField_1a12856487b2ad310c3dfcee9eae0e86ad" prot="protected" virt="non-virtual"><scope>efo__array_design</scope><name>$term</name></member>
+      <member refid="d9/d83/classTripalField_1a931ee11a0e3b061a1674f51d186a0988" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>__construct</name></member>
+      <member refid="d9/d83/classTripalField_1a9c44d0017dbdc82ad4f532ce8cb71c4c" prot="protected" virt="non-virtual"><scope>efo__array_design</scope><name>_addViewsDataElement</name></member>
+      <member refid="d9/d83/classTripalField_1a643ad3ef2e6fb2c673574b680afedc5e" prot="protected" virt="non-virtual"><scope>efo__array_design</scope><name>_addWebServiceElement</name></member>
+      <member refid="d9/d83/classTripalField_1a650474e013a387db620223a4265e503d" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>createInstance</name></member>
+      <member refid="d5/d97/classefo____array__design_1a97bcc2fd17eae64f7770fe68cb123dd2" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>elementInfo</name></member>
+      <member refid="d9/d83/classTripalField_1a36a8044117bb191fba3a0afd117e5434" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>getField</name></member>
+      <member refid="d9/d83/classTripalField_1a7b9ceac2a0d39163bf55e4ed29bed952" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>getFieldName</name></member>
+      <member refid="d9/d83/classTripalField_1af7de8b5df22756288b7a348764df68e0" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>getFieldTerm</name></member>
+      <member refid="d9/d83/classTripalField_1a3db0d92e211e261afea7e105750d2e9f" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>getFieldTermID</name></member>
+      <member refid="d9/d83/classTripalField_1a1c29066b53a4ffce951132920e5ac0bf" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>getInstance</name></member>
+      <member refid="d9/d83/classTripalField_1af7335ce38156505ff54bd1757bb536b0" prot="protected" virt="non-virtual"><scope>efo__array_design</scope><name>getPagerElementID</name></member>
+      <member refid="d9/d83/classTripalField_1ac8bf46bbbeaf0bae8bf6b979cc1733ca" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>info</name></member>
+      <member refid="d2/d2e/classChadoField_1a47395feda70f37e0ba66c4e3fe4e61dc" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>instanceSettingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1ade5041044ae4a23ee6bc47ce8266506a" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>instanceSettingsFormValidate</name></member>
+      <member refid="d5/d97/classefo____array__design_1ac02d0649803faef5a313022aa705b3f6" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>load</name></member>
+      <member refid="d5/d97/classefo____array__design_1aeb69fb3f39a0f6fbc4c375b14ffa5013" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>query</name></member>
+      <member refid="d2/d2e/classChadoField_1a601b04d112c9d4e5721240646aacd676" prot="protected" virt="non-virtual"><scope>efo__array_design</scope><name>queryJoinOnce</name></member>
+      <member refid="d5/d97/classefo____array__design_1a95fa83dc937e0e90cc9a3ecdadb29e6b" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>queryOrder</name></member>
+      <member refid="d9/d83/classTripalField_1ae74b43f611e3040c72d62afe71b686c0" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>settingsForm</name></member>
+      <member refid="d9/d83/classTripalField_1a2d4baff5cde41b3f39f373ab7f4ad9ef" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>settingsFormValidate</name></member>
+      <member refid="d5/d97/classefo____array__design_1a7c08ab71ef42993d2565d9210c36c0b0" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>validate</name></member>
+      <member refid="d9/d83/classTripalField_1aa0233ddbb9411c58c7eafc657fef97a6" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>viewsData</name></member>
+      <member refid="d9/d83/classTripalField_1a2db49fcfd34816cd41683a5c7722491a" prot="public" virt="non-virtual"><scope>efo__array_design</scope><name>webServicesData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

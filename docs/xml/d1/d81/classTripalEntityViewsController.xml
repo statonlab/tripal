@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d81/classTripalEntityViewsController" kind="class" language="PHP" prot="public">
+    <compoundname>TripalEntityViewsController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EntityDefaultViewsController</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/d81/classTripalEntityViewsController_1a4fe2335056a4a35c0782676517240581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityViewsController::views_data</definition>
+        <argsstring>()</argsstring>
+        <name>views_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Edit or add extra fields to <ref refid="d1/d81/classTripalEntityViewsController_1a4fe2335056a4a35c0782676517240581" kindref="member">views_data()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityViewsController.inc" line="10" column="1" bodyfile="tripal/includes/TripalEntityViewsController.inc" bodystart="10" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="954">
+        <label>TripalEntityViewsController</label>
+        <link refid="d1/d81/classTripalEntityViewsController"/>
+        <childnode refid="955" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="955">
+        <label>EntityDefaultViewsController</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="956">
+        <label>TripalEntityViewsController</label>
+        <link refid="d1/d81/classTripalEntityViewsController"/>
+        <childnode refid="957" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="957">
+        <label>EntityDefaultViewsController</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/includes/TripalEntityViewsController.inc" line="5" column="1" bodyfile="tripal/includes/TripalEntityViewsController.inc" bodystart="5" bodyend="62"/>
+    <listofallmembers>
+      <member refid="d1/d81/classTripalEntityViewsController_1a4fe2335056a4a35c0782676517240581" prot="public" virt="non-virtual"><scope>TripalEntityViewsController</scope><name>views_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

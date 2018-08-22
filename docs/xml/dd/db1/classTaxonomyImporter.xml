@@ -1,0 +1,695 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/db1/classTaxonomyImporter" kind="class" language="PHP" prot="public">
+    <compoundname>TaxonomyImporter</compoundname>
+    <basecompoundref refid="d8/d2a/classTripalImporter" prot="public" virt="non-virtual">TripalImporter</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a5e4e4c6ba47d9719ef3a75c023ffa4a9" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$argument_list</definition>
+        <argsstring></argsstring>
+        <name>$argument_list</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The array of arguments used for this loader. Each argument should be a separate array containing a machine_name, name, and description keys. This information is used to build the help text for the loader. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="89" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a901d1ac490824a069647c47455ee821e" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$button_text</definition>
+        <argsstring></argsstring>
+        <name>$button_text</name>
+        <initializer>= &apos;Import from NCBI Taxonomy&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Text that should appear on the button at the bottom of the importer form. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="61" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a50824fec260660000424d2fde91fd5ac" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$cardinality</definition>
+        <argsstring></argsstring>
+        <name>$cardinality</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates how many files are allowed to be uploaded. By default this is set to allow only one file. Change to any positive number. A value of zero indicates an unlimited number of uploaded files are allowed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="97" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1af0f0230470db0cfc4d65f51396332596" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;Imports new organisms from NCBI using taxonomy IDs, or loads taxonomic details about existing organisms.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A brief description for this loader. This description will be presented to the site user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="20" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a038180d36f93e2f29ced95a538d54809" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$file_required</definition>
+        <argsstring></argsstring>
+        <name>$file_required</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates if the file must be provided. An example when it may not be necessary to require that the user provide a file for uploading if the loader keeps track of previous files and makes those available for selection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="81" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a5b7426b4180f755bdd0b9b82c0939fcf" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$file_types</definition>
+        <argsstring></argsstring>
+        <name>$file_types</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An array containing the extensions of allowed file types. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="25" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a552b66692fd570b5a07db67230758949" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$machine_name</definition>
+        <argsstring></argsstring>
+        <name>$machine_name</name>
+        <initializer>= &apos;chado_taxonomy&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The machine name for this loader. This name will be used to construct the URL for the loader. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="14" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1acd67eae892abbc131ec51d561b1aaa46" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$methods</definition>
+        <argsstring></argsstring>
+        <name>$methods</name>
+        <initializer>= array(
+    
+    &apos;file_upload&apos; =&gt; FALSE,
+    
+    &apos;file_local&apos; =&gt; FALSE,
+    
+    &apos;file_remote&apos; =&gt; FALSE,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the methods that the file uploader will support. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="66" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1add207eefe3543c02c35e547ad5b1d8e2" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$name</definition>
+        <argsstring></argsstring>
+        <name>$name</name>
+        <initializer>= &apos;Chado NCBI Taxonomy Loader&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The name of this loader. This name will be presented to the site user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="8" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a372982334e48ed420f2957f1fd4bf891" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$require_analysis</definition>
+        <argsstring></argsstring>
+        <name>$require_analysis</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the $use_analysis value is set above then this value indicates if the analysis should be required. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="55" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1add42d7a2a0a78212982fca5964460e36" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$upload_description</definition>
+        <argsstring></argsstring>
+        <name>$upload_description</name>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides information to the user about the file upload. Typically this may include a description of the file types allowed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="32" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1ac1b3cdf0fafe546764bdfe95e6a2e8fa" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$upload_title</definition>
+        <argsstring></argsstring>
+        <name>$upload_title</name>
+        <initializer>= &apos;File Upload&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The title that should appear above the upload button. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="37" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a6919406afe79ddafcb5ebdd0cdd77c04" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TaxonomyImporter::$use_analysis</definition>
+        <argsstring></argsstring>
+        <name>$use_analysis</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the loader should require an analysis record. To maintain provenance we should always indiate where the data we are uploading comes from. The method that Tripal attempts to use for this by associating upload files with an analysis record. The analysis record provides the details for how the file was created or obtained. Set this to FALSE if the loader should not require an analysis when loading. if $use_analysis is set to true then the form values will have an &apos;analysis_id&apos; key in the $form_state array on submitted forms. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="49" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a7b99e73a88be7a3e3c3e006a87c4040c" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>TaxonomyImporter::$all_orgs</definition>
+        <argsstring></argsstring>
+        <name>$all_orgs</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Holds the list of all orgainsms currently in Chado. This list is needed when checking to see if an organism has already been loaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="104" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a5b9c290bb4011491d6fdf2dd7f3fb4bd" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>TaxonomyImporter::$phylotree</definition>
+        <argsstring></argsstring>
+        <name>$phylotree</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The record from the Chado phylotree table that refers to this Taxonomic tree. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="110" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/db1/classTaxonomyImporter_1a3364b771e4b63aa43471f3107f3ce001" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>TaxonomyImporter::$tree</definition>
+        <argsstring></argsstring>
+        <name>$tree</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The temporary tree array used by the Tripal Phylotree API for importing a new tree. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="116" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1af1db4251759d3858d5c71ff4e4292040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::form</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d2a/classTripalImporter_1a58f1670b64b51f29d5fd84f0a3568d9d" kindref="member">TripalImporter::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="121" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="121" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1a56ffa3556717cec63e132c5b672aad8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::formValidate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>formValidate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d2a/classTripalImporter_1ac22c139a8bf14d700605732f680836d8" kindref="member">TripalImporter::formValidate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="157" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="157" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1ae97ff46431f975d0c91f9d2b6e73e481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs the import. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="184" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="184" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1a77af0b3f8917b8f08755045f75c1f517" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::addDbxref</definition>
+        <argsstring>($organism_id, $taxId)</argsstring>
+        <name>addDbxref</name>
+        <param>
+          <declname>$organism_id</declname>
+        </param>
+        <param>
+          <declname>$taxId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$organism_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$taxId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="903" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="903" bodyend="919"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1aa4186d4e226aa6fc933b350fef58655f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::addOrganism</definition>
+        <argsstring>($sci_name, $rank)</argsstring>
+        <name>addOrganism</name>
+        <param>
+          <declname>$sci_name</declname>
+        </param>
+        <param>
+          <declname>$rank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new organism record to Chado.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sci_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scientific name as provied by NCBI Taxonomy. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rank of the organism as provied by NCBI Taxonomy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="580" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="580" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1a33d75b0120112680c0652f2c0c54e5f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::addProperty</definition>
+        <argsstring>($organism_id, $term_name, $value, $rank=0)</argsstring>
+        <name>addProperty</name>
+        <param>
+          <declname>$organism_id</declname>
+        </param>
+        <param>
+          <declname>$term_name</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <param>
+          <declname>$rank</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a property to an organism node.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$organism_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The organism ID to which the property is added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the organism property term. This term must be present in the &apos;organism_property&apos; cv. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the property. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order for this property. The first instance of this term for this organism should be zero. Defaults to zero. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="877" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="877" bodyend="896"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1ac18fb6f8e3558c68f2bd88e443be7a3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::addTaxonomyNode</definition>
+        <argsstring>(&amp;$tree, $node, $lineage_depth)</argsstring>
+        <name>addTaxonomyNode</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$tree</declname>
+        </param>
+        <param>
+          <declname>$node</declname>
+        </param>
+        <param>
+          <declname>$lineage_depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="804" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="804" bodyend="832"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1acf5df3c82f0cc8f6def816c4136c2e04" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::findOrganism</definition>
+        <argsstring>($taxid, $sci_name)</argsstring>
+        <name>findOrganism</name>
+        <param>
+          <declname>$taxid</declname>
+        </param>
+        <param>
+          <declname>$sci_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the Chado database to see if the organism already exists.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$taxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The taxonomic ID for the organism. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$sci_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scientific name for the organism as returned by NCBI </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="510" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="510" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1a75fa71c4976b39df2b5d95fe5578ba46" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::getProperty</definition>
+        <argsstring>($organism_id, $term_name, $rank=0)</argsstring>
+        <name>getProperty</name>
+        <param>
+          <declname>$organism_id</declname>
+        </param>
+        <param>
+          <declname>$term_name</declname>
+        </param>
+        <param>
+          <declname>$rank</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a property for a given organism.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$organism_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The organism ID to which the property is added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the organism property term. This term must be present in the &apos;organism_property&apos; cv. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order for this property. The first instance of this term for this organism should be zero. Defaults to zero. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The property object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="848" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="848" bodyend="861"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1af5fffdf22df0fb801254fb9b9a64f571" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::importRecord</definition>
+        <argsstring>($taxid, $organism=NULL)</argsstring>
+        <name>importRecord</name>
+        <param>
+          <declname>$taxid</declname>
+        </param>
+        <param>
+          <declname>$organism</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports an organism from the NCBI taxonomy DB by its taxonomy ID</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$taxid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The NCBI Taxonomy ID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$organism</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The organism object to which this taxonomy belongs. If the organism is NULL then it will be created. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="647" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="647" bodyend="800"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1a177874e62637b9b49f68dfeec96ef453" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::initTree</definition>
+        <argsstring>()</argsstring>
+        <name>initTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create the taxonomic tree in Chado.</para><para>If the tree already exists it will not be recreated.</para><para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the phylotree object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="272" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="272" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1a3ec98a83d8f70abe5de6509309ac9d97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::rebuildTree</definition>
+        <argsstring>()</argsstring>
+        <name>rebuildTree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through all existing organisms and rebuilds the taxonomy tree.</para><para>The phloytree API doesn&apos;t support adding nodes to existing trees only importing whole trees. So, we must rebuild the tree using the current organisms and then we can add to it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="311" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="311" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/classTaxonomyImporter_1a1c18bf2a8419cc5ff6160fc776235ad6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TaxonomyImporter::updateExisting</definition>
+        <argsstring>()</argsstring>
+        <name>updateExisting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports details from NCBI Taxonomy for organisms that alrady exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="463" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="463" bodyend="500"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="725">
+        <label>TaxonomyImporter</label>
+        <link refid="dd/db1/classTaxonomyImporter"/>
+        <childnode refid="726" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="726">
+        <label>TripalImporter</label>
+        <link refid="d8/d2a/classTripalImporter"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="727">
+        <label>TaxonomyImporter</label>
+        <link refid="dd/db1/classTaxonomyImporter"/>
+        <childnode refid="728" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="728">
+        <label>TripalImporter</label>
+        <link refid="d8/d2a/classTripalImporter"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalImporter/TaxonomyImporter.inc" bodystart="3" bodyend="920"/>
+    <listofallmembers>
+      <member refid="dd/db1/classTaxonomyImporter_1a7b99e73a88be7a3e3c3e006a87c4040c" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$all_orgs</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a5e4e4c6ba47d9719ef3a75c023ffa4a9" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$argument_list</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a200b97e61e19229a51d65add9bb7021a" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$arguments</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a901d1ac490824a069647c47455ee821e" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$button_text</name></member>
+      <member refid="d8/d2a/classTripalImporter_1acebdd94e7af4c3fbf32e2a4c2c0b7476" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$callback</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a3b24df9ede01caf4bb84ffd96e88e8ad" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$callback_module</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a91ea29d3f6c2dd9fb0268be578cc14f3" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$callback_path</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a50824fec260660000424d2fde91fd5ac" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$cardinality</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1af0f0230470db0cfc4d65f51396332596" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$description</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a038180d36f93e2f29ced95a538d54809" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$file_required</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a5b7426b4180f755bdd0b9b82c0939fcf" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$file_types</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a141863335308f3ef7400fc10e8f66f18" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$import_id</name></member>
+      <member refid="d8/d2a/classTripalImporter_1ad2119678c4e0831d513846b872a0c598" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$is_prepared</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a40f48e7ad88015093030e6c4cff6ea73" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$job</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a552b66692fd570b5a07db67230758949" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$machine_name</name></member>
+      <member refid="d8/d2a/classTripalImporter_1af86c48781e49b1c92fedbb7ec9689925" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$menu_path</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1acd67eae892abbc131ec51d561b1aaa46" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$methods</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1add207eefe3543c02c35e547ad5b1d8e2" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$name</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a5b9c290bb4011491d6fdf2dd7f3fb4bd" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$phylotree</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a372982334e48ed420f2957f1fd4bf891" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$require_analysis</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a3364b771e4b63aa43471f3107f3ce001" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$tree</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1add42d7a2a0a78212982fca5964460e36" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$upload_description</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1ac1b3cdf0fafe546764bdfe95e6a2e8fa" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$upload_title</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a6919406afe79ddafcb5ebdd0cdd77c04" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>$use_analysis</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a08eebd3a98c2c67245086faea6e92264" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>__construct</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a77af0b3f8917b8f08755045f75c1f517" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>addDbxref</name></member>
+      <member refid="d8/d2a/classTripalImporter_1acb95a597698f781aa2192bc8f055a765" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>addItemsHandled</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1aa4186d4e226aa6fc933b350fef58655f" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>addOrganism</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a33d75b0120112680c0652f2c0c54e5f0" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>addProperty</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1ac18fb6f8e3558c68f2bd88e443be7a3b" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>addTaxonomyNode</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a484416cee58b2706c581936b36af3142" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>byID</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a530498add36b0380bfa541a2e124e004" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>cleanFile</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a505ffa0ae9ddbf30faf06b22d268f7ac" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>create</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1acf5df3c82f0cc8f6def816c4136c2e04" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>findOrganism</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1af1db4251759d3858d5c71ff4e4292040" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>form</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a564c192cc822d07063c864d26cc8b4c1" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>formSubmit</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a56ffa3556717cec63e132c5b672aad8a" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>formValidate</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a75fa71c4976b39df2b5d95fe5578ba46" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>getProperty</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1af5fffdf22df0fb801254fb9b9a64f571" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>importRecord</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a177874e62637b9b49f68dfeec96ef453" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>initTree</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a42ddce17cbc11fd246b66a91737e524b" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>load</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a08283b0a05f6c78d67c02f7971b60964" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>logMessage</name></member>
+      <member refid="d8/d2a/classTripalImporter_1ab1276ae93f516f2c8decb52b1075d830" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>postRun</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a08fae895648e2eb7dc1d2ce4a395f29a" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>prepareFiles</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a3ec98a83d8f70abe5de6509309ac9d97" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>rebuildTree</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1ae97ff46431f975d0c91f9d2b6e73e481" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>run</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a6b47957db5205aaf0578f8aa3d4a91c7" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>setInterval</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a4271c655b5dfc156ecd735138fb4ac35" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>setItemsHandled</name></member>
+      <member refid="d8/d2a/classTripalImporter_1af7a7c4f523f1b146f00d33fec6761329" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>setJob</name></member>
+      <member refid="d8/d2a/classTripalImporter_1af4e52710e6516713c674dce187b32454" prot="protected" virt="non-virtual"><scope>TaxonomyImporter</scope><name>setTotalItems</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a8f2c50c80f030150292a7cf9f0a1e00d" prot="public" virt="non-virtual"><scope>TaxonomyImporter</scope><name>submitJob</name></member>
+      <member refid="dd/db1/classTaxonomyImporter_1a1c18bf2a8419cc5ff6160fc776235ad6" prot="private" virt="non-virtual"><scope>TaxonomyImporter</scope><name>updateExisting</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

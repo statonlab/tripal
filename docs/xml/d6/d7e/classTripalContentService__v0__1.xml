@@ -1,0 +1,545 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d6/d7e/classTripalContentService__v0__1" kind="class" language="PHP" prot="public">
+    <compoundname>TripalContentService_v0_1</compoundname>
+    <basecompoundref refid="d3/d58/classTripalWebService" prot="public" virt="non-virtual">TripalWebService</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d6/d7e/classTripalContentService__v0__1_1aa6d5c8e8d6471134bb42b17ae19e7a59" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalContentService_v0_1::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;Provides acesss to the biological and &apos; .
+    &apos;ancilliary data available on this site. Each content type represents &apos; .
+    &apos;biological data that is defined in a controlled vocabulary (e.g. &apos; .
+    &apos;Sequence Ontology term: gene (SO:0000704)).&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A bit of text to describe what this service provides. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="13" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d7e/classTripalContentService__v0__1_1adebc2ac8e73d3e1153c32fabcad9b332" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalContentService_v0_1::$label</definition>
+        <argsstring></argsstring>
+        <name>$label</name>
+        <initializer>= &apos;Content Types&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The human-readable label for this web service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="8" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d7e/classTripalContentService__v0__1_1aaa92dc7867a817b3ba2a12294174142a" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalContentService_v0_1::$type</definition>
+        <argsstring></argsstring>
+        <name>$type</name>
+        <initializer>= &apos;content&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A machine-readable type for this service. This name must be unique among all Tripal web services and is used to form the URL to access this service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="23" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1aba13f5e61560b45e74e1f4ceb6e7c105" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::__construct</definition>
+        <argsstring>($base_path)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$base_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the constructor </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="29" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1aefc1d513270109db211d6c65129c66bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::getDocumentation</definition>
+        <argsstring>()</argsstring>
+        <name>getDocumentation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d3/d58/classTripalWebService_1a830ceb612af54096810e242ba2014496" kindref="member">TripalWebService::getDocumentation()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="36" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a44b33248bfec7eb2e7266f98d4bf0272" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::handleRequest</definition>
+        <argsstring>()</argsstring>
+        <name>handleRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d3/d58/classTripalWebService_1a52a53f597348e2626ffc1d3336c586f3" kindref="member">TripalWebService::handleRequest()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="47" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="47" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a8c995512ed9f1871c1bcdb7ce64e3c04" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::addDocBundleClasses</definition>
+        <argsstring>()</argsstring>
+        <name>addDocBundleClasses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds classes for every content type to the documentation for this service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="1075" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="1075" bodyend="1160"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a1fd85ab80ab3d10e31ab8384eef7a970" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::addDocBundleCollectionClass</definition>
+        <argsstring>($bundle, $term)</argsstring>
+        <name>addDocBundleCollectionClass</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Every content type (bundle) needs a collection class in the documentation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="1266" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="1266" bodyend="1337"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a25a5d49fc57d56c155b0a2842198633e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::addDocBundleFieldProperties</definition>
+        <argsstring>($bundle, $bundle_term)</argsstring>
+        <name>addDocBundleFieldProperties</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$bundle_term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Every content type (bundle) has fields that need to be set as properties. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="1165" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="1165" bodyend="1262"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a7eee031117b394c00a8bc1d2e1a0b274" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::addDocContentCollectionClass</definition>
+        <argsstring>()</argsstring>
+        <name>addDocContentCollectionClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the content collection class to the document for this service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="1030" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="1030" bodyend="1071"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1afa1c15eb209e15c0fed907b398407cda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::addEntityField</definition>
+        <argsstring>($resource, $term, $entity, $bundle, $field, $instance, $service_path, $expfield=NULL)</argsstring>
+        <name>addEntityField</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <param>
+          <declname>$instance</declname>
+        </param>
+        <param>
+          <declname>$service_path</declname>
+        </param>
+        <param>
+          <declname>$expfield</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the field as a property of the entity resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="341" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="341" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1ab56ac679e01a10be5d42a0034643fcd9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::addEntityFields</definition>
+        <argsstring>($resource, $entity, $bundle, $term, $service_path)</argsstring>
+        <name>addEntityFields</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$service_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the fields as properties of an entity resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="250" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="250" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a2167aff33f7175723ac1c64fc9a384f3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::checkAccess</definition>
+        <argsstring>($entity)</argsstring>
+        <name>checkAccess</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensures that user&apos;s only have access to content they should see.</para><para>Denies access to an entity if it is unpublished or if the user does not have permission to see it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The full entity object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="235" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="235" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a1c86ef267f6b1402c7ff61c00eea2c04" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::doContentTypesList</definition>
+        <argsstring>()</argsstring>
+        <name>doContentTypesList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a resources that contains the list of content types. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="973" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="973" bodyend="1024"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a430eb3f369dc6a4e2aec3a3ea258aa42" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::doEntity</definition>
+        <argsstring>($ctype, $entity_id)</argsstring>
+        <name>doEntity</name>
+        <param>
+          <declname>$ctype</declname>
+        </param>
+        <param>
+          <declname>$entity_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a resource for a single entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="185" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="185" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1af8916c90487abcf4c5525ff045b9804d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::doEntityList</definition>
+        <argsstring>($ctype)</argsstring>
+        <name>doEntityList</name>
+        <param>
+          <declname>$ctype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a collection of resources for a given type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="819" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="819" bodyend="968"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a4b8e4b80416f03a9d097251a947aca8e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::doExpandedField</definition>
+        <argsstring>($ctype, $entity_id, $expfield)</argsstring>
+        <name>doExpandedField</name>
+        <param>
+          <declname>$ctype</declname>
+        </param>
+        <param>
+          <declname>$entity_id</declname>
+        </param>
+        <param>
+          <declname>$expfield</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a resource for an expanded field of an entity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="111" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="111" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a55b1d90ef6390e163c4f67b463b448a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::findField</definition>
+        <argsstring>($bundle, $expfield)</argsstring>
+        <name>findField</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$expfield</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the field whose term matches the one provied. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="155" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="155" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a65e5b41fe63cad7bf5edd05921f437cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::getFieldFilters</definition>
+        <argsstring>($field_mapping, $bundle)</argsstring>
+        <name>getFieldFilters</name>
+        <param>
+          <declname>$field_mapping</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets any filter by statements provided by the user.</para><para>An array that maps WS keys to field names. As provided by the <ref refid="d6/d7e/classTripalContentService__v0__1_1ad86a4d156ca3e26378d038a443111b41" kindref="member">getFieldMapping()</ref> function.</para><para><simplesect kind="return"><para>An array of fields for filtering.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="704" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="704" bodyend="814"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1ad86a4d156ca3e26378d038a443111b41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::getFieldMapping</definition>
+        <argsstring>($bundle)</argsstring>
+        <name>getFieldMapping</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A helper function to make it easy to map between keys and their fields.</para><para>The bundle object. Fields attached to this bundle will be included in the mapping array. <simplesect kind="return"><para>An associative arrray that maps web servcies keys to fields and fields to web services keys (reciprocol). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="528" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="528" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1aab17d4757051733f44866ab7cca2e579" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::getOrderBy</definition>
+        <argsstring>($field_mapping, $bundle)</argsstring>
+        <name>getOrderBy</name>
+        <param>
+          <declname>$field_mapping</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets any order by statements provided by the user.</para><para>An array that maps WS keys to field names. As provided by the <ref refid="d6/d7e/classTripalContentService__v0__1_1ad86a4d156ca3e26378d038a443111b41" kindref="member">getFieldMapping()</ref> function. <simplesect kind="return"><para>An array of fields for ordering.</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="567" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="567" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1a517b06412319bdaadf8aa6a2e398444d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::sanitizeFieldEntity</definition>
+        <argsstring>(&amp;$items, $service_path)</argsstring>
+        <name>sanitizeFieldEntity</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$service_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rewrites any <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> elements in the values array for use with WS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="494" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="494" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7e/classTripalContentService__v0__1_1aa87acc7e51a4d639bf43e1f1e6dcc283" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalContentService_v0_1::sanitizeFieldKeys</definition>
+        <argsstring>($resource, $value, $bundle, $service_path)</argsstring>
+        <name>sanitizeFieldKeys</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$service_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rewrites the keys of a field&apos;s items array for use with web services. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="438" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="438" bodyend="489"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="924">
+        <label>TripalContentService_v0_1</label>
+        <link refid="d6/d7e/classTripalContentService__v0__1"/>
+        <childnode refid="925" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="925">
+        <label>TripalWebService</label>
+        <link refid="d3/d58/classTripalWebService"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="926">
+        <label>TripalContentService_v0_1</label>
+        <link refid="d6/d7e/classTripalContentService__v0__1"/>
+        <childnode refid="927" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="927">
+        <label>TripalWebService</label>
+        <link refid="d3/d58/classTripalWebService"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" line="3" column="1" bodyfile="tripal_ws/includes/TripalWebService/TripalContentService_v0_1.inc" bodystart="3" bodyend="1339"/>
+    <listofallmembers>
+      <member refid="d3/d58/classTripalWebService_1a52d3a69e3abfe6007a4352248aa89a15" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$base_path</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1aa6d5c8e8d6471134bb42b17ae19e7a59" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$description</name></member>
+      <member refid="d3/d58/classTripalWebService_1ab31529b3076835cbf796b3f0883a7fe6" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$documentation</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1adebc2ac8e73d3e1153c32fabcad9b332" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$label</name></member>
+      <member refid="d3/d58/classTripalWebService_1a77ad02048ca62edf6c770784b29875f6" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$params</name></member>
+      <member refid="d3/d58/classTripalWebService_1aa84f09a2fcab44cce601288930a9172a" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$path</name></member>
+      <member refid="d3/d58/classTripalWebService_1a757331b4cfb058f2ae138ab308347278" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$resource</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1aaa92dc7867a817b3ba2a12294174142a" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>$type</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1aba13f5e61560b45e74e1f4ceb6e7c105" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>__construct</name></member>
+      <member refid="d3/d58/classTripalWebService_1a7f34a7db694a4791f339f59f91ef423d" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addContextTerm</name></member>
+      <member refid="d3/d58/classTripalWebService_1a374d8f21fd860ba960f014807156d09d" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addContextVocab</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a8c995512ed9f1871c1bcdb7ce64e3c04" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addDocBundleClasses</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a1fd85ab80ab3d10e31ab8384eef7a970" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addDocBundleCollectionClass</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a25a5d49fc57d56c155b0a2842198633e" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addDocBundleFieldProperties</name></member>
+      <member refid="d3/d58/classTripalWebService_1a851defce188f39f33afb81a43fd2f2a5" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addDocClass</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a7eee031117b394c00a8bc1d2e1a0b274" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addDocContentCollectionClass</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1afa1c15eb209e15c0fed907b398407cda" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addEntityField</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1ab56ac679e01a10be5d42a0034643fcd9" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addEntityFields</name></member>
+      <member refid="d3/d58/classTripalWebService_1a83b9b49ce82a7d362236141beb57daea" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>addResourceProperty</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a2167aff33f7175723ac1c64fc9a384f3" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>checkAccess</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a1c86ef267f6b1402c7ff61c00eea2c04" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>doContentTypesList</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a430eb3f369dc6a4e2aec3a3ea258aa42" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>doEntity</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1af8916c90487abcf4c5525ff045b9804d" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>doEntityList</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a4b8e4b80416f03a9d097251a947aca8e" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>doExpandedField</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a55b1d90ef6390e163c4f67b463b448a1" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>findField</name></member>
+      <member refid="d3/d58/classTripalWebService_1aaeaeacba9e4dc15171810f31bcd39e1a" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getContext</name></member>
+      <member refid="d3/d58/classTripalWebService_1a952aaf9eefaf65aba1a39f2ac9f62890" prot="protected" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getContextTerm</name></member>
+      <member refid="d3/d58/classTripalWebService_1a5c08241025a7a09943e7c6ed16aa61e2" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getData</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1aefc1d513270109db211d6c65129c66bb" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getDocumentation</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a65e5b41fe63cad7bf5edd05921f437cf" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getFieldFilters</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1ad86a4d156ca3e26378d038a443111b41" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getFieldMapping</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1aab17d4757051733f44866ab7cca2e579" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getOrderBy</name></member>
+      <member refid="d3/d58/classTripalWebService_1a5b999ac30ef7c5023be6f0a494dda80e" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getResponse</name></member>
+      <member refid="d3/d58/classTripalWebService_1ab40ef0f1804047254e86d1c88989aae6" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getServicePath</name></member>
+      <member refid="d3/d58/classTripalWebService_1a95350af75567ba36f444a2f7a2b0998c" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>getVersion</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a44b33248bfec7eb2e7266f98d4bf0272" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>handleRequest</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1a517b06412319bdaadf8aa6a2e398444d" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>sanitizeFieldEntity</name></member>
+      <member refid="d6/d7e/classTripalContentService__v0__1_1aa87acc7e51a4d639bf43e1f1e6dcc283" prot="private" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>sanitizeFieldKeys</name></member>
+      <member refid="d3/d58/classTripalWebService_1a84b3561f5d59f629144b583696bd0fff" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>setError</name></member>
+      <member refid="d3/d58/classTripalWebService_1a1cd2b31a0671984424033e8327576299" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>setParams</name></member>
+      <member refid="d3/d58/classTripalWebService_1af36757f68966c2fc0af38ec43b989705" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>setPath</name></member>
+      <member refid="d3/d58/classTripalWebService_1ac2bc72342a2829abb09a6fb98b79c256" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>setResource</name></member>
+      <member refid="d3/d58/classTripalWebService_1a7e9acfc856c103d03618f1b4996266df" prot="public" virt="non-virtual"><scope>TripalContentService_v0_1</scope><name>setResourceType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

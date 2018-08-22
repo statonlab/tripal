@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="db/dfb/tripal__phenotype__help_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_phenotype_help.tpl.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;h3&gt;Tripal<sp/>Phenotype<sp/><ref refid="d2/d60/tripal__organism__help_8tpl_8php_1a3a16ad4c29f1655bacb90adeedb740f0" kindref="member">Module</ref>&lt;/h3&gt;</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_phenotype/theme/templates/tripal_phenotype_help.tpl.php"/>
+  </compounddef>
+</doxygen>

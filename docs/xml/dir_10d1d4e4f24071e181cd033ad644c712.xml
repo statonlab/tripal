@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_10d1d4e4f24071e181cd033ad644c712" kind="dir">
+    <compoundname>tripal_ws/includes</compoundname>
+    <innerdir refid="dir_d47719437f8293fc6295ccd8eaebfd64">tripal_ws/includes/TripalFields</innerdir>
+    <innerdir refid="dir_1f2a3b35890695a89e262831f1f3b548">tripal_ws/includes/TripalWebService</innerdir>
+    <innerfile refid="dc/dcd/tripal__ws_8admin_8inc">tripal_ws.admin.inc</innerfile>
+    <innerfile refid="d5/dd2/tripal__ws_8field__storage_8inc">tripal_ws.field_storage.inc</innerfile>
+    <innerfile refid="d8/d74/tripal__ws_8fields_8inc">tripal_ws.fields.inc</innerfile>
+    <innerfile refid="d7/deb/TripalWebService_8inc">TripalWebService.inc</innerfile>
+    <innerfile refid="df/d27/TripalWebServiceCollection_8inc">TripalWebServiceCollection.inc</innerfile>
+    <innerfile refid="d0/dfd/TripalWebServiceResource_8inc">TripalWebServiceResource.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_ws/includes/"/>
+  </compounddef>
+</doxygen>

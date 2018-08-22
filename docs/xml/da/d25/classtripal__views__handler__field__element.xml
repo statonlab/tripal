@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="da/d25/classtripal__views__handler__field__element" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_field_element</compoundname>
+    <basecompoundref refid="d9/d4d/classtripal__views__handler__field" prot="public" virt="non-virtual">tripal_views_handler_field</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/d25/classtripal__views__handler__field__element_1a54b5f87538db59e8a5fc9b0b209ce737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_element::get_value</definition>
+        <argsstring>($values, $field=NULL)</argsstring>
+        <name>get_value</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$field</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the value that&apos;s supposed to be rendered.</para><para>This api exists so that other modules can easy set the values of the field without having the need to change the render method as well.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object containing all retrieved values. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional name of the field where the value is stored. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_element.inc" line="35" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_element.inc" bodystart="35" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d25/classtripal__views__handler__field__element_1a397cdb73071b3d44405fe6e46a40e0fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_element::query</definition>
+        <argsstring>()</argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_element.inc" line="14" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_element.inc" bodystart="14" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d25/classtripal__views__handler__field__element_1a0630479407ab79b51b6cc6eecead7812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_element::render</definition>
+        <argsstring>($values)</argsstring>
+        <name>render</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Render the field.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The values retrieved from the database. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_element.inc" line="53" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_element.inc" bodystart="53" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="da/d25/classtripal__views__handler__field__element_1a9b450742d6adc3274dea7123b20a18a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_field_element::_get_element_value</definition>
+        <argsstring>($elements, $item_values)</argsstring>
+        <name>_get_element_value</name>
+        <param>
+          <declname>$elements</declname>
+        </param>
+        <param>
+          <declname>$item_values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A recursive function for retrieving a nested element value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_field_element.inc" line="116" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_element.inc" bodystart="116" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Views field handler for basic TripalFields fields. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="772">
+        <label>tripal_views_handler_field_element</label>
+        <link refid="da/d25/classtripal__views__handler__field__element"/>
+        <childnode refid="773" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="773">
+        <label>tripal_views_handler_field</label>
+        <link refid="d9/d4d/classtripal__views__handler__field"/>
+        <childnode refid="774" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="774">
+        <label>views_handler_field</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="775">
+        <label>tripal_views_handler_field_element</label>
+        <link refid="da/d25/classtripal__views__handler__field__element"/>
+        <childnode refid="776" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>tripal_views_handler_field</label>
+        <link refid="d9/d4d/classtripal__views__handler__field"/>
+        <childnode refid="777" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="777">
+        <label>views_handler_field</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/views_handlers/tripal_views_handler_field_element.inc" line="10" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_field_element.inc" bodystart="10" bodyend="125"/>
+    <listofallmembers>
+      <member refid="da/d25/classtripal__views__handler__field__element_1a9b450742d6adc3274dea7123b20a18a4" prot="private" virt="non-virtual"><scope>tripal_views_handler_field_element</scope><name>_get_element_value</name></member>
+      <member refid="d9/d4d/classtripal__views__handler__field_1ad28a43fccf570d56b9157ef408a56d58" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_element</scope><name>click_sort</name></member>
+      <member refid="da/d25/classtripal__views__handler__field__element_1a54b5f87538db59e8a5fc9b0b209ce737" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_element</scope><name>get_value</name></member>
+      <member refid="da/d25/classtripal__views__handler__field__element_1a397cdb73071b3d44405fe6e46a40e0fe" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_element</scope><name>query</name></member>
+      <member refid="da/d25/classtripal__views__handler__field__element_1a0630479407ab79b51b6cc6eecead7812" prot="public" virt="non-virtual"><scope>tripal_views_handler_field_element</scope><name>render</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

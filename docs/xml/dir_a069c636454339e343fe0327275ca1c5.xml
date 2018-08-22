@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a069c636454339e343fe0327275ca1c5" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/sbo__database_cross_reference</compoundname>
+    <innerfile refid="d8/d64/sbo____database__cross__reference_8inc">sbo__database_cross_reference.inc</innerfile>
+    <innerfile refid="de/df4/sbo____database__cross__reference__formatter_8inc">sbo__database_cross_reference_formatter.inc</innerfile>
+    <innerfile refid="d2/dab/sbo____database__cross__reference__widget_8inc">sbo__database_cross_reference_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/sbo__database_cross_reference/"/>
+  </compounddef>
+</doxygen>

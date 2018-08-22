@@ -1,0 +1,721 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d3/d58/classTripalWebService" kind="class" language="PHP" prot="public">
+    <compoundname>TripalWebService</compoundname>
+    <derivedcompoundref refid="d6/d7e/classTripalContentService__v0__1" prot="public" virt="non-virtual">TripalContentService_v0_1</derivedcompoundref>
+    <derivedcompoundref refid="db/db2/classTripalDocService__v0__1" prot="public" virt="non-virtual">TripalDocService_v0_1</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1afcf39b1d6ad5ba667fe5708d9f2a3cfc" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalWebService::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;This is the base class for Tripal web services as is not meant to be used on it\&apos;s own&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A bit of text to describe what this service provides. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="19" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1a7c69acacdbce0147491b11c08f1b1ba9" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalWebService::$label</definition>
+        <argsstring></argsstring>
+        <name>$label</name>
+        <initializer>= &apos;Base WebService&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The human-readable label for this web service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="15" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1af55283d6fc209c9d54067cc651c03203" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>TripalWebService::$type</definition>
+        <argsstring></argsstring>
+        <name>$type</name>
+        <initializer>= &apos;services&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A machine-readable type for this service. This name must be unique among all Tripal web services and is used to form the URL to access this service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="25" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1a52d3a69e3abfe6007a4352248aa89a15" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebService::$base_path</definition>
+        <argsstring></argsstring>
+        <name>$base_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The URL at which Tripal web services are found. This is used for creating the IRI for resources. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="55" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1ab31529b3076835cbf796b3f0883a7fe6" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebService::$documentation</definition>
+        <argsstring></argsstring>
+        <name>$documentation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The list of documented classes used by this service. For the web service to be discoverable all of the entity classes and their collections must be defined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="62" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1a77ad02048ca62edf6c770784b29875f6" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebService::$params</definition>
+        <argsstring></argsstring>
+        <name>$params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The set of paramters provided to the sesrvice. These are the values that would occur in a URL after the question mark in an HTTP GET or the data items of an HTTP POST. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="49" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1aa84f09a2fcab44cce601288930a9172a" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebService::$path</definition>
+        <argsstring></argsstring>
+        <name>$path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An array containing the elements of the URL path. Each level of the URL appears in a separate element of the array. The service type and version are automatically removed from the array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="42" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d58/classTripalWebService_1a757331b4cfb058f2ae138ab308347278" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>TripalWebService::$resource</definition>
+        <argsstring></argsstring>
+        <name>$resource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The resource that will be returned by the webservice given the arguments provided. This is a private </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="35" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1ac5be8e9608e593872165efc457b6a89d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::__construct</definition>
+        <argsstring>($base_path)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$base_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements the constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="70" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="70" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a83b9b49ce82a7d362236141beb57daea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::addResourceProperty</definition>
+        <argsstring>($resource, $term, $value, $sanitize=array())</argsstring>
+        <name>addResourceProperty</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <param>
+          <declname>$sanitize</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a key/value property to the given resource.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term array for the key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$santize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of keywords indicating how to santize the key. By default, no sanitizing occurs. The two valid types are &apos;lowercase&apos;, and &apos;spacing&apos; where &apos;lowercase&apos; converts the term name to all lowercase and &apos;spacing&apos; replaces any spaces with underscores. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>$key The key (the term name but with spaces replaced with underscores). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="704" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="704" bodyend="714"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1aaeaeacba9e4dc15171810f31bcd39e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::getContext</definition>
+        <argsstring>()</argsstring>
+        <name>getContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the context section of the response.</para><para>The JSON-LD response constists of two sections the &apos;&apos; section and the data section. This function only returns the context section of the response.</para><para><simplesect kind="return"><para>An associative array containing the context section of the response. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="188" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="188" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a5c08241025a7a09943e7c6ed16aa61e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::getData</definition>
+        <argsstring>()</argsstring>
+        <name>getData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the data section of the response.</para><para>The JSON-LD response constists of two sections the &apos;&apos; section and the data section. This function only returns the data section of the response.</para><para><simplesect kind="return"><para>An associative array containing the data section of the response. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="280" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="280" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a830ceb612af54096810e242ba2014496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::getDocumentation</definition>
+        <argsstring>()</argsstring>
+        <name>getDocumentation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves an array contining the supported classes.</para><para>Supported classe are resources provided by this web services and the operations supported by those classes.</para><para><simplesect kind="return"><para>An array of <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> objects that follow the Hydra documentation for documenting supported classes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="329" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="329" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a5b999ac30ef7c5023be6f0a494dda80e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::getResponse</definition>
+        <argsstring>()</argsstring>
+        <name>getResponse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the full web service response.</para><para>The response includes both the  and data sections of the JSON-LD response.</para><para><simplesect kind="return"><para>An associative array containing that can be converted to JSON. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="203" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="203" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1ab40ef0f1804047254e86d1c88989aae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::getServicePath</definition>
+        <argsstring>()</argsstring>
+        <name>getServicePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the service URL for this service. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="263" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="263" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a95350af75567ba36f444a2f7a2b0998c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::getVersion</definition>
+        <argsstring>($sanitize=FALSE)</argsstring>
+        <name>getVersion</name>
+        <param>
+          <declname>$sanitize</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the version number for this web service.</para><para>Each web service must have version number built into the name of the class. The version number appears at the end of the class name, begins with a lower-case &apos;v&apos; and is followed by two numbers (major and minor) that are separated by an underscore. This function identifies the version from the class name and returns it here in a human-readable format.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$sanitize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE to convert the period to underscore.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The version number for this web service. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="160" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="160" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a52a53f597348e2626ffc1d3336c586f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::handleRequest</definition>
+        <argsstring>()</argsstring>
+        <name>handleRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Responds to the request argument provided to the service.</para><para>This function should be implemented by a <ref refid="d3/d58/classTripalWebService" kindref="compound">TripalWebService</ref> child class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="104" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a84b3561f5d59f629144b583696bd0fff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::setError</definition>
+        <argsstring>($message)</argsstring>
+        <name>setError</name>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set an error for the service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error message to report. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="311" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="311" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a1cd2b31a0671984424033e8327576299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::setParams</definition>
+        <argsstring>($params)</argsstring>
+        <name>setParams</name>
+        <param>
+          <declname>$params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the parameters for the resource.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of paramters provided to the sesrvice. These are the values that would occur in a URL after the question mark in an HTTP GET or the data items of an HTTP POST. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="141" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1af36757f68966c2fc0af38ec43b989705" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::setPath</definition>
+        <argsstring>($path)</argsstring>
+        <name>setPath</name>
+        <param>
+          <declname>$path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the URL path for the resource being called.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array containing the elements of the URL path. Each level of the URL appears in a separate element of the array. The service type and version are automatically removed from the array. For example, a URL of the type <ulink url="http://localhost/web-services/content/v0.1/Gene/sequence">http://localhost/web-services/content/v0.1/Gene/sequence</ulink> will result in a $path array containing the following: <programlisting><codeline><highlight class="normal">array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;Gene&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;sequence&apos;,</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+</programlisting></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="130" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1ac2bc72342a2829abb09a6fb98b79c256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::setResource</definition>
+        <argsstring>($resource)</argsstring>
+        <name>setResource</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the resource to be returned by this web service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$resource.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An implementation of a <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="294" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="294" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a7e9acfc856c103d03618f1b4996266df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::setResourceType</definition>
+        <argsstring>($resource, $term, $sanitize=array(&apos;spacing&apos;))</argsstring>
+        <name>setResourceType</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$sanitize</declname>
+          <defval>array(&apos;spacing&apos;)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the type for the given resource.</para><para>The type exist in the context of the web service.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$santize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of keywords indicating how to santize the key. By default, no sanitizing occurs. The two valid types are &apos;lowercase&apos;, and &apos;spacing&apos; where &apos;lowercase&apos; converts the term name to all lowercase and &apos;spacing&apos; replaces any spaces with underscores. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="730" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="730" bodyend="740"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a7f34a7db694a4791f339f59f91ef423d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::addContextTerm</definition>
+        <argsstring>($resource, $term, $sanitize=array())</argsstring>
+        <name>addContextTerm</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$sanitize</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a term to the &apos;&apos; section for a given resource.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$santize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of keywords indicating how to santize the key. By default, no sanitizing occurs. The two valid types are &apos;lowercase&apos;, and &apos;spacing&apos; where &apos;lowercase&apos; converts the term name to all lowercase and &apos;spacing&apos; replaces any spaces with underscores. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The id (the term name but with spaces replaced with underscores). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="626" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="626" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a374d8f21fd860ba960f014807156d09d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::addContextVocab</definition>
+        <argsstring>($resource, $vocab)</argsstring>
+        <name>addContextVocab</name>
+        <param>
+          <declname>$resource</declname>
+        </param>
+        <param>
+          <declname>$vocab</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a vocabulary to the &apos;&apos; section for a given resource.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$resource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> instance. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$vocab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary array. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="672" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="672" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a851defce188f39f33afb81a43fd2f2a5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::addDocClass</definition>
+        <argsstring>($details=array(), $ops=array(), $props=array())</argsstring>
+        <name>addDocClass</name>
+        <param>
+          <declname>$details</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$ops</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$props</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines an entity class for the web services.</para><para>A class defines a resource including information about its properties and the actions that can be performed. Each class as a unique , title, type and description. The $details parameter is used to provide this information. Additionally, a resource may support Create, Read Update and Delete (CRUD) operations. Those are defined using the $ops argument. Finally, resources may have properties (or fields). These properties should be defined using the $props arugment.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$details.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key/value pairs providing the details for the class. Valid keys include:<itemizedlist>
+<listitem><para>id: The unique IRI for this class.</para></listitem><listitem><para>term: the accession for the term for this class.</para></listitem><listitem><para>title: The title for the resource that this Class represents.</para></listitem><listitem><para>description: (Optional). A description of the resource.</para></listitem><listitem><para>subClassOf: (Optional). If this class is a subclass of another class then the value should be the  of the parent class. This defaults to hydra:Resource. If no subClass is desired, set it to NULL.</para></listitem><listitem><para>type: (Optional). Indicates the type of class. Defaults to hydra:Class </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$ops</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the resource supports CRUD functionality then those functions should be defined using this argument. This is an associative array with the following keys: GET, POST, PUT, DELETE. These keys, if provided, indicate that a resource of this type can be retrieved (GET), created (POST), updated (PUT) or deleted (DELETE). The value for each key should be an associative array that supports the following keys: = type: the  that determines the type of operation. This type should be specific to the resource, and it need not be a term from a real vocabulary. Use the &apos;_:&apos; prefix for the term. For example, for an &apos;Event&apos; resource with a GET method, an appropriate type would be &apos;_:event_retrieve&apos;.<itemizedlist>
+<listitem><para>label: A label that describes the operation in the context of the resource.</para></listitem><listitem><para>description: A description for the operation. Can be set to NULL for no description.</para></listitem><listitem><para>expects: The information expected by the Web API.</para></listitem><listitem><para>returns: The  of a Class that will be returned by the operation. Set to NULL if there is no return value.</para></listitem><listitem><para>statusCodes: An array of status codes that could be returned when an error occurs. Each element of the array is an associative array with two key/value pairs: &apos;code&apos; and &apos;description&apos;. Set the &apos;code&apos; to be the HTTP code that can be returned on error and the &apos;description&apos; to an error message appropriate for the error. For example an HTTP 404 error means &quot;Not Found&quot;. You can sepecify this code and provide a description appropriate for the method and class. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$props.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines the list of properties that the resource provides. This is an array of properties where each property is an associative array containing the following keys:<itemizedlist>
+<listitem><para>type: The  of the type of property. Alternatively, this can be an instance of a <ref refid="d7/df0/classTripalWebServiceResource" kindref="compound">TripalWebServiceResource</ref> when the property must support operations such as a property of type hydra:Link.</para></listitem><listitem><para>title: (Optional). The human-readable title of this property. If this key is absent then the title will be set to the term&apos;s title.</para></listitem><listitem><para>description: (Optional). A short description of this property. If this key is absent then the description will be set to the term&apos;s description.</para></listitem><listitem><para>required: Set to TRUE to indicate if this property is a required field when creating a new resource.</para></listitem><listitem><para>readable: Set to TRUE to indicate that the client can retrieve the property&apos;s value? altered by an update.</para></listitem><listitem><para>writeable: Set to TRUE if the client can alter the value of the property.</para></listitem><listitem><para>domain: the  of the rdfs:domain.</para></listitem><listitem><para>range: the  of the rdfs:range. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="406" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="406" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a952aaf9eefaf65aba1a39f2ac9f62890" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::getContextTerm</definition>
+        <argsstring>($term, $sanitize=array())</argsstring>
+        <name>getContextTerm</name>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$sanitize</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a term array into an value appropriate for an  or .</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The term array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$santize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of keywords indicating how to santize the key. By default, no sanitizing occurs. The two valid types are &apos;lowercase&apos;, and &apos;spacing&apos; where &apos;lowercase&apos; converts the term name to all lowercase and &apos;spacing&apos; replaces any spaces with underscores.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The id (the term name but with spaces replaced with underscores). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="591" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="591" bodyend="610"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1aa8dd9ae4e4fe942ed077ce4dd3e52ba0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::generateDocClassOp</definition>
+        <argsstring>($supported_class, $op, $op_details)</argsstring>
+        <name>generateDocClassOp</name>
+        <param>
+          <declname>$supported_class</declname>
+        </param>
+        <param>
+          <declname>$op</declname>
+        </param>
+        <param>
+          <declname>$op_details</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A helper function for the addClass() function for generating an operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="512" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="512" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d58/classTripalWebService_1a01356f50b53e3f73b87a21bc1111060c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalWebService::generateDocClassProp</definition>
+        <argsstring>($supported_class, $prop)</argsstring>
+        <name>generateDocClassProp</name>
+        <param>
+          <declname>$supported_class</declname>
+        </param>
+        <param>
+          <declname>$prop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A helper function for the addClass() function for generating a property. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalWebService.inc" line="467" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="467" bodyend="508"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1137">
+        <label>TripalDocService_v0_1</label>
+        <link refid="db/db2/classTripalDocService__v0__1"/>
+        <childnode refid="1135" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1136">
+        <label>TripalContentService_v0_1</label>
+        <link refid="d6/d7e/classTripalContentService__v0__1"/>
+        <childnode refid="1135" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1135">
+        <label>TripalWebService</label>
+        <link refid="d3/d58/classTripalWebService"/>
+      </node>
+    </inheritancegraph>
+    <location file="tripal_ws/includes/TripalWebService.inc" line="3" column="1" bodyfile="tripal_ws/includes/TripalWebService.inc" bodystart="3" bodyend="741"/>
+    <listofallmembers>
+      <member refid="d3/d58/classTripalWebService_1a52d3a69e3abfe6007a4352248aa89a15" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>$base_path</name></member>
+      <member refid="d3/d58/classTripalWebService_1afcf39b1d6ad5ba667fe5708d9f2a3cfc" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>$description</name></member>
+      <member refid="d3/d58/classTripalWebService_1ab31529b3076835cbf796b3f0883a7fe6" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>$documentation</name></member>
+      <member refid="d3/d58/classTripalWebService_1a7c69acacdbce0147491b11c08f1b1ba9" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>$label</name></member>
+      <member refid="d3/d58/classTripalWebService_1a77ad02048ca62edf6c770784b29875f6" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>$params</name></member>
+      <member refid="d3/d58/classTripalWebService_1aa84f09a2fcab44cce601288930a9172a" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>$path</name></member>
+      <member refid="d3/d58/classTripalWebService_1a757331b4cfb058f2ae138ab308347278" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>$resource</name></member>
+      <member refid="d3/d58/classTripalWebService_1af55283d6fc209c9d54067cc651c03203" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>$type</name></member>
+      <member refid="d3/d58/classTripalWebService_1ac5be8e9608e593872165efc457b6a89d" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>__construct</name></member>
+      <member refid="d3/d58/classTripalWebService_1a7f34a7db694a4791f339f59f91ef423d" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>addContextTerm</name></member>
+      <member refid="d3/d58/classTripalWebService_1a374d8f21fd860ba960f014807156d09d" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>addContextVocab</name></member>
+      <member refid="d3/d58/classTripalWebService_1a851defce188f39f33afb81a43fd2f2a5" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>addDocClass</name></member>
+      <member refid="d3/d58/classTripalWebService_1a83b9b49ce82a7d362236141beb57daea" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>addResourceProperty</name></member>
+      <member refid="d3/d58/classTripalWebService_1aa8dd9ae4e4fe942ed077ce4dd3e52ba0" prot="private" virt="non-virtual"><scope>TripalWebService</scope><name>generateDocClassOp</name></member>
+      <member refid="d3/d58/classTripalWebService_1a01356f50b53e3f73b87a21bc1111060c" prot="private" virt="non-virtual"><scope>TripalWebService</scope><name>generateDocClassProp</name></member>
+      <member refid="d3/d58/classTripalWebService_1aaeaeacba9e4dc15171810f31bcd39e1a" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>getContext</name></member>
+      <member refid="d3/d58/classTripalWebService_1a952aaf9eefaf65aba1a39f2ac9f62890" prot="protected" virt="non-virtual"><scope>TripalWebService</scope><name>getContextTerm</name></member>
+      <member refid="d3/d58/classTripalWebService_1a5c08241025a7a09943e7c6ed16aa61e2" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>getData</name></member>
+      <member refid="d3/d58/classTripalWebService_1a830ceb612af54096810e242ba2014496" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>getDocumentation</name></member>
+      <member refid="d3/d58/classTripalWebService_1a5b999ac30ef7c5023be6f0a494dda80e" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>getResponse</name></member>
+      <member refid="d3/d58/classTripalWebService_1ab40ef0f1804047254e86d1c88989aae6" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>getServicePath</name></member>
+      <member refid="d3/d58/classTripalWebService_1a95350af75567ba36f444a2f7a2b0998c" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>getVersion</name></member>
+      <member refid="d3/d58/classTripalWebService_1a52a53f597348e2626ffc1d3336c586f3" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>handleRequest</name></member>
+      <member refid="d3/d58/classTripalWebService_1a84b3561f5d59f629144b583696bd0fff" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>setError</name></member>
+      <member refid="d3/d58/classTripalWebService_1a1cd2b31a0671984424033e8327576299" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>setParams</name></member>
+      <member refid="d3/d58/classTripalWebService_1af36757f68966c2fc0af38ec43b989705" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>setPath</name></member>
+      <member refid="d3/d58/classTripalWebService_1ac2bc72342a2829abb09a6fb98b79c256" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>setResource</name></member>
+      <member refid="d3/d58/classTripalWebService_1a7e9acfc856c103d03618f1b4996266df" prot="public" virt="non-virtual"><scope>TripalWebService</scope><name>setResourceType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

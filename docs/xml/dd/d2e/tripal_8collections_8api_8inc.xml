@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/d2e/tripal_8collections_8api_8inc" kind="file" language="PHP">
+    <compoundname>tripal.collections.api.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/d7f/group__tripal__data__collections__api_1ga80cdddb4f48ea7e1d2ddfc0a8402e00f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_create_collection</definition>
+        <argsstring>($details)</argsstring>
+        <name>tripal_create_collection</name>
+        <param>
+          <declname>$details</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a collection of entities for a given user.</para><para>Use this function if you want to create a new collection with an bundle. Otherwise, a new colleciton can also be created by creating an new instance of a <ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref> object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An association array containing the details for a collection. The details must include the following key/value pairs:<itemizedlist>
+<listitem><para>uid: The ID of the user that owns the collection</para></listitem><listitem><para>collection_name: The name of the collection</para></listitem><listitem><para>bundle_name: The name of the <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> content type.</para></listitem><listitem><para>ids: An array of the entity IDs that form the collection.</para></listitem><listitem><para>fields: An array of the field IDs that the collection is limited to.</para></listitem><listitem><para>description: A user supplied description for the collection.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref> An instance of a <ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref> class or FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.collections.api.inc" line="47" column="1" bodyfile="tripal/api/tripal.collections.api.inc" bodystart="47" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d7f/group__tripal__data__collections__api_1ga1f7f4e6bc70b3e635a67fb22acf49472" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_create_collection_files</definition>
+        <argsstring>($collection_id, TripalJob $job=NULL)</argsstring>
+        <name>tripal_create_collection_files</name>
+        <param>
+          <declname>$collection_id</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d64/classTripalJob" kindref="compound">TripalJob</ref></type>
+          <declname>$job</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates the downloadable files for a Collection</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype><ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref></parametertype>
+<parametername>$collection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.collections.api.inc" line="190" column="1" bodyfile="tripal/api/tripal.collections.api.inc" bodystart="190" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d7f/group__tripal__data__collections__api_1ga2b4d8e4a5de96ff88aef4c92a8622dd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_expire_collections</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_expire_collections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes all collections that have surpassed their lifespan </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.collections.api.inc" line="111" column="1" bodyfile="tripal/api/tripal.collections.api.inc" bodystart="111" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d7f/group__tripal__data__collections__api_1gab600a75804de668345ada76b448ea3ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_collection</definition>
+        <argsstring>($values)</argsstring>
+        <name>tripal_get_collection</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve a collection using the collection ID</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key/value pairs to uniquely identify a collection. The following keys can be used:<itemizedlist>
+<listitem><para>collection_id: The numeric value for the collection.</para></listitem><listitem><para>uid: The ID of the user that owns the collection. This key must always be used with the &apos;name&apos; key.</para></listitem><listitem><para>name: The name of the collection. This key must always be used with the &apos;uid&apos; key.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An instance of a <ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref> class or FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.collections.api.inc" line="145" column="1" bodyfile="tripal/api/tripal.collections.api.inc" bodystart="145" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d7f/group__tripal__data__collections__api_1ga0b9268491de24c233b7c1c11cf71e1b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_user_collections</definition>
+        <argsstring>($uid)</argsstring>
+        <name>tripal_get_user_collections</name>
+        <param>
+          <declname>$uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves an array of collections for a user.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$uid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The User ID</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of <ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref> objects. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.collections.api.inc" line="84" column="1" bodyfile="tripal/api/tripal.collections.api.inc" bodystart="84" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides the API for working with Data collections. This includes creation, experiation, and retreival. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="da/d7f/group__tripal__data__collections__api_1ga80cdddb4f48ea7e1d2ddfc0a8402e00f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d7f/group__tripal__data__collections__api_1ga80cdddb4f48ea7e1d2ddfc0a8402e00f" kindref="member">tripal_create_collection</ref>($details)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>global<sp/>$user;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection-&gt;create($details);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection_id<sp/>=<sp/>$collection-&gt;getCollectionID();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection-&gt;addBundle($details);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&quot;Collection<sp/>&apos;%name&apos;<sp/>created<sp/>with<sp/>%num_recs<sp/>record(s).<sp/>Check<sp/>the<sp/>!view<sp/>to<sp/>generate<sp/>file<sp/>links.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>array(</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$details[</highlight><highlight class="stringliteral">&apos;collection_name&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;%num_recs&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>count($details[</highlight><highlight class="stringliteral">&apos;ids&apos;</highlight><highlight class="normal">]),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;!view&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>l(</highlight><highlight class="stringliteral">&apos;data<sp/>collections<sp/>page&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;user/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$user-&gt;uid<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/data-collections&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>))</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$collection;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>the<sp/>collection<sp/>&apos;%name&apos;:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$e-&gt;getMessage(),<sp/>array(</highlight><highlight class="stringliteral">&apos;%name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><sp/>$details[</highlight><highlight class="stringliteral">&apos;collection_name&apos;</highlight><highlight class="normal">])),<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="da/d7f/group__tripal__data__collections__api_1ga0b9268491de24c233b7c1c11cf71e1b1" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d7f/group__tripal__data__collections__api_1ga0b9268491de24c233b7c1c11cf71e1b1" kindref="member">tripal_get_user_collections</ref>($uid)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$uid)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;tripal_get_user_collections:<sp/>Missing<sp/>the<sp/>$uid<sp/>argument.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>$user<sp/>=<sp/>user_load($uid);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$user)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;tripal_get_user_collections:<sp/>Invalid<sp/>$uid<sp/>provided.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="d3/dcf/tripal__stock__collections_8tpl_8php_1afa3cf72ede37d409b36b0d8719280466" kindref="member">$collections</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref><sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_collection&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;tc&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;tc&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;collection_id&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;uid&apos;</highlight><highlight class="normal">,<sp/>$uid)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;execute();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($collection_id<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref>-&gt;fetchField())<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection-&gt;load($collection_id);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/dcf/tripal__stock__collections_8tpl_8php_1afa3cf72ede37d409b36b0d8719280466" kindref="member">$collections</ref>[]<sp/>=<sp/>$collection;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d3/dcf/tripal__stock__collections_8tpl_8php_1afa3cf72ede37d409b36b0d8719280466" kindref="member">$collections</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="da/d7f/group__tripal__data__collections__api_1ga2b4d8e4a5de96ff88aef4c92a8622dd7" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d7f/group__tripal__data__collections__api_1ga2b4d8e4a5de96ff88aef4c92a8622dd7" kindref="member">tripal_expire_collections</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>$max_days<sp/>=<sp/>variable_get(</highlight><highlight class="stringliteral">&apos;tripal_data_collections_lifespan&apos;</highlight><highlight class="normal">,<sp/>30);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>$ctime<sp/>=<sp/>time();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>$query<sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_collection&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;tc&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>$query-&gt;fields(</highlight><highlight class="stringliteral">&apos;tc&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;collection_id&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>$query-&gt;where(</highlight><highlight class="stringliteral">&quot;((($ctime<sp/>-<sp/>create_date)<sp/>/<sp/>60)<sp/>/<sp/>60)<sp/>/<sp/>24<sp/>&gt;=<sp/>$max_days&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref><sp/>=<sp/>$query-&gt;execute();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($collection_id<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref>-&gt;fetchField())<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection-&gt;load($collection_id);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/dcf/tripal__stock__collections_8tpl_8php_1afa3cf72ede37d409b36b0d8719280466" kindref="member">$collections</ref>[]<sp/>=<sp/>$collection;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection-&gt;delete();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d3/dcf/tripal__stock__collections_8tpl_8php_1afa3cf72ede37d409b36b0d8719280466" kindref="member">$collections</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="da/d7f/group__tripal__data__collections__api_1gab600a75804de668345ada76b448ea3ef" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d7f/group__tripal__data__collections__api_1gab600a75804de668345ada76b448ea3ef" kindref="member">tripal_get_collection</ref>(<ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>$collection_id<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;collection_id&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>)<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;collection_id&apos;</highlight><highlight class="normal">]<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>$uid<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;uid&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>)<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;uid&apos;</highlight><highlight class="normal">]<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>$name<sp/>=<sp/>array_key_exists(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>)<sp/>?<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1affc45c6ace2eeb3f300b054dbf9592b6" kindref="member">$values</ref>[</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">]<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($uid<sp/>and<sp/>!$name)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;tripal_get_collection:<sp/>Missing<sp/>the<sp/>collection<sp/>name<sp/>when<sp/>specifying<sp/>the<sp/>User<sp/>ID.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$uid<sp/>and<sp/>$name)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;tripal_get_collection:<sp/>Missing<sp/>the<sp/>User<sp/>ID<sp/>when<sp/>specifying<sp/>the<sp/>collection<sp/>name.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$collection_id<sp/>and<sp/>!$uid<sp/>and<sp/>!$name)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;tripal_get_collection:<sp/>Missing<sp/>a<sp/>valid<sp/>key.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($name<sp/>and<sp/>$uid)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection_id<sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;tripal_collection&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;tc&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;tc&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;collection_id&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;uid&apos;</highlight><highlight class="normal">,<sp/>$uid)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;collection_name&apos;</highlight><highlight class="normal">,<sp/>$name)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchField();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$collection_id)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;tripal_get_collection:<sp/>The<sp/>collection<sp/>could<sp/>not<sp/>be<sp/>found<sp/>with<sp/>the<sp/>given<sp/>uid<sp/>and<sp/>name.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>$collection-&gt;load($collection_id);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$collection;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_set_message(t(</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>load<sp/>the<sp/>collection<sp/>with<sp/>id<sp/>&apos;%id&apos;:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$e-&gt;getMessage(),<sp/>array(</highlight><highlight class="stringliteral">&apos;%id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><sp/>$collection_id)),<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="da/d7f/group__tripal__data__collections__api_1ga1f7f4e6bc70b3e635a67fb22acf49472" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/d7f/group__tripal__data__collections__api_1ga1f7f4e6bc70b3e635a67fb22acf49472" kindref="member">tripal_create_collection_files</ref>($collection_id,<sp/><ref refid="d5/d64/classTripalJob" kindref="compound">TripalJob</ref><sp/>$job<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>$collection<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="d7/dda/classTripalEntityCollection" kindref="compound">TripalEntityCollection</ref>();</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>$collection-&gt;load($collection_id);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>$collection-&gt;write(NULL,<sp/>$job);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/api/tripal.collections.api.inc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/d29/classsbo____relationship__formatter" kind="class" language="PHP" prot="public">
+    <compoundname>sbo__relationship_formatter</compoundname>
+    <basecompoundref refid="d1/dc8/classChadoFieldFormatter" prot="public" virt="non-virtual">ChadoFieldFormatter</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="dd/d29/classsbo____relationship__formatter_1a65fba584560009eced14629a96b2c2cc" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sbo__relationship_formatter::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Relationship Statements&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" line="6" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d29/classsbo____relationship__formatter_1a8f039f59d0cc55fcf8d041671b0fa641" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sbo__relationship_formatter::$default_settings</definition>
+        <argsstring></argsstring>
+        <name>$default_settings</name>
+        <initializer>= array(
+    &apos;<ref refid="d0/d42/tripal__feature__teaser_8tpl_8php_1ab5501754233ec6aec5f04ef03f3bfc28" kindref="member">title</ref>&apos; =&gt; &apos;Relationship&apos;,
+    &apos;empty&apos; =&gt; &apos;There are no <ref refid="d3/d53/tripal__stock__help_8tpl_8php_1a83d3d7cbc3bae4361c71fe70a7ffd6e0" kindref="member">relationships</ref>&apos;,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" line="11" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d29/classsbo____relationship__formatter_1ae79a735002e3d99388a842dfb33151b4" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sbo__relationship_formatter::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d8/da0/classsbo____relationship" kindref="compound">sbo__relationship</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" line="9" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d29/classsbo____relationship__formatter_1abc2d152a7a2644f30d92056e8f69a641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbo__relationship_formatter::settingsForm</definition>
+        <argsstring>($view_mode, $form, &amp;$form_state)</argsstring>
+        <name>settingsForm</name>
+        <param>
+          <declname>$view_mode</declname>
+        </param>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="df/d84/classTripalFieldFormatter_1a3e222cef20a5f6c2ec42ef386e51e05e" kindref="member">TripalFieldFormatter::settingsForm()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" line="20" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" bodystart="20" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d29/classsbo____relationship__formatter_1a1c51a802da608e61a8b13780181f3717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbo__relationship_formatter::settingsSummary</definition>
+        <argsstring>($view_mode)</argsstring>
+        <name>settingsSummary</name>
+        <param>
+          <declname>$view_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="df/d84/classTripalFieldFormatter_1a90dce4f342fff3e2208fc3b0b48489f2" kindref="member">TripalFieldFormatter::settingsSummary()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" line="42" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" bodystart="42" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d29/classsbo____relationship__formatter_1af0a60492e7ed15fa0ddfe16d8da2b37a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sbo__relationship_formatter::view</definition>
+        <argsstring>(&amp;$element, $entity_type, $entity, $langcode, $items, $display)</argsstring>
+        <name>view</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$display</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="df/d84/classTripalFieldFormatter_1add25a3663eadef23f3a2981d61aee3f1" kindref="member">TripalFieldFormatter::view()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" line="59" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" bodystart="59" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="529">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="528">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="529" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="527">
+        <label>sbo__relationship_formatter</label>
+        <link refid="dd/d29/classsbo____relationship__formatter"/>
+        <childnode refid="528" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="532">
+        <label>TripalFieldFormatter</label>
+        <link refid="df/d84/classTripalFieldFormatter"/>
+      </node>
+      <node id="531">
+        <label>ChadoFieldFormatter</label>
+        <link refid="d1/dc8/classChadoFieldFormatter"/>
+        <childnode refid="532" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="530">
+        <label>sbo__relationship_formatter</label>
+        <link refid="dd/d29/classsbo____relationship__formatter"/>
+        <childnode refid="531" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/sbo__relationship/sbo__relationship_formatter.inc" bodystart="3" bodyend="149"/>
+    <listofallmembers>
+      <member refid="dd/d29/classsbo____relationship__formatter_1a65fba584560009eced14629a96b2c2cc" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>$default_label</name></member>
+      <member refid="dd/d29/classsbo____relationship__formatter_1a8f039f59d0cc55fcf8d041671b0fa641" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>$default_settings</name></member>
+      <member refid="dd/d29/classsbo____relationship__formatter_1ae79a735002e3d99388a842dfb33151b4" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>$field_types</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1adaeaa7d89dd9b33ce51521cf9669cf34" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>__construct</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a1113d3234ec9ef0a691fd07ffd551acd" prot="protected" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>ajaxifyPager</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1ae410038836433217c166a74a2501920c" prot="protected" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>getPagerElementID</name></member>
+      <member refid="df/d84/classTripalFieldFormatter_1a855e26f78af9142154bdaa59f5e7120b" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>info</name></member>
+      <member refid="dd/d29/classsbo____relationship__formatter_1abc2d152a7a2644f30d92056e8f69a641" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>settingsForm</name></member>
+      <member refid="dd/d29/classsbo____relationship__formatter_1a1c51a802da608e61a8b13780181f3717" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>settingsSummary</name></member>
+      <member refid="dd/d29/classsbo____relationship__formatter_1af0a60492e7ed15fa0ddfe16d8da2b37a" prot="public" virt="non-virtual"><scope>sbo__relationship_formatter</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

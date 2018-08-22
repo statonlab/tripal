@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d1e/tripal_8drush_8inc" kind="file" language="PHP">
+    <compoundname>tripal.drush.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_set_user</definition>
+        <argsstring>($username)</argsstring>
+        <name>drush_tripal_set_user</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the user to run a drush job. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="136" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="136" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaf3209132a299dd0c9be4ba775265bf0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_get_currjob</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_get_currjob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints details about the current running job.</para><para>Executed when &apos;drush trp-get-currjob&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="293" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="293" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga7e19459d3721c60a0299e7f45440ea75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_prepare_chado</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_prepare_chado</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepares content types on the site after chado installation.</para><para>Executed when &apos;drush trp-prepare-chado&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="329" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="329" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga731db1420c9bf6464897e45aea5a6182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_rerun_job</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_rerun_job</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes jobs in the Tripal Jobs Queue.</para><para>Executed when &apos;drush trp-rerun-job&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="243" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="243" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga69e1f06592ced8d2ad76397ef2f46779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_run_jobs</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_run_jobs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes jobs in the Tripal Jobs Queue.</para><para>Executed when &apos;drush trp-run-job&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="195" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="195" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga3275060b306706bbaef65e6a564092a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_run_jobs_install</definition>
+        <argsstring>($username)</argsstring>
+        <name>drush_tripal_trp_run_jobs_install</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes jobs in the Tripal Jobs Queue.</para><para>Executed when &apos;drush trp-run-job&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="164" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="164" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga863dd515592e0b72cc938a7e271ee9ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_set_permissions</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_set_permissions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets permissions for the content types on the site.</para><para>Executed when &apos;drush trp-set-permissions&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="360" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="360" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gac0a1dae04c9ea7986a560af480015f02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_drush_command</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_drush_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a drush command and constructs the full help for that command.</para><para><simplesect kind="return"><para>And array of command descriptions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="59" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="59" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaceee1a47d88e34e65c1327ef5cb61fed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_drush_help</definition>
+        <argsstring>($command)</argsstring>
+        <name>tripal_drush_help</name>
+        <param>
+          <declname>$command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Describes each drush command implemented by the module</para><para><simplesect kind="return"><para>The first line of description when executing the help for a given command </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="22" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="22" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains function relating to drush-integration of this module. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="22" refid="dc/d00/group__tripal__drush_1gaceee1a47d88e34e65c1327ef5cb61fed" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1gaceee1a47d88e34e65c1327ef5cb61fed" kindref="member">tripal_drush_help</ref>($command)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>($command)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TRIPAL<sp/>JOBS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-run-jobs&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dt(</highlight><highlight class="stringliteral">&apos;Launches<sp/>pending<sp/>jobs<sp/>waiting<sp/>in<sp/>the<sp/>queue.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-rerun-job&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dt(</highlight><highlight class="stringliteral">&apos;Rerun<sp/>a<sp/>job<sp/>in<sp/>the<sp/>queue.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-get-currjob&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dt(</highlight><highlight class="stringliteral">&apos;Returns<sp/>details<sp/>about<sp/>the<sp/>currently<sp/>running<sp/>tripal<sp/>job<sp/>including<sp/>percent<sp/>complete.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Placeholders<sp/>for<sp/>unimplmeneted<sp/>jobs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-show-job&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-revert-jobs&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-cancel-job&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-list-jobs&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-prepare-chado&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&apos;trp-set-permissions&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="dc/d00/group__tripal__drush_1gac0a1dae04c9ea7986a560af480015f02" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1gac0a1dae04c9ea7986a560af480015f02" kindref="member">tripal_drush_command</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>$items[</highlight><highlight class="stringliteral">&apos;trp-get-currjob&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Returns<sp/>details<sp/>about<sp/>the<sp/>currently<sp/>running<sp/>job<sp/>including<sp/>percent<sp/>complete.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;arguments&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;examples&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Standard<sp/>example&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-get-currjob&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>$items[</highlight><highlight class="stringliteral">&apos;trp-run-jobs&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Launches<sp/>jobs<sp/>waiting<sp/>in<sp/>the<sp/>queue.<sp/>Only<sp/>one<sp/>job<sp/>can<sp/>execute<sp/>at<sp/>a<sp/>time<sp/>unless<sp/>the<sp/>--parallel=1<sp/>option<sp/>is<sp/>provided.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;examples&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Single<sp/>Job&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-run-jobs<sp/>--username=administrator&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Parallel<sp/>Job&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-run-jobs<sp/>--username=administrator<sp/>--parallel=1&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Max-jobs<sp/>Job&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-run-jobs<sp/>--username=administrator<sp/>--parallel=1<sp/>--max_jobs=10&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;arguments&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;user&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;DEPRECATED.<sp/>Conflicts<sp/>with<sp/>Drush<sp/>7.x<sp/>--user<sp/>argument.<sp/>Please<sp/>use<sp/>the<sp/>--username<sp/>argument.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>Drupal<sp/>user<sp/>name<sp/>for<sp/>which<sp/>the<sp/>job<sp/>should<sp/>be<sp/>run.<sp/><sp/>The<sp/>permissions<sp/>for<sp/>this<sp/>user<sp/>will<sp/>be<sp/>used.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parallel&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Normally<sp/>jobs<sp/>are<sp/>executed<sp/>one<sp/>at<sp/>a<sp/>time.<sp/>But<sp/>if<sp/>you<sp/>are<sp/>certain<sp/>no<sp/>conflicts<sp/>will<sp/>occur<sp/>with<sp/>other<sp/>currently<sp/>running<sp/>jobs<sp/>you<sp/>may<sp/>set<sp/>this<sp/>argument<sp/>to<sp/>a<sp/>value<sp/>of<sp/>1<sp/>to<sp/>make<sp/>the<sp/>job<sp/>run<sp/>in<sp/>parallel<sp/>with<sp/>other<sp/>running<sp/>jobs.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;job_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Provide<sp/>a<sp/>job_id<sp/>to<sp/>run<sp/>a<sp/>specific<sp/>job.<sp/>Only<sp/>jobs<sp/>that<sp/>have<sp/>not<sp/>been<sp/>run<sp/>already<sp/>can<sp/>be<sp/>used&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;max_jobs&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Indicate<sp/>the<sp/>maximum<sp/>number<sp/>of<sp/>concurrent<sp/>jobs.<sp/>Default<sp/>is<sp/>-1<sp/>(unlimited).<sp/>Ignore<sp/>if<sp/>not<sp/>running<sp/>parallel<sp/>jobs&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;single&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Execute<sp/>only<sp/>one<sp/>queued<sp/>job&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>$items[</highlight><highlight class="stringliteral">&apos;trp-rerun-job&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Re-run<sp/>a<sp/>specific<sp/>job<sp/>from<sp/>the<sp/>queue.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;examples&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Single<sp/>Job&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-rerun-job<sp/>--username=administrator<sp/>--job_id=2&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Parallel<sp/>Job&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-rerun-job<sp/>--username=administrator<sp/><sp/>--job_id=2<sp/>--parallel=1&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Max-jobs<sp/>Job&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-run-jobs<sp/>--username=administrator<sp/>--parallel=1<sp/>--max_jobs=10&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;arguments&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;user&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;DEPRECATED.<sp/>Conflicts<sp/>with<sp/>Drush<sp/>7.x<sp/>--user<sp/>argument.<sp/>Please<sp/>use<sp/>the<sp/>--username<sp/>argument.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>Drupal<sp/>user<sp/>name<sp/>for<sp/>which<sp/>the<sp/>job<sp/>should<sp/>be<sp/>run.<sp/><sp/>The<sp/>permissions<sp/>for<sp/>this<sp/>user<sp/>will<sp/>be<sp/>used.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;job_id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;The<sp/>job<sp/>ID<sp/>to<sp/>run.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;required&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parallel&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Normally<sp/>jobs<sp/>are<sp/>executed<sp/>one<sp/>at<sp/>a<sp/>time.<sp/>But<sp/>if<sp/>you<sp/>are<sp/>certain<sp/>no<sp/>conflicts<sp/>will<sp/>occur<sp/>with<sp/>other<sp/>currently<sp/>running<sp/>jobs<sp/>you<sp/>may<sp/>set<sp/>this<sp/>argument<sp/>to<sp/>a<sp/>value<sp/>of<sp/>1<sp/>to<sp/>make<sp/>the<sp/>job<sp/>run<sp/>in<sp/>parallel<sp/>with<sp/>other<sp/>running<sp/>jobs.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;max_jobs&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Indicate<sp/>the<sp/>maximum<sp/>number<sp/>of<sp/>concurrent<sp/>jobs.<sp/>Default<sp/>is<sp/>-1<sp/>(unlimited).<sp/>Ignore<sp/>if<sp/>not<sp/>running<sp/>parallel<sp/>jobs&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;single&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Execute<sp/>only<sp/>one<sp/>queued<sp/>job&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>$items[</highlight><highlight class="stringliteral">&apos;trp-prepare-chado&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Prepares<sp/>a<sp/>new<sp/>Tripal<sp/>installation<sp/>with<sp/>content<sp/>types,<sp/>requires<sp/>the<sp/>username<sp/>of<sp/>an<sp/>administrator<sp/>to<sp/>run.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;arguments&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;examples&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Standard<sp/>example&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-prepare-chado<sp/>--user=administrator&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>$items[</highlight><highlight class="stringliteral">&apos;trp-set-permissions&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>dt(</highlight><highlight class="stringliteral">&apos;Gives<sp/>view,<sp/>edit,<sp/>delete,<sp/>create<sp/>priveleges<sp/>to<sp/>administrators<sp/>for<sp/>all<sp/>tripal<sp/>content<sp/>types.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;arguments&apos;</highlight><highlight class="normal"><sp/><sp/><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;examples&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Standard<sp/>example&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;drush<sp/>trp-set-permissions<sp/>--user=administrator&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$items;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" kindref="member">drush_tripal_set_user</ref>($username)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($username)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>$sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>uid<sp/>FROM<sp/>{users}<sp/>WHERE<sp/>name<sp/>=<sp/>:name&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref><sp/>=<sp/>db_query($sql,<sp/>array(</highlight><highlight class="stringliteral">&apos;:name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$username));</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>$u<sp/>=<sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a233d12bd8b6d3453e9a7a3f0b8c31db2" kindref="member">$results</ref>-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$u)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drush_print(date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&apos;ERROR:<sp/>Please<sp/>provide<sp/>a<sp/>valid<sp/>username<sp/>(--username<sp/>argument)<sp/>for<sp/>running<sp/>this<sp/>job.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exit;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>global<sp/>$user;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>$user<sp/>=<sp/>user_load($u-&gt;uid);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$u-&gt;uid;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&apos;ERROR:<sp/>Please<sp/>provide<sp/>a<sp/>username<sp/>(--username<sp/>argument)<sp/>for<sp/>running<sp/>this<sp/>job.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>exit;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="dc/d00/group__tripal__drush_1ga3275060b306706bbaef65e6a564092a3" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga3275060b306706bbaef65e6a564092a3" kindref="member">drush_tripal_trp_run_jobs_install</ref>($username)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>$parallel<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;parallel&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>$job_id<sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;job_id&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>$max_jobs<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;max_jobs&apos;</highlight><highlight class="normal">,<sp/>-1);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>$single<sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;single&apos;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" kindref="member">drush_tripal_set_user</ref>($username);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.<sp/>date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($parallel)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Tripal<sp/>Job<sp/>Launcher<sp/>(in<sp/>parallel)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($max_jobs<sp/>!==<sp/>-1)<sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Maximum<sp/>number<sp/>of<sp/>jobs<sp/>is<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$max_jobs);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Running<sp/>as<sp/>user<sp/>&apos;$username&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;-------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3232e2191042d96566b8ce3379f9c2a2" kindref="member">tripal_launch_job</ref>($parallel,<sp/>$job_id,<sp/>$max_jobs,<sp/>$single);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Tripal<sp/>Job<sp/>Launcher&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Running<sp/>as<sp/>user<sp/>&apos;$username&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;-------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3232e2191042d96566b8ce3379f9c2a2" kindref="member">tripal_launch_job</ref>(0,<sp/>$job_id,<sp/>$max_jobs,<sp/>$single);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="dc/d00/group__tripal__drush_1ga69e1f06592ced8d2ad76397ef2f46779" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga69e1f06592ced8d2ad76397ef2f46779" kindref="member">drush_tripal_trp_run_jobs</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>$parallel<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;parallel&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>$job_id<sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;job_id&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>$max_jobs<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;max_jobs&apos;</highlight><highlight class="normal">,<sp/>-1);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>$single<sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;single&apos;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Unfortunately<sp/>later<sp/>versions<sp/>of<sp/>Drush<sp/>use<sp/>the<sp/>&apos;--user&apos;<sp/>argument<sp/>which</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>makes<sp/>it<sp/>incompatible<sp/>with<sp/>how<sp/>Tripal<sp/>was<sp/>using<sp/>it.<sp/><sp/>For<sp/>backwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compatibility<sp/>we<sp/>will<sp/>accept<sp/>--user<sp/>with<sp/>a<sp/>non<sp/>numeric<sp/>value<sp/>only.<sp/>The</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>numeric<sp/>value<sp/>should<sp/>be<sp/>for<sp/>Drush.<sp/>Tripal<sp/>will<sp/>instead<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--username<sp/>argument<sp/>for<sp/>the<sp/>fture.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>$user<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;user&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>$uname<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($user<sp/>and<sp/>is_numeric($user))<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>elseif<sp/>($user)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;\nNOTE:<sp/>Use<sp/>of<sp/>the<sp/>--user<sp/>argument<sp/>is<sp/>deprecated<sp/>as<sp/>it<sp/>conflicts<sp/>with<sp/>the<sp/>--user<sp/>argument<sp/>of<sp/>Drush<sp/>7.x.<sp/>Please<sp/>now<sp/>use<sp/>--username<sp/>instead.\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$user;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($uname)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$uname;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><ref refid="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" kindref="member">drush_tripal_set_user</ref>($username);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.<sp/>date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($parallel)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Tripal<sp/>Job<sp/>Launcher<sp/>(in<sp/>parallel)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($max_jobs<sp/>!==<sp/>-1)<sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Maximum<sp/>number<sp/>of<sp/>jobs<sp/>is<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$max_jobs);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Running<sp/>as<sp/>user<sp/>&apos;$username&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;-------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3232e2191042d96566b8ce3379f9c2a2" kindref="member">tripal_launch_job</ref>($parallel,<sp/>$job_id,<sp/>$max_jobs,<sp/>$single);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Tripal<sp/>Job<sp/>Launcher&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Running<sp/>as<sp/>user<sp/>&apos;$username&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;-------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3232e2191042d96566b8ce3379f9c2a2" kindref="member">tripal_launch_job</ref>(0,<sp/>$job_id,<sp/>$max_jobs,<sp/>$single);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="dc/d00/group__tripal__drush_1ga731db1420c9bf6464897e45aea5a6182" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga731db1420c9bf6464897e45aea5a6182" kindref="member">drush_tripal_trp_rerun_job</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Unfortunately<sp/>later<sp/>versions<sp/>of<sp/>Drush<sp/>use<sp/>the<sp/>&apos;--user&apos;<sp/>argument<sp/>which</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>makes<sp/>it<sp/>incompatible<sp/>with<sp/>how<sp/>Tripal<sp/>was<sp/>using<sp/>it.<sp/><sp/>For<sp/>backwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>compatabiliy<sp/>we<sp/>will<sp/>accept<sp/>--user<sp/>with<sp/>a<sp/>non<sp/>numeric<sp/>value<sp/>only.<sp/>The</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>numeric<sp/>value<sp/>should<sp/>be<sp/>for<sp/>Drush.<sp/>Tripal<sp/>will<sp/>instead<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--username<sp/>argument<sp/>for<sp/>the<sp/>fture.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>$user<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;user&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/>$uname<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>print<sp/>date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>USER:<sp/>&apos;$user&apos;,<sp/>UNAME:<sp/>&apos;$uname&apos;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($user<sp/>and<sp/>is_numeric($user))<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>elseif<sp/>($user)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;\nNOTE:<sp/>Use<sp/>of<sp/>the<sp/>--user<sp/>argument<sp/>is<sp/>deprecated<sp/>as<sp/>it<sp/>conflicts<sp/>with<sp/>the<sp/>--user<sp/>argument<sp/>of<sp/>Drush<sp/>7.x.<sp/>Please<sp/>now<sp/>use<sp/>--username<sp/>instead.\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$user;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($uname)<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$uname;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>$parallel<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;parallel&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>$job_id<sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;job_id&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>$max_jobs<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;max_jobs&apos;</highlight><highlight class="normal">,<sp/>-1);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>$single<sp/><sp/><sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;single&apos;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><ref refid="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" kindref="member">drush_tripal_set_user</ref>($username);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/>$new_job_id<sp/>=<sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3b535cc716ccea28d82c0bd274a3efa7" kindref="member">tripal_rerun_job</ref>($job_id,<sp/>FALSE);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.<sp/>date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($parallel)<sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Tripal<sp/>Job<sp/>Launcher<sp/>(in<sp/>parallel)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Running<sp/>as<sp/>user<sp/>&apos;$username&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;-------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3232e2191042d96566b8ce3379f9c2a2" kindref="member">tripal_launch_job</ref>($parallel,<sp/>$new_job_id,<sp/>$max_jobs,<sp/>$single);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Tripal<sp/>Job<sp/>Launcher&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;Running<sp/>as<sp/>user<sp/>&apos;$username&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&quot;-------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/db7/group__tripal__jobs__api_1ga3232e2191042d96566b8ce3379f9c2a2" kindref="member">tripal_launch_job</ref>(0,<sp/>$new_job_id,<sp/>$max_jobs,<sp/>$single);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="dc/d00/group__tripal__drush_1gaf3209132a299dd0c9be4ba775265bf0d" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1gaf3209132a299dd0c9be4ba775265bf0d" kindref="member">drush_tripal_trp_get_currjob</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/>$sql<sp/>=<sp/><sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="295"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>SELECT<sp/>*</highlight></codeline>
+<codeline lineno="296"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>FROM<sp/>{tripal_jobs}<sp/>TJ</highlight></codeline>
+<codeline lineno="297"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>WHERE<sp/>TJ.end_time<sp/>IS<sp/>NULL<sp/>and<sp/>NOT<sp/>TJ.start_time<sp/>IS<sp/>NULL</highlight></codeline>
+<codeline lineno="298"><highlight class="stringliteral"><sp/><sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/>$jobs<sp/>=<sp/>db_query($sql);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($jobs<sp/>as<sp/>$job)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>$job_pid<sp/>=<sp/>$job-&gt;pid;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>$output<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Name:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;job_name<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Submitted:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>date(DATE_RFC822,<sp/>$job-&gt;submit_date)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Started:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>date(DATE_RFC822,<sp/>$job-&gt;start_time)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Module:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;modulename<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Callback:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;callback<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Process<sp/>ID:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;pid<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>.</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Progress:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$job-&gt;progress<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;%\n&quot;</highlight><highlight class="normal">.</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Current<sp/>Date:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">)<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print($output);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$job_pid)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(date(</highlight><highlight class="stringliteral">&apos;Y-m-d<sp/>H:i:s&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>drush_print(</highlight><highlight class="stringliteral">&apos;There<sp/>are<sp/>currently<sp/>no<sp/>running<sp/>jobs.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//log<sp/>to<sp/>the<sp/>command<sp/>line<sp/>with<sp/>an<sp/>OK<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/>drush_log(</highlight><highlight class="stringliteral">&apos;Running<sp/>tripal-current-job&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;ok&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="dc/d00/group__tripal__drush_1ga7e19459d3721c60a0299e7f45440ea75" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga7e19459d3721c60a0299e7f45440ea75" kindref="member">drush_tripal_trp_prepare_chado</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/>$user<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;user&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>$uname<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($user<sp/>and<sp/>is_numeric($user))<sp/>{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/>elseif<sp/>($user)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;\nNOTE:<sp/>Use<sp/>of<sp/>the<sp/>--user<sp/>argument<sp/>is<sp/>deprecated<sp/>as<sp/>it<sp/>conflicts<sp/>with<sp/>the<sp/>--user<sp/>argument<sp/>of<sp/>Drush<sp/>7.x.<sp/>Please<sp/>now<sp/>use<sp/>--username<sp/>instead.\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$user;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($uname)<sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$uname;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><ref refid="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" kindref="member">drush_tripal_set_user</ref>($username);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/>print_r(</highlight><highlight class="stringliteral">&quot;Now<sp/>preparing<sp/>the<sp/>site<sp/>by<sp/>creating<sp/>content<sp/>types.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/>$prepare<sp/>=<sp/>drush_invoke_process(</highlight><highlight class="stringliteral">&apos;@self&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;php-eval&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&quot;module_load_include(&apos;inc&apos;,<sp/>&apos;tripal_chado&apos;,<sp/>&apos;includes/setup/tripal_chado.setup&apos;);<sp/>tripal_chado_prepare_drush_submit();&quot;</highlight><highlight class="normal">),<sp/>array());</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/>drush_invoke_process(</highlight><highlight class="stringliteral">&apos;@self&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;php-eval&apos;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&quot;module_load_include(&apos;inc&apos;,<sp/>&apos;tripal&apos;,<sp/>&apos;tripal.drush&apos;);<sp/>drush_tripal_trp_run_jobs_install(&quot;</highlight><highlight class="normal"><sp/>.<sp/>$username<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;);&quot;</highlight><highlight class="normal">),<sp/>array());</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$prepare)<sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;An<sp/>error<sp/>occurred<sp/>when<sp/>attempting<sp/>to<sp/>install<sp/>Chado.<sp/>Please<sp/>navigate<sp/>to<sp/>your<sp/>new<sp/>site<sp/>and<sp/>finish<sp/>the<sp/>installation<sp/>process<sp/>from<sp/>the<sp/>&apos;Install<sp/>Tripal&apos;<sp/>section<sp/>as<sp/>described<sp/>in<sp/>the<sp/>online<sp/>help,<sp/>found<sp/>here<sp/>http://tripal.info/tutorials/v3.x/installation/tripal<sp/>\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>exit;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360" refid="dc/d00/group__tripal__drush_1ga863dd515592e0b72cc938a7e271ee9ac" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="dc/d00/group__tripal__drush_1ga863dd515592e0b72cc938a7e271ee9ac" kindref="member">drush_tripal_trp_set_permissions</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/>$user<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;user&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/>$uname<sp/>=<sp/>drush_get_option(</highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($user<sp/>and<sp/>is_numeric($user))<sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/>elseif<sp/>($user)<sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;\nNOTE:<sp/>Use<sp/>of<sp/>the<sp/>--user<sp/>argument<sp/>is<sp/>deprecated<sp/>as<sp/>it<sp/>conflicts<sp/>with<sp/>the<sp/>--user<sp/>argument<sp/>of<sp/>Drush<sp/>7.x.<sp/>Please<sp/>now<sp/>use<sp/>--username<sp/>instead.\n\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$user;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($uname)<sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>$username<sp/>=<sp/>$uname;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><ref refid="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" kindref="member">drush_tripal_set_user</ref>($username);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/>$permissions<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/>$bundles<sp/>=<sp/><ref refid="d5/dce/group__tripal__entities__api_1ga193227c1fd8a379805e054ab4dd2b4cf" kindref="member">tripal_get_content_types</ref>();</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($bundles<sp/>as<sp/>$bundles<sp/>=&gt;<sp/>$bundle)<sp/>{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>array_push($permissions,<sp/></highlight><highlight class="stringliteral">&apos;<sp/>view<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$bundle-&gt;name,<sp/></highlight><highlight class="stringliteral">&apos;<sp/>create<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$bundle-&gt;name,</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;<sp/>edit<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$bundle-&gt;name,<sp/></highlight><highlight class="stringliteral">&apos;<sp/>delete<sp/>&apos;</highlight><highlight class="normal"><sp/>.<sp/>$bundle-&gt;name);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>$string_permissions<sp/>=<sp/>implode(</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">,<sp/>$permissions);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/>$args4<sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;administrator&apos;</highlight><highlight class="normal">,<sp/>$string_permissions);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/>$options4<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/>drush_invoke_process(</highlight><highlight class="stringliteral">&apos;@self&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;role-add-perm&apos;</highlight><highlight class="normal">,<sp/>$args4,<sp/>$options4);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/>drush_print(dt(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/>drush_print(dt(</highlight><highlight class="stringliteral">&quot;Permissions<sp/>is<sp/>now<sp/>complete.&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="389"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/tripal.drush.inc"/>
+  </compounddef>
+</doxygen>

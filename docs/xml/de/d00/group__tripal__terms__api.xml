@@ -1,0 +1,798 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="de/d00/group__tripal__terms__api" kind="group">
+    <compoundname>tripal_terms_api</compoundname>
+    <title>CV Terms</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gacbd2948d7bec249c6a8143f2d4046d0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_add_term</definition>
+        <argsstring>($details)</argsstring>
+        <name>hook_vocab_add_term</name>
+        <param>
+          <declname>$details</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hook used by the default term storage backend to add new terms.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with at least the following keys: -vocabulary : An associative array with the following keys: -name: The short name for the vocabulary (e.g. SO, PATO, etc). -description: The description of this vocabulary. -url: The URL for the vocabulary. -urlprefix: (optional) A URL to which the short_name and term accession can be appended to form a complete URL for a term. If the prefix does not support appending then the exact location for the position of the short_name and the term accession will be specified with the {db} and {accession} tags respectively. -accession : The name unique ID of the term. -url : The URL for the term. -name : The name of the term. -definition : The term&apos;s description. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the term was added, FALSE otherwise. If the term already exists it will be updated and the return value will be TRUE. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="306" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="306" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga306a347a421d610f1f958d5b45e70634" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_get_root_terms</definition>
+        <argsstring>($vocabulary)</argsstring>
+        <name>hook_vocab_get_root_terms</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hook used by the default term storage backend to provide root terms.</para><para>This hook is called by the tripal_entity module to retrieve a list of root terms for a given vocabulary from the storage backend. It must return an array of terms where each term contains the same structure as that of the <ref refid="de/d00/group__tripal__terms__api_1gaba7a1f6fa6f1a3be438a77ce875f7fef" kindref="member">hook_vocab_get_term()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of root terms where each term contains the same structure as that of the <ref refid="de/d00/group__tripal__terms__api_1gaba7a1f6fa6f1a3be438a77ce875f7fef" kindref="member">hook_vocab_get_term()</ref>, or an empty array if no children are present. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="236" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gaba7a1f6fa6f1a3be438a77ce875f7fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_get_term</definition>
+        <argsstring>($vocabulary, $accession)</argsstring>
+        <name>hook_vocab_get_term</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <param>
+          <declname>$accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hook used by the default term storage backend to provide details for a term.</para><para>This hook is called by the tripal_entity module to retrieve information about the term from the storage backend. It must return an array with a set of keys.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier (accession) for this term.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array with at least the following keys: -vocabulary : An associative array with the following keys: -name: The short name for the vocabulary (e.g. SO, PATO, etc). -description: The description of this vocabulary. -url: The URL for the vocabulary. -urlprefix : (optional) A URL to which the short_name and term accession can be appended to form a complete URL for a term. If the prefix does not support appending then the exact location for the position of the short_name and the term accession will be specified with the {db} and {accession} tags respectively. -accession : The name unique ID of the term. -url : The URL for the term. -name : The name of the term. -definition : The term&apos;s description. any other keys may be added as desired. Returns NULL if the term cannot be found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="174" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga1883d7244e3a2255e1b961e210eed21f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_get_term_children</definition>
+        <argsstring>($vocabulary, $accession)</argsstring>
+        <name>hook_vocab_get_term_children</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <param>
+          <declname>$accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hook used by the default term storage backend to provide children for a term.</para><para>This hook is called by the tripal_entity module to retrieve a list of children for a term from the storage backend. It must return an array of terms where each term contains the same structure as that of the <ref refid="de/d00/group__tripal__terms__api_1gaba7a1f6fa6f1a3be438a77ce875f7fef" kindref="member">hook_vocab_get_term()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier (accession) for this term.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of terms where each term contains the same structure as that of the <ref refid="de/d00/group__tripal__terms__api_1gaba7a1f6fa6f1a3be438a77ce875f7fef" kindref="member">hook_vocab_get_term()</ref>, or an empty array if no children are present. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="215" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="215" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gafa36b5e990f088ab9063809659042e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_get_terms</definition>
+        <argsstring>($vocabulary, $limit=25, $element=0)</argsstring>
+        <name>hook_vocab_get_terms</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <param>
+          <declname>$limit</declname>
+          <defval>25</defval>
+        </param>
+        <param>
+          <declname>$element</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a paged list of terms from a vocabulary.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The short name of the vocabulary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of results to return. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pager element. This is equivalent to the element from the pager_default_initialize() function of Drupal. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="192" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gaf7aa281d195dfbaf5bcf9295936aafbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_get_vocabularies</definition>
+        <argsstring>()</argsstring>
+        <name>hook_vocab_get_vocabularies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of vocabularies that are available on the site.</para><para><simplesect kind="return"><para>An array of vocabularies where each entry in the array is compatible with the array returned by the <ref refid="de/d00/group__tripal__terms__api_1ga3ad82d1890a30555250a6d55a28753fd" kindref="member">tripal_get_vocabulary_details()</ref> function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="278" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="278" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga14085561349c8c66e4abce4551957abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_get_vocabulary</definition>
+        <argsstring>($vocabulary)</argsstring>
+        <name>hook_vocab_get_vocabulary</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hook used by the default term storage backend to provide details for a vocab.</para><para>This hook is called by the tripal_entity module to retrieve information about the vocabulary from the storage backend. It must return an array with a set of keys.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array with at least the following keys:<itemizedlist>
+<listitem><para>name : The full name of the vocabulary.</para></listitem><listitem><para>short_name : The short name abbreviation for the vocabulary.</para></listitem><listitem><para>description : A brief description of the vocabulary.</para></listitem><listitem><para>url : (optional) A URL for the online resources for the vocabulary.</para></listitem><listitem><para>urlprefix : (optional) A URL to which the short_name and term accession can be appended to form a complete URL for a term. If the prefix does not support appending then the exact location for the position of the short_name and the term accession will be specified with the {db} and {accession} tags respectively. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="264" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="264" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga280f3ec579efe1d22fe24d1ca806369d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_import_form</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>hook_vocab_import_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a form for importing vocabularies and their terms.</para><para>Tripal allows for vocabularies to be stored separately from the biological data. This hook allows the default term storage backend to provide an approprite form for importing ontologies (either in OBO or OWL format).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="114" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gac4bd482e411052abbd70395e5a64466a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_import_form_submit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>hook_vocab_import_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Submits the <ref refid="de/d00/group__tripal__terms__api_1ga280f3ec579efe1d22fe24d1ca806369d" kindref="member">hook_vocab_import_form()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="138" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gaac027a77ab91e67aee0adca395de2644" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_import_form_validate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>hook_vocab_import_form_validate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates the <ref refid="de/d00/group__tripal__terms__api_1ga280f3ec579efe1d22fe24d1ca806369d" kindref="member">hook_vocab_import_form()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="126" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga23d3d42d05c04c32686ebeb508e17ca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_select_term_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>hook_vocab_select_term_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a form for specifying a term for <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> creation.</para><para>This hook allows the module that implements a vocabulary storage backend to provide the form necessary to select a term that will then be used for creating a new <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> type. Tripal will expect that a &apos;vocabulary&apos; and &apos;accession&apos; are in the $form_state[&apos;storage&apos;] array. The &apos;vocabulary&apos; and must be the abbreviated uppercase vocabulary for the vocabulary (e.g. &apos;RO&apos;, &apos;SO&apos;, &apos;PATO&apos;, etc.). The &apos;accession&apos; must be the unique term ID (or accession) for the term in the vocabulary.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A form object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="84" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gaa1ea96de6d50caaf9c8dfdb970f60717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_select_term_form_validate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>hook_vocab_select_term_form_validate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates the <ref refid="de/d00/group__tripal__terms__api_1ga23d3d42d05c04c32686ebeb508e17ca0" kindref="member">hook_vocab_select_term_form()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="97" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga3bb77ac3f163fdeebab494360af689b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_vocab_storage_info</definition>
+        <argsstring>()</argsstring>
+        <name>hook_vocab_storage_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="54" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="54" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga58474d3a8bdbbe47f7b595a6054a125c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_term</definition>
+        <argsstring>($details)</argsstring>
+        <name>tripal_add_term</name>
+        <param>
+          <declname>$details</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a term to the vocabulary storage backend.</para><para>Use this function to add new terms dynamically to the vocabulary storage backend. If the term already exists no new term is added.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with at least the following keys: -vocabulary : An associative array with the following keys -name: The short name for the vocabulary (e.g. SO, PATO, etc). -description: The description of this vocabulary. -url: The URL for the vocabulary. -accession : The name unique ID of the term. -url : The URL for the term. -name : The name of the term. -definition : The term&apos;s description. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the term was added, FALSE otherwise. If the term already exists it will be updated and the return value will be TRUE. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="332" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="332" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga28975cde3fdcc84ab64dc3265e16b9cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_term_children</definition>
+        <argsstring>($vocabulary, $accession)</argsstring>
+        <name>tripal_get_term_children</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <param>
+          <declname>$accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the immediate children of the given term.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier (accession) for this term.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns an array of terms where each term is compatible with the array returned by the <ref refid="de/d00/group__tripal__terms__api_1gaf99a705ba9ec49d8d1e46aa0300505c0" kindref="member">tripal_get_term_details()</ref> function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="478" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="478" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gaf99a705ba9ec49d8d1e46aa0300505c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_term_details</definition>
+        <argsstring>($vocabulary, $accession)</argsstring>
+        <name>tripal_get_term_details</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <param>
+          <declname>$accession</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves full information about a vocabulary term.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier (accession) for this term.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array with at least the following keys:<itemizedlist>
+<listitem><para>vocabulary : An array containing the following keys:<itemizedlist>
+<listitem><para>name : The full name of the vocabulary.</para></listitem><listitem><para>short_name : The short name abbreviation for the vocabulary.</para></listitem><listitem><para>description : A brief description of the vocabulary.</para></listitem><listitem><para>url : (optional) A URL for the online resources for the vocabulary.</para></listitem><listitem><para>urlprefix : (optional) A URL to which the short_name and term accession can be appended to form a complete URL for a term. If the prefix does not support appending then the exact location for the position of the short_name and the term accession will be specified with the {db} and {accession} tags respectively.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>accession : The name unique ID of the term.</para></listitem><listitem><para>url : The URL for the term.</para></listitem><listitem><para>name : The name of the term.</para></listitem><listitem><para>definition : The term&apos;s description. any other keys may be added as desired. Returns NULL if the term cannot be found. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="377" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="377" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gad9a8a845422fae77c4e9fffa9886cd6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_term_lookup_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state, $default_name=&apos;&apos;, $title=&apos;Vocabulary Term&apos;, $description=&apos;&apos;, $is_required, $field_name=&apos;&apos;, $delta=0)</argsstring>
+        <name>tripal_get_term_lookup_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$default_name</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$title</declname>
+          <defval>&apos;Vocabulary Term&apos;</defval>
+        </param>
+        <param>
+          <declname>$description</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$is_required</declname>
+        </param>
+        <param>
+          <declname>$field_name</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a term lookup form.</para><para>It may be necessary at times for a form to provide to the user the ability to lookup and use a controlled vocabulary term. However, a simple text box or auto-lookup is not sufficient because a term name may be identical in multiple vocabularies and the user would need to select the proper term.</para><para>This function will add the form elements necessary to provide a lookup form. The form elements should work with a flat form (no #tree set for the form) or with a form in a <ref refid="d9/d83/classTripalField" kindref="compound">TripalField</ref>.</para><para>Use the <ref refid="de/d00/group__tripal__terms__api_1gaf444a2b8245c58e2402ead6d39e52fcd" kindref="member">tripal_get_term_lookup_form_result()</ref> function to retreive the result in a form submit or validate.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The form (or $widget form). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The form state. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title to give to the field set. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A description for the lookup field element. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$is_required</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates if this form element is required. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the field, if this form is being added to a field widget. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value for the field if this form is being added to a field widget. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="619" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="619" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gab4d1150cac6c95c8006abaa243cf10f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_term_lookup_form_ajax_callback</definition>
+        <argsstring>($form, $form_state)</argsstring>
+        <name>tripal_get_term_lookup_form_ajax_callback</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements an AJAX callback for the tripal_chado_vocab_select_term_form. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="833" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="833" bodyend="847"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gaf444a2b8245c58e2402ead6d39e52fcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_term_lookup_form_result</definition>
+        <argsstring>($form, $form_state, $field_name=&apos;&apos;, $delta=0)</argsstring>
+        <name>tripal_get_term_lookup_form_result</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$field_name</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$delta</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the terms selected from the tripal_get_term_lookup_form.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The form (or $widget form). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The form state. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the field, if this form is being added to a field widget. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The delta value for the field if this form is being added to a field widget.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of term objects for each of the user selected terms. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="803" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="803" bodyend="826"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga5df3a72e30fa833f242d54789d1f7af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_vocabularies</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_vocabularies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of vocabularies that are available on the site.</para><para><simplesect kind="return"><para>An array of vocabularies where each entry in the array is compatible with the array returned by the <ref refid="de/d00/group__tripal__terms__api_1ga3ad82d1890a30555250a6d55a28753fd" kindref="member">tripal_get_vocabulary_details()</ref> function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="573" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="573" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga3ad82d1890a30555250a6d55a28753fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_vocabulary_details</definition>
+        <argsstring>($vocabulary)</argsstring>
+        <name>tripal_get_vocabulary_details</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves full information about a vocabulary.</para><para>Vocabularies are stored in a database backend. Tripal has no requirements for how terms are stored. By default, the tripal_chado modules provides storage for vocabularies and terms. This function will call the <ref refid="de/d00/group__tripal__terms__api_1gaba7a1f6fa6f1a3be438a77ce875f7fef" kindref="member">hook_vocab_get_term()</ref> function for the database backend that is housing the vocabularies and allow it to return the details about the term.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array with at least the following keys:<itemizedlist>
+<listitem><para>name: The full name of the vocabulary.</para></listitem><listitem><para>short_name: The short name abbreviation for the vocabulary.</para></listitem><listitem><para>description: A brief description of the vocabulary.</para></listitem><listitem><para>url: A URL for the online resources for the vocabulary.</para></listitem><listitem><para>urlprefix: A URL to which the short_name and term accession can be appended to form a complete URL for a term. If the prefix does not support appending then the exact location for the position of the short_name and the term accession will be specified with the {db} and {accession} tags respectively.</para></listitem><listitem><para>sw_url: The URL for mapping terms via the semantic web.</para></listitem><listitem><para>num_terms: The number of terms loaded in the vocabulary. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="522" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="522" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1ga9ea42677ac2e0318e9b477bc9434d19f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_vocabulary_root_terms</definition>
+        <argsstring>($vocabulary)</argsstring>
+        <name>tripal_get_vocabulary_root_terms</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the immediate children of the given term.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vocabulary of the vocabulary in which the term is found. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier (accession) for this term.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns an array of terms where each term is compatible with the array returned by the <ref refid="de/d00/group__tripal__terms__api_1gaf99a705ba9ec49d8d1e46aa0300505c0" kindref="member">tripal_get_term_details()</ref> function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="445" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="445" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d00/group__tripal__terms__api_1gaca4701e91b54bcd878701a07b6a522e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_vocabulary_terms</definition>
+        <argsstring>($vocabulary, $limit=25, $element=0)</argsstring>
+        <name>tripal_get_vocabulary_terms</name>
+        <param>
+          <declname>$vocabulary</declname>
+        </param>
+        <param>
+          <declname>$limit</declname>
+          <defval>25</defval>
+        </param>
+        <param>
+          <declname>$element</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a paged list of terms from a vocabulary.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$vocabulary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The short name of the vocabulary. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of results to return. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pager element. This is equivalent to the element from the pager_default_initialize() function of Drupal. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.terms.api.inc" line="551" column="1" bodyfile="tripal/api/tripal.terms.api.inc" bodystart="551" bodyend="561"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Tripal provides an application programming interface (API) for working with controlled vocaublary terms. Tripal v3 is highly dependent on controlled vocabularies for identifying all content types and fields attached to those content types. However, Tripal v3 is also database agnostic. Therefore, controlled vocabularies can be stored in any database back-end. By default the tripal_chado module is used for storing controlled vocabularies. However, if someone wanted to store controlled vocabularies in a database other than Chado they can do so. These API functions provide a convenient wrapper for accession controlled vocabularies no matter where they are stored. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

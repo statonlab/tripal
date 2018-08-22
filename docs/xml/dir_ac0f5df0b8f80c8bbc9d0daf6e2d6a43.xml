@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_ac0f5df0b8f80c8bbc9d0daf6e2d6a43" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/so__cds</compoundname>
+    <innerfile refid="dd/d82/so____cds_8inc">so__cds.inc</innerfile>
+    <innerfile refid="de/d93/so____cds__formatter_8inc">so__cds_formatter.inc</innerfile>
+    <innerfile refid="dd/d86/so____cds__widget_8inc">so__cds_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/so__cds/"/>
+  </compounddef>
+</doxygen>

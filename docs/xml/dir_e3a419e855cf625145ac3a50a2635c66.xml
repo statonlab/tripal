@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_e3a419e855cf625145ac3a50a2635c66" kind="dir">
+    <compoundname>legacy/tripal_organism/api</compoundname>
+    <innerfile refid="d1/d70/tripal__organism_8DEPRECATED_8inc">tripal_organism.DEPRECATED.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_organism/api/"/>
+  </compounddef>
+</doxygen>

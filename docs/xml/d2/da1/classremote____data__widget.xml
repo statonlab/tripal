@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/da1/classremote____data__widget" kind="class" language="PHP" prot="public">
+    <compoundname>remote__data_widget</compoundname>
+    <basecompoundref refid="d6/d3f/classWebServicesFieldWidget" prot="public" virt="non-virtual">WebServicesFieldWidget</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d2/da1/classremote____data__widget_1ad97c7c6147be51e9216b3c52d2a40a80" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data_widget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Remote Data&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" line="6" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/da1/classremote____data__widget_1ae27d2959be7b8b69e5ba34e9a4f624d5" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>remote__data_widget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="d8/da0/classremote____data" kindref="compound">remote__data</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" line="8" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d2/da1/classremote____data__widget_1a3207bf25531592e20850bdb31d7c2212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_widget::form</definition>
+        <argsstring>(&amp;$widget, &amp;$form, &amp;$form_state, $langcode, $items, $delta, $element)</argsstring>
+        <name>form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$widget</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" kindref="member">TripalFieldWidget::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" line="13" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/da1/classremote____data__widget_1a5eb16a8e4d3a2ac1240f54c542530141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>remote__data_widget::validate</definition>
+        <argsstring>($element, $form, &amp;$form_state, $langcode, $delta)</argsstring>
+        <name>validate</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs validation of the widgetForm.</para><para>Use this validate to ensure that form values are entered correctly. The &apos;value&apos; key of this field must be set in the $form_state[&apos;values&apos;] array anytime data is entered by the user. It may be the case that there are other fields for helping select a value. In the end those helper fields must be used to set the &apos;value&apos; field. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" line="26" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" bodystart="26" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="480">
+        <label>WebServicesFieldWidget</label>
+        <link refid="d6/d3f/classWebServicesFieldWidget"/>
+        <childnode refid="481" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="481">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="479">
+        <label>remote__data_widget</label>
+        <link refid="d2/da1/classremote____data__widget"/>
+        <childnode refid="480" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="483">
+        <label>WebServicesFieldWidget</label>
+        <link refid="d6/d3f/classWebServicesFieldWidget"/>
+        <childnode refid="484" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="484">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="482">
+        <label>remote__data_widget</label>
+        <link refid="d2/da1/classremote____data__widget"/>
+        <childnode refid="483" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" line="3" column="1" bodyfile="tripal_ws/includes/TripalFields/remote__data/remote__data_widget.inc" bodystart="3" bodyend="30"/>
+    <listofallmembers>
+      <member refid="d2/da1/classremote____data__widget_1ad97c7c6147be51e9216b3c52d2a40a80" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>$default_label</name></member>
+      <member refid="d2/da1/classremote____data__widget_1ae27d2959be7b8b69e5ba34e9a4f624d5" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>__construct</name></member>
+      <member refid="d2/da1/classremote____data__widget_1a3207bf25531592e20850bdb31d7c2212" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>info</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>theme</name></member>
+      <member refid="d2/da1/classremote____data__widget_1a5eb16a8e4d3a2ac1240f54c542530141" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>remote__data_widget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d9/d4a/classtripal__views__handler__sort__entity__string__broken" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_sort_entity_string_broken</compoundname>
+    <basecompoundref refid="d7/dd5/classtripal__views__handler__sort__entity__string" prot="public" virt="non-virtual">tripal_views_handler_sort_entity_string</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1a8b5ed6de3124547d8d7e21c1026c87e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_sort_entity_string_broken::broken</definition>
+        <argsstring>()</argsstring>
+        <name>broken</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if the handler is considered &apos;broken&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" line="221" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" bodystart="221" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1aa85b3814d8bdc649b99c8bb5a6671bfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_sort_entity_string_broken::ensure_my_table</definition>
+        <argsstring>()</argsstring>
+        <name>ensure_my_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" line="210" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" bodystart="210" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1ad8708172fa2b795dbbd406a3df3df99e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_sort_entity_string_broken::options_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>options_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" line="212" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" bodystart="212" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1a900423e622fb5d3818c9e40ad651faeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_sort_entity_string_broken::query</definition>
+        <argsstring>($group_by=FALSE)</argsstring>
+        <name>query</name>
+        <param>
+          <declname>$group_by</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" line="211" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" bodystart="211" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1a9ed2b32eadb9d5c7bf7b8371d2f1ece2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_sort_entity_string_broken::ui_name</definition>
+        <argsstring>($short=FALSE)</argsstring>
+        <name>ui_name</name>
+        <param>
+          <declname>$short</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" line="206" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" bodystart="206" bodyend="208"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A special handler to take the place of missing or broken handlers. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="900">
+        <label>views_handler</label>
+      </node>
+      <node id="898">
+        <label>tripal_views_handler_sort_entity_string_broken</label>
+        <link refid="d9/d4a/classtripal__views__handler__sort__entity__string__broken"/>
+        <childnode refid="899" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="899">
+        <label>tripal_views_handler_sort_entity_string</label>
+        <link refid="d7/dd5/classtripal__views__handler__sort__entity__string"/>
+        <childnode refid="900" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="903">
+        <label>views_handler</label>
+      </node>
+      <node id="901">
+        <label>tripal_views_handler_sort_entity_string_broken</label>
+        <link refid="d9/d4a/classtripal__views__handler__sort__entity__string__broken"/>
+        <childnode refid="902" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="902">
+        <label>tripal_views_handler_sort_entity_string</label>
+        <link refid="d7/dd5/classtripal__views__handler__sort__entity__string"/>
+        <childnode refid="903" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" line="205" column="1" bodyfile="tripal/views_handlers/tripal_views_handler_sort_entity_string.inc" bodystart="205" bodyend="222"/>
+    <listofallmembers>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a52e0cd810679ef817d46c2032b02abe5" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>admin_summary</name></member>
+      <member refid="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1a8b5ed6de3124547d8d7e21c1026c87e3" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>broken</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a8f9fe57cdcb27618648db4834c2d39f5" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>can_expose</name></member>
+      <member refid="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1aa85b3814d8bdc649b99c8bb5a6671bfc" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>ensure_my_table</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a3bac4bb0252300523f1e00fb3e32b064" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>expose_form</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a26bd3ff30f29d45bc41fe4e25dcc685d" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>expose_options</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1ad5ad43ec9a39881d10eb9e714189ecce" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>option_definition</name></member>
+      <member refid="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1ad8708172fa2b795dbbd406a3df3df99e" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>options_form</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a2706c0ff29f60f694fcb7fc248673d3c" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>options_submit</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a33772b329eedb246444e2661da03b4e6" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>options_validate</name></member>
+      <member refid="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1a900423e622fb5d3818c9e40ad651faeb" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>query</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a1a34a7d1dd752a3ffee4d065ae0d5479" prot="public" virt="non-virtual" ambiguityscope="tripal_views_handler_sort_entity_string::"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>query</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1ad561182912b83e075a92bb52c6de2038" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>show_expose_button</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1ad1285d860343af24781d327995e592db" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>show_sort_form</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1ad5421f83375066efdcb4e744a7616218" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>sort_options</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1a3c828fd2a6c288599a6034be897b2c15" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>sort_submit</name></member>
+      <member refid="d7/dd5/classtripal__views__handler__sort__entity__string_1ac619ac6eaed493b4651011247e18f7ad" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>sort_validate</name></member>
+      <member refid="d9/d4a/classtripal__views__handler__sort__entity__string__broken_1a9ed2b32eadb9d5c7bf7b8371d2f1ece2" prot="public" virt="non-virtual"><scope>tripal_views_handler_sort_entity_string_broken</scope><name>ui_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2013 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d3c/group__tripal__chado__module__DEPRECATED__api" kind="group">
+    <compoundname>Tripal_chado_module_DEPRECATED_api</compoundname>
+    <title>Tripal_chado_module_DEPRECATED_api</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga314d46ad92adc449049f58553b963236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_abbreviate_infraspecific_rank</definition>
+        <argsstring>($rank)</argsstring>
+        <name>tripal_abbreviate_infraspecific_rank</name>
+        <param>
+          <declname>$rank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A handy function to abbreviate the infraspecific rank.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rank below species. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The proper abbreviation for the rank. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="955" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="955" bodyend="957"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga2f5b94ff005face464a30ba6311d6310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_assign_phylogeny_tree_indices</definition>
+        <argsstring>(&amp;$tree, &amp;$index=1)</argsstring>
+        <name>tripal_assign_phylogeny_tree_indices</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$tree</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$index</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through the tree and sets the left and right indicies.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tree array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameters is not used when the function is first called. It is used for recursive calls. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1131" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1131" bodyend="1133"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga16956e11c0dead357f36ab3c3e4955aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_associate_cvterm</definition>
+        <argsstring>($basetable, $record_id, $cvterm, $options=array())</argsstring>
+        <name>tripal_associate_cvterm</name>
+        <param>
+          <declname>$basetable</declname>
+        </param>
+        <param>
+          <declname>$record_id</declname>
+        </param>
+        <param>
+          <declname>$cvterm</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a record to a cvterm linking table (ie: feature_cvterm).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$basetable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base table to which the cvterm should be linked/associated. Thus to associate a cvterm to a feature the basetable=feature and cvterm_id is added to the feature_cvterm table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$record_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The primary key of the basetable to associate the cvterm with. This should be in integer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$cvterm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array describing the cvterm. Valid keys include:<itemizedlist>
+<listitem><para>name: the name for the cvterm,</para></listitem><listitem><para>cv_name: the name of the cv the cvterm belongs to.</para></listitem><listitem><para>cv_id: the primary key of the cv the cvterm belongs to. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of options. Valid keys include:<itemizedlist>
+<listitem><para>insert_cvterm: Insert the cvterm if it doesn&apos;t already exist. FALSE is the default. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="422" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="422" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga70577489cc8d7310a2513978766ad89a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_associate_dbxref</definition>
+        <argsstring>($basetable, $record_id, $dbxref, $options=array())</argsstring>
+        <name>tripal_associate_dbxref</name>
+        <param>
+          <declname>$basetable</declname>
+        </param>
+        <param>
+          <declname>$record_id</declname>
+        </param>
+        <param>
+          <declname>$dbxref</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a record to a database reference linking table (ie: feature_dbxref).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$basetable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base table for which the dbxref should be associated. Thus to associate a dbxref with a feature the basetable=feature and dbxref_id is added to the feature_dbxref table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$record_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The primary key of the basetable to associate the dbxref with. This should be in integer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$dbxref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array describing the dbxref. Valid keys include: &apos;accession&apos; =&gt; the accession for the dbxref, &apos;db_name&apos; =&gt; the name of the database the dbxref belongs to. &apos;db_id&apos; =&gt; the primary key of the database the dbxref belongs to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of options. Valid keys include:<itemizedlist>
+<listitem><para>insert_dbxref: Insert the dbxref if it doesn&apos;t already exist. TRUE is the default. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="635" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="635" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaff8e8ecf9b6e7ed0b6fded106a3e4c7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_autocomplete_contact</definition>
+        <argsstring>($text)</argsstring>
+        <name>tripal_autocomplete_contact</name>
+        <param>
+          <declname>$text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used in autocomplete forms for contacts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="104" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaecc52f4f251d425018fc185435af6d63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_autocomplete_cv</definition>
+        <argsstring>($string=&apos;&apos;)</argsstring>
+        <name>tripal_autocomplete_cv</name>
+        <param>
+          <declname>$string</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used in autocomplete forms.</para><para>This function searches for a matching controlled vobulary name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="378" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="378" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga6c60c1e8416542f98fa23c552f0840bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_autocomplete_cvterm</definition>
+        <argsstring>($cv_id, $string=&apos;&apos;)</argsstring>
+        <name>tripal_autocomplete_cvterm</name>
+        <param>
+          <declname>$cv_id</declname>
+        </param>
+        <param>
+          <declname>$string</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used in autocomplete forms for searching for CV terms that begin with the provided string.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$cv_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CV ID in which to search for the term. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="396" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="396" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaeed11c8876b271c89cb964a03407b7e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_autocomplete_dbxref</definition>
+        <argsstring>($db_id, $string=&apos;&apos;)</argsstring>
+        <name>tripal_autocomplete_dbxref</name>
+        <param>
+          <declname>$db_id</declname>
+        </param>
+        <param>
+          <declname>$string</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used in autocomplete forms for searching for accession that begin with the provided string.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$db_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DB ID in which to search for the term. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="653" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="653" bodyend="655"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gae75913075f53b15b97800050b893d492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_autocomplete_feature</definition>
+        <argsstring>($string=&apos;&apos;)</argsstring>
+        <name>tripal_autocomplete_feature</name>
+        <param>
+          <declname>$string</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_feature_api Used for autocomplete in forms for identifying for publications.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field in the publication to search on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="671" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="671" bodyend="673"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga08a8d760152eafc4f95be837c2228f91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_autocomplete_organism</definition>
+        <argsstring>($text)</argsstring>
+        <name>tripal_autocomplete_organism</name>
+        <param>
+          <declname>$text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is intended to be used in autocomplete forms for searching for organisms that begin with the provided string.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="941" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="941" bodyend="943"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaf3adc39c83721c70e26fe4a5f1377c1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_autocomplete_pub</definition>
+        <argsstring>($string=&apos;&apos;)</argsstring>
+        <name>tripal_autocomplete_pub</name>
+        <param>
+          <declname>$string</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used for autocomplete in forms for identifying for publications.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field in the publication to search on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A json array of terms that begin with the provided string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1330" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1330" bodyend="1332"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga5f3932f09324791b68bd54f561c6d189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_delete_phylotree</definition>
+        <argsstring>($phylotree_id)</argsstring>
+        <name>tripal_delete_phylotree</name>
+        <param>
+          <declname>$phylotree_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes a phylotree record from Chado.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$phylotree_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE on success, FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1116" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1116" bodyend="1118"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gae090611122cdc42c4632047c3faac5be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_execute_active_pub_importers</definition>
+        <argsstring>($report_email=false, $do_update=false)</argsstring>
+        <name>tripal_execute_active_pub_importers</name>
+        <param>
+          <declname>$report_email</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <declname>$do_update</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports all publications for all active import setups.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$report_email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of email address, separated by commas, that should be notified once importing has completed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$do_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to TRUE then publications that already exist in the Chado database will be updated, whereas if FALSE only new publications will be added. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1367" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1367" bodyend="1369"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab236e8ac698285cdf4831b53b32f108f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_analysis</definition>
+        <argsstring>($identifier, $options)</argsstring>
+        <name>tripal_get_analysis</name>
+        <param>
+          <declname>$identifier</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_analysis_api Retrieves a chado analysis variable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$itentifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an array with the key stating what the identifier is. Supported keys (only on of the following unique keys is required):<itemizedlist>
+<listitem><para>analysis_id: the chado analysis.analysis_id primary key.</para></listitem><listitem><para>nid: the drupal node.nid primary key. There are also some specially handled keys. They are:</para></listitem><listitem><para>property: An array/object describing the property to select records for. It should at least have either a type_name (if unique across cvs) or type_id. Other supported keys include: cv_id/cv_name (of the type), value and rank. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the stock record to be returned.</para><para><simplesect kind="return"><para>the analysis node matching the passed in identifier </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="47" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gad47ad4531a391dd0c12e9da533b76f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_analysis_select_options</definition>
+        <argsstring>($syncd_only=true)</argsstring>
+        <name>tripal_get_analysis_select_options</name>
+        <param>
+          <declname>$syncd_only</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of analyses that are currently synced with Drupal to use in select lists.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$syncd_only</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not to return all chado analyses or just those sync&apos;d with drupal. Defaults to TRUE (only sync&apos;d analyses). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of analyses sync&apos;d with Drupal where each value is the analysis scientific name and the keys are analysis_id&apos;s. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="64" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga8a2dee0b493a0220813976933c47f6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_bulk_feature_sequences</definition>
+        <argsstring>($options)</argsstring>
+        <name>tripal_get_bulk_feature_sequences</name>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the bulk sequences for a given feature.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of options for selecting a feature. Valid keys include:<itemizedlist>
+<listitem><para>org_commonname: The common name of the organism for which sequences should be retrieved</para></listitem><listitem><para>genus: The genus of the organism for which sequences should be retrieved</para></listitem><listitem><para>species: The species of the organism for which sequences should be retrieved</para></listitem><listitem><para>analysis_name: The name of an analysis to which sequences belong. Only those that are associated with the analysis will be retrieved.</para></listitem><listitem><para>type: The type of feature (a sequence ontology term).</para></listitem><listitem><para>feature_name: the name of the feature. Can be an array of feature names.</para></listitem><listitem><para>feature_uname: the uniquename of the feature. Can be an array of feature unique names.</para></listitem><listitem><para>upstream: An integer specifing the number of upstream bases to include in the output</para></listitem><listitem><para>downstream: An integer specifying the number of downstream bases to include in the output.</para></listitem><listitem><para>derive_from_parent: Set to &apos;1&apos; if the sequence should be obtained from the parent to which this feature is aligned.</para></listitem><listitem><para>aggregate: Set to &apos;1&apos; if the sequence should only contain sub features, excluding intro sub feature sequence. For example, set this option to obtain just the coding sequence of an mRNA.</para></listitem><listitem><para>sub_feature_types: Only include sub features (or child features) of the types provided in the array</para></listitem><listitem><para>relationship_type: If a relationship name is provided (e.g. sequence_of) then any sequences that are in relationships of this type with matched sequences are also included</para></listitem><listitem><para>relationship_part: If a relationship is provided in the preceeding argument then the rel_part must be either &apos;object&apos; or &apos;subject&apos; to indicate which side of the relationship the matched features belong</para></listitem><listitem><para>width: Indicate the number of bases to use per line. A new line will be added after the specified number of bases on each line.</para></listitem><listitem><para>is_html: Set to &apos;1&apos; if the sequence is meant to be displayed on a web page. This will cause a <linebreak/>
+ tag to separate lines of the FASTA sequence. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns an array of sequences. The sequences will be in an array with the following keys for each sequence: &apos;types&apos; =&gt; an array of feature types that were used to derive the sequence (e.g. from an aggregated sequence) &apos;upstream&apos; =&gt; the number of upstream bases in the sequence &apos;downstream&apos; =&gt; the number of downstream bases in the sequence &apos;defline&apos; =&gt; the definintion line used to create a FASTA sequence &apos;residues&apos; =&gt; the residues &apos;featureloc_id&apos; =&gt; the featureloc_id if from an alignment </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="799" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="799" bodyend="801"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga9f03e9576873f620ecd0435f81add17d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_cv</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_cv</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_chado_cv_api Retrieves a chado controlled vocabulary variable</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the key stating what the identifier is. Supported keys (only on of the following unique keys is required):<itemizedlist>
+<listitem><para>cv_id: the chado cv.cv_id primary key.</para></listitem><listitem><para>name: the chado cv.name field (assume unique). </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition fot additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the cv record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the cv will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, FALSE will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="133" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaaa1de332dfbd88bd1d717549d7c3810d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_cv_select_options</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_cv_select_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an options array to be used in a form element which provides a list of all chado cvs.</para><para><simplesect kind="return"><para>An array(cv_id =&gt; name) for each cv in the chado cv table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="146" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gadf441e46c4ddcff4ea26bb9d99546a10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_cvterm</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_cvterm</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a chado controlled vocabulary term variable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array apropriate for use with the chado_generate_var for uniquely identifying a cvterm record. Alternativley, there are also some specially handled keys. They are:<itemizedlist>
+<listitem><para>id: an ID for the term of the for [dbname]:[accession], where [dbname] is the short name of the vocabulary and accession is the unique ID.</para></listitem><listitem><para>cv_id: an integer indicating the cv_id or an array with &apos;name&apos; =&gt; the name of the cv.</para></listitem><listitem><para>synonym: an array with &apos;name&apos; =&gt; the name of the synonym of the cvterm you want returned; &apos;cv_id&apos; =&gt; the cv_id of the synonym; &apos;cv_name&apos; =&gt; the name of the cv of the synonym.</para></listitem><listitem><para>property: An array/object describing the property to select records for. It should at least have either a type_name (if unique across cvs) or type_id. Other supported keys include: cv_id/cv_name (of the type), value and rank. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the cvterm record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the cvterm will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, FALSE will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="184" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gabb2666e4c9f6f4fa537e47d08cd8efb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_cvterm_select_options</definition>
+        <argsstring>($cv_id, $rel_type=false)</argsstring>
+        <name>tripal_get_cvterm_select_options</name>
+        <param>
+          <declname>$cv_id</declname>
+        </param>
+        <param>
+          <declname>$rel_type</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an options array to be used in a form element which provides a list of all chado cvterms.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$cv_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The chado cv_id; only cvterms with the supplied cv_id will be returnedl. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$rel_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE if the terms returned should only be relationship types in the vocabulary. This is useful for creating drop-downs of terms used for relationship linker tables.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An associative array with the cvterm_id&apos;s as keys. The first element in the array has a key of &apos;0&apos; and a value of &apos;Select a Type&apos;. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="205" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="205" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga9c38482a9ee54d56904fa6cdac5f3a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_db</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_db</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_chado_database_api Retrieves a chado db variable.</para><para>Example Usage: <programlisting><codeline><highlight class="normal">$select_values<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;SOFP&apos;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$db_object<sp/>=<sp/>tripal_get_db($select_values);</highlight></codeline>
+</programlisting> The above code selects the SOFP db and returns the following object: <programlisting><codeline><highlight class="normal">$db_object<sp/>=<sp/>stdClass<sp/>Object<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[db_id]<sp/>=&gt;<sp/>49</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[name]<sp/>=&gt;<sp/>SOFP</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[description]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[urlprefix]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>[url]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the key stating what the identifier is. Supported keys (only on of the following unique keys is required):<itemizedlist>
+<listitem><para>db_id: the chado db.db_id primary key.</para></listitem><listitem><para>name: the chado db.name field (assume unique). </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the db record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the cv will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, an array of objects will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="469" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="469" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga73bc4df65b20adc5af01dc893276589f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_db_select_options</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_get_db_select_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an options array to be used in a form element which provides a list of all chado dbs.</para><para><simplesect kind="return"><para>An array(db_id =&gt; name) for each db in the chado db table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="482" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="482" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gae514b8baf5c5e087ae2bf81e0f8c7c72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_dbxref</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_dbxref</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a chado database reference variable.</para><para>Example Usage: <programlisting><codeline><highlight class="normal">$identifiers<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;accession&apos;<sp/>=&gt;<sp/>&apos;synonym&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;db_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;SOFP&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$dbxref_object<sp/>=<sp/>tripal_get_dbxref($identifiers);</highlight></codeline>
+</programlisting> The above code selects the synonym database reference and returns the following object: <programlisting><codeline><highlight class="normal">$dbxref_object<sp/>=<sp/>stdClass<sp/>Object<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[dbxref_id]<sp/>=&gt;<sp/>2581</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[accession]<sp/>=&gt;<sp/>synonym</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[description]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[version]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_db_id]<sp/>=&gt;<sp/>49</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_name]<sp/>=&gt;<sp/>SOFP</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_description]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_urlprefix]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>[db_url]<sp/>=&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array apropriate for use with the chado_generate_var for uniquely identifying a dbxref record. Alternatively, there are also some specially handled keys. They are:<itemizedlist>
+<listitem><para>property: An array/object describing the property to select records for. It should at least have either a type_name (if unique across cvs) or type_id. Other supported keys include: cv_id/cv_name (of the type), value and rank. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the dbxref record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the dbxref will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, FALSE will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="539" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="539" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga3f78e23c87bf9dcfedfaf21fa2bc8322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_dbxref_url</definition>
+        <argsstring>($dbxref)</argsstring>
+        <name>tripal_get_dbxref_url</name>
+        <param>
+          <declname>$dbxref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates a URL for the controlled vocabulary term.</para><para>If the URL and URL prefix are provided for the database record of a cvterm then a URL can be created for the term. By default, the db.name and dbxref.accession are concatenated and appended to the end of the db.urlprefix. But Tripal supports the use of {db} and {accession} tokens when if present in the db.urlprefix string will be replaced with the db.name and dbxref.accession respectively.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$dbxref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A dbxref object as created by the <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> function.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the URL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="561" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="561" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga5117c49e0f5dbed592b9e48d88635de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_fasta_defline</definition>
+        <argsstring>($feature, $notes=&apos;&apos;, $featureloc=null, $type=&apos;&apos;, $length=0)</argsstring>
+        <name>tripal_get_fasta_defline</name>
+        <param>
+          <declname>$feature</declname>
+        </param>
+        <param>
+          <declname>$notes</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$featureloc</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$type</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$length</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a definition line that can be used in a FASTA file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$feature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single feature object containing all the fields from the chado.feature table. Best case is to provide an object generated by the <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$notes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: additional notes to be added to the definition line. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$featureloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: a single featureloc object generated using chado_generate_var that contains a record from the chado.featureloc table. Provide this if the sequence was obtained by using the alignment rather than from the feature.residues column. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: the type of sequence. By default the feature type is used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional: the length of the sequence.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string of the format: uniquename|name|type|feature_id or if an alignment: srcfeature_name:fmin..fmax[+-]; alignment of uniquename|name|type|feature_id. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="829" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="829" bodyend="831"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gae8fd017896859dde0ed18aa8cd7013ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_feature_sequences</definition>
+        <argsstring>($feature, $options)</argsstring>
+        <name>tripal_get_feature_sequences</name>
+        <param>
+          <declname>$feature</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the sequences for a given feature.</para><para>If a feature has multiple alignments or multiple relationships then multiple sequences will be returned.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$feature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array describing the feature. Valid keys include:<itemizedlist>
+<listitem><para>feature_id: The feature_id of the feature for which the sequence will be retrieved.</para></listitem><listitem><para>name: The feature name. This will appear on the FASTA definition line.</para></listitem><listitem><para>parent_id: (optional) only retrieve a sequence if &apos;derive_from_parent&apos; is true and the parent matches this ID.</para></listitem><listitem><para>featureloc_id: (optional) only retrieve a sequence if &apos;derive_from_parent&apos; is true and the alignment is defined with this featureloc_id. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of options. Valid keys include:<itemizedlist>
+<listitem><para>width: Indicate the number of bases to use per line. A new line will be added after the specified number of bases on each line.</para></listitem><listitem><para>is_html: Set to &apos;1&apos; if the sequence is meant to be displayed on a web page. This will cause a <linebreak/>
+ tag to separate lines of the FASTA sequence.</para></listitem><listitem><para>derive_from_parent: Set to &apos;1&apos; if the sequence should be obtained from the parent to which this feature is aligned.</para></listitem><listitem><para>aggregate: Set to &apos;1&apos; if the sequence should only contain sub features, excluding intro sub feature sequence. For example, set this option to obtain just the coding sequence of an mRNA.</para></listitem><listitem><para>upstream: An integer specifing the number of upstream bases to include in the output.</para></listitem><listitem><para>downstream: An integer specifying the number of downstream bases to include in the output.</para></listitem><listitem><para>sub_feature_types: Only include sub features (or child features) of the types provided in the array.</para></listitem><listitem><para>relationship_type: If a relationship name is provided (e.g. sequence_of) then any sequences that are in relationships of this type with matched sequences are also included.</para></listitem><listitem><para>relationship_part: If a relationship is provided in the preceeding argument then the rel_part must be either &apos;object&apos; or &apos;subject&apos; to indicate which side of the relationship the matched features belong.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an array of matching sequence in the following keys for each sequence:<itemizedlist>
+<listitem><para>types: an array of feature types that were used to derive the sequence (e.g. from an aggregated sequence)</para></listitem><listitem><para>upstream: the number of upstream bases included in the sequence</para></listitem><listitem><para>downstream: the number of downstream bases included in the sequence</para></listitem><listitem><para>defline: the definintion line used to create a FASTA sequence</para></listitem><listitem><para>residues: the residues</para></listitem><listitem><para>featureloc_id: the featureloc_id if the sequences is from an alignment </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="744" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="744" bodyend="746"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga10d041fe1cd67d0cca20ad3a1a5debc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_location_string</definition>
+        <argsstring>($featureloc)</argsstring>
+        <name>tripal_get_location_string</name>
+        <param>
+          <declname>$featureloc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string representing a feature location in an alignment.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$featureloc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single featureloc object generated using chado_generate_var that contains a record from the chado.featureloc table.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string of the format: uniquename:featurelocmin..featurelocmax.strand </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="845" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="845" bodyend="847"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaeffb054865ee724e8c04ab884cf9a351" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_minimal_pub_info</definition>
+        <argsstring>($pub)</argsstring>
+        <name>tripal_get_minimal_pub_info</name>
+        <param>
+          <declname>$pub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the minimal information to uniquely describe any publication.</para><para>The returned array is an associative array where the keys are the controlled vocabulary terms in the form [vocab]:[accession].</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$pub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A publication object as created by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array with the following keys: &apos;Citation&apos;, &apos;Abstract&apos;, &apos;Authors&apos;, &apos;URL&apos;. All keys are term names in the Tripal Publication Ontology :TPUB. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1464" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1464" bodyend="1466"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaaa1dc730d57ad1ead7f260db7977f20d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_multiple_stocks</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_multiple_stocks</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a chado stock variable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the key stating what the identifier is. Supported keys include any field in the stock table. See the <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> $values parameter for additional details including an example. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of stock objects matching the criteria. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1520" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1520" bodyend="1522"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gad270b7fc93adcc598972759f4fec1f80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_obo</definition>
+        <argsstring>($values)</argsstring>
+        <name>tripal_get_obo</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves an OBO record.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associate array with the following allowed keys: obo_id, name.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An instance of an OBO record object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="361" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="361" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga127ec31dc04297b5cfeabe0077a12da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_organism</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_organism</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a chado organism variable.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the key stating what the identifier is. Supported keys (only on of the following unique keys is required):<itemizedlist>
+<listitem><para>organism_id: the chado organism.organism_id primary key.</para></listitem><listitem><para>genus &amp; species: the chado organism.genus field &amp; organism.species field. There are also some specially handled keys. They are:</para></listitem><listitem><para>property: An array/object describing the property to select records for. It should at least have either a type_name (if unique across cvs) or type_id. Other supported keys include: cv_id/cv_name (of the type), value and rank. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the organism record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the organism will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, FALSE will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="878" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="878" bodyend="880"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga9babd8ff49952737a17586be14cf1f02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_organism_image_url</definition>
+        <argsstring>($organism)</argsstring>
+        <name>tripal_get_organism_image_url</name>
+        <param>
+          <declname>$organism</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the path for the organism image.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$organism</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An organism table record.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the type parameter is &apos;url&apos; (the default) then the fully qualified url to the image is returend. If no image is present then NULL is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="925" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="925" bodyend="927"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga8f384b1ff89a99ef7ee803d45fccc484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_organism_scientific_name</definition>
+        <argsstring>($organism)</argsstring>
+        <name>tripal_get_organism_scientific_name</name>
+        <param>
+          <declname>$organism</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the full scientific name of an organism.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$organism</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An organism object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The full scientific name of the organism. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="892" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="892" bodyend="894"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga5210a45a7feaaa9aeb5f843c72230e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_organism_select_options</definition>
+        <argsstring>($syncd_only=true)</argsstring>
+        <name>tripal_get_organism_select_options</name>
+        <param>
+          <declname>$syncd_only</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a list of organisms that are currently synced with Drupal to use in select lists.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$syncd_only</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether or not to return all chado organisms or just those sync&apos;d with drupal. Defaults to TRUE (only sync&apos;d organisms). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of organisms sync&apos;d with Drupal where each value is the organism scientific name and the keys are organism_id&apos;s. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="909" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="909" bodyend="911"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga588de6834b3f726d1dc2599e26e06c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_publication</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_publication</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_pub_api <linebreak/>
+Retrieves a chado publication array.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array used to uniquely identify a publication. This array has the same format as that used by the <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. The following keys can be useful for uniquely identifying a publication as they should be unique:<itemizedlist>
+<listitem><para>pub_id: the chado pub.pub_id primary key.</para></listitem><listitem><para>nid: the drupal nid of the publication.</para></listitem><listitem><para>uniquename: A value to matach with the pub.uniquename field. There are also some specially handled keys. They are:</para></listitem><listitem><para>property: An array describing the property to select records for. It should at least have either a &apos;type_name&apos; key (if unique across cvs) or &apos;type_id&apos; key. Other supported keys include: &apos;cv_id&apos;, &apos;cv_name&apos; (of the type), &apos;value&apos; and &apos;rank&apos;</para></listitem><listitem><para>dbxref: The database cross reference accession. It should be in the form DB:ACCESSION, where DB is the database name and ACCESSION is the unique publication identifier (e.g. PMID:4382934)</para></listitem><listitem><para>dbxref_id: The dbxref.dbxref_id of the publication. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the pub record to be returned.</para><para><simplesect kind="return"><para>If a singe publication is retreived using the identifiers, then a publication array will be returned. The array is of the same format returned by the <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref> function. Otherwise, FALSE will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1275" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1275" bodyend="1277"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga7645ecdf21e5b677b2e8ff7faaa21d8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_stock</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_get_stock</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_stock_api <linebreak/>
+Retrieves a chado stock variable</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with the key stating what the identifier is. Supported keys (only one of the following unique keys is required):<itemizedlist>
+<listitem><para>stock_id: the chado stock.stock_id primary key</para></listitem><listitem><para>nid: the drupal nid of the stock There are also some specially handled keys. They are:</para></listitem><listitem><para>property: An array/object describing the property to select records for. It should at least have either a type_name (if unique across cvs) or type_id. Other supported keys include: cv_id/cv_name (of the type), value and rank </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options. Supported keys include:<itemizedlist>
+<listitem><para>Any keys supported by <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>. See that function definition for additional details.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+NOTE: the $identifier parameter can really be any array similar to $values passed into <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref>. It should fully specify the stock record to be returned.</para><para><simplesect kind="return"><para>If unique values were passed in as an identifier then an object describing the stock will be returned (will be a chado variable from <ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var()</ref>). Otherwise, FALSE will be returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1499" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1499" bodyend="1501"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab45fa4eb55d2a1890f4be372610567ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_import_pub_by_dbxref</definition>
+        <argsstring>($pub_dbxref, $do_contact=false, $do_update=true)</argsstring>
+        <name>tripal_import_pub_by_dbxref</name>
+        <param>
+          <declname>$pub_dbxref</declname>
+        </param>
+        <param>
+          <declname>$do_contact</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <declname>$do_update</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports a singe publication specified by a remote database cross reference.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$pub_dbxref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique database ID for the record to update. This value must be of the format DB_NAME:ACCESSION where DB_NAME is the name of the database (e.g. PMID or AGL) and the ACCESSION is the unique identifier for the record in the database. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$do_contact</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE if authors should automatically have a contact record added to Chado. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$do_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If set to TRUE then the publication will be updated if it already exists in the database. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1351" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1351" bodyend="1353"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gae7fbdbd5c90e4da33caf1b6393a6cf6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_contact</definition>
+        <argsstring>($values)</argsstring>
+        <name>tripal_insert_contact</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_contact_api Adds a contact to the Chado contact table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of values to be inserted. Valid keys include:<itemizedlist>
+<listitem><para>name: The name of the contact.</para></listitem><listitem><para>description: Text describing the contact.</para></listitem><listitem><para>type_name: The type of contact. Must be a term in the tripal_contact vocabulary.</para></listitem><listitem><para>properties: An associative array containing a list of key value pairs for the properites. The key&apos;s must be valid terms in the tripal_contact vocabulary (e.g. Affiliation, Address, etc).</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success, an array is returned containing the fields of the contact record including the newly added contact_id. On failure, FALSE is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="89" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab16fd96f94ea80d3ecb4082163a21860" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_cv</definition>
+        <argsstring>($name, $definition)</argsstring>
+        <name>tripal_insert_cv</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$definition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a controlled vocabulary to the CV table of Chado.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the controlled vocabulary. These are typically all lower case with no special characters other than an undrescore (for spaces). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$comment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A description or definition of the vocabulary.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An object populated with fields from the newly added database. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="240" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="240" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga28259d94f3ef7ae873a6e7d8e3ef8753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_cvterm</definition>
+        <argsstring>($term, $options=array())</argsstring>
+        <name>tripal_insert_cvterm</name>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add&apos;s a controlled vocabulary term to Chado.</para><para>This function will add a cvterm record (and a dbxref record if appropriate values are provided). If the parent vocabulary does not exist then that also is added to the cv table. If the cvterm is a relationship term then the &apos;is_relationship&apos; value should be set. All terms must also have a corresponding database. This is specified in the term&apos;s ID just before the colon (e.g. GO:003824). If the database does not exist in the DB table then it will be added automatically. The accession (the value just after the colon in the term&apos;s ID) will be added to the dbxref table. If the CVterm already exists and $update is set (default) then the cvterm is updated. If the CVTerm already exists and $update is not set, then no changes are made and the CVTerm object is returned.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array with the following keys:<itemizedlist>
+<listitem><para>id: the term accession. must be of the form &lt;DB&gt;:&lt;ACCESSION&gt;, where &lt;DB&gt; is the name of the database to which the cvterm belongs and the &lt;ACCESSION&gt; is the term&apos;s accession number in the database.</para></listitem><listitem><para>name: the name of the term. usually meant to be human-readable.</para></listitem><listitem><para>is_obsolete: is present and set to 1 if the term is defunct.</para></listitem><listitem><para>definition: the definition of the term.</para></listitem><listitem><para>cv_name: The CV name to which the term belongs. If this arugment is null or not provided then the function tries to find a record in the CV table with the same name provided in the $term[namespace]. If this field is provided then it overrides what the value in $term[namespace].</para></listitem><listitem><para>is_relationship: If this term is a relationship term then this value should be 1.</para></listitem><listitem><para>db_name: In some cases the database name will not be part of the $term[&apos;id&apos;] and it needs to be explicitly set. Use this argument only if the database name cannot be specififed in the term ID (e.g. &lt;DB&gt;:&lt;ACCESSION&gt;). </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array with the following keys:<itemizedlist>
+<listitem><para>update_existing: By default this is TRUE. If the term exists it is automatically updated.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A cvterm object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="288" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="288" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga3b6e59f904aa03973b77bc9b08d77edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_db</definition>
+        <argsstring>($values, $options=array())</argsstring>
+        <name>tripal_insert_db</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new database to the Chado DB table and returns the DB object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of the values of the db (those to be inserted):<itemizedlist>
+<listitem><para>name: The name of the database. This name is usually used as the prefix for CV term accessions.</para></listitem><listitem><para>description: (Optional) A description of the database. By default no description is required.</para></listitem><listitem><para>url: (Optional) The URL for the database.</para></listitem><listitem><para>urlprefix: (Optional) The URL that is to be used as a prefix when constructing a link to a database term. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional. An associative array of options that can include:<itemizedlist>
+<listitem><para>update_existing: Set this to &apos;1&apos; to force an update of the database if it already exists. The default is to not update. If the database exists then nothing is added.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An object populated with fields from the newly added database. If the database already exists it returns the values in the current entry. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="589" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="589" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gafdb394be6cb1534f4498254dc8eba730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_dbxref</definition>
+        <argsstring>($values)</argsstring>
+        <name>tripal_insert_dbxref</name>
+        <param>
+          <declname>$values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a database reference.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array of the values to be inserted including:<itemizedlist>
+<listitem><para>db_id: the database_id of the database the reference is from.</para></listitem><listitem><para>accession: the accession.</para></listitem><listitem><para>version: (Optional) The version of the database reference.</para></listitem><listitem><para>description: (Optional) A description of the database reference.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The newly inserted dbxref as an object, similar to that returned by the <ref refid="de/dc4/group__tripal__chado__query__api_1gad84b24dc3ed2e18b053977221f997a35" kindref="member">chado_select_record()</ref> function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="609" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="609" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gafe4308cc18d9d712ba2b0fbcf5f40572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_obo</definition>
+        <argsstring>($name, $path)</argsstring>
+        <name>tripal_insert_obo</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add the OBO to the tripal_cv_obo table in the Drupal database.</para><para>If the OBO name already exists in the table then the path is updated.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The human readable name of this ontology. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file path or URL of the ontology.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the ontology ID. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="346" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="346" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gad525db5bc9135b90ef085d80d0702f75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_phylotree</definition>
+        <argsstring>(&amp;$options, &amp;$errors, &amp;$warnings)</argsstring>
+        <name>tripal_insert_phylotree</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$errors</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$warnings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inserts a phylotree record into Chado.</para><para>This function validates the options passed prior to insertion of the record, and if validation passes then any values in the options array that needed validation lookups (such as the dbxref, analysis, leaf_type, etc) will have their approriate primary key values added to the options array.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key value pairs with the following keys required: &apos;name&apos;: The name of the tree. This will be displayed to users. &apos;description: A description about the tree &apos;anlaysis_id: The ID of the analysis to which this phylotree should be associated. &apos;analysis&apos;: If the analysis_id key is not used then the analysis name may be provided to identify the analysis to which the tree should be associated. &apos;leaf_type&apos;: A sequence ontology term or the word &apos;organism&apos;. If the type is &apos;organism&apos; then this tree represents a taxonomic tree. The default, if not specified, is the term &apos;polypeptide&apos;. &apos;tree_file&apos;: The path of the file containing the phylogenetic tree to import or a Drupal managed_file numeric ID. &apos;format&apos;: The file format. Currently only &apos;newick is supported&apos;.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Optional keys: &apos;dbxref&apos;: A database cross-reference of the form DB:ACCESSION. Where DB is the database name, which is already present in Chado, and ACCESSION is the unique identifier for this tree in the remote database. &apos;name_re&apos;: If the leaf type is NOT &apos;taxonomy&apos;, then the value of this field can be a regular expression to pull out the name of the feature from the node label in the intput tree. If no value is provided the entire label is used. &apos;match&apos;: Set to &apos;uniquename&apos; if the leaf nodes should be matched with the feature uniquename. &apos;load_now&apos;: If set, the tree will be loaded immediately if a tree_file is provided. Otherwise, the tree will be loaded via a Tripal jobs call. &apos;no_load&apos;: If set the tree file will not be loaded. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$errors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation error messages will be set. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$warnings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation warning messagges will be set. The warnings should not stop an insert or an update but should be provided to the user as information by a drupal_set_message() if appropriate. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE for success and FALSE for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1052" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1052" bodyend="1054"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaf7cd178ced39b904da724890c70003ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_phylogeny_get_node_types_vocab</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_phylogeny_get_node_types_vocab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the vocabulary terms used to describe nodes in the tree.</para><para><simplesect kind="return"><para>Array of vocab info or FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1202" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1202" bodyend="1204"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga708475bff03454aa097a79e48f5ebb21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_phylogeny_import_tree</definition>
+        <argsstring>(&amp;$tree, $phylotree, $options, $vocab=array(), $parent=null)</argsstring>
+        <name>tripal_phylogeny_import_tree</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$tree</declname>
+        </param>
+        <param>
+          <declname>$phylotree</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <declname>$vocab</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$parent</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterates through the tree array and creates phylonodes in Chado.</para><para>The function iterates through the tree in a top-down approach adding parent internal nodes prior to leaf nodes. Each node of the tree should have the following fields:</para><para>-name: The name (or label) for this node. -depth: The depth of the node in the tree. -is_root: Set to 1 if this node is a root node. -is_leaf: Set to 1 if this node is a leaf node. -is_internal: Set to 1 if this node is an internal node. -left_index: The index of the node to the left in the tree. -right_index: The index of the node to the right in the tree. -branch_set: An array containing a list of nodes of that are children of the node. -parent: The name of the parent node. -organism_id: The organism_id for associtating the node with an organism. -properties: An array of key/value pairs where the key is the cvterm_id and the value is the property value. These properties will be assocaited with the phylonode.</para><para>Prior to importing the tree the indicies can be set by using the <ref refid="d4/d73/group__tripal__phylotree__api_1ga7a2998cdebaa2248fb4e8ae2ec29d1ae" kindref="member">chado_assign_phylogeny_tree_indices()</ref> function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tree array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$phylotree.</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The phylotree object (from Chado). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options provide some direction for how the tree is imported. The following keys can be used: -taxonomy: Set to 1 if this tree is a taxonomic tree. Set to 0 otherwise. -leaf_type: Set to the leaf type name. If this is a non-taxonomic tree that is associated with features, then this should be the Sequence Ontology term for the feature (e.g. polypeptide). If this is a taxonomic tree then this option is not needed. -match: Set to either &apos;name&apos; or &apos;uniquename&apos;. This is used for matching the feature name or uniquename with the node name. This is not needed for taxonomic trees. -match_re: Set to a regular that can be used for matching the node name with the feature name if the node name is not identical to the feature name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$vocab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional. An array containing a set of key/value pairs that maps node types to CV terms. The keys must be &apos;root&apos;, &apos;internal&apos; or &apos;leaf&apos;. If no vocab is provded then the terms provided by the tripal_phylogeny CV will be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This argument is not needed when the funtion is first called. This function is recursive and this argument is used on recursive calls. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1190" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1190" bodyend="1192"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaaa02cca59916499814c0ac5c0e35e238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_phylogeny_import_tree_file</definition>
+        <argsstring>($file_name, $format, $options=array(), $job_id=null)</argsstring>
+        <name>tripal_phylogeny_import_tree_file</name>
+        <param>
+          <declname>$file_name</declname>
+        </param>
+        <param>
+          <declname>$format</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$job_id</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports a tree file.</para><para>This function is used as a wrapper for loading a phylogenetic tree using any number of file loaders.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file containing the phylogenetic tree to import. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The format of the file. Currently only the &apos;newick&apos; file format is supported. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Options if the phylotree record already exists: &apos;phylotree_id&apos;: The imported nodes will be associated with this tree. &apos;leaf_type&apos;: A sequence ontology term or the word &apos;organism&apos;. If the type is &apos;organism&apos; then this tree represents a taxonomic tree. The default, if not specified, is the term &apos;polypeptide&apos;. &apos;name_re&apos;: If the leaf type is NOT &apos;taxonomy&apos;, then the value of this field can be a regular expression to pull out the name of the feature from the node label in the intput tree. If no value is provided the entire label is used. &apos;match&apos;: Set to &apos;uniquename&apos; if the leaf nodes should be matched with the feature uniquename. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1234" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1234" bodyend="1236"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gae8b059391aaef96663c0641885f5050f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_pub_create_citation</definition>
+        <argsstring>($pub)</argsstring>
+        <name>tripal_pub_create_citation</name>
+        <param>
+          <declname>$pub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function generates citations for publications. It requires an array structure with keys being the terms in the Tripal publication ontology. This function is intended to be used for any function that needs to generate a citation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$pub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array structure containing publication details where the keys are the publication ontology term names and values are the corresponding details. The pub array can contain the following keys with corresponding values:<itemizedlist>
+<listitem><para>Publication Type: an array of publication types. a publication can have more than one type.</para></listitem><listitem><para>Authors: a string containing all of the authors of a publication.</para></listitem><listitem><para>Journal Name: a string containing the journal name.</para></listitem><listitem><para>Journal Abbreviation: a string containing the journal name abbreviation.</para></listitem><listitem><para>Series Name: a string containing the series (e.g. conference proceedings) name.</para></listitem><listitem><para>Series Abbreviation: a string containing the series name abbreviation</para></listitem><listitem><para>Volume: the serives volume number.</para></listitem><listitem><para>Issue: the series issue number.</para></listitem><listitem><para>Pages: the page numbers for the publication.</para></listitem><listitem><para>Publication Date: A date in the format &quot;Year Month Day&quot;.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A text string containing the citation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1445" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1445" bodyend="1447"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gafb52b3ea9fc37c19c5a3f089fc6a60b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_pub_create_citations</definition>
+        <argsstring>($options)</argsstring>
+        <name>tripal_pub_create_citations</name>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Launch the Tripal job to generate citations.</para><para>This function will recreate citations for all publications currently loaded into Tripal. This is useful to create a consistent format for all citations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Options pertaining to what publications to generate citations for. One of the following must be present:<itemizedlist>
+<listitem><para>all: Create and replace citation for all pubs.</para></listitem><listitem><para>new: Create citation for pubs that don&apos;t already have one. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1412" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1412" bodyend="1414"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gaad06fbdf9aae3734b206bf6d2bc8cc9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_publication_exists</definition>
+        <argsstring>($pub_details)</argsstring>
+        <name>tripal_publication_exists</name>
+        <param>
+          <declname>$pub_details</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The publication table of Chado only has a unique constraint for the uniquename of the publiation, but in reality a publication can be considered unique by a combination of the title, publication type, published year and series name (e.g. journal name or conference name). The site administrator can configure how publications are determined to be unique. This function uses the configuration specified by the administrator to look for publications that match the details specified by the $pub_details argument and indicates if one ore more publications match the criteria.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$pub_details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array with details about the publications. The expected keys are: &apos;Title&apos;: The title of the publication. &apos;Year&apos;: The published year of the publication. &apos;Publication Type&apos;: An array of publication types. A publication can have more than one type. &apos;Series Name&apos;: The series name of the publication. &apos;Journal Name&apos;: An alternative to &apos;Series Name&apos;. &apos;Conference Name&apos;: An alternative to &apos;Series Name&apos;. &apos;Citation&apos;: The publication citation (this is the value saved in the pub.uniquename field and must be unique).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+If this key is present it will also be checked &apos;Publication Dbxref&apos;: A database cross reference of the form DB:ACCESSION where DB is the name of the database and ACCESSION is the unique identifier (e.g PMID:3483139).</para><para><simplesect kind="return"><para>An array containing the pub_id&apos;s of matching publications. Returns an empty array if no pubs match. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1313" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1313" bodyend="1315"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gac5a0488e61b63be185410e56a8b2a166" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_reimport_publications</definition>
+        <argsstring>($do_contact=false, $dbxref=null, $db=null)</argsstring>
+        <name>tripal_reimport_publications</name>
+        <param>
+          <declname>$do_contact</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <declname>$dbxref</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <declname>$db</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates publication records.</para><para>Updates publication records that currently exist in the Chado pub table with the most recent data in the remote database.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$do_contact</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE if authors should automatically have a contact record added to Chado. Contacts are added using the name provided by the remote database. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$dbxref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique database ID for the record to update. This value must be of the format DB_NAME:ACCESSION where DB_NAME is the name of the database (e.g. PMID or AGL) and the ACCESSION is the unique identifier for the record in the database. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the remote database to update. If this value is provided and no dbxref then all of the publications currently in the Chado database for this remote database will be updated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1393" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1393" bodyend="1395"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga2d28be85d9ed19c6064addf881f5cd13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_reverse_compliment_sequence</definition>
+        <argsstring>($sequence)</argsstring>
+        <name>tripal_reverse_compliment_sequence</name>
+        <param>
+          <declname>$sequence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs a reverse compliment of a nucleotide sequence.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$sequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nucelotide sequence.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an upper-case reverse complemented sequence. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="686" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="686" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga791aff9c0db06755c4581c2dfb889e4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_submit_obo_job</definition>
+        <argsstring>($obo)</argsstring>
+        <name>tripal_submit_obo_job</name>
+        <param>
+          <declname>$obo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: deprecate this function</para><para>Avoid using this function as it will be deprecated in future releases.</para><para>This function allows other modules to programatically submit an ontology for loading into Chado.</para><para>This function will add a job to the Jobs subsystem for parsing the ontology. You can either pass a known OBO ID to the function or the URL or full path the the ontology file. If a URL or file name is passed then the $obo_name argument must also be provided. If this is the first time the ontology has been provided to Tripal then it will be added to the database and will be assigned a unique OBO ID.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$obo_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the ontology is already loaded into the Tripal tables then use this argument to specify the unique ID for the ontology that will be loaded. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$obo_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the OBO has not been added before then use this argument to specify the human readable name of the ontology. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$obo_url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the OBO to be loaded is located on a remote server then use this argument to provide the URL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$obo_file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the OBO is housed on the local file system of the server then use this argument to specify the full path.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the job_id of the submitted job or FALSE if the job was not added </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="327" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="327" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1ga419362d12232d21415802ed46f3dc9b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_update_cvtermpath</definition>
+        <argsstring>($cv_id, $job_id=null)</argsstring>
+        <name>tripal_update_cvtermpath</name>
+        <param>
+          <declname>$cv_id</declname>
+        </param>
+        <param>
+          <declname>$job_id</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duplicate of fill_cvtermpath() stored procedure in Chado.</para><para>Identifies all of the root terms of the controlled vocabulary. These root terms are then processed by calling the chado_update_cvtermpath_root_loop() function on each one.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$cvid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controlled vocabulary ID from the cv table of Chado (i.e. cv.cv_id). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$job_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="222" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="222" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab4e39a7cabb02c488bd26d03cd4a3cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_update_phylotree</definition>
+        <argsstring>($phylotree_id, &amp;$options)</argsstring>
+        <name>tripal_update_phylotree</name>
+        <param>
+          <declname>$phylotree_id</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates a phylotree record into Chado.</para><para>This function validates the options passed prior to update of the record and if validation passes then any values in the options array that needed validation lookups (such as the dbxref, analysis, leaf_type, etc) will have their approriate primary key values added to the options array. A Drupal File object will be added to the options array for the tree file if one is provided.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$phylotree_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the phylotree to update. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key value pairs with the following optional keys: &apos;name&apos;: The name of the tree. This will be displayed to users. &apos;description: A description about the tree &apos;anlaysis_id: The ID of the analysis to which this phylotree should be associated. &apos;analysis&apos;: If the analysis_id key is not used then the analysis name may be provided to identify the analysis to which the tree should be associated. &apos;leaf_type&apos;: A sequence ontology term or the word &apos;organism&apos;. If the type is &apos;organism&apos; then this tree represents a taxonomic tree. The default, if not specified, is the term &apos;polypeptide&apos;. &apos;tree_file&apos;: The path of the file containing the phylogenetic tree to import or a Drupal managed_file numeric ID. &apos;format&apos;: The file format. Currently only &apos;newick is supported&apos; &apos;dbxref&apos;: A database cross-reference of the form DB:ACCESSION. Where DB is the database name, which is already present in Chado, and ACCESSION is the unique identifier for this tree in the remote database. &apos;name_re&apos;: If the leaf type is NOT &apos;taxonomy&apos;, then the value of this field can be a regular expression to pull out the name of the feature from the node label in the intput tree. If no value is provided the entire label is used. &apos;match&apos;: Set to &apos;uniquename&apos; if the leaf nodes should be matched with the feature uniquename. &apos;load_now&apos;: If set, the tree will be loaded immediately if a tree_file is provided. Otherwise, the tree will be loaded via a Tripal jobs call. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="1102" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="1102" bodyend="1104"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gad5ec86716c028981c59e7e5897dda87e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_validate_phylotree</definition>
+        <argsstring>($val_type, &amp;$options, &amp;$errors, &amp;$warnings)</argsstring>
+        <name>tripal_validate_phylotree</name>
+        <param>
+          <declname>$val_type</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$errors</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$warnings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tripal_phylotree_api <linebreak/>
+Validates an $options array for insert or update of a phylotree record.</para><para>If validation passes then any values that needed validation lookups (such as the dbxref, analysis, leaf_type, etc) will have their approriate primary_keys added to the $options array, and missing default values will also be added.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$val_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of validation. Can be either &apos;insert&apos; or &apos;update&apos;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key/value pairs containing any of the valid keys for either the <ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gad525db5bc9135b90ef085d80d0702f75" kindref="member">tripal_insert_phylotree()</ref> or <ref refid="d1/d3c/group__tripal__chado__module__DEPRECATED__api_1gab4e39a7cabb02c488bd26d03cd4a3cf0" kindref="member">tripal_update_phylotree()</ref> functions. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$errors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation error messages will be set. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$warnings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation warning messagges will be set. The warnings should not stop an insert or an update but should be provided to the user as information by a drupal_set_message() if appropriate. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If validation failes then FALSE is returned. Any options that do not pass validation checks will be added in the $errors array with the key being the option and the value being the error message. If validation is successful then TRUE is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" line="992" column="1" bodyfile="tripal_chado/api/modules/tripal_chado.module.DEPRECATED.api.inc" bodystart="992" bodyend="994"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Deprecated legacy api code. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

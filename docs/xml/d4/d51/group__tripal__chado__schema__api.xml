@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d51/group__tripal__chado__schema__api" kind="group">
+    <compoundname>tripal_chado_schema_api</compoundname>
+    <title>Chado Schema</title>
+    <innergroup refid="de/de5/group__tripal__schema__v1__11__api">Chado v1.11 Schema</innergroup>
+    <innergroup refid="d9/d62/group__tripal__schema__v1__2__api">Chado v1.2 Schema</innergroup>
+    <innergroup refid="dd/d36/group__tripal__schema__v1__3__api">Chado v1.3 Schema</innergroup>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1ga6b0a91d47d38c3239f05ff029c6ceb27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_column_exists</definition>
+        <argsstring>($table, $column)</argsstring>
+        <name>chado_column_exists</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <param>
+          <declname>$column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that any given column in a Chado table exists.</para><para>This function is necessary because Drupal&apos;s db_field_exists() will not look in any other schema but the one were Drupal is installed</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the chado table. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the column in the chado table.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the column exists for the table in the chado schema and FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="105" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="105" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1gadf798adf3b589a1f56dee77912c84c4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_dbschema_exists</definition>
+        <argsstring>($schema)</argsstring>
+        <name>chado_dbschema_exists</name>
+        <param>
+          <declname>$schema</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that any given schema exists.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$schema</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the schema to check the existence of</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE/FALSE depending upon whether or not the schema exists </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="258" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="258" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1gac8dd761f6e669661f9bf5a967a83d6de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_base_tables</definition>
+        <argsstring>()</argsstring>
+        <name>chado_get_base_tables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns all chado base tables.</para><para>Base tables are those that contain the primary record for a data type. For example, feature, organism, stock, are all base tables. Other tables include linker tables (which link two or more base tables), property tables, and relationship tables. These provide additional information about primary data records and are therefore not base tables. This function retreives only the list of tables that are considered &apos;base&apos; tables.</para><para><simplesect kind="return"><para>An array of base table names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="587" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="587" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1ga3f2cfd756ca4bb2b8bb1d9728b533c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_custom_table_schema</definition>
+        <argsstring>($table)</argsstring>
+        <name>chado_get_custom_table_schema</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the schema in an array for the specified custom table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to create.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Drupal-style Schema API array definition of the table. Returns FALSE on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="559" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="559" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1ga4b5ac309e4f88af0e2454099336ac1d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_schema</definition>
+        <argsstring>($table)</argsstring>
+        <name>chado_get_schema</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the chado tables Schema API array.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to retrieve. The function will use the appopriate Tripal chado schema API hooks (e.g. v1.11 or v1.2).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A Drupal Schema API array defining the table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="518" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="518" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1gab04e970eafe1a6789ad11d4e266ebe4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_table_names</definition>
+        <argsstring>($include_custom=NULL)</argsstring>
+        <name>chado_get_table_names</name>
+        <param>
+          <declname>$include_custom</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of tables in the Chado schema. By default it only returns the default Chado tables, but can return custom tables added to the Chado schema if requested</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$include_custom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional. Set as TRUE to include any custom tables created in the Chado schema. Custom tables are added to Chado using the tripal_chado_chado_create_table() function.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An associative array where the key and value pairs are the Chado table names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="467" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="467" bodyend="504"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1ga7a8c121a7619dd4acf42e7942fdeebca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_version</definition>
+        <argsstring>($exact=FALSE, $warn_if_unsupported=FALSE)</argsstring>
+        <name>chado_get_version</name>
+        <param>
+          <declname>$exact</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <declname>$warn_if_unsupported</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the version number of the currently installed Chado instance. It can return the real or effective version. Note, this function is executed in the hook_init() of the tripal_chado module which then sets the $GLOBAL[&apos;exact_chado_version&apos;] and $GLOBAL[&apos;chado_version&apos;] variable. You can access these variables rather than calling this function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$exact</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set this argument to 1 to retrieve the exact version that is installed. Otherwise, this function will set the version to the nearest &apos;tenth&apos;. Chado versioning numbers in the hundreds represent changes to the software and not the schema. Changes in the tenth&apos;s represent changes in the schema.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$warn_if_unsupported</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the currently installed version of Chado is not supported by Tripal this generates a Drupal warning.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The version of Chado </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="356" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="356" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1ga1d92b2dfbdb75641ad6c64dc3bfdd86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_is_installed</definition>
+        <argsstring>()</argsstring>
+        <name>chado_is_installed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check whether chado is installed (either in the same or a different database)</para><para><simplesect kind="return"><para>TRUE/FALSE depending upon whether chado is installed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="321" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="321" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1gaf22429430bcd57a657c146c576f64189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_is_local</definition>
+        <argsstring>()</argsstring>
+        <name>chado_is_local</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that the Chado schema exists within the local database</para><para><simplesect kind="return"><para>TRUE/FALSE depending upon whether it exists </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="283" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="283" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1ga8c2e920a0173ad23e39efc5260aa70d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_sequence_exists</definition>
+        <argsstring>($sequence)</argsstring>
+        <name>chado_sequence_exists</name>
+        <param>
+          <declname>$sequence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that any given column in a Chado table exists.</para><para>This function is necessary because Drupal&apos;s db_field_exists() will not look in any other schema but the one were Drupal is installed</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sequence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the sequence </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the seqeuence exists in the chado schema and FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="159" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="159" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d51/group__tripal__chado__schema__api_1ga432ffbbb35405f7ca897c9985e9d1bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_table_exists</definition>
+        <argsstring>($table)</argsstring>
+        <name>chado_table_exists</name>
+        <param>
+          <declname>$table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that any given Chado table exists.</para><para>This function is necessary because Drupal&apos;s db_table_exists() function will not look in any other schema but the one were Drupal is installed</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the chado table whose existence should be checked.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the table exists in the chado schema and FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.schema.api.inc" line="49" column="1" bodyfile="tripal_chado/api/tripal_chado.schema.api.inc" bodystart="49" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) for describing Chado tables. This API consists of a set of functions, one for each table in Chado. Each function simply returns a Drupal style array that defines the table.</para><para>Because Drupal 6 does not handle foreign key (FK) relationships, however FK relationships are needed to for Tripal Views. Therefore, FK relationships have been added to the schema defintitions below.</para><para>The functions provided in this documentation should not be called as is, but if you need the Drupal-style array definition for any table, use the following function call:</para><para>$table_desc = chado_get_schema($table)</para><para>where the variable $table contains the name of the table you want to retireve. The chado_get_schema function determines the appropriate version of Chado and uses the Drupal hook infrastructure to call the appropriate hook function to retrieve the table schema. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

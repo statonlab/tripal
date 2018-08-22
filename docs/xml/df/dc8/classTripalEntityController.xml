@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/dc8/classTripalEntityController" kind="class" language="PHP" prot="public">
+    <compoundname>TripalEntityController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">EntityAPIController</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1ab7a8194ff5dc4b29d0563818fa2a93a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::__construct</definition>
+        <argsstring>($entityType)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$entityType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="10" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1a22dbcd936aaa57c41d496e8ba0bdfa94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::create</definition>
+        <argsstring>(array $values=array())</argsstring>
+        <name>create</name>
+        <param>
+          <type>array</type>
+          <declname>$values</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Tripal data entity</para><para>We first set up the values that are specific to our data schema but then also go through the EntityAPIController function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The machine-readable type of the entity.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An object with all default fields initialized. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="28" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="28" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1aa808e2c5b7d2e492214c3eba55188f3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::delete</definition>
+        <argsstring>($ids, $transaction=NULL)</argsstring>
+        <name>delete</name>
+        <param>
+          <declname>$ids</declname>
+        </param>
+        <param>
+          <declname>$transaction</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overrides EntityAPIController::delete().</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of the ids denoting which entities to delete. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>DatabaseTransaction</parametertype>
+<parametername>$transaction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optionally a DatabaseTransaction object to use. Allows overrides to pass in their transaction object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="68" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="68" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1a7d39223684a88ec2375ff2eb0d256d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::load</definition>
+        <argsstring>($ids=array(), $conditions=array(), $field_ids=array(), $cache=TRUE)</argsstring>
+        <name>load</name>
+        <param>
+          <declname>$ids</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$conditions</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$field_ids</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$cache</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override the load function.</para><para>A <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> may have a large number of fields attached which may slow down the loading of pages and web services. Therefore, we only want to attach fields that are needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of entity IDs to load. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$conditions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of key/value filters for querying the entity. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of numeric field IDs for fields that should be attached. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When loading of entities they can be cached with Drupal for later faster loading. However, this can cause memory issues when running Tripal jobs that load lots of entities. Caching of entities can be disabled to improve memory performance by setting this to FALSE. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="495" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="495" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1aee64c085b6737d9e7a78ee291649e742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::save</definition>
+        <argsstring>($entity, $cache=array())</argsstring>
+        <name>save</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$cache</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves a new entity.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> object to save. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This array is used to store objects you want to cache for performance reasons, as well as, cache related options. The following are supported:<itemizedlist>
+<listitem><para>boolean $clear_cached_fields Clearing cached fields is NECESSARY. IF you choose to set this to false then YOU must clear the cache yourself using cache_clear_all(&apos;field:TripalEntity:[entity_id]&apos;, &apos;cache_field&apos;, TRUE). The only known reason to set this to FALSE is to clear the cache in bulk for perfomance reasons.</para></listitem><listitem><para><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> $bundle The bundle for the current entity.</para></listitem><listitem><para><ref refid="d9/d5a/classTripalTerm" kindref="compound">TripalTerm</ref> $term The term for the current entity.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The saved entity object with updated properties. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="370" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="370" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1a10252be25ad013c3479a58af13d33f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::setAlias</definition>
+        <argsstring>($entity, $alias=NULL, $cache=array())</argsstring>
+        <name>setAlias</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$alias</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$cache</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the URL alias for an entity.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity whose URL alias should be changed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$alias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The alias to use. It can contain tokens the correspond to field values. Token should be be compatible with those returned by <ref refid="d5/dce/group__tripal__entities__api_1ga7bae80e868c112e2f20e623f7992c79e" kindref="member">tripal_get_entity_tokens()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This array is used to store objects you want to cache for performance reasons, as well as, cache related options. The following are supported:<itemizedlist>
+<listitem><para><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> $bundle The bundle for the current entity.</para></listitem><listitem><para><ref refid="d9/d5a/classTripalTerm" kindref="compound">TripalTerm</ref> $term The term for the current entity. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="161" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="161" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1ace14c87ca9628b12b9dde8f0ae3b085b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::setTitle</definition>
+        <argsstring>($entity, $title=NULL, $cache=array())</argsstring>
+        <name>setTitle</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$title</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$cache</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the title for an entity.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity whose title should be changed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title to use. It can contain tokens the correspond to field values. Token should be be compatible with those returned by <ref refid="d5/dce/group__tripal__entities__api_1ga7bae80e868c112e2f20e623f7992c79e" kindref="member">tripal_get_entity_tokens()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This array is used to store objects you want to cache for performance reasons, as well as, cache related options. The following are supported:<itemizedlist>
+<listitem><para><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> $bundle The bundle for the current entity. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="118" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="118" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="df/dc8/classTripalEntityController_1af32c1a776ad168944e59664767300aad" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntityController::attachLoad</definition>
+        <argsstring>(&amp;$queried_entities, $revision_id=FALSE, $field_ids=array())</argsstring>
+        <name>attachLoad</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$queried_entities</declname>
+        </param>
+        <param>
+          <declname>$revision_id</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <declname>$field_ids</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Override the attachLoad function.</para><para>A <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> may have a large number of fields attached which may slow down the loading of pages and web services. Therefore, we only want to attach fields that are needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$queried_entities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of queried </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$revision_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the revision that was loaded, or FALSE if the most current revision was loaded. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntityController.inc" line="622" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="622" bodyend="731"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="df/dc8/classTripalEntityController" kindref="compound">TripalEntityController</ref> extends DrupalDefaultEntityController.</para><para>Our subclass of DrupalDefaultEntityController lets us add a few important create, update, and delete methods. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="946">
+        <label>TripalEntityController</label>
+        <link refid="df/dc8/classTripalEntityController"/>
+        <childnode refid="947" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="947">
+        <label>EntityAPIController</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="948">
+        <label>TripalEntityController</label>
+        <link refid="df/dc8/classTripalEntityController"/>
+        <childnode refid="949" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="949">
+        <label>EntityAPIController</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/includes/TripalEntityController.inc" line="8" column="1" bodyfile="tripal/includes/TripalEntityController.inc" bodystart="8" bodyend="732"/>
+    <listofallmembers>
+      <member refid="df/dc8/classTripalEntityController_1ab7a8194ff5dc4b29d0563818fa2a93a8" prot="public" virt="non-virtual"><scope>TripalEntityController</scope><name>__construct</name></member>
+      <member refid="df/dc8/classTripalEntityController_1af32c1a776ad168944e59664767300aad" prot="protected" virt="non-virtual"><scope>TripalEntityController</scope><name>attachLoad</name></member>
+      <member refid="df/dc8/classTripalEntityController_1a22dbcd936aaa57c41d496e8ba0bdfa94" prot="public" virt="non-virtual"><scope>TripalEntityController</scope><name>create</name></member>
+      <member refid="df/dc8/classTripalEntityController_1aa808e2c5b7d2e492214c3eba55188f3c" prot="public" virt="non-virtual"><scope>TripalEntityController</scope><name>delete</name></member>
+      <member refid="df/dc8/classTripalEntityController_1a7d39223684a88ec2375ff2eb0d256d6c" prot="public" virt="non-virtual"><scope>TripalEntityController</scope><name>load</name></member>
+      <member refid="df/dc8/classTripalEntityController_1aee64c085b6737d9e7a78ee291649e742" prot="public" virt="non-virtual"><scope>TripalEntityController</scope><name>save</name></member>
+      <member refid="df/dc8/classTripalEntityController_1a10252be25ad013c3479a58af13d33f42" prot="public" virt="non-virtual"><scope>TripalEntityController</scope><name>setAlias</name></member>
+      <member refid="df/dc8/classTripalEntityController_1ace14c87ca9628b12b9dde8f0ae3b085b" prot="public" virt="non-virtual"><scope>TripalEntityController</scope><name>setTitle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

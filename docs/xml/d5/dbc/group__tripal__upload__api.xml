@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/dbc/group__tripal__upload__api" kind="group">
+    <compoundname>tripal_upload_api</compoundname>
+    <title>File Upload</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/dbc/group__tripal__upload__api_1ga42dfaef56e346dff03fec0a05a953b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hook_file_upload_check</definition>
+        <argsstring>($action, $details, &amp;$message)</argsstring>
+        <name>hook_file_upload_check</name>
+        <param>
+          <declname>$action</declname>
+        </param>
+        <param>
+          <declname>$details</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows a module to interact with the Tripal file uploader during upload.</para><para>This function is called prior to an &apos;action&apos; aoccuring and allows the module that is responsible for the file upload to halt an upload if needed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current action that is being peformed during the upload process. The actions are: &apos;save&apos;, &apos;check&apos; and &apos;merge&apos;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An associative array containing details about the upload process. Valid keys include:<itemizedlist>
+<listitem><para>filename: The name of the file.</para></listitem><listitem><para>file_size: The total size of the file.</para></listitem><listitem><para>chunk_size: The size of the chunk.</para></listitem><listitem><para>fid: The file ID of the file. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An error message to report to the user if the function returns FALSE.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the upload should continue. FALSE if a problem occurs and the upload should be terminated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.upload.api.inc" line="130" column="1" bodyfile="tripal/api/tripal.upload.api.inc" bodystart="130" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Tripal provides a convenient HTML5 Javascript uploader. It is automatically embedded into the <ref refid="d8/d2a/classTripalImporter" kindref="compound">TripalImporter</ref> class. This application programing interface (API) provides support for working with uploaded files.</para><para>If you want to use the TripalUploader JavaScript in your own form the following must be performed:</para><para>1) Add a Drupal form to your code that contains the following:<itemizedlist>
+<listitem><para>A Drupal-style table with 4 or 8 columns. See the initialize function in this class for a description of the columns.</para></listitem><listitem><para>A button for submitting a file for upload.</para></listitem></itemizedlist>
+</para><para><programlisting><codeline><highlight class="normal">$headers<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>array(&apos;data&apos;<sp/>=&gt;<sp/>&apos;Sequence<sp/>File&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>array(&apos;data&apos;<sp/>=&gt;<sp/>&apos;Size&apos;,<sp/>&apos;width&apos;<sp/>=&gt;<sp/>&apos;10%&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>array(&apos;data&apos;<sp/>=&gt;<sp/>&apos;Upload<sp/>Progress&apos;,<sp/>&apos;width&apos;<sp/>=&gt;<sp/>&apos;20%&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>array(&apos;data&apos;<sp/>=&gt;<sp/>&apos;Action&apos;,<sp/>&apos;width&apos;<sp/>=&gt;<sp/>&apos;10%&apos;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>$rows<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/>$table_vars<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;header&apos;<sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$headers,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;rows&apos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>$rows,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;attributes&apos;<sp/><sp/>=&gt;<sp/>array(&apos;id&apos;<sp/>=&gt;<sp/>&apos;sequence-file-upload-table&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;sticky&apos;<sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;colgroups&apos;<sp/><sp/><sp/>=&gt;<sp/>array(),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;empty&apos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>t(&apos;There<sp/>are<sp/>currently<sp/>no<sp/>files<sp/>added.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>$form[&apos;upload&apos;][&apos;sequence_file&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#markup&apos;<sp/>=&gt;<sp/>theme(&apos;table&apos;,<sp/>$table_vars)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>$form[&apos;upload&apos;][&apos;sequence_fid&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#type&apos;<sp/>=&gt;<sp/>&apos;hidden&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#value&apos;<sp/>=&gt;<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#attributes&apos;<sp/>=&gt;<sp/>array(&apos;id&apos;<sp/>=&gt;<sp/>&apos;sequence-fid&apos;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>$form[&apos;upload&apos;][&apos;sequence_file_submit&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#type&apos;<sp/><sp/><sp/><sp/><sp/>=&gt;<sp/>&apos;submit&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#value&apos;<sp/><sp/><sp/><sp/>=&gt;<sp/>&apos;Upload<sp/>Sequence<sp/>File&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#name&apos;<sp/>=&gt;<sp/>&apos;sequence_file_submit&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>We<sp/>don&apos;t<sp/>want<sp/>this<sp/>button<sp/>to<sp/>submit<sp/>as<sp/>the<sp/>file<sp/>upload</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//<sp/>is<sp/>handled<sp/>by<sp/>the<sp/>JavaScript<sp/>code.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&apos;#attributes&apos;<sp/>=&gt;<sp/>array(&apos;onclick&apos;<sp/>=&gt;<sp/>&apos;return<sp/>(false);&apos;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+</programlisting></para><para>2) Edit the theme/js/[module_name].js and in the &quot;Drupal.behaviors.[module]&quot; section add a JQuery show function to the form that converts the table created in the Drupal form to a TripalUploader table. The &apos;table_id&apos; must be the same as the &apos;id&apos; attribute set for the table in the Drupal code above. The &apos;submit_id&apos; must be the id of the upload button added in the Drupal code above. The &apos;category&apos; for the files. This is the category that will be saved in Tripal for the file. See the addUploadTable function for additional options. Include a &apos;cardinality&apos; setting to indicate the number of allowed files per upload, and set the &apos;target_id&apos; to the name of the field that will contain the file ID (fid) after uploading.</para><para><programlisting><codeline><highlight class="normal">//<sp/>The<sp/>TripalUploader<sp/>object<sp/>used<sp/>for<sp/>uploading<sp/>of<sp/>files<sp/>using<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>HTML5<sp/>File<sp/>API.<sp/>Large<sp/>files<sp/>are<sp/>uploaded<sp/>as<sp/>chunks<sp/>and<sp/>a<sp/>progress</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>bar<sp/>is<sp/>provided.</highlight></codeline>
+<codeline><highlight class="normal">var<sp/>uploader<sp/>=<sp/>new<sp/>TripalUploader();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">$(&apos;#tripal-sequences-panel-form&apos;).show(function()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>uploader.addUploadTable(&apos;sequence_file&apos;,<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;table_id&apos;<sp/>:<sp/>&apos;#sequence-file-upload-table&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;submit_id&apos;:<sp/>&apos;#edit-sequence-file-submit&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;category&apos;<sp/>:<sp/>[&apos;sequence_file&apos;],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;cardinality&apos;<sp/>:<sp/>1,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;target_id&apos;<sp/>:<sp/>&apos;sequence-fid&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline><highlight class="normal">});</highlight></codeline>
+</programlisting></para><para>3) Files are uploaded automatically to Tripal. Files are saved in the Tripal user&apos;s directory. You can retreive information about the file by querying for the file category for the current project.</para><para><programlisting><codeline><highlight class="normal">$seq_files<sp/>=<sp/>TripalFeature::getFilesByTypes($user-&gt;uid,<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array(&apos;sequence_file&apos;),<sp/>$project_id);</highlight></codeline>
+</programlisting></para><para>4) If the &apos;target_id&apos; was used in array for step #2 above, then the file ID can be retrieved in the hook_validate() and hook_submit() functions via the $form_state[&apos;input&apos;] array (not the $form_state[&apos;values&apos;] array. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_f40dd944b9a70bad88878b8767778800" kind="dir">
+    <compoundname>tripal_chado/includes</compoundname>
+    <innerdir refid="dir_62afa9aafb9eac56a76ae2c9d47eda57">tripal_chado/includes/exporters</innerdir>
+    <innerdir refid="dir_d5fa46501949e8480bcfab0c6ccc925d">tripal_chado/includes/loaders</innerdir>
+    <innerdir refid="dir_15d251f6b3c2f2fec1c981b05c43ad74">tripal_chado/includes/setup</innerdir>
+    <innerdir refid="dir_f4be50d67ee2899af7fb3d33011bcf20">tripal_chado/includes/TripalFields</innerdir>
+    <innerdir refid="dir_9e2d5999e0720b60a50032b7a106d5bd">tripal_chado/includes/TripalImporter</innerdir>
+    <innerfile refid="dc/da0/ChadoDatabaseConnection_8inc">ChadoDatabaseConnection.inc</innerfile>
+    <innerfile refid="d7/d96/tripal__chado_8bundle_8inc">tripal_chado.bundle.inc</innerfile>
+    <innerfile refid="d3/dc7/tripal__chado_8custom__tables_8inc">tripal_chado.custom_tables.inc</innerfile>
+    <innerfile refid="dd/df2/tripal__chado_8cv_8inc">tripal_chado.cv.inc</innerfile>
+    <innerfile refid="db/d8a/tripal__chado_8db_8inc">tripal_chado.db.inc</innerfile>
+    <innerfile refid="df/d38/tripal__chado_8entity_8inc">tripal_chado.entity.inc</innerfile>
+    <innerfile refid="d3/def/tripal__chado_8field__storage_8inc">tripal_chado.field_storage.inc</innerfile>
+    <innerfile refid="d9/d91/tripal__chado_8fields_8inc">tripal_chado.fields.inc</innerfile>
+    <innerfile refid="df/da1/tripal__chado_8install_8inc">tripal_chado.install.inc</innerfile>
+    <innerfile refid="d6/ddf/tripal__chado_8mapping_8inc">tripal_chado.mapping.inc</innerfile>
+    <innerfile refid="d9/d6b/tripal__chado_8migrate_8inc">tripal_chado.migrate.inc</innerfile>
+    <innerfile refid="d4/db4/tripal__chado_8mviews_8inc">tripal_chado.mviews.inc</innerfile>
+    <innerfile refid="d8/d5f/tripal__chado_8phylotree_8inc">tripal_chado.phylotree.inc</innerfile>
+    <innerfile refid="d6/d0f/tripal__chado_8pub__search_8inc">tripal_chado.pub_search.inc</innerfile>
+    <innerfile refid="d2/d2f/tripal__chado_8publish_8inc">tripal_chado.publish.inc</innerfile>
+    <innerfile refid="da/df4/tripal__chado_8schema_8inc">tripal_chado.schema.inc</innerfile>
+    <innerfile refid="d1/d72/tripal__chado_8semweb_8inc">tripal_chado.semweb.inc</innerfile>
+    <innerfile refid="d3/d18/tripal__chado_8seq__extract_8inc">tripal_chado.seq_extract.inc</innerfile>
+    <innerfile refid="dc/df4/tripal__chado_8vocab__storage_8inc">tripal_chado.vocab_storage.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/"/>
+  </compounddef>
+</doxygen>

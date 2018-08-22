@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/de5/group__tripal__mviews__api" kind="group">
+    <compoundname>tripal_mviews_api</compoundname>
+    <title>Chado Materalized Views</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1ga6df34f1c008e4269f179d8d2e51ef650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_add_mview</definition>
+        <argsstring>($name, $modulename, $mv_schema, $query, $comment=NULL, $redirect=TRUE)</argsstring>
+        <name>chado_add_mview</name>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$modulename</declname>
+        </param>
+        <param>
+          <declname>$mv_schema</declname>
+        </param>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$comment</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$redirect</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a materialized view to the chado database.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the materialized view. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$modulename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the module submitting the materialized view (e.g. &apos;tripal_library&apos;). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$mv_schema</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If using the newer Schema API array to define the materialized view then this variable should contain the array or a string representation of the array. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SQL query that loads the materialized view with data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$comment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing a description of the materialized view. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$redirect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional (default: TRUE). By default this function redirects back to admin pages. However, when called by Drush we don&apos;t want to redirect. This parameter allows this to be used as a true API function.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the materialized view was successfully added, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="44" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="44" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1ga6b7bea36769a0eb69792bb03f5e326ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_delete_mview</definition>
+        <argsstring>($mview_id)</argsstring>
+        <name>chado_delete_mview</name>
+        <param>
+          <declname>$mview_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Does the specified action for the specified Materialized View.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action to be taken. One of update or delete. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$mview_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique ID of the materialized view for the action to be performed on.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the deletion was a success, FALSE on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="328" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="328" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1ga8c1e8378e693283994ada0455f037147" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_edit_mview</definition>
+        <argsstring>($mview_id, $name, $modulename, $mv_table, $mv_specs, $indexed, $query, $special_index, $comment=NULL, $mv_schema=NULL)</argsstring>
+        <name>chado_edit_mview</name>
+        <param>
+          <declname>$mview_id</declname>
+        </param>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <param>
+          <declname>$modulename</declname>
+        </param>
+        <param>
+          <declname>$mv_table</declname>
+        </param>
+        <param>
+          <declname>$mv_specs</declname>
+        </param>
+        <param>
+          <declname>$indexed</declname>
+        </param>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <param>
+          <declname>$special_index</declname>
+        </param>
+        <param>
+          <declname>$comment</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$mv_schema</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Edits a materialized view to the chado database to help speed data access. This function supports the older style where postgres column specifications are provided using the $mv_table, $mv_specs and $indexed variables. It also supports the newer preferred method where the materialized view is described using the Drupal Schema API array.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$mview_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mview_id of the materialized view to edit. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the materialized view. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$modulename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the module submitting the materialized view (e.g. &apos;tripal_library&apos;). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$mv_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to add to chado. This is the table that can be queried. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$mv_specs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table definition. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$indexed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The columns that are to be indexed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SQL query that loads the materialized view with data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$special_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>currently not used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$comment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing a description of the materialized view. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$mv_schema</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If using the newer Schema API array to define the materialized view then this variable should contain the array. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="149" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="149" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1gaf36270cbaaaafb46bf039707cddc2ba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_mview_id</definition>
+        <argsstring>($view_name)</argsstring>
+        <name>chado_get_mview_id</name>
+        <param>
+          <declname>$view_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the materialized view_id given the name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$view_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the materialized view.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The unique identifier for the given view. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="229" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="229" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1ga3fc9f750c4b46202ec59cf7f8e785d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_mview_table_names</definition>
+        <argsstring>()</argsstring>
+        <name>chado_get_mview_table_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of materialized views in this site.</para><para><simplesect kind="return"><para>An associative array where the key and value pairs are the table names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="250" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="250" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1gaf802e5f630f43355ca5ad637bf9b251a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_get_mviews</definition>
+        <argsstring>()</argsstring>
+        <name>chado_get_mviews</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the list of materialized view IDs and their names.</para><para><simplesect kind="return"><para>An array of objects with the following properties: mview_id, name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="302" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="302" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1gafd288ceff53400702a7174ef2a35511e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_populate_mview</definition>
+        <argsstring>($mview_id)</argsstring>
+        <name>chado_populate_mview</name>
+        <param>
+          <declname>$mview_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update a Materialized View.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$mview_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique identifier for the materialized view to be updated.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="392" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="392" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/group__tripal__mviews__api_1gab0ae59dbeaa76c54f0594437ab8b863a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>chado_refresh_mview</definition>
+        <argsstring>($mview_id)</argsstring>
+        <name>chado_refresh_mview</name>
+        <param>
+          <declname>$mview_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Populates the specified Materialized View.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$mview_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique ID of the materialized view for the action to be performed on. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/api/tripal_chado.mviews.api.inc" line="272" column="1" bodyfile="tripal_chado/api/tripal_chado.mviews.api.inc" bodystart="272" bodyend="291"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides an application programming interface (API) to manage materialized views in Chado The Perl-based chado comes with an interface for managing materialzed views. This API provides an alternative Drupal-based method. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

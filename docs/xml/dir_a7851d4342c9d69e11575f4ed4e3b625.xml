@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a7851d4342c9d69e11575f4ed4e3b625" kind="dir">
+    <compoundname>tripal_bulk_loader/theme</compoundname>
+    <innerdir refid="dir_712e890bafc3ca464037bcd0cfc221e3">tripal_bulk_loader/theme/templates</innerdir>
+    <innerfile refid="d6/da8/tripal__bulk__loader_8theme_8inc">tripal_bulk_loader.theme.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_bulk_loader/theme/"/>
+  </compounddef>
+</doxygen>

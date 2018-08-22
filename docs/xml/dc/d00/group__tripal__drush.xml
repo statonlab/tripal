@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dc/d00/group__tripal__drush" kind="group">
+    <compoundname>tripal_drush</compoundname>
+    <title>Tripal Drush Integration</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga7e2c41cdb1199bb9cde6861d67dbc871" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_chado_set_user</definition>
+        <argsstring>($username)</argsstring>
+        <name>drush_tripal_chado_set_user</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the user to run a drush job. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="172" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="172" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gac75cdcdf4f313369f1f136dff8f514d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_chado_trp_clean_nodes</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_chado_trp_clean_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clean-up orphaned Drupal nodes and chado records. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="331" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="331" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga9326bc51be4ea3cffe298609e4ec129c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_chado_trp_get_cversion</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_chado_trp_get_cversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current version of chado. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="234" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="234" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaf789fd1c6d74b2b437afcf4e7f074111" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_chado_trp_get_table</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_chado_trp_get_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the Tripal Schema API Description of the given table </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="244" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="244" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga4031cdb55d57121e007bcaa23e136e65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_chado_trp_import_pubs</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_chado_trp_import_pubs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports publications into Chado </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="128" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="128" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga89e705b09c618117244f8b1d7594a8c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_chado_trp_refresh_mview</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_chado_trp_refresh_mview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the specified materialized view </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="198" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="198" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaf9bf37f283695f0ffdc3f75c8a041fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_chado_trp_update_pubs</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_chado_trp_update_pubs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports publications into Chado </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="158" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="158" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga071b49f84456e2de34ff481f8044a154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_set_user</definition>
+        <argsstring>($username)</argsstring>
+        <name>drush_tripal_core_set_user</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the user to run a drush job. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="158" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="158" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga26242d837a3ec2b765fecdfb446528b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_tripal_chado_version</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_core_tripal_chado_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED. Returns the current version of chado. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="269" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="269" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga76d06eeea301431e2b05e0d61dca254b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_tripal_chadotable_desc</definition>
+        <argsstring>($table_name)</argsstring>
+        <name>drush_tripal_core_tripal_chadotable_desc</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED. Returns the Tripal Schema API Description of the given table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to return the description of </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="285" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="285" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga96ac051413ffd02f8a6addecd934f715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_tripal_jobs_current</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_core_tripal_jobs_current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED. Prints details about the current running job.</para><para>Executed when &apos;drush trpjob-curr&apos; or &apos;drush tripal-current-job&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="217" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="217" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga267debb55afe542eca78c8ffc54c3035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_tripal_jobs_launch</definition>
+        <argsstring>($username)</argsstring>
+        <name>drush_tripal_core_tripal_jobs_launch</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED. Executes jobs in the Tripal Jobs Queue.</para><para>Executed when drush &apos;trpjob-run&apos; or &apos;drush tripal-launch-jobs&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="169" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="169" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaa63e3984827a2f47900c82df26ae5a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_tripal_jobs_rerun</definition>
+        <argsstring>($username, $job_id)</argsstring>
+        <name>drush_tripal_core_tripal_jobs_rerun</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$job_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED. Executes jobs in the Tripal Jobs Queue.</para><para>Executed when &apos;drush tripal-jobs-rerun&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="199" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="199" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga7db0025acbbd0efe8a0c3573b2c5bb21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_tripal_node_clean</definition>
+        <argsstring>($module)</argsstring>
+        <name>drush_tripal_core_tripal_node_clean</name>
+        <param>
+          <declname>$module</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED. Clean-up orphaned Drupal nodes and chado records.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of a module with nodes associated with it. For example, feature </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="321" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="321" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga216428435bbf2eefbef9da81ba563ed6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_tripal_update_mview</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_core_tripal_update_mview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED. Updates the specified materialized view. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="229" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="229" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaf03ba78726faf0f1c9b6d594c721e570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_core_trp_clean_nodes</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_core_trp_clean_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clean-up orphaned Drupal nodes and chado records. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="307" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="307" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gab8a4552fb1eeb38fca65c4bd772568e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_feature_sync</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_feature_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sync Chado Features with Drupal (ie: create nodes) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="128" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga3fa15a33a3b3ea8810beaf34676e77d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_feature_tripal_get_sequence</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_feature_tripal_get_sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the sequence of the indicated features </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="73" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="73" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga0c222885f026c2f3613e8bc14a8a6e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_set_user</definition>
+        <argsstring>($username)</argsstring>
+        <name>drush_tripal_set_user</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the user to run a drush job. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="136" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="136" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaf3209132a299dd0c9be4ba775265bf0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_get_currjob</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_get_currjob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints details about the current running job.</para><para>Executed when &apos;drush trp-get-currjob&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="293" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="293" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga7e19459d3721c60a0299e7f45440ea75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_prepare_chado</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_prepare_chado</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepares content types on the site after chado installation.</para><para>Executed when &apos;drush trp-prepare-chado&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="329" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="329" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga731db1420c9bf6464897e45aea5a6182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_rerun_job</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_rerun_job</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes jobs in the Tripal Jobs Queue.</para><para>Executed when &apos;drush trp-rerun-job&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="243" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="243" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga69e1f06592ced8d2ad76397ef2f46779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_run_jobs</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_run_jobs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes jobs in the Tripal Jobs Queue.</para><para>Executed when &apos;drush trp-run-job&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="195" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="195" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga3275060b306706bbaef65e6a564092a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_run_jobs_install</definition>
+        <argsstring>($username)</argsstring>
+        <name>drush_tripal_trp_run_jobs_install</name>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes jobs in the Tripal Jobs Queue.</para><para>Executed when &apos;drush trp-run-job&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="164" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="164" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga863dd515592e0b72cc938a7e271ee9ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>drush_tripal_trp_set_permissions</definition>
+        <argsstring>()</argsstring>
+        <name>drush_tripal_trp_set_permissions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets permissions for the content types on the site.</para><para>Executed when &apos;drush trp-set-permissions&apos; is called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="360" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="360" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gadaabd11630895a3c81095525613ab797" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_drush_command</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_chado_drush_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a drush command and constructs the full help for that command.</para><para><simplesect kind="return"><para>And array of command descriptions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="48" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="48" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga2a1d2c1a0fe6a3c21c06adf3c7e05084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_drush_help</definition>
+        <argsstring>($command)</argsstring>
+        <name>tripal_chado_drush_help</name>
+        <param>
+          <declname>$command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Describes each drush command implemented by the module</para><para><simplesect kind="return"><para>The first line of description when executing the help for a given command </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/tripal_chado.drush.inc" line="22" column="1" bodyfile="tripal_chado/tripal_chado.drush.inc" bodystart="22" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gafc1cf2aaf58d65016c07d625524b2816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_core_drush_command</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_core_drush_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a drush command and constructs the full help for that command.</para><para><simplesect kind="return"><para>And array of command descriptions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="47" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="47" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gac8cc468a28d96b356545278b7a73b8ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_core_drush_help</definition>
+        <argsstring>($command)</argsstring>
+        <name>tripal_core_drush_help</name>
+        <param>
+          <declname>$command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Describes each drush command implemented by the module</para><para><simplesect kind="return"><para>The first line of description when executing the help for a given command </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_core/tripal_core.drush.inc" line="22" column="1" bodyfile="legacy/tripal_core/tripal_core.drush.inc" bodystart="22" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gac0a1dae04c9ea7986a560af480015f02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_drush_command</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_drush_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a drush command and constructs the full help for that command.</para><para><simplesect kind="return"><para>And array of command descriptions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="59" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="59" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gaceee1a47d88e34e65c1327ef5cb61fed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_drush_help</definition>
+        <argsstring>($command)</argsstring>
+        <name>tripal_drush_help</name>
+        <param>
+          <declname>$command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Describes each drush command implemented by the module</para><para><simplesect kind="return"><para>The first line of description when executing the help for a given command </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/tripal.drush.inc" line="22" column="1" bodyfile="tripal/tripal.drush.inc" bodystart="22" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1ga118d9d82fb9c3e525eaba400f6f910de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_feature_drush_command</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_feature_drush_command</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a drush command and constructs the full help for that command</para><para><simplesect kind="return"><para>And array of command descriptions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="30" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="30" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d00/group__tripal__drush_1gae158600e287097bc1ef94514c6147f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_feature_drush_help</definition>
+        <argsstring>($command)</argsstring>
+        <name>tripal_feature_drush_help</name>
+        <param>
+          <declname>$command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Describes each drush command implemented by the module</para><para><simplesect kind="return"><para>The first line of description when executing the help for a given command </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.drush.inc" line="15" column="1" bodyfile="legacy/tripal_feature/tripal_feature.drush.inc" bodystart="15" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains function relating to drush-integration of various tripal modules. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

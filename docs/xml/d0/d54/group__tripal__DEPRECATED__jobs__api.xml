@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d0/d54/group__tripal__DEPRECATED__jobs__api" kind="group">
+    <compoundname>tripal_DEPRECATED_jobs_api</compoundname>
+    <title>Data Collections</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/d54/group__tripal__DEPRECATED__jobs__api_1gade2aebd639f2dcd160d8012d2a424f64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_job_end</definition>
+        <argsstring>($job)</argsstring>
+        <name>tripal_get_job_end</name>
+        <param>
+          <declname>$job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED</para><para>Returns the end time for a given job</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object describing the job</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The end time of the job if it was already run and empty otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.DEPRECATED.api.inc" line="33" column="1" bodyfile="tripal/api/tripal.DEPRECATED.api.inc" bodystart="33" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d54/group__tripal__DEPRECATED__jobs__api_1ga113d1f9f4790528b57a4f90199f631e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_job_start</definition>
+        <argsstring>($job)</argsstring>
+        <name>tripal_get_job_start</name>
+        <param>
+          <declname>$job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED</para><para>Returns the start time for a given job</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object describing the job</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The start time of the job if it was already run and either &quot;Cancelled&quot; or &quot;Not Yet Started&quot; otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.DEPRECATED.api.inc" line="66" column="1" bodyfile="tripal/api/tripal.DEPRECATED.api.inc" bodystart="66" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/d54/group__tripal__DEPRECATED__jobs__api_1gaab4da1ed7e6957ad5847a66f48b2e31c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_job_submit_date</definition>
+        <argsstring>($job)</argsstring>
+        <name>tripal_get_job_submit_date</name>
+        <param>
+          <declname>$job</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DEPRECATED</para><para>Returns the date the job was added to the queue</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An object describing the job</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The date the job was submitted </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.DEPRECATED.api.inc" line="104" column="1" bodyfile="tripal/api/tripal.DEPRECATED.api.inc" bodystart="104" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Deprecated legacy api code from Tripal 2. Please see <ref refid="d6/dd6/tripal_8jobs_8api_8inc" kindref="compound">tripal.jobs.api.inc</ref> for the new Tripal 3 functions. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

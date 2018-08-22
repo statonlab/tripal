@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/dc7/classtripal__views__handler__filter__no__results" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_filter_no_results</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">views_handler_filter</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/dc7/classtripal__views__handler__filter__no__results_1aff8c6d9ace7e725686d42c5f853a7b0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_no_results::can_expose</definition>
+        <argsstring>()</argsstring>
+        <name>can_expose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure this filter is not exposed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" line="19" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classtripal__views__handler__filter__no__results_1a0797326498b67d861f28e929b6087e30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_no_results::options_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>options_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" line="26" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" bodystart="26" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/dc7/classtripal__views__handler__filter__no__results_1a006ee72ac281ec8a4a3f941200f1a73a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_no_results::query</definition>
+        <argsstring>()</argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" line="57" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" bodystart="57" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This filter ensures that when a page is first loaded, there are no results (ie: the query is not run). This imitates an advanced search form allowing users to fist enter other filter values and then retrieve results. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="842">
+        <label>tripal_views_handler_filter_no_results</label>
+        <link refid="d1/dc7/classtripal__views__handler__filter__no__results"/>
+        <childnode refid="843" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="843">
+        <label>views_handler_filter</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="844">
+        <label>tripal_views_handler_filter_no_results</label>
+        <link refid="d1/dc7/classtripal__views__handler__filter__no__results"/>
+        <childnode refid="845" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="845">
+        <label>views_handler_filter</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" line="14" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_no_results.inc" bodystart="14" bodyend="82"/>
+    <listofallmembers>
+      <member refid="d1/dc7/classtripal__views__handler__filter__no__results_1aff8c6d9ace7e725686d42c5f853a7b0b" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_no_results</scope><name>can_expose</name></member>
+      <member refid="d1/dc7/classtripal__views__handler__filter__no__results_1a0797326498b67d861f28e929b6087e30" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_no_results</scope><name>options_form</name></member>
+      <member refid="d1/dc7/classtripal__views__handler__filter__no__results_1a006ee72ac281ec8a4a3f941200f1a73a" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_no_results</scope><name>query</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

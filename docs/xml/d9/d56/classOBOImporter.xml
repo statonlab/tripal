@@ -1,0 +1,975 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d9/d56/classOBOImporter" kind="class" language="PHP" prot="public">
+    <compoundname>OBOImporter</compoundname>
+    <basecompoundref refid="d8/d2a/classTripalImporter" prot="public" virt="non-virtual">TripalImporter</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a544084966a0c25b7e67d4cd44ea77cd4" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$button_text</definition>
+        <argsstring></argsstring>
+        <name>$button_text</name>
+        <initializer>= &apos;Import OBO File&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Text that should appear on the button at the bottom of the importer form. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="70" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a58e2d9db7ea8ef13253f56235cca6c44" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= &apos;Import vocabularies and terms in OBO format.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A brief description for this loader. This description will be presented to the site user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="29" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a392e63f51820a457c2197f2aaf5d7cc6" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$file_required</definition>
+        <argsstring></argsstring>
+        <name>$file_required</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="92" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1ac1f9f1e88097a633a1423586859cfec8" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$file_types</definition>
+        <argsstring></argsstring>
+        <name>$file_types</name>
+        <initializer>= array(&apos;obo&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An array containing the extensions of allowed file types. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="34" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a0be8630403e7d34074b7b87e170d1076" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$machine_name</definition>
+        <argsstring></argsstring>
+        <name>$machine_name</name>
+        <initializer>= &apos;chado_obo_loader&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The machine name for this loader. This name will be used to construct the URL for the loader. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="23" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a6b9f7fa1af94246991dcded032a44ad5" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$menu_path</definition>
+        <argsstring></argsstring>
+        <name>$menu_path</name>
+        <initializer>= &apos;admin/tripal/loaders/chado_vocabs/obo_loader&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Be default, all loaders are automaticlly added to the Admin &gt; Tripal &gt; Data Laders menu. However, if this loader should be made available via a different menu path, then set it here. If the value is empty then the path will be the default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="90" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a84cac1074a31e3ec681ffcd634d2c2b4" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$methods</definition>
+        <argsstring></argsstring>
+        <name>$methods</name>
+        <initializer>= array(
+    
+    &apos;file_upload&apos; =&gt; FALSE,
+    
+    &apos;file_local&apos; =&gt; FALSE,
+    
+    &apos;file_remote&apos; =&gt; FALSE,
+  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the methods that the file uploader will support. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="75" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a25ea7100176f4394d30c12840d80976c" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$name</definition>
+        <argsstring></argsstring>
+        <name>$name</name>
+        <initializer>= &apos;OBO Vocabulary Loader&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The name of this loader. This name will be presented to the site user. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="17" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a39cbcf6948e3db29e8361ff7c8aaec82" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$require_analysis</definition>
+        <argsstring></argsstring>
+        <name>$require_analysis</name>
+        <initializer>= TRUE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the $use_analysis value is set above then this value indicates if the analysis should be required. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="64" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1a615702bc6b0227dff04dd61ef1ff9e47" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$upload_description</definition>
+        <argsstring></argsstring>
+        <name>$upload_description</name>
+        <initializer>= &apos;Please provide the details for importing a new OBO file. The file must have a .obo extension.&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides information to the user about the file upload. Typically this may include a description of the file types allowed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="41" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1acc20a7c91c9c3c4090385529b89d1b64" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$upload_title</definition>
+        <argsstring></argsstring>
+        <name>$upload_title</name>
+        <initializer>= &apos;New OBO File&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The title that should appear above the upload button. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="46" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1aa9a232466030b22fba56856a697ae915" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>OBOImporter::$use_analysis</definition>
+        <argsstring></argsstring>
+        <name>$use_analysis</name>
+        <initializer>= FALSE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the loader should require an analysis record. To maintain provenance we should always indiate where the data we are uploading comes from. The method that Tripal attempts to use for this by associating upload files with an analysis record. The analysis record provides the details for how the file was created or obtained. Set this to FALSE if the loader should not require an analysis when loading. if $use_analysis is set to true then the form values will have an &apos;analysis_id&apos; key in the $form_state array on submitted forms. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="58" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d9/d56/classOBOImporter_1ab24c9db3572d6249de7f09179031627a" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>OBOImporter::$newcvs</definition>
+        <argsstring></argsstring>
+        <name>$newcvs</name>
+        <initializer>= array()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="100" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a8febbfff50aff2440c8801d35ab487f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::form</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d2a/classTripalImporter_1a58f1670b64b51f29d5fd84f0a3568d9d" kindref="member">TripalImporter::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="106" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="106" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1adf3d38cde24c13b62d9e00fd32015840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::formSubmit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>formSubmit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d2a/classTripalImporter_1a564c192cc822d07063c864d26cc8b4c1" kindref="member">TripalImporter::formSubmit()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="271" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="271" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a170ebbf9468e8567dd1988d60f26b71b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::formValidate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>formValidate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d2a/classTripalImporter_1ac22c139a8bf14d700605732f680836d8" kindref="member">TripalImporter::formValidate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="321" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="321" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1ad702858002c4a21def64d08b130bb749" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::postRun</definition>
+        <argsstring>()</argsstring>
+        <name>postRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d2a/classTripalImporter_1ab1276ae93f516f2c8decb52b1075d830" kindref="member">TripalImporter::postRun()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="409" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="409" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a7958a440f815f912ca50a4f316675f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="d8/d2a/classTripalImporter_1ad9d541a1ea04fb2c994fc0ea5ee7fae0" kindref="member">TripalImporter::run()</ref></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$details</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The following arguments are supported:<itemizedlist>
+<listitem><para>obo_id: (required) The ID of the ontology to be imported. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="388" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="388" bodyend="404"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a6596c0119c053751090f63878c417a20" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::addCvtermDbxref</definition>
+        <argsstring>($cvterm, $xref)</argsstring>
+        <name>addCvtermDbxref</name>
+        <param>
+          <declname>$cvterm</declname>
+        </param>
+        <param>
+          <declname>$xref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a database reference to a cvterm</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cvterm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The database object of the cvterm to which the synonym will be added. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xref</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cross refernce. It should be of the form from the OBO specification </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1466" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1466" bodyend="1510"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a687a967883041e7438f36e5f71b1a3d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::addCvtermProp</definition>
+        <argsstring>($cvterm, $property, $value, $rank)</argsstring>
+        <name>addCvtermProp</name>
+        <param>
+          <declname>$cvterm</declname>
+        </param>
+        <param>
+          <declname>$property</declname>
+        </param>
+        <param>
+          <declname>$value</declname>
+        </param>
+        <param>
+          <declname>$rank</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a property to a cvterm</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cvterm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A database object for the cvterm to which properties will be added </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the property to add </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the property </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rank</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rank of the property </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1526" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1526" bodyend="1580"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a06fb78042d29a72ebd0e0d2acc5615af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::addDbxref</definition>
+        <argsstring>($db_id, $accession, $version=&apos;&apos;, $description=&apos;&apos;)</argsstring>
+        <name>addDbxref</name>
+        <param>
+          <declname>$db_id</declname>
+        </param>
+        <param>
+          <declname>$accession</declname>
+        </param>
+        <param>
+          <declname>$version</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <param>
+          <declname>$description</declname>
+          <defval>&apos;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a database cross reference to a cvterm</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The database ID of the cross reference </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cross reference&apos;s accession </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The version of the dbxref </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description of the cross reference </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1596" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1596" bodyend="1619"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a777bfd92721eccbf7a1e9ae656347176" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::addRelationship</definition>
+        <argsstring>($cvterm, $defaultcv, $rel, $objname, $object_is_relationship=0, $default_db=&apos;OBO_REL&apos;)</argsstring>
+        <name>addRelationship</name>
+        <param>
+          <declname>$cvterm</declname>
+        </param>
+        <param>
+          <declname>$defaultcv</declname>
+        </param>
+        <param>
+          <declname>$rel</declname>
+        </param>
+        <param>
+          <declname>$objname</declname>
+        </param>
+        <param>
+          <declname>$object_is_relationship</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <declname>$default_db</declname>
+          <defval>&apos;OBO_REL&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a cvterm relationship</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$cvterm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A database object for the cvterm </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$rel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The relationship name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$objname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The relationship term name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$defaultcv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A database object containing a record from the cv table for the default controlled vocabulary  Set to 1 if this term is a relationship term  The name of the default database. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1062" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1062" bodyend="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a5fa7999752941c8a2584860af49f714a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::addSynonym</definition>
+        <argsstring>($term, $cvterm)</argsstring>
+        <name>addSynonym</name>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$cvterm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the synonyms to a term</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array representing the cvterm. It must have a &apos;synonym&apos; key/value pair. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cvterm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The database object of the cvterm to which the synonym will be added. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para><linebreak/>
+$synonym = preg_replace(&apos;/(&quot;.*?),\s(.*?&quot;)/&apos;,&apos;$1,_$2&apos;,$synonym); $dbxrefs = preg_split(&quot;/, /&quot;,preg_replace(&apos;/^.*[(.*?)]$/&apos;,&apos;\1&apos;,$synonym)); foreach ($dbxrefs as $dbxref) { $dbxref = preg_replace(&apos;/,_/&apos;,&quot;, &quot;,$dbxref); if ($dbxref) { $this-&gt;addCvtermDbxref($syn,$dbxref); } }</para>        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1251" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1251" bodyend="1334"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a418a1297cfa874d73c80874283201ddf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::getTerm</definition>
+        <argsstring>($id)</argsstring>
+        <name>getTerm</name>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the term array from the temp loading table for a given term id.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the term to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1232" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1232" bodyend="1239"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a3b0e68ec3d6291656c365f61ea37efbd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::loadOBO_v1_2</definition>
+        <argsstring>($file, $obo_name)</argsstring>
+        <name>loadOBO_v1_2</name>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <param>
+          <declname>$obo_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Imports a given OBO file into Chado. This function is usually called by one of three wrapper functions: loadOBO_v1_2_id, loadOBO_v1_2_file or tirpal_cv_load_obo_v1_2_url. But, it can be called directly if the full path to an OBO file is available on the file system.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$flie</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The full path to the OBO file on the file system </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="554" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="554" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a55dd21dbe612919107a80f7913902a7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::loadOBO_v1_2_file</definition>
+        <argsstring>($obo_name, $file, $is_new=TRUE)</argsstring>
+        <name>loadOBO_v1_2_file</name>
+        <param>
+          <declname>$obo_name</declname>
+        </param>
+        <param>
+          <declname>$file</declname>
+        </param>
+        <param>
+          <declname>$is_new</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A wrapper function for importing the user specified OBO file into Chado by specifying the filename and path of the OBO. It requires that the file be in OBO v1.2 compatible format. This function is typically executed via the Tripal jobs management after a user submits a job via the Load Onotloies form.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$obo_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the OBO (typially the ontology or controlled vocabulary name) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path on the file system where the ontology can be found </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$is_new</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE if this is a new ontology that does not yet exist in the tripal_cv_obo table. If TRUE the OBO will be added to the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="488" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="488" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1ae16f9da484eb84189f2e5725417fb650" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::loadOBO_v1_2_id</definition>
+        <argsstring>($obo)</argsstring>
+        <name>loadOBO_v1_2_id</name>
+        <param>
+          <declname>$obo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A wrapper function for importing the user specified OBO file into Chado by specifying the obo_id of the OBO. It requires that the file be in OBO v1.2 compatible format. This function is typically executed via the Tripal jobs management after a user submits a job via the Load Onotloies form.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$obo_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An obo_id from the tripal_cv_obo file that specifies which OBO file to import </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="437" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="437" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a9aeece5f362f6c6395396ad9b83cd817" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::loadOBO_v1_2_url</definition>
+        <argsstring>($obo_name, $url, $is_new=TRUE)</argsstring>
+        <name>loadOBO_v1_2_url</name>
+        <param>
+          <declname>$obo_name</declname>
+        </param>
+        <param>
+          <declname>$url</declname>
+        </param>
+        <param>
+          <declname>$is_new</declname>
+          <defval>TRUE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A wrapper function for importing the user specified OBO file into Chado by specifying the remote URL of the OBO. It requires that the file be in OBO v1.2 compatible format. This function is typically executed via the Tripal jobs management after a user submits a job via the Load Onotloies form.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$obo_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the OBO (typially the ontology or controlled vocabulary name) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The remote URL of the OBO file. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$is_new</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to TRUE if this is a new ontology that does not yet exist in the tripal_cv_obo table. If TRUE the OBO will be added to the table. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="512" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="512" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a217df490bdd216c1a808034979ad8692" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::loadTypeDefs</definition>
+        <argsstring>($defaultcv, $default_db)</argsstring>
+        <name>loadTypeDefs</name>
+        <param>
+          <declname>$defaultcv</declname>
+        </param>
+        <param>
+          <declname>$default_db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OBO files are divided into a typedefs terms section and vocabulary terms section. This function loads the typedef terms from the OBO.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$defaultcv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A database object containing a record from the cv table for the default controlled vocabulary </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$default_db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the default database. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="650" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="650" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a3fb07af618de513106f3d1a2e61504ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::oboEbiLookup</definition>
+        <argsstring>($accession, $type_of_search)</argsstring>
+        <name>oboEbiLookup</name>
+        <param>
+          <declname>$accession</declname>
+        </param>
+        <param>
+          <declname>$type_of_search</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>API call to Ontology Lookup Service provided by <ulink url="https://www.ebi.ac.uk/ols/docs/api#resources-terms">https://www.ebi.ac.uk/ols/docs/api#resources-terms</ulink></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>accession</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Accession term for query </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type_of_search</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Either ontology, term, query, or query-non-local </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1633" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1633" bodyend="1673"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a3118bbe50755d0206735e11ff7de26a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::parse</definition>
+        <argsstring>($obo_file, &amp;$header)</argsstring>
+        <name>parse</name>
+        <param>
+          <declname>$obo_file</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse the OBO file and populate the templ loading table</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path on the file system where the ontology can be found </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array passed by reference that will be populated with the header information from the OBO file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="1347" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="1347" bodyend="1454"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a3bed7bcf8167e1e580e46bbc6a3c04f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::processTerm</definition>
+        <argsstring>($term, $defaultcv, $is_relationship=0, $default_db)</argsstring>
+        <name>processTerm</name>
+        <param>
+          <declname>$term</declname>
+        </param>
+        <param>
+          <declname>$defaultcv</declname>
+        </param>
+        <param>
+          <declname>$is_relationship</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <declname>$default_db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the provided term array to add/update information to Chado about the term including the term, dbxref, synonyms, properties, and relationships.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$term</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array representing the cvterm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$defaultcv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the default controlled vocabulary  Set to 1 if this term is a relationship term  The name of the default database. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="753" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="753" bodyend="1041"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d56/classOBOImporter_1a2e70ed60644031a86a6bbcdca6b7694e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OBOImporter::processTerms</definition>
+        <argsstring>($defaultcv, $default_db)</argsstring>
+        <name>processTerms</name>
+        <param>
+          <declname>$defaultcv</declname>
+        </param>
+        <param>
+          <declname>$default_db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OBO files are divided into a typedefs section and a terms section.</para><para>This function loads the typedef terms from the OBO.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$defaultcv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A database object containing a record from the cv table for the default controlled vocabulary </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$default_db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the default database. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="687" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="687" bodyend="736"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="391">
+        <label>OBOImporter</label>
+        <link refid="d9/d56/classOBOImporter"/>
+        <childnode refid="392" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="392">
+        <label>TripalImporter</label>
+        <link refid="d8/d2a/classTripalImporter"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="393">
+        <label>OBOImporter</label>
+        <link refid="d9/d56/classOBOImporter"/>
+        <childnode refid="394" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="394">
+        <label>TripalImporter</label>
+        <link refid="d8/d2a/classTripalImporter"/>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalImporter/OBOImporter.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalImporter/OBOImporter.inc" bodystart="3" bodyend="1674"/>
+    <listofallmembers>
+      <member refid="d8/d2a/classTripalImporter_1a7b12434ddfe1b4cb085109b77d723a94" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$argument_list</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a200b97e61e19229a51d65add9bb7021a" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>$arguments</name></member>
+      <member refid="d9/d56/classOBOImporter_1a544084966a0c25b7e67d4cd44ea77cd4" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$button_text</name></member>
+      <member refid="d8/d2a/classTripalImporter_1acebdd94e7af4c3fbf32e2a4c2c0b7476" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$callback</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a3b24df9ede01caf4bb84ffd96e88e8ad" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$callback_module</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a91ea29d3f6c2dd9fb0268be578cc14f3" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$callback_path</name></member>
+      <member refid="d8/d2a/classTripalImporter_1abdc8c72caba4f33fbcb40d05d3807826" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$cardinality</name></member>
+      <member refid="d9/d56/classOBOImporter_1a58e2d9db7ea8ef13253f56235cca6c44" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$description</name></member>
+      <member refid="d9/d56/classOBOImporter_1a392e63f51820a457c2197f2aaf5d7cc6" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$file_required</name></member>
+      <member refid="d9/d56/classOBOImporter_1ac1f9f1e88097a633a1423586859cfec8" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$file_types</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a141863335308f3ef7400fc10e8f66f18" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>$import_id</name></member>
+      <member refid="d8/d2a/classTripalImporter_1ad2119678c4e0831d513846b872a0c598" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>$is_prepared</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a40f48e7ad88015093030e6c4cff6ea73" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>$job</name></member>
+      <member refid="d9/d56/classOBOImporter_1a0be8630403e7d34074b7b87e170d1076" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$machine_name</name></member>
+      <member refid="d9/d56/classOBOImporter_1a6b9f7fa1af94246991dcded032a44ad5" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$menu_path</name></member>
+      <member refid="d9/d56/classOBOImporter_1a84cac1074a31e3ec681ffcd634d2c2b4" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$methods</name></member>
+      <member refid="d9/d56/classOBOImporter_1a25ea7100176f4394d30c12840d80976c" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$name</name></member>
+      <member refid="d9/d56/classOBOImporter_1ab24c9db3572d6249de7f09179031627a" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>$newcvs</name></member>
+      <member refid="d9/d56/classOBOImporter_1a39cbcf6948e3db29e8361ff7c8aaec82" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$require_analysis</name></member>
+      <member refid="d9/d56/classOBOImporter_1a615702bc6b0227dff04dd61ef1ff9e47" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$upload_description</name></member>
+      <member refid="d9/d56/classOBOImporter_1acc20a7c91c9c3c4090385529b89d1b64" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$upload_title</name></member>
+      <member refid="d9/d56/classOBOImporter_1aa9a232466030b22fba56856a697ae915" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>$use_analysis</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a08eebd3a98c2c67245086faea6e92264" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>__construct</name></member>
+      <member refid="d9/d56/classOBOImporter_1a6596c0119c053751090f63878c417a20" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>addCvtermDbxref</name></member>
+      <member refid="d9/d56/classOBOImporter_1a687a967883041e7438f36e5f71b1a3d7" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>addCvtermProp</name></member>
+      <member refid="d9/d56/classOBOImporter_1a06fb78042d29a72ebd0e0d2acc5615af" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>addDbxref</name></member>
+      <member refid="d8/d2a/classTripalImporter_1acb95a597698f781aa2192bc8f055a765" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>addItemsHandled</name></member>
+      <member refid="d9/d56/classOBOImporter_1a777bfd92721eccbf7a1e9ae656347176" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>addRelationship</name></member>
+      <member refid="d9/d56/classOBOImporter_1a5fa7999752941c8a2584860af49f714a" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>addSynonym</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a484416cee58b2706c581936b36af3142" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>byID</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a530498add36b0380bfa541a2e124e004" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>cleanFile</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a505ffa0ae9ddbf30faf06b22d268f7ac" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>create</name></member>
+      <member refid="d9/d56/classOBOImporter_1a8febbfff50aff2440c8801d35ab487f7" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>form</name></member>
+      <member refid="d9/d56/classOBOImporter_1adf3d38cde24c13b62d9e00fd32015840" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>formSubmit</name></member>
+      <member refid="d9/d56/classOBOImporter_1a170ebbf9468e8567dd1988d60f26b71b" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>formValidate</name></member>
+      <member refid="d9/d56/classOBOImporter_1a418a1297cfa874d73c80874283201ddf" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>getTerm</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a42ddce17cbc11fd246b66a91737e524b" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>load</name></member>
+      <member refid="d9/d56/classOBOImporter_1a3b0e68ec3d6291656c365f61ea37efbd" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>loadOBO_v1_2</name></member>
+      <member refid="d9/d56/classOBOImporter_1a55dd21dbe612919107a80f7913902a7d" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>loadOBO_v1_2_file</name></member>
+      <member refid="d9/d56/classOBOImporter_1ae16f9da484eb84189f2e5725417fb650" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>loadOBO_v1_2_id</name></member>
+      <member refid="d9/d56/classOBOImporter_1a9aeece5f362f6c6395396ad9b83cd817" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>loadOBO_v1_2_url</name></member>
+      <member refid="d9/d56/classOBOImporter_1a217df490bdd216c1a808034979ad8692" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>loadTypeDefs</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a08283b0a05f6c78d67c02f7971b60964" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>logMessage</name></member>
+      <member refid="d9/d56/classOBOImporter_1a3fb07af618de513106f3d1a2e61504ac" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>oboEbiLookup</name></member>
+      <member refid="d9/d56/classOBOImporter_1a3118bbe50755d0206735e11ff7de26a3" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>parse</name></member>
+      <member refid="d9/d56/classOBOImporter_1ad702858002c4a21def64d08b130bb749" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>postRun</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a08fae895648e2eb7dc1d2ce4a395f29a" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>prepareFiles</name></member>
+      <member refid="d9/d56/classOBOImporter_1a3bed7bcf8167e1e580e46bbc6a3c04f7" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>processTerm</name></member>
+      <member refid="d9/d56/classOBOImporter_1a2e70ed60644031a86a6bbcdca6b7694e" prot="private" virt="non-virtual"><scope>OBOImporter</scope><name>processTerms</name></member>
+      <member refid="d9/d56/classOBOImporter_1a7958a440f815f912ca50a4f316675f86" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>run</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a6b47957db5205aaf0578f8aa3d4a91c7" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>setInterval</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a4271c655b5dfc156ecd735138fb4ac35" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>setItemsHandled</name></member>
+      <member refid="d8/d2a/classTripalImporter_1af7a7c4f523f1b146f00d33fec6761329" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>setJob</name></member>
+      <member refid="d8/d2a/classTripalImporter_1af4e52710e6516713c674dce187b32454" prot="protected" virt="non-virtual"><scope>OBOImporter</scope><name>setTotalItems</name></member>
+      <member refid="d8/d2a/classTripalImporter_1a8f2c50c80f030150292a7cf9f0a1e00d" prot="public" virt="non-virtual"><scope>OBOImporter</scope><name>submitJob</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

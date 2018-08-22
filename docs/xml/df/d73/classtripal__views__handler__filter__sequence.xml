@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/d73/classtripal__views__handler__filter__sequence" kind="class" language="PHP" prot="public">
+    <compoundname>tripal_views_handler_filter_sequence</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">views_handler_filter</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/d73/classtripal__views__handler__filter__sequence_1a8d8ae7075496c6aac63d56bd9d1b930a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_sequence::exposed_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>exposed_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} Ensures the upload field gets rendered when the filter is exposed. It also changes the form type from a GET to a POST so that file uploads will work. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" line="35" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" bodystart="35" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d73/classtripal__views__handler__filter__sequence_1ae9dd3d2a60380dbb2d9d5dd47566cdb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_sequence::query</definition>
+        <argsstring>()</argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" line="59" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" bodystart="59" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d73/classtripal__views__handler__filter__sequence_1a1836ab47195e05eea5447333e7086e45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_views_handler_filter_sequence::value_form</definition>
+        <argsstring>(&amp;$form, &amp;$form_state)</argsstring>
+        <name>value_form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" line="18" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" bodystart="18" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This Handler provides a file upload field by extending the views_handler_filter object. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="870">
+        <label>tripal_views_handler_filter_sequence</label>
+        <link refid="df/d73/classtripal__views__handler__filter__sequence"/>
+        <childnode refid="871" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="871">
+        <label>views_handler_filter</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="872">
+        <label>tripal_views_handler_filter_sequence</label>
+        <link refid="df/d73/classtripal__views__handler__filter__sequence"/>
+        <childnode refid="873" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="873">
+        <label>views_handler_filter</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" line="13" column="1" bodyfile="tripal_chado_views/views/handlers/tripal_views_handler_filter_sequence.inc" bodystart="13" bodyend="75"/>
+    <listofallmembers>
+      <member refid="df/d73/classtripal__views__handler__filter__sequence_1a8d8ae7075496c6aac63d56bd9d1b930a" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_sequence</scope><name>exposed_form</name></member>
+      <member refid="df/d73/classtripal__views__handler__filter__sequence_1ae9dd3d2a60380dbb2d9d5dd47566cdb3" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_sequence</scope><name>query</name></member>
+      <member refid="df/d73/classtripal__views__handler__filter__sequence_1a1836ab47195e05eea5447333e7086e45" prot="public" virt="non-virtual"><scope>tripal_views_handler_filter_sequence</scope><name>value_form</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_7bc94ece37a4fa6a941890cc5e929feb" kind="dir">
+    <compoundname>legacy/tripal_analysis/api</compoundname>
+    <innerfile refid="d1/d6e/tripal__analysis_8DEPRECATED_8inc">tripal_analysis.DEPRECATED.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_analysis/api/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d70/tripal__ws_8module" kind="file" language="C++">
+    <compoundname>tripal_ws.module</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@file</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>The<sp/>Tripal<sp/>Web<sp/>Service<sp/>Module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@defgroup<sp/>tripal_ws<sp/>Tripal<sp/>Web<sp/>Services<sp/>Module</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@{</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>The<sp/>Tripal<sp/>Web<sp/>Services<sp/>module<sp/>provides<sp/>functionality<sp/>for<sp/>managing<sp/>RESTful</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>web<sp/>services<sp/>based<sp/>on<sp/>the<sp/>W3C<sp/>Hydra<sp/>standard.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@defgroup<sp/>tripal_api<sp/>Tripal<sp/>API</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@{</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Tripal<sp/>provides<sp/>an<sp/>application<sp/>programming<sp/>interface<sp/>(API)<sp/>to<sp/>support</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>customizations<sp/>and<sp/>creation<sp/>of<sp/>new<sp/>extensions.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/><sp/>&quot;api/tripal_ws.api.inc&quot;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/><sp/>&quot;includes/tripal_ws.field_storage.inc&quot;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/><sp/>&quot;includes/tripal_ws.fields.inc&quot;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/><sp/>&quot;includes/TripalWebService.inc&quot;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/><sp/>&quot;includes/TripalWebServiceResource.inc&quot;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/><sp/>&quot;includes/TripalWebServiceCollection.inc&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Web<sp/>Services<sp/>Fields</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&quot;includes/TripalFields/WebServicesField.inc&quot;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&quot;includes/TripalFields/WebServicesFieldWidget.inc&quot;;</highlight></codeline>
+<codeline><highlight class="normal">require_once<sp/>&quot;includes/TripalFields/WebServicesFieldFormatter.inc&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_init()</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_init()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>global<sp/>$base_url;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$api_url<sp/>=<sp/>$base_url<sp/>.<sp/>&apos;/web-sevices/&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$vocab<sp/>=<sp/>tripal_get_vocabulary_details(&apos;hydra&apos;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Following<sp/>the<sp/>WC3<sp/>Hydra<sp/>documentation,<sp/>we<sp/>want<sp/>to<sp/>add<sp/><sp/>LINK<sp/>to<sp/>the<sp/>header</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>of<sp/>the<sp/>site<sp/>that<sp/>indicates<sp/>where<sp/>the<sp/>API<sp/>documentation<sp/>can<sp/>be<sp/>found.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>This<sp/>allows<sp/>a<sp/>hydra-enabled<sp/>client<sp/>to<sp/>discover<sp/>the<sp/>API<sp/>and<sp/>use<sp/>it.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$attributes<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;rel&apos;<sp/>=&gt;<sp/>$vocab[&apos;sw_url&apos;]<sp/>.<sp/>&apos;apiDocumentation&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;href&apos;<sp/>=&gt;<sp/>$api_url<sp/>.<sp/>&apos;/doc/v0.1&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_add_html_head_link($attributes,<sp/>$header<sp/>=<sp/>FALSE);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_menu().</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Defines<sp/>all<sp/>menu<sp/>items<sp/>needed<sp/>by<sp/>Tripal<sp/>Core</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@ingroup<sp/>tripal_ws</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_menu()<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Web<sp/>Services<sp/>API<sp/>callbacks.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;web-services&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Tripal<sp/>Web<sp/>Services<sp/>API&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_ws_get_services&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;remote/%/%/%/%&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_ws_load_remote_entity&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(1,<sp/>2,<sp/>3,<sp/>4),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;access<sp/>content&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Tripal<sp/>Web<sp/>Services<sp/>setting<sp/>groups</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/storage/ws&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Remote<sp/>Tripal<sp/>Sites&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&quot;Create<sp/>mashups<sp/>of<sp/>content<sp/>using<sp/>data<sp/>from<sp/>this<sp/>site<sp/>and<sp/>remote<sp/>Tripal<sp/>sites.&quot;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>20,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;system_admin_menu_block_page&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file&apos;<sp/>=&gt;<sp/>&apos;system.admin.inc&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file<sp/>path&apos;<sp/>=&gt;<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;system&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/storage/ws/tripal_sites&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Configuration&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>t(&apos;Provides<sp/>information<sp/>about<sp/>other<sp/>Tripal<sp/>sites.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>allows<sp/>data<sp/>exchange<sp/>and<sp/>communication<sp/>betwen<sp/>Tripal</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled<sp/>sites<sp/>through<sp/>the<sp/>web<sp/>services.&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_ws_tripal_sites_form&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_NORMAL_ITEM,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>0,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file&apos;<sp/>=&gt;<sp/>&apos;includes/tripal_ws.admin.inc&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file<sp/>path&apos;<sp/>=&gt;<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;tripal_ws&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/storage/ws/tripal_sites/edit&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Add<sp/>Tripal<sp/>Site&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Add<sp/>a<sp/>Tripal<sp/>site&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_ws_tripal_sites_edit_form&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file&apos;<sp/>=&gt;<sp/><sp/>&apos;includes/tripal_ws.admin.inc&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file<sp/>path&apos;<sp/>=&gt;<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;tripal_ws&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_LOCAL_ACTION,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$items[&apos;admin/tripal/storage/ws/tripal_sites/remove/%&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Remove<sp/>Tripal<sp/>Site&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Remove<sp/>a<sp/>Tripal<sp/>site&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;drupal_get_form&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;tripal_ws_tripal_sites_remove_form&apos;,<sp/>6),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;administer<sp/>tripal&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file&apos;<sp/>=&gt;<sp/><sp/>&apos;includes/tripal_ws.admin.inc&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;file<sp/>path&apos;<sp/>=&gt;<sp/>drupal_get_path(&apos;module&apos;,<sp/>&apos;tripal_ws&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;weight&apos;<sp/>=&gt;<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>The<sp/>callback<sp/>function<sp/>for<sp/>all<sp/>RESTful<sp/>web<sp/>services.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_get_services()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>global<sp/>$base_url;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$service_path<sp/>=<sp/>$base_url<sp/>.<sp/>&apos;/web-services&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>This<sp/>should<sp/>go<sp/>out<sp/>as<sp/>ld+json</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_add_http_header(&apos;Content-Type&apos;,<sp/>&apos;application/ld+json&apos;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Add<sp/>a<sp/>link<sp/>header<sp/>for<sp/>the<sp/>vocabulary<sp/>service<sp/>so<sp/>that<sp/>clients</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>know<sp/>where<sp/>to<sp/>find<sp/>the<sp/>docs.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tripal_load_include_web_service_class(&apos;TripalDocService_v0_1&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$service<sp/>=<sp/>new<sp/>TripalDocService_v0_1($service_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$vocab<sp/>=<sp/>tripal_get_vocabulary_details(&apos;hydra&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_add_http_header(&apos;Link&apos;,<sp/>&apos;&lt;&apos;<sp/>.<sp/>$service-&gt;getServicePath()<sp/>.<sp/>&apos;&gt;;<sp/>rel=&quot;&apos;<sp/>.<sp/>$vocab[&apos;sw_url&apos;]<sp/>.<sp/>&apos;apiDocumentation&quot;&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_add_http_header(&apos;Cache-Control&apos;,<sp/>&quot;no-cache&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>try<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$ws_path<sp/>=<sp/>func_get_args();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$args<sp/>=<sp/>$_GET;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>unset($args[&apos;q&apos;]);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>The<sp/>web<sp/>services<sp/>should<sp/>never<sp/>be<sp/>cached.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>drupal_page_is_cacheable(FALSE);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>The<sp/>Tripal<sp/>web<sp/>services<sp/>bath<sp/>will<sp/>be:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>[base_path]/web-services/[service<sp/>name]/v[major_version].[minor_version]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$matches<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$major_version<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$minor_version<sp/>=<sp/>&apos;&apos;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$list_services<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>If<sp/>there<sp/>is<sp/>no<sp/>path<sp/>then<sp/>we<sp/>should<sp/>list<sp/>all<sp/>of<sp/>the<sp/>services<sp/>available.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(empty($ws_path))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tripal_ws_list_services();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>return;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>A<sp/>service<sp/>path<sp/>will<sp/>have<sp/>the<sp/>service<sp/>name<sp/>in<sp/>$ws_path[0]<sp/>and<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>version<sp/>in<sp/>$ws_path[1].<sp/><sp/>If<sp/>we<sp/>check<sp/>that<sp/>the<sp/>version<sp/>is<sp/>correctly</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>formatted<sp/>then<sp/>we<sp/>can<sp/>look<sp/>for<sp/>the<sp/>service<sp/>class<sp/>and<sp/>invoke<sp/>it.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else<sp/>if<sp/>(preg_match(&quot;/^v(\d+)\.(\d+)$/&quot;,<sp/>$ws_path[1],<sp/>$matches))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$service_type<sp/>=<sp/>$ws_path[0];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$major_version<sp/>=<sp/>$matches[1];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$minor_version<sp/>=<sp/>$matches[2];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$service_version<sp/>=<sp/>&apos;v&apos;<sp/>.<sp/>$major_version<sp/>.<sp/>&apos;.&apos;<sp/>.<sp/>$minor_version;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>If<sp/>the<sp/>URL<sp/>doesn&apos;t<sp/>match<sp/>then<sp/>return<sp/>not<sp/>found.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throw<sp/>new<sp/>Exception(&quot;Unsupported<sp/>service<sp/>URL:<sp/>&apos;&quot;<sp/>.<sp/>$ws_path[1]<sp/>.<sp/>&quot;&apos;&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>the<sp/>service<sp/>that<sp/>matches<sp/>the<sp/>service_name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$services<sp/>=<sp/>tripal_get_web_services();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>foreach<sp/>($services<sp/>as<sp/>$service_class)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tripal_load_include_web_service_class($service_class);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>($service_class::$type<sp/>==<sp/>$service_type)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$service<sp/>=<sp/>new<sp/>$service_class($service_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>($service-&gt;getVersion()<sp/>==<sp/>$service_version)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$service<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>If<sp/>a<sp/>service<sp/>was<sp/>not<sp/>provided<sp/>then<sp/>return<sp/>an<sp/>error.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!$service)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>throw<sp/>new<sp/>Exception(&apos;The<sp/>service<sp/>type,<sp/>&quot;&apos;<sp/>.<sp/>$service_type<sp/>.<sp/>&apos;&quot;,<sp/>is<sp/>not<sp/>available&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Adjust<sp/>the<sp/>path<sp/>to<sp/>remove<sp/>the<sp/>service<sp/>type<sp/>and<sp/>the<sp/>version.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$adj_path<sp/>=<sp/>$ws_path;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>array_shift($adj_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>array_shift($adj_path);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Now<sp/>call<sp/>the<sp/>service<sp/>to<sp/>handle<sp/>the<sp/>request.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service-&gt;setPath($adj_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service-&gt;setParams($args);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service-&gt;handleRequest();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$response<sp/>=<sp/>$service-&gt;getResponse();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/>drupal_json_encode($response);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>catch<sp/>(Exception<sp/>$e)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service<sp/>=<sp/>new<sp/>TripalWebService($service_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service-&gt;setError($e-&gt;getMessage());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$response<sp/>=<sp/>$service-&gt;getResponse();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/>drupal_json_encode($response);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Generates<sp/>the<sp/>list<sp/>of<sp/>services<sp/>as<sp/>the<sp/>&quot;home<sp/>page&quot;<sp/>for<sp/>Tripal<sp/>web<sp/>services.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_list_services()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>global<sp/>$base_url;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$base_path<sp/>=<sp/>$base_url<sp/>.<sp/>&apos;/web-services&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Create<sp/>an<sp/>instance<sp/>of<sp/>the<sp/>TriaplWebService<sp/>class<sp/>and<sp/>use<sp/>it<sp/>to<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>the<sp/>entry<sp/>point<sp/>for<sp/>the<sp/>web<sp/>serivces.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$service<sp/>=<sp/>new<sp/>TripalWebService($base_path);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Get<sp/>the<sp/>list<sp/>of<sp/>web<sp/>service<sp/>classes.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$services<sp/>=<sp/>tripal_get_web_services();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Create<sp/>the<sp/>parent<sp/>resource<sp/>which<sp/>is<sp/>a<sp/>collection.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$resource<sp/>=<sp/>new<sp/>TripalWebServiceResource($base_path);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Add<sp/>the<sp/>vocabulary<sp/>to<sp/>the<sp/>context.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tripal_load_include_web_service_class(&apos;TripalDocService_v0_1&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$service<sp/>=<sp/>new<sp/>TripalDocService_v0_1($base_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$resource-&gt;addContextItem(&apos;vocab&apos;,<sp/>$service-&gt;getServicePath()<sp/>.<sp/>&apos;#&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$resource-&gt;addContextItem(&apos;EntryPoint&apos;,<sp/>&apos;vocab:EntryPoint&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$resource-&gt;setType(&apos;EntryPoint&apos;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Now<sp/>add<sp/>the<sp/>services<sp/>as<sp/>properties.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>foreach<sp/>($services<sp/>as<sp/>$service_class)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>tripal_load_include_web_service_class($service_class);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>($service_class<sp/>==<sp/>&apos;TripalDocService_v0_1&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>continue;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$service<sp/>=<sp/>new<sp/>$service_class($base_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$resource-&gt;addContextItem($service_class::$type,<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;@id&apos;<sp/>=&gt;<sp/>&apos;vocab:EntryPoint/&apos;<sp/>.<sp/>$service_class::$type,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;@type&apos;<sp/>=&gt;<sp/>&apos;@id&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$resource-&gt;addProperty($service_class::$type,<sp/>$service-&gt;getServicePath());</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$service-&gt;setResource($resource);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$response<sp/>=<sp/>$service-&gt;getResponse();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>print<sp/>drupal_json_encode($response);</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>The<sp/>callback<sp/>function<sp/>for<sp/>all<sp/>RESTful<sp/>web<sp/>services.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_services()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$ws_path<sp/>=<sp/>func_get_args();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$params<sp/>=<sp/>$_GET;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>unset($params[&apos;q&apos;]);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>The<sp/>web<sp/>services<sp/>should<sp/>never<sp/>be<sp/>cached.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_page_is_cacheable(FALSE);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Using<sp/>the<sp/>provided<sp/>version<sp/>number,<sp/>determine<sp/>which<sp/>web<sp/>services</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>verion<sp/>to<sp/>call.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$version<sp/>=<sp/>array_shift($ws_path);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>($version<sp/>and<sp/>preg_match(&apos;/v\d+\.\d+/&apos;,<sp/>$version))<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$api_url<sp/>=<sp/>&apos;ws/&apos;<sp/>.<sp/>$version;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Add<sp/>the<sp/>file<sp/>with<sp/>the<sp/>appropriate<sp/>web<sp/>services.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>module_load_include(&apos;inc&apos;,<sp/>&apos;tripal_ws&apos;,<sp/>&apos;includes/tripal_ws.rest_&apos;<sp/>.<sp/>$version);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$version<sp/>=<sp/>preg_replace(&apos;/\./&apos;,<sp/>&apos;_&apos;,<sp/>$version);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$function<sp/>=<sp/>&apos;tripal_ws_services_&apos;<sp/>.<sp/>$version;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$response<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(function_exists($function))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$response<sp/>=<sp/>$function($api_url,<sp/>$ws_path,<sp/>$params);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>TODO:<sp/>What<sp/>do<sp/>we<sp/>do<sp/>if<sp/>no<sp/>version<sp/>is<sp/>provided?</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_add_http_header(&apos;Content-Type&apos;,<sp/>&apos;application/ld+json&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>print<sp/>drupal_json_encode($response);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$site_id</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$api_version</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$ctype</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@param<sp/>$id</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@return</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_load_remote_entity($site_id,<sp/>$api_version,<sp/>$ctype,<sp/>$id)<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Get<sp/>the<sp/>content<sp/>type<sp/>on<sp/>this<sp/>site</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$bundle<sp/>=<sp/>tripal_load_bundle_entity(array(&apos;label&apos;<sp/>=&gt;<sp/>$ctype));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$term<sp/>=<sp/>entity_load(&apos;TripalTerm&apos;,<sp/>array(&apos;id&apos;<sp/>=&gt;<sp/>$bundle-&gt;term_id));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$term<sp/>=<sp/>reset($term);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$vocab<sp/>=<sp/>$term-&gt;vocab;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$query<sp/>=<sp/>db_select(&apos;tripal_sites&apos;,<sp/>&apos;ts&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$query-&gt;fields(&apos;ts&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$query-&gt;condition(&apos;id&apos;,<sp/>$site_id);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$site<sp/>=<sp/>$query-&gt;execute()-&gt;fetchObject();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>(!$site)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>&apos;Could<sp/>not<sp/>find<sp/>specified<sp/>site.&apos;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Get<sp/>the<sp/>content<sp/>from<sp/>the<sp/>web<sp/>services<sp/>of<sp/>the<sp/>remote<sp/>site.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$url<sp/>=<sp/>$site-&gt;url<sp/>.<sp/>&quot;/ws/v0.1/content/&quot;<sp/>.<sp/>$ctype<sp/>.<sp/>&quot;/&quot;<sp/>.<sp/>$id;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$json<sp/>=<sp/>file_get_contents($url);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$response<sp/>=<sp/>json_decode($json,<sp/>TRUE);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Set<sp/>the<sp/>title<sp/>for<sp/>this<sp/>page<sp/>to<sp/>match<sp/>the<sp/>title<sp/>provided.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>drupal_set_title($response[&apos;label&apos;]);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Attribute<sp/>this<sp/>data<sp/>to<sp/>the<sp/>proper<sp/>source.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$source_url<sp/>=<sp/>l($response[&apos;label&apos;],<sp/>$response[&apos;ItemPage&apos;],<sp/>array(&apos;attributes&apos;<sp/>=&gt;<sp/>array(&apos;target&apos;<sp/>=&gt;<sp/>&apos;_blank&apos;)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$content<sp/>=<sp/>&apos;&lt;div&gt;&lt;strong&gt;Source:&lt;/strong&gt;<sp/>&apos;<sp/>.<sp/>$site-&gt;name<sp/>.<sp/>&apos;:<sp/>&apos;<sp/>.<sp/>$source_url<sp/>.<sp/>&apos;&lt;/div&gt;&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Fake<sp/>an<sp/>entity<sp/>so<sp/>we<sp/>can<sp/>display<sp/>this<sp/>content<sp/>using<sp/>the<sp/>same</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>entity<sp/>type<sp/>on<sp/>this<sp/>site.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity<sp/>=<sp/>new<sp/>TripalEntity(array(),<sp/>&apos;TripalEntity&apos;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;id<sp/>=<sp/>807;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;type<sp/>=<sp/>&apos;TripalEntity&apos;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;bundle<sp/>=<sp/>$bundle-&gt;name;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;term_id<sp/>=<sp/>$term-&gt;id;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;title<sp/>=<sp/>$response[&apos;label&apos;];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;uid<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;status<sp/>=<sp/>1;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Get<sp/>the<sp/>fields<sp/>and<sp/>create<sp/>a<sp/>list<sp/>of<sp/>those<sp/>that<sp/>are<sp/>attached<sp/>to<sp/>the<sp/>bundle.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$fields<sp/>=<sp/>field_info_fields();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$my_fields<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>foreach<sp/>($fields<sp/>as<sp/>$field)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(isset($field[&apos;bundles&apos;][&apos;TripalEntity&apos;]))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>foreach<sp/>($field[&apos;bundles&apos;][&apos;TripalEntity&apos;]<sp/>as<sp/>$bundle_name)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>($bundle_name<sp/>==<sp/>$bundle-&gt;name)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$my_fields[]<sp/>=<sp/>$field;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Add<sp/>in<sp/>the<sp/>value<sp/>for<sp/>the<sp/>&apos;content_type&apos;<sp/>field.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;content_type<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity-&gt;content_type[&apos;und&apos;][0][&apos;value&apos;]<sp/>=<sp/>$bundle-&gt;label;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>For<sp/>each<sp/>field<sp/>we<sp/>know<sp/>about<sp/>that<sp/>should<sp/>be<sp/>attached<sp/>to<sp/>our<sp/>bundle,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>see<sp/>if<sp/>we<sp/>can<sp/>find<sp/>a<sp/>corresponding<sp/>entry<sp/>in<sp/>the<sp/>results<sp/>returned<sp/>from</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>the<sp/>web<sp/>service<sp/>call.<sp/>If<sp/>so,<sp/>then<sp/>add<sp/>the<sp/>field<sp/>to<sp/>our<sp/>fake<sp/>entity.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>foreach<sp/>($my_fields<sp/>as<sp/>$field)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>the<sp/>semantic<sp/>web<sp/>term<sp/>for<sp/>this<sp/>field.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$field_name<sp/>=<sp/>$field[&apos;field_name&apos;];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$settings<sp/>=<sp/>$field[&apos;settings&apos;];</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>If<sp/>the<sp/>field<sp/>does<sp/>not<sp/>have<sp/>a<sp/>semantic<sp/>web<sp/>mapping,<sp/>then<sp/>skip<sp/>it.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!isset($settings[&apos;semantic_web&apos;]))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>continue;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Convert<sp/>the<sp/>term<sp/>into<sp/>it&apos;s<sp/>db<sp/>and<sp/>accession<sp/>elements<sp/>and<sp/>look<sp/>it<sp/>up</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>list($vocabulary,<sp/>$accession)<sp/>=<sp/>explode(&apos;:&apos;,<sp/>$settings[&apos;semantic_web&apos;]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$term<sp/>=<sp/>tripal_get_term_details($vocabulary,<sp/>$accession);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Convert<sp/>the<sp/>term<sp/>to<sp/>lowercase<sp/>and<sp/>remove<sp/>spaces<sp/>so<sp/>we<sp/>can<sp/>compare</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>correctly.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$term_name<sp/>=<sp/>strtolower(preg_replace(&apos;/<sp/>/&apos;,<sp/>&apos;_&apos;,<sp/>$term[&apos;name&apos;]));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>TODO:<sp/>check<sp/>for<sp/>the<sp/>term<sp/>in<sp/>the<sp/>response<sp/>makes<sp/>the<sp/>assumption</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>that<sp/>the<sp/>term<sp/>is<sp/>the<sp/>same<sp/>on<sp/>both<sp/>sides.<sp/>This<sp/>may<sp/>not<sp/>be<sp/>true.<sp/>The</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>acutal<sp/>vocab<sp/>and<sp/>accession<sp/>for<sp/>both<sp/>terms<sp/>should<sp/>be<sp/>compared.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(isset($response[$term_name]))<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>If<sp/>this<sp/>field<sp/>is<sp/>of<sp/>type<sp/>&apos;@id&apos;<sp/>then<sp/>this<sp/>links<sp/>out<sp/>to<sp/>another</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>URL<sp/>where<sp/>that<sp/>information<sp/>can<sp/>be<sp/>retrieved.<sp/>We&apos;ll<sp/>have<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>handle<sp/>that<sp/>separately.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(isset($response[&apos;@context&apos;][$term_name][&apos;@type&apos;])<sp/>and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$response[&apos;@context&apos;][$term_name][&apos;@type&apos;]<sp/>==<sp/>&apos;@id&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$subquery<sp/>=<sp/>json_decode(file_get_contents($response[$term_name]),<sp/>TRUE);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>If<sp/>the<sp/>result<sp/>is<sp/>a<sp/>collection<sp/>then<sp/>we<sp/>want<sp/>to<sp/>add<sp/>each<sp/>value<sp/>with</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>it&apos;s<sp/>own<sp/>delta<sp/>value.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(array_key_exists(&apos;@type&apos;,<sp/>$subquery)<sp/>and<sp/>$subquery[&apos;@type&apos;]<sp/>==<sp/>&apos;Collection&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$i<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$f<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>foreach<sp/>($subquery[&apos;member&apos;]<sp/>as<sp/>$member)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$f[&apos;und&apos;][$i][&apos;value&apos;]<sp/>=<sp/>$member;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$i++;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;$field_name<sp/>=<sp/>$f;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>If<sp/>the<sp/>result<sp/>is<sp/>not<sp/>a<sp/>collection<sp/>then<sp/>just<sp/>add<sp/>it.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unset($subquery[&apos;@context&apos;]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unset($subquery[&apos;@id&apos;]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$f<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$f[&apos;und&apos;][0][&apos;value&apos;]<sp/>=<sp/>$subquery;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;$field_name<sp/>=<sp/>$f;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>For<sp/>all<sp/>fields<sp/>that<sp/>are<sp/>currently<sp/>attached,<sp/>add<sp/>the<sp/>field<sp/>and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>value<sp/>to<sp/>the<sp/>entity.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$f<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$f[&apos;und&apos;][0][&apos;value&apos;]<sp/>=<sp/>$response[$term_name];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;$field_name<sp/>=<sp/>$f;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Generate<sp/>the<sp/>View<sp/>for<sp/>this<sp/>entity</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entities<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entities[]<sp/>=<sp/>$entity;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$view<sp/>=<sp/>entity_view(&apos;TripalEntity&apos;,<sp/>$entities);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$content<sp/>.=<sp/>drupal_render($view[&apos;TripalEntity&apos;][807]);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$content;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_form_field_ui_field_edit_form_alter(&amp;$form,<sp/>&amp;$form_state,<sp/>$form_id)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Don&apos;t<sp/>let<sp/>the<sp/>user<sp/>change<sp/>the<sp/>cardinality<sp/>of<sp/>web<sp/>services<sp/>fields</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>($form[&apos;#instance&apos;][&apos;entity_type&apos;]<sp/>==<sp/>&apos;TripalEntity&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>($form[&apos;#field&apos;][&apos;storage&apos;][&apos;type&apos;]<sp/>==<sp/>&apos;field_tripal_ws_storage&apos;)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$form[&apos;field&apos;][&apos;cardinality&apos;][&apos;#access&apos;]<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$form[&apos;instance&apos;][&apos;required&apos;][&apos;#access&apos;]<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Returns<sp/>the<sp/>decoded<sp/>json<sp/>data<sp/>for<sp/>a<sp/>specific<sp/>field.</highlight></codeline>
+<codeline><highlight class="normal">*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_remote_data_single_field_pull($field,<sp/>$entity_url){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$options<sp/>=<sp/>array();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$full_url<sp/>=<sp/>$entity_url<sp/>.<sp/>&apos;/&apos;<sp/>.<sp/>$field;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$data<sp/>=<sp/>drupal_http_request($full_url,<sp/>$options);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if(!empty($data)){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>$data<sp/>=<sp/>drupal_json_decode($data-&gt;data);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>$data;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Implements<sp/>hook_entity_info_alter()</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Add<sp/>the<sp/>web<sp/>services<sp/>display<sp/>as<sp/>a<sp/>view<sp/>mode.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>tripal_ws_entity_info_alter(&amp;$entity_info)<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Set<sp/>the<sp/>controller<sp/>class<sp/>for<sp/>nodes<sp/>to<sp/>an<sp/>alternate<sp/>implementation<sp/>of<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>DrupalEntityController<sp/>interface.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$entity_info[&apos;TripalEntity&apos;][&apos;view<sp/>modes&apos;]<sp/><sp/>+=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;tripal_ws&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;label&apos;<sp/>=&gt;<sp/>t(&apos;Tripal<sp/>Web<sp/>Services&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;custom<sp/>settings&apos;<sp/>=&gt;<sp/>FALSE,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_ws/tripal_ws.module"/>
+  </compounddef>
+</doxygen>

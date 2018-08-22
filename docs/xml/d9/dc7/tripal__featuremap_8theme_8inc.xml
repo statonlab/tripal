@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d9/dc7/tripal__featuremap_8theme_8inc" kind="file" language="PHP">
+    <compoundname>tripal_featuremap.theme.inc</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="legacy/tripal_featuremap/theme/tripal_featuremap.theme.inc"/>
+  </compounddef>
+</doxygen>

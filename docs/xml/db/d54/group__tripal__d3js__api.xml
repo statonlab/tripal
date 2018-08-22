@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="db/d54/group__tripal__d3js__api" kind="group">
+    <compoundname>tripal_d3js_api</compoundname>
+    <title>d3js</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="db/d54/group__tripal__d3js__api_1gafe3571aa0b93a1516786f56c2e80e47a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_d3js</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_add_d3js</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load D3.js releated javascripts for the current page. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/api/tripal.d3js.api.inc" line="31" column="1" bodyfile="tripal/api/tripal.d3js.api.inc" bodystart="31" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of the widely implemented SVG, HTML5, and CSS standards. For more information on how to use d3js please see <ulink url="https://github.com/d3/d3">https://github.com/d3/d3</ulink>.</para><para>For an example of d3 usage in Tripal please review <ref refid="d8/d5f/tripal__chado_8phylotree_8inc" kindref="compound">tripal_chado/includes/tripal_chado.phylotree.inc</ref> and tripal_chado/theme/js/d3.phylogram.js </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

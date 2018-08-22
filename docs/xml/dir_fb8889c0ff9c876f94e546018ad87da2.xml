@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_fb8889c0ff9c876f94e546018ad87da2" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/taxrank__infraspecific_taxon</compoundname>
+    <innerfile refid="d1/df4/taxrank____infraspecific__taxon_8inc">taxrank__infraspecific_taxon.inc</innerfile>
+    <innerfile refid="d2/d36/taxrank____infraspecific__taxon__formatter_8inc">taxrank__infraspecific_taxon_formatter.inc</innerfile>
+    <innerfile refid="d2/d59/taxrank____infraspecific__taxon__widget_8inc">taxrank__infraspecific_taxon_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/taxrank__infraspecific_taxon/"/>
+  </compounddef>
+</doxygen>

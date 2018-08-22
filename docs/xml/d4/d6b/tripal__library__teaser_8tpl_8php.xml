@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d4/d6b/tripal__library__teaser_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_library_teaser.tpl.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d4/d6b/tripal__library__teaser_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <initializer>= $libprop-&gt;value</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" line="15" column="1" bodyfile="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d6b/tripal__library__teaser_8tpl_8php_1af21d570e460e52306bdfea96b36fe689" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$libprop</definition>
+        <argsstring></argsstring>
+        <name>$libprop</name>
+        <initializer>= <ref refid="d0/d77/group__tripal__chado__prop__api_1gacde5c2d1e12563cfd3614fb51525ae26" kindref="member">chado_get_property</ref>($record, $property)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" line="14" column="1" bodyfile="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d6b/tripal__library__teaser_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$library</definition>
+        <argsstring></argsstring>
+        <name>$library</name>
+        <initializer>= $variables[&apos;node&apos;]-&gt;library</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" line="3" column="1" bodyfile="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d6b/tripal__library__teaser_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$node</definition>
+        <argsstring></argsstring>
+        <name>$node</name>
+        <initializer>= $variables[&apos;node&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" line="2" column="1" bodyfile="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d6b/tripal__library__teaser_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$property</definition>
+        <argsstring></argsstring>
+        <name>$property</name>
+        <initializer>= array(
+  &apos;type_name&apos; =&gt; &apos;Library Description&apos;,
+  &apos;cv_name&apos; =&gt; &apos;library_property&apos;
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" line="10" column="1" bodyfile="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d6b/tripal__library__teaser_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$record</definition>
+        <argsstring></argsstring>
+        <name>$record</name>
+        <initializer>= array(
+  &apos;table&apos; =&gt; &apos;library&apos;,
+  &apos;id&apos; =&gt; $library-&gt;library_id
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" line="6" column="1" bodyfile="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2" refid="d4/d6b/tripal__library__teaser_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" refkind="member"><highlight class="normal"><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref><sp/><sp/><sp/><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="3" refid="d4/d6b/tripal__library__teaser_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" refkind="member"><highlight class="normal"><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" kindref="member">$library</ref><sp/>=<sp/>$variables[</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">]-&gt;library;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>library<sp/>description.<sp/>IT<sp/>uses<sp/>a<sp/>tern<sp/>name<sp/>of<sp/>&apos;Library<sp/>Description&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d4/d6b/tripal__library__teaser_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" refkind="member"><highlight class="normal"><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;table&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;library&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1af7f16973b677264e07096e6d768b41b6" kindref="member">$library</ref>-&gt;library_id</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10" refid="d4/d6b/tripal__library__teaser_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" refkind="member"><highlight class="normal"><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref><sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;type_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;Library<sp/>Description&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;cv_name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;library_property&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14" refid="d4/d6b/tripal__library__teaser_8tpl_8php_1af21d570e460e52306bdfea96b36fe689" refkind="member"><highlight class="normal"><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1af21d570e460e52306bdfea96b36fe689" kindref="member">$libprop</ref><sp/>=<sp/><ref refid="d0/d77/group__tripal__chado__prop__api_1gacde5c2d1e12563cfd3614fb51525ae26" kindref="member">chado_get_property</ref>(<ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref>,<sp/><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1aca07184a1d9c6d3817265d594c356071" kindref="member">$property</ref>);</highlight></codeline>
+<codeline lineno="15" refid="d4/d6b/tripal__library__teaser_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" refkind="member"><highlight class="normal"><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref><sp/>=<sp/><ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1af21d570e460e52306bdfea96b36fe689" kindref="member">$libprop</ref>-&gt;value;<sp/>?&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal_library-teaser<sp/>tripal-teaser&quot;</highlight><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-library-teaser-title<sp/>tripal-teaser-title&quot;</highlight><highlight class="normal">&gt;&lt;?php<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/>l(<ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1a15955933e72700564e1a76d7f97c1ac7" kindref="member">$node</ref>-&gt;title,<sp/></highlight><highlight class="stringliteral">&quot;node/$node-&gt;nid&quot;</highlight><highlight class="normal">,<sp/>array(</highlight><highlight class="stringliteral">&apos;html&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE));?&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;tripal-library-teaser-text<sp/>tripal-teaser-text&quot;</highlight><highlight class="normal">&gt;&lt;?php<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/>substr(<ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref>,<sp/>0,<sp/>650);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen(<ref refid="d4/d6b/tripal__library__teaser_8tpl_8php_1a87b032cba06009e3467abf1c8018d960" kindref="member">$description</ref>)<sp/>&gt;<sp/>650)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;...<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>l(</highlight><highlight class="stringliteral">&quot;[more]&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;node/$node-&gt;nid&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>?&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">&lt;/div&gt;</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_library/theme/templates/tripal_library_teaser.tpl.php"/>
+  </compounddef>
+</doxygen>

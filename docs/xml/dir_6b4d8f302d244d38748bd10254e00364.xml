@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_6b4d8f302d244d38748bd10254e00364" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/data__sequence_checksum</compoundname>
+    <innerfile refid="de/d21/data____sequence__checksum_8inc">data__sequence_checksum.inc</innerfile>
+    <innerfile refid="dd/d92/data____sequence__checksum__formatter_8inc">data__sequence_checksum_formatter.inc</innerfile>
+    <innerfile refid="dc/dfe/data____sequence__checksum__widget_8inc">data__sequence_checksum_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/data__sequence_checksum/"/>
+  </compounddef>
+</doxygen>

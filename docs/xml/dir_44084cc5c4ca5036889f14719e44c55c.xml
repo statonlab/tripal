@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_44084cc5c4ca5036889f14719e44c55c" kind="dir">
+    <compoundname>legacy/tripal_feature</compoundname>
+    <innerdir refid="dir_cd5afa831247efe1e97370c432fa8247">legacy/tripal_feature/api</innerdir>
+    <innerdir refid="dir_75a110dd0350f8c4661ad102075f353d">legacy/tripal_feature/includes</innerdir>
+    <innerdir refid="dir_0ce8703e7f30486ff303c2628c545bc4">legacy/tripal_feature/theme</innerdir>
+    <innerdir refid="dir_061cf2b78ace4f22905e9732fafac86b">legacy/tripal_feature/views_handlers</innerdir>
+    <innerfile refid="dc/dd8/tripal__feature_8drush_8inc">tripal_feature.drush.inc</innerfile>
+    <innerfile refid="d4/d04/tripal__feature_8module">tripal_feature.module</innerfile>
+    <innerfile refid="d5/dc3/tripal__feature_8views_8inc">tripal_feature.views.inc</innerfile>
+    <innerfile refid="da/d6e/tripal__feature_8views__default_8inc">tripal_feature.views_default.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_feature/"/>
+  </compounddef>
+</doxygen>

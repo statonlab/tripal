@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d9/d5a/classTripalTerm" kind="class" language="PHP" prot="public">
+    <compoundname>TripalTerm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Entity</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1a6d6dddee6fe19802cee9916664973ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::__construct</definition>
+        <argsstring>($values=array())</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$values</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="6" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="6" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1a47883728442b145b0160291de5c4e833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::getAccession</definition>
+        <argsstring>()</argsstring>
+        <name>getAccession</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="42" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1a0baa89131dff5655ff2236eebccab49b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::getDefinition</definition>
+        <argsstring>()</argsstring>
+        <name>getDefinition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="45" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1a58278f1ef53d58545e0072a0b30b2b01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::getID</definition>
+        <argsstring>()</argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="54" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1adedcf4510f6bde8f58c7388d037f74cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="39" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1aa9cdb66df756e19e89e1c5e738d154c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::getURL</definition>
+        <argsstring>()</argsstring>
+        <name>getURL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="48" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1a43fac77124381d449027e0d541cc506c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::getVocab</definition>
+        <argsstring>()</argsstring>
+        <name>getVocab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="51" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="51" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1adf124e8cf1f379b9c3b4ba411db44521" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::defaultLabel</definition>
+        <argsstring>()</argsstring>
+        <name>defaultLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="29" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d5a/classTripalTerm_1a15bf55a23e76ef228f935274b470c173" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalTerm::defaultUri</definition>
+        <argsstring>()</argsstring>
+        <name>defaultUri</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalTerm.inc" line="33" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class the controller will use for instantiating the <ref refid="d9/d5a/classTripalTerm" kindref="compound">TripalTerm</ref> entity. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1111">
+        <label>TripalTerm</label>
+        <link refid="d9/d5a/classTripalTerm"/>
+        <childnode refid="1112" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1112">
+        <label>Entity</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1113">
+        <label>TripalTerm</label>
+        <link refid="d9/d5a/classTripalTerm"/>
+        <childnode refid="1114" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1114">
+        <label>Entity</label>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/includes/TripalTerm.inc" line="5" column="1" bodyfile="tripal/includes/TripalTerm.inc" bodystart="5" bodyend="58"/>
+    <listofallmembers>
+      <member refid="d9/d5a/classTripalTerm_1a6d6dddee6fe19802cee9916664973ec8" prot="public" virt="non-virtual"><scope>TripalTerm</scope><name>__construct</name></member>
+      <member refid="d9/d5a/classTripalTerm_1adf124e8cf1f379b9c3b4ba411db44521" prot="protected" virt="non-virtual"><scope>TripalTerm</scope><name>defaultLabel</name></member>
+      <member refid="d9/d5a/classTripalTerm_1a15bf55a23e76ef228f935274b470c173" prot="protected" virt="non-virtual"><scope>TripalTerm</scope><name>defaultUri</name></member>
+      <member refid="d9/d5a/classTripalTerm_1a47883728442b145b0160291de5c4e833" prot="public" virt="non-virtual"><scope>TripalTerm</scope><name>getAccession</name></member>
+      <member refid="d9/d5a/classTripalTerm_1a0baa89131dff5655ff2236eebccab49b" prot="public" virt="non-virtual"><scope>TripalTerm</scope><name>getDefinition</name></member>
+      <member refid="d9/d5a/classTripalTerm_1a58278f1ef53d58545e0072a0b30b2b01" prot="public" virt="non-virtual"><scope>TripalTerm</scope><name>getID</name></member>
+      <member refid="d9/d5a/classTripalTerm_1adedcf4510f6bde8f58c7388d037f74cd" prot="public" virt="non-virtual"><scope>TripalTerm</scope><name>getName</name></member>
+      <member refid="d9/d5a/classTripalTerm_1aa9cdb66df756e19e89e1c5e738d154c2" prot="public" virt="non-virtual"><scope>TripalTerm</scope><name>getURL</name></member>
+      <member refid="d9/d5a/classTripalTerm_1a43fac77124381d449027e0d541cc506c" prot="public" virt="non-virtual"><scope>TripalTerm</scope><name>getVocab</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

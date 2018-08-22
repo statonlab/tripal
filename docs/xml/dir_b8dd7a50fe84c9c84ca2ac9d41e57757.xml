@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_b8dd7a50fe84c9c84ca2ac9d41e57757" kind="dir">
+    <compoundname>legacy/tripal_stock</compoundname>
+    <innerdir refid="dir_6b965a2911627e0f371c08c95b040448">legacy/tripal_stock/api</innerdir>
+    <innerdir refid="dir_d4cb1c394c6c42be421c900121c569d9">legacy/tripal_stock/includes</innerdir>
+    <innerdir refid="dir_b47375cfa1afd7fc1564074a36325865">legacy/tripal_stock/theme</innerdir>
+    <innerfile refid="d9/d46/tripal__stock_8module">tripal_stock.module</innerfile>
+    <innerfile refid="d0/d98/tripal__stock_8views__default_8inc">tripal_stock.views_default.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_stock/"/>
+  </compounddef>
+</doxygen>

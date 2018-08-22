@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_7988e029d6d79a5b55330448c36dba8d" kind="dir">
+    <compoundname>legacy/tripal_core/theme</compoundname>
+    <innerdir refid="dir_4df666be189726ea6bcbcfa04a32cfa3">legacy/tripal_core/theme/templates</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="legacy/tripal_core/theme/"/>
+  </compounddef>
+</doxygen>

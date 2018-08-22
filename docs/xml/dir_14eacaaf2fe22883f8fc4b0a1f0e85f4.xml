@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_14eacaaf2fe22883f8fc4b0a1f0e85f4" kind="dir">
+    <compoundname>tripal_ds/includes</compoundname>
+    <innerdir refid="dir_7f4c3f03766a7f328439188d132003ae">tripal_ds/includes/views</innerdir>
+    <innerfile refid="dd/d6b/tripal__ds_8ds_8inc">tripal_ds.ds.inc</innerfile>
+    <innerfile refid="db/d1c/tripal__ds_8field__formatter_8inc">tripal_ds.field_formatter.inc</innerfile>
+    <innerfile refid="d9/d3e/tripal__ds_8field__group_8inc">tripal_ds.field_group.inc</innerfile>
+    <innerfile refid="dc/d42/tripal__ds_8inc">tripal_ds.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_ds/includes/"/>
+  </compounddef>
+</doxygen>

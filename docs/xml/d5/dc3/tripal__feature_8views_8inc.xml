@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/dc3/tripal__feature_8views_8inc" kind="file" language="PHP">
+    <compoundname>tripal_feature.views.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d5/dc3/tripal__feature_8views_8inc_1a46e13030449f4c9d4992dfa32d96f27e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_feature_views_handlers</definition>
+        <argsstring>()</argsstring>
+        <name>tripal_feature_views_handlers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_views_handlers().</para><para>Purpose: Register all custom handlers with views where a handler describes either &quot;the type of field&quot;, &quot;how a field should be filtered&quot;, &quot;how a field should be sorted&quot;</para><para><simplesect kind="return"><para>: An array of handler definitions </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="legacy/tripal_feature/tripal_feature.views.inc" line="19" column="1" bodyfile="legacy/tripal_feature/tripal_feature.views.inc" bodystart="19" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains the basic functions for views integration of chado/tripal feature tables </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="19" refid="d5/dc3/tripal__feature_8views_8inc_1a46e13030449f4c9d4992dfa32d96f27e" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d5/dc3/tripal__feature_8views_8inc_1a46e13030449f4c9d4992dfa32d96f27e" kindref="member">tripal_feature_views_handlers</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>array(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;info&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;path&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>drupal_get_path(</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;tripal_feature&apos;</highlight><highlight class="normal">)<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;/views_handlers&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;handlers&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;views_handler_field_residues&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parent&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;views_handler_field&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_feature/tripal_feature.views.inc"/>
+  </compounddef>
+</doxygen>

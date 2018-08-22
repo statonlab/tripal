@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d5e/group__tripal__chado__views__api" kind="group">
+    <compoundname>tripal_chado_views_api</compoundname>
+    <title>Chado Views Integration</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga79f1499793641ca5ade8a0ff12cf03a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_field_to_views_integration</definition>
+        <argsstring>($table_name, $priority, $field)</argsstring>
+        <name>tripal_add_field_to_views_integration</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <param>
+          <declname>$priority</declname>
+        </param>
+        <param>
+          <declname>$field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the given field to an existing or cloned integration. In the case of a cloned integration, the lightest integration is used as the template for the clone.</para><para>NOTE: If that field already exists in the specified integration then it will first be deleted and the new one added.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table the integration is for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the integration to use; pass NULL to use the lightest integration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array describing the field ot add; uses the same format as the $defn_array</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the field was added successfully; FALSE otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="931" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="931" bodyend="1089"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1gae2ec4020a1bb71f8092b3501af63dc6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_join_to_views_integration</definition>
+        <argsstring>($table_name, $priority, $join)</argsstring>
+        <name>tripal_add_join_to_views_integration</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <param>
+          <declname>$priority</declname>
+        </param>
+        <param>
+          <declname>$join</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the given field to an existing or cloned integration. In the case of a cloned integration, the lightest integration is used as the template for the clone.</para><para>NOTE: If that field already exists in the specified integration then it will first be deleted and the new one added.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table the integration is for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the integration to use; pass NULL to use the lightest integration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array describing the join to add. it should contain the following keys: base_table, base_field, left_table, left_field, handler, relationship_handler, relationship_only</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the field was added successfully; FALSE otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="1114" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="1114" bodyend="1142"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1gad30e8fd9ff4c54293177951877f7effa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_add_views_integration</definition>
+        <argsstring>($defn_array, $setup_id=FALSE)</argsstring>
+        <name>tripal_add_views_integration</name>
+        <param>
+          <declname>$defn_array</declname>
+        </param>
+        <param>
+          <declname>$setup_id</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add views integration records into the tripal_views* tables.</para><para>This is the programatic way to add your own integrations to the tripal views integrations list. Keep in mind that the priority set in your $defn_array needs to be lighter than any existing integrations to be used by views and that it should still be below 0 in order to allow site administrators to override it should they need to.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$defn_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array describing the structure and fields of the table.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True/False if completed successfully/not.</para></simplesect>
+Example usage (in hook_install()): <programlisting><codeline><highlight class="normal">$defn_array<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;table&apos;<sp/>=&gt;<sp/>&apos;feature&apos;,<sp/>//tablename<sp/>or<sp/>materialized<sp/>view<sp/>name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;Sequence<sp/>Features&apos;,<sp/>//<sp/>Human<sp/>readable<sp/>name</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>&apos;chado&apos;,<sp/>//either<sp/>chado<sp/>or<sp/>mview<sp/>depending<sp/>on<sp/>tablename</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;Create<sp/>a<sp/>listing<sp/>of<sp/>features.&apos;,<sp/>//description<sp/>seen<sp/>when<sp/>creating<sp/>a<sp/>view<sp/>of<sp/>this<sp/>type</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;priority&apos;<sp/>=&gt;<sp/>10,<sp/>//For<sp/>Base<sp/>tripal<sp/>modules:<sp/>10;<sp/>custom<sp/>modules:<sp/>9<sp/>to<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;base_table&apos;<sp/>=&gt;<sp/>TRUE<sp/>//either<sp/>TRUE<sp/>or<sp/>FALSE<sp/>depending<sp/>on<sp/>whether<sp/>the<sp/>current<sp/>table<sp/>should<sp/>show<sp/>up<sp/>in<sp/>the<sp/>add<sp/>view<sp/>list</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&apos;fields&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&apos;feature_id&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;feature_id&apos;,<sp/>//field<sp/>name<sp/>in<sp/>database</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Feature<sp/>ID&apos;,<sp/>//human-readable<sp/>name<sp/>-seen<sp/>in<sp/>Views<sp/>UI</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;description&apos;<sp/>=&gt;<sp/>&apos;This<sp/>is<sp/>the<sp/>unique<sp/>identifier<sp/>for<sp/>features&apos;,<sp/>//help/description<sp/>seen<sp/>in<sp/>Views<sp/>UI</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;type&apos;<sp/>=&gt;<sp/>&apos;int&apos;,<sp/>//<sp/>the<sp/>type<sp/>of<sp/>field</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;handlers&apos;<sp/>=&gt;<sp/>array(<sp/><sp/>//possible<sp/>keys<sp/>are<sp/>field,<sp/>filter,<sp/>sort,<sp/>argument,<sp/>relationship</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;field&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;name&apos;<sp/>=&gt;<sp/>&apos;chado_views_handler_numeric&apos;<sp/>//name<sp/>of<sp/>handler</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;filter&apos;<sp/>=&gt;<sp/>array(<sp/>...<sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Describe<sp/>any<sp/>joins<sp/>involving<sp/>this<sp/>field.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Note:<sp/>you<sp/>can<sp/>include<sp/>both<sp/>foreign<sp/>keys<sp/>(feature.type_id<sp/>=&gt;<sp/>cvterm.cvterm_id)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>and<sp/>referring<sp/>tables<sp/>(ie:<sp/>feature.feature_id<sp/>&lt;=<sp/>feature_relationship.subject_id)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;joins&apos;<sp/>=&gt;<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;feature_relationship&apos;<sp/>=&gt;<sp/>array(<sp/>//table<sp/>to<sp/>join<sp/>to.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;subject_id&apos;<sp/>=&gt;<sp/>array(<sp/>//field<sp/>in<sp/>above<sp/>table<sp/>(feature_relationship)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;table&apos;<sp/>=&gt;<sp/>&apos;featureprop&apos;,<sp/>//table<sp/>to<sp/>join<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;field&apos;<sp/>=&gt;<sp/>&apos;feature_id&apos;,<sp/>//field<sp/>in<sp/>above<sp/>table<sp/>(feature_relationship)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;handler&apos;<sp/>=&gt;<sp/>&apos;views_join&apos;,<sp/>//handler<sp/>to<sp/>use<sp/>for<sp/>joining</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;relationship_handler&apos;<sp/>=&gt;<sp/>&apos;views_handler_relationship&apos;,<sp/>//handler<sp/>to<sp/>use<sp/>when<sp/>a<sp/>relationship<sp/>is<sp/>added.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;relationship_only&apos;<sp/>=&gt;<sp/>FALSE,<sp/>//whether<sp/>to<sp/>join<sp/>automatically<sp/>(FALSE)<sp/>or<sp/>not<sp/>(TRUE)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>),</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">tripal_add_views_integration($defn_array);</highlight></codeline>
+</programlisting> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="496" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="496" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1gafc8bd407a6b80aaf35f69f04c26e0334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_clone_views_integration</definition>
+        <argsstring>($table_name, $new_priority=NULL, $template_priority=NULL)</argsstring>
+        <name>tripal_clone_views_integration</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <param>
+          <declname>$new_priority</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$template_priority</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clone an integration. This is often a great way to create your own module-specific integration while still benifiting from an existing (or even the lightest priority) integration.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The table for which you&apos;d like to clone an integration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$new_priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the clone; this is the integration which will be created. If no priority is supplied then one lighter then the $template_priority will be used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$template_priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the template to be used for the clone; this is an existing integration. If no priority is supplied then the lightest priority will be used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="869" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="869" bodyend="907"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga57f341c0e2987ba11338a2d66493cc2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_disable_view</definition>
+        <argsstring>($view_name, $redirect_link=FALSE)</argsstring>
+        <name>tripal_disable_view</name>
+        <param>
+          <declname>$view_name</declname>
+        </param>
+        <param>
+          <declname>$redirect_link</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Programatically disable view.</para><para>This should be used in a hook_menu definition as the callback to provide a link to disable the view (first example). It can also be called directly if needed (second example).</para><para><programlisting><codeline><highlight class="normal"><sp/>//Create<sp/>a<sp/>URL<sp/>that<sp/>when<sp/>the<sp/>user<sp/>navigates<sp/>there,<sp/>a<sp/>given<sp/>view<sp/>will<sp/>be<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>//disabled.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>//You<sp/>will<sp/>still<sp/>need<sp/>to<sp/>provide<sp/>a<sp/>link<sp/>to<sp/>this<sp/>menu<sp/>item<sp/>somewhere<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>//appropriate.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">function<sp/>mymodule_menu()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//Create<sp/>one<sp/>of<sp/>these<sp/>for<sp/>each<sp/>of<sp/>your<sp/>default<sp/>views</highlight></codeline>
+<codeline><highlight class="normal">$items[&apos;admin/tripal/&lt;PATH-TO-YOUR-ADMIN-SECTION&gt;/views/&lt;VIEW-MACHINE-NAME&gt;/disable&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal">&apos;title&apos;<sp/>=&gt;<sp/>&apos;Disable<sp/>&lt;VIEW-HUMAN-READABLE-NAME&gt;&apos;,</highlight></codeline>
+<codeline><highlight class="normal">&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_disable_view&apos;,</highlight></codeline>
+<codeline><highlight class="normal">&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;&lt;VIEW-MACHINE-NAME&gt;&apos;,<sp/>&apos;&lt;PATH-TO-REDIRECT-TO-AFTERWARDS&gt;&apos;),</highlight></codeline>
+<codeline><highlight class="normal">&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;&lt;YOUR-PERMISSION-KEY&gt;&apos;),</highlight></codeline>
+<codeline><highlight class="normal">&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal">);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//Call<sp/>this<sp/>function<sp/>directly<sp/>to<sp/>disable<sp/>a<sp/>view</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//The<sp/>example<sp/>shows<sp/>disabling<sp/>your<sp/>own<sp/>default<sp/>view<sp/>when<sp/>your<sp/>module<sp/>is<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//uninstalled</highlight></codeline>
+<codeline><highlight class="normal"><sp/>function<sp/>mymodule_uninstall()<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">$view_name<sp/>=<sp/>&apos;&lt;VIEW-MACHINE-NAME&gt;&apos;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>tripal_disable_view($view_name);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$view_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The machine-name of the view to be enabled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$redirect_link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to redirect to. FALSE if no redirect needed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="127" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="127" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga275071d80e77c7188c41d456cc0cbdbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_enable_view</definition>
+        <argsstring>($view_name, $redirect_link=FALSE)</argsstring>
+        <name>tripal_enable_view</name>
+        <param>
+          <declname>$view_name</declname>
+        </param>
+        <param>
+          <declname>$redirect_link</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Programatically enable view</para><para>This should be used in a hook_menu definition as the callback to provide a link to enable the view (first example). It can also be called directly if needed (second example). <programlisting><codeline><highlight class="normal"><sp/>Create<sp/>a<sp/>URL<sp/>that<sp/>when<sp/>the<sp/>user<sp/>navigates<sp/>there,<sp/>a<sp/>given<sp/>view<sp/>will<sp/>be<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>enabled.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>You<sp/>will<sp/>still<sp/>need<sp/>to<sp/>provide<sp/>a<sp/>link<sp/>to<sp/>this<sp/>menu<sp/>item<sp/>somewhere<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>appropriate<sp/>(ie:<sp/>an<sp/>admin<sp/>landing<sp/>page).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">function<sp/>mymodule_menu<sp/>()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">$items<sp/>=<sp/>array();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//Create<sp/>one<sp/>of<sp/>these<sp/>for<sp/>each<sp/>of<sp/>your<sp/>default<sp/>views</highlight></codeline>
+<codeline><highlight class="normal"><sp/>$items[&apos;admin/tripal/&lt;PATH-TO-YOUR-ADMIN-SECTION&gt;/views/&lt;VIEW-MACHINE-NAME&gt;/enable&apos;]<sp/>=<sp/>array(</highlight></codeline>
+<codeline><highlight class="normal"><sp/>&apos;title&apos;<sp/>=&gt;<sp/>&apos;Enable<sp/>&lt;VIEW-HUMAN-READABLE-NAME&gt;&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/>&apos;page<sp/>callback&apos;<sp/>=&gt;<sp/>&apos;tripal_enable_view&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/>&apos;page<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;&lt;VIEW-MACHINE-NAME&gt;&apos;,<sp/>&apos;&lt;PATH-TO-REDIRECT-TO-AFTERWARDS&gt;&apos;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/>&apos;access<sp/>arguments&apos;<sp/>=&gt;<sp/>array(&apos;&lt;YOUR-PERMISSION-KEY&gt;&apos;),</highlight></codeline>
+<codeline><highlight class="normal">&apos;type&apos;<sp/>=&gt;<sp/>MENU_CALLBACK,</highlight></codeline>
+<codeline><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>return<sp/>$items;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Call<sp/>this<sp/>function<sp/>directly<sp/>to<sp/>disable<sp/>a<sp/>view</highlight></codeline>
+<codeline><highlight class="normal"><sp/>The<sp/>example<sp/>shows<sp/>enabling<sp/>your<sp/>own<sp/>default<sp/>view<sp/>when<sp/>your<sp/>module<sp/>is<sp/>enabled.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>This<sp/>might<sp/>be<sp/>useful<sp/>if<sp/>you<sp/>disable<sp/>your<sp/>view<sp/>when<sp/>your<sp/>module<sp/>is<sp/>disabled.</highlight></codeline>
+<codeline><highlight class="normal">function<sp/>mymodule_enable()<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>$view_name<sp/>=<sp/>&apos;&lt;VIEW-MACHINE-NAME&gt;&apos;;</highlight></codeline>
+<codeline><highlight class="normal">tripal_enable_view($view_name);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$view_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The machine-name of the view to be enabled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$redirect_link</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to redirect to. FALSE if no redirect needed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="65" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="65" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga17fc7a59376724fb261bf15bd1b9db1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_export_views_integration</definition>
+        <argsstring>($setup_id)</argsstring>
+        <name>tripal_export_views_integration</name>
+        <param>
+          <declname>$setup_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Export Views integration records.</para><para>This is a great way to create your own integration since it returns an already defined integration in array form that you can modify. After modifications simply set the priority to something lighter (but still below 0) than any existing integrations and use <ref refid="d1/d5e/group__tripal__chado__views__api_1gad30e8fd9ff4c54293177951877f7effa" kindref="member">tripal_add_views_integration()</ref> to add it to the list of integrations.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$setup_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique setup id of the tripal views integration</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A views integration definition array as used by <ref refid="d1/d5e/group__tripal__chado__views__api_1gad30e8fd9ff4c54293177951877f7effa" kindref="member">tripal_add_views_integration()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="722" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="722" bodyend="770"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga5ab71a5934907e7e734b00c4ff99d86c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_lightest_views_integration_priority</definition>
+        <argsstring>($table_name)</argsstring>
+        <name>tripal_get_lightest_views_integration_priority</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the priority of the lightest priority for a given table.</para><para>NOTE: Uses lightest priority (drupal-style) where the range is from -10 to 10 and -10 is of highest priority.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to retrieve the setup ID for. This can be either a materialized view or a chado table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the lowest priority. If the table has not been integrated, a priority of 10 is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="267" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="267" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga10c681ac5f993cc7ee39f44dc06c97e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_lightest_views_integration_setup</definition>
+        <argsstring>($table_name)</argsstring>
+        <name>tripal_get_lightest_views_integration_setup</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the views integration setup_id with the lightest priority for a given table</para><para>NOTE: Uses lightest priority (drupal-style) where the range is from -10 to 10 and -10 is of highest priority.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to retrieve the setup ID for. This can be either a materialized view or a chado table</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success, the setup_id to use for integration of this table; otherwise FALSE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="299" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="299" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga949b536e6f05b032bf37b229c0896c48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_get_views_integration_setup_id</definition>
+        <argsstring>($table_name, $priority)</argsstring>
+        <name>tripal_get_views_integration_setup_id</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <param>
+          <declname>$priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the views integration setup_id with the given priority/table combination.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to retrieve the setup ID for. This can be either a materialized view or a chado table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the integration to retrieve the setup_id for</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On success, the setup_id to use for integration of this table; otherwise FALSE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="329" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="329" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1gac7d08f36291e444ac2b56a650c2b0131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_is_lightest_priority_setup</definition>
+        <argsstring>($setup_id, $table_name)</argsstring>
+        <name>tripal_is_lightest_priority_setup</name>
+        <param>
+          <declname>$setup_id</declname>
+        </param>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if you are dealing with the lightest priority setup for a given table. This is a good way to determine whether your modules integration is being used by views.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$setup_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the setup to check (is this setup the lightest one?) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table associated with this setup</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE is this is the lightest priority; FALSE otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="396" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="396" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga24a91d667b61d5e0d084971fea344765" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_is_table_integrated</definition>
+        <argsstring>($table_name, $priority=NULL)</argsstring>
+        <name>tripal_is_table_integrated</name>
+        <param>
+          <declname>$table_name</declname>
+        </param>
+        <param>
+          <declname>$priority</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check to see if this table already has an integration record with the given priority.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$table_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the table to check for integration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) The priority of record to check for</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the table is already integrated, the setup_id of the existing integration record is returned (If priority is not specified this will be the lightest record); Otherwise the table is not already integrated and FALSE is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="360" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="360" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1gac1075d1878a59f2518b3bb3fdf13b227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_make_view_compatible_with_external</definition>
+        <argsstring>($view)</argsstring>
+        <name>tripal_make_view_compatible_with_external</name>
+        <param>
+          <declname>$view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove any drupal fields from a chado-based default view definition if chado is external. This ensures compatibility with an external chado database.</para><para>You should be calling this function in your hook_views_default_views(). This function will only remove drupal tables if chado is external; thus you do not need to worry about checking yourself. For example, the following is a good hook_views_default_views():</para><para><programlisting><codeline><highlight class="normal">function<sp/>mymodule_views_default_views()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">$views<sp/>=<sp/>array();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>NOTE:<sp/>&lt;VIEW-TYPE&gt;<sp/>describes<sp/>the<sp/>type<sp/>of<sp/>view:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>&apos;admin&apos;<sp/>for<sp/>views<sp/>used<sp/>for<sp/>administration<sp/>of<sp/>your<sp/>module</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>&apos;search&apos;<sp/>for<sp/>views<sp/>used<sp/>to<sp/>search<sp/>data</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/>-<sp/>&apos;list&apos;<sp/>for<sp/>views<sp/>used<sp/>primarily<sp/>as<sp/>data<sp/>listings</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//&lt;VIEW-HUMAN-READABLE-NAME&gt;</highlight></codeline>
+<codeline><highlight class="normal">$view<sp/>=<sp/>mymodule_defaultview_&lt;VIEW-TYPE&gt;_&lt;VIEW-MACHINE-NAME&gt;();</highlight></codeline>
+<codeline><highlight class="normal">$view<sp/>=<sp/>tripal_make_view_compatible_with_external($view);</highlight></codeline>
+<codeline><highlight class="normal">$views[$view-&gt;name]<sp/>=<sp/>$view;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//&lt;VIEW-HUMAN-READABLE-NAME&gt;</highlight></codeline>
+<codeline><highlight class="normal">$view<sp/>=<sp/>mymodule_defaultview_&lt;VIEW-TYPE&gt;_&lt;VIEW-MACHINE-NAME&gt;();</highlight></codeline>
+<codeline><highlight class="normal">$view<sp/>=<sp/>tripal_make_view_compatible_with_external($view);</highlight></codeline>
+<codeline><highlight class="normal">$views[$view-&gt;name]<sp/>=<sp/>$view;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">return<sp/>$views;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">function<sp/>mymodule_defaultview_&lt;VIEW-TYPE&gt;_&lt;VIEW-MACHINE-NAME&gt;()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//PASTE<sp/>VIEWS<sp/>EXPORT<sp/>CODE<sp/>HERE</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>$view;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">function<sp/>mymodule_defaultview_&lt;VIEW-TYPE&gt;_&lt;VIEW-MACHINE-NAME&gt;()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>//PASTE<sp/>VIEWS<sp/>EXPORT<sp/>CODE<sp/>HERE</highlight></codeline>
+<codeline><highlight class="normal">return<sp/>$view;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> Notice that the actual views export code is in a separate function. This makes your hook_views_default_views() more readable.</para><para>NOTE: Currently assumes all tables not in the tripal views integration tables are Drupal tables.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default view definition object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The default view with all relationships, fields, filters, sorts, arguments for Drupal tables removed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="199" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="199" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga849a1e201fc0c834c6119510789dd935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_rebuild_views_integrations</definition>
+        <argsstring>($delete_first=FALSE)</argsstring>
+        <name>tripal_rebuild_views_integrations</name>
+        <param>
+          <declname>$delete_first</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rebuilds all the default integrations.</para><para>This essentially clears the cache in case you mess up the integrations in your site. This should not be used during module development since it really only rebuilds the integrations described by all enabled modules in the site and if $delete_first is TRUE it can delete custom integrations created by site administrators which will not make your module popular.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$delete_first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If TRUE then all integrations are first deleted. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="422" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="422" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga0e5c638ab20cf9f5b237fda2dcc0e2c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_remove_join_from_views_integration</definition>
+        <argsstring>($setup_id, $base_table, $base_field, $left_table, $left_field)</argsstring>
+        <name>tripal_remove_join_from_views_integration</name>
+        <param>
+          <declname>$setup_id</declname>
+        </param>
+        <param>
+          <declname>$base_table</declname>
+        </param>
+        <param>
+          <declname>$base_field</declname>
+        </param>
+        <param>
+          <declname>$left_table</declname>
+        </param>
+        <param>
+          <declname>$left_field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a join from an integration. This is usually done after cloning an existing integration using <ref refid="d1/d5e/group__tripal__chado__views__api_1gafc8bd407a6b80aaf35f69f04c26e0334" kindref="member">tripal_clone_views_integration()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$setup_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The setup_id of the integration to delete the join from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$base_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the base table involved the join. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$base_field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field from the base table involved in the join. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$left_table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the other table involved in the join </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$left_field</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the field from the other table involved in the join. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="1161" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="1161" bodyend="1172"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga619d2ae668ce597642d7ebf59272cda2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_remove_views_integration</definition>
+        <argsstring>($identifiers, $options=array())</argsstring>
+        <name>tripal_remove_views_integration</name>
+        <param>
+          <declname>$identifiers</declname>
+        </param>
+        <param>
+          <declname>$options</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a View Integration Entry when you only know the table the integration was created for and the priority.</para><para>This should only be used to remove integrations created by your own module (possibly on uninstall of your module). To override existing integrations simply create your own integration with a lighter priority using <ref refid="d1/d5e/group__tripal__chado__views__api_1gafc8bd407a6b80aaf35f69f04c26e0334" kindref="member">tripal_clone_views_integration()</ref> or <ref refid="d1/d5e/group__tripal__chado__views__api_1ga17fc7a59376724fb261bf15bd1b9db1b" kindref="member">tripal_export_views_integration()</ref> to create a template.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$identifies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of identifiers where the keys indicate what the identifier is. One of the following compinations must be present: 1) table_name &amp; priority: the name of the table &amp; the priority to remove a views integration entry for. 2) setup_id: the setup_id of the entry to remove. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of options, currently none are supported.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE on Success; FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="796" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="796" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5e/group__tripal__chado__views__api_1ga21424d1f60c2ae70453c514f31ee2cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_update_views_integration</definition>
+        <argsstring>($setup_id, $defn_array)</argsstring>
+        <name>tripal_update_views_integration</name>
+        <param>
+          <declname>$setup_id</declname>
+        </param>
+        <param>
+          <declname>$defn_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update an existing Views Intregration Entry. This essentially removes and then re-adds the integration.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$setup_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The setup ID of the views integration entry to update </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$defn_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array describing the structure and fields of the table as is used in <ref refid="d1/d5e/group__tripal__chado__views__api_1gad30e8fd9ff4c54293177951877f7effa" kindref="member">tripal_add_views_integration()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado_views/api/tripal_chado_views.api.inc" line="843" column="1" bodyfile="tripal_chado_views/api/tripal_chado_views.api.inc" bodystart="843" bodyend="849"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides API functions that support direct integration of Chado tables with Drupal Views. This is different from the entity and field integration that Tripal v3 provides. Here Chado tables are directly integrated. Tripal provides a web interface that allows site developers to customize how a Chado table is integrate with Views. However, these functions provide programmatic access to the same functionality. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

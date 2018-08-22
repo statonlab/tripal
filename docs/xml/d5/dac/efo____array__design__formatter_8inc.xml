@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/dac/efo____array__design__formatter_8inc" kind="file" language="PHP">
+    <compoundname>efo__array_design_formatter.inc</compoundname>
+    <innerclass refid="d6/dd4/classefo____array__design__formatter" prot="public">efo__array_design_formatter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d6/dd4/classefo____array__design__formatter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d6/dd4/classefo____array__design__formatter" kindref="compound">efo__array_design_formatter</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="d1/dc8/classChadoFieldFormatter" kindref="compound">ChadoFieldFormatter</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>lable<sp/>for<sp/>this<sp/>field.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d6/dd4/classefo____array__design__formatter_1a90d7cc1d0138becd090dbc13ec38a2d0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d6/dd4/classefo____array__design__formatter_1a90d7cc1d0138becd090dbc13ec38a2d0" kindref="member">$default_label</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Array<sp/>Design&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>list<sp/>of<sp/>field<sp/>types<sp/>for<sp/>which<sp/>this<sp/>formatter<sp/>is<sp/>appropriate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="d6/dd4/classefo____array__design__formatter_1a1b696a982287ad83b64d524bab544f81" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="d6/dd4/classefo____array__design__formatter_1a1b696a982287ad83b64d524bab544f81" kindref="member">$field_types</ref><sp/>=<sp/>array(</highlight><highlight class="stringliteral">&apos;efo__array_design&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d6/dd4/classefo____array__design__formatter_1aef723a6415c8664968cec2fad67f0eb3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d6/dd4/classefo____array__design__formatter_1aef723a6415c8664968cec2fad67f0eb3" kindref="member">view</ref>(&amp;<ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>,<sp/>$entity_type,<sp/>$entity,<sp/>$langcode,<sp/>$items,<sp/>$display)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(count($items)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$name_term<sp/>=<sp/><ref refid="dd/dc9/group__tripal__chado__semweb__api_1gae4d00bef6ae53acb91c2c021eef279a9" kindref="member">chado_get_semweb_term</ref>(</highlight><highlight class="stringliteral">&apos;arraydesign&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$version_term<sp/>=<sp/><ref refid="dd/dc9/group__tripal__chado__semweb__api_1gae4d00bef6ae53acb91c2c021eef279a9" kindref="member">chado_get_semweb_term</ref>(</highlight><highlight class="stringliteral">&apos;arraydesign&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>=<sp/>$items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">][$name_term];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">][$version_term]))<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>.<sp/></highlight><highlight class="charliteral">&apos;(&apos;</highlight><highlight class="normal"><sp/>.<sp/>$items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">][$version_term]<sp/>.<sp/></highlight><highlight class="charliteral">&apos;)&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;entity&apos;</highlight><highlight class="normal">,<sp/>$items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list($entity_type,<sp/>$entity_id)<sp/>=<sp/>explode(</highlight><highlight class="charliteral">&apos;:&apos;</highlight><highlight class="normal">,<sp/>$items[0][</highlight><highlight class="stringliteral">&apos;value&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;entity&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$content<sp/>=<sp/>l($content,<sp/></highlight><highlight class="stringliteral">&apos;bio_data/&apos;</highlight><highlight class="normal"><sp/>.<sp/>$entity_id);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>cardinality<sp/>of<sp/>this<sp/>field<sp/>is<sp/>1<sp/>so<sp/>we<sp/>don&apos;t<sp/>have<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>iterate<sp/>through<sp/>the<sp/>items<sp/>array,<sp/>as<sp/>there<sp/>will<sp/>never<sp/>be<sp/>more<sp/>than<sp/>1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d72/tripal__library__features_8tpl_8php_1a479e9a5e4ded6cebc5be769c29e95893" kindref="member">$element</ref>[0]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;markup&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#markup&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$content,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/TripalFields/efo__array_design/efo__array_design_formatter.inc"/>
+  </compounddef>
+</doxygen>

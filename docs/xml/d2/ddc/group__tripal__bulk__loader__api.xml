@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d2/ddc/group__tripal__bulk__loader__api" kind="group">
+    <compoundname>tripal_bulk_loader_api</compoundname>
+    <title>Bulk Loader</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d2/ddc/group__tripal__bulk__loader__api_1gabee41f8eca69348430f6cfad27b22ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_delete_bulk_loader_field</definition>
+        <argsstring>($priority, $delete_field_index, $template_array)</argsstring>
+        <name>tripal_delete_bulk_loader_field</name>
+        <param>
+          <declname>$priority</declname>
+        </param>
+        <param>
+          <declname>$delete_field_index</declname>
+        </param>
+        <param>
+          <declname>$template_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An API function to delete a field from a template array</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the record containing the field </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$delete_field_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the field to be deleted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$template_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array describing the template</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The modified template array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" line="279" column="1" bodyfile="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" bodystart="279" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/ddc/group__tripal__bulk__loader__api_1ga1958eebb413afdd6b78b9bd0fa5de177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_delete_bulk_loader_record</definition>
+        <argsstring>($delete_priority, $template_array)</argsstring>
+        <name>tripal_delete_bulk_loader_record</name>
+        <param>
+          <declname>$delete_priority</declname>
+        </param>
+        <param>
+          <declname>$template_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An API function to delete a record from a template array</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$delete_priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the record to be deleted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$template_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array describing the template</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The modified template array </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" line="245" column="1" bodyfile="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" bodystart="245" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/ddc/group__tripal__bulk__loader__api_1ga464803a3de67130927912835e63a2d09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_insert_bulk_loader_template</definition>
+        <argsstring>($options, &amp;$errors, &amp;$warnings)</argsstring>
+        <name>tripal_insert_bulk_loader_template</name>
+        <param>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$errors</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$warnings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inserts a bulk loader template record.</para><para>This function validates the options passed prior to insertion of the record.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key/value pairs containing the following keys: &apos;template_name&apos;: The name of the template. &apos;template_array&apos;: The JSON array representing the template. Optional: &apos;strict&apos;: If set then only JSON formatted templates are allowed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$errors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation error messages will be set. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$warnings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation warning messagges will be set. The warnings should not stop an insert or an update but should be provided to the user as information by a drupal_set_message() if appropriate. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE for success and FALSE for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" line="133" column="1" bodyfile="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" bodystart="133" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/ddc/group__tripal__bulk__loader__api_1ga3a7a8521857c4de56936a3726276e7bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_is_bulk_loader_record_name_unique</definition>
+        <argsstring>($new_record_name, $template_id, $template_array=NULL, $current_priority=NULL)</argsstring>
+        <name>tripal_is_bulk_loader_record_name_unique</name>
+        <param>
+          <declname>$new_record_name</declname>
+        </param>
+        <param>
+          <declname>$template_id</declname>
+        </param>
+        <param>
+          <declname>$template_array</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <declname>$current_priority</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Meant to be called from a form_validate function to ensure a newly added bulk loader record name is unique and not empty.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$new_record_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The record name to check for uniqueness </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$template_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The template_id of the template to add the record to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$template_array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array describing the template. Optional -will be loaded using template_id if not provided </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$current_priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The priority of the already existing record -checks that the name only occurs on this particular record</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the record name is not empty and not already in the template_array; FALSE otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" line="205" column="1" bodyfile="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" bodystart="205" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/ddc/group__tripal__bulk__loader__api_1ga5c15b798374e5a03a5eb10610146f13d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_validate_bulk_loader_template</definition>
+        <argsstring>($val_type, &amp;$options, &amp;$errors, &amp;$warnings=array())</argsstring>
+        <name>tripal_validate_bulk_loader_template</name>
+        <param>
+          <declname>$val_type</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$options</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$errors</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$warnings</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates an $options array for insert or update of a bulk loader record.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$val_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of validation. Can be either &apos;insert&apos; or &apos;update&apos;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array of key/value pairs containing the following keys: template_name: The name of the template. template_array: The JSON array representing the template. Optional: strict: If set then only JSON formatted templates are allowed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$errors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation error messages will be set. The keys of the array will be name of the field from the options array and the value is the error message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$warnings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An empty array where validation warning messagges will be set. The warnings should not stop an insert or an update but should be provided to the user as information by a drupal_set_message() if appropriate. The keys of the array will be name of the field from the options array and the value is the error message.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If validation failes then FALSE is returned. Any options that do not pass validation checks will be added in the $errors array with the key being the option and the value being the error message. If validation is successful then TRUE is returned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" line="48" column="1" bodyfile="tripal_bulk_loader/api/tripal_bulk_loader.api.templates.inc" bodystart="48" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>All functions in this file provide an API to administrative management of bulk loader templates. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

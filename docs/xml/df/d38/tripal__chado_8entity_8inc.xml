@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="df/d38/tripal__chado_8entity_8inc" kind="file" language="PHP">
+    <compoundname>tripal_chado.entity.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1a74f1d00ba26aa86a52807428ac290fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_create</definition>
+        <argsstring>(&amp;$entity, $type, $bundle=NULL)</argsstring>
+        <name>tripal_chado_entity_create</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <param>
+          <declname>$bundle</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements <ref refid="d5/dce/group__tripal__entities__api_1gac67a33dfa03f9f2981873a6d94a890c8" kindref="member">hook_entity_create()</ref>.</para><para>This hook is called when brand new entities are created, but they are not loaded so the hook_entity_load() is not yet called. We can use this hook to add properties to the entity before saving.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entity being created. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of entity being created. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$bundle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(OPTIONAL) The bundle object for the current entity. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="18" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="18" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1a00cb12257f8ad0814068c8e955d15c2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_delete</definition>
+        <argsstring>($entity, $type)</argsstring>
+        <name>tripal_chado_entity_delete</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_delete(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="139" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="139" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1a0ac1745ae404fc25ae513bd02257780f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_insert</definition>
+        <argsstring>($entity, $type)</argsstring>
+        <name>tripal_chado_entity_insert</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_insert(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="123" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1a6e267e09d46b3cc097615491475cfa36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_load</definition>
+        <argsstring>($entities, $type)</argsstring>
+        <name>tripal_chado_entity_load</name>
+        <param>
+          <declname>$entities</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_load(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="60" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="60" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1afdebe7ce0069996d2ec81870a78b01d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_postsave</definition>
+        <argsstring>($entity, $type)</argsstring>
+        <name>tripal_chado_entity_postsave</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_postsave(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="53" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1abdee6e6ec191934a7ad66b4aeafa6ec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_presave</definition>
+        <argsstring>($entity, $type)</argsstring>
+        <name>tripal_chado_entity_presave</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_presave(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="46" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1abb99fa364ab622abaf6df9a9b150af2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_update</definition>
+        <argsstring>($entity, $type)</argsstring>
+        <name>tripal_chado_entity_update</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_update(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="131" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1a9e279e615415e9754a8e517cdeef0ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_view</definition>
+        <argsstring>($entity, $type, $view_mode, $langcode)</argsstring>
+        <name>tripal_chado_entity_view</name>
+        <param>
+          <declname>$entity</declname>
+        </param>
+        <param>
+          <declname>$type</declname>
+        </param>
+        <param>
+          <declname>$view_mode</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_view(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="259" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="259" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1ab51ae68988a9e5a1adcad318c9918fa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_entity_view_alter</definition>
+        <argsstring>(&amp;$build)</argsstring>
+        <name>tripal_chado_entity_view_alter</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$build</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements hook_entity_view_alter().</para><para>This function is used to support legacy Tripal v2 templates for use with Tripal v3 entities. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="331" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="331" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d38/tripal__chado_8entity_8inc_1acae683c263203af52c5c63302ffbc1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_chado_tripal_default_title_format</definition>
+        <argsstring>($bundle, $available_tokens)</argsstring>
+        <name>tripal_chado_tripal_default_title_format</name>
+        <param>
+          <declname>$bundle</declname>
+        </param>
+        <param>
+          <declname>$available_tokens</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implements <ref refid="d5/dce/group__tripal__entities__api_1ga7b7a007b158eaa50f4f5fa2e97320003" kindref="member">hook_tripal_default_title_format()</ref>.</para><para>Overrides the default titles. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/tripal_chado.entity.inc" line="150" column="1" bodyfile="tripal_chado/includes/tripal_chado.entity.inc" bodystart="150" bodyend="254"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="df/d38/tripal__chado_8entity_8inc_1a74f1d00ba26aa86a52807428ac290fbd" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1a74f1d00ba26aa86a52807428ac290fbd" kindref="member">tripal_chado_entity_create</ref>(&amp;$entity,<sp/>$type,<sp/>$bundle<sp/>=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($type<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;TripalEntity&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>some<sp/>defaults<sp/>on<sp/>vars<sp/>needed<sp/>by<sp/>this<sp/>module.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!property_exists($entity,<sp/></highlight><highlight class="stringliteral">&apos;chado_table&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_table<sp/>=<sp/><sp/>NULL;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_column<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_linker<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>in<sp/>the<sp/>Chado<sp/>table<sp/>information<sp/>for<sp/>this<sp/>entity<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$bundle)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$bundle<sp/>=<sp/><ref refid="d5/dce/group__tripal__entities__api_1ga5f53c10c88edbd9405697ffd7bca2094" kindref="member">tripal_load_bundle_entity</ref>(array(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$entity-&gt;bundle));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($bundle-&gt;data_table)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_table<sp/>=<sp/>$bundle-&gt;data_table;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_column<sp/>=<sp/>$bundle-&gt;type_column;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_linker<sp/>=<sp/>$bundle-&gt;type_linker_table;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!property_exists($entity,<sp/></highlight><highlight class="stringliteral">&apos;chado_record&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_record<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_record_id<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46" refid="df/d38/tripal__chado_8entity_8inc_1abdee6e6ec191934a7ad66b4aeafa6ec5" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1abdee6e6ec191934a7ad66b4aeafa6ec5" kindref="member">tripal_chado_entity_presave</ref>($entity,<sp/>$type)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="df/d38/tripal__chado_8entity_8inc_1afdebe7ce0069996d2ec81870a78b01d7" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1afdebe7ce0069996d2ec81870a78b01d7" kindref="member">tripal_chado_entity_postsave</ref>($entity,<sp/>$type)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="df/d38/tripal__chado_8entity_8inc_1a6e267e09d46b3cc097615491475cfa36" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1a6e267e09d46b3cc097615491475cfa36" kindref="member">tripal_chado_entity_load</ref>($entities,<sp/>$type)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($type<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;TripalBundle&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($entities<sp/>as<sp/>$bundle)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>want<sp/>to<sp/>add<sp/>in<sp/>the<sp/>record<sp/>ID<sp/>to<sp/>the<sp/>entity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists($bundle,<sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$chado_bundle<sp/>=<sp/>db_select(</highlight><highlight class="stringliteral">&apos;chado_bundle&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;cb&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;cb&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;cb.bundle_id&apos;</highlight><highlight class="normal">,<sp/>$bundle-&gt;id)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($chado_bundle)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$bundle-&gt;data_table<sp/>=<sp/>$chado_bundle-&gt;data_table;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$bundle-&gt;type_linker_table<sp/>=<sp/>$chado_bundle-&gt;type_linker_table;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$bundle-&gt;type_column<sp/>=<sp/>$chado_bundle-&gt;type_column;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$bundle-&gt;type_id<sp/>=<sp/>$chado_bundle-&gt;type_id;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$bundle-&gt;type_value<sp/>=<sp/>$chado_bundle-&gt;type_value;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($type<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;TripalEntity&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($entities<sp/>as<sp/>$entity)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>want<sp/>to<sp/>add<sp/>in<sp/>the<sp/>record<sp/>ID<sp/>to<sp/>the<sp/>entity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists($entity,<sp/></highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>some<sp/>defaults<sp/>on<sp/>vars<sp/>needed<sp/>by<sp/>this<sp/>module.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_table<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_column<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_record<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_record_id<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>in<sp/>the<sp/>Chado<sp/>table<sp/>information<sp/>for<sp/>this<sp/>entity<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$bundle<sp/>=<sp/><ref refid="d5/dce/group__tripal__entities__api_1ga5f53c10c88edbd9405697ffd7bca2094" kindref="member">tripal_load_bundle_entity</ref>(array(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$entity-&gt;bundle));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$bundle)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>this<sp/>may<sp/>need<sp/>fixing.<sp/>The<sp/>chado_column<sp/>may<sp/>not<sp/>always</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>be<sp/>the<sp/>type_id<sp/>of<sp/>the<sp/>base<sp/>table.<sp/>Is<sp/>it<sp/>expected<sp/>to<sp/>be<sp/>so<sp/>here?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_table<sp/>=<sp/>$bundle-&gt;data_table;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_column<sp/>=<sp/>$bundle-&gt;type_column;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$chado_entity_table<sp/>=<sp/><ref refid="dd/d83/group__tripal__chado__entity__api_1gade39580cff59082ed7d9e3774703631a" kindref="member">chado_get_bundle_entity_table</ref>($bundle);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$chado_entity<sp/>=<sp/>db_select($chado_entity_table,<sp/></highlight><highlight class="stringliteral">&apos;ce&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fields(</highlight><highlight class="stringliteral">&apos;ce&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;condition(</highlight><highlight class="stringliteral">&apos;ce.entity_id&apos;</highlight><highlight class="normal">,<sp/>$entity-&gt;id)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;execute()</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;fetchObject();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($chado_entity)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$schema<sp/>=<sp/><ref refid="d4/d51/group__tripal__chado__schema__api_1ga4b5ac309e4f88af0e2454099336ac1d8" kindref="member">chado_get_schema</ref>($entity-&gt;chado_table);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref><sp/>=<sp/><ref refid="dd/d88/group__tripal__chado__variables__api_1ga6d6af1f6e23e5bbfae0d7867ce09af5a" kindref="member">chado_generate_var</ref>($entity-&gt;chado_table,<sp/>array($schema[</highlight><highlight class="stringliteral">&apos;primary<sp/>key&apos;</highlight><highlight class="normal">][0]<sp/>=&gt;<sp/>$chado_entity-&gt;record_id));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_record<sp/>=<sp/><ref refid="d5/d5b/tripal__library__base_8tpl_8php_1acbcb6dcb11c8755d5ffab0b45aac7a22" kindref="member">$record</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;chado_record_id<sp/>=<sp/>$chado_entity-&gt;record_id;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="df/d38/tripal__chado_8entity_8inc_1a0ac1745ae404fc25ae513bd02257780f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1a0ac1745ae404fc25ae513bd02257780f" kindref="member">tripal_chado_entity_insert</ref>($entity,<sp/>$type)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="df/d38/tripal__chado_8entity_8inc_1abb99fa364ab622abaf6df9a9b150af2a" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1abb99fa364ab622abaf6df9a9b150af2a" kindref="member">tripal_chado_entity_update</ref>($entity,<sp/>$type)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="df/d38/tripal__chado_8entity_8inc_1a00cb12257f8ad0814068c8e955d15c2f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1a00cb12257f8ad0814068c8e955d15c2f" kindref="member">tripal_chado_entity_delete</ref>($entity,<sp/>$type)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($type<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;TripalEntity&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="df/d38/tripal__chado_8entity_8inc_1acae683c263203af52c5c63302ffbc1a1" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1acae683c263203af52c5c63302ffbc1a1" kindref="member">tripal_chado_tripal_default_title_format</ref>($bundle,<sp/>$available_tokens)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>$format<sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>=<sp/>$bundle-&gt;data_table;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;organism&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d4/d51/group__tripal__chado__schema__api_1ga7a8c121a7619dd4acf42e7942fdeebca" kindref="member">chado_get_version</ref>()<sp/>&lt;=<sp/></highlight><highlight class="stringliteral">&apos;1.2&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[taxrank__genus]<sp/>[taxrank__species]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[taxrank__genus]<sp/>[taxrank__species]<sp/>[taxrank__infraspecific_taxon,TAXRANK:0000045]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;arraydesign&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;assay&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;biomaterial&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;analysis&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;feature&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;featuremap&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;stock&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;pub&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[tpub__title]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;cvterm&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;project&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;contact&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;phylotree&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;library&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1aaa4465d9cb3f23c8fc7902e11c65437c" kindref="member">$table</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&apos;protocol&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>$format[]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;format&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;[schema__name]&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;weight&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>-5,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>$format;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="df/d38/tripal__chado_8entity_8inc_1a9e279e615415e9754a8e517cdeef0ed9" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1a9e279e615415e9754a8e517cdeef0ed9" kindref="member">tripal_chado_entity_view</ref>($entity,<sp/>$type,<sp/>$view_mode,<sp/>$langcode)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>entity<sp/>is<sp/>a<sp/>TripalEntity<sp/>and<sp/>is<sp/>a<sp/>full<sp/>view,<sp/>then</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>want<sp/>to<sp/>support<sp/>the<sp/>legacy<sp/>view,<sp/>but<sp/>only<sp/>if<sp/>the<sp/>legacy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>module<sp/>is<sp/>enabled<sp/>(the<sp/>functions<sp/>exist).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($type<sp/>==</highlight><highlight class="stringliteral">&apos;TripalEntity&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>generic<sp/>template<sp/>to<sp/>render<sp/>the<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($view_mode<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;full&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>Chado<sp/>table<sp/>for<sp/>this<sp/>data<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$bundle<sp/>=<sp/><ref refid="d5/dce/group__tripal__entities__api_1ga5f53c10c88edbd9405697ffd7bca2094" kindref="member">tripal_load_bundle_entity</ref>(array(</highlight><highlight class="stringliteral">&apos;name&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>$entity-&gt;bundle));</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$chado_table<sp/>=<sp/>$bundle-&gt;data_table;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$chado_field<sp/>=<sp/>$bundle-&gt;type_column;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>list<sp/>of<sp/>templates<sp/>that<sp/>should<sp/>be<sp/>used<sp/>for<sp/>entities<sp/>and<sp/>generatte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>key<sp/>in<sp/>the<sp/>array<sp/>for<sp/>this<sp/>entity<sp/>type<sp/>(using<sp/>the<sp/>chado<sp/>table<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>entity<sp/>maps<sp/>to).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$enabled_templates<sp/>=<sp/>variable_get(</highlight><highlight class="stringliteral">&apos;tripal_chado_enabled_legacy_templates&apos;</highlight><highlight class="normal">,<sp/>array());</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$legacy_template<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;legacy_template--chado_&apos;</highlight><highlight class="normal"><sp/>.<sp/>$chado_table;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>site<sp/>admin<sp/>has<sp/>indicated<sp/>that<sp/>this<sp/>entity<sp/>type<sp/>should<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>legacy<sp/>tmplate<sp/>then<sp/>prepare<sp/>the<sp/>entity<sp/>and<sp/>content<sp/>to<sp/>fake<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key_exists($legacy_template,<sp/>$enabled_templates)<sp/>&amp;&amp;<sp/>$enabled_templates[$legacy_template])<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>fields<sp/>added<sp/>by<sp/>the<sp/>chado_field_storage.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1ab2303c817e3b402b77b7f99627b9c319" kindref="member">$fields</ref><sp/>=<sp/>field_info_fields();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(<ref refid="d2/ded/tripal__bulk__loader__fields_8tpl_8php_1ab2303c817e3b402b77b7f99627b9c319" kindref="member">$fields</ref><sp/>as<sp/>$field)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($field[</highlight><highlight class="stringliteral">&apos;storage&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;field_chado_storage&apos;</highlight><highlight class="normal"><sp/>or</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$field[</highlight><highlight class="stringliteral">&apos;storage&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;type&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;tripal_no_storage&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$field_name<sp/>=<sp/>$field[</highlight><highlight class="stringliteral">&apos;field_name&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(property_exists($entity,<sp/>$field_name))<sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;$field_name<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unset($entity-&gt;content[$field_name]);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>the<sp/>entity<sp/>look<sp/>like<sp/>a<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;type<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;chado_&apos;</highlight><highlight class="normal"><sp/>.<sp/>$chado_table;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;$chado_table<sp/>=<sp/>$entity-&gt;chado_record;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>any<sp/>node<sp/>specific<sp/>fields<sp/>to<sp/>the<sp/>entity<sp/>to<sp/>fake<sp/>the<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$node_schema<sp/>=<sp/>drupal_get_schema(</highlight><highlight class="stringliteral">&apos;node&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($node_schema[</highlight><highlight class="stringliteral">&apos;fields&apos;</highlight><highlight class="normal">]<sp/>as<sp/>$field_name<sp/>=&gt;<sp/>$details)<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!property_exists($entity,<sp/>$field_name))<sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;$field_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(array_key_exists(</highlight><highlight class="stringliteral">&apos;default&apos;</highlight><highlight class="normal">,<sp/>$details))<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$entity-&gt;$field_name<sp/>=<sp/>$details[</highlight><highlight class="stringliteral">&apos;default&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>call<sp/>the<sp/>module&apos;s<sp/>node_view<sp/>hook<sp/>to<sp/>add<sp/>additional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>content<sp/>to<sp/>our<sp/>&apos;fake&apos;<sp/>entity<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$modules<sp/>=<sp/>module_list();</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($modules<sp/>as<sp/>$mname<sp/>=&gt;<sp/>$details)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$function_name<sp/>=<sp/>$mname<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_node_view&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(function_exists($function_name))<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$function_name($entity,<sp/>$view_mode,<sp/>$langcode);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331" refid="df/d38/tripal__chado_8entity_8inc_1ab51ae68988a9e5a1adcad318c9918fa9" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="df/d38/tripal__chado_8entity_8inc_1ab51ae68988a9e5a1adcad318c9918fa9" kindref="member">tripal_chado_entity_view_alter</ref>(&amp;$build)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>legacy<sp/>support,<sp/>we<sp/>need<sp/>to<sp/>make<sp/>sure<sp/>the<sp/>TOC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>built.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($build[</highlight><highlight class="stringliteral">&apos;#entity_type&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;TripalEntity&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/>$enabled_templates<sp/>=<sp/>variable_get(</highlight><highlight class="stringliteral">&apos;tripal_chado_enabled_legacy_templates&apos;</highlight><highlight class="normal">,<sp/>array());</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>$entity<sp/>=<sp/>$build[</highlight><highlight class="stringliteral">&apos;#entity&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>$legacy_template<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;legacy_template--&apos;</highlight><highlight class="normal"><sp/>.<sp/>$entity-&gt;type;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key_exists($legacy_template,<sp/>$enabled_templates)<sp/>&amp;&amp;<sp/>$enabled_templates[$legacy_template])<sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$build[</highlight><highlight class="stringliteral">&apos;#entity&apos;</highlight><highlight class="normal">]-&gt;nid<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$build[</highlight><highlight class="stringliteral">&apos;#node&apos;</highlight><highlight class="normal">]<sp/>=<sp/>$build[</highlight><highlight class="stringliteral">&apos;#entity&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$modules<sp/>=<sp/>module_list();</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($modules<sp/>as<sp/>$mname<sp/>=&gt;<sp/>$details)<sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$function_name<sp/>=<sp/>$mname<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_node_view_alter&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(function_exists($function_name))<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$function_name($build);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal_chado/includes/tripal_chado.entity.inc"/>
+  </compounddef>
+</doxygen>

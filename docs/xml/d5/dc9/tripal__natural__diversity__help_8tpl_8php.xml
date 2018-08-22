@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d5/dc9/tripal__natural__diversity__help_8tpl_8php" kind="file" language="PHP">
+    <compoundname>tripal_natural_diversity_help.tpl.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php<sp/>?&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">This<sp/>Tripal<sp/>module<sp/>superceeds<sp/>the<sp/>tripal_genetic<sp/>module<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>display<sp/>of<sp/>genotypes<sp/>on<sp/>feature<sp/>and<sp/>stock<sp/>pages.<sp/><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">If<sp/>you<sp/>find<sp/>that<sp/>your<sp/>genotype<sp/>and<sp/>phenotypes<sp/>go<sp/>missing<sp/>or<sp/>is<sp/>changed<sp/>on<sp/>feature<sp/>and<sp/>stock<sp/>pages<sp/>after<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">installation<sp/>of<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>module<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>is<sp/>because<sp/>those<sp/>dispays<sp/>are<sp/>replaced<sp/>by<sp/>data<sp/>stored<sp/>in<sp/>the<sp/>Natural<sp/>Diversity<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">modules<sp/>of<sp/>Chado<sp/>rather<sp/>than<sp/>the<sp/>original<sp/>feature_genotype<sp/>and<sp/>stock_genotype<sp/>tables<sp/>alone.<sp/></highlight></codeline>
+    </programlisting>
+    <location file="legacy/tripal_natural_diversity/theme/templates/tripal_natural_diversity_help.tpl.php"/>
+  </compounddef>
+</doxygen>

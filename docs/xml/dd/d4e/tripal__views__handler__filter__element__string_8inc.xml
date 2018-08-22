@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dd/d4e/tripal__views__handler__filter__element__string_8inc" kind="file" language="PHP">
+    <compoundname>tripal_views_handler_filter_element_string.inc</compoundname>
+    <innerclass refid="da/df1/classtripal__views__handler__filter__element__string" prot="public">tripal_views_handler_filter_element_string</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="da/df1/classtripal__views__handler__filter__element__string" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="da/df1/classtripal__views__handler__filter__element__string" kindref="compound">tripal_views_handler_filter_element_string</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="d9/d94/classtripal__views__handler__filter__string" kindref="compound">tripal_views_handler_filter_string</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="da/df1/classtripal__views__handler__filter__element__string_1a21adcb1f3f01567902e7706c3c00745a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="da/df1/classtripal__views__handler__filter__element__string_1a21adcb1f3f01567902e7706c3c00745a" kindref="member">init</ref>(&amp;$view,<sp/>&amp;<ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>parent::init($view,<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fix<sp/>identifier<sp/>names<sp/>that<sp/>don&apos;t<sp/>match<sp/>what<sp/>will<sp/>be<sp/>in<sp/>the<sp/>form<sp/>state.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;identifier&apos;</highlight><highlight class="normal">]<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&apos;/\./&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">,<sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;identifier&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;operator&apos;</highlight><highlight class="normal">]<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&apos;/\./&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">,<sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;operator&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;operator_id&apos;</highlight><highlight class="normal">]<sp/>=<sp/>preg_replace(</highlight><highlight class="stringliteral">&apos;/\./&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">,<sp/>$this-&gt;options[</highlight><highlight class="stringliteral">&apos;expose&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;operator_id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/views_handlers/tripal_views_handler_filter_element_string.inc"/>
+  </compounddef>
+</doxygen>

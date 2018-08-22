@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="db/d44/classTripalEntity" kind="class" language="PHP" prot="public">
+    <compoundname>TripalEntity</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Entity</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d44/classTripalEntity_1ac95eeb3b66aba12f94cd1eaeca58247f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntity::__construct</definition>
+        <argsstring>($values=array(), $entity_type)</argsstring>
+        <name>__construct</name>
+        <param>
+          <declname>$values</declname>
+          <defval>array()</defval>
+        </param>
+        <param>
+          <declname>$entity_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntity.inc" line="6" column="1" bodyfile="tripal/includes/TripalEntity.inc" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d44/classTripalEntity_1a20afd965881d213e6193aa6c7c7002ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntity::save</definition>
+        <argsstring>($cache=array())</argsstring>
+        <name>save</name>
+        <param>
+          <declname>$cache</declname>
+          <defval>array()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permanently saves the entity.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This array is used to store objects you want to cache for performance reasons, as well as, cache related options. The following are supported:<itemizedlist>
+<listitem><para>boolean $clear_cached_fields Clearing cached fields is NECESSARY. IF you choose to set this to false then YOU must clear the cache yourself using cache_clear_all(&apos;field:TripalEntity:[entity_id]&apos;, &apos;cache_field&apos;, TRUE). The only known reason to set this to FALSE is to clear the cache in bulk for perfomance reasons.</para></listitem><listitem><para><ref refid="d4/daf/classTripalBundle" kindref="compound">TripalBundle</ref> $bundle The bundle for the current entity.</para></listitem><listitem><para><ref refid="d9/d5a/classTripalTerm" kindref="compound">TripalTerm</ref> $term The term for the current entity. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>entity_save() </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntity.inc" line="34" column="1" bodyfile="tripal/includes/TripalEntity.inc" bodystart="34" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="db/d44/classTripalEntity_1a2eabc6d842bc1fc591da61f7163b4073" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntity::defaultLabel</definition>
+        <argsstring>()</argsstring>
+        <name>defaultLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntity.inc" line="10" column="1" bodyfile="tripal/includes/TripalEntity.inc" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d44/classTripalEntity_1a2375abe1394a786dfba78260769541dc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TripalEntity::defaultUri</definition>
+        <argsstring>()</argsstring>
+        <name>defaultUri</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/TripalEntity.inc" line="14" column="1" bodyfile="tripal/includes/TripalEntity.inc" bodystart="14" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class the controller will use for instantiating the <ref refid="db/d44/classTripalEntity" kindref="compound">TripalEntity</ref> entity. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="941">
+        <label>Entity</label>
+      </node>
+      <node id="940">
+        <label>TripalEntity</label>
+        <link refid="db/d44/classTripalEntity"/>
+        <childnode refid="941" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="943">
+        <label>Entity</label>
+      </node>
+      <node id="942">
+        <label>TripalEntity</label>
+        <link refid="db/d44/classTripalEntity"/>
+        <childnode refid="943" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal/includes/TripalEntity.inc" line="5" column="1" bodyfile="tripal/includes/TripalEntity.inc" bodystart="5" bodyend="38"/>
+    <listofallmembers>
+      <member refid="db/d44/classTripalEntity_1ac95eeb3b66aba12f94cd1eaeca58247f" prot="public" virt="non-virtual"><scope>TripalEntity</scope><name>__construct</name></member>
+      <member refid="db/d44/classTripalEntity_1a2eabc6d842bc1fc591da61f7163b4073" prot="protected" virt="non-virtual"><scope>TripalEntity</scope><name>defaultLabel</name></member>
+      <member refid="db/d44/classTripalEntity_1a2375abe1394a786dfba78260769541dc" prot="protected" virt="non-virtual"><scope>TripalEntity</scope><name>defaultUri</name></member>
+      <member refid="db/d44/classTripalEntity_1a20afd965881d213e6193aa6c7c7002ab" prot="public" virt="non-virtual"><scope>TripalEntity</scope><name>save</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

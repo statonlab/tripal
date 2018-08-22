@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_0b20e212e0a236a272cb61bbe79f9d1e" kind="dir">
+    <compoundname>tripal_chado/api</compoundname>
+    <innerdir refid="dir_2e0c0c0005b9d6274f1463f84cec4352">tripal_chado/api/modules</innerdir>
+    <innerfile refid="db/dd8/generate__chado__schema__file_8php">generate_chado_schema_file.php</innerfile>
+    <innerfile refid="da/d29/tripal__chado_8api_8inc">tripal_chado.api.inc</innerfile>
+    <innerfile refid="d7/d4a/tripal__chado_8custom__tables_8api_8inc">tripal_chado.custom_tables.api.inc</innerfile>
+    <innerfile refid="d0/d58/tripal__chado_8DEPRECATED_8api_8inc">tripal_chado.DEPRECATED.api.inc</innerfile>
+    <innerfile refid="d5/d2f/tripal__chado_8entity_8api_8inc">tripal_chado.entity.api.inc</innerfile>
+    <innerfile refid="df/d73/tripal__chado_8migrate_8api_8inc">tripal_chado.migrate.api.inc</innerfile>
+    <innerfile refid="d8/d68/tripal__chado_8mviews_8api_8inc">tripal_chado.mviews.api.inc</innerfile>
+    <innerfile refid="d2/df0/tripal__chado_8property_8api_8inc">tripal_chado.property.api.inc</innerfile>
+    <innerfile refid="d7/dcf/tripal__chado_8query_8api_8inc">tripal_chado.query.api.inc</innerfile>
+    <innerfile refid="dc/d23/tripal__chado_8schema_8api_8inc">tripal_chado.schema.api.inc</innerfile>
+    <innerfile refid="dd/dcc/tripal__chado_8schema__v1_811_8api_8inc">tripal_chado.schema_v1.11.api.inc</innerfile>
+    <innerfile refid="d7/d89/tripal__chado_8schema__v1_82_8api_8inc">tripal_chado.schema_v1.2.api.inc</innerfile>
+    <innerfile refid="d6/db7/tripal__chado_8schema__v1_83_8api_8inc">tripal_chado.schema_v1.3.api.inc</innerfile>
+    <innerfile refid="db/d94/tripal__chado_8semweb_8api_8inc">tripal_chado.semweb.api.inc</innerfile>
+    <innerfile refid="d2/dc4/tripal__chado_8variables_8api_8inc">tripal_chado.variables.api.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/api/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d1/d30/tripal_8admin_8inc" kind="file" language="PHP">
+    <compoundname>tripal.admin.inc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d30/tripal_8admin_8inc_1aeb8f05094418d67e95cfb3f438f61025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_admin_data_collection_form</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_admin_data_collection_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>unknown</parametertype>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.admin.inc" line="8" column="1" bodyfile="tripal/includes/tripal.admin.inc" bodystart="8" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d30/tripal_8admin_8inc_1aa30a1fbd07dd4889f7dfc81b5c81b99f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_admin_data_collection_form_submit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_admin_data_collection_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sumbit function for the tripal_admin_data_collection_form form. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.admin.inc" line="59" column="1" bodyfile="tripal/includes/tripal.admin.inc" bodystart="59" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d30/tripal_8admin_8inc_1a4841102d767566464324883cc2b7d108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_admin_data_collection_form_validate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_admin_data_collection_form_validate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate function for the tripal_admin_data_collection_form form. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.admin.inc" line="43" column="1" bodyfile="tripal/includes/tripal.admin.inc" bodystart="43" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d30/tripal_8admin_8inc_1a676ffbf00220121798ecaa5bc1781aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_vocabulary_import_form</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_vocabulary_import_form</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a form for importing vocabularies and their terms.</para><para>Tripal allows for vocabularies to be stored separately from the biological data. By default, the Tripal Chado module uses Chado for both the data storage backend and for storing controlled vocabularies. This is a wrapper function that calls the <ref refid="de/d00/group__tripal__terms__api_1ga280f3ec579efe1d22fe24d1ca806369d" kindref="member">hook_vocab_import_form()</ref> hook function that allows the term storage backend to provide an approprite import form.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.admin.inc" line="81" column="1" bodyfile="tripal/includes/tripal.admin.inc" bodystart="81" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d30/tripal_8admin_8inc_1ae119dd8bbe58a6758228d6da39758691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_vocabulary_import_form_submit</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_vocabulary_import_form_submit</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.admin.inc" line="140" column="1" bodyfile="tripal/includes/tripal.admin.inc" bodystart="140" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d30/tripal_8admin_8inc_1a1fb017b6a62b073f8198fb3abe1a9e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tripal_vocabulary_import_form_validate</definition>
+        <argsstring>($form, &amp;$form_state)</argsstring>
+        <name>tripal_vocabulary_import_form_validate</name>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$form</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$form_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal/includes/tripal.admin.inc" line="111" column="1" bodyfile="tripal/includes/tripal.admin.inc" bodystart="111" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d1/d30/tripal_8admin_8inc_1aeb8f05094418d67e95cfb3f438f61025" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d30/tripal_8admin_8inc_1aeb8f05094418d67e95cfb3f438f61025" kindref="member">tripal_admin_data_collection_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>array();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref><sp/>=<sp/>array(0<sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Disabled&apos;</highlight><highlight class="normal">),<sp/>1<sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Enabled&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;enabled&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;radios&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Activate<sp/>Data<sp/>Collections&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#options&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/><ref refid="d5/d66/tripal__organism__properties_8tpl_8php_1a011800c63ece4cbbfa77136a20607023" kindref="member">$options</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Data<sp/>collections<sp/>allow<sp/>users<sp/>to<sp/>save<sp/>results<sp/>of<sp/>search<sp/>queries<sp/>for<sp/>later<sp/>download<sp/>or<sp/>use<sp/>by<sp/>other<sp/>tools.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>variable_get(</highlight><highlight class="stringliteral">&apos;tripal_data_collections_enabled&apos;</highlight><highlight class="normal">,<sp/>1),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#required&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;lifespan&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;textfield&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Collection<sp/>Lifespan&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#description&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Enter<sp/>the<sp/>number<sp/>of<sp/>days<sp/>that<sp/>data<sp/>collections<sp/>exist.<sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Collections<sp/>will<sp/>be<sp/>automatically<sp/>removed<sp/>after<sp/>the<sp/>lifespan</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>period<sp/>has<sp/>passed.<sp/><sp/>Removal<sp/>of<sp/>data<sp/>collections<sp/>occurs<sp/>when<sp/>the</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sites<sp/>Drupal<sp/>cron<sp/>executes.&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#default_value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>variable_get(</highlight><highlight class="stringliteral">&apos;tripal_data_collections_lifespan&apos;</highlight><highlight class="normal">,<sp/>30),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#required&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>TRUE,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>[</highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">]<sp/>=<sp/>array(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#type&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#value&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>t(</highlight><highlight class="stringliteral">&apos;Save<sp/>changes&apos;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="d1/d30/tripal_8admin_8inc_1a4841102d767566464324883cc2b7d108" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d30/tripal_8admin_8inc_1a4841102d767566464324883cc2b7d108" kindref="member">tripal_admin_data_collection_form_validate</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>$enable<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;enabled&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>$lifespan<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;lifespan&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!preg_match(</highlight><highlight class="stringliteral">&apos;/^\d+$/&apos;</highlight><highlight class="normal">,<sp/><sp/>$lifespan))<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>form_set_error(</highlight><highlight class="stringliteral">&apos;filespan&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>valid<sp/>numeric<sp/>value<sp/>for<sp/>the<sp/>number<sp/>of<sp/>hours<sp/>collections<sp/>exist.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($lifespan<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>form_set_error(</highlight><highlight class="stringliteral">&apos;filespan&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Please<sp/>provide<sp/>a<sp/>positive<sp/>numeric<sp/>value<sp/>for<sp/>the<sp/>number<sp/>of<sp/>hours<sp/>collections<sp/>exist.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59" refid="d1/d30/tripal_8admin_8inc_1aa30a1fbd07dd4889f7dfc81b5c81b99f" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d30/tripal_8admin_8inc_1aa30a1fbd07dd4889f7dfc81b5c81b99f" kindref="member">tripal_admin_data_collection_form_submit</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>$enabled<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;enabled&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>$lifespan<sp/>=<sp/>$form_state[</highlight><highlight class="stringliteral">&apos;values&apos;</highlight><highlight class="normal">][</highlight><highlight class="stringliteral">&apos;lifespan&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>variable_set(</highlight><highlight class="stringliteral">&apos;tripal_data_collections_enabled&apos;</highlight><highlight class="normal">,<sp/>$enabled);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>variable_set(</highlight><highlight class="stringliteral">&apos;tripal_data_collections_lifespan&apos;</highlight><highlight class="normal">,<sp/>$lifespan);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>menu_cache_clear_all();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>drupal_set_message(</highlight><highlight class="stringliteral">&apos;Settings<sp/>saved.&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="d1/d30/tripal_8admin_8inc_1a676ffbf00220121798ecaa5bc1781aa4" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d30/tripal_8admin_8inc_1a676ffbf00220121798ecaa5bc1781aa4" kindref="member">tripal_vocabulary_import_form</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>we<sp/>need<sp/>some<sp/>sort<sp/>of<sp/>administrative<sp/>interface<sp/>that<sp/>lets<sp/>the<sp/>user</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>switch<sp/>to<sp/>the<sp/>desired<sp/>vocabulary<sp/>type.<sp/>For<sp/>now,<sp/>we&apos;ll<sp/>just<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>one<sp/>in<sp/>the<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>$stores<sp/>=<sp/>module_invoke_all(</highlight><highlight class="stringliteral">&apos;vocab_storage_info&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($stores)<sp/>and<sp/>count($stores)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>$keys<sp/>=<sp/>array_keys($stores);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>$module<sp/>=<sp/>$stores[$keys[0]][</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>$function<sp/>=<sp/>$module<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_vocab_import_form&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(function_exists($function))<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>$function(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_set_message(</highlight><highlight class="stringliteral">&quot;The<sp/>function<sp/>&apos;$function&apos;<sp/>is<sp/>not<sp/>implemented.<sp/>Cannot<sp/>import<sp/>vocabularies.&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga8c4c41c79200e1d3c8145386f12eaa4e" kindref="member">tripal_set_message</ref>(</highlight><highlight class="stringliteral">&apos;A<sp/>storage<sp/>backend<sp/>is<sp/>not<sp/>enabled<sp/>for<sp/>managing</highlight></codeline>
+<codeline lineno="99"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>vocabulary<sp/>terms<sp/>used<sp/>to<sp/>create<sp/>content.<sp/><sp/>Please<sp/>enable</highlight></codeline>
+<codeline lineno="100"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>module<sp/>that<sp/>supports<sp/>storage<sp/>of<sp/>vocabualary<sp/>terms<sp/>(e.g.<sp/>tripal_chado)</highlight></codeline>
+<codeline lineno="101"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>return<sp/>to<sp/>create<sp/>new<sp/>Tripal<sp/>content<sp/>types.&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="d1/d30/tripal_8admin_8inc_1a1fb017b6a62b073f8198fb3abe1a9e88" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d30/tripal_8admin_8inc_1a1fb017b6a62b073f8198fb3abe1a9e88" kindref="member">tripal_vocabulary_import_form_validate</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>we<sp/>need<sp/>some<sp/>sort<sp/>of<sp/>administrative<sp/>interface<sp/>that<sp/>lets<sp/>the<sp/>user</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>switch<sp/>to<sp/>the<sp/>desired<sp/>vocabulary<sp/>type.<sp/>For<sp/>now,<sp/>we&apos;ll<sp/>just<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>one<sp/>in<sp/>the<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>$stores<sp/>=<sp/>module_invoke_all(</highlight><highlight class="stringliteral">&apos;vocab_storage_info&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($stores)<sp/>and<sp/>count($stores)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>$keys<sp/>=<sp/>array_keys($stores);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>$module<sp/>=<sp/>$stores[$keys[0]][</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>$function<sp/>=<sp/>$module<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_vocab_import_form_validate&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(function_exists($function))<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>$function(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_set_message(</highlight><highlight class="stringliteral">&quot;The<sp/>function<sp/>&apos;$function&apos;<sp/>is<sp/>not<sp/>implemented.<sp/>Cannot<sp/>import<sp/>vocabularies.&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga8c4c41c79200e1d3c8145386f12eaa4e" kindref="member">tripal_set_message</ref>(</highlight><highlight class="stringliteral">&apos;A<sp/>storage<sp/>backend<sp/>is<sp/>not<sp/>enabled<sp/>for<sp/>managing</highlight></codeline>
+<codeline lineno="129"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>vocabulary<sp/>terms<sp/>used<sp/>to<sp/>create<sp/>content.<sp/><sp/>Please<sp/>enable</highlight></codeline>
+<codeline lineno="130"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>module<sp/>that<sp/>supports<sp/>storage<sp/>of<sp/>vocabualary<sp/>terms<sp/>(e.g.<sp/>tripal_chado)</highlight></codeline>
+<codeline lineno="131"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>return<sp/>to<sp/>create<sp/>new<sp/>Tripal<sp/>content<sp/>types.&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140" refid="d1/d30/tripal_8admin_8inc_1ae119dd8bbe58a6758228d6da39758691" refkind="member"><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="d1/d30/tripal_8admin_8inc_1ae119dd8bbe58a6758228d6da39758691" kindref="member">tripal_vocabulary_import_form_submit</ref>(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>&amp;$form_state)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>we<sp/>need<sp/>some<sp/>sort<sp/>of<sp/>administrative<sp/>interface<sp/>that<sp/>lets<sp/>the<sp/>user</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>switch<sp/>to<sp/>the<sp/>desired<sp/>vocabulary<sp/>type.<sp/>For<sp/>now,<sp/>we&apos;ll<sp/>just<sp/>use<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>one<sp/>in<sp/>the<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>$stores<sp/>=<sp/>module_invoke_all(</highlight><highlight class="stringliteral">&apos;vocab_storage_info&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_array($stores)<sp/>and<sp/>count($stores)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>$keys<sp/>=<sp/>array_keys($stores);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>$module<sp/>=<sp/>$stores[$keys[0]][</highlight><highlight class="stringliteral">&apos;module&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>$function<sp/>=<sp/>$module<sp/>.<sp/></highlight><highlight class="stringliteral">&apos;_vocab_import_form_submit&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(function_exists($function))<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref><sp/>=<sp/>$function(<ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>,<sp/>$form_state);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>drupal_set_message(</highlight><highlight class="stringliteral">&quot;The<sp/>function<sp/>&apos;$function&apos;<sp/>is<sp/>not<sp/>implemented.<sp/>Cannot<sp/>import<sp/>vocabularies.&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dae/group__tripal__notify__api_1ga8c4c41c79200e1d3c8145386f12eaa4e" kindref="member">tripal_set_message</ref>(</highlight><highlight class="stringliteral">&apos;A<sp/>storage<sp/>backend<sp/>is<sp/>not<sp/>enabled<sp/>for<sp/>managing</highlight></codeline>
+<codeline lineno="158"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>vocabulary<sp/>terms<sp/>used<sp/>to<sp/>create<sp/>content.<sp/><sp/>Please<sp/>enable</highlight></codeline>
+<codeline lineno="159"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>a<sp/>module<sp/>that<sp/>supports<sp/>storage<sp/>of<sp/>vocabualary<sp/>terms<sp/>(e.g.<sp/>tripal_chado)</highlight></codeline>
+<codeline lineno="160"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>return<sp/>to<sp/>create<sp/>new<sp/>Tripal<sp/>content<sp/>types.&apos;</highlight><highlight class="normal">,<sp/><ref refid="dd/d45/tripal_8notice_8api_8inc_1ad9759873be1ae0c3d8ccc37d121aeb3c" kindref="member">TRIPAL_NOTICE</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="de/d3f/tripal__bulk__loader__base_8tpl_8php_1a24227bb4b9c4c11f6f138476251ff34c" kindref="member">$form</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tripal/includes/tripal.admin.inc"/>
+  </compounddef>
+</doxygen>

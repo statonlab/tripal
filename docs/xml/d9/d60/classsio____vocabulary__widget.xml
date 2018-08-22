@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="d9/d60/classsio____vocabulary__widget" kind="class" language="PHP" prot="public">
+    <compoundname>sio__vocabulary_widget</compoundname>
+    <basecompoundref refid="d0/df2/classChadoFieldWidget" prot="public" virt="non-virtual">ChadoFieldWidget</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d9/d60/classsio____vocabulary__widget_1a7c5074a3f5d5449e8ae2e7dbf04f7e54" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sio__vocabulary_widget::$default_label</definition>
+        <argsstring></argsstring>
+        <name>$default_label</name>
+        <initializer>= &apos;Vocabulary&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" line="6" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d60/classsio____vocabulary__widget_1aa520be055748fcfffadebfbf3a89a638" prot="public" static="yes" mutable="no">
+        <type>static</type>
+        <definition>sio__vocabulary_widget::$field_types</definition>
+        <argsstring></argsstring>
+        <name>$field_types</name>
+        <initializer>= array(&apos;<ref refid="dc/d2e/classsio____vocabulary" kindref="compound">sio__vocabulary</ref>&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" line="9" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d60/classsio____vocabulary__widget_1a7ea5726f64e59fd404ae888d4b17708f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sio__vocabulary_widget::form</definition>
+        <argsstring>(&amp;$widget, &amp;$form, &amp;$form_state, $langcode, $items, $delta, $element)</argsstring>
+        <name>form</name>
+        <param>
+          <type>&amp;</type>
+          <declname>$widget</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$items</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a9a7d2fb394e0e697711e3fd9962ff04f" kindref="member">TripalFieldWidget::form()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" line="15" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" bodystart="15" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d60/classsio____vocabulary__widget_1ad3fe40b795020c31c66b5570c1e7e4a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sio__vocabulary_widget::validate</definition>
+        <argsstring>($element, $form, &amp;$form_state, $langcode, $delta)</argsstring>
+        <name>validate</name>
+        <param>
+          <declname>$element</declname>
+        </param>
+        <param>
+          <declname>$form</declname>
+        </param>
+        <param>
+          <type>&amp;</type>
+          <declname>$form_state</declname>
+        </param>
+        <param>
+          <declname>$langcode</declname>
+        </param>
+        <param>
+          <declname>$delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="db/d4c/classTripalFieldWidget_1a19965d71c755a5171d3a225abe4c2f49" kindref="member">TripalFieldWidget::validate()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" line="72" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" bodystart="72" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="667">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="665">
+        <label>sio__vocabulary_widget</label>
+        <link refid="d9/d60/classsio____vocabulary__widget"/>
+        <childnode refid="666" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="666">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="667" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="670">
+        <label>TripalFieldWidget</label>
+        <link refid="db/d4c/classTripalFieldWidget"/>
+      </node>
+      <node id="668">
+        <label>sio__vocabulary_widget</label>
+        <link refid="d9/d60/classsio____vocabulary__widget"/>
+        <childnode refid="669" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="669">
+        <label>ChadoFieldWidget</label>
+        <link refid="d0/df2/classChadoFieldWidget"/>
+        <childnode refid="670" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" line="3" column="1" bodyfile="tripal_chado/includes/TripalFields/sio__vocabulary/sio__vocabulary_widget.inc" bodystart="3" bodyend="81"/>
+    <listofallmembers>
+      <member refid="d9/d60/classsio____vocabulary__widget_1a7c5074a3f5d5449e8ae2e7dbf04f7e54" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>$default_label</name></member>
+      <member refid="d9/d60/classsio____vocabulary__widget_1aa520be055748fcfffadebfbf3a89a638" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>$field_types</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1ae3dabfae19c02649fb2622841db2db15" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>__construct</name></member>
+      <member refid="d9/d60/classsio____vocabulary__widget_1a7ea5726f64e59fd404ae888d4b17708f" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>form</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1aa8a38d62160ca950d56508b80e12c1f2" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>info</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a39e0b2f890be3a1f9ec43fd07535f563" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>submit</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a1be05a9b0b0e12c59911110dd4953253" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>theme</name></member>
+      <member refid="d9/d60/classsio____vocabulary__widget_1ad3fe40b795020c31c66b5570c1e7e4a3" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>validate</name></member>
+      <member refid="db/d4c/classTripalFieldWidget_1a5b4ebd2e10da0668e9608c442c14047c" prot="public" virt="non-virtual"><scope>sio__vocabulary_widget</scope><name>validateDefaults</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

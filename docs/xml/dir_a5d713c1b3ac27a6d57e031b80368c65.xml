@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a5d713c1b3ac27a6d57e031b80368c65" kind="dir">
+    <compoundname>tripal_chado/includes/TripalFields/local__source_data</compoundname>
+    <innerfile refid="d9/dfd/local____source__data_8inc">local__source_data.inc</innerfile>
+    <innerfile refid="dd/d31/local____source__data__formatter_8inc">local__source_data_formatter.inc</innerfile>
+    <innerfile refid="d5/d64/local____source__data__widget_8inc">local__source_data_widget.inc</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tripal_chado/includes/TripalFields/local__source_data/"/>
+  </compounddef>
+</doxygen>
